@@ -595,7 +595,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language, folderLink, PathXML, XMLFile, MailPath, MailFile, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language, folderLink, PathXML, XMLFile, MailPath, MailFile, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -682,6 +682,7 @@ function get-RequestListObject(){
 				$spRequestsListItem.systemListUrl = $currentList
 				$spRequestsListItem.systemURL = $currentSystem.appHomeUrl
 				$spRequestsListItem.systemListName = $currentSystem.listName
+				$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
 				
 				# $spRequestsListObj += $spRequestsListItem
 				break
@@ -979,4 +980,103 @@ function delete-ListItemsByID($site, $listName, $id){
 	
 	$ctx.ExecuteQuery()
 	
-}	
+}
+
+function get-SiteNameFromNote($note){
+	$siteName = ""
+	if (![string]::IsNullOrEmpty($note)){
+		[regex]$regex = '(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?'
+		$siteName = $regex.Matches($note).Value
+	}
+	# write-Host "Old Site Name : $siteName"
+	return $siteName
+}
+
+function get-RelURL($url){
+	$relUrl = ""
+	
+	if (![string]::IsNullOrEmpty($url)){
+		
+		$aUrl = $url.split("/")
+		
+		if ($aUrl.length -ge 3){
+			for ($i = 3; $i -lt $aUrl.length; $i++ ){
+				$relUrl += $aUrl[$i] + "/"
+			}
+			$relUrl = "/" + $relUrl
+		}	
+	}
+	
+	
+	return $relUrl
+}
+
+function get-OldContactUs($oldSiteName){
+	$pageName = "Pages/ContactUs.aspx"
+	$siteName = get-UrlNoF5 $oldSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	#write-host $pageURL 
+	#read-host
+
+
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+
+
+	$page.CheckOut()
+	$pageFields = $page.ListItemAllFields
+
+	$PageContent = $pageFields["PublishingPageContent"]
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	
+	return $PageContent
+	
+}
+
+function edt-ContactUs($newSiteName, $pageContent){
+	$pageName = "Pages/ContactUs.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	$pageFields = $page.ListItemAllFields
+	$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+}
+

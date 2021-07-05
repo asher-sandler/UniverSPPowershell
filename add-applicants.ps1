@@ -37,6 +37,13 @@ else
 				add-ListApplicants  			$siteUrlC $spRequestsListObj
 				change-siteSetting				$siteUrlC
 				change-siteTitle $siteUrlC $($spRequestsListObj.siteName)
+				#write-host "Old Site Name1 : $($spRequestsListObj.oldSiteURL)"
+				#read-host
+				if (![string]::isNullOrEmpty($spRequestsListObj.oldSiteURL)){
+					$contactUsContent =  get-OldContactUs $($spRequestsListObj.oldSiteURL)
+					edt-ContactUs $siteUrlC $contactUsContent
+				}
+				# write-host $contactUsContent
 				
 				write-host "Done."	
 			}
