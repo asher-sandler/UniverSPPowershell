@@ -1,0 +1,68 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס בקשה</docType>
+	</config>
+
+	<row>
+	
+	
+		<Label>
+			<text>1.1</text>
+			<width>95</width>
+		</Label>
+		
+
+		<Label>
+			<text>מקור הטוקסין:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field000</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field001</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+	
+		
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

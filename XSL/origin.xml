@@ -1,0 +1,990 @@
+<?xml-stylesheet type="text/xsl" href="origin.xsl" ?>
+<search-results xmlns="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opensearch="http://a9.com/-/spec/opensearch/1.1/" xmlns:prism="http://prismstandard.org/namespaces/basic/2.0/" xmlns:atom="http://www.w3.org/2005/Atom">
+    <opensearch:totalResults>65</opensearch:totalResults>
+    <opensearch:startIndex>0</opensearch:startIndex>
+    <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+    <opensearch:Query role="request" searchTerms="AU-ID(&#34;Abramovitch, Rinat&#34; 7006021357)" startPage="0"/>
+    <link ref="self" href="https://api.elsevier.com/content/search/scopus?start=0&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;startref=5" type="text/xml"/>
+    <link ref="first" href="https://api.elsevier.com/content/search/scopus?start=0&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;startref=5" type="text/xml"/>
+    <link ref="next" href="https://api.elsevier.com/content/search/scopus?start=25&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;startref=5" type="text/xml"/>
+    <link ref="last" href="https://api.elsevier.com/content/search/scopus?start=40&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;startref=5" type="text/xml"/>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/85076169030"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/85076169030?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=85076169030&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=85076169030&amp;origin=inward"/>
+        <link ref="full-text" href="https://api.elsevier.com/content/article/eid/1-s2.0-S0143400419307118"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/85076169030</prism:url>
+        <dc:identifier>SCOPUS_ID:85076169030</dc:identifier>
+        <eid>2-s2.0-85076169030</eid>
+        <dc:title>BOLD-MRI demonstrates acute placental and fetal organ hypoperfusion with fetal brain sparing in response to phenylephrine but not ephedrine</dc:title>
+        <dc:creator>Shapiro J.</dc:creator>
+        <prism:publicationName>Placenta</prism:publicationName>
+        <prism:issn>01434004</prism:issn>
+        <prism:eIssn>15323102</prism:eIssn>
+        <prism:volume>90</prism:volume>
+        <prism:pageRange>52-57</prism:pageRange>
+        <prism:coverDate>2020-01-15</prism:coverDate>
+        <prism:coverDisplayDate>15 January 2020</prism:coverDisplayDate>
+        <prism:doi>10.1016/j.placenta.2019.11.006</prism:doi>
+        <pii>S0143400419307118</pii>
+        <citedby-count>0</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>32056552</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>17069</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/85047788945"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/85047788945?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=85047788945&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=85047788945&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/85047788945</prism:url>
+        <dc:identifier>SCOPUS_ID:85047788945</dc:identifier>
+        <eid>2-s2.0-85047788945</eid>
+        <dc:title>CXCR4 promotes neuroblastoma growth and therapeutic resistance through miR-15a/ 16-1–mediated ERK and BCL2/Cyclin D1 pathways</dc:title>
+        <dc:creator>Klein S.</dc:creator>
+        <prism:publicationName>Cancer Research</prism:publicationName>
+        <prism:issn>00085472</prism:issn>
+        <prism:eIssn>15387445</prism:eIssn>
+        <prism:volume>78</prism:volume>
+        <prism:issueIdentifier>6</prism:issueIdentifier>
+        <prism:pageRange>1471-1483</prism:pageRange>
+        <prism:coverDate>2018-03-15</prism:coverDate>
+        <prism:coverDisplayDate>15 March 2018</prism:coverDisplayDate>
+        <prism:doi>10.1158/0008-5472.CAN-17-0454</prism:doi>
+        <citedby-count>20</citedby-count>
+        <affiliation>
+            <affilname>Hebrew University of Jerusalem</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>29259008</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>29183</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/85042428853"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/85042428853?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=85042428853&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=85042428853&amp;origin=inward"/>
+        <link ref="full-text" href="https://api.elsevier.com/content/article/eid/1-s2.0-S0143400417311098"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/85042428853</prism:url>
+        <dc:identifier>SCOPUS_ID:85042428853</dc:identifier>
+        <eid>2-s2.0-85042428853</eid>
+        <dc:title>BOLD-MRI demonstrates acute placental and fetal organ hypoperfusion with fetal brain sparing during hypercapnia</dc:title>
+        <dc:creator>Ginosar Y.</dc:creator>
+        <prism:publicationName>Placenta</prism:publicationName>
+        <prism:issn>01434004</prism:issn>
+        <prism:eIssn>15323102</prism:eIssn>
+        <prism:volume>63</prism:volume>
+        <prism:pageRange>53-60</prism:pageRange>
+        <prism:coverDate>2018-03-01</prism:coverDate>
+        <prism:coverDisplayDate>March 2018</prism:coverDisplayDate>
+        <prism:doi>10.1016/j.placenta.2017.09.005</prism:doi>
+        <pii>S0143400417311098</pii>
+        <citedby-count>6</citedby-count>
+        <affiliation>
+            <affilname>Washington University School of Medicine in St. Louis</affilname>
+            <affiliation-city>St. Louis</affiliation-city>
+            <affiliation-country>United States</affiliation-country>
+        </affiliation>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>29061514</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>17069</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/85016405625"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/85016405625?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=85016405625&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=85016405625&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/85016405625</prism:url>
+        <dc:identifier>SCOPUS_ID:85016405625</dc:identifier>
+        <eid>2-s2.0-85016405625</eid>
+        <dc:title>Interleukin 6–dependent genomic instability heralds accelerated carcinogenesis following liver regeneration on a background of chronic hepatitis</dc:title>
+        <dc:creator>Lanton T.</dc:creator>
+        <prism:publicationName>Hepatology</prism:publicationName>
+        <prism:issn>02709139</prism:issn>
+        <prism:eIssn>15273350</prism:eIssn>
+        <prism:volume>65</prism:volume>
+        <prism:issueIdentifier>5</prism:issueIdentifier>
+        <prism:pageRange>1600-1611</prism:pageRange>
+        <prism:coverDate>2017-05-01</prism:coverDate>
+        <prism:coverDisplayDate>May 2017</prism:coverDisplayDate>
+        <prism:doi>10.1002/hep.29004</prism:doi>
+        <citedby-count>14</citedby-count>
+        <affiliation>
+            <affilname>Goldyne Savad Institute of Gene Therapy</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>28027584</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>28371</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84991632925"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84991632925?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84991632925&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84991632925&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84991632925</prism:url>
+        <dc:identifier>SCOPUS_ID:84991632925</dc:identifier>
+        <eid>2-s2.0-84991632925</eid>
+        <dc:title>Cyclosporin a induces renal episodic hypoxia</dc:title>
+        <dc:creator>Fähling M.</dc:creator>
+        <prism:publicationName>Acta Physiologica</prism:publicationName>
+        <prism:issn>17481708</prism:issn>
+        <prism:eIssn>17481716</prism:eIssn>
+        <prism:volume>219</prism:volume>
+        <prism:issueIdentifier>3</prism:issueIdentifier>
+        <prism:pageRange>625-639</prism:pageRange>
+        <prism:coverDate>2017-03-01</prism:coverDate>
+        <prism:coverDisplayDate>1 March 2017</prism:coverDisplayDate>
+        <prism:doi>10.1111/apha.12811</prism:doi>
+        <citedby-count>17</citedby-count>
+        <affiliation>
+            <affilname>Charité – Universitätsmedizin Berlin</affilname>
+            <affiliation-city>Berlin</affiliation-city>
+            <affiliation-country>Germany</affiliation-country>
+        </affiliation>
+        <pubmed-id>27690155</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>4000148904</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/85036644788"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/85036644788?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=85036644788&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=85036644788&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/85036644788</prism:url>
+        <dc:identifier>SCOPUS_ID:85036644788</dc:identifier>
+        <eid>2-s2.0-85036644788</eid>
+        <dc:title>Impaired liver regeneration after hepatectomy and bleeding is associated with a shift from hepatocyte proliferation to hypertrophy</dc:title>
+        <dc:creator>Matot I.</dc:creator>
+        <prism:publicationName>FASEB Journal</prism:publicationName>
+        <prism:issn>08926638</prism:issn>
+        <prism:eIssn>15306860</prism:eIssn>
+        <prism:volume>31</prism:volume>
+        <prism:issueIdentifier>12</prism:issueIdentifier>
+        <prism:pageRange>5283-5295</prism:pageRange>
+        <prism:coverDate>2017-01-01</prism:coverDate>
+        <prism:coverDisplayDate>2017</prism:coverDisplayDate>
+        <prism:doi>10.1096/fj.201700153R</prism:doi>
+        <citedby-count>6</citedby-count>
+        <affiliation>
+            <affilname>Tel Aviv University, Sackler Faculty of Medicine</affilname>
+            <affiliation-city>Ramal Aviv</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>28790176</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>15048</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84934291238"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84934291238?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84934291238&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84934291238&amp;origin=inward"/>
+        <link ref="full-text" href="https://api.elsevier.com/content/article/eid/1-s2.0-S1569904815300057"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84934291238</prism:url>
+        <dc:identifier>SCOPUS_ID:84934291238</dc:identifier>
+        <eid>2-s2.0-84934291238</eid>
+        <dc:title>Inhaled carbon dioxide causes dose-dependent paradoxical bradypnea in animals anesthetized with pentobarbital, but not with isoflurane or ketamine</dc:title>
+        <dc:creator>Ginosar Y.</dc:creator>
+        <prism:publicationName>Respiratory Physiology and Neurobiology</prism:publicationName>
+        <prism:issn>15699048</prism:issn>
+        <prism:eIssn>18781519</prism:eIssn>
+        <prism:volume>217</prism:volume>
+        <prism:pageRange>1-7</prism:pageRange>
+        <prism:coverDate>2015-10-01</prism:coverDate>
+        <prism:coverDisplayDate>October 01, 2015</prism:coverDisplayDate>
+        <prism:doi>10.1016/j.resp.2015.06.003</prism:doi>
+        <pii>S1569904815300057</pii>
+        <citedby-count>2</citedby-count>
+        <pubmed-id>26099799</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>24030</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84927729055"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84927729055?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84927729055&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84927729055&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84927729055</prism:url>
+        <dc:identifier>SCOPUS_ID:84927729055</dc:identifier>
+        <eid>2-s2.0-84927729055</eid>
+        <dc:title>Endogenous plasminogen activators mediate progressive intracerebral hemorrhage after traumatic brain injury in mice</dc:title>
+        <dc:creator>Hijazi N.</dc:creator>
+        <prism:publicationName>Blood</prism:publicationName>
+        <prism:issn>00064971</prism:issn>
+        <prism:eIssn>15280020</prism:eIssn>
+        <prism:volume>125</prism:volume>
+        <prism:issueIdentifier>16</prism:issueIdentifier>
+        <prism:pageRange>2558-2567</prism:pageRange>
+        <prism:coverDate>2015-04-16</prism:coverDate>
+        <prism:coverDisplayDate>16 April 2015</prism:coverDisplayDate>
+        <prism:doi>10.1182/blood-2014-08-588442</prism:doi>
+        <citedby-count>72</citedby-count>
+        <affiliation>
+            <affilname>University of Pennsylvania Perelman School of Medicine</affilname>
+            <affiliation-city>Philadelphia</affiliation-city>
+            <affiliation-country>United States</affiliation-country>
+        </affiliation>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>25673638</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>25454</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfree2read</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Bronze</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84935051812"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84935051812?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84935051812&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84935051812&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84935051812</prism:url>
+        <dc:identifier>SCOPUS_ID:84935051812</dc:identifier>
+        <eid>2-s2.0-84935051812</eid>
+        <dc:title>Practical Applications of in Vivo and ex Vivo MRI in Toxicologic Pathology Using a Novel High-performance Compact MRI System</dc:title>
+        <dc:creator>Tempel-Brami C.</dc:creator>
+        <prism:publicationName>Toxicologic Pathology</prism:publicationName>
+        <prism:issn>01926233</prism:issn>
+        <prism:eIssn>15331601</prism:eIssn>
+        <prism:volume>43</prism:volume>
+        <prism:issueIdentifier>5</prism:issueIdentifier>
+        <prism:pageRange>633-650</prism:pageRange>
+        <prism:coverDate>2015-01-01</prism:coverDate>
+        <prism:coverDisplayDate>July 2015</prism:coverDisplayDate>
+        <prism:doi>10.1177/0192623314568390</prism:doi>
+        <citedby-count>12</citedby-count>
+        <pubmed-id>25694086</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>25214</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>repository</value>
+            <value>repositoryam</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84946605500"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84946605500?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84946605500&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84946605500&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84946605500</prism:url>
+        <dc:identifier>SCOPUS_ID:84946605500</dc:identifier>
+        <eid>2-s2.0-84946605500</eid>
+        <dc:title>The knockdown of H19lncRNA reveals its regulatory role in pluripotency and tumorigenesis of human embryonic carcinoma cells</dc:title>
+        <dc:creator>Zeira E.</dc:creator>
+        <prism:publicationName>Oncotarget</prism:publicationName>
+        <prism:eIssn>19492553</prism:eIssn>
+        <prism:volume>6</prism:volume>
+        <prism:issueIdentifier>33</prism:issueIdentifier>
+        <prism:pageRange>34691-34703</prism:pageRange>
+        <prism:coverDate>2015-01-01</prism:coverDate>
+        <prism:coverDisplayDate>2015</prism:coverDisplayDate>
+        <prism:doi>10.18632/oncotarget.5787</prism:doi>
+        <citedby-count>19</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>26415227</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>19900191708</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+            <value>repositoryam</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84918588000"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84918588000?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84918588000&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84918588000&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84918588000</prism:url>
+        <dc:identifier>SCOPUS_ID:84918588000</dc:identifier>
+        <eid>2-s2.0-84918588000</eid>
+        <dc:title>Monitoring brain tumor vascular heamodynamic following anti-angiogenic therapy with advanced magnetic resonance imaging in mice</dc:title>
+        <dc:creator>Laufer H.</dc:creator>
+        <prism:publicationName>PLoS ONE</prism:publicationName>
+        <prism:eIssn>19326203</prism:eIssn>
+        <prism:volume>9</prism:volume>
+        <prism:issueIdentifier>12</prism:issueIdentifier>
+        <prism:pageRange/>
+        <prism:coverDate>2014-12-15</prism:coverDate>
+        <prism:coverDisplayDate>15 December 2014</prism:coverDisplayDate>
+        <prism:doi>10.1371/journal.pone.0115093</prism:doi>
+        <citedby-count>6</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>25506833</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <article-number>e115093</article-number>
+        <source-id>10600153309</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+            <value>repositoryam</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84897427668"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84897427668?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84897427668&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84897427668&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84897427668</prism:url>
+        <dc:identifier>SCOPUS_ID:84897427668</dc:identifier>
+        <eid>2-s2.0-84897427668</eid>
+        <dc:title>TL-118 and gemcitabine drug combination display therapeutic efficacy in a mycn amplified orthotopic neuroblastoma murine model - Evaluation by MRI</dc:title>
+        <dc:creator>Komar-Stossel C.</dc:creator>
+        <prism:publicationName>PLoS ONE</prism:publicationName>
+        <prism:eIssn>19326203</prism:eIssn>
+        <prism:volume>9</prism:volume>
+        <prism:issueIdentifier>3</prism:issueIdentifier>
+        <prism:pageRange/>
+        <prism:coverDate>2014-03-06</prism:coverDate>
+        <prism:coverDisplayDate>6 March 2014</prism:coverDisplayDate>
+        <prism:doi>10.1371/journal.pone.0090224</prism:doi>
+        <citedby-count>5</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>24603724</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <article-number>e90224</article-number>
+        <source-id>10600153309</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84896427048"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84896427048?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84896427048&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84896427048&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84896427048</prism:url>
+        <dc:identifier>SCOPUS_ID:84896427048</dc:identifier>
+        <eid>2-s2.0-84896427048</eid>
+        <dc:title>Assessment with unenhanced MRI techniques of renal morphology and hemodynamic changes during acute kidney injury and chronic kidney disease in mice</dc:title>
+        <dc:creator>Milman Z.</dc:creator>
+        <prism:publicationName>American Journal of Nephrology</prism:publicationName>
+        <prism:issn>02508095</prism:issn>
+        <prism:eIssn>14219670</prism:eIssn>
+        <prism:volume>39</prism:volume>
+        <prism:issueIdentifier>3</prism:issueIdentifier>
+        <prism:pageRange>268-278</prism:pageRange>
+        <prism:coverDate>2014-01-01</prism:coverDate>
+        <prism:coverDisplayDate>April 2014</prism:coverDisplayDate>
+        <prism:doi>10.1159/000360093</prism:doi>
+        <citedby-count>11</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>24662013</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>19367</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84898443812"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84898443812?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84898443812&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84898443812&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84898443812</prism:url>
+        <dc:identifier>SCOPUS_ID:84898443812</dc:identifier>
+        <eid>2-s2.0-84898443812</eid>
+        <dc:title>Quantitative functional MRI biomarkers improved early detection of colorectal liver metastases</dc:title>
+        <dc:creator>Edrei Y.</dc:creator>
+        <prism:publicationName>Journal of Magnetic Resonance Imaging</prism:publicationName>
+        <prism:issn>10531807</prism:issn>
+        <prism:eIssn>15222586</prism:eIssn>
+        <prism:volume>39</prism:volume>
+        <prism:issueIdentifier>5</prism:issueIdentifier>
+        <prism:pageRange>1246-1253</prism:pageRange>
+        <prism:coverDate>2014-01-01</prism:coverDate>
+        <prism:coverDisplayDate>May 2014</prism:coverDisplayDate>
+        <prism:doi>10.1002/jmri.24270</prism:doi>
+        <citedby-count>2</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>24006217</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>17225</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84916900265"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84916900265?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84916900265&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84916900265&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84916900265</prism:url>
+        <dc:identifier>SCOPUS_ID:84916900265</dc:identifier>
+        <eid>2-s2.0-84916900265</eid>
+        <dc:title>Specific genomic and transcriptomic aberrations in tumors induced by partial hepatectomy of a chronically inflamed murine liver</dc:title>
+        <dc:creator>Ella E.</dc:creator>
+        <prism:publicationName>Oncotarget</prism:publicationName>
+        <prism:eIssn>19492553</prism:eIssn>
+        <prism:volume>5</prism:volume>
+        <prism:issueIdentifier>21</prism:issueIdentifier>
+        <prism:pageRange>10318-10331</prism:pageRange>
+        <prism:coverDate>2014-01-01</prism:coverDate>
+        <prism:coverDisplayDate>2014</prism:coverDisplayDate>
+        <prism:doi>10.18632/oncotarget.2515</prism:doi>
+        <citedby-count>9</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>25401338</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>19900191708</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84890824325"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84890824325?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84890824325&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84890824325&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84890824325</prism:url>
+        <dc:identifier>SCOPUS_ID:84890824325</dc:identifier>
+        <eid>2-s2.0-84890824325</eid>
+        <dc:title>Mutant KRAS is a druggable target for pancreatic cancer</dc:title>
+        <dc:creator>Khvalevsky E.Z.</dc:creator>
+        <prism:publicationName>Proceedings of the National Academy of Sciences of the United States of America</prism:publicationName>
+        <prism:issn>00278424</prism:issn>
+        <prism:eIssn>10916490</prism:eIssn>
+        <prism:volume>110</prism:volume>
+        <prism:issueIdentifier>51</prism:issueIdentifier>
+        <prism:pageRange>20723-20728</prism:pageRange>
+        <prism:coverDate>2013-12-17</prism:coverDate>
+        <prism:coverDisplayDate>17 December 2013</prism:coverDisplayDate>
+        <prism:doi>10.1073/pnas.1314307110</prism:doi>
+        <citedby-count>168</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>21121</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfree2read</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Bronze</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84883238925"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84883238925?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84883238925&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84883238925&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84883238925</prism:url>
+        <dc:identifier>SCOPUS_ID:84883238925</dc:identifier>
+        <eid>2-s2.0-84883238925</eid>
+        <dc:title>Inflammation-induced hepatocellular carcinoma is dependent on CCR5 in mice</dc:title>
+        <dc:creator>Barashi N.</dc:creator>
+        <prism:publicationName>Hepatology</prism:publicationName>
+        <prism:issn>02709139</prism:issn>
+        <prism:eIssn>15273350</prism:eIssn>
+        <prism:volume>58</prism:volume>
+        <prism:issueIdentifier>3</prism:issueIdentifier>
+        <prism:pageRange>1021-1030</prism:pageRange>
+        <prism:coverDate>2013-09-01</prism:coverDate>
+        <prism:coverDisplayDate>September 2013</prism:coverDisplayDate>
+        <prism:doi>10.1002/hep.26403</prism:doi>
+        <citedby-count>52</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>23526353</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>28371</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84876317943"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84876317943?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84876317943&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84876317943&amp;origin=inward"/>
+        <link ref="full-text" href="https://api.elsevier.com/content/article/eid/1-s2.0-S0306452213002194"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84876317943</prism:url>
+        <dc:identifier>SCOPUS_ID:84876317943</dc:identifier>
+        <eid>2-s2.0-84876317943</eid>
+        <dc:title>MRI multiparametric hemodynamic characterization of the normal brain</dc:title>
+        <dc:creator>Artzi M.</dc:creator>
+        <prism:publicationName>Neuroscience</prism:publicationName>
+        <prism:issn>03064522</prism:issn>
+        <prism:eIssn>18737544</prism:eIssn>
+        <prism:volume>240</prism:volume>
+        <prism:pageRange>269-276</prism:pageRange>
+        <prism:coverDate>2013-06-04</prism:coverDate>
+        <prism:coverDisplayDate>4 June 2013</prism:coverDisplayDate>
+        <prism:doi>10.1016/j.neuroscience.2013.03.004</prism:doi>
+        <pii>S0306452213002194</pii>
+        <citedby-count>4</citedby-count>
+        <affiliation>
+            <affilname>Tel Aviv Sourasky Medical Center</affilname>
+            <affiliation-city>Tel Aviv-Yafo</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <affiliation>
+            <affilname>Tel Aviv University, Sackler Faculty of Medicine</affilname>
+            <affiliation-city>Ramal Aviv</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>23500143</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>18042</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84877951805"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84877951805?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84877951805&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84877951805&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84877951805</prism:url>
+        <dc:identifier>SCOPUS_ID:84877951805</dc:identifier>
+        <eid>2-s2.0-84877951805</eid>
+        <dc:title>Hemodynamic response magnetic resonance imaging: Application for renal hemodynamic characterization</dc:title>
+        <dc:creator>Milman Z.</dc:creator>
+        <prism:publicationName>Nephrology Dialysis Transplantation</prism:publicationName>
+        <prism:issn>09310509</prism:issn>
+        <prism:eIssn>14602385</prism:eIssn>
+        <prism:volume>28</prism:volume>
+        <prism:issueIdentifier>5</prism:issueIdentifier>
+        <prism:pageRange>1150-1156</prism:pageRange>
+        <prism:coverDate>2013-05-01</prism:coverDate>
+        <prism:coverDisplayDate>May 2013</prism:coverDisplayDate>
+        <prism:doi>10.1093/ndt/gfs541</prism:doi>
+        <citedby-count>14</citedby-count>
+        <affiliation>
+            <affilname>MRI/MRS Laboratory of the HBRC</affilname>
+            <affiliation-city/>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <affiliation>
+            <affilname>Goldyne Savad Institute of Gene Therapy</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>23291364</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>20021</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfree2read</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Bronze</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84874938825"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84874938825?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84874938825&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84874938825&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84874938825</prism:url>
+        <dc:identifier>SCOPUS_ID:84874938825</dc:identifier>
+        <eid>2-s2.0-84874938825</eid>
+        <dc:title>Resuscitation with aged blood exacerbates liver injury in a hemorrhagic rat model</dc:title>
+        <dc:creator>Matot I.</dc:creator>
+        <prism:publicationName>Critical Care Medicine</prism:publicationName>
+        <prism:issn>00903493</prism:issn>
+        <prism:eIssn>15300293</prism:eIssn>
+        <prism:volume>41</prism:volume>
+        <prism:issueIdentifier>3</prism:issueIdentifier>
+        <prism:pageRange>842-849</prism:pageRange>
+        <prism:coverDate>2013-03-01</prism:coverDate>
+        <prism:coverDisplayDate>March 2013</prism:coverDisplayDate>
+        <prism:doi>10.1097/CCM.0b013e3182711b38</prism:doi>
+        <citedby-count>24</citedby-count>
+        <affiliation>
+            <affilname>Tel Aviv University</affilname>
+            <affiliation-city>Tel Aviv-Yafo</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>23314580</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>29916</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84870261832"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84870261832?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84870261832&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84870261832&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84870261832</prism:url>
+        <dc:identifier>SCOPUS_ID:84870261832</dc:identifier>
+        <eid>2-s2.0-84870261832</eid>
+        <dc:title>Hemodynamic Response Imaging: A Potential Tool for the Assessment of Angiogenesis in Brain Tumors</dc:title>
+        <dc:creator>Ben Bashat D.</dc:creator>
+        <prism:publicationName>PLoS ONE</prism:publicationName>
+        <prism:eIssn>19326203</prism:eIssn>
+        <prism:volume>7</prism:volume>
+        <prism:issueIdentifier>11</prism:issueIdentifier>
+        <prism:pageRange/>
+        <prism:coverDate>2012-11-27</prism:coverDate>
+        <prism:coverDisplayDate>27 November 2012</prism:coverDisplayDate>
+        <prism:doi>10.1371/journal.pone.0049416</prism:doi>
+        <citedby-count>22</citedby-count>
+        <affiliation>
+            <affilname>Tel Aviv Sourasky Medical Center</affilname>
+            <affiliation-city>Tel Aviv-Yafo</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>23209575</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <article-number>e49416</article-number>
+        <source-id>10600153309</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+            <value>repositoryam</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/84864882623"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/84864882623?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=84864882623&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=84864882623&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/84864882623</prism:url>
+        <dc:identifier>SCOPUS_ID:84864882623</dc:identifier>
+        <eid>2-s2.0-84864882623</eid>
+        <dc:title>Improved efficacy of a novel anti-angiogenic drug combination (TL-118) against colorectal-cancer liver metastases; MRI monitoring in mice</dc:title>
+        <dc:creator>Edrei Y.</dc:creator>
+        <prism:publicationName>British Journal of Cancer</prism:publicationName>
+        <prism:issn>00070920</prism:issn>
+        <prism:eIssn>15321827</prism:eIssn>
+        <prism:volume>107</prism:volume>
+        <prism:issueIdentifier>4</prism:issueIdentifier>
+        <prism:pageRange>658-666</prism:pageRange>
+        <prism:coverDate>2012-08-07</prism:coverDate>
+        <prism:coverDisplayDate>7 August 2012</prism:coverDisplayDate>
+        <prism:doi>10.1038/bjc.2012.322</prism:doi>
+        <pii>BJC2012322</pii>
+        <citedby-count>15</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>22805330</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>28770</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherhybridgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Hybrid Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/80052074151"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/80052074151?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=80052074151&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=80052074151&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/80052074151</prism:url>
+        <dc:identifier>SCOPUS_ID:80052074151</dc:identifier>
+        <eid>2-s2.0-80052074151</eid>
+        <dc:title>FMRI-based hierarchical SVM model for the classification and grading of liver fibrosis</dc:title>
+        <dc:creator>Sela Y.</dc:creator>
+        <prism:publicationName>IEEE Transactions on Biomedical Engineering</prism:publicationName>
+        <prism:issn>00189294</prism:issn>
+        <prism:eIssn>15582531</prism:eIssn>
+        <prism:volume>58</prism:volume>
+        <prism:issueIdentifier>9</prism:issueIdentifier>
+        <prism:pageRange>2574-2581</prism:pageRange>
+        <prism:coverDate>2011-09-01</prism:coverDate>
+        <prism:coverDisplayDate>September 2011</prism:coverDisplayDate>
+        <prism:doi>10.1109/TBME.2011.2159501</prism:doi>
+        <citedby-count>27</citedby-count>
+        <affiliation>
+            <affilname>Hebrew University of Jerusalem</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>21672670</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <article-number>5875869</article-number>
+        <source-id>16318</source-id>
+        <openaccess>0</openaccess>
+        <openaccessFlag>false</openaccessFlag>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/79952381691"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/79952381691?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=79952381691&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=79952381691&amp;origin=inward"/>
+        <link ref="full-text" href="https://api.elsevier.com/content/article/eid/1-s2.0-S1476558611800722"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/79952381691</prism:url>
+        <dc:identifier>SCOPUS_ID:79952381691</dc:identifier>
+        <eid>2-s2.0-79952381691</eid>
+        <dc:title>Vascular profile characterization of liver tumors by magnetic resonance imaging using hemodynamic response imaging in mice</dc:title>
+        <dc:creator>Edrei Y.</dc:creator>
+        <prism:publicationName>Neoplasia</prism:publicationName>
+        <prism:issn>15228002</prism:issn>
+        <prism:eIssn>14765586</prism:eIssn>
+        <prism:volume>13</prism:volume>
+        <prism:issueIdentifier>3</prism:issueIdentifier>
+        <prism:pageRange>244-253</prism:pageRange>
+        <prism:coverDate>2011-01-01</prism:coverDate>
+        <prism:coverDisplayDate>March 2011</prism:coverDisplayDate>
+        <prism:doi>10.1593/neo.101354</prism:doi>
+        <pii>S1476558611800722</pii>
+        <citedby-count>18</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <source-id>12495</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+    <entry>
+        <link ref="self" href="https://api.elsevier.com/content/abstract/scopus_id/77955296482"/>
+        <link ref="author-affiliation" href="https://api.elsevier.com/content/abstract/scopus_id/77955296482?field=author,affiliation"/>
+        <link ref="scopus" href="https://www.scopus.com/inward/record.uri?partnerID=HzOxMe3b&amp;scp=77955296482&amp;origin=inward"/>
+        <link ref="scopus-citedby" href="https://www.scopus.com/inward/citedby.uri?partnerID=HzOxMe3b&amp;scp=77955296482&amp;origin=inward"/>
+        <prism:url>https://api.elsevier.com/content/abstract/scopus_id/77955296482</prism:url>
+        <dc:identifier>SCOPUS_ID:77955296482</dc:identifier>
+        <eid>2-s2.0-77955296482</eid>
+        <dc:title>Etk/Bmx regulates proteinase-activated-receptor1 (PAR&lt;inf&gt;1&lt;/inf&gt;) in breast cancer invasion: Signaling partners, hierarchy and physiological significance</dc:title>
+        <dc:creator>Cohen I.</dc:creator>
+        <prism:publicationName>PLoS ONE</prism:publicationName>
+        <prism:eIssn>19326203</prism:eIssn>
+        <prism:volume>5</prism:volume>
+        <prism:issueIdentifier>6</prism:issueIdentifier>
+        <prism:pageRange/>
+        <prism:coverDate>2010-08-11</prism:coverDate>
+        <prism:coverDisplayDate>2010</prism:coverDisplayDate>
+        <prism:doi>10.1371/journal.pone.0011135</prism:doi>
+        <citedby-count>23</citedby-count>
+        <affiliation>
+            <affilname>Hadassah University Medical Centre</affilname>
+            <affiliation-city>Jerusalem</affiliation-city>
+            <affiliation-country>Israel</affiliation-country>
+        </affiliation>
+        <pubmed-id>20559570</pubmed-id>
+        <prism:aggregationType>Journal</prism:aggregationType>
+        <subtype>ar</subtype>
+        <subtypeDescription>Article</subtypeDescription>
+        <article-number>e11135</article-number>
+        <source-id>10600153309</source-id>
+        <openaccess>1</openaccess>
+        <openaccessFlag>true</openaccessFlag>
+        <freetoread>
+            <value>all</value>
+            <value>publisherfullgold</value>
+            <value>repository</value>
+            <value>repositoryvor</value>
+            <value>repositoryam</value>
+        </freetoread>
+        <freetoreadLabel>
+            <value>All Open Access</value>
+            <value>Gold</value>
+            <value>Green</value>
+        </freetoreadLabel>
+    </entry>
+</search-results>

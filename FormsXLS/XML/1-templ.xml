@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס בקשה</docType>
+	</config>
+
+	<row>
+		<Header>בקשת הארכה להיתר להחזקה ו/או לביצוע מחקר במחולל מחלה ביולוגי</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+	
+		<Label>
+			<text>שם החוקר/ת:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field000</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>פקולטה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field001</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>מחלקה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field002</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>טלפון:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field003</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>דוא"ל:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field004</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	אני, הח"מ, מבקש/ת בזאת מהוועדה להסדרת המחקר במחוללי מחלות ביולוגיים להאריך את האישור שניתן לי
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>בתאריך</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field005</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>עבור:</text>
+			<width>95</width>
+		</Label>
+		
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	כמובנו, לפי החוק להסדרת מחקרים במחוללי מחלות ביולוגיים, התשס"ט-2008.
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	מחולל המחלה הנ"ל יהיה נגיש אך ורק לעובדים אלה מטעמי:
+		</Label>
+	</row>
+	
+
+	<row>
+	
+			
+			<Label>
+				<text>שם</text>
+				<width>95</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>מספר ת"ז</text>
+				<width>95</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>תפקיד/מעמד במעבדה</text>
+				<width>95</width>		
+			</Label>
+		
+	
+	</row>
+		
+	
+	<!--Table Input Rows:10 Columns:3 -->
+		
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field006</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field007</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field008</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field009</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field010</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field011</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field012</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field013</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field014</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field015</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field016</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field017</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field018</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field019</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field020</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field021</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field022</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field023</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field024</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field025</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field026</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field027</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field028</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field029</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field030</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field031</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field032</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field033</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field034</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field035</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+		<Label>
+	אני מאשר/ת כי (סמן/סמני אחת משתי האפשרויות שלהלן) -
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	אין שינוי בתנאי אחסון מחולל המחלה הביולוגי ואופן השימוש בו, כפי שאושרו בבקשה המקורית.
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	תנאי השימוש בחומר או אופן אחסונו השתנו ומצורף בזאת תיאור של מטרות המחקר, שיטות, לו״ז, מקום המחקר, אמצעי בטיחות ובטחון
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	אני מכיר/ה את החוק ואת כלליהאוניברסיטה הרלוונטיים.
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	אני יודע/ת שבהתאם לחוק, במקרה שאזהה במסגרת מחקרי, הגדלה בפוטנציאל ההיזק (ישירות או בעקיפין) של מחולל מחלות ביולוגי, בין אם נקוב בחוק ובין אם לא, אפסיק את ביצוע המחקר ואבקש את אישורה של הוועדה להמשך ביצועו.
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>חתימה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field036</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>ת.ז.</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field037</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>תאריך:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field038</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

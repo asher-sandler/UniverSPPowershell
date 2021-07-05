@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div></div>
+    <div  class="ms-rteElement-customParagraph3" id="id02"></div>
+    <div id="id01"></div>
+
+    <script>
+var url = "https://api.elsevier.com/content/search/scopus?query=AU-ID%28%22Abramovitch%2C%20Rinat%22%207006021357%29&apikey=aae05ff3e3bf429e9f7fe79991a89ad3";
+
+var txt;
+
+var ajax = new XMLHttpRequest();
+headers.append('Content-Type', 'application/json;odata=verbose');
+headers.append('credentials', 'include');
+
+ajax.open("GET", url, true);
+ajax.setRequestHeader('Mode', 'cors');
+ajax.setRequestHeader('Accept', 'application/json; odata=verbose;  xsd:string');
+ajax.setRequestHeader('Content-Type', 'application/json; charset=UTF-8');ajax.send(null);
+ajax.onreadystatechange = function () {
+
+     if (ajax.readyState == 4 && (ajax.status == 200))
+     {
+     try{
+        txt=ajax.responseText + "";
+
+     
+        var Data = JSON.parse(txt);
+
+
+
+function printValues(Data) {
+var i=0;
+        for(var k in Data["search-results"]["entry"]) {
+          
+                document.getElementById("id02").innerHTML+=Data["search-results"]["entry"][i]["dc:creator"];
+
+				document.getElementById("id02").innerHTML+=", <b>"+Data["search-results"]["entry"][i]["dc:title"] + "</b>";
+				
+				document.getElementById("id02").innerHTML+=", "+Data["search-results"]["entry"][i]["prism:publicationName"];
+				
+				document.getElementById("id02").innerHTML+=", "+Data["search-results"]["entry"][i]["prism:volume"];
+				
+				document.getElementById("id02").innerHTML+=", "+Data["search-results"]["entry"][i]["prism:pageRange"];
+				
+				document.getElementById("id02").innerHTML+=", "+Data["search-results"]["entry"][i]["prism:coverDisplayDate"];
+
+				document.getElementById("id02").innerHTML+=", DOI: "+Data["search-results"]["entry"][i]["prism:doi"] + "<br><br>";
+
+				
+
+i++;
+
+
+        
+}
+
+    };
+ printValues(Data);
+      
+
+
+
+
+
+       }
+       catch(err)
+       {
+          alert('Error:' + err);}
+        }
+
+      else
+      {
+        //console.log("not ready yet")
+      }
+}
+
+    </script>
+
+</body>
+</html>

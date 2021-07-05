@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="xmlo.xsl" ?>
+<search-results>
+   <opensearch:totalResults>65</opensearch:totalResults>
+    <opensearch:startIndex>0</opensearch:startIndex>
+    <opensearch:itemsPerPage>25</opensearch:itemsPerPage>
+    <opensearch:Query role="request" searchTerms="AU-ID(&#34;Abramovitch, Rinat&#34; 7006021357)" startPage="0"/>
+    <link ref="self" href="https://api.elsevier.com/content/search/scopus?start=0&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;field=dc:title&amp;startref=5" type="text/xml"/>
+    <link ref="first" href="https://api.elsevier.com/content/search/scopus?start=0&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;field=dc:title&amp;startref=5" type="text/xml"/>
+    <link ref="next" href="https://api.elsevier.com/content/search/scopus?start=25&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;field=dc:title&amp;startref=5" type="text/xml"/>
+    <link ref="last" href="https://api.elsevier.com/content/search/scopus?start=40&amp;count=25&amp;query=AU-ID%28%22Abramovitch%2C+Rinat%22+7006021357%29&amp;apiKey=aae05ff3e3bf429e9f7fe79991a89ad3&amp;httpAccept=text/xml&amp;field=dc:title&amp;startref=5" type="text/xml"/>
+  	<entry>
+		<title>BOLD-MRI </title>
+	</entry>
+	<entry>
+		<title>CXCR4</title>
+	</entry>
+	<entry>
+		<title>organ hypoperfusion</title>
+	</entry>
+</search-results>

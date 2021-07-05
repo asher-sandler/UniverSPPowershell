@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס בקשה</docType>
+	</config>
+
+	<row>
+		<Header>טופס הצהרה על סיום המחקר במחולל מחלה ביולוגי</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+	
+		<Label>
+			<text>שם החוקר/ת:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field000</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>פקולטה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field001</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+
+	<row>
+
+	
+		<Label>
+			<text>מחלקה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field002</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>טלפון:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field003</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+
+	<row>
+
+
+		<Label>
+			<text>דוא"ל:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field004</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>אני, הח"מ, מבקש/ת בזאת להודיע לוועדה להסדרת המחקר במחוללי מחלות ביולוגיים על סיום המחקר בחומר,</text>
+			<width>555</width>
+		</Label>
+		
+	</row>
+	
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>field005</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	
+
+	<row>
+
+	
+		<Label>
+			<text> הנכלל ברשימת מחוללי המחלות הביולוגיים כפי שהוגדר בחוק להסדרת מחקרים במחוללי מחלות ביולוגיים, התשס״ט-2008.</text>
+			<width>555</width>
+		</Label>
+		
+
+	</row>
+
+
+	<row>
+		<Label>
+		<text>
+	שאריות החומר טופלו באופן הבא (נא לפרט אם נותר חומר פעיל, ואם כן כיצד הושמד) -
+		</text>
+		<width>555</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>paperName</Data>
+			<width>500</width>
+		</control>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>	
+
+	<row>
+	<control>
+			<Type>CheckBox</Type>
+			<Data>declaration</Data>
+			<width>15</width>
+			<required>yes</required>
+		</control>	
+		<Label><text>
+	הריני מאשר/ת כי ידוע לי שאסור לי לבצע מחקר או להחזיק בחומר המוזכר לעיל ושאם
+		</text>
+		<width>555</width></Label>
+		
+	</row>
+	
+
+	<row>
+	<control>
+			<Type>CheckBox</Type>
+			<Data>declaration1</Data>
+			<width>15</width>
+			<required>yes</required>
+		</control>	
+		<Label><text>
+	בעתיד אהיה מעוניין/ת לשוב ולבצע מחקר באותו מחולל מחלות ביולוגי אצטרך להגיש בקשה חדשה לאישור הוועדה.
+		</text>
+		<width>555</width>
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>חתימה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field006</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>ת.ז.</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextLabel</Type>
+			<Data>field007</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	
+	<row>
+
+		<Label>
+			<text>תאריך:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field008</Data>
+			
+			<width>100</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+			<required>yes</required>
+			
+		</control>
+
+
+	</row>
+
+	
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

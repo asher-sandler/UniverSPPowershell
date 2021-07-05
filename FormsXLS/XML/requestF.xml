@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>Application form</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>Please fill out all of the marked fields</missingDataMessage>
+		<registrationMessage>You are not registered for this scholarship. <![CDATA[<a href="http://scholarships2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>0. Application Form</docType>
+		<calculations>no</calculations>
+		
+		
+		<!--
+		<createPDF>yes</createPDF>
+		<destinationFolder>advisorPDF</destinationFolder>
+		<destinationList>advisorList</destinationList>
+		<ticketNum>ADV01</ticketNum>
+		<description>[studentName]-[advisorName]-</description>
+		<createSubFolder>yes</createSubFolder>
+		<redirectPage>https://scholarships.ekmd.huji.ac.il/home/agriculture/AGR129-2020/Pages/Success.aspx?isdlg=1&amp;e=1</redirectPage>
+		-->
+		
+	</config>
+
+	<row>
+		<Label></Label>
+	</row>
+  	
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>
+

@@ -1,0 +1,118 @@
+cls
+$csv =  get-content "Asset list 10.5.10.csv"
+$user = "AsherC@chordmed.com"
+$siteURL = "https://fordmed.sharepoint.com/sites/it_helpdesk"
+
+
+
+
+$oAssets = @()
+# employee;;;asset tag;hardware;brand ;model;serial #
+foreach($line in $csv){
+    $oLine = "" | Select Employee, AssetTag, Hardware, Brand, Model ,Serial
+	$oLine.Employee  = $line.Split(";")[0]
+	$oLine.AssetTag  = $line.Split(";")[3]
+	$oLine.Hardware  = $line.Split(";")[4]
+	$oLine.Brand     = $line.Split(";")[5]
+	$oLine.Model     = $line.Split(";")[6]
+	$oLine.Serial    = $line.Split(";")[7]
+	
+	$oAssets += $oLine
+}
+
+
+
+
+
+$spTypes = @()
+write-host Init SharePoint
+
+$spPath = 'C:\Program Files\Common Files\microsoft shared\Web Server Extensions\16\ISAPI\'
+
+$spTypes += "Microsoft.SharePoint.Client.Publishing.dll"
+$spTypes += "Microsoft.SharePoint.Client.Runtime.dll"
+$spTypes += "Microsoft.SharePoint.Client.Search.dll"
+$spTypes += "Microsoft.SharePoint.Client.Taxonomy.dll"
+$spTypes += "Microsoft.SharePoint.Client.UserProfiles.dll"
+$spTypes += "Microsoft.SharePoint.Client.dll"
+
+foreach ($dll in $spTypes)
+{
+	Add-Type -Path ($spPath+$dll)
+}
+
+Write-Host Password
+$pwd = read-host -Prompt "Please enter your password" -AsSecureString
+
+$creds = New-Object Microsoft.SharePoint.Client.SharepointOnlineCredentials ($user, $pwd)
+
+$Context = New-Object Microsoft.SharePoint.Client.ClientContext($siteURL)
+$Context.Credentials = $creds
+
+#Read the Tagged Assets List
+$psListTaggedAssets = $context.Web.Lists.GetByTitle("Tagged Assets")
+$context.Load($psListTaggedAssets)
+$Context.ExecuteQuery()
+
+
+$psListTaggedAssets.ItemCount
+
+$psListTaggedAssets.Title
+
+
+
+
+$idx=1
+# @{Employee=Levi; AssetTag=PS0125; Hardware=Monitor 1; Brand=BenQ; Model=GW2480-B; Serial=ETS7K01724SL0}
+foreach($asset in $oAssets){
+	write-host $asset
+	
+	$listInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation
+	$listItem=$psListTaggedAssets.AddItem($listInfo)
+	$listItem["Title"] = $asset.Brand
+	$hw = $asset.Hardware
+	if ($hw.toUpper().Contains("MONITOR")){
+	    $hw = "Monitor"
+	
+	}
+	
+	if ($hw -eq "PC"){
+		$hw = "Desktop"
+	
+	}
+
+	
+	if ($asset.Model -eq "V53OS"){
+		$hw = "Desktop"
+	}
+
+	$listItem["Hardware"] = $hw
+	$listItem["Model"] = $asset.Model
+	$listItem["SerialNo"] = $asset.Serial
+	$listItem["Status"] = "Available"
+	$tg = $asset.AssetTag
+	if ($tg.contains("PS")){
+	   $tg=$tg.Substring(2,4)+"-PS"
+	}
+	$listItem["Tag"] = $tg
+	
+	$listItem.Update()
+	
+	$idx++
+	#if ($idx -gt 1){
+	#	break;
+	#}
+}
+
+$Context.ExecuteQuery()
+
+#Read the Tagged Assets List
+$psListTaggedAssets = $context.Web.Lists.GetByTitle("Tagged Assets")
+$context.Load($psListTaggedAssets)
+$Context.ExecuteQuery()
+
+
+$psListTaggedAssets.ItemCount
+
+$psListTaggedAssets.Title
+

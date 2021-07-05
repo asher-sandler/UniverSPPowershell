@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס בקשה</docType>
+	</config>
+
+	<row>
+		<Header>בקשת הארכה להיתר להחזקה ו/או לביצוע מחקר במחולל מחלה ביולוגי</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+	
+		<Label>
+			<text>שם החוקר/ת:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field000</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>פקולטה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field001</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

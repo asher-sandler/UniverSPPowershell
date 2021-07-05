@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>Application form</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>Please fill out all of the marked fields</missingDataMessage>
+		<registrationMessage>You are not registered for this scholarship. <![CDATA[<a href="http://scholarships2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>0. Application Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Header>טופס הצהרה על סיום המחקר במחולל מחלה ביולוגי</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+	
+		<Label>
+			<text>שם החוקר/ת:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field000</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>פקולטה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field001</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>מחלקה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field002</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>טלפון:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field003</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>דוא"ל:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field004</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	אני, הח"מ, מבקש/ת בזאת להודיע לוועדה להסדרת המחקר במחוללי מחלות ביולוגיים על סיום המחקר בחומר
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field005</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>הנכלל ברשימת מחוללי המחלות הביולוגיים כפי שהוגדר בחוק להסדרת מחקרים</text>
+			<width>95</width>
+		</Label>
+		
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	במחוללי מחלות ביולוגיים, התשס״ט-2008.
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	שאריות החומר טופלו באופן הבא (נא לפרט אם נותר חומר פעיל, ואם כן כיצד הושמד) -
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field006</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	הריני מאשר/ת כי ידוע לי שאסור לי לבצע מחקר או להחזיק בחומר המוזכר לעיל ושאם
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+	בעתיד אהיה מעוניין/ת לשוב ולבצע מחקר באותו מחולל מחלות ביולוגי אצטרך להגיש בקשה חדשה לאישור הוועדה.
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>חתימה:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field007</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>ת.ז.</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field008</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<Label>
+			<text>תאריך:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field009</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Label></Label>
+	</row>
+  	
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>
+

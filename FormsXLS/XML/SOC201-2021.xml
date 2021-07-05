@@ -1,0 +1,689 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס בקשה</docType>
+	</config>
+
+	<row>
+		<Header>פרטי מגיש הבקשה:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>שנה אקדמית:</text>
+				<width>95</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>תשפ"ב</text>
+				<width>95</width>		
+			</Label>
+		
+		
+			
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<Label>
+			<text>מוסד:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>Institution</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		<Label>
+			<text>פקולטה:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>faculty</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	</row>
+	
+	
+	
+	
+	
+	<row>
+	
+	
+		<Label>
+			<text>מוסד לימוד בתואר ראשון:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>undegraduateInstitution</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+	
+	
+	<row>
+		<Header>1. פרטים אישיים:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>שם משפחה:</text>
+				<width>95</width>		
+			</Label>
+			<control>
+				<Type>TextBox</Type>
+				<Data>surnameHe</Data>
+				<width>150</width>
+				<required>yes</required>
+			</control>	
+		
+			<Label>
+				<text>שם פרטי:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstNameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>			
+	</row>
+	<row>	
+		
+	</row>
+	<row>				
+		
+			<Label>
+				<text>ת.ז.</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+	</row>
+	<row>				
+		
+		<Label>
+			<text>תאריך לידה:</text>
+			<width>95</width>		
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>birthDate</Data>
+			<width>100</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+			<required>yes</required>
+		</control>	
+
+		<Label>
+				<text>מצב משפחתי:</text>
+				<width>95</width>		
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>maritalStatus</Data>
+			<List>maritalStatusList</List>
+			<width>95</width>
+			
+		</control>
+			
+			
+	</row>
+	
+		
+	<row>
+		<Label></Label>
+	</row>
+
+	
+
+	
+	<row>
+	
+	
+			<Label>
+				<text>שם משפחה (לועזית):</text>
+				<width>95</width>		
+			</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>surnameEn</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+				<text>שם פרטי (לועזית):</text>
+				<width>95</width>		
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>nameEn</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>מין:</text>
+			<width>95</width>		
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>sexGender</Data>
+			<List>genderListHeb</List>
+			<width>70</width>
+			
+		</control>			
+	</row>
+	
+
+	<row>			
+				
+			<Label>
+				<text>תאריך העלייה:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>alyahDate</Data>
+			<width>100</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+			
+		</control>
+
+			<Label>
+				<text>ארץ לידה:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>birthCountry</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>	
+
+		
+			<Label>
+				<text>אזרחות:</text>
+				<width>95</width>		
+			</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>citizenShip</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>			
+	</row>
+
+		
+	<row>
+		<Label></Label>
+	</row>	
+	
+	<row>
+
+	
+		<Label>
+			<text>עיסוק נוכחי:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>occupation</Data>
+			<width>150</width>
+			
+		</control>
+
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Header>2. כתובת מגורים:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>עיר/ישוב:</text>
+				<width>95</width>		
+			</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>City</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		
+			<Label>
+				<text>שכונה:</text>
+				<width>95</width>		
+			</Label>
+			
+		<control>
+			<Type>TextBox</Type>
+			<Data>Neighbor</Data>
+			<width>150</width>
+			
+		</control>
+		
+		
+			<Label>
+				<text>רחוב:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>Street</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+	<row>		
+		
+			<Label>
+				<text>מס' בית:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>homeNumber</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		
+		
+			<Label>
+				<text>כניסה:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>entranceNumber</Data>
+			<width>150</width>
+			
+		</control>
+		
+		
+			<Label>
+				<text>מס' דירה:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>flatNumber</Data>
+			<width>150</width>
+			
+		</control>
+		
+	
+	</row>
+		
+	
+	<row>
+		<Label></Label>
+	</row>
+		
+	
+	<row>
+		<Header>3. פרטי קשר:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>טל' נייד:</text>
+			<width>95</width>		
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobilePhone</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>	
+			
+		<Label>
+			<text>טל' בבית:</text>
+			<width>95</width>		
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>homePhone</Data>
+			<width>150</width>
+		</control>
+		
+	</row>
+	
+	<row>			
+		<Label>
+			<text>טל' בעבודה:</text>
+			<width>95</width>		
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>workPhone</Data>
+			<width>150</width>
+		</control>		
+		
+		<Label>
+			<text>טל' נוסף:</text>
+			<width>95</width>		
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>additionalPhone</Data>
+			<width>150</width>
+		</control>
+		
+	</row>
+	
+	<row>			
+		<Label>
+			<text>כתובת דוא"ל:</text>
+			<width>95</width>		
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>emailAddress</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		
+	
+	</row>
+		
+	<row>
+		<Label></Label>
+	</row>	
+
+	<row>
+		<Header>4. לימודים אקדמיים</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>שנים:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>educationYears</Data>
+			<width>150</width>
+			
+		</control>
+		
+		
+			<Label>
+				<text>מוסד:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>educationInstitute</Data>
+			<width>150</width>
+			
+		</control>
+		
+		
+			<Label>
+				<text>תואר:</text>
+				<width>95</width>		
+			</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>educationGrade</Data>
+			<width>150</width>
+			
+		</control>
+		
+	
+	</row>
+		
+
+	<row>
+		<Label></Label>
+	</row>		
+	
+	<row>
+		<Header>5. פרסים, הצטיינות וכד'</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>שנה:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>yearEdu1</Data>
+			<width>150</width>
+			
+		</control>
+		
+		
+			<Label>
+				<text>פרס הצטיינות:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>award</Data>
+			<width>150</width>
+			
+		</control>
+
+			
+	
+	</row>
+		
+	
+	<row>
+		<Label></Label>
+	</row>	
+	
+	<row>
+		<Header>6.  שמות מנחים וממליצים (יש לצרף מכתבי המלצה המתייחסים בין היתר ל "פוטנציאל האקדמי" של המועמד ללימודי תואר שני)</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>שם:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>nameOfRecomend</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		
+		
+			<Label>
+				<text>תפקיד:</text>
+				<width>95</width>		
+			</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>roleOfRecomend</Data>
+			<width>150</width>
+			
+		</control>
+		
+		
+			<Label>
+				<text>קורס/ים בהם לימד את המועמד:</text>
+				<width>95</width>		
+			</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>coursesRecomend</Data>
+			<width>150</width>
+			
+		</control>
+		
+	
+	</row>
+		
+
+	<row>
+		<Label></Label>
+	</row>		
+	
+	<row>
+		<Header>7. התקבלתי ללימודי תואר שני במסלול מחקרי/מסלול ישיר לדוקטורט</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+		<Label>
+			<text>בתחום . (יש לצרף אסמכתא רשמית של המוסד):</text>
+			<width>390</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>areaRecomend</Data>
+			<width>150</width>
+			
+		</control>
+
+
+	
+		
+
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+
+	<row>
+		<Header>8. התחייבות המועמד והאוניברסיטה לתנאים הנדרשים בתקנוןאנו הח"מ מתחייבים לעמוד בכל תנאי המלגה כפי שמופיעים בתקנון ובהנחיות.</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>
