@@ -1048,7 +1048,7 @@ function get-OldContactUs($oldSiteName){
 	
 }
 
-function edt-ContactUs($newSiteName, $pageContent){
+function edt-ContactUs($newSiteName, $pageContent, $language){
 	$pageName = "Pages/ContactUs.aspx"
 	$siteName = get-UrlNoF5 $newSiteName
 	
@@ -1068,8 +1068,15 @@ function edt-ContactUs($newSiteName, $pageContent){
     $ctx.ExecuteQuery();
 	
 	$page.CheckOut()
+	
+	$pageTitle  = "צור קשר"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Contact Us"
+	}
+	
 	$pageFields = $page.ListItemAllFields
 	$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
 	$pageFields.Update()
 	
 	$ctx.Load($pageFields)
@@ -1079,4 +1086,45 @@ function edt-ContactUs($newSiteName, $pageContent){
 	
 	$ctx.ExecuteQuery()	
 }
+
+function edt-contactUsTitle($newSiteName, $language){
+	$pageName = "Pages/ContactUs.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "צור קשר"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Contact Us"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()		
+}
+
+
 

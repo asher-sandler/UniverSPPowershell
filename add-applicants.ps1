@@ -41,8 +41,9 @@ else
 				#read-host
 				if (![string]::isNullOrEmpty($spRequestsListObj.oldSiteURL)){
 					$contactUsContent =  get-OldContactUs $($spRequestsListObj.oldSiteURL)
-					edt-ContactUs $siteUrlC $contactUsContent
+					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
 				}
+				edt-contactUsTitle $siteUrlC  $($spRequestsListObj.language)
 				# write-host $contactUsContent
 				
 				write-host "Done."	
