@@ -43,7 +43,12 @@ else
 					$contactUsContent =  get-OldContactUs $($spRequestsListObj.oldSiteURL)
 					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
 				}
-				edt-contactUsTitle $siteUrlC  $($spRequestsListObj.language)
+				
+				
+				edt-contactUsTitle   $siteUrlC  $($spRequestsListObj.language)
+				edt-cancelCandidacy  $siteUrlC  $($spRequestsListObj.language)
+				edt-SubmissionStatus $siteUrlC  $($spRequestsListObj.language)
+				edt-Recommendations  $siteUrlC  $($spRequestsListObj.language)
 				# write-host $contactUsContent
 				
 				write-host "Done."	

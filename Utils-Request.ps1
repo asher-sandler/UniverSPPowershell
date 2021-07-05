@@ -1127,4 +1127,405 @@ function edt-contactUsTitle($newSiteName, $language){
 }
 
 
+function edt-cancelCandidacy($newSiteName, $language){
+	$pageName = "Pages/CancelCandidacy.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "הסרת מועמדות"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Cancel Candidacy"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	$pageContent = get-cancelCandidacyContent $pageFields["PublishingPageContent"] $language
+	$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()			
+}
+
+function get-cancelCandidacyContent($content, $language)
+{
+	$retContent = ""
+	$wToSearch = 'id="div_'
+	if ($content.contains($wToSearch)){
+		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
+		$idSubst = $content.substring($idPos)
+		$kvPos = $idSubst.IndexOf('"')
+		
+		$sId = $idSubst.Substring(0,$kvPos)
+		#write-host $sId
+		
+		$retContent =  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false" unselectable="on">'
+		$retContent += '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId+'" id="div_'+$sId+'" unselectable="on">'
+		$retContent += '</div>'
+		$retContent += '<div id="vid_'+$sId+'" unselectable="on" style="display: none;">'
+		$retContent += '</div>'
+		$retContent += '</div><div></div>'
+		
+		$langContent = '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><p><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).<span aria-hidden="true"></span></span></span></p></div>'
+		if ($language.ToLower() -eq "en"){
+			$langContent = '<h1>Cancel Candidacy </h1>
+<p style="text-align: justify;">
+   <span class="ms-rteFontSize-2"> You can cancel your candidacy by clicking on the “Cancel Candidacy” button.<br/>Please note, clicking on the button will remove all your material from this site, without the possibility of recovery.<br/>To re-apply, you will need to repeat the application process from the beginning (application form / uploading documents etc.).</span></p>'
+		}
+		
+     	$retContent = $langContent + $retContent	
+	}
+	return $retContent
+}
+
+function edt-SubmissionStatus($newSiteName, $language){
+	$pageName = "Pages/SubmissionStatus.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "סטטוס הגשה"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Submission Status"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	$pageContent = get-SubmissionStatusContent $pageFields["PublishingPageContent"] $language $relUrl
+	$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()			
+}
+
+function get-SubmissionStatusContent($content, $language, $relURL){
+		
+	$retContent = ""
+	$wToSearch = 'id="div_'
+	if ($content.contains($wToSearch)){
+		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
+		$idSubst = $content.substring($idPos)
+		$kvPos = $idSubst.IndexOf('"')
+		
+		$sId1 = $idSubst.Substring(0,$kvPos)
+		#write-host $sId1
+		
+		$ostatok = $idSubst.substring($kvPos)
+		$wToSearch = 'ms-rte-wpbox'
+		$idPos = $ostatok.IndexOf($wToSearch)+$wToSearch.length
+		
+		$content = $ostatok.substring($idPos)
+		#write-Host "CNT1 : $content"
+		$wToSearch = 'id="div_'
+		
+		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
+		$idSubst = $content.substring($idPos)
+		$kvPos = $idSubst.IndexOf('"')
+		
+		$sId2 = $idSubst.Substring(0,$kvPos)
+		#write-host $sId2
+		
+
+	if ($language.ToLower() -eq "en"){		
+		$LangContent1 = '<h1>​Document Status</h1><p><span class="ms-rteFontSize-2">Recommendation letters will be updated&#160;up to </span><strong class="ms-rteFontSize-2">two hours </strong><span class="ms-rteFontSize-2">after confirmation of arrival on the&#160;</span><a href="'+$relURL+'Pages/Recommendations.aspx"><span class="ms-rteFontSize-2" style="text-decoration-line: underline;"><font color="#0066cc">Recomme​​ndations</font></span></a><span class="ms-rteFontSize-2"> page.​</span></p>'
+		$LangContent2 = '<div>
+   <div>
+      <h1>Submission</h1>
+      <font class="ms-rteThemeFontFace-1 ms-rteFontSize-2"><span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">You can press &#39;Submit&#39;, </span>
+         <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">once you have carried out all the obligations according to the administrative guidelines.</span></font><span class="ms-rteThemeFontFace-1 ms-rteFontSize-2"> </span></div>
+   <div>
+      <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">
+         
+         <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">After&#160;the deadline,&#160;all the material in your &quot;Documents Upload&quot; folder will be read only.</span></span></div>
+</div> 
+'
+	}
+	else
+	{
+		$LangContent1 = '<h1>סטטוס מסמכים</h1>
+	
+<div style="color: #000000; font-size: medium;"> 
+   <font class="ms-rteFontSize-2">
+      <font size="3">&#160;<span class="ms-rteFontSize-2"><font size="3">מכתבי המלצה יתעדכנו </font></span><font size="3"> 
+            <strong class="ms-rteFontSize-2">כשעתיים</strong>
+			<span class="ms-rteFontSize-2"> לאחר אישור קבלה בדף </span>
+	  </font>
+    </font> 
+    <a href="'+$relURL+'/home/SocialSciences/SOC205-2021/Pages/Recommendations.aspx"> 
+         <span class="ms-rteFontSize-2" lang="HE" dir="rtl" style="text-decoration-line: underline;">
+            <font color="#0066cc" size="3"> 
+               <span style="text-decoration: underline;">הה​מלצות</span>
+			</font>
+		</span>
+	  </a>
+	  <span class="ms-rteFontSize-2">
+		<font size="3">.
+		</font>
+	  </span>
+	</font>
+</div>'
+
+
+		$LangContent2 = '<div>
+   <h1>
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>הגשה</h1>
+   <div class="ms-rteFontSize-2">בתום ביצוע כל חובות הבקשה בהתאם להנחיות המנהליות, תוכל/י ללחוץ &#39;הגשה&#39;. </div>
+   <div class="ms-rteFontSize-2">
+      <span lang="HE" dir="rtl">המידע שימצא בתיק המועמד/ת במועד הסגירה יהיה זמין לקריאה בלבד.<span aria-hidden="true"></span><span aria-hidden="true"></span></span></div>
+</div>'
+
+
+	}		
+		$retContent  =  $LangContent1 + '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'		
+		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId1+'" id="div_'+$sId1+'">'
+		$retContent +=  '</div>'
+		$retContent +=  '<div id="vid_'+$sId1+'" style="display: none;">'
+		$retContent +=  '</div></div><div>'+$LangContent2+'</div>'
+		$retContent +=  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'
+		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId2+'" id="div_'+$sId2+'">'
+		$retContent +=  '</div>'
+		$retContent +=  '<div id="vid_'+$sId2+'" style="display: none;">'
+		$retContent +=  '</div></div><div></div>'
+		
+		
+		#write-host $retContent
+		
+		
+		
+		
+		
+	}
+
+	return $retContent	
+}
+
+function edt-Recommendations($newSiteName, $language){
+	$pageName = "Pages/Recommendations.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "המלצות"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Recommendations"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	$pageContent = get-RecommendationsContent $pageFields["PublishingPageContent"] $language $relUrl
+	$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()			
+}
+
+function get-RecommendationsContent($content, $language, $relURL){
+		
+	$retContent = ""
+	$wToSearch = 'id="div_'
+	if ($content.contains($wToSearch)){
+		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
+		$idSubst = $content.substring($idPos)
+		$kvPos = $idSubst.IndexOf('"')
+		
+		$sId1 = $idSubst.Substring(0,$kvPos)
+		write-host $sId1
+		
+		$ostatok = $idSubst.substring($kvPos)
+		$wToSearch = 'ms-rte-wpbox'
+		$idPos = $ostatok.IndexOf($wToSearch)+$wToSearch.length
+		
+		$content = $ostatok.substring($idPos)
+		#write-Host "CNT1 : $content"
+		$wToSearch = 'id="div_'
+		
+		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
+		$idSubst = $content.substring($idPos)
+		$kvPos = $idSubst.IndexOf('"')
+		
+		$sId2 = $idSubst.Substring(0,$kvPos)
+		write-host $sId2
+		
+
+	if ($language.ToLower() -eq "en"){		
+		$LangContent1 = '<h1>Recommendations </h1>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please ask your referees to send their recommendation letters to the e-mail address appearing below.<span lang="HE" dir="rtl"></span></span></div>
+<div> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Letters arrive directly to the applicant'+"’"+'s folder automatically, a few moments after being sent.</span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">
+      <span lang="HE" dir="rtl"></span>&#160;</span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please make sure your referees follow these guidelines:<span lang="HE" dir="rtl"></span></span></div>
+<ul>
+   <li>
+      <p> 
+         <span class="ms-rteFontSize-2">Sending the letter as an attachment (all text in the email body will not be received by the system)</span></p>
+   </li>
+</ul>
+<ul>
+   <li>
+      <p> 
+         <span class="ms-rteFontSize-2">The file size should not be larger than 5MB.</span></p>
+   </li>
+</ul>
+<ul>
+   <li>
+      <p> 
+         <span class="ms-rteFontSize-2">The file name should not contain any special characters such as (“ ;).</span></p>
+   </li>
+</ul>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Your referee will receive confirmation within 24 hours.</span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please&#160;inform the referees that 
+      <strong>you will not</strong> have access to these letters. </span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <strong>​<br/>Please ensure that the letters arrive before the deadline.</strong></div>
+<div>&#160;</div>
+<h2>E-mail address for referees:​</h2>'
+
+
+		$LangContent2 = '<h2>Received recommendations:​</h2>'
+	}
+	else
+	{
+		$LangContent1 = '<div>
+   <h1>המלצות</h1>
+   <div>
+      <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1"><span lang="HE">אנא בקשו מהממליצים שלכם לשלוח את מכתביהם לכתובת הדוא&quot;ל המופיעה מטה.</span><span dir="ltr"></span>                               
+         <br/>מכתבי המלצה מתקבלים אוטומטית במערכת ישירות לתיק המועמד/ת מספר דקות לאחר השליחה.</span></div>
+   <div>
+      <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1">&#160;</span></div>
+   <div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top; unicode-bidi: embed; direction: rtl;">
+      <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1"><span lang="HE">אנא וודאו שהממליצים עוקבים אחר ההוראות הבאות:</span><span dir="ltr"></span></span></div>
+   <ul>
+      <li>
+         <p>
+            <span class="ms-rteFontSize-2"><span lang="HE">שליחת מכתב ההמלצה כצרופה – </span>                                                             
+               <span dir="ltr">attachment</span><span dir="rtl"></span><span dir="rtl"></span><span dir="rtl"></span><span dir="rtl"></span>                                                             
+               <span lang="HE">(כל טקסט בגוף המייל לא ייקלט במערכת).</span><span dir="ltr"></span></span></p>
+      </li>
+      <li>
+         <p>
+            <span class="ms-rteFontSize-2"><span lang="HE">גודל הקובץ לא יעלה על </span>                                                             
+               <span dir="ltr"></span>                                                             
+               <span dir="ltr"></span>                                                             
+               <span dir="ltr">
+                  <span dir="ltr"></span>                                                                            
+                  <span dir="ltr"></span>5MB</span><span dir="rtl"></span><span dir="rtl"></span><span lang="HE"><span dir="rtl"></span><span dir="rtl"></span>.</span></span></p>
+      </li>
+      <li>
+         <p>
+            <span class="ms-rteFontSize-2" lang="HE">על שם הקובץ לא להכיל תווים מיוחדים כגון&#160; (&quot; ;)</span></p>
+      </li>
+   </ul>
+   <div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top; unicode-bidi: embed; direction: rtl;">
+      <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1" lang="HE">הממליץ יקבל אישור על שליחת המכתב תוך 24 שעות.</span></div>
+   <div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top; unicode-bidi: embed; direction: rtl;">
+      <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1" lang="HE"></span>                
+      <div style="margin: 0cm 0cm 0pt; vertical-align: top; unicode-bidi: embed; direction: rtl;">
+         <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1">
+            <span lang="HE">אנא הדגישו בפני הממליץ                                                                  
+               <strong>שאין לכם גישה</strong> למכתב ההמלצה.</span></span></div>
+   </div>
+   <div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top; unicode-bidi: embed; direction: rtl;">
+      <strong class="ms-rteFontSize-2"><span lang="HE"><br/>באחריותכם לוודא שמכתבי ההמלצה הגיעו לפני מועד סגירת הרישום.</span></strong></div>
+   <div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top; unicode-bidi: embed; direction: rtl;">
+      <strong><span lang="HE" style="font-family: arial, sans-serif; font-size: 10pt;"></span></strong>&#160;</div>
+   <h2>
+      <span lang="HE">​​כתובת דוא&quot;ל למשלוח המלצות:<span aria-hidden="true"></span><span aria-hidden="true"></span></span></h2>
+</div>
+'
+
+
+		$LangContent2 = '<h2>המלצות שהתקבלו:</h2>'
+
+
+	}		
+		$retContent  =  $LangContent1 + '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'		
+		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId1+'" id="div_'+$sId1+'">'
+		$retContent +=  '</div>'
+		$retContent +=  '<div id="vid_'+$sId1+'" style="display: none;">'
+		$retContent +=  '</div></div><div>'+$LangContent2+'</div>'
+		$retContent +=  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'
+		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId2+'" id="div_'+$sId2+'" unselectable="on">'
+		$retContent +=  '</div>'
+		$retContent +=  '<div id="vid_'+$sId2+'" style="display: none;">'
+		$retContent +=  '</div></div><div></div>'
+		
+		
+		#write-host $retContent
+		
+		
+		
+		
+		
+	}
+
+	return $retContent	
+}
+
+
 
