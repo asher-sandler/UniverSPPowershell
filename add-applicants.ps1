@@ -45,10 +45,11 @@ else
 				}
 				
 				
-				edt-contactUsTitle   $siteUrlC  $($spRequestsListObj.language)
-				edt-cancelCandidacy  $siteUrlC  $($spRequestsListObj.language)
-				edt-SubmissionStatus $siteUrlC  $($spRequestsListObj.language)
-				edt-Recommendations  $siteUrlC  $($spRequestsListObj.language)
+				edt-contactUsTitle   	$siteUrlC  $($spRequestsListObj.language)
+				edt-cancelCandidacy  	$siteUrlC  $($spRequestsListObj.language)
+				edt-SubmissionStatus 	$siteUrlC  $($spRequestsListObj.language)
+				edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
+				edt-DeleteEmptyFolders  $siteUrlC  $($spRequestsListObj.language)
 				# write-host $contactUsContent
 				
 				write-host "Done."	

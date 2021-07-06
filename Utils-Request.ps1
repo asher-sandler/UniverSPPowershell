@@ -863,6 +863,17 @@ function change-ListApplicantsDeadLine( $siteUrl, $spObj){
 	
 }
 function change-siteSetting($SiteURL) {
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.Portable.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Publishing.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Search.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.UserProfiles.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+	
 	Try {
 		#Setup the context
 		$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
@@ -1525,6 +1536,102 @@ function get-RecommendationsContent($content, $language, $relURL){
 	}
 
 	return $retContent	
+}
+
+function edt-DeleteEmptyFolders($newSiteName, $language){
+	$pageName = "Pages/DeleteEmptyFolders.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "מחיקת תיקים ריקים"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Delete Empty Folders"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	$pageContent = get-DeleteEmptyFolders $pageFields["PublishingPageContent"] $language $relUrl
+	#$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()		
+}
+
+function get-DeleteEmptyFolders($content, $language)
+{
+	$retContent = ""
+	$wToSearch = 'id="div_'
+	if ($content.contains($wToSearch)){
+		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
+		$idSubst = $content.substring($idPos)
+		$kvPos = $idSubst.IndexOf('"')
+		
+		$sId = $idSubst.Substring(0,$kvPos)
+		write-host $sId
+		
+		$retContent =  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false" unselectable="on">'
+		$retContent += '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId+'" id="div_'+$sId+'" unselectable="on">'
+		$retContent += '</div>'
+		$retContent += '<div id="vid_'+$sId+'" unselectable="on" style="display: none;">'
+		$retContent += '</div>'
+		$retContent += '</div><div></div>'
+		
+		$langContent = @'
+<p>
+   <span class="ms-rteFontSize-2">
+   <span aria-hidden="true"></span>
+   <span aria-hidden="true"></span>
+   <span aria-hidden="true"></span>
+   לחיצה על הכפתור תסיר את כל המועמדים בעלי תיקים ריקים (0 מסמכים בתיק)&#160;מהאתר.</span>
+</p>
+<p>
+   <span class="ms-rteFontSize-2">ניתן לבצע פעולה זו לאחר מועד הסגירה.
+	<span aria-hidden="true"></span>
+	<span aria-hidden="true"></span>
+	<span aria-hidden="true"></span>
+   </span>
+</p>
+'@
+
+		if ($language.ToLower() -eq "en"){
+			$langContent = @'
+<p>
+   <span class="ms-rteFontSize-2">
+	<span aria-hidden="true"></span>
+   Clicking on the button will remove all candidates with empty document upload&#160;folders (0 documents in the folder) from the site.</span>
+</p>
+<p>
+   <span class="ms-rteFontSize-2">This can be done after the deadline
+	<span aria-hidden="true"></span>
+   </span>
+</p>
+'@
+		}
+		
+     	$retContent = $langContent + $retContent	
+	}
+	return $retContent
 }
 
 
