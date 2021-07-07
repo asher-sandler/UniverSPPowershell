@@ -50,6 +50,9 @@ else
 				edt-SubmissionStatus 	$siteUrlC  $($spRequestsListObj.language)
 				edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
 				edt-DeleteEmptyFolders  $siteUrlC  $($spRequestsListObj.language)
+				edt-Form			    $siteUrlC  $($spRequestsListObj.language)
+				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)
+				copyMail $($spRequestsListObj.MailPath)  $($spRequestsListObj.MailFile)  $($spRequestsListObj.PreviousMail)
 				# write-host $contactUsContent
 				
 				write-host "Done."	

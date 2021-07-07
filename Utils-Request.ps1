@@ -1096,6 +1096,7 @@ function edt-ContactUs($newSiteName, $pageContent, $language){
 	$page.CheckIn("",1)
 	
 	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
 }
 
 function edt-contactUsTitle($newSiteName, $language){
@@ -1134,7 +1135,8 @@ function edt-contactUsTitle($newSiteName, $language){
 	
 	$page.CheckIn("",1)
 	
-	$ctx.ExecuteQuery()		
+	$ctx.ExecuteQuery()
+	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
 
@@ -1175,7 +1177,8 @@ function edt-cancelCandidacy($newSiteName, $language){
 	
 	$page.CheckIn("",1)
 	
-	$ctx.ExecuteQuery()			
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
 function get-cancelCandidacyContent($content, $language)
@@ -1246,7 +1249,8 @@ function edt-SubmissionStatus($newSiteName, $language){
 	
 	$page.CheckIn("",1)
 	
-	$ctx.ExecuteQuery()			
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
 function get-SubmissionStatusContent($content, $language, $relURL){
@@ -1274,6 +1278,7 @@ function get-SubmissionStatusContent($content, $language, $relURL){
 		$kvPos = $idSubst.IndexOf('"')
 		
 		$sId2 = $idSubst.Substring(0,$kvPos)
+		#write-host "Submission status RelUrl: $relURL"
 		#write-host $sId2
 		
 
@@ -1302,7 +1307,7 @@ function get-SubmissionStatusContent($content, $language, $relURL){
 			<span class="ms-rteFontSize-2"> לאחר אישור קבלה בדף </span>
 	  </font>
     </font> 
-    <a href="'+$relURL+'/home/SocialSciences/SOC205-2021/Pages/Recommendations.aspx"> 
+    <a href="'+$relURL+'Pages/Recommendations.aspx"> 
          <span class="ms-rteFontSize-2" lang="HE" dir="rtl" style="text-decoration-line: underline;">
             <font color="#0066cc" size="3"> 
                <span style="text-decoration: underline;">הה​מלצות</span>
@@ -1387,7 +1392,8 @@ function edt-Recommendations($newSiteName, $language){
 	
 	$page.CheckIn("",1)
 	
-	$ctx.ExecuteQuery()			
+	$ctx.ExecuteQuery()
+	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
 function get-RecommendationsContent($content, $language, $relURL){
@@ -1566,7 +1572,7 @@ function edt-DeleteEmptyFolders($newSiteName, $language){
 	
 	$pageFields = $page.ListItemAllFields
 	$pageContent = get-DeleteEmptyFolders $pageFields["PublishingPageContent"] $language $relUrl
-	#$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["PublishingPageContent"] = $pageContent
 	$pageFields["Title"] = $pageTitle
 	$pageFields.Update()
 	
@@ -1575,7 +1581,8 @@ function edt-DeleteEmptyFolders($newSiteName, $language){
 	
 	$page.CheckIn("",1)
 	
-	$ctx.ExecuteQuery()		
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
 function get-DeleteEmptyFolders($content, $language)
@@ -1634,5 +1641,111 @@ function get-DeleteEmptyFolders($content, $language)
 	return $retContent
 }
 
+function edt-Form($newSiteName, $language){
+	$pageName = "Pages/Form.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "טופס בקשה"
+	if ($language.ToLower() -eq "en"){
+		$pageTitle = "Application Form"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	#$pageContent = get-FormContent $pageFields["PublishingPageContent"] $language $relUrl
+	#$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()
+	write-host "$pageName Was Updated" -foregroundcolor Green
+}
+function copyXML($PathXML, $XMLFile, $PreviousXML){
+	
+	if (![string]::isNullOrEmpty($PreviousXML)){
+		# check for exists
+		$fullPrevPath = $PathXML + "\" + $PreviousXML
+		
+		
+		$fileNewXML   = $PathXML + "\" + $XMLFile
+		
+		If (Test-Path $fullPrevPath){
+			if (!(Test-Path $fileNewXML)){
+				Copy-Item -Path $fullPrevPath -Destination $fileNewXML
+				if (Test-Path $fileNewXML){
+					write-Host "XML File $fileNewXML succesfully created." -foregroundcolor Green
+				}
+				else
+				{
+					write-Host "Problem was with copy XML File $fileNewXML." -foregroundcolor Yellow
+				}
+			}
+			else
+			{
+				Write-Host "XML File $fileNewXML already exists. Not Copied." -foregroundcolor Yellow
+			}
+		}
+		else
+		{
+			Write-Host "Previous XML $filePrevXML does not found.Check for it." -foregroundcolor Yellow
+		}
+		
+		
+	}
+}
+function copyMail($PathMail, $MailFile, $PreviousMail){
+	if (![string]::isNullOrEmpty($PreviousMail)){
+		# check for exists
+		$fullPrevPath = $PathMail + "\" + $PreviousMail
+		
+		
+		$fileNewMail   = $PathMail + "\" + $MailFile
+		
+		If (Test-Path $fullPrevPath){
+			if (!(Test-Path $fileNewMail)){
+				Copy-Item -Path $fullPrevPath -Destination $fileNewMail
+				if (Test-Path $fileNewMail){
+					write-Host "Mail File $fileNewMail succesfully created." -foregroundcolor Green
+				}
+				else
+				{
+					write-Host "Problem was with copy Mail File $fileNewMail." -foregroundcolor Yellow
+				}
+			}
+			else
+			{
+				Write-Host "Mail File $fileNewMail already exists. Not Copied." -foregroundcolor Yellow
+			}
+		}
+		else
+		{
+			Write-Host "Previous Mail $filePrevMail does not found.Check for it." -foregroundcolor Yellow
+		}
+		
+		
+	}	
+	
+}
 
 
