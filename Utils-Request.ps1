@@ -62,7 +62,7 @@ function Get-CurrentSystem($groupName){
 
 	$availSystems =  Get-AvailableSystems
 	
-	$curSystem = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$curSystem = "" | Select-Object appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
 	
 	foreach($systm in $availSystems){
 		if ($systm.GroupPrefix.ToUpper() -eq $groupSuffix){
@@ -425,7 +425,7 @@ function Add-SiteList($ListObj, $facultyList)
 		$listItem["ScholarshipName"] = $ListObj.siteName
 		$listItem["SiteDescription"] = $ListObj.siteNameEn
 		$listItem["isCreated"] = "Waiting"
-		$listItem["Target_x0020_Audiences"] = $ListObj.targetAudiency  + ";" + $ListObj.targetAudiencysharepointGroup
+		$listItem["Target_x0020_Audiences"] = $ListObj.targetAudiency  + ";" + $ListObj.targetAudiencysharepointGroup + ";"+ $ListObj.targetAudiencyDistributionSecurityGroup + ";"+ $ListObj.adminGroup
 		
 		$listItem.Update()      
 		$ctx.load($list)      
@@ -459,8 +459,8 @@ function Write-TextConfig ($ListObj, $groupName)
 		$fileS += "Site Title:"+$ListObj[0].siteName + $crlf
 		$fileS += "Site Description:"+$ListObj[0].siteNameEn + $crlf
 		$fileS += "Group Description:"+$ListObj[0].siteNameEn + $crlf
-		$fileS += "Previous Site:"+$ListObj[0].Notes + $crlf
-		$fileS += "Url:" + $crlf+ $crlf
+		$fileS += "Previous Site: "+$ListObj[0].Notes + $crlf
+		$fileS += "Url: " + $crlf+ $crlf
 
 		$fileS += "ContactFirstName:" +  $ListObj[0].contactFirstNameEn+ $crlf
 		$fileS += "ContactLastName:"+  $ListObj[0].contactLastNameEn+ $crlf
@@ -468,7 +468,8 @@ function Write-TextConfig ($ListObj, $groupName)
 		
 		$fileS += "ContactEmail:" + $ListObj[0].contactEmail + $crlf
 		$fileS += "UserName:" + "CC\"+$ListObj[0].contactEmail.split('@')[0] + $crlf
-		$fileS += "recommendationsDeadline:" + $ListObj[0].deadline.month+"/"+$ListObj[0].deadline.day+"/"+$ListObj[0].deadline.year + $crlf
+		$dedln = $ListObj[0].deadline.AddDays(1)
+		$fileS += "recommendationsDeadline: " + $dedln.day.tostring().PadLeft(2,"0")+"."+$dedln.month.tostring().PadLeft(2,"0")+"."+$dedln.year + $crlf
 		$fileS += "Language:" + $ListObj[0].language + $crlf
 		$fileS += "relative URL:" + $relURL + $crlf
 		$fileS += "template:" + $relURL + $crlf
@@ -485,10 +486,16 @@ function Write-TextConfig ($ListObj, $groupName)
         $fileS += "Faculty:"  + $ListObj[0].faculty + $crlf
 		$fileS += "Rights for Admin: " + $ListObj[0].RightsforAdmin + $crlf+ $crlf
 		$fileS += "Path: "+$ListObj[0].PathXML+ $crlf
-		$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf
-		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
+		$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf 
+		$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf +$crlf
 		
-		$fileS += "Email Template:" +  $ListObj[0].MailFile+ $crlf+ $crlf
+		
+		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
+		$fileS += "Email Template:" +  $ListObj[0].MailFile+ $crlf
+		$fileS += "GoTo Email: cd " +  $ListObj[0].MailPath+ "\" + $ListObj[0].MailFile+ $crlf+ $crlf
+		
+		
+		
 		$fileS += "Path: "+$ListObj[0].PathXML+ $crlf
 		$fileS += "Prev XML Form: " +   $ListObj[0].PreviousXML +  $crlf
 		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
@@ -994,13 +1001,19 @@ function delete-ListItemsByID($site, $listName, $id){
 }
 
 function get-SiteNameFromNote($note){
-	$siteName = ""
+	$sName = ""
 	if (![string]::IsNullOrEmpty($note)){
 		[regex]$regex = '(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?'
 		$siteName = $regex.Matches($note).Value
+		$sName = "https://"
+		$aName = $siteName.split("/")
+		for ($i = 2; $i -le 5; $i++ ){
+			$sName += $aName[$i] + "/"
+		}
 	}
-	# write-Host "Old Site Name : $siteName"
-	return $siteName
+	write-Host "Old Site Name : $sName" -foregroundcolor Green
+	
+	return $sName
 }
 
 function get-RelURL($url){
@@ -1010,8 +1023,8 @@ function get-RelURL($url){
 		
 		$aUrl = $url.split("/")
 		
-		if ($aUrl.length -ge 3){
-			for ($i = 3; $i -lt $aUrl.length; $i++ ){
+		if ($aUrl.length -ge 6){
+			for ($i = 3; $i -le 5; $i++ ){
 				$relUrl += $aUrl[$i] + "/"
 			}
 			$relUrl = "/" + $relUrl
@@ -1081,7 +1094,7 @@ function edt-ContactUs($newSiteName, $pageContent, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "צור קשר"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Contact Us"
 	}
 	
@@ -1121,7 +1134,7 @@ function edt-contactUsTitle($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "צור קשר"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Contact Us"
 	}
 	
@@ -1162,7 +1175,7 @@ function edt-cancelCandidacy($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "הסרת מועמדות"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Cancel Candidacy"
 	}
 	
@@ -1201,7 +1214,7 @@ function get-cancelCandidacyContent($content, $language)
 		$retContent += '</div><div></div>'
 		
 		$langContent = '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><p><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).<span aria-hidden="true"></span></span></span></p></div>'
-		if ($language.ToLower() -eq "en"){
+		if ($language.ToLower().contains("en")){
 			$langContent = '<h1>Cancel Candidacy </h1>
 <p style="text-align: justify;">
    <span class="ms-rteFontSize-2"> You can cancel your candidacy by clicking on the “Cancel Candidacy” button.<br/>Please note, clicking on the button will remove all your material from this site, without the possibility of recovery.<br/>To re-apply, you will need to repeat the application process from the beginning (application form / uploading documents etc.).</span></p>'
@@ -1234,7 +1247,7 @@ function edt-SubmissionStatus($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "סטטוס הגשה"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Submission Status"
 	}
 	
@@ -1282,7 +1295,7 @@ function get-SubmissionStatusContent($content, $language, $relURL){
 		#write-host $sId2
 		
 
-	if ($language.ToLower() -eq "en"){		
+	if ($language.ToLower().contains("en")){		
 		$LangContent1 = '<h1>​Document Status</h1><p><span class="ms-rteFontSize-2">Recommendation letters will be updated&#160;up to </span><strong class="ms-rteFontSize-2">two hours </strong><span class="ms-rteFontSize-2">after confirmation of arrival on the&#160;</span><a href="'+$relURL+'Pages/Recommendations.aspx"><span class="ms-rteFontSize-2" style="text-decoration-line: underline;"><font color="#0066cc">Recomme​​ndations</font></span></a><span class="ms-rteFontSize-2"> page.​</span></p>'
 		$LangContent2 = '<div>
    <div>
@@ -1377,7 +1390,7 @@ function edt-Recommendations($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "המלצות"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Recommendations"
 	}
 	
@@ -1424,7 +1437,7 @@ function get-RecommendationsContent($content, $language, $relURL){
 		write-host $sId2
 		
 
-	if ($language.ToLower() -eq "en"){		
+	if ($language.ToLower().contains("en")){		
 		$LangContent1 = '<h1>Recommendations </h1>
 <div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
    <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please ask your referees to send their recommendation letters to the e-mail address appearing below.<span lang="HE" dir="rtl"></span></span></div>
@@ -1566,7 +1579,7 @@ function edt-DeleteEmptyFolders($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "מחיקת תיקים ריקים"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Delete Empty Folders"
 	}
 	
@@ -1621,7 +1634,7 @@ function get-DeleteEmptyFolders($content, $language)
 </p>
 '@
 
-		if ($language.ToLower() -eq "en"){
+		if ($language.ToLower().contains("en")){
 			$langContent = @'
 <p>
    <span class="ms-rteFontSize-2">
@@ -1663,7 +1676,7 @@ function edt-Form($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "טופס בקשה"
-	if ($language.ToLower() -eq "en"){
+	if ($language.ToLower().contains("en")){
 		$pageTitle = "Application Form"
 	}
 	
@@ -1715,6 +1728,7 @@ function copyXML($PathXML, $XMLFile, $PreviousXML){
 	}
 }
 function copyMail($PathMail, $MailFile, $PreviousMail){
+
 	if (![string]::isNullOrEmpty($PreviousMail)){
 		# check for exists
 		$fullPrevPath = $PathMail + "\" + $PreviousMail

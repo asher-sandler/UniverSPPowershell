@@ -46,11 +46,17 @@ else
 				
 				
 				edt-contactUsTitle   	$siteUrlC  $($spRequestsListObj.language)
-				edt-cancelCandidacy  	$siteUrlC  $($spRequestsListObj.language)
-				edt-SubmissionStatus 	$siteUrlC  $($spRequestsListObj.language)
-				edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
 				edt-DeleteEmptyFolders  $siteUrlC  $($spRequestsListObj.language)
-				edt-Form			    $siteUrlC  $($spRequestsListObj.language)
+				$isDoubleLangugeSite = $($spRequestsListObj.language).toLower().contains("en") -and $($spRequestsListObj.language).toLower().contains("he")
+				Write-Host "Is Double Language site : $isDoubleLangugeSite" -foregroundcolor Green
+				
+				if (!$isDoubleLangugeSite){
+					edt-cancelCandidacy  	$siteUrlC  $($spRequestsListObj.language)
+					edt-SubmissionStatus 	$siteUrlC  $($spRequestsListObj.language)
+					edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
+					edt-Form			    $siteUrlC  $($spRequestsListObj.language)
+				}
+				
 				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)
 				copyMail $($spRequestsListObj.MailPath)  $($spRequestsListObj.MailFile)  $($spRequestsListObj.PreviousMail)
 				# write-host $contactUsContent
