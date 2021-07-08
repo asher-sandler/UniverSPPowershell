@@ -1,0 +1,404 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<logo>\\ekeksql00\SP_Resources$\FRM\FIN\images\hujiLogo.png</logo>
+		<fileName>applicationForm</fileName>
+		<docHeader>Consent Form - Online Experiments -TIMECODE</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>Please fill out all of the marked fields</missingDataMessage>
+		<registrationMessage>You are not registered for this scholarship. <![CDATA[<a href="http://scholarships2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType></docType>
+		<calculations>no</calculations>
+		
+		<createPDF>yes</createPDF>
+		<pdfMailBodyHtml><![CDATA[
+			
+		]]>
+		</pdfMailBodyHtml>
+		<pdfMailSubject></pdfMailSubject>
+		<pdfEmailField>Email</pdfEmailField>
+		<pdfDownloadButtonText>Download File</pdfDownloadButtonText>
+		<datasourcelist>CONCENT13_01_List</datasourcelist>
+		<destination>
+			<web>https://portals2.ekmd.huji.ac.il/home/ard/consentForms</web>
+			<list>CONCENT13_01_List</list>
+			<library>CONCENT13_01_PDF</library>
+			<user_folder>no</user_folder>	
+		</destination>
+		
+		<statusColumn>status</statusColumn>
+		<ticketNum>Concent_Form_</ticketNum>
+		<description>[LastName]-[FirstName]</description>
+		<createSubFolder>yes</createSubFolder>
+		<redirectPage>https://portals.ekmd.huji.ac.il/home/finances/customers/external/Pages/Success.aspx?isdlg=1</redirectPage>
+
+	</config>
+
+
+	<unique_key>
+		<list>CONCENT13_01_List</list>
+		<column>Email</column>
+		<response_list>response_list</response_list>
+	</unique_key>
+	
+	
+<!-- ==================   Date Template ==================== -->
+
+<!-- 
+	<control>
+		<Type>TextBox</Type>
+		<Data>date001</Data>
+		<width>100</width>
+		<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+		<tooltip>DD/MM/YYYY</tooltip>
+		<required>yes</required>
+	</control>
+
+-->
+<!-- =================== Teudat Zeut Template =============== -->
+
+<!--
+	<row>
+
+			<Label>
+				<text>ת.ז.</text>
+				<width>95</width>
+			</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+-->	
+
+<!-- ===================== Hatima ===================== -->
+
+<!--    
+	<row>
+		<control>
+			<Type>Signature</Type>
+			<Data>Signature</Data>
+			<width>300</width>
+			<required>no</required>	
+			<print>yes</print>
+		</control>
+	
+	</row>
+
+-->	
+
+<!-- ================================================= -->
+
+
+
+
+
+	<row>
+		<Header>Consent Form - Online Experiments -TIMECODE</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	You are about to participate in a behavioral study in the context of an academic research program named TIMECODE.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>What is the project and this study about?</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	TIMECODE is an academic research program that aims to understand the neural underpinnings of time perception. The purpose of this particular behavioral study is to determine what are the sensory and motor factors that affect how one experiences time. The study includes voluntary participants, all of whom are healthy adults who are not taking any neurological medications and do not suffer from any sensory deficits. The inclusion criteria are justified due to the need to probe sensory processing and the brain activity accompanying it.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	For scientific reasons, this form does not include all of the information about the research question being tested. The Principal Investigator can provide you with more information when your participation in the study is over. By signing the Informed Consent Form, you agree to be debriefed as mentioned above.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>Who is undertaking it?</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	TIMECODE is conducted by a research team of the Hebrew University of Jerusalem, led by the Principal Investigator Prof. Ayelet Landau from the Department of Psychology, and this particular behavioral study is conducted by Nir Ofir, a TIMECODE core research team member under the supervision of the Principal Investigator.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>Who is funding it?</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	TIMECODE is funded by the European Research Counsel, a respectful public body established by the European Commission to fund high quality scientific and technological research conducted in and/or supported by the European Union.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>What is involved for the participant?</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	Your participation will take about 45 minutes. During this session, we will present you with visual stimuli, and you will be asked to answer simple questions about them. Your participation is entirely voluntary - you may refuse to answer questions and/or make any requested activity or stop your participation at any stage without giving a reason and without consequences.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>Benefits and Risks</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	No benefits apart of the scientific benefits will be derived for your participation in this project.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	TIMECODE, including this study, has been reviewed and approved through the Hebrew University's formal research ethics procedure. According to our assessment, there are no special risks associated with your participation in the study. The study team does not foresee or anticipate any risk greater than that encountered in your daily routine activities. However, if you feel that something you are asked to do may pose a risk for you or others, you may simply ask the experimenter to avoid that stage or withdraw from the study.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>Compensation</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	Beyond the scientific benefits of this study enriched by your participation, you will also be compensated by receiving 	40 NIS / 1h or 4 credit points / 1 h.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>Who is responsible and how can I contact this person?</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	Responsible for the study is the Principal Investigator Prof. Ayelet N. Landau at the Department of The Hebrew University of Jerusalem. You can reach her at phone number 02-5880395 or by email: ayelet.landau@mail.huji.ac.il
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>Researcher details</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	Nir Ofir, nirofir2@gmail.com
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Header>I hereby confirm that I read and understood the above:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+	
+		<Label>
+			<text>Name:</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>FirstName</Data>
+			<width>250</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+	<row>
+		<Label>
+			<text>Family Name:</text>
+			<width>125</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>LastName</Data>
+			<width>250</width>
+			<required>yes</required>
+		</control>
+	</row>
+		
+
+	<!--row>
+		<Label></Label>
+	</row-->
+	
+
+	<row>
+
+	
+		<Label>
+			<text>Signature:</text>
+			<width>95</width>
+		</Label>
+		
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>infoConfirmation</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>
+		<Label>
+			<text>I confirm that I have read and understood and that I am interested in participating in the experiment</text>
+			<width>520</width>
+		</Label>
+	</row>
+			
+
+
+	</row>
+	<row>
+		<control>
+			<Type>Signature</Type>
+			<Data>Signature</Data>
+			<width>500</width>
+			<required>yes</required>	
+			<print>yes</print>
+		</control>
+	</row>	
+
+	<!--row>
+		<Label></Label>
+	</row-->
+	
+	<row>
+		<Label>
+			<text>_______________________________________________________________</text>
+			<width>200</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+  	
+	<row>
+		<Label>
+			<text></text>
+			<width>150</width>
+		</Label>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>
+
