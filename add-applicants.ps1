@@ -58,7 +58,7 @@ else
 				}
 				
 				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)
-				copyMail $($spRequestsListObj.MailPath)  $($spRequestsListObj.MailFile)  $($spRequestsListObj.PreviousMail)
+				copyMail $($spRequestsListObj.MailPath) $($spRequestsListObj.MailFile) $($spRequestsListObj.PreviousMail)
 				# write-host $contactUsContent
 				
 				write-host "Done."	
