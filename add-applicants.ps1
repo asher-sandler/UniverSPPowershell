@@ -43,6 +43,11 @@ else
 					$contactUsContent =  get-OldContactUs $($spRequestsListObj.oldSiteURL)
 					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
 				}
+				else
+				{
+					$contactUsContent = get-PureContactUs $($spRequestsListObj.language) $($spRequestsListObj.contactFirstNameEn) $($spRequestsListObj.contactLastNameEn) $($spRequestsListObj.contactEmail)
+					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
+				}
 				
 				
 				edt-contactUsTitle   	$siteUrlC  $($spRequestsListObj.language)
@@ -55,10 +60,35 @@ else
 					edt-SubmissionStatus 	$siteUrlC  $($spRequestsListObj.language)
 					edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
 					edt-Form			    $siteUrlC  $($spRequestsListObj.language)
+					
+					if (![string]::isNullOrEmpty($($spRequestsListObj.oldSiteURL))){
+						$contentOldDefault = get-OldDefault $($spRequestsListObj.oldSiteURL)
+					
+						$contentNewDefault = repl-DefContent $($spRequestsListObj.oldSiteURL) $siteUrlC $contentOldDefault
+					
+						edt-HomePage $siteUrlC $contentNewDefault $($spRequestsListObj.language)
+					}
+					else
+					{
+						
+					}
+				}
+				else
+				{
+					edt-cancelCandidacy2Lang $siteUrlC
+					#edt-SubmissionStatus2Lang $siteUrlC
+					#edt-Recommendations2Lang $siteUrlC
+					#edt-Form2Lang $siteUrlC
+					
+					#edt-HomePage2Lang $siteUrlC
+					
 				}
 				
 				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)
 				copyMail $($spRequestsListObj.MailPath) $($spRequestsListObj.MailFile) $($spRequestsListObj.PreviousMail)
+				
+				change-applTemplate $siteUrlC  $($spRequestsListObj.language)
+				write-host "Do not forget save ApplicantTemplate as : $($spRequestsListObj.RelURL)" -foregroundcolor Yellow
 				# write-host $contactUsContent
 				
 				write-host "Done."	

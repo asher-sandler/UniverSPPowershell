@@ -468,8 +468,8 @@ function Write-TextConfig ($ListObj, $groupName)
 		
 		$fileS += "ContactEmail:" + $ListObj[0].contactEmail + $crlf
 		$fileS += "UserName:" + "CC\"+$ListObj[0].contactEmail.split('@')[0] + $crlf
-		$dedln = $ListObj[0].deadline.AddDays(1)
-		$fileS += "recommendationsDeadline: " + $dedln.day.tostring().PadLeft(2,"0")+"."+$dedln.month.tostring().PadLeft(2,"0")+"."+$dedln.year + $crlf
+		
+		$fileS += "recommendationsDeadline: " + $ListObj[0].deadLineText+ $crlf
 		$fileS += "Language:" + $ListObj[0].language + $crlf
 		$fileS += "relative URL:" + $relURL + $crlf
 		$fileS += "template:" + $relURL + $crlf
@@ -602,7 +602,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language, folderLink, PathXML, XMLFile, MailPath, MailFile, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language, folderLink, PathXML, XMLFile, MailPath, MailFile, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -684,6 +684,9 @@ function get-RequestListObject(){
 				$spRequestsListItem.publishingDate = $Item["publishingDate"]
 				$spRequestsListItem.deadline = $Item["deadline"]
 				
+				$dedln = $spRequestsListItem.deadline.AddDays(1)
+				$spRequestsListItem.deadLineText =  $dedln.day.tostring().PadLeft(2,"0")+"."+$dedln.month.tostring().PadLeft(2,"0")+"."+$dedln.year
+				
 				$spRequestsListItem.folderLink =  ($Item["folderLink"]).Url
 				$spRequestsListItem.RightsforAdmin = "ekccUG; "+$groupSuffix +"_"+ $relURL + "_adminSP;"+$groupSuffix +"_" +$relURL + "_judgesSP"
 				$spRequestsListItem.systemListUrl = $currentList
@@ -763,16 +766,16 @@ function add-ListApplicants( $siteUrlX1, $spObj){
 	write-host "Applicants list items:$($ListItems.count)"
 	
 	$asherExists = $false
-	$danteExists = $false
+	#$danteExists = $false
 	$userExists  = $false		
 	
 	foreach($item in $ListItems){
 		if ($Item["userName"].ToUpper().Trim() -eq 'EKMD\ASHERSA'){	
 			$asherExists = $true
 		}
-		if ($Item["userName"].ToUpper().Trim() -eq 'EKMD\DANTE'){	
-			$danteExists = $true
-		}	
+		#if ($Item["userName"].ToUpper().Trim() -eq 'EKMD\DANTE'){	
+		#	$danteExists = $true
+		#}	
 		if ($spObj.contactEmail.ToLower().Contains('savion.huji.ac.il')){
 			if ($Item["userName"].ToUpper().Trim() -eq $spObj.userName.ToUpper()){	
 				$userExists = $true
@@ -797,7 +800,7 @@ function add-ListApplicants( $siteUrlX1, $spObj){
 		Add-ApplicantsItem $siteUrlX1 $userObj
 
 	}
-	
+	<#
 	if (!$danteExists){
 		$userObj.Title = "דן טסטמן"
 		$userObj.FirstName = "דן"
@@ -806,11 +809,12 @@ function add-ListApplicants( $siteUrlX1, $spObj){
 		Add-ApplicantsItem $siteUrlX1 $userObj
 
 	}
+	#>
 	
 	
-	write-host "Asher Exists: $asherExists"
-	write-host "Dante Exists: $danteExists"
-	write-host "User  Exists: $userExists"
+	write-host "Asher Exists: $asherExists" -foregroundcolor Yellow
+	#write-host "Dante Exists: $danteExists" -foregroundcolor Yellow
+	write-host "User  Exists: $userExists" -foregroundcolor Yellow
 			
 	
 	
@@ -1064,7 +1068,7 @@ function get-OldContactUs($oldSiteName){
 
 	$PageContent = $pageFields["PublishingPageContent"]
 	
-	$page.CheckIn("",1)
+	$page.UndoCheckOut()
 	
 	$ctx.ExecuteQuery()	
 	
@@ -1110,6 +1114,24 @@ function edt-ContactUs($newSiteName, $pageContent, $language){
 	
 	$ctx.ExecuteQuery()	
 	write-host "$pageName Was Updated" -foregroundcolor Green
+}
+function get-PureContactUs($language, $fName, $lName, $email){
+	$result = ""
+	if ($language.ToLower().contains("en")){	
+		$result = '<h1>Contact Us</h1>'
+		$result += '<div><div><div><span class="ms-rteFontSize-2">For administrative questions please contact:</span></div><div><span class="ms-rteFontSize-2">'
+		$result += $fName + " " + $lName
+		$result += '</span></div>'
+		
+		$result += '<div><span class="ms-rteFontSize-2">Phone: <span>[phone]</span></span></div><div>'
+        
+		$result += '<span class="ms-rteFontSize-2">Email: <a href="mailto:'
+		$result += $email
+		$result +='"><span style="text-decoration: underline;"><font color="#0066cc">'
+		$result += $email
+		$result += '</font></span></a></span>&#160;</div></div></div><p>​</p>'
+	}
+	return $result
 }
 
 function edt-contactUsTitle($newSiteName, $language){
@@ -1213,11 +1235,9 @@ function get-cancelCandidacyContent($content, $language)
 		$retContent += '</div>'
 		$retContent += '</div><div></div>'
 		
-		$langContent = '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><p><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).<span aria-hidden="true"></span></span></span></p></div>'
+		$langContent = CancelCandidacyContentHe
 		if ($language.ToLower().contains("en")){
-			$langContent = '<h1>Cancel Candidacy </h1>
-<p style="text-align: justify;">
-   <span class="ms-rteFontSize-2"> You can cancel your candidacy by clicking on the “Cancel Candidacy” button.<br/>Please note, clicking on the button will remove all your material from this site, without the possibility of recovery.<br/>To re-apply, you will need to repeat the application process from the beginning (application form / uploading documents etc.).</span></p>'
+			$langContent = CancelCandidacyContentEn
 		}
 		
      	$retContent = $langContent + $retContent	
@@ -1225,6 +1245,125 @@ function get-cancelCandidacyContent($content, $language)
 	return $retContent
 }
 
+function CancelCandidacyContentHe(){
+	return '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><p><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).<span aria-hidden="true"></span></span></span></p></div>'
+}
+
+function CancelCandidacyContentEn(){
+	return '<h1>Cancel Candidacy </h1>
+<p style="text-align: justify;">
+   <span class="ms-rteFontSize-2"> You can cancel your candidacy by clicking on the “Cancel Candidacy” button.<br/>Please note, clicking on the button will remove all your material from this site, without the possibility of recovery.<br/>To re-apply, you will need to repeat the application process from the beginning (application form / uploading documents etc.).</span></p>'
+}
+
+function edt-cancelCandidacy2Lang($newSiteName){
+	$pageName = "Pages/CancelCandidacy.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	#$pageTitle  = "הסרת מועמדות"
+	#if ($language.ToLower().contains("en")){
+		$pageTitle = "Cancel Candidacy"
+	#}
+	
+	$pageFields = $page.ListItemAllFields
+	$pageFields["PublishingPageContent"] | out-file "cancelCand.html" -encoding default
+	$oWP = Get-WPfromContent $pageFields["PublishingPageContent"]
+	
+	
+	<#
+	write-host  WP1
+	write-host $oWP.el1
+	write-Host
+	
+	write-host  WP2
+	write-host $oWP.el2
+	write-Host
+	
+	write-host  WP3
+	write-host $oWP.el3
+	write-Host
+
+	write-host  WP4
+	write-host $oWP.el4
+	write-Host
+		
+	
+	read-host
+	#>
+	#$pageContent = get-cancelCandidacyContent 
+	#$pageFields["PublishingPageContent"] = $pageContent
+	$pageFields["Title"] = $pageTitle
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+	
+
+	$pageName = "Pages/CancelCandidacyHe.aspx"
+	#$siteName = get-UrlNoF5 $newSiteName
+	
+	#$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	#$pageTitle  = "הסרת מועמדות"
+	#if ($language.ToLower().contains("en")){
+	#	$pageTitle = "Cancel Candidacy"
+	#}
+	
+	$pageFields = $page.ListItemAllFields
+	$oWP = Get-WPfromContent $pageFields["PublishingPageContent"]
+	write-host "CancelCandidacyHe"
+	write-host $oWP
+	
+	#$pageContent = get-cancelCandidacyContent 
+	#$pageFields["PublishingPageContent"] = $pageContent
+	
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+	
+	
+}
+# ------------------------------------
 function edt-SubmissionStatus($newSiteName, $language){
 	$pageName = "Pages/SubmissionStatus.aspx"
 	$siteName = get-UrlNoF5 $newSiteName
@@ -1409,6 +1548,8 @@ function edt-Recommendations($newSiteName, $language){
 	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
+
+
 function get-RecommendationsContent($content, $language, $relURL){
 		
 	$retContent = ""
@@ -1438,50 +1579,44 @@ function get-RecommendationsContent($content, $language, $relURL){
 		
 
 	if ($language.ToLower().contains("en")){		
-		$LangContent1 = '<h1>Recommendations </h1>
-<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
-   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please ask your referees to send their recommendation letters to the e-mail address appearing below.<span lang="HE" dir="rtl"></span></span></div>
-<div> 
-   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Letters arrive directly to the applicant'+"’"+'s folder automatically, a few moments after being sent.</span></div>
-<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
-   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">
-      <span lang="HE" dir="rtl"></span>&#160;</span></div>
-<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
-   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please make sure your referees follow these guidelines:<span lang="HE" dir="rtl"></span></span></div>
-<ul>
-   <li>
-      <p> 
-         <span class="ms-rteFontSize-2">Sending the letter as an attachment (all text in the email body will not be received by the system)</span></p>
-   </li>
-</ul>
-<ul>
-   <li>
-      <p> 
-         <span class="ms-rteFontSize-2">The file size should not be larger than 5MB.</span></p>
-   </li>
-</ul>
-<ul>
-   <li>
-      <p> 
-         <span class="ms-rteFontSize-2">The file name should not contain any special characters such as (“ ;).</span></p>
-   </li>
-</ul>
-<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
-   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Your referee will receive confirmation within 24 hours.</span></div>
-<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
-   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please&#160;inform the referees that 
-      <strong>you will not</strong> have access to these letters. </span></div>
-<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
-   <strong>​<br/>Please ensure that the letters arrive before the deadline.</strong></div>
-<div>&#160;</div>
-<h2>E-mail address for referees:​</h2>'
+		$LangContent1 = RecomendationContentEN1 $relURL
 
 
 		$LangContent2 = '<h2>Received recommendations:​</h2>'
 	}
 	else
 	{
-		$LangContent1 = '<div>
+		$LangContent1 = RecomendationContentHE1
+
+
+		$LangContent2 = RecomendationContentHE2
+
+
+	}		
+		$retContent  =  $LangContent1 + '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'		
+		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId1+'" id="div_'+$sId1+'">'
+		$retContent +=  '</div>'
+		$retContent +=  '<div id="vid_'+$sId1+'" style="display: none;">'
+		$retContent +=  '</div></div><div>'+$LangContent2+'</div>'
+		$retContent +=  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'
+		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId2+'" id="div_'+$sId2+'" unselectable="on">'
+		$retContent +=  '</div>'
+		$retContent +=  '<div id="vid_'+$sId2+'" style="display: none;">'
+		$retContent +=  '</div></div><div></div>'
+		
+		
+		#write-host $retContent
+		
+	
+	}
+
+	return $retContent	
+}
+function RecomendationContentHE2(){
+	return '<h2>המלצות שהתקבלו:</h2>'
+}
+function RecomendationContentHE1($relURL){
+	$outstr = '<div>
    <h1>המלצות</h1>
    <div>
       <span class="ms-rteFontSize-2 ms-rteThemeFontFace-1"><span lang="HE">אנא בקשו מהממליצים שלכם לשלוח את מכתביהם לכתובת הדוא&quot;ל המופיעה מטה.</span><span dir="ltr"></span>                               
@@ -1528,33 +1663,52 @@ function get-RecommendationsContent($content, $language, $relURL){
       <span lang="HE">​​כתובת דוא&quot;ל למשלוח המלצות:<span aria-hidden="true"></span><span aria-hidden="true"></span></span></h2>
 </div>
 '
+	return $outStr
+}
+function RecomendationContentEN1($relURL){
+	$outStr = '<h1>Recommendations </h1>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please ask your referees to send their recommendation letters to the e-mail address appearing below.<span lang="HE" dir="rtl"></span></span></div>
+<div> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Letters arrive directly to the applicant'+"’"+'s folder automatically, a few moments after being sent.</span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">
+      <span lang="HE" dir="rtl"></span>&#160;</span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please make sure your referees follow these guidelines:<span lang="HE" dir="rtl"></span></span></div>
+<ul>
+   <li>
+      <p> 
+         <span class="ms-rteFontSize-2">Sending the letter as an attachment (all text in the email body will not be received by the system)</span></p>
+   </li>
+</ul>
+<ul>
+   <li>
+      <p> 
+         <span class="ms-rteFontSize-2">The file size should not be larger than 5MB.</span></p>
+   </li>
+</ul>
+<ul>
+   <li>
+      <p> 
+         <span class="ms-rteFontSize-2">The file name should not contain any special characters such as (“ ;).</span></p>
+   </li>
+</ul>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Your referee will receive confirmation within 24 hours.</span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">Please&#160;inform the referees that 
+      <strong>you will not</strong> have access to these letters. </span></div>
+<div style="background: white; margin: 0cm 0cm 0pt; vertical-align: top;"> 
+   <strong>​<br/>Please ensure that the letters arrive before the deadline.</strong></div>
+<div>&#160;</div>
+<h2>E-mail address for referees:​</h2>'
 
+return $outStr
+}
 
-		$LangContent2 = '<h2>המלצות שהתקבלו:</h2>'
-
-
-	}		
-		$retContent  =  $LangContent1 + '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'		
-		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId1+'" id="div_'+$sId1+'">'
-		$retContent +=  '</div>'
-		$retContent +=  '<div id="vid_'+$sId1+'" style="display: none;">'
-		$retContent +=  '</div></div><div>'+$LangContent2+'</div>'
-		$retContent +=  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false">'
-		$retContent +=  '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId2+'" id="div_'+$sId2+'" unselectable="on">'
-		$retContent +=  '</div>'
-		$retContent +=  '<div id="vid_'+$sId2+'" style="display: none;">'
-		$retContent +=  '</div></div><div></div>'
-		
-		
-		#write-host $retContent
-		
-		
-		
-		
-		
-	}
-
-	return $retContent	
+function RecomendationContentEN1(){
+	return '<h2>Received recommendations:​</h2>'	
 }
 
 function edt-DeleteEmptyFolders($newSiteName, $language){
@@ -1617,7 +1771,18 @@ function get-DeleteEmptyFolders($content, $language)
 		$retContent += '</div>'
 		$retContent += '</div><div></div>'
 		
-		$langContent = @'
+		$langContent = DeleteEmptyFoldersContentHE
+
+		if ($language.ToLower().contains("en")){
+			$langContent = DeleteEmptyFoldersContentEN
+		}
+		
+     	$retContent = $langContent + $retContent	
+	}
+	return $retContent
+}
+function DeleteEmptyFoldersContentHE(){
+	$strOut = @'
 <p>
    <span class="ms-rteFontSize-2">
    <span aria-hidden="true"></span>
@@ -1634,8 +1799,11 @@ function get-DeleteEmptyFolders($content, $language)
 </p>
 '@
 
-		if ($language.ToLower().contains("en")){
-			$langContent = @'
+	return $strOut
+}
+
+function DeleteEmptyFoldersContentEN(){
+	$strOut = @'
 <p>
    <span class="ms-rteFontSize-2">
 	<span aria-hidden="true"></span>
@@ -1647,11 +1815,8 @@ function get-DeleteEmptyFolders($content, $language)
    </span>
 </p>
 '@
-		}
-		
-     	$retContent = $langContent + $retContent	
-	}
-	return $retContent
+
+	return $strOut
 }
 
 function edt-Form($newSiteName, $language){
@@ -1694,18 +1859,223 @@ function edt-Form($newSiteName, $language){
 	$ctx.ExecuteQuery()
 	write-host "$pageName Was Updated" -foregroundcolor Green
 }
+
+function get-OldDefault($oldSiteName){
+	$pageName = "Pages/Default.aspx"
+	$siteName = get-UrlNoF5 $oldSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	#write-host $pageURL 
+	#read-host
+
+
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+
+
+	$page.CheckOut()
+	$pageFields = $page.ListItemAllFields
+
+	$PageContent = $pageFields["PublishingPageContent"]
+	
+	#$page.CheckIn("",1)
+	$page.UndoCheckOut()
+	
+	$ctx.ExecuteQuery()	
+	
+	return $PageContent
+	
+}
+
+function get-OldDefault2Lang ($oldSiteName, $langPage){
+	
+	$pageName = "Pages/Default"+$langPage+".aspx"
+	$siteName = get-UrlNoF5 $oldSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	#write-host $pageURL 
+	#read-host
+
+
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+
+
+	$page.CheckOut()
+	$pageFields = $page.ListItemAllFields
+
+	$PageContent = $pageFields["PublishingPageContent"]
+	
+	#$page.CheckIn("",1)
+	$page.UndoCheckOut()
+	
+	$ctx.ExecuteQuery()	
+	
+	return $PageContent
+		
+}
+function edt-HomePage($newSiteName, $content, $language){
+	$pageName = "Pages/Default.aspx"
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	
+	$pageFields = $page.ListItemAllFields
+	
+	$pageFields["PublishingPageContent"] = $content
+	
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()
+	write-host "$pageName Was Updated" -foregroundcolor Green
+}
+
+function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
+	$siteNameOld = get-UrlWithF5 $oldSiteName
+	$siteNameNew = get-UrlWithF5 $newSiteName
+	
+	$relUrlOld = get-RelURL $siteNameOld
+	$relUrlNew = get-RelURL $siteNameNew
+	$crlf = [char][int]13+[char][int]10
+	$backupPageContent = $pageContent+$crlf+$crlf+"======================="+$crlf+$crlf
+	write-host "Replace content in Default Page:" -foregroundcolor Yellow
+	write-host "Find what: $relUrlOld" -foregroundcolor Yellow
+	write-host "Replace To: $relUrlNew" -foregroundcolor Yellow
+				
+	$newPageCont = $pageContent -Replace $relUrlOld, $relUrlNew
+	$backupPageContent += "Replace content in Default Page:" + $crlf
+	$backupPageContent += "Find what: $relUrlOld" + $crlf
+	$backupPageContent += "Replace To: $relUrlNew" + $crlf + $crlf+$crlf+"======================="+$crlf+$crlf
+	
+	$backupPageContent += $newPageCont
+	$fname = $relUrlNew.split("/")[-2]
+	$backupPageContent | out-file $("DefPages-Repl\"+ $fname+".html") -encoding default
+	Write-Host "Replace Default Page Content" -foregroundcolor Green
+	return $newPageCont
+	
+}
+function SwitchToHeb($pageName, $newSiteName){
+	
+	$content = '​​<div id="switch-to-lang"><div style="width: 40%; height: 5%; margin-bottom: 1%; margin-left: 66%; float: right;"> &#160;&#160;' 
+    $content += '<button class="greenButton" aria-label="English Page" onclick="window.open(&#39;'
+	$content += $newSiteName +"/Pages/" + $pageName + ".aspx"
+	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #03515b; width: 20%; height: 5%; text-align: center; color: #ffffff; margin-right: 1%; float: right; display: block; background-color: #03515b;">'
+	$content += '<b>English</b></button>'
+	$content += '<button class="greenButton" aria-label="דף העברית" onclick="window.open(&#39;'
+	$content += $newSiteName +"/Pages/" + $pageName + 'He.aspx'
+	$content += '&#39;, &#39;_self&#39;)" type="button" formtarget="_self" style="padding: 1%; border: 3px solid #157987; width: 20%; height: 5%; text-align: center; color: #ffffff; float: right; display: block; background-color: #157987;">'
+	$content += '<b>עברית</b></button></div></div>'
+	
+	return $content
+}
+
+function SwitchToEng($pageName, $newSiteName){
+	
+	$content =  '<div id="switch-to-lang">​​<div style="width: 40%; height: 5%; margin-right: 66%; margin-bottom: 1%; float: left;">&#160;&#160; &#160;&#160;'
+	$content += '<button class="greenButton" aria-label="English Page" onclick="window.open(&#39;'
+	$content += $newSiteName +"/Pages/" + $pageName + ".aspx"
+	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #157987; width: 19%; height: 5%; text-align: center; color: #ffffff; margin-left: 1%; float: left; display: block; background-color: #157987;">'
+	$content += '<b>English</b></button>'
+	$content += '<button class="greenButton" aria-label="דף העברית" onclick="window.open(&#39;'
+	$content += $newSiteName +"/Pages/" + $pageName + 'He.aspx'
+	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #03515b; width: 19%; height: 5%; text-align: center; color: #ffffff; float: left; display: block; background-color: #03515b;">'
+	$content += '<b>עברית​</b></button>​​</div></div>'
+	
+	return $content	
+}
+
+function change-applTemplate($newSiteName, $language){
+	
+	$siteName = get-UrlNoF5 $newSiteName	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$List = $Ctx.Web.lists.GetByTitle("ApplicantTemplate")
+
+    $ViewFields = $List.DefaultView.ViewFields
+	$View = $list.DefaultView
+    $Ctx.load($ViewFields) 
+    $Ctx.load($View) 
+    $Ctx.ExecuteQuery()
+
+
+	$ModerationStatusExists = $($List.DefaultView.ViewFields).contains("_ModerationStatus");
+
+	if ($ModerationStatusExists){
+	   $List.DefaultView.ViewFields.Remove("_ModerationStatus")
+       $List.DefaultView.Update()
+       $Ctx.ExecuteQuery()
+	}
+	
+	$qryView = '<OrderBy><FieldRef Name="_x05ea__x05d5__x05db__x05df__x0020__x05e7__x05d5__x05d1__x05e5_" /></OrderBy>'
+	if ($language.ToLower().contains("en")){
+		$qryView   = '<OrderBy><FieldRef Name="Document_x0020_Type" /></OrderBy>'
+	}
+	
+	
+	$View.ViewQuery = $qryView
+	$view.Update();
+	$ctx.ExecuteQuery();
+	write-host "Updated ApplicantTemplate Default View." -foregroundcolor Green
+	
+	return $null
+	
+}
 function copyXML($PathXML, $XMLFile, $PreviousXML){
 	
 	if (![string]::isNullOrEmpty($PreviousXML)){
 		# check for exists
-		$fullPrevPath = $PathXML + "\" + $PreviousXML
+		$fullPrevPath = $PathXML + "\*" + $PreviousXML
 		
 		
 		$fileNewXML   = $PathXML + "\" + $XMLFile
 		
 		If (Test-Path $fullPrevPath){
 			if (!(Test-Path $fileNewXML)){
-				Copy-Item -Path $fullPrevPath -Destination $fileNewXML
+				$itemOld = get-item $fullPrevPath
+				Copy-Item -Path $($itemOld.FullName) -Destination $fileNewXML
 				if (Test-Path $fileNewXML){
 					write-Host "XML File $fileNewXML succesfully created." -foregroundcolor Green
 				}
@@ -1731,14 +2101,15 @@ function copyMail($PathMail, $MailFile, $PreviousMail){
 
 	if (![string]::isNullOrEmpty($PreviousMail)){
 		# check for exists
-		$fullPrevPath = $PathMail + "\" + $PreviousMail
+		$fullPrevPath = $PathMail + "\*" + $PreviousMail
 		
 		
 		$fileNewMail   = $PathMail + "\" + $MailFile
 		
 		If (Test-Path $fullPrevPath){
 			if (!(Test-Path $fileNewMail)){
-				Copy-Item -Path $fullPrevPath -Destination $fileNewMail
+				$itemOld = get-item $fullPrevPath
+				Copy-Item -Path $($itemOld.FullName) -Destination $fileNewMail
 				if (Test-Path $fileNewMail){
 					write-Host "Mail File $fileNewMail succesfully created." -foregroundcolor Green
 				}
@@ -1763,3 +2134,216 @@ function copyMail($PathMail, $MailFile, $PreviousMail){
 }
 
 
+function get-WPIdArray($sContent){
+	$resArray = @()
+	$aID = $sContent | Select-String -Pattern "ms-rtestate-notify  ms-rtestate-read"
+
+	for ($i=0; $i -lt $aID.count; $i++){
+		$findStr = 'id="div_'
+		$nIdPos = $aID[$i].ToString().IndexOf($findStr)
+		$sSubtr = $aID[$i].ToString().SubString($nIdPos+$findStr.Length)
+		$nHyph  = $sSubtr.IndexOf('"')
+		$resId = $sSubtr.Substring(0,$nHyph)
+		
+		$resArray += $resId
+	}
+	return $resArray
+}
+
+function Get-WPfromContent($content, $part){
+	#bebeb
+	
+	#$f.replace('<div class="ms-rtestate-read ms-rte-wpbox">',"\").split("\")
+	#write-host $content 
+	#read-host
+	$findStr = '<div class="ms-rtestate-read ms-rte-wpbox"'
+	$outArr = [System.Collections.ArrayList]@()
+	$elObj = "" | Select-Object el1,el2,el3,el4,el5,el6
+	$outstr = ""
+	$webpart = $true
+	$level = 0
+	$j=0
+	while ($webpart){
+		if ($content.contains($findStr)){
+			
+		      $idx  = $content.IndexOf($findStr)
+			  
+			  for ($i = $idx; $i -lt $content.length;$i++){
+					if ($content[$i] -eq $null){
+                        break					
+					}
+					else
+					{
+						$outStr += $content[$i]
+						<#
+						write-host "OutStr : $outStr"
+						write-host "Level : $level"
+						
+						read-host
+						#>
+						if ($content[$i] -eq "<"){
+							
+							if (($content[$i+1] -ne $null) -and # /
+							    ($content[$i+2] -ne $null) -and # d
+								($content[$i+3] -ne $null) -and # i
+								($content[$i+4] -ne $null)      # v
+
+								){
+									$strC = $content[$i+1]+
+											$content[$i+2]+
+											$content[$i+3]+
+											$content[$i+4]
+											
+									$strC1 = $content[$i+1]+
+											 $content[$i+2]+
+											 $content[$i+3]
+											
+									if ($strC -eq "/div"){
+										#write-host "/div"
+										#write-host "Index :$i"
+										$level--
+									}
+									if ($strC1 -eq "div"){
+										#write-host "div"
+										#write-host "Index :$i"
+										$level++
+									}
+									
+								}	# i
+						}
+						if ($level -eq 1){
+							
+							if ($j -eq 1){
+								if (![string]::isNullOrEmpty($outStr)){
+									$outStr += "/div>"
+									$elObj.el1 = $outStr
+								}
+								
+								
+							}
+							
+							if ($j -eq 2){
+								if (![string]::isNullOrEmpty($outStr)){
+									$outStr += "/div>"
+									$elObj.el2 = $outStr
+								}	
+							}
+							if ($j -eq 3){
+								if (![string]::isNullOrEmpty($outStr)){
+									$outStr += "/div>"
+									$elObj.el3 = $outStr
+								}
+							}
+							if ($j -eq 4){
+								if (![string]::isNullOrEmpty($outStr)){
+									$outStr += "/div>"
+									$elObj.el4 = $outStr
+								}	
+							}
+							if ($j -eq 5){
+								if (![string]::isNullOrEmpty($outStr)){
+									$outStr += "/div>"
+									$elObj.el5 = $outStr
+								}	
+							}
+							if ($j -eq 6){
+								if (![string]::isNullOrEmpty($outStr)){
+									$outStr += "/div>"
+									$elObj.el6 = $outStr
+								}	
+							}
+							
+							if (![string]::isNullOrEmpty($outStr)){
+								$j++
+							}
+							$outArr.Add($outStr)  
+							
+							$content = $content.substring($i)
+							
+							<#
+							write-host "outStr:$outStr"
+							write-Host
+							write-host "outArr:"
+							$outArr
+							write-Host
+							write-host "Content: $content"
+							read-host
+							#>
+							$outStr = ""
+							break
+						}
+					}	
+			  }
+		}
+		else
+		{
+			break
+		}	
+	}	
+	
+	#write-host "We are here"
+	#write-host $elObj
+	#read-host
+
+	return $elObj
+}
+
+function Get_EndWpPosition($content){
+	$findStr = '<div class="ms-rtestate-read ms-rte-wpbox">'
+	$outVal = 0
+	if ($content.contains($findStr)){
+		$posBeg  = $content.IndexOf($findStr)
+		
+		$posFind = $posBeg+$findStr.length
+		$posEnd  = $posFind
+		
+		#find closing div 
+		$divLevel = 1
+		$workStr = $content.Substring($posFind)
+		#write-Host "123"
+		#Write-Host $workStr 
+		#read-host
+		$pos = $posFind
+		while ($divLevel -gt 0){
+			$findStr = "</div>"
+			$posFind = $workStr.IndexOf($findStr)+$findStr.length
+			$posEnd += $posFind
+			$workBuff = $workStr.substring(0,$posFind)
+			
+			#write-Host "333"
+			#write-Host $workBuff
+			#write-Host $divLevel
+			#read-host
+			
+			$workStr = $workStr.substring($posFind)
+			if ($workStr.substring(0,$posFind).contains("<div")){
+				$divLevel++
+				
+			}
+			else{
+				$divLevel--
+			}
+			#$posFind = $workStr.IndexOf($findStr)+$findStr.length
+			#$workStr = $workStr.Substring($posFind)
+			#write-host $workStr
+			#write-host $divLevel
+			#read-host
+			
+		}
+		$outArr += $content.Substring($posBeg,$posEnd)
+		$content = $content.Substring($posEnd)
+		#write-host $content 
+		#read-host
+		
+	}
+	return $posEnd	
+}
+function Extract-ContentFromWPPage ($content){
+	
+	$posWPEnd = Get_EndWpPosition $content
+	return $content.Substring($posWPEnd)
+}
+
+function IS-SwitcherExists($content){
+	return $content.contains("switch-to-lang");
+}
