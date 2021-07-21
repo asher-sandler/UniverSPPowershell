@@ -62,23 +62,53 @@ $reVerseString = ""
 
 $userName = "ekmd\ashersa"
 $userPWD = "GrapeFloor789"
-$SiteURL="https://ttp.ekmd.huji.ac.il/home/Humanities/HUM24-2021"
+$SiteURL="https://ttp.ekmd.huji.ac.il/home/SocialSciences/SOC68-2021"
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
 	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
 	$List = $Ctx.Web.lists.GetByTitle("ApplicantTemplate")
 
     $ViewFields = $List.DefaultView.ViewFields
+	$View = $list.DefaultView
     $Ctx.load($ViewFields) 
+    $Ctx.load($View) 
     $Ctx.ExecuteQuery()
 
-#$list.DefaultView	| gm
-$List.DefaultView.ViewFields
+$View.ViewQuery
+read-host
+
+$ModerationStatusExists = $($List.DefaultView.ViewFields).contains("_ModerationStatus");
+write-host "Moderation Status Exists: $ModerationStatusExists" 
+#$List.DefaultView.ViewFields
+if ($ModerationStatusExists){
+	   $List.DefaultView.ViewFields.Remove("_ModerationStatus")
+       $List.DefaultView.Update()
+       $Ctx.ExecuteQuery()
+}
+
+#$qryView = '<OrderBy><FieldRef Name="_x05ea__x05d5__x05db__x05df__x0020__x05e7__x05d5__x05d1__x05e5_" /></OrderBy>'
+#$View.ViewQuery = $qryView
+#$view.Update();
+#$ctx.ExecuteQuery();
+
+# not works in CSOM
+
+#$FileName = "SCI72-2021"
+#$TemplateName = "SCI72-2021"
+#$list.SaveAsTemplate($FileName, $TemplateName, "", $false)  
+#$ctx.ExecuteQuery() 
+
+
 # $x= charToHeb $List.DefaultView.ViewFields[4]
 
 #$x
 
        <#
+	   
+$FileName = "SCI72-2021"
+$TemplateName = "SCI72-2021"
+$list.SaveAsTemplate($FileName, $TemplateName, "", $true)  
+$ctx.ExecuteQuery()  	   
 	   
 Edit
 DocIcon

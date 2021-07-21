@@ -6,11 +6,11 @@ $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
 
-$siteOld= "https://scholarships2.ekmd.huji.ac.il/home/Medicine/MED225-2020"
-$siteNew= "https://scholarships2.ekmd.huji.ac.il/home/Medicine/MED248-2021"
+#$siteOld= "https://scholarships2.ekmd.huji.ac.il/home/Medicine/MED225-2020"
+$siteNew= "https://scholarships2.ekmd.huji.ac.il/home/agriculture/AGR157-2021"
 
-$contentEn = get-OldDefault2Lang  $siteOld ""
-$contentHe = get-OldDefault2Lang  $siteOld "He"
+#$contentEn = get-OldDefault2Lang  $siteOld ""
+#$contentHe = get-OldDefault2Lang  $siteOld "He"
 write-host "He"
 get-WPIdArray $contentHe
 

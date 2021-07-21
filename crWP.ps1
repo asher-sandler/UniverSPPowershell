@@ -79,12 +79,26 @@ function AddWebPartToPage ($ctx, $sitesURL) {
 			#$wp | fl
 			#$wp.WebPart | fl # | gm
 			
-			$ctx.Load($wp.WebPart.Properties)
-			$ctx.ExecuteQuery() 
 			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq "Simcha Content")
+			{
+				#$wp.WebPart | gm
+				$wp.WebPart.Properties.FieldValues
+				$wp.WebPart.Properties["ContentLink"] = "/sites/dev/SiteAssets/test.css";
+				
+				$wp.WebPart.Properties["Content"] = "<![CDATA[<div><h1>Hello</h1></div>]]>"
+ 
+				#Set content and Save
+				$xmlContent = get-content SimchaContent.dwp -encoding Default
+				$wp.Content = $xmlContent   
+				$wp.SaveWebPartChanges();				
+			}
 			# $wp.WebPart.Properties
-			$propValues = $wp.WebPart.Properties.FieldValues
-			$propValues | fl
+			#$propValues = $wp.WebPart.Properties.FieldValues
+			#$propValues | fl
 		}
 		# read-host
 		<#

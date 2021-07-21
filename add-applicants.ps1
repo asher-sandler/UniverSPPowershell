@@ -7,6 +7,7 @@ $userPWD = "GrapeFloor789"
 $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
+#. "Utils-DualLanguage.ps1"
 if ([string]::isNullOrEmpty($groupName))
 {
 	write-host groupName Must be specified 
@@ -32,6 +33,11 @@ else
 			#write-host "Get Created Site Name: $siteUrlC"
 			#read-host
 			if (![string]::IsNullOrEmpty($siteUrlC)){
+				$isDoubleLangugeSite = $($spRequestsListObj.language).toLower().contains("en") -and $($spRequestsListObj.language).toLower().contains("he")
+				$oldSiteExists = $(![string]::isNullOrEmpty($spRequestsListObj.oldSiteURL))
+				Write-Host "Is Double Language site : $isDoubleLangugeSite" -foregroundcolor Green
+				Write-Host "Is Old Site Exists : $oldSiteExists" -foregroundcolor Green
+				
 				
 				change-ListApplicantsDeadLine 	$siteUrlC $spRequestsListObj
 				add-ListApplicants  			$siteUrlC $spRequestsListObj
@@ -39,7 +45,7 @@ else
 				change-siteTitle $siteUrlC $($spRequestsListObj.siteName)
 				#write-host "Old Site Name1 : $($spRequestsListObj.oldSiteURL)"
 				#read-host
-				if (![string]::isNullOrEmpty($spRequestsListObj.oldSiteURL)){
+				if ($oldSiteExists){
 					$contactUsContent =  get-OldContactUs $($spRequestsListObj.oldSiteURL)
 					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
 				}
@@ -52,8 +58,6 @@ else
 				
 				edt-contactUsTitle   	$siteUrlC  $($spRequestsListObj.language)
 				edt-DeleteEmptyFolders  $siteUrlC  $($spRequestsListObj.language)
-				$isDoubleLangugeSite = $($spRequestsListObj.language).toLower().contains("en") -and $($spRequestsListObj.language).toLower().contains("he")
-				Write-Host "Is Double Language site : $isDoubleLangugeSite" -foregroundcolor Green
 				
 				if (!$isDoubleLangugeSite){
 					edt-cancelCandidacy  	$siteUrlC  $($spRequestsListObj.language)
@@ -61,7 +65,7 @@ else
 					edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
 					edt-Form			    $siteUrlC  $($spRequestsListObj.language)
 					
-					if (![string]::isNullOrEmpty($($spRequestsListObj.oldSiteURL))){
+					if ($oldSiteExists){
 						$contentOldDefault = get-OldDefault $($spRequestsListObj.oldSiteURL)
 					
 						$contentNewDefault = repl-DefContent $($spRequestsListObj.oldSiteURL) $siteUrlC $contentOldDefault
@@ -75,12 +79,14 @@ else
 				}
 				else
 				{
-					edt-cancelCandidacy2Lang $siteUrlC
+					#check-DLangTemplInfrastruct  $siteUrlC $spRequestsListObj
+					#edt-cancelCandidacy2Lang $siteUrlC
 					#edt-SubmissionStatus2Lang $siteUrlC
 					#edt-Recommendations2Lang $siteUrlC
 					#edt-Form2Lang $siteUrlC
 					
 					#edt-HomePage2Lang $siteUrlC
+					
 					
 				}
 				

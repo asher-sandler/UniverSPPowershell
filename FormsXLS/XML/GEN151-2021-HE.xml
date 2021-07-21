@@ -1,0 +1,784 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס בקשה</docType>
+		
+		
+		<!--
+		<createPDF>yes</createPDF>
+		<destinationFolder>advisorPDF</destinationFolder>
+		<destinationList>advisorList</destinationList>
+		<ticketNum>ADV01</ticketNum>
+		<description>[studentName]-[advisorName]-</description>
+		<createSubFolder>yes</createSubFolder>
+		<redirectPage>https://scholarships.ekmd.huji.ac.il/home/agriculture/AGR129-2020/Pages/Success.aspx?isdlg=1&amp;e=1</redirectPage>
+		-->
+
+	</config>
+	
+<!-- ==================   Date Template ==================== -->
+
+<!-- 
+	<control>
+		<Type>TextBox</Type>
+		<Data>date001</Data>
+		<width>100</width>
+		<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+		<tooltip>DD/MM/YYYY</tooltip>
+		<required>yes</required>
+	</control>
+
+-->
+<!-- =================== Teudat Zeut Template =============== -->
+
+<!--
+	<row>
+
+			<Label>
+				<text>ת.ז.</text>
+				<width>95</width>
+			</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+-->	
+<!-- ===================== Hatima ===================== -->
+
+<!--    
+	<row>
+		<control>
+			<Type>Signature</Type>
+			<Data>Signature</Data>
+			<width>300</width>
+			<required>no</required>	
+			<print>yes</print>
+		</control>
+	
+	</row>
+
+-->	
+
+<!-- =====================RadioButtonList=================== -->
+
+
+	<row>
+		<Header>Zelman Cowen Academic Initiatives Prize for Discovery in Medical Research PRIZE Proforma p2</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+
+	
+	<row>
+		<Label>
+			<text>
+	
+		<Label>
+			<text>Name:</text>
+			<width>95</width>
+		</Label>
+		
+
+	</row>
+
+	<!--row>
+		<Label></Label>
+	</row-->
+	
+
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+
+	
+		<Label>
+			<text>Recent</text>
+			<width>95</width>
+		</Label>
+		
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field000</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+	</row>
+
+	<!--row>
+		<Label></Label>
+	</row-->
+	
+
+	<row>
+		<Header>Academic Qualifications:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+	
+			
+			<Label>
+				<text>Degree</text>
+				<width>150</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>Institution</text>
+				<width>150</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>Year</text>
+				<width>150</width>		
+			</Label>
+		
+	
+	</row>
+		
+	
+	<!--Table Input Rows:3 Columns:3 -->
+		
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field001</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field002</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field003</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field004</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field005</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field006</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field007</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field008</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field009</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+		<Header>Awards and Distinctions:</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	Include invited plenary lectures, other honorific invitations and awards, as appropriate
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	Nominee's publicationsShow publications for last 10 years.Where papers key to the discovery were published more than 10 years ago, they should also be listed.With an asterisk indicate up to 10 papers key to the discovery.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<!--Table Input Rows:10 Columns:3 -->
+		
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field010</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field011</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field012</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field013</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field014</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field015</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field016</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field017</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field018</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field019</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field020</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field021</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field022</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field023</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field024</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field025</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field026</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field027</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field028</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field029</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field030</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field031</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field032</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field033</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field034</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field035</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field036</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field037</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field038</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field039</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+		<Header></Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	Please suggest 3 referees, of international standing in the field, appropriate to assess the nominee's work. Please provide postal and email addresses.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+	
+			
+			<Label>
+				<text>referee</text>
+				<width>150</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>Postal Address</text>
+				<width>150</width>		
+			</Label>
+		
+		
+			<Label>
+				<text>Email</text>
+				<width>150</width>		
+			</Label>
+		
+	
+	</row>
+		
+	
+	<!--Table Input Rows:3 Columns:3 -->
+		
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field040</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field041</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field042</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field043</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field044</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field045</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+	
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>field046</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field047</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>field048</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+	
+	</row>
+		
+	
+	<row>
+		<Header>Nominator's Statement</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	I affirm that the nominee has agreed to the nomination, and that the above information is accurate, to the best of my knowledge.
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<!-- Put checkBox into a Row -->
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>field049</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>	
+	</row>
+
+	<row>
+		<Label>
+			<text>
+	Signature:
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+	
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

@@ -1009,11 +1009,16 @@ function get-SiteNameFromNote($note){
 	if (![string]::IsNullOrEmpty($note)){
 		[regex]$regex = '(http|ftp|https)://([\w_-]+(?:(?:\.[\w_-]+)+))([\w.,@?^=%&:/~+#-]*[\w@?^=%&/~+#-])?'
 		$siteName = $regex.Matches($note).Value
-		$sName = "https://"
-		$aName = $siteName.split("/")
-		for ($i = 2; $i -le 5; $i++ ){
-			$sName += $aName[$i] + "/"
+		
+		if (![string]::IsNullOrEmpty($siteName)){
+			$sName = "https://"
+			$aName = $siteName.split("/")
+			for ($i = 2; $i -le 5; $i++ ){
+				$sName += $aName[$i] + "/"
+			}
 		}
+		
+		
 	}
 	write-Host "Old Site Name : $sName" -foregroundcolor Green
 	
@@ -1123,7 +1128,7 @@ function get-PureContactUs($language, $fName, $lName, $email){
 		$result += $fName + " " + $lName
 		$result += '</span></div>'
 		
-		$result += '<div><span class="ms-rteFontSize-2">Phone: <span>[phone]</span></span></div><div>'
+		#$result += '<div><span class="ms-rteFontSize-2">Phone: <span>[phone]</span></span></div><div>'
         
 		$result += '<span class="ms-rteFontSize-2">Email: <a href="mailto:'
 		$result += $email
@@ -1246,7 +1251,16 @@ function get-cancelCandidacyContent($content, $language)
 }
 
 function CancelCandidacyContentHe(){
-	return '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><p><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).<span aria-hidden="true"></span></span></span></p></div>'
+	
+	$retStr = @"
+<h1 dir="rtl" style="text-align: right;">​הסרת מועמדות</h1>
+<div dir="rtl" style="text-align: right;">
+   <span class="ms-rteFontSize-2" lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.
+   <br>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו').</span>
+</div>	
+"@
+	 return '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).</span></span></div>'
+	#return $retStr
 }
 
 function CancelCandidacyContentEn(){
@@ -1286,25 +1300,26 @@ function edt-cancelCandidacy2Lang($newSiteName){
 	$oWP = Get-WPfromContent $pageFields["PublishingPageContent"]
 	
 	
-	<#
-	write-host  WP1
-	write-host $oWP.el1
-	write-Host
+	#
+	$pageWasEditByPS = Check-PageWasEdit $oWP
+	write-host "Page was Edit by PowerShell : $pageWasEditByPS" -foregroundcolor Yellow
+	#write-host $oWP
+	# write-Host
 	
-	write-host  WP2
-	write-host $oWP.el2
-	write-Host
+	# write-host  WP2
+	# write-host $oWP.el2
+	# write-Host
 	
-	write-host  WP3
-	write-host $oWP.el3
-	write-Host
+	# write-host  WP3
+	# write-host $oWP.el3
+	# write-Host
 
-	write-host  WP4
-	write-host $oWP.el4
-	write-Host
+	# write-host  WP4
+	# write-host $oWP.el4
+	# write-Host
 		
 	
-	read-host
+	#read-host
 	#>
 	#$pageContent = get-cancelCandidacyContent 
 	#$pageFields["PublishingPageContent"] = $pageContent
@@ -1345,9 +1360,34 @@ function edt-cancelCandidacy2Lang($newSiteName){
 	
 	$pageFields = $page.ListItemAllFields
 	$oWP = Get-WPfromContent $pageFields["PublishingPageContent"]
-	write-host "CancelCandidacyHe"
-	write-host $oWP
+
+	$pageWasEditByPS = Check-PageWasEdit $oWP
+	write-host "Page was Edit by PowerShell : $pageWasEditByPS" -foregroundcolor Yellow
+    
+	if (!$pageWasEditByPS){
+		$pageContent = Gen-Cancel2LangCandidateHe $oWP $newSiteName
+		$pageContent | Out-File Cancel2LangCandidateHe.html -encoding default
+	}
+	#write-host "CancelCandidacyHe"
 	
+	#write-host  WP1
+	#write-host $oWP
+	#write-Host
+	
+	# write-host  WP2
+	# write-host $oWP.el2
+	# write-Host
+	
+	# write-host  WP3
+	# write-host $oWP.el3
+	# write-Host
+
+	# write-host  WP4
+	# write-host $oWP.el4
+	# write-Host
+		
+	
+	#read-host	
 	#$pageContent = get-cancelCandidacyContent 
 	#$pageFields["PublishingPageContent"] = $pageContent
 	
@@ -1506,7 +1546,58 @@ function get-SubmissionStatusContent($content, $language, $relURL){
 
 	return $retContent	
 }
-
+function SubmissionStatusContentEn1($relURL){
+	$outStr = '<h1>​Document Status</h1><p><span class="ms-rteFontSize-2">Recommendation letters will be updated&#160;up to </span><strong class="ms-rteFontSize-2">two hours </strong><span class="ms-rteFontSize-2">after confirmation of arrival on the&#160;</span><a href="'+$relURL+'Pages/Recommendations.aspx"><span class="ms-rteFontSize-2" style="text-decoration-line: underline;"><font color="#0066cc">Recomme​​ndations</font></span></a><span class="ms-rteFontSize-2"> page.​</span></p>'
+	return $outStr
+}
+function SubmissionStatusContentEn2(){
+	$outStr = '<div>
+   <div>
+      <h1>Submission</h1>
+      <font class="ms-rteThemeFontFace-1 ms-rteFontSize-2"><span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">You can press &#39;Submit&#39;, </span>
+         <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">once you have carried out all the obligations according to the administrative guidelines.</span></font><span class="ms-rteThemeFontFace-1 ms-rteFontSize-2"> </span></div>
+   <div>
+      <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">
+         
+         <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">After&#160;the deadline,&#160;all the material in your &quot;Documents Upload&quot; folder will be read only.</span></span></div>
+</div>'
+	return $outStr
+}
+function SubmissionStatusContentHe1($relURL){
+		$outStr = '<h1>סטטוס מסמכים</h1>
+	
+<div style="color: #000000; font-size: medium;"> 
+   <font class="ms-rteFontSize-2">
+      <font size="3">&#160;<span class="ms-rteFontSize-2"><font size="3">מכתבי המלצה יתעדכנו </font></span><font size="3"> 
+            <strong class="ms-rteFontSize-2">כשעתיים</strong>
+			<span class="ms-rteFontSize-2"> לאחר אישור קבלה בדף </span>
+	  </font>
+    </font> 
+    <a href="'+$relURL+'Pages/RecommendationsHe.aspx"> 
+         <span class="ms-rteFontSize-2" lang="HE" dir="rtl" style="text-decoration-line: underline;">
+            <font color="#0066cc" size="3"> 
+               <span style="text-decoration: underline;">הה​מלצות</span>
+			</font>
+		</span>
+	  </a>
+	  <span class="ms-rteFontSize-2">
+		<font size="3">.
+		</font>
+	  </span>
+	</font>
+</div>'	
+	return $outStr
+}
+function SubmissionStatusContentHe2($relURL){
+		$outStr = '<div>
+   <h1>
+      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>הגשה</h1>
+   <div class="ms-rteFontSize-2">בתום ביצוע כל חובות הבקשה בהתאם להנחיות המנהליות, תוכל/י ללחוץ &#39;הגשה&#39;. </div>
+   <div class="ms-rteFontSize-2">
+      <span lang="HE" dir="rtl">המידע שימצא בתיק המועמד/ת במועד הסגירה יהיה זמין לקריאה בלבד.<span aria-hidden="true"></span><span aria-hidden="true"></span></span></div>
+</div>'
+	return $outStr
+}
 function edt-Recommendations($newSiteName, $language){
 	$pageName = "Pages/Recommendations.aspx"
 	$siteName = get-UrlNoF5 $newSiteName
@@ -1582,7 +1673,7 @@ function get-RecommendationsContent($content, $language, $relURL){
 		$LangContent1 = RecomendationContentEN1 $relURL
 
 
-		$LangContent2 = '<h2>Received recommendations:​</h2>'
+		$LangContent2 = RecomendationContentEN2
 	}
 	else
 	{
@@ -1707,7 +1798,7 @@ function RecomendationContentEN1($relURL){
 return $outStr
 }
 
-function RecomendationContentEN1(){
+function RecomendationContentEN2(){
 	return '<h2>Received recommendations:​</h2>'	
 }
 
@@ -2001,11 +2092,11 @@ function SwitchToHeb($pageName, $newSiteName){
 	
 	$content = '​​<div id="switch-to-lang"><div style="width: 40%; height: 5%; margin-bottom: 1%; margin-left: 66%; float: right;"> &#160;&#160;' 
     $content += '<button class="greenButton" aria-label="English Page" onclick="window.open(&#39;'
-	$content += $newSiteName +"/Pages/" + $pageName + ".aspx"
+	$content += $newSiteName +"Pages/" + $pageName + ".aspx"
 	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #03515b; width: 20%; height: 5%; text-align: center; color: #ffffff; margin-right: 1%; float: right; display: block; background-color: #03515b;">'
 	$content += '<b>English</b></button>'
 	$content += '<button class="greenButton" aria-label="דף העברית" onclick="window.open(&#39;'
-	$content += $newSiteName +"/Pages/" + $pageName + 'He.aspx'
+	$content += $newSiteName +"Pages/" + $pageName + 'He.aspx'
 	$content += '&#39;, &#39;_self&#39;)" type="button" formtarget="_self" style="padding: 1%; border: 3px solid #157987; width: 20%; height: 5%; text-align: center; color: #ffffff; float: right; display: block; background-color: #157987;">'
 	$content += '<b>עברית</b></button></div></div>'
 	
@@ -2016,11 +2107,11 @@ function SwitchToEng($pageName, $newSiteName){
 	
 	$content =  '<div id="switch-to-lang">​​<div style="width: 40%; height: 5%; margin-right: 66%; margin-bottom: 1%; float: left;">&#160;&#160; &#160;&#160;'
 	$content += '<button class="greenButton" aria-label="English Page" onclick="window.open(&#39;'
-	$content += $newSiteName +"/Pages/" + $pageName + ".aspx"
+	$content += $newSiteName +"Pages/" + $pageName + ".aspx"
 	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #157987; width: 19%; height: 5%; text-align: center; color: #ffffff; margin-left: 1%; float: left; display: block; background-color: #157987;">'
 	$content += '<b>English</b></button>'
 	$content += '<button class="greenButton" aria-label="דף העברית" onclick="window.open(&#39;'
-	$content += $newSiteName +"/Pages/" + $pageName + 'He.aspx'
+	$content += $newSiteName +"Pages/" + $pageName + 'He.aspx'
 	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #03515b; width: 19%; height: 5%; text-align: center; color: #ffffff; float: left; display: block; background-color: #03515b;">'
 	$content += '<b>עברית​</b></button>​​</div></div>'
 	
@@ -2150,7 +2241,7 @@ function get-WPIdArray($sContent){
 	return $resArray
 }
 
-function Get-WPfromContent($content, $part){
+function Get-WPfromContent($content){
 	#bebeb
 	
 	#$f.replace('<div class="ms-rtestate-read ms-rte-wpbox">',"\").split("\")
@@ -2163,10 +2254,54 @@ function Get-WPfromContent($content, $part){
 	$webpart = $true
 	$level = 0
 	$j=0
+	$divObjArr = @()
+	#$idx  = $content.IndexOf($findStr)
+	#$isCont = $content.contains($findStr) 
+	#write-host "Contains: $isCont"
+	#write-host "Idx: $idx"
+	
+	#read-host
 	while ($webpart){
 		if ($content.contains($findStr)){
+			  
 			
 		      $idx  = $content.IndexOf($findStr)
+			  $ostatok = $($content.substring(0,$idx))
+			  
+			  #write-host "Index idx: $idx"
+			  #write-Host "ostatok-do : $ostatok"
+			  if ($idx -gt 0 -and $ostatok -ne "</div>"){
+				  if ($ostatok.length -gt 6 -and $ostatok.substring(0,6) -eq "</div>"){
+					
+					
+					
+					$ostatok = $($ostatok.substring(6,$idx-6))
+					If (![string]::isNullOrEmpty($ostatok.trim())){
+						#write-Host "ostatok-posle : $ostatok"
+					
+						$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+						$wpObj1.Content = $ostatok
+						$wpObj1.isWP = $false
+						$asherClass = Get-ASHERClass
+						$wpObj1.PSEdit = $ostatok.contains($asherClass)
+						$divObjArr += $wpObj1
+					}
+				  }else {
+						if ($ostatok.length -gt 0){
+							#write-Host "ostatok-posle : $ostatok"
+							
+							$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+							$wpObj1.Content = $ostatok
+							$wpObj1.isWP = $false
+							$asherClass = Get-ASHERClass
+							$wpObj1.PSEdit = $ostatok.contains($asherClass)
+							$divObjArr += $wpObj1				
+						}
+				  }
+				  
+			  }
+			  
+			  #read-host
 			  
 			  for ($i = $idx; $i -lt $content.length;$i++){
 					if ($content[$i] -eq $null){
@@ -2256,7 +2391,14 @@ function Get-WPfromContent($content, $part){
 							if (![string]::isNullOrEmpty($outStr)){
 								$j++
 							}
-							$outArr.Add($outStr)  
+							if (!($outStr -eq "<")){
+								$wpObj = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+								$wpObj.Content = $outStr
+								$wpObj.isWP = $true
+								$wpObj.PSEdit = $false
+								$divObjArr += $wpObj
+							}
+							#$outArr.Add($outStr)  
 							
 							$content = $content.substring($i)
 							
@@ -2285,7 +2427,7 @@ function Get-WPfromContent($content, $part){
 	#write-host $elObj
 	#read-host
 
-	return $elObj
+	return $divObjArr
 }
 
 function Get_EndWpPosition($content){
@@ -2346,4 +2488,42 @@ function Extract-ContentFromWPPage ($content){
 
 function IS-SwitcherExists($content){
 	return $content.contains("switch-to-lang");
+}
+function Get-ASHERClass(){
+	return 'class="pse-2610"'
+}
+function Check-PageWasEdit($oWP)
+{
+	$wasEdit = $false
+	foreach($wp in $oWP){
+		if ($wp.PSEdit){
+			$wasEdit = $true
+			break
+		}
+	}
+	return $wasEdit
+}
+function Gen-Cancel2LangCandidateHe ($oWP, $newSiteName){
+	$content = ""
+	$i = 0
+	foreach($wp in $oWP){
+		write-host "is Web Part : $($wp.isWP)"
+		if ($wp.isWP){
+			$content += $wp.Content
+			
+			write-host "i =  : $i"
+			if ($i -eq 1){
+				$asherCont = Get-ASHERClass 
+				$swToEng = SwitchToEng "CancelCandidacy" $newSiteName 
+				$content += "<div "+ $asherCont+" >" + $swToEng +"</div>"
+			}
+			if ($i -eq 2){
+				$content += CancelCandidacyContentHe
+			}
+			
+		}
+		$i++
+		
+	}
+	return $content
 }
