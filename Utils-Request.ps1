@@ -1269,140 +1269,6 @@ function CancelCandidacyContentEn(){
    <span class="ms-rteFontSize-2"> You can cancel your candidacy by clicking on the “Cancel Candidacy” button.<br/>Please note, clicking on the button will remove all your material from this site, without the possibility of recovery.<br/>To re-apply, you will need to repeat the application process from the beginning (application form / uploading documents etc.).</span></p>'
 }
 
-function edt-cancelCandidacy2Lang($newSiteName){
-	$pageName = "Pages/CancelCandidacy.aspx"
-	$siteName = get-UrlNoF5 $newSiteName
-	
-	$relUrl   = get-RelURL $siteName
-	
-	$pageURL  = $relUrl + $pageName
-	
-	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
-
-
-
-	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
-	
-	$ctx.Load($page);
-    $ctx.Load($page.ListItemAllFields);
-    $ctx.ExecuteQuery();
-	
-	$page.CheckOut()
-	
-	#$pageTitle  = "הסרת מועמדות"
-	#if ($language.ToLower().contains("en")){
-		$pageTitle = "Cancel Candidacy"
-	#}
-	
-	$pageFields = $page.ListItemAllFields
-	$pageFields["PublishingPageContent"] | out-file "cancelCand.html" -encoding default
-	$oWP = Get-WPfromContent $pageFields["PublishingPageContent"]
-	
-	
-	#
-	$pageWasEditByPS = Check-PageWasEdit $oWP
-	write-host "Page was Edit by PowerShell : $pageWasEditByPS" -foregroundcolor Yellow
-	#write-host $oWP
-	# write-Host
-	
-	# write-host  WP2
-	# write-host $oWP.el2
-	# write-Host
-	
-	# write-host  WP3
-	# write-host $oWP.el3
-	# write-Host
-
-	# write-host  WP4
-	# write-host $oWP.el4
-	# write-Host
-		
-	
-	#read-host
-	#>
-	#$pageContent = get-cancelCandidacyContent 
-	#$pageFields["PublishingPageContent"] = $pageContent
-	$pageFields["Title"] = $pageTitle
-	$pageFields.Update()
-	
-	$ctx.Load($pageFields)
-	$ctx.ExecuteQuery();
-	
-	$page.CheckIn("",1)
-	
-	$ctx.ExecuteQuery()	
-	write-host "$pageName Was Updated" -foregroundcolor Green
-	
-
-	$pageName = "Pages/CancelCandidacyHe.aspx"
-	#$siteName = get-UrlNoF5 $newSiteName
-	
-	#$relUrl   = get-RelURL $siteName
-	
-	$pageURL  = $relUrl + $pageName
-	
-	
-
-
-	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
-	
-	$ctx.Load($page);
-    $ctx.Load($page.ListItemAllFields);
-    $ctx.ExecuteQuery();
-	
-	$page.CheckOut()
-	
-	#$pageTitle  = "הסרת מועמדות"
-	#if ($language.ToLower().contains("en")){
-	#	$pageTitle = "Cancel Candidacy"
-	#}
-	
-	$pageFields = $page.ListItemAllFields
-	$oWP = Get-WPfromContent $pageFields["PublishingPageContent"]
-
-	$pageWasEditByPS = Check-PageWasEdit $oWP
-	write-host "Page was Edit by PowerShell : $pageWasEditByPS" -foregroundcolor Yellow
-    
-	if (!$pageWasEditByPS){
-		$pageContent = Gen-Cancel2LangCandidateHe $oWP $newSiteName
-		$pageContent | Out-File Cancel2LangCandidateHe.html -encoding default
-	}
-	#write-host "CancelCandidacyHe"
-	
-	#write-host  WP1
-	#write-host $oWP
-	#write-Host
-	
-	# write-host  WP2
-	# write-host $oWP.el2
-	# write-Host
-	
-	# write-host  WP3
-	# write-host $oWP.el3
-	# write-Host
-
-	# write-host  WP4
-	# write-host $oWP.el4
-	# write-Host
-		
-	
-	#read-host	
-	#$pageContent = get-cancelCandidacyContent 
-	#$pageFields["PublishingPageContent"] = $pageContent
-	
-	$pageFields.Update()
-	
-	$ctx.Load($pageFields)
-	$ctx.ExecuteQuery();
-	
-	$page.CheckIn("",1)
-	
-	$ctx.ExecuteQuery()	
-	write-host "$pageName Was Updated" -foregroundcolor Green
-	
-	
-}
 # ------------------------------------
 function edt-SubmissionStatus($newSiteName, $language){
 	$pageName = "Pages/SubmissionStatus.aspx"
@@ -1546,58 +1412,7 @@ function get-SubmissionStatusContent($content, $language, $relURL){
 
 	return $retContent	
 }
-function SubmissionStatusContentEn1($relURL){
-	$outStr = '<h1>​Document Status</h1><p><span class="ms-rteFontSize-2">Recommendation letters will be updated&#160;up to </span><strong class="ms-rteFontSize-2">two hours </strong><span class="ms-rteFontSize-2">after confirmation of arrival on the&#160;</span><a href="'+$relURL+'Pages/Recommendations.aspx"><span class="ms-rteFontSize-2" style="text-decoration-line: underline;"><font color="#0066cc">Recomme​​ndations</font></span></a><span class="ms-rteFontSize-2"> page.​</span></p>'
-	return $outStr
-}
-function SubmissionStatusContentEn2(){
-	$outStr = '<div>
-   <div>
-      <h1>Submission</h1>
-      <font class="ms-rteThemeFontFace-1 ms-rteFontSize-2"><span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">You can press &#39;Submit&#39;, </span>
-         <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">once you have carried out all the obligations according to the administrative guidelines.</span></font><span class="ms-rteThemeFontFace-1 ms-rteFontSize-2"> </span></div>
-   <div>
-      <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">
-         
-         <span class="ms-rteThemeFontFace-1 ms-rteFontSize-2">After&#160;the deadline,&#160;all the material in your &quot;Documents Upload&quot; folder will be read only.</span></span></div>
-</div>'
-	return $outStr
-}
-function SubmissionStatusContentHe1($relURL){
-		$outStr = '<h1>סטטוס מסמכים</h1>
-	
-<div style="color: #000000; font-size: medium;"> 
-   <font class="ms-rteFontSize-2">
-      <font size="3">&#160;<span class="ms-rteFontSize-2"><font size="3">מכתבי המלצה יתעדכנו </font></span><font size="3"> 
-            <strong class="ms-rteFontSize-2">כשעתיים</strong>
-			<span class="ms-rteFontSize-2"> לאחר אישור קבלה בדף </span>
-	  </font>
-    </font> 
-    <a href="'+$relURL+'Pages/RecommendationsHe.aspx"> 
-         <span class="ms-rteFontSize-2" lang="HE" dir="rtl" style="text-decoration-line: underline;">
-            <font color="#0066cc" size="3"> 
-               <span style="text-decoration: underline;">הה​מלצות</span>
-			</font>
-		</span>
-	  </a>
-	  <span class="ms-rteFontSize-2">
-		<font size="3">.
-		</font>
-	  </span>
-	</font>
-</div>'	
-	return $outStr
-}
-function SubmissionStatusContentHe2($relURL){
-		$outStr = '<div>
-   <h1>
-      <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>הגשה</h1>
-   <div class="ms-rteFontSize-2">בתום ביצוע כל חובות הבקשה בהתאם להנחיות המנהליות, תוכל/י ללחוץ &#39;הגשה&#39;. </div>
-   <div class="ms-rteFontSize-2">
-      <span lang="HE" dir="rtl">המידע שימצא בתיק המועמד/ת במועד הסגירה יהיה זמין לקריאה בלבד.<span aria-hidden="true"></span><span aria-hidden="true"></span></span></div>
-</div>'
-	return $outStr
-}
+
 function edt-Recommendations($newSiteName, $language){
 	$pageName = "Pages/Recommendations.aspx"
 	$siteName = get-UrlNoF5 $newSiteName
@@ -2419,6 +2234,16 @@ function Get-WPfromContent($content){
 		}
 		else
 		{
+			if ($content.trim().length -gt 0){
+			
+				$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+				$wpObj1.Content = $content.trim()
+				$wpObj1.isWP = $false
+				$asherClass = Get-ASHERClass
+				$wpObj1.PSEdit = $ostatok.contains($asherClass)
+				$divObjArr += $wpObj1				
+			}
+			
 			break
 		}	
 	}	

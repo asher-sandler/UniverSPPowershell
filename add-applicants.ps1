@@ -79,11 +79,17 @@ else
 				}
 				else
 				{
-					#check-DLangTemplInfrastruct  $siteUrlC $spRequestsListObj
-					#edt-cancelCandidacy2Lang $siteUrlC
-					#edt-SubmissionStatus2Lang $siteUrlC
+					if ($oldSiteExists){
+						check-DLangTemplInfrastruct  $siteUrlC $spRequestsListObj $oldSiteExists $($spRequestsListObj.oldSiteURL)
+					}
+					else
+					{
+						check-DLangTemplInfrastruct  $siteUrlC $spRequestsListObj $oldSiteExists ""
+					}		
+					edt-cancelCandidacy2Lang $siteUrlC
+					edt-SubmissionStatus2Lang $siteUrlC
 					#edt-Recommendations2Lang $siteUrlC
-					#edt-Form2Lang $siteUrlC
+					edt-Form2Lang $siteUrlC
 					
 					#edt-HomePage2Lang $siteUrlC
 					
