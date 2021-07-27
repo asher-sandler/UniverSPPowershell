@@ -1,4 +1,4 @@
-function check-DLangTemplInfrastruct($siteUrlC, $spRequestsListObj,$oldSiteExists){
+function check-DLangTemplInfrastruct($siteUrlC, $spRequestsListObj,$oldSiteExists, $oldSiteName){
 
 	$cpath = "TemplInf\"+$spRequestsListObj.GroupName
 	
@@ -31,10 +31,11 @@ function check-DLangTemplInfrastruct($siteUrlC, $spRequestsListObj,$oldSiteExist
 	
 	write-CancelCandidacy $cpath $siteUrlC
 	$relUrl   = get-RelURL $siteUrlC
+	
 	write-SubmissionStatus $cpath $siteUrlC $relUrl
 	write-Recommendations  $cpath $siteUrlC $relUrl
 	write-Form			   $cpath $siteUrlC $relUrl 
-	write-Default		   $cpath $siteUrlC $relUrl $($spRequestsListObj.deadLineText) $oldSiteExists
+	write-Default		   $cpath $siteUrlC $relUrl $($spRequestsListObj.deadLineText) $oldSiteExists $oldSiteName
 
 }
 
@@ -229,8 +230,8 @@ function write-Recommendations($cpath,$siteUrlC, $relUrl){
 		$i++
 	}
 	$editContentPathEn  = $cpath+"\"+$CurrPage+"\editEn.txt"
-	$editContent | Out-File $editContentPathEn -encoding Default
-
+	$editContent | Out-File $editContentPathEn -encoding Default -Force 
+	
     # ========================= Hebrew =================
     $contentRecommendationsHe1 =  RecommendationsDLangContentHe1 
     $contentRecommendationsHe2 =  RecommendationsDLangContentHe2 
@@ -338,14 +339,45 @@ function write-Form ($cpath,$siteUrlC, $relUrl){
 }
 
 
-function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists){
+function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $oldSiteName){
  	$crlf = [char][int]13 + [char][int]10   
 	$CurrPage = "Default"
 	
+	$oldRelUrl = get-RelURL $oldSiteName
 	# ================== English ======================
     $contentDefaultEn1 =  DefaultDLangContentEn1 $deadline
     $contentDefaultEn2 =  DefaultDLangContentEn2 $relUrl
 
+
+	$editContent = ""
+	$oldContentEnOrig = ""
+	$oldContentHeOrig = ""
+	$oldContentEn = ""
+	$oldContentHe = ""	
+	if ($oldSiteExists){
+		$oldContentEnOrig = Get-PageContent $oldSiteName "Default" 
+		$oldContentEnOrig = $oldContentEnOrig -Replace $oldRelUrl, $relUrl 
+		
+		$oldContentHeOrig = Get-PageContent $oldSiteName "DefaultHe"
+		$oldContentHeOrig = $oldContentHeOrig -Replace $oldRelUrl, $relUrl 
+
+        $oWPOldEn = Get-WPfromContent $oldContentEnOrig
+        $oWPOldHe = Get-WPfromContent $oldContentHeOrig
+		
+		foreach($wp in $oWPOldEn){
+			if (!$wp.isWP){
+				$oldContentEn += $wp.Content
+			}
+		}
+		
+		foreach($wp in $oWPOldHe){
+			if (!$wp.isWP){
+				$oldContentHe += $wp.Content
+			}
+		}		
+		
+	}	
+	
     
 	$originContentPathEn  = $cpath+"\"+$CurrPage+"\OriginEn.txt"
 	$contentWpEn = get-content $originContentPathEn -Raw -Encoding Default
@@ -353,8 +385,7 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists){
 	$oWPEn = Get-WPfromContent $contentWpEn
     $i = 1
 	
-	$editContent = ""
-	
+
 	foreach ($wp in $oWPEn){
 		
 		if ($wp.isWP){
@@ -369,16 +400,25 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists){
 		}
 		else
 		{
+			# need to get Old Site Default Content
 			#write-host $wp
-			if (!$wp.isWP){
+			#if (!$wp.isWP){
 				#write-host "we are here"
-				$editContent += $wp.Content	
-			}
+				# get Old Site Content
+			#	write-host $oldSiteName
+			#	write-host $oldRelUrl
+			#	$editContent += $wp.Content	-Replace $oldRelUrl, $relUrl
+			#}
 		}		
 		$i++
 	}
 	$editContentPathEn  = $cpath+"\"+$CurrPage+"\editEn.txt"
+	
+	$editContent += $oldContentEn
 	$editContent | Out-File $editContentPathEn -encoding Default
+	$ContentR = Get-Content $editContentPathEn -encoding Default
+	$ContentR1 = $ContentR.Replace( "&#58;", ":")
+	$ContentR1 | Out-File $editContentPathEn -encoding Default -Force	
 
     # ========================= Hebrew =================
     $contentDefaultHe1 =  DefaultDLangContentHe1 $deadline
@@ -391,6 +431,8 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists){
     $i = 1
 	
 	$editContent = ""
+	
+
 	
 	foreach ($wp in $oWPHe){
 		if ($wp.isWP){
@@ -405,14 +447,21 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists){
 		}
 		else
 		{
-			if (!$wp.isWP){
-				$editContent += $wp.Content	
-			}			
+			# need to get Old Site Default Content
+			#if (!$wp.isWP){
+			#	write-host $oldSiteName
+			#	write-host $oldRelUrl
+			#	$editContent += $wp.Content	-Replace $oldRelUrl, $relUrl
+			#}			
 		}	
 		$i++
 	}
 	$editContentPathHe  = $cpath+"\"+$CurrPage+"\editHe.txt"
-	$editContent | Out-File $editContentPathHe -encoding Default
+	$editContent += $oldContentHe
+	$editContent | Out-File $editContentPathHe -encoding Default -Force
+	$ContentR = Get-Content $editContentPathHe -encoding Default
+	$ContentR1 = $ContentR.Replace( "&#58;", ":")
+	$ContentR1 | Out-File $editContentPathHe -encoding Default -Force
 	
 	# ======================== Switch to Lang ===================
 	$sName = get-SiteNameFromNote $siteUrlC
@@ -438,7 +487,7 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists){
 }
 
 
-function Get-PageContent($SiteName, $page){
+function Get-PageContent($SiteName, $pageName){
 	$PageContent = ""
 	$siteNameN = get-UrlNoF5 $SiteName
 	$siteNameNew = get-SiteNameFromNote $siteNameN
@@ -446,10 +495,10 @@ function Get-PageContent($SiteName, $page){
 
 	$relUrl   = get-RelURL $siteName
 	
-	$pageURL  = $relUrl + "Pages/"+ $page + ".aspx"
+	$pageURL  = $relUrl + "Pages/"+ $pageName + ".aspx"
 	
 	write-host "Page URL: $pageURL"
-	write-host "site Name: $siteNameNew"
+	write-host "Site Name: $siteNameNew"
 	
 	
 	
@@ -471,7 +520,7 @@ function Get-PageContent($SiteName, $page){
 	
 	$ctx.ExecuteQuery()	
 		
-	write-host "Get Content of: $page" -foregroundcolor Yellow
+	write-host "Get Content of: $pageName" -foregroundcolor Yellow
 	
 	
 	return $PageContent
@@ -855,30 +904,3 @@ function edt-cancelCandidacy2Lang($newSiteName){
 	
 
 }
-
-$0 = $myInvocation.MyCommand.Definition
-$dp0 = [System.IO.Path]::GetDirectoryName($0)
-. "$dp0\Utils-Request.ps1"
-
-$userName = "ekmd\ashersa"
-$userPWD = "GrapeFloor789"
-
-
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.Portable.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Publishing.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Search.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.UserProfiles.dll"
-	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
-	
-$siteUrlC = "https://scholarships2.ekmd.huji.ac.il/home/agriculture/AGR158-2021/Pages/Default.aspx"
-$spRequestsListObj = "" | select-Object GroupName , deadLineText
-$spRequestsListObj.GroupName = "HSS_AGR158-2021"
-$spRequestsListObj.deadLineText = "15.08.2021"
-$oldSiteName = "https://scholarships2.ekmd.huji.ac.il/home/agriculture/AGR158-2021/Pages/Default.aspx"
-check-DLangTemplInfrastruct $siteUrlC $spRequestsListObj $true $oldSiteName
-

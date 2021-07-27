@@ -7,7 +7,7 @@ $userPWD = "GrapeFloor789"
 $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
-#. "Utils-DualLanguage.ps1"
+. "$dp0\Utils-DualLanguage.ps1"
 if ([string]::isNullOrEmpty($groupName))
 {
 	write-host groupName Must be specified 
@@ -64,6 +64,8 @@ else
 					edt-SubmissionStatus 	$siteUrlC  $($spRequestsListObj.language)
 					edt-Recommendations  	$siteUrlC  $($spRequestsListObj.language)
 					edt-Form			    $siteUrlC  $($spRequestsListObj.language)
+					edt-FormWP              $siteUrlC  $spRequestsListObj 
+					edt-SubmissionWP 		$siteUrlC  $spRequestsListObj 
 					
 					if ($oldSiteExists){
 						$contentOldDefault = get-OldDefault $($spRequestsListObj.oldSiteURL)
@@ -96,8 +98,8 @@ else
 					
 				}
 				
-				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)
-				copyMail $($spRequestsListObj.MailPath) $($spRequestsListObj.MailFile) $($spRequestsListObj.PreviousMail)
+				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)  $($spRequestsListObj.language)
+				copyMail $spRequestsListObj
 				
 				change-applTemplate $siteUrlC  $($spRequestsListObj.language)
 				write-host "Do not forget save ApplicantTemplate as : $($spRequestsListObj.RelURL)" -foregroundcolor Yellow

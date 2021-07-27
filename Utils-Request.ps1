@@ -485,21 +485,33 @@ function Write-TextConfig ($ListObj, $groupName)
         
         $fileS += "Faculty:"  + $ListObj[0].faculty + $crlf
 		$fileS += "Rights for Admin: " + $ListObj[0].RightsforAdmin + $crlf+ $crlf
+
+		$isDoubleLangugeSite = $($ListObj[0].language).toLower().contains("en") -and $($ListObj[0].language).toLower().contains("he")
 		$fileS += "Path: "+$ListObj[0].PathXML+ $crlf
 		$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf 
-		$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf +$crlf
-		
+		$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf
+		if ($isDoubleLangugeSite){
+			$fileS += "GoTo XML He: cd " +  $ListObj[0].PathXML + "\" + $($ListObj[0].XMLFile).replace(".xml","-He.xml")+ $crlf
+		}
+		$fileS += $crlf
 		
 		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
 		$fileS += "Email Template:" +  $ListObj[0].MailFile+ $crlf
-		$fileS += "GoTo Email: cd " +  $ListObj[0].MailPath+ "\" + $ListObj[0].MailFile+ $crlf+ $crlf
-		
+		$fileS += "GoTo Email: cd " +  $ListObj[0].MailPath+ "\" + $ListObj[0].MailFile+ $crlf
+		if ($isDoubleLangugeSite){
+			$fileS += "GoTo Email He: cd " +  $ListObj[0].MailPath+ "\" + $($ListObj[0].MailFile).replace(".xml","-He.xml")+ $crlf		
+		}		
+		$fileS += $crlf
+				
 		
 		
 		$fileS += "Path: "+$ListObj[0].PathXML+ $crlf
-		$fileS += "Prev XML Form: " +   $ListObj[0].PreviousXML +  $crlf
-		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
-		$fileS += "Prev Email Template:" +   $ListObj[0].PreviousMail +  $crlf
+		$fileS += "Prev XML Form: " +   $ListObj[0].PreviousXML +  $crlf + $crlf
+		$fileS += "Email Path: " +  $ListObj[0].MailPath + $crlf
+		$fileS += "Prev Email Template:" +   $ListObj[0].PreviousMail +  $crlf + $crlf
+		
+		$fileS += "GoTo Template Infrastructure: cd TemplInf\" +   $ListObj[0].assignedGroup +  $crlf+ $crlf
+		
 		
 		$fileS | Out-File $fName -Encoding UTF8
 		
@@ -602,7 +614,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language, folderLink, PathXML, XMLFile, MailPath, MailFile, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -633,14 +645,20 @@ function get-RequestListObject(){
 
 				$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"
 				
-				$spRequestsListItem.MailFile = $relURL + "-mail.txt"
+				$spRequestsListItem.MailFile   = $relURL + "-mail.txt"
+				$spRequestsListItem.MailFileEn = $relURL + "-mail-En.txt"
+				$spRequestsListItem.MailFileHe = $relURL + "-mail-He.txt"
+				
 				$spRequestsListItem.mailSuffix = $groupSuffix.toUpper() +"-"+ $relURL
 				$spRequestsListItem.applicantsGroup = $groupSuffix +"_"+ $relURL + "_applicantsUG"
 				$spRequestsListItem.targetAudiency = "EkccUG" 
 				$spRequestsListItem.targetAudiencysharepointGroup = $groupSuffix +"_"+ $relURL + "_AdminSP; "+ $groupSuffix +"_" +  $relURL + "_JudgesSP"
 				$spRequestsListItem.targetAudiencyDistributionSecurityGroup = $groupSuffix +"_"+ $relURL + "_JudgesUG"
 				$spRequestsListItem.language = $Item["language"]
-				if ($spRequestsListItem.language.toUpper() -eq "EN"){
+				
+				$isDoubleLangugeSite = $($spRequestsListItem.language).toLower().contains("en") -and $($spRequestsListItem.language).toLower().contains("he")
+				$spRequestsListItem.isDoubleLangugeSite = $isDoubleLangugeSite
+				if ($spRequestsListItem.language.toUpper().contains("EN")){
 					
 					if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
 						$spRequestsListItem.Title = $Item["Title"]
@@ -651,13 +669,14 @@ function get-RequestListObject(){
 						$spRequestsListItem.Title =  $Item["siteNameEn"]
 						$spRequestsListItem.siteName = $Item["siteNameEn"]
 					}
+					$spRequestsListItem.MailFile = $spRequestsListItem.MailFileEn
 					
 				}
 				else
 				{
 					$spRequestsListItem.Title = $Item["Title"]
 					$spRequestsListItem.siteName = $Item["siteName"]
-					
+					$spRequestsListItem.MailFile = $spRequestsListItem.MailFileHe
 				}	
 				
 				if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
@@ -693,7 +712,8 @@ function get-RequestListObject(){
 				$spRequestsListItem.systemURL = $currentSystem.appHomeUrl
 				$spRequestsListItem.systemListName = $currentSystem.listName
 				$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
-				
+				write-Host "Old Site Name : $($spRequestsListItem.oldSiteURL)" -foregroundcolor Green
+
 				# $spRequestsListObj += $spRequestsListItem
 				break
 			}
@@ -1020,7 +1040,6 @@ function get-SiteNameFromNote($note){
 		
 		
 	}
-	write-Host "Old Site Name : $sName" -foregroundcolor Green
 	
 	return $sName
 }
@@ -1765,6 +1784,119 @@ function edt-Form($newSiteName, $language){
 	$ctx.ExecuteQuery()
 	write-host "$pageName Was Updated" -foregroundcolor Green
 }
+function edt-SubmissionWP($siteUrlC , $spObj){
+	$pageName = "Pages/SubmissionStatus.aspx"
+	
+	$siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	#$language = $spObj.language
+	$lang = 0
+	$wpName = "SubmissionButton WP"
+	
+	
+	if ($spObj.language.toLower().contains("en"))
+	{
+		$lang = 1
+		
+	}
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "'+$wpName+'" on the page ' + $pageName -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq $wpName){
+				$wp.WebPart.Properties["WP_Language"] = $lang
+				$wp.WebPart.Properties["EmailTemplatePath"] = $spObj.MailPath
+				
+				$wp.WebPart.Properties["EmailTemplateName"] = $spObj.MailFile;
+				
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change '"+$wpName+"'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change '"+$wpName+"'")
+	$ctx.ExecuteQuery()
+		
+}
+
+function edt-FormWP($siteUrlC , $spObj){
+	$pageName = "Pages/Form.aspx"
+	
+	$siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	#$language = $spObj.language
+	$textAlign = 0
+	$textDirection = 0
+	
+	if ($spObj.language.toLower().contains("en"))
+	{
+		$textAlign = 1
+		$textDirection = 1
+	}
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "Dynamic Form - v 2.0"  from the page Form.aspx' -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq "Dynamic Form - v 2.0"){
+				$wp.WebPart.Properties["filePath"] = $spObj.PathXML
+				$wp.WebPart.Properties["fileName"] = $spObj.XMLFile
+				
+				$wp.WebPart.Properties["addColumns"] = $true;
+				$wp.WebPart.Properties["addLists"] = $true;
+				
+				$wp.WebPart.Properties["textAlign"] = $textAlign;
+				$wp.WebPart.Properties["textDirection"] = $textDirection;
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change 'Dynamic Form - v 2.0'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change 'Dynamic Form - v 2.0'")
+	$ctx.ExecuteQuery()
+	
+}
 
 function get-OldDefault($oldSiteName){
 	$pageName = "Pages/Default.aspx"
@@ -1969,7 +2101,8 @@ function change-applTemplate($newSiteName, $language){
 	return $null
 	
 }
-function copyXML($PathXML, $XMLFile, $PreviousXML){
+function copyXML($PathXML, $XMLFile, $PreviousXML, $language){
+	$isDoubleLangugeSite = $language.toLower().contains("en") -and $language.toLower().contains("he")
 	
 	if (![string]::isNullOrEmpty($PreviousXML)){
 		# check for exists
@@ -2003,43 +2136,99 @@ function copyXML($PathXML, $XMLFile, $PreviousXML){
 		
 	}
 }
-function copyMail($PathMail, $MailFile, $PreviousMail){
+function copyMail($spObj){
+	
+	$PathMail = $spObj.MailPath
+	$MailFile = $spObj.MailFile
+	$isDoubleLangugeSite = $spObj.isDoubleLangugeSite
+	$language = $spObj.language
+	$siteName = $spObj.siteName
+	$siteNameEn = $spObj.siteNameEn
+	
+	#$($spRequestsListObj.MailPath) $($spRequestsListObj.MailFile) 
+	#$($spRequestsListObj.PreviousMail) $($spRequestsListObj.language) 
+	#$($spRequestsListObj.siteName) $($spRequestsListObj.siteNameEn)
+	
+	# $isDoubleLangugeSite = $language.toLower().contains("en") -and $language.toLower().contains("he")
+   
+	$fileNewMailEn = $PathMail + "\" + $spObj.MailFileEn
+	$fileNewMailHe = $PathMail + "\" + $spObj.MailFileHe
+	#write-Host $fileNewMailEn
+	#write-Host $fileNewMailHe
+	$contentFileEn = Get-MailContentEn $siteNameEn
+	$contentFileHe = Get-MailContentHe $siteName
 
-	if (![string]::isNullOrEmpty($PreviousMail)){
-		# check for exists
-		$fullPrevPath = $PathMail + "\*" + $PreviousMail
-		
-		
-		$fileNewMail   = $PathMail + "\" + $MailFile
-		
-		If (Test-Path $fullPrevPath){
-			if (!(Test-Path $fileNewMail)){
-				$itemOld = get-item $fullPrevPath
-				Copy-Item -Path $($itemOld.FullName) -Destination $fileNewMail
-				if (Test-Path $fileNewMail){
-					write-Host "Mail File $fileNewMail succesfully created." -foregroundcolor Green
-				}
-				else
-				{
-					write-Host "Problem was with copy Mail File $fileNewMail." -foregroundcolor Yellow
-				}
-			}
-			else
-			{
-				Write-Host "Mail File $fileNewMail already exists. Not Copied." -foregroundcolor Yellow
-			}
+	if ($language.toLower().contains("en")){
+
+		if (!(Test-Path $fileNewMailEn)){
+			$contentFileEn | Out-File $fileNewMailEn -encoding Default
+			write-Host "Mail File $fileNewMailEn succesfully created." -foregroundcolor Green
+			
 		}
 		else
 		{
-			Write-Host "Previous Mail $filePrevMail does not found.Check for it." -foregroundcolor Yellow
+			Write-Host "Mail File $fileNewMailEn already exists. Not Copied." -foregroundcolor Yellow
+
+		}			
+	}
+	
+	if ($language.toLower().contains("he")){
+
+		if (!(Test-Path $fileNewMailHe)){
+			$contentFileHe | Out-File $fileNewMailHe -encoding Default
+			write-Host "Mail File $fileNewMailHe succesfully created." -foregroundcolor Green
+			
+		}
+		else
+		{
+			Write-Host "Mail File $fileNewMailHe already exists. Not Copied." -foregroundcolor Yellow
+			
 		}
 		
-		
-	}	
+	}		
+
+	
+
 	
 }
 
+function Get-MailContentEn($siteName){
+	$crlf = [char][int]13 + [char][int]10
 
+	$retStr  = "<br>" + $crlf
+	$retStr += "Hello [SPF:firstName] [SPF:surname],<br>" + $crlf
+	$retStr += "<br>" + $crlf
+	$retStr += "Thank you for applying for the<br>" + $crlf
+	$retStr += $siteName 
+	$retStr += "<br>" + $crlf
+	$retStr += "The following documents that you have uploaded were received by the system:" + $crlf
+	$retStr += "[documentsListContent]" + $crlf
+	$retStr += "" + $crlf
+	$retStr += "<br>" + $crlf
+	$retStr += "The Hebrew University in Jerusalem" + $crlf
+
+	return $retStr
+}
+
+function Get-MailContentHe($siteName){
+	$crlf = [char][int]13 + [char][int]10
+
+	$retStr  = "<br>"+ $crlf
+	$retStr += "שלום [SPF:firstNameHe] [SPF:surnameHe],<br>"+ $crlf
+	$retStr += "<br>"+ $crlf
+	$retStr += "תודה על הגשה למלגה:<br>"+ $crlf
+	$retStr += $siteName + $crlf
+	$retStr += "<br>" + $crlf
+	$retStr += "<br>" + $crlf
+	$retStr += "המסמכים הבאים שהעלית נקלטו במערכת:" + $crlf
+	$retStr += "[documentsListContent]" + $crlf
+	$retStr += "" + $crlf
+	$retStr += "<br>" + $crlf
+	$retStr += "בברכה,<br>" + $crlf
+	$retStr += "האוניברסיטה העברית בירושלים" + $crlf
+	
+	return $retStr
+}
 function get-WPIdArray($sContent){
 	$resArray = @()
 	$aID = $sContent | Select-String -Pattern "ms-rtestate-notify  ms-rtestate-read"

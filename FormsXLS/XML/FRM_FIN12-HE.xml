@@ -1,0 +1,284 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>סקר תוכנת נסיעות</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://hss2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<createPDF>yes</createPDF>
+		<pdfMailBodyHtml><![CDATA[
+		<div style="direction:rtl; font-size:12pt; font-family: Arial, Helvetica, Sans-Serif;">
+			<div style="margin-bottom:2em; font-size:12pt;">שלום רב,</div>
+			<div style="margin-bottom:2em; font-size:12pt;">מצ"ב טופס בקשה לקבלת אש"ל אשר מילאת.</div>
+			<div style="font-size:12pt;">בברכה,</div>
+			<div style="font-size:12pt;">אגף הכספים</div>
+			<div style="font-size:12pt;">האוניברסיטה העברית בירושלים</div>
+		</div>
+		]]>
+		</pdfMailBodyHtml>
+		<pdfMailSubject>סקר תוכנת נסיעות</pdfMailSubject>
+		<pdfEmailField>Email</pdfEmailField>
+		<pdfDownloadButtonText>לחצו להורדת קובץ</pdfDownloadButtonText>
+		<destinationFolder>FRM_FIN12_PDF</destinationFolder>
+		<destinationList>FRM_FIN12_List</destinationList>
+		<ticketNum>FIN12</ticketNum>
+		<description>[FirstName]-[LastName]-</description>
+		<createSubFolder>yes</createSubFolder>
+		<redirectPage>https://forms.ekmd.huji.ac.il/home/finance/Pages/Success.aspx?isdlg=1&amp;e=1</redirectPage>
+
+
+	</config>
+	
+
+
+	<row>
+		<Header>סקר תוכנת נסיעות</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>
+	דרג את שביעות רצונך הכללית מהתהליך
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	1	כלל לא שבע רצון		10	מאוד שבע רצון
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>scale10</List>
+			<Data>q1</Data>
+			<width>70</width>
+			<required>no</required>
+		</control>		
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	דרג את שביעות רצונך מעיצוב האתר
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	1	כלל לא שבע רצון		10	מאוד שבע רצון
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>scale10</List>
+			<Data>q2</Data>
+			<width>70</width>
+			<required>no</required>
+		</control>		
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	דרג את שביעות רצונך מנוחות הגלישה
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	1	כלל לא שבע רצון		10	מאוד שבע רצון
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>scale10</List>
+			<Data>q3</Data>
+			<width>70</width>
+			<required>no</required>
+		</control>		
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	דרג את שביעות רצונך מפירוט המידע
+			</text>
+			<width>520</width>
+		</Label>
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	1	כלל לא שבע רצון		10	מאוד שבע רצון
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>scale10</List>
+			<Data>q4</Data>
+			<width>70</width>
+			<required>no</required>
+		</control>		
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	מה תפקידך במוסד?
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>roleList</List>
+			<Data>role</Data>
+			<width>170</width>
+			<required>no</required>
+		</control>		
+	</row>
+	
+
+
+	
+
+	<row>
+		<Label>
+			<text>
+	האם זוהי הפעם הראשונה שאתה משתמש בתוכנה?
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>yesNoListHeb</List>
+			<Data>useProgramm</Data>
+			<width>170</width>
+			<required>no</required>
+		</control>			
+	</row>
+	
+
+	
+	
+
+	<row>
+		<Label>
+			<text>
+	האם פנית למוקד התמיכה הטכנית לקבלת עזרה?
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<List>yesNoListHeb</List>
+			<Data>useSupport</Data>
+			<width>170</width>
+			<required>no</required>
+		</control>			
+	</row>
+	
+
+	
+
+
+	<row>
+		<Label>
+			<text>
+	עצות לשיפור 
+			</text>
+			<width>520</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>suggestionForImprove</Data>
+			<width>520</width>
+			<required>no</required>
+		</control>		
+	</row>
+	
+
+	<row>
+		<Label>
+			<text>
+	אנא רשום את המייל שנוכל לחזור אליךטקסט אנגלית
+			</text>
+			<width>520</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>Email</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>		
+	</row>
+	
+	<row>
+		<Header>תודה רבה על שיתוף הפעולה!</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text></text>
+			<width>200</width>
+		</Label>
+		<control>
+			<Type>captchaMessage</Type>
+			<Data>captchaMessage</Data>
+		</control>
+	</row>	
+	
+	
+	<row>
+		<Label></Label>
+	</row>
+  
+	<row>
+		<Label>
+			<text></text>
+			<width>200</width>
+		</Label>
+		<Button>שליחה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

@@ -1,6 +1,6 @@
 function AddWebPartToPage ($ctx, $sitesURL) {
 
-	$pageRelativeUrl = "/Pages/WPTest.aspx"
+	$pageRelativeUrl = "/Pages/form001.aspx"
 	$wpZoneID = "Left"
 	$wpZoneOrder= 0
 
@@ -64,7 +64,375 @@ function AddWebPartToPage ($ctx, $sitesURL) {
 		#read-host
 		$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);
 		
-		
+<#
+Key   : ExportMode
+Value : 0
+
+
+Key   : HelpUrl
+Value :
+
+
+Key   : HelpMode
+Value : 2
+
+
+Key   : Direction
+Value : 0
+
+
+Key   : CatalogIconImageUrl
+Value :
+
+
+Key   : AuthorizationFilter
+Value :
+
+
+Key   : AllowZoneChange
+Value : True
+
+
+Key   : ChromeState
+Value : 0
+
+
+Key   : Description
+Value : Dynamic Form - v 2.0
+
+
+Key   : ChromeType
+Value : 2
+
+
+Key   : TitleUrl
+Value :
+
+
+Key   : TitleIconImageUrl
+Value :
+
+
+Key   : Title
+Value : Dynamic Form - v 2.0
+
+
+Key   : ImportErrorMessage
+Value : Cannot import this Web Part.
+
+
+Key   : Hidden
+Value : False
+
+
+Key   : AllowMinimize
+Value : True
+
+
+Key   : AllowConnect
+Value : True
+
+
+Key   : AllowClose
+Value : True
+
+
+Key   : AllowHide
+Value : True
+
+
+Key   : AllowEdit
+Value : True
+
+
+Key   : loadFormByIdPageURL
+Value : http://testportal.ekmd.huji.ac.il/abat/Pages/existingForm.aspx
+
+
+Key   : showPdfLog
+Value : False
+
+
+Key   : checkDeadline
+Value : True
+
+
+Key   : successPageUrl
+Value : https://adminportal2.ekmd.huji.ac.il/abat/Pages/viewPendingApp
+        roal.aspx
+
+
+Key   : submitMessage
+Value : הכרטיס נשלח בהצלחה
+
+
+Key   : submit
+Value : False
+
+
+Key   : showLog
+Value : False
+
+
+Key   : submitApproverMail
+Value :
+
+
+Key   : CheckStartDate
+Value : False
+
+
+Key   : mailServer
+Value : ekekcas01.ekmd.huji.uni
+
+
+Key   : domain
+Value : EKMD
+
+
+Key   : addColumns
+Value : True
+
+
+Key   : addLists
+Value : True
+
+
+Key   : itemLoadBy
+Value : 0
+
+
+Key   : addListItem
+Value : False
+
+
+Key   : ldap
+Value : LDAP://DC=ekmd,DC=huji,DC=uni
+
+
+Key   : formMode
+Value : 0
+
+
+Key   : parallelApprovalProcessStatusColumnValue
+Value : ממתין
+
+
+Key   : restartDeniedItem
+Value : True
+
+
+Key   : stageAdditionalData
+Value : OrderDescription
+
+
+Key   : approvingonGoingValue
+Value : בתהליך
+
+
+Key   : approvingWaitingValue
+Value : ממתין
+
+
+Key   : cookieName
+Value : EKMD_1234
+
+
+Key   : css
+Value : /Style Library/DynamicForm/DynamicForm.css
+
+
+Key   : writeApproverToPDF
+Value : False
+
+
+Key   : hujiUsersList
+Value : hujiUsers
+
+
+Key   : approvingDeniedValue
+Value : נדחה
+
+
+Key   : initiatorEmailColumn
+Value : email
+
+
+Key   : initiatorDisplayNameColumn
+Value : Title
+
+
+Key   : parallelApprovalProcessStatusColumn
+Value : AdminTicketStatus
+
+
+Key   : initiatorUserNameColumn
+Value : userName
+
+
+Key   : approverAcceptedValue
+Value : אושר
+
+
+Key   : approvingApprovedValue
+Value : מאושר
+
+
+Key   : parallelApprovalProcess
+Value : False
+
+
+Key   : approverDeniedValue
+Value : נדחה
+
+
+Key   : userNameColumn
+Value : userName
+
+
+Key   : buttonTag
+Value : Button
+
+
+Key   : TypeTag
+Value : type
+
+
+Key   : applicantsList
+Value : applicants
+
+
+Key   : messageTag
+Value : finalMessage
+
+
+Key   : _headerTag
+Value : Header
+
+
+Key   : _docHeader
+Value : _docHeader
+
+
+Key   : DataTag
+Value : data
+
+
+Key   : _labelTag
+Value : label
+
+
+Key   : initiatorList
+Value : InitiatorsList
+
+
+Key   : ADLoaderfileName
+Value : ADConnectionConfig.xml
+
+
+Key   : ADLoaderfilePath
+Value : \\ekeksql00\SP_Resources$\ActiveDirectory
+
+
+Key   : initiatorMailTemplate
+Value : \\ekeksql00\SP_Resources$\ABT\mailTemplates\initiatorMail.txt
+
+
+Key   : approverMailTemplate
+Value : \\ekeksql00\SP_Resources$\ABT\mailTemplates\approverMail.txt
+
+
+Key   : aproversProgressList
+Value : TicketsApprovalProcess
+
+
+Key   : aproversStagesList
+Value : ApprovingStagesList
+
+
+Key   : fileName
+Value : requjestForm.xml
+
+
+Key   : filePath
+Value : \\ekeksql00\SP_Resources$\HSS\default\asherTest
+
+
+Key   : controlPath
+Value : /rows/row/control
+
+
+Key   : textDataFontSize
+Value : 10
+
+
+Key   : labelFontSize
+Value : 10
+
+
+Key   : textAlign
+Value : 0
+
+
+Key   : MtHeight
+Value : 150
+
+
+Key   : statusColumnName
+Value : TicketStatus
+
+
+Key   : approverUserNameColumn
+Value : userName
+
+
+Key   : headerFontSize
+Value : 11
+
+
+Key   : docHeaderFontSize
+Value : 16
+
+
+Key   : textDirection
+Value : 0
+
+
+Key   : dataColor
+Value : #545556
+
+
+Key   : section_headerFontSize
+Value : 14px
+
+
+Key   : _dataPath
+Value : /rows/row
+
+
+Key   : _configPath
+Value : /rows/config
+
+
+Key   : _docHeaderColor
+Value : #3560a0
+
+
+Key   : fontName
+Value : 0
+
+
+Key   : sectionHeaderColor
+Value : #3560a0
+
+
+Key   : _doc_headerFontSize
+Value : 18px
+
+
+SubmissionButton WP
+
+#>		
 		
 		#Write-Host $WebPartXml.OuterXml
 		
@@ -82,18 +450,32 @@ function AddWebPartToPage ($ctx, $sitesURL) {
 			
 			$ctx.Load($wp.WebPart.Properties)
 			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
 			$ctx.ExecuteQuery() 
-			if ($wp.WebPart.Title -eq "Simcha Content")
+			if ($wp.WebPart.Title -eq "Dynamic Form - v 2.0")
 			{
 				#$wp.WebPart | gm
-				$wp.WebPart.Properties.FieldValues
-				$wp.WebPart.Properties["ContentLink"] = "/sites/dev/SiteAssets/test.css";
+				#$wp.id
+				#$wp.WebPart.Properties.FieldValues
+				#$wp.WebPart.Properties["ContentLink"] = "/sites/dev/SiteAssets/test.css";
+				$wp.WebPart.Properties["filePath"] = "\\ekeksql00\SP_Resources$\HSS\default";
+				#$wp.WebPart.Properties["fileName"] = "‏‏GEN130-2021.xml";
+				$wp.WebPart.Properties["fileName"] = "GEN150-2021-En.xml";
+				#$wp.WebPart.Properties["fileName"] = "HUM166-2021.xml";
 				
-				$wp.WebPart.Properties["Content"] = "<![CDATA[<div><h1>Hello</h1></div>]]>"
- 
+				
+				$wp.WebPart.Properties["addColumns"] = $true;
+				$wp.WebPart.Properties["addLists"] = $true;
+				
+				$wp.WebPart.Properties["textAlign"] = 1;
+				$wp.WebPart.Properties["textDirection"] = 1;
+
+				#$wp.WebPart.Properties["Content"] = "<![CDATA[<div><h1>Hello</h1></div>]]>"
+				#$wp.WebPart.Properties["Content"] = "<![CDATA[<div><h1>Hello</h1></div>]]>"
+				
 				#Set content and Save
-				$xmlContent = get-content SimchaContent.dwp -encoding Default
-				$wp.Content = $xmlContent   
+				#$xmlContent = get-content SimchaContent.dwp -encoding Default
+				#$wp.Content = $xmlContent   
 				$wp.SaveWebPartChanges();				
 			}
 			# $wp.WebPart.Properties
