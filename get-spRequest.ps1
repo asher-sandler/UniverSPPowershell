@@ -1,5 +1,10 @@
-param([string] $groupName = "")
+param([string] $groupName = "",
 
+	[Parameter(Mandatory=$false)]
+	[ValidateSet("No", "Yes")]
+	[string[]]$Force = "No"
+	
+	)
 
 $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
@@ -21,54 +26,70 @@ if ([string]::isNullOrEmpty($groupName))
 }
 else
 {
+	$currentYear = $(Get-Date).Year.ToString()
+	if ($GroupName.Contains($currentYear) -or $Force.ToUpper() -eq "YES"){
 
-	#Load SharePoint CSOM Assemblies
+		#Load SharePoint CSOM Assemblies
 
-	$crlf = [char][int]13+[char][int]10
-	if (Test-CurrentSystem $groupName){	
+		$crlf = [char][int]13+[char][int]10
+		if (Test-CurrentSystem $groupName){	
 
-		$spRequestsListObj = get-RequestListObject
-		# $spRequestsListObj
+			$spRequestsListObj = get-RequestListObject
+			if (!$spRequestsListObj.isUserContactEmpty ){
+				# $spRequestsListObj
 
-		if ($spRequestsListObj.GroupName.ToUpper()  -eq $groupName.Trim().ToUpper()){
-			
-			if (Test-ScholarShipItemExist $spRequestsListObj ){
-				$currentSystem = Get-CurrentSystem $groupName
-				$currentList = $currentSystem.appHomeUrl + "lists/"+$currentSystem.listName
-				$isImplemented = $currentSystem.isImplemented
+				if ($spRequestsListObj.GroupName.ToUpper()  -eq $groupName.Trim().ToUpper()){
+					
+					if (Test-ScholarShipItemExist $spRequestsListObj ){
+						$currentSystem = Get-CurrentSystem $groupName
+						$currentList = $currentSystem.appHomeUrl + "lists/"+$currentSystem.listName
+						$isImplemented = $currentSystem.isImplemented
 
-				
+						
 
-				Write-Host "CurrentSystem: $($currentSystem.appTitle)" -foregroundcolor Yellow
-				Write-Host "CurrentList: $(get-UrlWithF5 $currentList)" -foregroundcolor Yellow
-				Write-Host "Implemented: $isImplemented" -foregroundcolor Yellow
-				
-				
-				$facultyList = Get-FacultyList $($currentSystem.appHomeUrl)
-				
-				#write-Host $facultyList
-				
-				Write-TextConfig $spRequestsListObj $groupName
-				$spRequestsListObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+".json")
-				
-				Add-SiteList $spRequestsListObj[0] $facultyList
-				Change-GroupDescription $groupName $spRequestsListObj[0].siteNameEn
-				Add-GroupMember $groupName $spRequestsListObj[0].contactEmail $spRequestsListObj[0].userName
+						Write-Host "CurrentSystem: $($currentSystem.appTitle)" -foregroundcolor Yellow
+						Write-Host "CurrentList: $(get-UrlWithF5 $currentList)" -foregroundcolor Yellow
+						Write-Host "Implemented: $isImplemented" -foregroundcolor Yellow
+						
+						
+						$facultyList = Get-FacultyList $($currentSystem.appHomeUrl)
+						
+						#write-Host $facultyList
+						
+						Write-TextConfig $spRequestsListObj $groupName
+						$spRequestsListObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+".json")
+						
+						Add-SiteList $spRequestsListObj[0] $facultyList
+						Change-GroupDescription $groupName $spRequestsListObj[0].siteNameEn
+						Add-GroupMember $groupName $spRequestsListObj[0].contactEmail $spRequestsListObj[0].userName
+					}
+					else
+					{
+						write-Host "$groupName already exists in $($($spRequestsListObj[0]).systemListUrl)." -foregroundcolor Yellow
+						write-Host "No items were added." -foregroundcolor Yellow
+					}
+				}
+				else
+				{
+					Write-Host "Group $groupName not found in spRequestsList." -foregroundcolor Yellow
+				}
 			}
 			else
 			{
-				write-Host "$groupName already exists in $($($spRequestsListObj[0]).systemListUrl)." -foregroundcolor Yellow
-				write-Host "No items were added." -foregroundcolor Yellow
+				Write-Host "Contacts not Found! Please Fill User Contact Fields in spRequestsList!" -foregroundcolor Yellow
 			}
 		}
 		else
 		{
-			Write-Host "Group $groupName not found in spRequestsList." -foregroundcolor Yellow
-		}
-	}
-	else
+				Write-Host "Group Name $groupname is not valid!"
+		}		
+	}else
 	{
-		Write-Host "Group Name $groupname is not valid!"
+		write-Host "Group $groupName contains not current year." -foregroundcolor Yellow
+		write-Host "Current year is: $currentYear." -foregroundcolor Yellow
+		write-Host "If you still want to use this group, use switch -Force YES." -foregroundcolor Yellow
 	}
-}	
+}
+
+	
 

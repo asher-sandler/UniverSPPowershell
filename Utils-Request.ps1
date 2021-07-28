@@ -576,6 +576,96 @@ function GetPrevMAIL ($Notes)
 		}	
 	}
 }
+function Check-ContactEmpty($contactFirstNameEn, $contactLastNameEn, $contactEmail ){
+	$ret = $true
+	return ([string]::IsNullOrEmpty($contactFirstNameEn) -or
+		[string]::IsNullOrEmpty($contactLastNameEn)  -or
+		[string]::IsNullOrEmpty($contactEmail))
+	
+}
+function copy-DocTypeList($newSite, $oldSite){
+	write-host "Copying Document Type List." -foregroundcolor Green
+	$siteUrlNew = get-UrlNoF5 $newSite
+	$siteUrlOld = get-UrlNoF5 $oldSite
+
+
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	  
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlOld)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	
+	#Get the List
+	$ListName="DocType"
+	$List = $Ctx.Web.lists.GetByTitle($ListName)
+	 
+	#Define the CAML Query
+	$Query = New-Object Microsoft.SharePoint.Client.CamlQuery
+	$qry = "<View><Query></Query></View>"
+	$Query.ViewXml = $qry
+
+	#Get All List Items matching the query
+	$ListItems = $List.GetItems($Query)
+	$Ctx.Load($ListItems)
+	$Ctx.ExecuteQuery()
+	
+	$aDocTypeListOld = @()
+
+
+	ForEach($Item in $ListItems){
+		$docTypeItem = "" | Select Title, Required, FilesNumber , fromMail, sourceField
+		
+		$docTypeItem.Title = $Item["Title"]
+		$docTypeItem.Required = $Item["Required"]
+		$docTypeItem.FilesNumber = $Item["FilesNumber"]
+		$docTypeItem.fromMail = $Item["fromMail"]
+		$docTypeItem.sourceField = $Item["source_field"]
+		
+		$aDocTypeListOld += $docTypeItem
+
+	}	
+	
+	#$aDocTypeListOld
+	Write-Host "Adding To Site: $newSite" -foregroundcolor Green 
+	$ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlNew)  
+	$ctx1.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+	$lists = $ctx1.web.Lists  
+	$list = $lists.GetByTitle($ListName)
+
+    $ListItems = $List.GetItems($Query)
+	$ctx1.Load($ListItems)
+	$ctx1.ExecuteQuery()
+	$i=0
+	if ($ListItems.Count -eq 0){
+		foreach ($item in $aDocTypeListOld)	{
+			$listItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation  
+			
+			$listItem = $list.AddItem($listItemInfo)  
+			$listItem["Title"] = $item.Title
+			$listItem["Required"] = $item.Required
+			$listItem["FilesNumber"] = $item.FilesNumber
+			$listItem["fromMail"] = $item.fromMail
+			$listItem["source_field"] = $item.sourceField
+		
+			$listItem.Update()      
+			$ctx1.load($list)      
+			$ctx1.executeQuery()  
+			$i = $i+1	
+		}
+		Write-Host "Copied $i items."
+	}
+	else
+	{
+		Write-Host "Document Type List on site $newSite is not Empty." -foregroundcolor Yellow
+		Write-Host "List Not Copied."  -foregroundcolor Yellow
+		
+	}
+	
+	return $null
+
+}
 function get-RequestListObject(){
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
@@ -614,108 +704,118 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty
 
 	ForEach($Item in $ListItems)
 	{ 
 		$aGroup = $Item["assignedGroup"]
 		if (![string]::isNullOrEmpty($aGroup)){
 			if ($aGroup.ToUpper() -eq $groupName.ToUpper()){
+				$userContactEmpty = Check-ContactEmpty $Item["contactFirstNameEn"] $Item["contactLastNameEn"] $Item["contactEmail"]
+				if (!$userContactEmpty){
 				
-				#Write-host $Item.id, $Item["status"],$Item["contactLastNameEn"],$Item["assignedGroup"]
-				#Write-host $Item.count 
-				$relURL = Get-GroupTemplate $groupName
-				$groupSuffix =  Get-GroupSuffix $groupName
-				
-				$spRequestsListItem.ID = $Item.id
-				$spRequestsListItem.GroupName = $Item["assignedGroup"]
-				
-				$spRequestsListItem.relURL = $relURL
-				
-				$spRequestsListItem.Status = $Item["status"]
-				$spRequestsListItem.adminGroup = $groupSuffix +"_"+ $relURL + "_AdminUG"
-				$spRequestsListItem.adminGroupSP =$groupSuffix +"_"+ $relURL + "_AdminSP"
-				$spRequestsListItem.assignedGroup = $groupName
-				$spRequestsListItem.Notes = $Item["notes"]
-				$spRequestsListItem.PreviousXML = GetPrevXML $spRequestsListItem.Notes
-				$spRequestsListItem.PreviousMail = GetPrevMAIL $spRequestsListItem.Notes
-
-				$spRequestsListItem.XMLFile =  $relURL + ".xml"
-				$spRequestsListItem.PathXML = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\default" 
-
-				$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"
-				
-				$spRequestsListItem.MailFile   = $relURL + "-mail.txt"
-				$spRequestsListItem.MailFileEn = $relURL + "-mail-En.txt"
-				$spRequestsListItem.MailFileHe = $relURL + "-mail-He.txt"
-				
-				$spRequestsListItem.mailSuffix = $groupSuffix.toUpper() +"-"+ $relURL
-				$spRequestsListItem.applicantsGroup = $groupSuffix +"_"+ $relURL + "_applicantsUG"
-				$spRequestsListItem.targetAudiency = "EkccUG" 
-				$spRequestsListItem.targetAudiencysharepointGroup = $groupSuffix +"_"+ $relURL + "_AdminSP; "+ $groupSuffix +"_" +  $relURL + "_JudgesSP"
-				$spRequestsListItem.targetAudiencyDistributionSecurityGroup = $groupSuffix +"_"+ $relURL + "_JudgesUG"
-				$spRequestsListItem.language = $Item["language"]
-				
-				$isDoubleLangugeSite = $($spRequestsListItem.language).toLower().contains("en") -and $($spRequestsListItem.language).toLower().contains("he")
-				$spRequestsListItem.isDoubleLangugeSite = $isDoubleLangugeSite
-				if ($spRequestsListItem.language.toUpper().contains("EN")){
+					#Write-host $Item.id, $Item["status"],$Item["contactLastNameEn"],$Item["assignedGroup"]
+					#Write-host $Item.count 
+					$relURL = Get-GroupTemplate $groupName
+					$groupSuffix =  Get-GroupSuffix $groupName
 					
-					if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
-						$spRequestsListItem.Title = $Item["Title"]
-						$spRequestsListItem.siteName = $Item["siteName"]
+					$spRequestsListItem.ID = $Item.id
+					$spRequestsListItem.GroupName = $Item["assignedGroup"]
+					
+					$spRequestsListItem.relURL = $relURL
+					
+					$spRequestsListItem.Status = $Item["status"]
+					$spRequestsListItem.adminGroup = $groupSuffix +"_"+ $relURL + "_AdminUG"
+					$spRequestsListItem.adminGroupSP =$groupSuffix +"_"+ $relURL + "_AdminSP"
+					$spRequestsListItem.assignedGroup = $groupName
+					$spRequestsListItem.Notes = $Item["notes"]
+					$spRequestsListItem.PreviousXML = GetPrevXML $spRequestsListItem.Notes
+					$spRequestsListItem.PreviousMail = GetPrevMAIL $spRequestsListItem.Notes
+
+					$spRequestsListItem.XMLFile =  $relURL + ".xml"
+					$spRequestsListItem.PathXML = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\default" 
+
+					$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"
+					
+					$spRequestsListItem.MailFile   = $relURL + "-mail.txt"
+					$spRequestsListItem.MailFileEn = $relURL + "-mail-En.txt"
+					$spRequestsListItem.MailFileHe = $relURL + "-mail-He.txt"
+					
+					$spRequestsListItem.mailSuffix = $groupSuffix.toUpper() +"-"+ $relURL
+					$spRequestsListItem.applicantsGroup = $groupSuffix +"_"+ $relURL + "_applicantsUG"
+					$spRequestsListItem.targetAudiency = "EkccUG" 
+					$spRequestsListItem.targetAudiencysharepointGroup = $groupSuffix +"_"+ $relURL + "_AdminSP; "+ $groupSuffix +"_" +  $relURL + "_JudgesSP"
+					$spRequestsListItem.targetAudiencyDistributionSecurityGroup = $groupSuffix +"_"+ $relURL + "_JudgesUG"
+					$spRequestsListItem.language = $Item["language"]
+					
+					$isDoubleLangugeSite = $($spRequestsListItem.language).toLower().contains("en") -and $($spRequestsListItem.language).toLower().contains("he")
+					$spRequestsListItem.isDoubleLangugeSite = $isDoubleLangugeSite
+					if ($spRequestsListItem.language.toUpper().contains("EN")){
+						
+						if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
+							$spRequestsListItem.Title = $Item["Title"]
+							$spRequestsListItem.siteName = $Item["siteName"]
+						}
+						else
+						{	
+							$spRequestsListItem.Title =  $Item["siteNameEn"]
+							$spRequestsListItem.siteName = $Item["siteNameEn"]
+						}
+						$spRequestsListItem.MailFile = $spRequestsListItem.MailFileEn
+						
 					}
 					else
-					{	
-						$spRequestsListItem.Title =  $Item["siteNameEn"]
-						$spRequestsListItem.siteName = $Item["siteNameEn"]
-					}
-					$spRequestsListItem.MailFile = $spRequestsListItem.MailFileEn
+					{
+						$spRequestsListItem.Title = $Item["Title"]
+						$spRequestsListItem.siteName = $Item["siteName"]
+						$spRequestsListItem.MailFile = $spRequestsListItem.MailFileHe
+					}	
 					
+					if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
+						$spRequestsListItem.siteNameEn = $Item["siteName"]
+					}else
+					{
+						$spRequestsListItem.siteNameEn = $Item["siteNameEn"]
+					}
+					
+					$TextInfo = (Get-Culture).TextInfo
+					$spRequestsListItem.contactFirstNameEn =  $TextInfo.ToTitleCase($Item["contactFirstNameEn"])
+					$spRequestsListItem.contactLastNameEn  =  $TextInfo.ToTitleCase($Item["contactLastNameEn"])
+					
+					$spRequestsListItem.contactEmail = $Item["contactEmail"]
+					$spRequestsListItem.userName = "CC\"+$spRequestsListItem.contactEmail.split('@')[0]
+					
+					$spRequestsListItem.contactPhone = $Item["contactPhone"]
+					$spRequestsListItem.system = $Item["system"]
+					$spRequestsListItem.systemCode = $Item["systemCode"]
+					
+					
+					
+					$spRequestsListItem.faculty = $Item["faculty"]
+					$spRequestsListItem.publishingDate = $Item["publishingDate"]
+					$spRequestsListItem.deadline = $Item["deadline"]
+					
+					$dedln = $spRequestsListItem.deadline.AddDays(1)
+					$spRequestsListItem.deadLineText =  $dedln.day.tostring().PadLeft(2,"0")+"."+$dedln.month.tostring().PadLeft(2,"0")+"."+$dedln.year
+					
+					$spRequestsListItem.folderLink =  ($Item["folderLink"]).Url
+					$spRequestsListItem.RightsforAdmin = "ekccUG; "+$groupSuffix +"_"+ $relURL + "_adminSP;"+$groupSuffix +"_" +$relURL + "_judgesSP"
+					$spRequestsListItem.systemListUrl = $currentList
+					$spRequestsListItem.systemURL = $currentSystem.appHomeUrl
+					$spRequestsListItem.systemListName = $currentSystem.listName
+					$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
+					$spRequestsListItem.isUserContactEmpty = $false
+					write-Host "Old Site Name : $($spRequestsListItem.oldSiteURL)" -foregroundcolor Green
+
+					# $spRequestsListObj += $spRequestsListItem
+					break
 				}
 				else
 				{
-					$spRequestsListItem.Title = $Item["Title"]
-					$spRequestsListItem.siteName = $Item["siteName"]
-					$spRequestsListItem.MailFile = $spRequestsListItem.MailFileHe
-				}	
-				
-				if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
-					$spRequestsListItem.siteNameEn = $Item["siteName"]
-				}else
-				{
-					$spRequestsListItem.siteNameEn = $Item["siteNameEn"]
+					$spRequestsListItem.isUserContactEmpty = $true
+					break
 				}
 				
-				$TextInfo = (Get-Culture).TextInfo
-				$spRequestsListItem.contactFirstNameEn =  $TextInfo.ToTitleCase($Item["contactFirstNameEn"])
-				$spRequestsListItem.contactLastNameEn  =  $TextInfo.ToTitleCase($Item["contactLastNameEn"])
-				
-				$spRequestsListItem.contactEmail = $Item["contactEmail"]
-				$spRequestsListItem.userName = "CC\"+$spRequestsListItem.contactEmail.split('@')[0]
-				
-				$spRequestsListItem.contactPhone = $Item["contactPhone"]
-				$spRequestsListItem.system = $Item["system"]
-				$spRequestsListItem.systemCode = $Item["systemCode"]
-				
-				
-				
-				$spRequestsListItem.faculty = $Item["faculty"]
-				$spRequestsListItem.publishingDate = $Item["publishingDate"]
-				$spRequestsListItem.deadline = $Item["deadline"]
-				
-				$dedln = $spRequestsListItem.deadline.AddDays(1)
-				$spRequestsListItem.deadLineText =  $dedln.day.tostring().PadLeft(2,"0")+"."+$dedln.month.tostring().PadLeft(2,"0")+"."+$dedln.year
-				
-				$spRequestsListItem.folderLink =  ($Item["folderLink"]).Url
-				$spRequestsListItem.RightsforAdmin = "ekccUG; "+$groupSuffix +"_"+ $relURL + "_adminSP;"+$groupSuffix +"_" +$relURL + "_judgesSP"
-				$spRequestsListItem.systemListUrl = $currentList
-				$spRequestsListItem.systemURL = $currentSystem.appHomeUrl
-				$spRequestsListItem.systemListName = $currentSystem.listName
-				$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
-				write-Host "Old Site Name : $($spRequestsListItem.oldSiteURL)" -foregroundcolor Green
-
-				# $spRequestsListObj += $spRequestsListItem
-				break
 			}
 		}
 		

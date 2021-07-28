@@ -76,13 +76,13 @@ return $outFile
 
 	$userName = "ekmd\ashersa"
 	$userPWD = "GrapeFloor789"
-	
-	$SiteURL="https://scholarships.ekmd.huji.ac.il/home/NaturalScience/SCI72-2021"
+	#https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM172-2021/Lists/DocType
+	$SiteURL="https://scholarships.ekmd.huji.ac.il/home/humanities/HUM172-2021"
 	$className = $SiteURL.split('/')[-1]
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
 	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
-	$List = $Ctx.Web.lists.GetByTitle("ApplicantTemplate")
+	$List = $Ctx.Web.lists.GetByTitle("DocType")
 	    #$ViewFields = $List.DefaultView.ViewFields
     $Ctx.load($List.Fields) 
     #$Ctx.load($List.SchemaXml) 
