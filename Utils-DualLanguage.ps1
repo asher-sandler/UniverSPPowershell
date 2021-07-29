@@ -796,6 +796,117 @@ function DefaultHeStyle(){
 }
 
 
+function edt-SubmissionWP2Lang($siteUrlC , $spObj){
+	$pageName = "Pages/SubmissionStatus.aspx"
+	#$pageName = "ekcc/QA/AsherSpace/Pages/SubmissionStatus.aspx"
+
+
+	$pageNameHe = "Pages/SubmissionStatusHe.aspx"
+	#$pageNameHe = "ekcc/QA/AsherSpace/Pages/SubmissionStatusHe.aspx"
+	
+	$siteName = get-UrlNoF5 $siteUrlC
+	#write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	$pageURLHe  = $relUrl + $pageNameHe
+	
+	
+	$wpName = "SubmissionButton WP"
+	$lang = 1	
+    
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+    #write-host $pageURL
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+		
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "'+$wpName+'" on the page ' + $pageName -ForegroundColor Green
+	
+	$page.CheckOut()	
+	
+	$WebParts = $webpartManager.WebParts
+	#read-host
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq $wpName){
+				#$wp.WebPart.Properties.FieldValues				
+				$wp.WebPart.Properties["WP_Language"] = $lang
+				$wp.WebPart.Properties["EmailTemplatePath"] = $spObj.MailPath
+				$wp.WebPart.Properties["EmailTemplateName"] = $spObj.MailFileEn;
+				
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change '"+$wpName+"'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change '"+$wpName+"'")
+	$ctx.ExecuteQuery()
+
+    #========================= Hebrew =================================
+	$CtxHe = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$CtxHe.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+
+
+    #write-host $pageURLHe
+	$pageHe = $ctxHe.Web.GetFileByServerRelativeUrl($pageURLHe);
+		
+	$webpartManagerHe = $pageHe.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "'+$wpName+'" on the page ' + $pageNameHe -ForegroundColor Green
+	
+	$pageHe.CheckOut()	
+	
+	$WebPartsHe = $webpartManagerHe.WebParts
+	#read-host
+	$ctxHe.Load($webpartManagerHe);
+	$ctxHe.Load($WebPartsHe);
+	$ctxHe.ExecuteQuery();
+	foreach($wpHe in $WebPartsHe){
+			
+			$ctxHe.Load($wpHe.WebPart.Properties)
+			$ctxHe.Load($wpHe.WebPart)
+			$ctxHe.Load($wpHe)
+			$ctxHe.ExecuteQuery() 
+			if ($wpHe.WebPart.Title -eq $wpName){
+				#$wpHe.WebPart.Properties.FieldValues				
+				
+				$wpHe.WebPart.Properties["EmailTemplatePath"] = $spObj.MailPath
+				$wpHe.WebPart.Properties["EmailTemplateName"] = $spObj.MailFileHe;
+				
+				$wpHe.WebPart.Properties["SuccessMsgEn"] = $wpHe.WebPart.Properties["SuccessMsgHe"]
+				$wpHe.WebPart.Properties["FailedMsgEn"] = $wpHe.WebPart.Properties["FailedMsgHe"]
+				$wpHe.WebPart.Properties["NoSubmitMsgEn"] = $wpHe.WebPart.Properties["NoSubmitMsgHe"]
+				$wpHe.WebPart.Properties["BtnTextEn"] = $wpHe.WebPart.Properties["BtnTextHe"]
+				$wpHe.WebPart.Properties["EmailSubjectEn"] = $wpHe.WebPart.Properties["EmailSubjectHe"]
+				<#
+				SuccessMsgEn = SuccessMsgHe
+				FailedMsgEn= FailedMsgHe
+				NoSubmitMsgEn = NoSubmitMsgHe
+				BtnTextEn = BtnTextHe
+				EmailSubjectEn = EmailSubjectHe
+				#>
+				
+				$wpHe.SaveWebPartChanges();				
+			}		
+	}
+	$pageHe.CheckIn("Change '"+$wpName+"'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$pageHe.Publish("Change '"+$wpName+"'")
+	$ctxHe.ExecuteQuery()	
+	
+	return $null	
+
+}
 function edt-Form2Lang($newSiteName){
 	$pageName = "Pages/Form.aspx"
 	
@@ -903,4 +1014,135 @@ function edt-cancelCandidacy2Lang($newSiteName){
 	write-host "$pageName Was Updated" -foregroundcolor Green
 	
 
+}
+function create-Empty2LangForms( $spObj){
+	$fileNameEn = $spObj.PathXML + "\" + $spObj.XMLFileEn
+	$fileNameHe = $spObj.PathXML + "\" + $spObj.XMLFileHe
+	
+    if (Test-Path $fileNameEn){
+		
+	}
+	else
+	{
+		$contentEn = get-EmptyXMLFormContEn $fileNameEn
+		$contentEn | Out-File $fileNameEn -encoding Default
+		Write-Host "File $fileNameEn was created." -foregroundcolor Green
+	}
+
+    if (Test-Path $fileNameHe){
+		
+	}
+	else
+	{
+		$contentHe = get-EmptyXMLFormContHe $fileNameHe
+		$contentHe | Out-File $fileNameHe -encoding Default
+		Write-Host "File $fileNameHe was created." -foregroundcolor Green
+	}	
+	return $null
+}
+
+function get-EmptyXMLFormContEn($filePath){
+	$crlf = [char][int]13 + [char][int]10
+
+ 	$content = '<?xml version="1.0" encoding="utf-8"?>'+$crlf
+	$content += '<rows>'+$crlf
+	$content += '	<config>'+$crlf
+	$content += '		<fileName>applicationForm</fileName>'+$crlf
+	$content += '		<docHeader>Application Form</docHeader>'+$crlf
+	$content += '		<finalMessage>The information was saved successfully</finalMessage>'+$crlf
+	$content += '		<missingDataMessage>All marked fields must be filled properly</missingDataMessage>'+$crlf
+	$content += '		<registrationMessage>You are not registered for this scholarship. <![CDATA[<a href="http://scholarships2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>'+$crlf
+	$content += '		<docTypeList>docType</docTypeList>'+$crlf
+	$content += '		<docTypeColumn>Document Type</docTypeColumn>'+$crlf
+	$content += '		<docType>0. Application Form</docType>'+$crlf
+	$content += '	</config>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Header>This is Auto genereted Empty Form:</Header>'+$crlf
+	$content += '	</row>'+$crlf
+	$content += '	<row>'+$crlf
+	$content += '		<Label>'+$crlf
+	$content += '		</Label>'+$crlf
+	$content += '	</row>'+$crlf+$crlf	
+	$content += '	<row>'+$crlf
+	$content += '		<Header>File is: ' +$filePath+'</Header>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+	$content += '	<row>'+$crlf
+	$content += '		<Label></Label>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Button>Save</Button>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Label></Label>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<control>'+$crlf
+	$content += '			<Type>finalMessage</Type>'+$crlf
+	$content += '			<Data>MyCustomLabel</Data>'+$crlf
+	$content += '			<width>500</width>'+$crlf
+	$content += '			<Text></Text>'+$crlf
+	$content += '		</control>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+	$content += '</rows>'+$crlf
+	
+	return $content
+}
+
+function get-EmptyXMLFormContHe($filePath){
+	$crlf = [char][int]13 + [char][int]10
+
+ 	$content = '<?xml version="1.0" encoding="utf-8"?>'+$crlf
+ 	$content += '<rows>'+$crlf
+ 	$content += '	<config>'+$crlf
+ 	$content += '		<fileName>applicationForm</fileName>'+$crlf
+ 	$content += '		<docHeader>טופס בקשה</docHeader>'+$crlf
+ 	$content += '		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>'+$crlf
+ 	$content += '		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>'+$crlf
+ 	$content += '		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://scholarships2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>'+$crlf
+ 	$content += '		<docTypeList>docType</docTypeList>'+$crlf
+ 	$content += '		<docTypeColumn>Document Type</docTypeColumn>'+$crlf
+ 	$content += '		<docType>0. Application Form</docType>'+$crlf
+ 	$content += '	</config>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Header>זהו טופס ריק שנוצר אוטומטית</Header>'+$crlf
+	$content += '	</row>'+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Label>'+$crlf
+	$content += '		</Label>'+$crlf
+	$content += '	</row>'+$crlf+$crlf	
+
+	$content += '	<row>'+$crlf
+	$content += '		<Header>הקובץ הוא: ' +$filePath+'</Header>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Label></Label>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Button>שמירה</Button>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<Label></Label>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+
+	$content += '	<row>'+$crlf
+	$content += '		<control>'+$crlf
+	$content += '			<Type>finalMessage</Type>'+$crlf
+	$content += '			<Data>MyCustomLabel</Data>'+$crlf
+	$content += '			<width>500</width>'+$crlf
+	$content += '			<Text></Text>'+$crlf
+	$content += '		</control>'+$crlf
+	$content += '	</row>'+$crlf+$crlf
+	
+	$content += '</rows>'+$crlf	
+
+	return $content
 }

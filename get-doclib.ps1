@@ -8,6 +8,7 @@ function GetDocLib ($ctx, $sitesURL) {
 		
 		ForEach($list in $Lists)
 		{
+			# העלאת מסמכים - Dan Testman 56565656
 			if ($List.Title -eq "Documents Upload Asher 54321876"){
 				write-host Found Asher Doc Lib
 				$List.OnQuickLaunch = $false;

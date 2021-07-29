@@ -261,7 +261,12 @@ function Change-GroupDescription ($groupName, $description){
 	$groups = Get-ADGroup -Filter $filterStr | Set-ADGroup -Description $description
 	
 }
+<#
 
+#$members = Get-ADGroupMember -Identity hss_MED229-2020_adminUG
+#Add-ADGroupMember -Identity HSS_MED249-2021_AdminUG -Members $members
+
+#>
 function Add-GroupMember($groupName, $email, $userName){
 	
 	$admGroupName = $groupName+"_AdminUG"
@@ -469,31 +474,41 @@ function Write-TextConfig ($ListObj, $groupName)
 		$fileS += "ContactEmail:" + $ListObj[0].contactEmail + $crlf
 		$fileS += "UserName:" + "CC\"+$ListObj[0].contactEmail.split('@')[0] + $crlf
 		
-		$fileS += "recommendationsDeadline: " + $ListObj[0].deadLineText+ $crlf
-		$fileS += "Language:" + $ListObj[0].language + $crlf
-		$fileS += "relative URL:" + $relURL + $crlf
-		$fileS += "template:" + $relURL + $crlf
+		$fileS += "recommendationsDeadline: " + $ListObj[0].deadLineText+ $crlf+ $crlf
+		$fileS += "Language:" + $ListObj[0].language.ToUpper() + $crlf+ $crlf
+        
+		$fileS += "Faculty:"  + $ListObj[0].faculty + $crlf
+		
+		$fileS += "relative URL:" + $relURL + $crlf+ $crlf
+		$fileS += "template:" + $relURL + $crlf+ $crlf
 		$fileS += "mail suffix:" + $ListObj[0].mailSuffix + $crlf
 		$fileS += "admin group:" + $ListObj[0].adminGroup + $crlf
 		$fileS += "adminGroupSP:" + $ListObj[0].adminGroupSP + $crlf
 		$fileS += "applicantsGroup: " + $ListObj[0].applicantsGroup + $crlf
-		$fileS += "Target audience: " + $ListObj[0].targetAudiency+ $crlf
-		
-		$fileS += "Sharepoint Group: " + $ListObj[0].targetAudiencysharepointGroup + $crlf
+		$fileS += "Target audience: " + $ListObj[0].targetAudiency+ $crlf+ $crlf
 		$fileS += "Distribution Security Group: " + $ListObj[0].targetAudiencyDistributionSecurityGroup + $crlf+ $crlf
+		
+		$fileS += "Sharepoint Group: " + $ListObj[0].targetAudiencysharepointGroup + $crlf+ $crlf
 
         
-        $fileS += "Faculty:"  + $ListObj[0].faculty + $crlf
-		$fileS += "Rights for Admin: " + $ListObj[0].RightsforAdmin + $crlf+ $crlf
+ 		$fileS += "Rights for Admin: " + $ListObj[0].RightsforAdmin + $crlf+ $crlf
 
 		$isDoubleLangugeSite = $($ListObj[0].language).toLower().contains("en") -and $($ListObj[0].language).toLower().contains("he")
 		$fileS += "Path: "+$ListObj[0].PathXML+ $crlf
-		$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf 
-		$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf
 		if ($isDoubleLangugeSite){
-			$fileS += "GoTo XML He: cd " +  $ListObj[0].PathXML + "\" + $($ListObj[0].XMLFile).replace(".xml","-He.xml")+ $crlf
+			$fileS += "XML En:" +  $ListObj[0].XMLFileEn+ $crlf 
+			$fileS += "GoTo XML En: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFileEn+ $crlf
+			$fileS += "XML He:" +  $ListObj[0].XMLFileHe+ $crlf 
+			$fileS += "GoTo XML He: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFileHe+ $crlf
+			
+		}
+		else{		
+			$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf 
+			$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf
 		}
 		$fileS += $crlf
+		
+		
 		
 		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
 		$fileS += "Email Template:" +  $ListObj[0].MailFile+ $crlf
@@ -509,9 +524,9 @@ function Write-TextConfig ($ListObj, $groupName)
 		$fileS += "Prev XML Form: " +   $ListObj[0].PreviousXML +  $crlf + $crlf
 		$fileS += "Email Path: " +  $ListObj[0].MailPath + $crlf
 		$fileS += "Prev Email Template:" +   $ListObj[0].PreviousMail +  $crlf + $crlf
-		
-		$fileS += "GoTo Template Infrastructure: cd TemplInf\" +   $ListObj[0].assignedGroup +  $crlf+ $crlf
-		
+		if ($isDoubleLangugeSite){
+			$fileS += "GoTo Template Infrastructure: cd TemplInf\" +   $ListObj[0].assignedGroup +  $crlf+ $crlf
+		}
 		
 		$fileS | Out-File $fName -Encoding UTF8
 		
@@ -704,7 +719,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -733,6 +748,8 @@ function get-RequestListObject(){
 					$spRequestsListItem.PreviousMail = GetPrevMAIL $spRequestsListItem.Notes
 
 					$spRequestsListItem.XMLFile =  $relURL + ".xml"
+					$spRequestsListItem.XMLFileEn =  $relURL + "-En.xml"
+					$spRequestsListItem.XMLFileHe =  $relURL + "-He.xml"
 					$spRequestsListItem.PathXML = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\default" 
 
 					$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"

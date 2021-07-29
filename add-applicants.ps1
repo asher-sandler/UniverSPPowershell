@@ -88,10 +88,14 @@ else
 					}
 					else
 					{
+						
 						check-DLangTemplInfrastruct  $siteUrlC $spRequestsListObj $oldSiteExists ""
+						#if no form, create form with message, that form is Empty.
+						create-Empty2LangForms $spRequestsListObj
 					}		
 					edt-cancelCandidacy2Lang $siteUrlC
 					edt-SubmissionStatus2Lang $siteUrlC
+					edt-SubmissionWP2Lang $siteUrlC $spRequestsListObj
 					#edt-Recommendations2Lang $siteUrlC
 					edt-Form2Lang $siteUrlC
 					
