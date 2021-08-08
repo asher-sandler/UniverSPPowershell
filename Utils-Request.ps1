@@ -95,7 +95,8 @@ function Test-AllSystems()
 		$ListName = $system.listName
 		#Setup the context
 		$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
-		$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+		#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+		$Ctx.Credentials = $Credentials
 		  
 		#Get the List
 		
@@ -135,28 +136,32 @@ function Get-AvailableSystems(){
 
     # ===============--------- GSS  ------------==========
 	
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 	
 	$system.appHomeUrl = "https://gss.ekmd.huji.ac.il/home/"
+	$system.workLink   = "https://gss2.ekmd.huji.ac.il"
 	$system.appTitle   = "HUJI Grant Submission System"
 	$system.listName   = "availableGssList"
 	$system.runRemovePermissions = $true
 	$system.runConfirmRecommendations = $false
 	$system.GroupPrefix = "GSS"
+	$system.App = "מענקים"
 	$system.isImplemented = $false
 	
 	$availableSystems += $system
 
     # ===============--------- HSS  ------------==========
 	
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 	
 	$system.appHomeUrl = "https://hss.ekmd.huji.ac.il/home/"
+	$system.workLink   = "https://scholarships2.ekmd.huji.ac.il"
 	$system.appTitle   = "HUJI Scholarships System"
 	$system.listName   = "availableScholarshipsList"
 	$system.runRemovePermissions = $false
 	$system.runConfirmRecommendations = $false
 	$system.GroupPrefix = "HSS"
+	$system.App = "מלגות"
 	$system.isImplemented = $true
 	
 	
@@ -165,28 +170,32 @@ function Get-AvailableSystems(){
     # ===============--------- SEP  ------------==========
 
 	
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 	
 	$system.appHomeUrl = "https://sep.ekmd.huji.ac.il/home/"
+	$system.workLink   = "https://sep2.ekmd.huji.ac.il"
 	$system.appTitle   = "HUJI Student Exchange Program"
 	$system.listName   = "availableSEPList"
 	$system.runRemovePermissions = $true
 	$system.runConfirmRecommendations = $true
 	$system.GroupPrefix = "SEP"
+	$system.App = "חילופי סטודנטים וסגל"
 	$system.isImplemented = $false	
 
 	$availableSystems += $system	
 
     # ===============--------- GRS  ------------==========
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 	
 	$system.appHomeUrl = "https://grs.ekmd.huji.ac.il/home/"		
+	$system.workLink   = "https://grs2.ekmd.huji.ac.il"		
 	$system.appTitle   = "HUJI Studies Registration System"
 	$system.listName   = "availableGRSList"
 	$system.runRemovePermissions = $true
 	$system.runConfirmRecommendations = $true
 	$system.GroupPrefix = "GRS"
+	$system.App = "הרשמה ללימודים"
 	$system.isImplemented = $false
 	
 	$availableSystems += $system	
@@ -194,14 +203,16 @@ function Get-AvailableSystems(){
     # ===============--------- PORTALS  ------------==========
 	
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 
 	$system.appHomeUrl = "https://portals.ekmd.huji.ac.il/home/tap/"
+	$system.workLink   = "https://portals2.ekmd.huji.ac.il"
 	$system.appTitle   = "HUJI Teaching Assistant Positions"
 	$system.listName   = "availableSitesList"
 	$system.runRemovePermissions = $false
 	$system.runConfirmRecommendations = $false
 	$system.GroupPrefix = "PRT_TAP"
+	$system.App = "משרות תרגול"
 	$system.isImplemented = $false	
 
 	$availableSystems += $system	
@@ -209,28 +220,32 @@ function Get-AvailableSystems(){
     # ===============--------- TTP  ------------==========
 
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 
 	$system.appHomeUrl = "https://ttp.ekmd.huji.ac.il/home/"
+	$system.workLink   = "https://ttp2.ekmd.huji.ac.il"
 	$system.appTitle   = "HUJI Tenure Track Positions System"
 	$system.listName   = "availablePositionsList"
 	$system.runRemovePermissions = $true
 	$system.runConfirmRecommendations = $true
 	$system.GroupPrefix = "TTP"
+	$system.App = "משרות אקדמיות"
 	$system.isImplemented = $false	
 
 	$availableSystems += $system	
 
     # ===============--------- TSS  ------------==========
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,GroupPrefix,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
 
 	$system.appHomeUrl = "https://tss.ekmd.huji.ac.il/home/"
+	$system.workLink   = "https://tss2.ekmd.huji.ac.il"
 	$system.appTitle   = "HUJI Thesis Submission System"
 	$system.listName   = "availableTSSList"
 	$system.runRemovePermissions = $true
 	$system.runConfirmRecommendations = $false
 	$system.GroupPrefix = "TSS"
+	$system.App = "עבודות גמר"
 	$system.isImplemented = $false	
 
 	$availableSystems += $system	
@@ -241,7 +256,29 @@ function Get-AvailableSystems(){
 
 }
 
-
+function get-GrpByUrl($Url){
+	$siteName = get-UrlWithF5 $Url
+	$aSite    = $siteName.Split("/")
+	$mainName = $($aSite[0] +"/" + $aSite[1] +"/"+ $aSite[2]).toLower()
+	#write-host  $mainName
+	$grpSfx   = $aSite[5]
+	
+	$aSystems = Get-AvailableSystems
+	$grp = ""
+	foreach($system in $aSystems){
+		
+		$xSiteName = $system.workLink.toLower()
+		#write-host $xSiteName
+		if ($xSiteName -eq $mainName){
+			$grp = $system.GroupPrefix + "_" + $grpSfx
+			#write-Host $grp
+			break
+		}
+	}
+	
+	return $grp
+	
+}
 
 function CheckPreviousSiteDestinationList()
 {
@@ -260,6 +297,17 @@ function Change-GroupDescription ($groupName, $description){
 	
 	$groups = Get-ADGroup -Filter $filterStr | Set-ADGroup -Description $description
 	
+}
+function Change-AdmGroupsFromOld($groupName,$oldSiteName){
+	# Copy members from group
+	If (![string]::isNullOrEmpty($oldSiteName)){
+		$newAdmGroup = $groupName + "_AdminUG"
+		$oldAdmGroup = get-GrpByUrl $oldSiteName
+		$oldAdmGroup = $oldAdmGroup + "_AdminUG"
+		write-Host "Copy AD members from $oldAdmGroup to $newAdmGroup" -foregroundcolor Yellow
+		$members = Get-ADGroupMember -Identity $oldAdmGroup
+		Add-ADGroupMember -Identity $newAdmGroup -Members $members
+	}	
 }
 <#
 
@@ -290,7 +338,8 @@ function Test-ScholarShipItemExist ($ListObj){
 	write-host $templateName
 
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($ListObj.systemURL)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	$listName=$ListObj.systemListName
 	$List = $Ctx.Web.lists.GetByTitle($listName)
 	Write-Host "Looking for $templateName in site:$($ListObj.systemURL), List:$($listName)"
@@ -331,13 +380,35 @@ function Get-FacultyId($faculty, $facultyList){
 	return $retValue
 }
 
+function get-FacultyTitle($groupName, $faculty){
+
+	$currentSystem = Get-CurrentSystem $groupName
+	$facultyList = Get-FacultyList $($currentSystem.appHomeUrl)
+	
+	$facultyNames = "" | Select-Object TitleEn, TitleHe
+	foreach($item in $facultyList)
+	{
+		
+		#if (![string]::isNullOrEmpty($item.SiteDescription)){
+			
+			if ($item.SiteDescription.toUpper() -eq $faculty.ToUpper()){
+				$facultyNames.TitleEn =  $item.displayTitle
+				$facultyNames.TitleHe =  $item.displayTitleHe
+				break
+			}
+		#}
+	}
+	return $facultyNames
+}
+
 function Get-FacultyList($wrkSite){
 	#write-host Before
 	#write-Host $wrkSite
 	#read-host
 	#write-host After
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($wrkSite)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	$ListName="Faculty"
 	$List = $Ctx.Web.lists.GetByTitle($ListName)
 	
@@ -383,7 +454,8 @@ function Add-SiteList($ListObj, $facultyList)
 	$ListNameXX = $ListObj.systemListName
 	
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURLXX)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	
 	write-host "Adding Item to site $(get-UrlWithF5 $SiteURLXX) to List $ListNameXX" -foregroundcolor Green
 	write-host $(get-UrlWithF5 $ListObj.systemListUrl) -foregroundcolor Green
@@ -396,9 +468,7 @@ function Add-SiteList($ListObj, $facultyList)
 		$listItem = $list.AddItem($listItemInfo)  
 		$listItem["Title"] = $ListObj.siteName 
 		
-		# get Title from facultyList
-		#$t = Get-FacultyTitle $ListObj.faculty $facultyList
-		# write-host $t
+		
 		
 		$listItem["sort1"] = Get-FacultyId $ListObj.faculty $facultyList
 		
@@ -441,7 +511,88 @@ function Add-SiteList($ListObj, $facultyList)
 		write-host "$($_.Exception.Message)" -foregroundcolor red  
 	}  
 }
-
+function get-SCred(){
+	
+	$iniFile =  "$dp0\UserIni.json"	
+	$location = Get-Location
+	$content = Get-Content -raw $iniFile
+	$userObj= $content | ConvertFrom-Json
+	
+	$regPath = "HKCU:\SOFTWARE\Microsoft\CrSiteAutomate"
+	$passw = (Get-ItemProperty -Path $regPath -Name Param).Param | ConvertTo-SecureString
+	$UserName = (Get-ItemProperty -Path $regPath -Name Param1).Param1
+	write-host "User: $UserName"
+	$Crd = New-Object System.Management.Automation.PSCredential ($UserName, $passw)
+	set-location $location
+	
+	return $Crd
+	
+		
+}
+function Write-IniFile($InitUser){
+	$iniFile =  "$dp0\UserIni.json"
+	$ret = $true
+	$iniFileExists = Test-Path $iniFile
+	#write-Host "Init file  Exists: $iniFileExists"
+	#write-host "Init user: $InitUser"
+	$cond = $false
+	if (!$iniFileExists){
+		$cond = $true
+	}
+	#write-host "1 Cond: $cond"
+	if (!$cond){
+		#write-host "2 Cond: $cond"
+		#write-host "Init user2: $InitUser"
+		#write-host $($InitUser.getType())
+		if ($InitUser.toLower() -eq "yes")
+		{
+			#write-host "We are here????"
+			$cond = $true	
+		}
+		#write-host "3 Cond: $cond"
+	}
+	#write-host "4 Cond: $cond"
+	#write "Ini Exists -or Init : $cond"
+	if ($cond)
+	{
+		$location = Get-Location
+		write-host "First need to create ini file": -foregroundcolor Yellow
+		Write-Host "Enter UserName in domain ekmd:" -NoNewline  -foregroundcolor Yellow
+		$UserName = Read-Host
+		Write-Host "Enter Password:" -NoNewline -foregroundcolor Yellow
+		$passw = Read-Host  -AsSecureString
+		
+		
+		$userObj = "" | Select-Object UserName,Password
+		$userObj.UserName = $UserName
+		$userObj.Password = $passw | ConvertFrom-SecureString
+		
+		$regPath = "HKCU:\SOFTWARE\Microsoft\CrSiteAutomate"
+		$testReg = Test-Path $regPath
+		
+		if (!$testReg){
+			cd  HKCU:\SOFTWARE\Microsoft\ | out-null
+			New-Item  -Name "CrSiteAutomate" | out-null
+			New-ItemProperty -Path $regPath -Name "Param" -Value $($userObj.Password)  -PropertyType "String" | out-null
+			New-ItemProperty -Path $regPath -Name "Param1" -Value $($userObj.UserName)  -PropertyType "String" | out-null
+			
+		}
+		else{
+			Set-Itemproperty -path $regPath -Name 'Param' -value $($userObj.Password) 
+			Set-Itemproperty -path $regPath -Name 'Param1' -value $($userObj.UserName) 
+		}
+		$userObj.UserName = "[UserName]"
+		$userObj.Password = "[User Password]"
+		
+		$userObj | ConvertTo-Json -Depth 100 | out-file $($iniFile)
+		
+		set-location $location
+		Write-Host "INI file was created. Run Script again."
+		$ret = $false
+			
+	}
+	return $ret
+}
 function Write-TextConfig ($ListObj, $groupName)
 {
 	$crlf = [char][int]13+[char][int]10
@@ -608,7 +759,8 @@ function copy-DocTypeList($newSite, $oldSite){
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
 	  
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlOld)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 	
 	#Get the List
 	$ListName="DocType"
@@ -643,7 +795,8 @@ function copy-DocTypeList($newSite, $oldSite){
 	#$aDocTypeListOld
 	Write-Host "Adding To Site: $newSite" -foregroundcolor Green 
 	$ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlNew)  
-	$ctx1.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx1.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx1.Credentials = $Credentials
 
 
 	$lists = $ctx1.web.Lists  
@@ -694,7 +847,7 @@ function get-RequestListObject(){
 	#Setup the context
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
 	#$Ctx.Credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($Cred.Username, $Cred.Password)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 	$spRequestsListObj = @()	
 	
 
@@ -719,7 +872,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -822,6 +975,10 @@ function get-RequestListObject(){
 					$spRequestsListItem.systemListName = $currentSystem.listName
 					$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
 					$spRequestsListItem.isUserContactEmpty = $false
+					$facTitle = get-FacultyTitle $groupName $spRequestsListItem.faculty
+					$spRequestsListItem.facultyTitleEn = $facTitle.TitleEn
+					$spRequestsListItem.facultyTitleHe = $facTitle.TitleHe
+					
 					write-Host "Old Site Name : $($spRequestsListItem.oldSiteURL)" -foregroundcolor Green
 
 					# $spRequestsListObj += $spRequestsListItem
@@ -847,7 +1004,8 @@ function get-CreatedSiteName($spObj){
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($spObj.systemURL)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 	
 	$List = $Ctx.Web.lists.GetByTitle($spObj.systemListName)
 	$Query = New-Object Microsoft.SharePoint.Client.CamlQuery
@@ -889,7 +1047,8 @@ function add-ListApplicants( $siteUrlX1, $spObj){
 	
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlX1)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 	$List = $Ctx.Web.lists.GetByTitle("applicants")
 	
 	$Query = New-Object Microsoft.SharePoint.Client.CamlQuery
@@ -968,7 +1127,8 @@ function Add-ApplicantsItem($siteUrl, $spObj)
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
 
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	try{  
 		 
 		$lists = $ctx.web.Lists 
@@ -996,7 +1156,8 @@ function change-ListApplicantsDeadLine( $siteUrl, $spObj){
 	write-host $siteUrl
 
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	
 	$lists = $ctx.web.Lists 
 	$list = $lists.GetByTitle("applicants") 
@@ -1025,7 +1186,8 @@ function change-siteSetting($SiteURL) {
 	Try {
 		#Setup the context
 		$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
-		$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+		#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+		$ctx.Credentials = $Credentials
 		
 		#Get the Web
 		$Web = $Ctx.Web
@@ -1062,7 +1224,8 @@ function change-siteSetting($SiteURL) {
 
 function change-siteTitle($SiteURL, $siteTitle){
 		$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
-		$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+		#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+		$ctx.Credentials = $Credentials
 	
 		#Get the Web
 		$Web = $Ctx.Web
@@ -1098,7 +1261,8 @@ function get-UrlNoF5($url){
 
 function get-allListItemsByID($site, $listName){
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext(get-UrlNoF5 $site)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	
 	$list = $Ctx.Web.lists.GetByTitle($listName)
 	
@@ -1129,7 +1293,8 @@ function get-allListItemsByID($site, $listName){
 
 function delete-ListItemsByID($site, $listName, $id){
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext(get-UrlNoF5 $site)  
-	$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$ctx.Credentials = $Credentials
 	
 	$list = $Ctx.Web.lists.GetByTitle($listName)
 	
@@ -1193,7 +1358,8 @@ function get-OldContactUs($oldSiteName){
 
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1226,7 +1392,8 @@ function edt-ContactUs($newSiteName, $pageContent, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1284,7 +1451,8 @@ function edt-contactUsTitle($newSiteName, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1325,7 +1493,8 @@ function edt-cancelCandidacy($newSiteName, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1415,7 +1584,8 @@ function edt-SubmissionStatus($newSiteName, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1558,7 +1728,8 @@ function edt-Recommendations($newSiteName, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1762,7 +1933,8 @@ function edt-DeleteEmptyFolders($newSiteName, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1870,7 +2042,8 @@ function edt-Form($newSiteName, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1922,7 +2095,8 @@ function edt-SubmissionWP($siteUrlC , $spObj){
 	}
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -1977,7 +2151,8 @@ function edt-FormWP($siteUrlC , $spObj){
 	}
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -2028,7 +2203,8 @@ function get-OldDefault($oldSiteName){
 
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -2067,7 +2243,8 @@ function get-OldDefault2Lang ($oldSiteName, $langPage){
 
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -2100,7 +2277,8 @@ function edt-HomePage($newSiteName, $content, $language){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 
@@ -2186,7 +2364,8 @@ function change-applTemplate($newSiteName, $language){
 	
 	$siteName = get-UrlNoF5 $newSiteName	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 	$List = $Ctx.Web.lists.GetByTitle("ApplicantTemplate")
 
     $ViewFields = $List.DefaultView.ViewFields
@@ -2292,8 +2471,13 @@ function copyMail($spObj){
 	if ($language.toLower().contains("he")){
 
 		if (!(Test-Path $fileNewMailHe)){
-			$contentFileHe | Out-File $fileNewMailHe -encoding Default
-			write-Host "Mail File $fileNewMailHe succesfully created." -foregroundcolor Green
+			#$TemplItem = Get-Item ".\mailTemplates\mailHe.txt"
+			#
+			$contentFileHe | Out-File "file-utf8.txt" -encoding "utf8"
+			cmd.exe /c "cnv.cmd"
+			Copy-Item "file-utf8-win.txt" $fileNewMailHe
+			write-Host "Mail File $fileNewMailHe succesfully created." -foregroundcolor Yellow
+			write-Host "This is Template file! Need to Edit this!." -foregroundcolor Yellow
 			
 		}
 		else
@@ -2309,6 +2493,18 @@ function copyMail($spObj){
 	
 }
 
+
+function psiconv ( $f, $t, $string ) {
+	$enc = [system.text.encoding]
+
+    $cp1          = $enc::getencoding( $f )
+    $cp2          = $enc::getencoding( $t )
+    $inputbytes   = $enc::convert( $cp1, $cp2, $cp2.getbytes( $string ))
+    $outputstring = $cp2.getstring( $inputbytes )
+    
+    return  $outputstring
+
+}
 function Get-MailContentEn($siteName){
 	$crlf = [char][int]13 + [char][int]10
 
@@ -2657,4 +2853,200 @@ function Gen-Cancel2LangCandidateHe ($oWP, $newSiteName){
 		
 	}
 	return $content
+}
+
+function Create-List($siteUrl,$ListTitle,$ListDisplayTitle){
+	
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+
+<#
+	$site = $Ctx.Web
+	$Ctx.Load($site)
+	$Ctx.ExecuteQuery()
+	
+	
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+#>	
+	#Create List
+	$listinfo = New-Object Microsoft.SharePoint.Client.ListCreationInformation
+	$listinfo.Title = $ListTitle
+	$listinfo.TemplateType = [Microsoft.SharePoint.Client.ListTemplateType]'GenericList'
+
+	$list = $Lists.Add($listinfo)
+	$Ctx.ExecuteQuery()
+
+	$list.Title = $ListDisplayTitle 
+	$list.Update()
+	$Ctx.Load($list)
+	$Ctx.ExecuteQuery()
+	return $null
+}
+function Delete-List($siteUrl,$ListName){
+		
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	
+	$Ctx.ExecuteQuery()
+    #$lists | gm
+	$list = $Lists.GetByTitle($ListName);
+	
+	$list.DeleteObject()
+	$Ctx.ExecuteQuery()
+	return $null
+}
+function Rename-ListColumn($siteUrl,$ListName,$OldColumnName,$NewColumnName){
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+
+	$list = $Lists.GetByTitle($ListName);
+
+    #Get the column to rename
+    $Field = $List.Fields.GetByInternalNameOrTitle($OldColumnName)
+    $Field.Title = $NewColumnName
+    $Field.Update()
+    $Ctx.ExecuteQuery()
+             
+	return $null
+	
+}
+
+function Add-FieldsToList ($siteUrl, $ListName, $SchemaXML){
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+
+	$list = $Lists.GetByTitle($ListName);
+	foreach ($xmlEl in $SchemaXML){
+		<#
+		AddFieldOptions Enum
+		
+		AddFieldCheckDisplayName	32	
+AddFieldInternalNameHint	8	
+AddFieldToDefaultView	16	
+AddToAllContentTypes	4	
+AddToDefaultContentType	1	
+AddToNoContentType	2	
+DefaultValue	0
+		#>
+		$($xmlEl.XML)
+		$list.Fields.AddFieldAsXml($xmlEl.XML,$false,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldToDefaultView) | out-null
+	}
+	$Ctx.ExecuteQuery()
+	
+    foreach($el in $SchemaXML){
+		$idxEl = $el.XML.ToUpper().IndexOf("NAME=")+6
+		$subst1 = $el.XML.Substring($idxEl);
+		$delim = "'"
+		if ($subst1.contains('"')){
+			$delim = '"'
+		}
+		$nameOld = $subst1.Split($delim)[0]
+		
+		Rename-ListColumn $siteUrl $ListName $nameOld $el.DisplayName
+	}	
+	
+	return $null	
+	
+}
+function Log-Generate($spObj,$newSite){
+	$htmlTemplate = get-content "HtmlLog\index.html" -encoding UTF8
+	$outLog = "Log\" + $spObj.GroupName+ ".html"
+	
+	$htmlTemplate = $htmlTemplate.Replace("%GroupName%",$spObj.GroupName)
+	$htmlTemplate = $htmlTemplate.Replace("%Site Name%",$spObj.siteName)
+	$htmlTemplate = $htmlTemplate.Replace("%siteName%",$spObj.siteName)
+	$htmlTemplate = $htmlTemplate.Replace("%siteNameEn%",$spObj.siteNameEn)
+	$contactTitle = $spObj.contactFirstNameEn + " " + $spObj.contactLastNameEn
+	$htmlTemplate = $htmlTemplate.Replace("%contactTitle%",$contactTitle)
+	$htmlTemplate = $htmlTemplate.Replace("%contactEmail%",$spObj.contactEmail)
+	$htmlTemplate = $htmlTemplate.Replace("%Language%",$spObj.language)
+	$htmlTemplate = $htmlTemplate.Replace("%isDoubleLangugeSite%",$spObj.isDoubleLangugeSite)
+	$htmlTemplate = $htmlTemplate.Replace("%Faculty%",$spObj.facultyTitleEn)
+	$oldSiteURL  = get-SiteNameFromNote $spObj.Notes
+	$htmlTemplate = $htmlTemplate.Replace("%PreviousSite%",$oldSiteURL)
+	if ($spObj.isDoubleLangugeSite){
+		$pathXmlEn = $spObj.PathXML + "\" + $spObj.XMLFileEn
+		$pathXmlHe = $spObj.PathXML + "\" + $spObj.XMLFileHe
+		
+		$pathMailEn = $spObj.MailPath + "\" + $spObj.MailFileEn
+		$pathMailHe = $spObj.MailPath + "\" + $spObj.MailFileHe
+		
+		
+		$htmlTemplate = $htmlTemplate.Replace("%XMLEn%",$spObj.XMLFileEn)
+		$htmlTemplate = $htmlTemplate.Replace("%XMLHe%",$spObj.XMLFileHe)
+		$htmlTemplate = $htmlTemplate.Replace("%MailEn%",$spObj.MailFileEn)
+		$htmlTemplate = $htmlTemplate.Replace("%MailHe%",$spObj.MailFileHe)
+		$htmlTemplate = $htmlTemplate.Replace("%PathXMLEn%",$pathXmlEn)
+		$htmlTemplate = $htmlTemplate.Replace("%PathXMLHe%",$pathXmlHe)
+		$htmlTemplate = $htmlTemplate.Replace("%pathMailHe%",$pathMailHe)
+		$htmlTemplate = $htmlTemplate.Replace("%pathMailEn%",$pathMailEn)
+		
+		
+		
+	}
+	else
+	{
+		$pathXmlEn = $spObj.PathXML + "\" + $spObj.XMLFile
+		$pathXmlHe = $spObj.PathXML + "\" + $spObj.XMLFile
+		
+        if ($spObj.language.ToLower().contains("en")){
+			$pathMailEn = $spObj.MailPath + "\" + $spObj.MailFileEn
+			$pathMailHe = $pathMailEn
+			$htmlTemplate = $htmlTemplate.Replace("%MailEn%",$spObj.MailFileEn)
+			$htmlTemplate = $htmlTemplate.Replace("%MailHe%",$spObj.MailFileEn)
+			
+		}
+		else
+		{
+			$pathMailHe = $spObj.MailPath + "\" + $spObj.MailFileHe
+			$pathMailEn = $pathMailHe
+			$htmlTemplate = $htmlTemplate.Replace("%MailEn%",$spObj.MailFileHe)
+			$htmlTemplate = $htmlTemplate.Replace("%MailHe%",$spObj.MailFileHe)
+			
+		}
+		
+		
+		$htmlTemplate = $htmlTemplate.Replace("%XMLEn%",$spObj.XMLFile)
+		$htmlTemplate = $htmlTemplate.Replace("%XMLHe%",$spObj.XMLFile)
+		$htmlTemplate = $htmlTemplate.Replace("%PathXMLEn%",$pathXmlEn)
+		$htmlTemplate = $htmlTemplate.Replace("%PathXMLHe%",$pathXmlHe)
+		$htmlTemplate = $htmlTemplate.Replace("%pathMailHe%",$pathMailHe)
+		$htmlTemplate = $htmlTemplate.Replace("%pathMailEn%",$pathMailEn)
+	
+
+		
+	}
+	
+	$htmlTemplate = $htmlTemplate.Replace("%SystemList%",$spObj.systemListName)
+	$htmlTemplate = $htmlTemplate.Replace("%SystemListUrl%",$(get-UrlWithF5 $spObj.systemListUrl))
+	$htmlTemplate = $htmlTemplate.Replace("%userAcc%",$spObj.userName)
+	$htmlTemplate = $htmlTemplate.Replace("%deadLineText%",$spObj.deadLineText)
+	$oldAdmGroup = get-GrpByUrl $spObj.oldSiteURL
+	$htmlTemplate = $htmlTemplate.Replace("%SourceGroup%",$oldAdmGroup)
+	$newSite = get-UrlWithF5 $newSite
+	$htmlTemplate = $htmlTemplate.Replace("%URL%",$newSite)
+	
+	$htmlTemplate | Out-File $outLog -encoding UTF8 | out-null
+	return $null
 }

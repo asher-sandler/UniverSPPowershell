@@ -1,0 +1,508 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>טופס בקשה למלגה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://scholarships2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>0. Application Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Header>פרטים אישיים</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם פרטי:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstNameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם משפחה:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>surnameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>ת.ז.</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+	
+		<Label>
+			<text>שירות צבאי:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>armyService</Data>
+			<List>armyService</List>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>כתובת</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>עיר / ישוב:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>cityHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>כתובת:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>addressHe</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מיקוד:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>zipHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>טלפון בבית:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>homePhone</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>טלפון נייד:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobile</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>דוא"ל:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>email</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label> </Label>
+	</row>
+
+	<row>
+		<Header>לימודים</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>חוג לימודים:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>department</Data>
+			<List>departmentList</List>
+			<width>340</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>שנת לימוד לתואר:</text>
+			<width>120</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>yearDegree</Data>
+			<List>yearList</List>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>נושא עבודת גמר:</text>
+			<width>150</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>paperName</Data>
+			<width>500</width>
+		</control>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם המנחה:</text>
+			<width>150</width>
+		</Label>
+		<Label>
+			<text>מייל המנחה:</text>
+			<width>150</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>advisorName1</Data>
+			<width>150</width>
+		</control>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>advisorMail1</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>advisorName2</Data>
+			<width>150</width>
+		</control>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>advisorMail2</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>ציון גמר בוגר:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>BscGrade</Data>
+			<width>70</width>
+		</control>
+
+		<Label>
+			<text>ציון גמר/ביניים מוסמך:</text>
+			<width>155</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>MscGrade</Data>
+			<width>70</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>ציון ביניים דוקטורט:</text>
+			<width>125</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>PhDGrade</Data>
+			<width>70</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם מלגה או מלגות שקבלתי השנה:</text>
+			<width>260</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>scholarshipsName</Data>
+			<width>400</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>מלגה/מלגות שנמשכות משנת שעברה:</text>
+			<width>260</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>prevScholarships</Data>
+			<width>400</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>מס' מאמרים שפורסמו:</text>
+			<width>180</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>publishedPapersNum</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>כמה מאמרים ככותב ראשון:</text>
+			<width>180</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>publishedPapersMainNum</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>כמה מאמרים ככותב נוסף:</text>
+			<width>180</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>publishedPapersSecondaryNum</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>*הכוונה היא רק למאמרים Peer Review</text>
+			<width>300</width>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>בכמה כנסים השתתפת</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>כמה כנסים בארץ:</text>
+			<width>120</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>ConferencesIsrael</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>כמה כנסים בחו"ל:</text>
+			<width>120</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>ConferencesAbroad</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration</Data>
+			<width>15</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>אני מאשר/ת העברת הפרטים הרשומים לעיל ומשלוח תמונה שלי הנמצאת במאגר התמונות של האוניברסיטה לתורם המלגה.</text>
+			<width>500</width>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Button>שמירה</Button>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

@@ -78,11 +78,15 @@ return $outFile
 	$userPWD = "GrapeFloor789"
 	#https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM172-2021/Lists/DocType
 	$SiteURL="https://scholarships.ekmd.huji.ac.il/home/humanities/HUM172-2021"
+	$siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+	$ListTitle = "FirstGrade"
+	$ListDisplayTitle = "תואר ראשון"
+
 	$className = $SiteURL.split('/')[-1]
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
 	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
-	$List = $Ctx.Web.lists.GetByTitle("DocType")
+	$List = $Ctx.Web.lists.GetByTitle($ListDisplayTitle)
 	    #$ViewFields = $List.DefaultView.ViewFields
     $Ctx.load($List.Fields) 
     #$Ctx.load($List.SchemaXml) 

@@ -503,7 +503,8 @@ function Get-PageContent($SiteName, $pageName){
 	
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameNew)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
 	$ctx.Load($page);
@@ -817,7 +818,8 @@ function edt-SubmissionWP2Lang($siteUrlC , $spObj){
 	$lang = 1	
     
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
     #write-host $pageURL
@@ -825,7 +827,7 @@ function edt-SubmissionWP2Lang($siteUrlC , $spObj){
 		
 	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
 	
-	Write-Host 'Updating webpart "'+$wpName+'" on the page ' + $pageName -ForegroundColor Green
+	Write-Host 'Updating webpart '+$wpName+' on the page ' + $pageName -ForegroundColor Green
 	
 	$page.CheckOut()	
 	
@@ -855,7 +857,8 @@ function edt-SubmissionWP2Lang($siteUrlC , $spObj){
 
     #========================= Hebrew =================================
 	$CtxHe = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$CtxHe.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$CtxHe.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$CtxHe.Credentials = $Credentials
 
 
     #write-host $pageURLHe
@@ -917,7 +920,8 @@ function edt-Form2Lang($newSiteName){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
 	
@@ -951,7 +955,8 @@ function edt-SubmissionStatus2Lang($newSiteName){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
 	
@@ -985,7 +990,8 @@ function edt-cancelCandidacy2Lang($newSiteName){
 	$pageURL  = $relUrl + $pageName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
 
 

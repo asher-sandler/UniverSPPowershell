@@ -1,0 +1,1 @@
+@iconv -c -f UTF-8 -t windows-1255 file-utf8.txt>file-utf8-win.txt

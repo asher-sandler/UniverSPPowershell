@@ -1,7 +1,7 @@
 param([string] $groupName = "")
 
-$userName = "ekmd\ashersa"
-$userPWD = "GrapeFloor789"
+#$userName = "ekmd\ashersa"
+#$userPWD = "GrapeFloor789"
 
 
 $0 = $myInvocation.MyCommand.Definition
@@ -16,7 +16,8 @@ if ([string]::isNullOrEmpty($groupName))
 }
 else
 {
-	if (Test-CurrentSystem $groupName){	
+	if (Test-CurrentSystem $groupName){
+	    $Credentials = get-SCred		
 	    $currentSystem = Get-CurrentSystem $groupName
 		
 		$wrkSite = $currentSystem.appHomeUrl
@@ -50,6 +51,7 @@ else
 					$contactUsContent =  get-OldContactUs $($spRequestsListObj.oldSiteURL)
 					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
 					copy-DocTypeList $siteUrlC $($spRequestsListObj.oldSiteURL)
+					Change-AdmGroupsFromOld $groupName $($spRequestsListObj.oldSiteURL)
 				}
 				else
 				{
@@ -106,7 +108,7 @@ else
 				
 				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)  $($spRequestsListObj.language)
 				copyMail $spRequestsListObj
-				
+				Log-Generate $spRequestsListObj $siteUrlC
 				change-applTemplate $siteUrlC  $($spRequestsListObj.language)
 				write-host "Do not forget save ApplicantTemplate as : $($spRequestsListObj.RelURL)" -foregroundcolor Yellow
 				# write-host $contactUsContent
