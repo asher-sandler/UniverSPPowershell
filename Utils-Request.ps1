@@ -3048,5 +3048,6 @@ function Log-Generate($spObj,$newSite){
 	$htmlTemplate = $htmlTemplate.Replace("%URL%",$newSite)
 	
 	$htmlTemplate | Out-File $outLog -encoding UTF8 | out-null
+	Invoke-Expression $outLog
 	return $null
 }
