@@ -16,7 +16,7 @@ $wrkSite 		=  "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherS
 $productionSite =  "https://hss.ekmd.huji.ac.il/home"
 
 #$userName = "ekmd\ashersa"
-#$userPWD = "GrapeFloor789"
+#$userPWD = ""
 
 
 Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"

@@ -1,7 +1,7 @@
 param([string] $groupName = "")
 
 #$userName = "ekmd\ashersa"
-#$userPWD = "GrapeFloor789"
+#$userPWD = ""
 
 
 $0 = $myInvocation.MyCommand.Definition
@@ -71,17 +71,21 @@ else
 					edt-FormWP              $siteUrlC  $spRequestsListObj 
 					edt-SubmissionWP 		$siteUrlC  $spRequestsListObj 
 					
+					$contentNewDefault = ""
+					
 					if ($oldSiteExists){
 						$contentOldDefault = get-OldDefault $($spRequestsListObj.oldSiteURL)
 					
 						$contentNewDefault = repl-DefContent $($spRequestsListObj.oldSiteURL) $siteUrlC $contentOldDefault
 					
-						edt-HomePage $siteUrlC $contentNewDefault $($spRequestsListObj.language)
+						 
 					}
 					else
 					{
-						
+						$contentNewDefault = get-NewDefault $siteUrlC $($spRequestsListObj.language) $($spRequestsListObj.deadLineText)
 					}
+					
+					edt-HomePage $siteUrlC $contentNewDefault
 				}
 				else
 				{

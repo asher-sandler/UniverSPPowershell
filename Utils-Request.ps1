@@ -553,7 +553,8 @@ function Write-IniFile($InitUser){
 	}
 	#write-host "4 Cond: $cond"
 	#write "Ini Exists -or Init : $cond"
-	if ($cond)
+	$hiveNotExists = checkHiveNotExists
+	if ($cond -or $hiveNotExists)
 	{
 		$location = Get-Location
 		write-host "First need to create ini file": -foregroundcolor Yellow
@@ -592,6 +593,15 @@ function Write-IniFile($InitUser){
 			
 	}
 	return $ret
+}
+function checkHiveNotExists(){
+		$location = Get-Location	
+		$regPath = "HKCU:\SOFTWARE\Microsoft\CrSiteAutomate"
+		$testReg = Test-Path $regPath		
+		set-location $location	
+
+        return 	!$testReg	
+		
 }
 function Write-TextConfig ($ListObj, $groupName)
 {
@@ -749,6 +759,702 @@ function Check-ContactEmpty($contactFirstNameEn, $contactLastNameEn, $contactEma
 		[string]::IsNullOrEmpty($contactEmail))
 	
 }
+function delete-ListItemIfEmpty($newSite, $listName){
+	
+	$siteUrl = get-UrlNoF5 $newSite
+
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+	$Ctx.Credentials = $Credentials
+	$List = $Ctx.Web.lists.GetByTitle($listName)	
+
+	#Define the CAML Query
+	$Query = New-Object Microsoft.SharePoint.Client.CamlQuery
+	$qry = "<View><Query></Query></View>"
+	$Query.ViewXml = $qry
+
+	#Get All List Items matching the query
+	$ListItems = $List.GetItems($Query)
+	$Ctx.Load($ListItems)
+	$Ctx.ExecuteQuery()
+	
+	$listIsEmpty = $true
+	$aList = @()
+	ForEach($Item in $ListItems){
+		$el = "" | Select-Object Id,Title	
+		$el.Id = $Item.Id
+		$el.Title = $Item["Title"]
+        if (!$($el.Title -eq "-")){
+			$listIsEmpty = $false
+		}
+		$aList += $el
+		
+	}
+	#write-Host $($ListItems.count)
+    if ($ListItems.count -gt 0)	{
+		if ($listIsEmpty){
+			foreach($el in $alist){
+				write-host "Site: $siteUrl" -foregroundcolor Yellow
+				write-host "Delete Items on  $listName." -foregroundcolor Yellow
+					
+				$listItem = $List.getItemById($el.Id)
+				$listItem.DeleteObject()
+				$Ctx.ExecuteQuery()
+			}
+		}
+	}
+	
+}
+function Clone-List($newSite, $oldSite, $listName){
+	$listExists = Check-ListExists $newSite $listName
+	if ($listExists){
+		delete-ListItemIfEmpty $newSite $listName
+	}
+	else
+	{
+		Write-Host "Create List $listName On $newSite" -foregroundcolor Yellow
+		Create-List $newSite $listName $listName
+	}
+	copy-ListOldToNew $newSite $oldSite $listName
+}
+function copy-ListOldToNew($newSite, $oldSite, $listName){
+
+	$siteUrlNew = get-UrlNoF5 $newSite
+	$siteUrlOld = get-UrlNoF5 $oldSite
+
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	
+	#$siteUrlOld
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlOld)
+	
+	$Ctx.Credentials = $Credentials
+	$List = $Ctx.Web.lists.GetByTitle($listName)	
+
+	#Define the CAML Query
+	$Query = New-Object Microsoft.SharePoint.Client.CamlQuery
+	$qry = "<View><Query></Query></View>"
+	$Query.ViewXml = $qry
+
+	#Get All List Items matching the query
+	$ListItems = $List.GetItems($Query)
+	$Ctx.Load($ListItems)
+	$Ctx.ExecuteQuery()
+	
+	$aListOld = @()
+
+	ForEach($Item in $ListItems){
+		$docTypeItem = "" | Select Title
+		
+		$docTypeItem.Title = $Item["Title"]
+
+		$aListOld += $docTypeItem
+
+	}	
+
+
+	# Write-Host "Adding To Site: $newSite" -foregroundcolor Green 
+	$ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlNew)  
+	
+	$ctx1.Credentials = $Credentials
+
+
+	$lists = $ctx1.web.Lists  
+	$list = $lists.GetByTitle($ListName)
+
+    $ListItems = $List.GetItems($Query)
+	$ctx1.Load($ListItems)
+	$ctx1.ExecuteQuery()
+	$i=0
+	if ($ListItems.Count -eq 0){
+		write-host "Copying $listName." -foregroundcolor Green
+		write-host "Old Site: $oldSite" -foregroundcolor Green
+		write-host "New Site: $newSite" -foregroundcolor Green
+			
+		foreach ($item in $aListOld)	{
+			$listItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation  
+			
+			$listItem = $list.AddItem($listItemInfo)  
+			$listItem["Title"] = $item.Title
+			
+			$listItem.Update()      
+			$ctx1.load($list)      
+			$ctx1.executeQuery()  
+			$i = $i+1	
+		}
+		Write-Host "Copied $i items."
+	}
+	else
+	{
+		Write-Host 
+		Write-Host "During Copying: List $listName on site $newSite is not Empty." -foregroundcolor Yellow
+		Write-Host "List Was Not Copied."  -foregroundcolor Yellow
+		
+	}
+	
+	return $null
+
+	
+}
+function get-ApplicantsSchema($siteUrl){
+	$fieldsSchema = @()
+	
+	$siteUrlC = get-UrlNoF5 $siteUrl
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+	$ListName="Applicants"
+	$List = $Ctx.Web.lists.GetByTitle($ListName)
+	
+    $Ctx.load($List.Fields) 
+    $Ctx.ExecuteQuery()	
+
+
+	foreach($field in $List.Fields){
+		# write-host "$($field.Title) : Hidden : $($field.Hidden)"
+		if ($field.SchemaXml.Contains('ReadOnly="TRUE"')){
+		}
+		else{
+			if ($field.SchemaXml.Contains('Group="_Hidden"')){
+			}
+			else{
+		
+				If (!($field.Hidden -or $field.ReadOnly )){
+					$fieldsSchema += $field.SchemaXml
+				}
+		
+			}
+		}	
+	}	
+	
+	return $fieldsSchema
+}
+function get-SchemaDifference($scSrc, $scDst){
+	# difference между schema source и schema destination. Чего не хватает в destination
+	$fieldsSchema = @()	
+	$crlf = [char][int]13+[char][int]10
+	
+	
+	$FieldXMLSrc = '<Fields>'+$crlf
+	foreach($elSrc in $scSrc){
+		$FieldXMLSrc += $elSrc+$crlf
+	}
+	$FieldXMLSrc += '</Fields>'
+
+	$FieldXMLDst = '<Fields>'+$crlf
+	foreach($elDst in $scDst){
+		$FieldXMLDst += $elDst+$crlf
+	}
+	$FieldXMLDst += '</Fields>'
+
+    <#
+    $isXMLsrc = [bool]$($FieldXMLSrc -as [xml])
+    $isXMLdst = [bool]$($FieldXMLDst -as [xml])
+	write-host "Is Source      XML:$isXMLsrc"
+	write-host "Is Destination XML:$isXMLdst"
+	$FieldXMLDst | out-file "dst.xml" -Encoding Default
+	$FieldXMLSrc | out-file "src.xml" -Encoding Default	
+	#$sXml = $($FieldXMLSrc -as [xml])
+	#>
+	
+	$sourceFields = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.DisplayName.Trim().ToLower()
+	}
+	$destFields = Select-Xml -Content $FieldXMLDst  -XPath "/Fields/Field" | ForEach-Object {
+		$_.Node.DisplayName.Trim().ToLower()
+	}
+	<#
+	write-host ================ sourceFields
+	write-host $sourceFields
+	write-host 
+	write-host ================ destFields
+	write-host $destFields
+	#>
+	
+	$idx =0
+    foreach($srcEl in $sourceFields){
+		$fieldExistsInDest = $false
+		foreach($dstEl in $destFields){
+			if ($srcEl -eq $dstEl){
+				$fieldExistsInDest = $true
+				break
+			}
+		}
+	    if (!$fieldExistsInDest){
+			 #write-Host $srcEl
+			 #write-Host "Exists: $fieldExistsInDest"
+			 #write-host $scSrc[$idx]
+			 
+			 #read-host
+			 $fieldsSchema += $scSrc[$idx]
+		}		
+		$idx++
+		
+	}
+	
+	return $fieldsSchema	
+}
+function get-xFieldObjXML($FieldXML,$cType){
+	$FieldXMLSrc = '<Fields>'+$FieldXML+'</Fields>'
+	$fieldObj = "" | Select-Object DisplayName,Required,Format, Default ,FillInChoice, Choice,EnforceUniqueValues,ShowField, RichText, RichTextMode, IsolateStyles
+	
+	$isXMLsrc = [bool]$($FieldXMLSrc -as [xml])
+	if ($isXMLsrc){
+		$DisplayName = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.DisplayName
+		}
+		#write-host $DisplayName
+		$fieldObj.DisplayName = $DisplayName
+
+		$Required = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.Required
+		}
+		#write-host $Required
+		$fieldObj.Required = $Required
+		
+		$EnforceUniqueValues = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.EnforceUniqueValues
+		}
+		#write-host $EnforceUniqueValues
+		$fieldObj.EnforceUniqueValues = $EnforceUniqueValues
+		
+					
+		if ($cType -eq "Choice"){
+			#Write-Host $FieldXMLSrc
+			
+			$FillInChoice = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.FillInChoice
+			}
+			#write-host $Required
+			$fieldObj.FillInChoice = $FillInChoice
+			
+			$Format = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.Format
+			}
+			#write-host $Required
+			$fieldObj.Format = $Format
+			
+			$pos1 = $FieldXMLSrc.IndexOf("<Default>")
+			$subs1 = $FieldXMLSrc.Substring($pos1)
+			#Write-host $subs1
+			$pos2 = $subs1.IndexOf("</CHOICES>")
+			$subs2 = $subs1.substring(0,$pos2+10)
+			#Write-host $subs2
+			#$Default = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Default" | ForEach-Object {
+			# $_.Node.Default
+			#}
+			$fieldObj.Choice = $subs2		
+				
+		}
+		if ($cType -eq "Note"){
+			
+			$RichText = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.RichText
+			}
+			
+			$fieldObj.RichText = $RichText
+			
+
+			$RichTextMode = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.RichTextMode
+			}
+			
+			$fieldObj.RichTextMode = $RichTextMode
+			
+			
+			$IsolateStyles = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			 $_.Node.IsolateStyles
+			}
+			
+			$fieldObj.IsolateStyles = $IsolateStyles
+					
+			
+			
+		}
+	}
+	return $fieldObj
+}
+function get-FieldObjXML($FieldXML){
+		$FieldXMLSrc = '<Fields>'+$FieldXML+'</Fields>'
+
+        $fieldObj = "" | Select-Object DisplayName,Required,EnforceUniqueValues,ShowField
+		
+		$DisplayName = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.DisplayName
+		}
+		#write-host $DisplayName
+		$fieldObj.DisplayName = $DisplayName
+		
+		$Required = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.Required
+		}
+		#write-host $Required
+		$fieldObj.Required = $Required
+		
+		$ShowField = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.ShowField
+		}
+		#write-host $ShowField
+		$fieldObj.ShowField = $ShowField
+		
+		$EnforceUniqueValues = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.EnforceUniqueValues
+		}
+		#write-host $EnforceUniqueValues
+		$fieldObj.EnforceUniqueValues = $EnforceUniqueValues
+
+        return $fieldObj		
+}
+
+function Get-FieldXmlType($FieldXML){
+		$FieldXMLSrc = '<Fields>'+$FieldXML+'</Fields>'
+		$cType = ""
+		$isXMLsrc = [bool]$($FieldXMLSrc -as [xml])
+		if ($isXMLsrc){
+			$cType = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+			$_.Node.Type
+			}
+		}	
+        return $cType		
+}
+function add-TextFields($siteUrl, $listName, $fieldObj){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the List!" -f Yellow
+        }
+        else
+        {
+			$DisplayName = $fieldObj.DisplayName
+			$IsRequired = $fieldObj.Required
+			
+			#Define XML for Field Schema
+            $FieldSchema = "<Field Type='Text' DisplayName='$DisplayName' Required='$IsRequired'  />"
+			write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column $DisplayName Added to the List Successfully!" -ForegroundColor Green 
+
+
+		
+		}
+}		
+function add-NoteFields($siteUrl, $listName, $fieldObj){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the List!" -f Yellow
+        }
+        else
+        {
+			$DisplayName = $fieldObj.DisplayName
+			$IsRequired = $fieldObj.Required
+			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
+			$RichText = $fieldObj.RichText
+			$RichTextMode  =   ""
+			$IsolateStyles =   ""
+			if ($RichText.ToLower() -eq "true"){
+				
+				if (![string]::IsNullOrEmpty($fieldObj.RichTextMode)){
+					$RichTextMode  =   " RichTextMode='" +$fieldObj.RichTextMode+"'" 
+				}
+				if (![string]::IsNullOrEmpty($fieldObj.IsolateStyles)){
+					$IsolateStyles =   " IsolateStyles='"+$fieldObj.IsolateStyles+"'"
+				}
+				
+			}
+			$FieldSchema = "<Field Type='Note'  DisplayName='$DisplayName'  Required='$IsRequired' RichText='$RichText' $RichTextMode  $IsolateStyles />"
+			write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+			
+			
+		}
+	
+}
+function add-DateTimeFields($siteUrl, $listName, $fieldObj){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the List!" -f Yellow
+        }
+        else
+        {
+			$DisplayName = $fieldObj.DisplayName
+			$IsRequired = $fieldObj.Required
+			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
+            
+			$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Required='$IsRequired' Format='DateOnly' />"
+			write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+
+
+		}
+	
+}
+function add-ChoiceFields($siteUrl, $listName, $fieldObj){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the List!" -f Yellow
+        }
+        else
+        {
+            $DisplayName = $fieldObj.DisplayName
+			$IsRequired = $fieldObj.Required
+			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
+			$Format = $fieldObj.Format
+			$Choice = $fieldObj.Choice
+ 
+			#Define XML for Field Schema
+            $FieldSchema = "<Field Type='Choice'  DisplayName='$DisplayName'  Required='$IsRequired' FillInChoice='$FillInChoice' Format='$Format'>$Choice</Field>"
+			write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+
+
+		}
+
+
+
+}
+function add-LookupFields($siteUrl, $listName, $fieldObj, $lookupListName){
+	
+        #Setup the context
+        $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $ctx.Credentials = $Credentials
+         
+        #Get the web, List and Lookup list
+        $web = $Ctx.web
+        $List = $Web.Lists.GetByTitle($listName)
+        $lookupList = $Web.Lists.GetByTitle($lookupListName)
+        $Ctx.Load($web)
+        $Ctx.Load($list)
+        $Ctx.Load($lookupList)
+        $Ctx.ExecuteQuery()
+		
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the $listName!" -f Yellow
+        }
+        else
+        {
+			$LookupListID= $LookupList.id
+            $LookupWebID=$web.Id
+			$DisplayName = $fieldObj.DisplayName
+			$IsRequired = $fieldObj.Required
+			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
+			$LookupField = $fieldObj.ShowField
+			
+			#sharepoint online powershell create lookup field
+            $FieldSchema = "<Field Type='Lookup'  DisplayName='$DisplayName'  Required='$IsRequired' EnforceUniqueValues='$EnforceUniqueValues' List='$LookupListID' WebId='$LookupWebID' ShowField='$LookupField' />"
+			#write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+ 
+
+			
+		}
+   
+
+
+
+} 
+function Map-LookupFields($schemaDifference,$SiteURL,$xmlForm){
+	
+	$FieldXMLSrc = '<Fields>'
+	foreach($elSrc in $schemaDifference){
+		$FieldXMLSrc += $elSrc
+	}	
+	$FieldXMLSrc += '</Fields>'
+	
+	$sourceFields = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.Type
+	}
+	$idx =0
+	$fieldsLookupSchema = @()	
+	$fieldsNoLookupSchema = @()	
+	$sfCount = $sourceFields.Count
+	#write-Host "SFCount : $sfCount"
+	foreach($el in $sourceFields){
+		if($el -eq "Lookup"){
+			#$isString =  $schemaDifference.GetType() 
+			if ($sfCount -eq 1){
+				$fieldsLookupSchema += $schemaDifference
+			}
+			else
+			{
+				$fieldsLookupSchema += $schemaDifference[$idx]
+			}
+		}
+		else
+		{
+			#write-Host $schemaDifference.GetType() | Select FullName
+			#write-Host $schemaDifference[$idx]
+			#$isString =  $schemaDifference.GetType() 
+			#write-Host $isString
+			if ($sfCount -eq 1){
+				$fieldsNoLookupSchema += $schemaDifference
+			}
+			else
+			{
+				$fieldsNoLookupSchema += $schemaDifference[$idx]
+			}
+			#write-Host "We are Here"
+			#read-host			
+				
+		}
+		$idx++
+	}
+	
+	$FieldXMLSrc = '<Fields>'	
+	foreach($elSrc in $fieldsLookupSchema){
+		$FieldXMLSrc += $elSrc
+	}	
+	$FieldXMLSrc += '</Fields>'	
+
+	$LookupFields = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+		 $_.Node.List
+	}
+
+
+	
+	$siteUrlNew = get-UrlNoF5 $SiteURL
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlNew)
+	$Ctx.Credentials = $Credentials
+	$Lists = $Ctx.Web.lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()	
+
+    $LookUpMap = @()
+	$LookUpLists = @()
+	$idx =0
+	foreach($el in $LookupFields){
+		ForEach($list in $Lists)
+		{
+			if($el.contains($($list.ID))){
+				$LookUpLists +=  $($list.Title)
+				$MapObject = "" | Select-Object Type,LookupTitle, FieldXML,FieldObj
+				$MapObject.Type = "Lookup"
+				$MapObject.LookupTitle = $($list.Title)
+				$MapObject.FieldXML = $fieldsLookupSchema[$idx]
+				$MapObject.FieldObj = get-FieldObjXML $MapObject.FieldXML
+				$LookUpMap += $MapObject
+			} 
+		
+		}
+		$idx++
+	}	
+    $LookUpLists = $LookUpLists | select -Unique
+
+	foreach($el in $fieldsNoLookupSchema)
+    {
+		$MapObject = "" | Select-Object Type,LookupTitle, FieldXML,FieldObj
+		
+		$MapObject.LookupTitle = ""
+		$MapObject.FieldXML = $el
+		#write-host $el
+		
+		$MapObject.Type = Get-FieldXmlType $el
+		$MapObject.FieldObj = get-xFieldObjXML $MapObject.FieldXML $MapObject.Type
+		$LookUpMap += $MapObject		
+    }
+
+
+    # Form LookUp Lists
+    $LookUpFormLists = @()
+	$xmlControlData = Select-Xml -Path $xmlForm -XPath "/rows/row/control"	| ForEach-Object {$_.Node.List}
+	foreach($el in $xmlControlData){
+		
+		if (!$([string]::isNullOrEmpty($el))){
+			$elExists = $false
+			foreach($luEl in $LookUpLists){
+				if ($luEl.ToLower() -eq $el.ToLower()){
+					$elExists = $true
+					break
+				}
+			}
+			if (!$elExists){
+				$LookUpFormLists += $el
+			}
+		}
+	}
+	
+	$LookUpFormLists = $LookUpFormLists  | select -Unique
+	
+	$outMap = "" | Select-Object LookupLists,LookupForm, FieldMap 
+	$outMap.LookupLists = $LookUpLists
+	$outMap.LookupForm = $LookUpFormLists
+	$outMap.FieldMap = $LookUpMap
+	return $outMap
+	
+}
 function copy-DocTypeList($newSite, $oldSite){
 	write-host "Copying Document Type List." -foregroundcolor Green
 	$siteUrlNew = get-UrlNoF5 $newSite
@@ -786,7 +1492,7 @@ function copy-DocTypeList($newSite, $oldSite){
 		$docTypeItem.Required = $Item["Required"]
 		$docTypeItem.FilesNumber = $Item["FilesNumber"]
 		$docTypeItem.fromMail = $Item["fromMail"]
-		$docTypeItem.sourceField = $Item["source_field"]
+		#$docTypeItem.sourceField = $Item["source_field"]
 		
 		$aDocTypeListOld += $docTypeItem
 
@@ -815,7 +1521,7 @@ function copy-DocTypeList($newSite, $oldSite){
 			$listItem["Required"] = $item.Required
 			$listItem["FilesNumber"] = $item.FilesNumber
 			$listItem["fromMail"] = $item.fromMail
-			$listItem["source_field"] = $item.sourceField
+			#$listItem["source_field"] = $item.sourceField
 		
 			$listItem.Update()      
 			$ctx1.load($list)      
@@ -1423,6 +2129,7 @@ function edt-ContactUs($newSiteName, $pageContent, $language){
 	$ctx.ExecuteQuery()	
 	write-host "$pageName Was Updated" -foregroundcolor Green
 }
+
 function get-PureContactUs($language, $fName, $lName, $email){
 	$result = ""
 	if ($language.ToLower().contains("en")){	
@@ -1438,6 +2145,16 @@ function get-PureContactUs($language, $fName, $lName, $email){
 		$result +='"><span style="text-decoration: underline;"><font color="#0066cc">'
 		$result += $email
 		$result += '</font></span></a></span>&#160;</div></div></div><p>​</p>'
+	}
+	else
+	{
+		$result  = '<h1>​צור ​קשר</h1>'
+		$result += '<p>'
+		$result += '   <br/>'
+		$result += '   <span class="ms-rteFontSize-2">ליצירת קשר ניתן לפנות אל:</span></p>'
+		$result += '<p><div class="ms-rteFontSize-2">'
+		$result += '   <a href="mailto:' + $email +'">'+ $email + '</a></div></p>'
+				
 	}
 	return $result
 }
@@ -1773,7 +2490,7 @@ function get-RecommendationsContent($content, $language, $relURL){
 		$kvPos = $idSubst.IndexOf('"')
 		
 		$sId1 = $idSubst.Substring(0,$kvPos)
-		write-host $sId1
+		#write-host $sId1
 		
 		$ostatok = $idSubst.substring($kvPos)
 		$wToSearch = 'ms-rte-wpbox'
@@ -1788,7 +2505,7 @@ function get-RecommendationsContent($content, $language, $relURL){
 		$kvPos = $idSubst.IndexOf('"')
 		
 		$sId2 = $idSubst.Substring(0,$kvPos)
-		write-host $sId2
+		#write-host $sId2
 		
 
 	if ($language.ToLower().contains("en")){		
@@ -1976,7 +2693,7 @@ function get-DeleteEmptyFolders($content, $language)
 		$kvPos = $idSubst.IndexOf('"')
 		
 		$sId = $idSubst.Substring(0,$kvPos)
-		write-host $sId
+		#write-host $sId
 		
 		$retContent =  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false" unselectable="on">'
 		$retContent += '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId+'" id="div_'+$sId+'" unselectable="on">'
@@ -2063,6 +2780,19 @@ function edt-Form($newSiteName, $language){
 	$pageFields = $page.ListItemAllFields
 	#$pageContent = get-FormContent $pageFields["PublishingPageContent"] $language $relUrl
 	#$pageFields["PublishingPageContent"] = $pageContent
+	$PageContent = $pageFields["PublishingPageContent"]
+	$oWP = Get-WPfromContent $PageContent
+	$editContent = ""
+	
+	foreach ($wp in $oWP){
+		if ($wp.isWP){
+			$editContent += $wp.Content 
+		}
+			
+		$i++
+	}
+    
+	$pageFields["PublishingPageContent"] = 	$editContent
 	$pageFields["Title"] = $pageTitle
 	$pageFields.Update()
 	
@@ -2268,7 +2998,7 @@ function get-OldDefault2Lang ($oldSiteName, $langPage){
 	return $PageContent
 		
 }
-function edt-HomePage($newSiteName, $content, $language){
+function edt-HomePage($newSiteName, $content){
 	$pageName = "Pages/Default.aspx"
 	$siteName = get-UrlNoF5 $newSiteName
 	
@@ -2838,7 +3568,7 @@ function Gen-Cancel2LangCandidateHe ($oWP, $newSiteName){
 		if ($wp.isWP){
 			$content += $wp.Content
 			
-			write-host "i =  : $i"
+			#write-host "i =  : $i"
 			if ($i -eq 1){
 				$asherCont = Get-ASHERClass 
 				$swToEng = SwitchToEng "CancelCandidacy" $newSiteName 
@@ -2854,7 +3584,182 @@ function Gen-Cancel2LangCandidateHe ($oWP, $newSiteName){
 	}
 	return $content
 }
+function Check-ListExists($siteUrl,$ListTitle){
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+<#
+			   TypeName: Microsoft.SharePoint.Client.List
 
+			Name                                         MemberType Definition
+			----                                         ---------- ----------
+			AddItem                                      Method     Microsoft.S...
+			AddItemUsingPath                             Method     Microsoft.S...
+			BreakRoleInheritance                         Method     void BreakR...
+			CreateDocument                               Method     Microsoft.S...
+			CreateDocumentAndGetEditLink                 Method     Microsoft.S...
+			CreateDocumentFromTemplate                   Method     Microsoft.S...
+			CreateDocumentFromTemplateBytes              Method     Microsoft.S...
+			CreateDocumentFromTemplateStream             Method     Microsoft.S...
+			CreateDocumentFromTemplateUsingPath          Method     Microsoft.S...
+			CreateDocumentWithDefaultName                Method     Microsoft.S...
+			CreateMappedView                             Method     Microsoft.S...
+			CustomFromJson                               Method     bool Custom...
+			DeleteObject                                 Method     void Delete...
+			Equals                                       Method     bool Equals...
+			FromJson                                     Method     void FromJs...
+			GetBloomFilter                               Method     Microsoft.S...
+			GetBloomFilterWithCustomFields               Method     Microsoft.S...
+			GetChanges                                   Method     Microsoft.S...
+			GetHashCode                                  Method     int GetHash...
+			GetItemById                                  Method     Microsoft.S...
+			GetItemByUniqueId                            Method     Microsoft.S...
+			GetItems                                     Method     Microsoft.S...
+			GetMappedApp                                 Method     Microsoft.S...
+			GetMappedApps                                Method     Microsoft.S...
+			GetRelatedFields                             Method     Microsoft.S...
+			GetSpecialFolderUrl                          Method     Microsoft.S...
+			GetType                                      Method     type GetType()
+			GetUserEffectivePermissions                  Method     Microsoft.S...
+			GetView                                      Method     Microsoft.S...
+			GetWebDavUrl                                 Method     Microsoft.S...
+			IsObjectPropertyInstantiated                 Method     bool IsObje...
+			IsPropertyAvailable                          Method     bool IsProp...
+			PublishMappedView                            Method     Microsoft.S...
+			Recycle                                      Method     Microsoft.S...
+			RefreshLoad                                  Method     void Refres...
+			RenderExtendedListFormData                   Method     Microsoft.S...
+			RenderListContextMenuData                    Method     Microsoft.S...
+			RenderListData                               Method     Microsoft.S...
+			RenderListDataAsStream                       Method     Microsoft.S...
+			RenderListFilterData                         Method     Microsoft.S...
+			RenderListFormData                           Method     Microsoft.S...
+			ReserveListItemId                            Method     Microsoft.S...
+			ResetRoleInheritance                         Method     void ResetR...
+			Retrieve                                     Method     void Retrie...
+			SaveAsNewView                                Method     Microsoft.S...
+			SaveAsTemplate                               Method     void SaveAs...
+			SetExemptFromBlockDownloadOfNonViewableFiles Method     void SetExe...
+			SyncFlowCallbackUrl                          Method     Microsoft.S...
+			SyncFlowInstances                            Method     Microsoft.S...
+			SyncFlowTemplates                            Method     Microsoft.S...
+			ToString                                     Method     string ToSt...
+			UnpublishMappedView                          Method     Microsoft.S...
+			Update                                       Method     void Update()
+			ValidateAppName                              Method     Microsoft.S...
+			AllowContentTypes                            Property   bool AllowC...
+			AllowDeletion                                Property   bool AllowD...
+			BaseTemplate                                 Property   int BaseTem...
+			BaseType                                     Property   Microsoft.S...
+			BrowserFileHandling                          Property   Microsoft.S...
+			ContentTypes                                 Property   Microsoft.S...
+			ContentTypesEnabled                          Property   bool Conten...
+			Context                                      Property   Microsoft.S...
+			CrawlNonDefaultViews                         Property   bool CrawlN...
+			CreatablesInfo                               Property   Microsoft.S...
+			Created                                      Property   datetime Cr...
+			CurrentChangeToken                           Property   Microsoft.S...
+			CustomActionElements                         Property   Microsoft.S...
+			DataSource                                   Property   Microsoft.S...
+			DefaultContentApprovalWorkflowId             Property   guid Defaul...
+			DefaultDisplayFormUrl                        Property   string Defa...
+			DefaultEditFormUrl                           Property   string Defa...
+			DefaultItemOpenUseListSetting                Property   bool Defaul...
+			DefaultNewFormUrl                            Property   string Defa...
+			DefaultView                                  Property   Microsoft.S...
+			DefaultViewPath                              Property   Microsoft.S...
+			DefaultViewUrl                               Property   string Defa...
+			Description                                  Property   string Desc...
+			DescriptionResource                          Property   Microsoft.S...
+			Direction                                    Property   string Dire...
+			DocumentTemplateUrl                          Property   string Docu...
+			DraftVersionVisibility                       Property   Microsoft.S...
+			EffectiveBasePermissions                     Property   Microsoft.S...
+			EffectiveBasePermissionsForUI                Property   Microsoft.S...
+			EnableAssignToEmail                          Property   bool Enable...
+			EnableAttachments                            Property   bool Enable...
+			EnableFolderCreation                         Property   bool Enable...
+			EnableMinorVersions                          Property   bool Enable...
+			EnableModeration                             Property   bool Enable...
+			EnableVersioning                             Property   bool Enable...
+			EntityTypeName                               Property   string Enti...
+			EventReceivers                               Property   Microsoft.S...
+			ExcludeFromOfflineClient                     Property   bool Exclud...
+			ExemptFromBlockDownloadOfNonViewableFiles    Property   bool Exempt...
+			Fields                                       Property   Microsoft.S...
+			FileSavePostProcessingEnabled                Property   bool FileSa...
+			FirstUniqueAncestorSecurableObject           Property   Microsoft.S...
+			ForceCheckout                                Property   bool ForceC...
+			Forms                                        Property   Microsoft.S...
+			HasExternalDataSource                        Property   bool HasExt...
+			HasUniqueRoleAssignments                     Property   bool HasUni...
+			Hidden                                       Property   bool Hidden...
+			Id                                           Property   guid Id {get;}
+			ImagePath                                    Property   Microsoft.S...
+			ImageUrl                                     Property   string Imag...
+			InformationRightsManagementSettings          Property   Microsoft.S...
+			IrmEnabled                                   Property   bool IrmEna...
+			IrmExpire                                    Property   bool IrmExp...
+			IrmReject                                    Property   bool IrmRej...
+			IsApplicationList                            Property   bool IsAppl...
+			IsCatalog                                    Property   bool IsCata...
+			IsPrivate                                    Property   bool IsPriv...
+			IsSiteAssetsLibrary                          Property   bool IsSite...
+			IsSystemList                                 Property   bool IsSyst...
+			ItemCount                                    Property   int ItemCou...
+			LastItemDeletedDate                          Property   datetime La...
+			LastItemModifiedDate                         Property   datetime La...
+			LastItemUserModifiedDate                     Property   datetime La...
+			ListExperienceOptions                        Property   Microsoft.S...
+			ListItemEntityTypeFullName                   Property   string List...
+			MajorVersionLimit                            Property   int MajorVe...
+			MajorWithMinorVersionsLimit                  Property   int MajorWi...
+			MultipleDataList                             Property   bool Multip...
+			NoCrawl                                      Property   bool NoCraw...
+			ObjectVersion                                Property   string Obje...
+			OnQuickLaunch                                Property   bool OnQuic...
+			PageRenderType                               Property   Microsoft.S...
+			ParentWeb                                    Property   Microsoft.S...
+			ParentWebPath                                Property   Microsoft.S...
+			ParentWebUrl                                 Property   string Pare...
+			ParserDisabled                               Property   bool Parser...
+			Path                                         Property   Microsoft.S...
+			ReadSecurity                                 Property   int ReadSec...
+			RoleAssignments                              Property   Microsoft.S...
+			RootFolder                                   Property   Microsoft.S...
+			SchemaXml                                    Property   string Sche...
+			ServerObjectIsNull                           Property   System.Null...
+			ServerTemplateCanCreateFolders               Property   bool Server...
+			Tag                                          Property   System.Obje...
+			TemplateFeatureId                            Property   guid Templa...
+			Title                                        Property   string Titl...
+			TitleResource                                Property   Microsoft.S...
+			TypedObject                                  Property   Microsoft.S...
+			UserCustomActions                            Property   Microsoft.S...
+			ValidationFormula                            Property   string Vali...
+			ValidationMessage                            Property   string Vali...
+			Views                                        Property   Microsoft.S...
+			WorkflowAssociations                         Property   Microsoft.S...
+			WriteSecurity                                Property   int WriteSe...
+
+
+#>	
+
+    $listExists = $false
+	foreach($list in $Lists){
+		if ($list.Title.ToLower() -eq $ListTitle.Trim().ToLower()){
+			$listExists = $true
+			break
+		}
+	}
+	
+	return $listExists
+
+}
 function Create-List($siteUrl,$ListTitle,$ListDisplayTitle){
 	
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
@@ -3046,6 +3951,10 @@ function Log-Generate($spObj,$newSite){
 	$htmlTemplate = $htmlTemplate.Replace("%SourceGroup%",$oldAdmGroup)
 	$newSite = get-UrlWithF5 $newSite
 	$htmlTemplate = $htmlTemplate.Replace("%URL%",$newSite)
+	$htmlTemplate = $htmlTemplate.Replace("%targetAudiency%",$spObj.targetAudiency)
+	$htmlTemplate = $htmlTemplate.Replace("%targetAudiencysharepointGroup%",$spObj.targetAudiencysharepointGroup)
+	#Write-Host "%RelURL%: $($spObj.RelURL)"
+	$htmlTemplate = $htmlTemplate.Replace("%RelURL%",$spObj.RelURL)
 	
 	$htmlTemplate | Out-File $outLog -encoding UTF8 | out-null
 	Invoke-Expression $outLog

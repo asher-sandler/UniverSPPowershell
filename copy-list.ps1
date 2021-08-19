@@ -14,25 +14,15 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
 . "$dp0\Utils-DualLanguage.ps1"
 
-$cred = get-SCred
+$Credentials = get-SCred
 
- $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
- #$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
- 
- write-host "URL: $siteURL" -foregroundcolor Yellow
- $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
- $ctx.Credentials = $cred
- 
- 
-	$Lists = $Ctx.Web.Lists
-	$Ctx.Load($Lists)
-	$Ctx.ExecuteQuery()
-	Write-host  -foregroundcolor Yellow
-    Write-host "--------------- List of Lists --------------------" -foregroundcolor Yellow
-	Write-host  -foregroundcolor Yellow
-	ForEach($list in $Lists)
-	{
-		Write-Host $list.Title -foregroundcolor Green
-			
-		
-	}
+ $siteNew = "https://scholarships.ekmd.huji.ac.il/home/General/GEN153-2021";
+ $siteOld = "https://scholarships.ekmd.huji.ac.il/home/General/GEN152-2021";
+ $listName = "DocType"
+ if ($listName.ToLower().Trim() -eq "doctype"){
+	copy-DocTypeList $siteNew $siteOld	 
+ }
+ else
+ {
+	copy-ListOldToNew $siteNew $siteOld $listName
+ }	

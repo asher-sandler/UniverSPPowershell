@@ -487,6 +487,32 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $ol
 }
 
 
+function get-NewDefault($newSiteName, $language, $deadline){
+	$crlf = [char][int]13 + [char][int]10
+	$result = ""
+	$RelUrl = get-RelURL $newSiteName
+	if ($language.ToLower().contains("en")){
+		
+		$contentDefault1 =  DefaultDLangContentEn1 $deadline
+		$contentDefault2 =  DefaultDLangContentEn2 $relUrl
+		
+		$result +=  $crlf+ $crlf + $contentDefault1 + $crlf+ $crlf
+		$result +=  $crlf+ $crlf + $contentDefault2 + $crlf+ $crlf		
+
+	}
+	else
+	{
+		$contentDefault1 =  DefaultDLangContentHe1 $deadline
+		$contentDefault2 =  DefaultContentHe2 $relUrl
+
+		$result +=  $crlf+ $crlf + $contentDefault1 + $crlf+ $crlf
+		$result +=  $crlf+ $crlf + $contentDefault2 + $crlf+ $crlf		
+		
+
+	}
+	return $result
+}
+
 function Get-PageContent($SiteName, $pageName){
 	$PageContent = ""
 	$siteNameN = get-UrlNoF5 $SiteName
@@ -781,6 +807,57 @@ function DefaultDLangContentHe2($relURL){
   $outStr += 	'<strong class="ms-rteFontSize-2">'
   $outStr += 	"ד. לסיום התהליך יש לגשת לדף '</strong>"
   $outStr += 	'<a href="' + $relURL + 'Pages/SubmissionStatusHe.aspx">'
+  $outStr += 	'<span class="ms-rteFontSize-2" lang="HE" style="text-decoration:underline;"><strong>סטטוס הגשה</strong></span>'
+  $outStr += 	'</a>'
+  $outStr += 	'<strong class="ms-rteFontSize-2">'
+  $outStr += 	"' ולפעול לפי ההנחיות</strong>"
+  $outStr += 	'</p>'
+  
+  $outStr += 	'<p style="text-align:right;">'
+  $outStr += 	'&#160;&#160;&#160;</p><br>'
+	return $outStr	
+}
+
+function DefaultContentHe2($relURL){
+	 $outStr  = '<h2 dir="rtl" style="text-align:right;">הליך הגשת בקשה</h2>'
+  $outStr += '<p dir="rtl" style="text-align:right;">'
+  $outStr += '<strong class="ms-rteFontSize-2">א. יש למלא את </strong>'
+  $outStr += '<a href="' + $relURL + 'Pages/Form.aspx">'
+  $outStr += '<span class="ms-rteFontSize-2" lang="HE" style="text-decoration:underline;">'
+  $outStr += '<strong>טופס הבקשה המקוון</strong></span></a>'
+  $outStr += '</p>'
+  $outStr += '<p dir="rtl" style="text-align:right;">'
+  $outStr += '<strong class="ms-rteFontSize-2">ב. להעלות את המסמכים הבאים לתיקיית העלאת מסמכים אישית לפי </strong>'
+  $outStr += '<a href="/home/Pages/InstructionsHe.aspx" target="_blank">'
+  $outStr += '<span class="ms-rteFontSize-2" lang="HE" style="text-decoration:underline;"><strong>ההוראות המופיעות כאן</strong></span>'
+  $outStr += '</a>'
+  $outStr += '</p>'
+  $outStr += '<p dir="rtl" style="text-align:right;">&#160;</p>'
+  $outStr += '<ul dir="rtl" style="text-align:right;">'
+  $outStr += 	'<li>'
+  $outStr += 	'<p><span class="ms-rteFontSize-2"><span class="ms-rteFontSize-2"><span aria-hidden="true"></span>קורות חיים ופרטים אישיים (על הפרטים האישיים לכלול: שם + משפחה, ת.ז, ת. לידה, מקום לידה, שנת עליה, כתובת מגורים, טלפון נייד, כותבת דוא&quot;ל, מצב משפחתי, פקולטה, מחלקה, נושא המחקר, שם המנחה)</span></span>'
+  $outStr += 	'</p>'
+  $outStr += 	'</li>'
+  $outStr += 	'<li>'
+  $outStr += 	'<p><span class="ms-rteFontSize-2"><span class="ms-rteFontSize-2"><span class="ms-rteFontSize-2">רשימת פרסומים (כולל הופעה בכנסים), רשימת פרסי הצטיינות</span></span></span>'
+  $outStr += 	'</p>'
+  $outStr += 	'</li>'
+  $outStr += 	'<li>'
+  $outStr += 	'<p><span class="ms-rteFontSize-2">גיליונות ציונים באנגלית מכל שנות הלימודים הגבוהים<br>מכתב פניה של המועמדת, הכולל בין היתר פרטים על עשייה חברתית (עד שני עמודים)<br>תקציר תכנית המחקר (עד שני עמודים)</span>'
+  $outStr += 	'</p>'
+  $outStr += 	'</li>'
+  $outStr += 	'</ul>'
+  $outStr += 	'<p dir="rtl" style="text-align:right;">'
+  $outStr += 	'<strong class="ms-rteFontSize-2">ג. . שתי ההמלצות ישלחו לפי </strong>'
+  $outStr += 	'<a href="' + $relURL + 'Pages/Recommendations.aspx">'
+  $outStr += 	'<span class="ms-rteFontSize-2" lang="HE" style="text-decoration:underline;">'
+  $outStr += 	'<strong>המנגנון המתואר כאן</strong></span>'
+  $outStr += 	'</a>'
+  $outStr += 	'.&#160;<span class="ms-rteFontSize-2"> במידה ולמועמדת יש שני מנחים, יש לצרף שלוש המלצות - ההמלצות יישלחו לפי המנגנון המתואר כאן.</span></p>'
+  $outStr += 	'<p dir="rtl" style="text-align:right;">'
+  $outStr += 	'<strong class="ms-rteFontSize-2">'
+  $outStr += 	"ד. לסיום התהליך יש לגשת לדף '</strong>"
+  $outStr += 	'<a href="' + $relURL + 'Pages/SubmissionStatus.aspx">'
   $outStr += 	'<span class="ms-rteFontSize-2" lang="HE" style="text-decoration:underline;"><strong>סטטוס הגשה</strong></span>'
   $outStr += 	'</a>'
   $outStr += 	'<strong class="ms-rteFontSize-2">'

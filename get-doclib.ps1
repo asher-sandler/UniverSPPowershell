@@ -1,4 +1,4 @@
-function GetDocLib ($ctx, $sitesURL) {
+function GetDocLib ($ctx) {
 
 		Write-Host "Get Doc Lib" -ForegroundColor Yellow
 		
@@ -9,8 +9,10 @@ function GetDocLib ($ctx, $sitesURL) {
 		ForEach($list in $Lists)
 		{
 			# העלאת מסמכים - Dan Testman 56565656
-			if ($List.Title -eq "Documents Upload Asher 54321876"){
-				write-host Found Asher Doc Lib
+			$hebrDocLibName = "העלאת מסמכים"
+			if ($list.Title.contains("Documents Upload") -or 
+				$list.Title.contains($hebrDocLibName)){
+				write-host "Found: $($list.Title)" -ForegroundColor Yellow
 				$List.OnQuickLaunch = $false;
 				
 				$List.Update()
@@ -23,17 +25,39 @@ function GetDocLib ($ctx, $sitesURL) {
 	
 
 }
+
+start-transcript "HideDocLib.log"
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.Portable.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Publishing.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Search.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.UserProfiles.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 
- $tenantAdmin = "ekmd\ashersa"
- $tenantAdminPassword = "GrapeFloor789"
- $secureAdminPassword = $(convertto-securestring $tenantAdminPassword -asplaintext -force)
- $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
- $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
- # $credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($tenantAdmin, $secureAdminPassword)  
- $ctx.Credentials = New-Object System.Net.NetworkCredential($tenantAdmin, $tenantAdminPassword)
-    
+	$0 = $myInvocation.MyCommand.Definition
+	$dp0 = [System.IO.Path]::GetDirectoryName($0)
+	. "$dp0\Utils-Request.ps1"
+	. "$dp0\Utils-DualLanguage.ps1"
+	$isIniExists = Write-IniFile "No"
+	if ($isIniExists){	
+		$Credentials = get-SCred
 
-# LogSection "Add Manual Correction WebPart to Page"
-GetDocLib $ctx $relUrl
+		 $siteURL = "https://scholarships.ekmd.huji.ac.il/home/SocialSciences/SOC36-2015";
+		 $siteURL = "https://scholarships2.ekmd.huji.ac.il/home/Agriculture/AGR36-2015";
+		 write-host $siteURL -ForegroundColor Yellow
+		 $siteNameN = get-UrlNoF5 $siteURL
+		 $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN) 
+
+		 $ctx.Credentials = $Credentials
+			
+
+
+		GetDocLib $ctx 
+	}
+Stop-Transcript
+.\HideDocLib.log
+ 
