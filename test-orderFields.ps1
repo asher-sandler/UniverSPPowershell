@@ -20,72 +20,59 @@ $cred = get-SCred
  #$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
  
  write-host "URL: $siteURL" -foregroundcolor Yellow
- $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
- $ctx.Credentials = $cred
+ 
+ $applicantsFieldsOrder = get-FormFieldsOrder "testOrder" $siteURL
+ $applicantsFieldsOrder	
+ [array]::Reverse($applicantsFieldsOrder) 
+ $applicantsFieldsOrder	
+ 
+ $resArr = checkForArrElExists $applicantsFieldsOrder $applicantsFieldsOrder
+ reorder-FormFields "testOrder"	$siteURL $resArr
  
  
-	$Lists = $Ctx.Web.Lists
-	$Ctx.Load($Lists)
-	$Ctx.ExecuteQuery()
-	$ListName = "testOrder"
-	$List = $Ctx.Web.lists.GetByTitle($ListName)
-	
-	$list
-	
-	
-	
-	$contentTypes = $list.ContentTypes
-    $ctx.Load($contentTypes)
-	#$ctx.Load($contentTypes.FieldLinks)
-    $ctx.ExecuteQuery()
-	
-	$itemContenType = $contentTypes[0]
-	$ctx.Load($itemContenType)
-	#$ctx.Load($contentTypes.FieldLinks)
-    $ctx.ExecuteQuery()
-	
-	
-	
-	$FieldLinks = $itemContenType.FieldLinks
-	
-	$ctx.Load($FieldLinks)
-	#$ctx.Load($contentTypes.FieldLinks)
-    $ctx.ExecuteQuery()
-	
-	$FieldLinks
-	
-	
-	$orderFields = @()
-	$orderFields +='Name'
-	$orderFields +='Phone_x0020_Number'
-	$orderFields +='_x0410__x0434__x0440__x0435__x04'
-	$orderFields +='Surname'
-
-	
-	$FieldLinks.Reorder($orderFields);
-	$itemContenType.Update($false);
-	$ctx.ExecuteQuery()
-	
-	
-<#
-	  #Making generic list of content type ids in passed order
-		#
-		$ctList = New-Object System.Collections.Generic.List[Microsoft.SharePoint.Client.ContentTypeId]
-		Foreach($ct in $ContentTypeNamesInOrder){
-			$ctToInclude = $contentTypes | Where {$_.Name -eq $ct}
-			$ctList.Add($ctToInclude.Id)
-		}
-
-
-		#Updating content type order
-		#
-		$list.RootFolder.UniqueContentTypeOrder = $ctList
-		$list.Update()
-		$ctx.Load($list)
-		$ctx.ExecuteQuery()
+ $oldSite = "https://grs2.ekmd.huji.ac.il/home/Education/EDU57-2021/"
+ $newSite = "https://grs2.ekmd.huji.ac.il/home/Education/EDU60-2021"
+ $listName = "Applicants"
+ $objViews = Get-AllViews $listName $oldSite
+ 
+ $objViews | ConvertTo-Json -Depth 100 | out-file $("JSON\Applicants-Views.json")
+ 
+ foreach($view in $objViews){
+	 $viewExists = Check-ViewExists $listName  $newSite $view 
+	 if ($viewExists.Exists){
+		 write-host "view $($view.Title) exists on $newSite" -foregroundcolor Green
+		 #check if first field in source view is on destination view
+		 $firstField = $view.Fields[0]
+		 write-host "First field in source view : $firstField"
+		 $fieldInView = check-FieldInView  $listName $($viewExists.Title) $newSite $firstField
+		 write-host "$firstField on View : $fieldInView"
+		 #if not {add this field}
+		 if (!$fieldInView){
+			 Add-FieldInView $listName $($viewExists.Title) $newSite $firstField
+			
+		 }
+		 #delete all fields in destination from view but first field in source
 		 
-		Write-Host "Content Types Reordered successfully" -ForegroundColor Green
-
-#>
-
-
+		 remove-AllFieldsFromViewButOne $listName $($viewExists.Title) $newSite $firstField
+		 #$listName = "testOrder"
+		 #$titl = "All Items"
+		 #$newSite = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace"
+		 #$firstField = "Name"
+		 #remove-AllFieldsFromViewButOne $listName $titl $newSite $firstField
+		 Add-FieldsToView $listName $($viewExists.Title) $newSite $($view.Fields)
+		 #add other view
+		 Rename-View $listName $($viewExists.Title) $newSite $($view.Title)
+	 }
+	 else
+	 {
+		
+		$viewName = $($view.Title)
+		if ([string]::isNullOrEmpty($viewName)){
+			$viewName = $($view.ServerRelativeUrl.Split("/")[-1]).Replace(".aspx","")
+			
+		}
+		write-host "view $viewName does Not exists on $newSite" -foregroundcolor Yellow
+		$viewDefault = $false
+		Create-NewView $newSite $listName $viewName  $($view.Fields) $($view.Query) $($view.Aggregations) $viewDefault
+	 }
+ }

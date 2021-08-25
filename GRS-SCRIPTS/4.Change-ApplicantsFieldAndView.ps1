@@ -3,8 +3,8 @@ param([string] $groupName = "")
 
 $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
-. "$dp0\Utils-Request.ps1"
-. "$dp0\Utils-DualLanguage.ps1"
+. "..\Utils-Request.ps1"
+. "..\Utils-DualLanguage.ps1"
 if ([string]::isNullOrEmpty($groupName))
 {
 	write-host groupName Must be specified  -foregroundcolor Yellow
@@ -14,7 +14,7 @@ if ([string]::isNullOrEmpty($groupName))
 else
 {
 	if (Test-CurrentSystem $groupName){
-		$jsonFile = "JSON\"+$groupName+".json"
+		$jsonFile = "..\JSON\"+$groupName+".json"
 		if (Test-Path $jsonFile){
 			write-host "Group: $groupName" -foregroundcolor Green
 			$Credentials = get-SCred	
@@ -25,9 +25,12 @@ else
 			$siteUrl    = get-CreatedSiteName $spObj
 			$oldSiteURL = $spObj.oldSiteURL
 			
-			$siteUrl
-			$oldSiteURL
 			
+			
+			write-host "Old Site: $oldSiteURL" -foregroundcolor Cyan
+			write-host "New Site: $siteUrl" -foregroundcolor Green
+			write-host "Pause..."
+			read-host
 			# TEST ONLY VARS
 			#$siteUrl = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace"
 			#$oldSiteURL =  "https://grs2.ekmd.huji.ac.il/home/Education/EDU57-2021/"
@@ -49,7 +52,7 @@ else
 			
 			#write-host $schemaDifference
 			$listObj = Map-LookupFields $schemaDifference $oldSiteURL $xmlFormPath
-			$listObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-ApplFields.json")
+			$listObj | ConvertTo-Json -Depth 100 | out-file $("..\JSON\"+$groupName+"-ApplFields.json")
 			
 			foreach($listName in $($listObj.LookupForm)){
 				Clone-List   $siteUrl $oldSiteURL $listName
@@ -92,9 +95,16 @@ else
 					#write-host $fieldObj.FieldObj.DisplayName
 					add-TextFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
 				}
-			}				
+			}
+
+
+			$applSrcFieldsOrder = get-FormFieldsOrder "Applicants" $oldSiteURL
 			
+			$applDestFieldOrder    = get-FormFieldsOrder "Applicants" $siteURL
 			
+			#check for Field in Destination exist in Source
+			$newFieldOrder = checkForArrElExists $applSrcFieldsOrder $applDestFieldOrder
+			reorder-FormFields "Applicants"	$siteURL $newFieldOrder
 			
 							
 			#$schemaDifference | out-file "diff.xml" -Encoding Default

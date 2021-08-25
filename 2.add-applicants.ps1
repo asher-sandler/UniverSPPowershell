@@ -62,6 +62,12 @@ else
 				
 				edt-contactUsTitle   	$siteUrlC  $($spRequestsListObj.language)
 				edt-DeleteEmptyFolders  $siteUrlC  $($spRequestsListObj.language)
+				$isDocumentsUploadExists = check-DocumentsUploadExists $siteUrlC  $($spRequestsListObj.language)
+				
+				if ($isDocumentsUploadExists){
+					edt-DocumentsUpload  $siteUrlC  $($spRequestsListObj.language)
+					edt-DocUploadWP $siteUrlC  $spRequestsListObj 
+				}
 				
 				if (!$isDoubleLangugeSite){
 					edt-cancelCandidacy  	$siteUrlC  $($spRequestsListObj.language)

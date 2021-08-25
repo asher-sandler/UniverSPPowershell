@@ -494,7 +494,12 @@ function Add-SiteList($ListObj, $facultyList)
 		
 		$listItem["mailSuffix"] = $ListObj.mailSuffix
 		$listItem["applicantsGroup"] = $ListObj.applicantsGroup
-		$listItem["deadline"] = $ListObj.deadline.AddYears(-1)
+		$deadLineDate = $ListObj.deadline.AddYears(-1)
+		$today  = Get-Date
+		if ($today -lt $deadLineDate){
+			$deadLineDate = $deadLineDate.AddYears(-1)
+		}
+		$listItem["deadline"] = $deadLineDate
 		$listItem["recommendationsDeadline"] = $ListObj.deadline
 		$listItem["SiteTitle"] = $ListObj.siteName
 		$listItem["ScholarshipName"] = $ListObj.siteName
@@ -667,7 +672,13 @@ function Write-TextConfig ($ListObj, $groupName)
 			$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf 
 			$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf
 		}
+
 		$fileS += $crlf
+		$fileS += "XML Upload Path: " + $ListObj[0].XMLUploadPath + $crlf
+		$fileS += "XML Upload File:" + $ListObj[0].XMLUploadFileName + $crlf
+		$fileS += "Goto XML Upload File: cd " + $ListObj[0].XMLUploadPath + $ListObj[0].XMLUploadFileName + $crlf + $crlf
+		
+		
 		
 		
 		
@@ -816,6 +827,38 @@ function Clone-List($newSite, $oldSite, $listName){
 	}
 	copy-ListOldToNew $newSite $oldSite $listName
 }
+function check-DocumentsUploadExists($siteURL, $language){
+	$DocumentsUploadExists = $false
+	$listName   = "דפים"
+	if ($language.ToLower().contains("en")){
+		$listName = "Pages"
+	}
+
+	$siteUrlNew = get-UrlNoF5 $siteURL
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlNew)
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	$list = $lists.GetByTitle($listName)  
+
+	$Query = New-Object	 Microsoft.SharePoint.Client.CamlQuery
+	$qry = "<View><Query></Query></View>"
+	$Query.ViewXml = $qry
+
+	#Get All List Items matching the query
+	$ListItems = $List.GetItems($Query)
+	$Ctx.Load($ListItems)
+	$Ctx.ExecuteQuery()		
+
+	ForEach($Item in $ListItems){
+		#write-host $Item["Title"]
+		if ($($Item["Title"].toLower() -eq "documentsupload") -or
+		    $($Item["Title"].toLower() -eq "העלאת מסמכים")){
+			$DocumentsUploadExists = $true;break;
+		}
+	}	
+	return $DocumentsUploadExists
+}
 function copy-ListOldToNew($newSite, $oldSite, $listName){
 
 	$siteUrlNew = get-UrlNoF5 $newSite
@@ -894,6 +937,41 @@ function copy-ListOldToNew($newSite, $oldSite, $listName){
 	return $null
 
 	
+}
+function get-ListSchema($siteURL,$listName){
+	
+	$fieldsSchema = @()
+	
+	$siteUrlC = get-UrlNoF5 $siteUrl
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+	
+	$List = $Ctx.Web.lists.GetByTitle($ListName)
+	
+    $Ctx.load($List.Fields) 
+    $Ctx.ExecuteQuery()	
+
+
+	foreach($field in $List.Fields){
+		# write-host "$($field.Title) : Hidden : $($field.Hidden)"
+		if ($field.SchemaXml.Contains('ReadOnly="TRUE"')){
+		}
+		else{
+			if ($field.SchemaXml.Contains('Group="_Hidden"')){
+			}
+			else{
+		
+				If (!($field.Hidden -or $field.ReadOnly )){
+					$fieldsSchema += $field.SchemaXml
+				}
+		
+			}
+		}	
+	}	
+	
+	return $fieldsSchema
+
 }
 function get-ApplicantsSchema($siteUrl){
 	$fieldsSchema = @()
@@ -1073,6 +1151,17 @@ function get-xFieldObjXML($FieldXML,$cType){
 	}
 	return $fieldObj
 }
+function get-ChoiceOption($str){
+	$subs2 = ""
+	$pos1 = $str.IndexOf("<Default>")
+	if ($pos1 -gt 0){
+		$subs1 = $str.Substring($pos1)
+		#Write-host $subs1
+		$pos2 = $subs1.IndexOf("</CHOICES>")
+		$subs2 = $subs1.substring(0,$pos2+10)
+	}		
+	return $subs2		
+}
 function get-FieldObjXML($FieldXML){
 		$FieldXMLSrc = '<Fields>'+$FieldXML+'</Fields>'
 
@@ -1151,7 +1240,44 @@ function add-TextFields($siteUrl, $listName, $fieldObj){
 
 		
 		}
-}		
+}
+
+function add-BooleanFields($siteUrl, $listName, $fieldObj){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the List!" -f Yellow
+        }
+        else
+        {
+			$DisplayName = $fieldObj.DisplayName
+			$IsRequired = $fieldObj.Required
+			
+			#Define XML for Field Schema
+            $FieldSchema = "<Field Type='Boolean' DisplayName='$DisplayName' Required='$IsRequired'  />"
+			write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column $DisplayName Added to the List Successfully!" -ForegroundColor Green 
+
+
+		
+		}
+}
 function add-NoteFields($siteUrl, $listName, $fieldObj){
         #Setup the context
         $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
@@ -1179,17 +1305,28 @@ function add-NoteFields($siteUrl, $listName, $fieldObj){
 			$RichText = $fieldObj.RichText
 			$RichTextMode  =   ""
 			$IsolateStyles =   ""
-			if ($RichText.ToLower() -eq "true"){
-				
+			if (![string]::isNullOrEmpty($RichText)){
+				if ($RichText.ToLower() -eq "true"){
+					$RichText='RichText="TRUE"'
+				}
+				else{
+					$RichText='RichText="FALSE"'	
+				}		
 				if (![string]::IsNullOrEmpty($fieldObj.RichTextMode)){
 					$RichTextMode  =   " RichTextMode='" +$fieldObj.RichTextMode+"'" 
 				}
 				if (![string]::IsNullOrEmpty($fieldObj.IsolateStyles)){
 					$IsolateStyles =   " IsolateStyles='"+$fieldObj.IsolateStyles+"'"
 				}
+					
 				
 			}
-			$FieldSchema = "<Field Type='Note'  DisplayName='$DisplayName'  Required='$IsRequired' RichText='$RichText' $RichTextMode  $IsolateStyles />"
+			else
+			{
+				$RichText=''	
+			}
+			
+			$FieldSchema = "<Field Type='Note'  DisplayName='$DisplayName'  Required='$IsRequired' $RichText $RichTextMode  $IsolateStyles />"
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1264,7 +1401,7 @@ function add-ChoiceFields($siteUrl, $listName, $fieldObj){
 			$Choice = $fieldObj.Choice
  
 			#Define XML for Field Schema
-            $FieldSchema = "<Field Type='Choice'  DisplayName='$DisplayName'  Required='$IsRequired' FillInChoice='$FillInChoice' Format='$Format'>$Choice</Field>"
+            $FieldSchema = "<Field Type='Choice'  DisplayName='$DisplayName'  Required='$IsRequired' Format='$Format'>$Choice</Field>"
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1317,15 +1454,51 @@ function add-LookupFields($siteUrl, $listName, $fieldObj, $lookupListName){
             $Ctx.ExecuteQuery()   
  
             Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
- 
-
-			
+ 		
 		}
-   
+  
+}
+function get-SchemaObject($schema)
+{
+	$schemaObj = @()
+	foreach($line in $schema){
+				$fieldObj = "" | Select-Object Name,Type,DisplayName,Schema,Choice,Required,Format
+				$fieldObj.Schema = $line
+				$fieldObj.Required = "FALSE"
+				
+				$FieldXMLSrc = '<Fields>'+  $line	 + '</Fields>'
+				
+				$fieldObj.Name = Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+					$_.Node.Name
+				}
+				$fieldObj.Type =  Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+					$_.Node.Type
+				}
+				$fieldObj.DisplayName =  Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+					$_.Node.DisplayName
+				}
+				$fieldRequiered =  Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+					$_.Node.DRequired
+				} 	
+				
+				if (![string]::IsNullOrEmpty($fieldRequiered)){
+					If ($fieldRequiered -eq "TRUE"){
+						$fieldObj.Required = "TRUE"
+					}
+				}
+				
+				if ($fieldObj.Type -eq "Choice"){
+					$fieldObj.Choice = get-ChoiceOption $line
+					$fieldObj.Format =  Select-Xml -Content $FieldXMLSrc  -XPath "/Fields/Field" | ForEach-Object {
+					$_.Node.Format
+					} 
+					
+				}
+				$schemaObj += $fieldObj
 
-
-
-} 
+			}
+    return $schemaObj
+}
 function Map-LookupFields($schemaDifference,$SiteURL,$xmlForm){
 	
 	$FieldXMLSrc = '<Fields>'
@@ -1578,7 +1751,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -1610,6 +1783,8 @@ function get-RequestListObject(){
 					$spRequestsListItem.XMLFileEn =  $relURL + "-En.xml"
 					$spRequestsListItem.XMLFileHe =  $relURL + "-He.xml"
 					$spRequestsListItem.PathXML = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\default" 
+					$spRequestsListItem.XMLUploadPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\UploadFiles\" 
+					$spRequestsListItem.XMLUploadFileName = $relURL + ".xml"
 
 					$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"
 					
@@ -2157,6 +2332,60 @@ function get-PureContactUs($language, $fName, $lName, $email){
 				
 	}
 	return $result
+}
+function edt-DocumentsUpload($newSiteName, $language){
+	$pageName = "Pages/DocumentsUpload.aspx"
+	
+	$siteName = get-UrlNoF5 $newSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageTitle  = "העלאת מסמכים"
+	if ($language.ToLower().contains("en")){
+		$pageTitle = "Documents Upload"
+	}
+	
+	$pageFields = $page.ListItemAllFields
+	$PageContent = $pageFields["PublishingPageContent"]
+	$oWP = Get-WPfromContent $PageContent
+	$editContent = ""
+	
+	foreach ($wp in $oWP){
+		if ($wp.isWP){
+			$editContent += $wp.Content 
+		}
+			
+		$i++
+	}
+    
+	$pageFields["PublishingPageContent"] = "<h1>" + $pageTitle + "</h1>" +	$editContent	
+	$pageFields["Title"] = $pageTitle
+	
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()
+	write-host "$pageName Was Updated" -foregroundcolor Green	
 }
 
 function edt-contactUsTitle($newSiteName, $language){
@@ -2860,7 +3089,58 @@ function edt-SubmissionWP($siteUrlC , $spObj){
 	$ctx.ExecuteQuery()
 		
 }
+function edt-DocUploadWP($siteUrlC , $spObj){
+	$pageName = "Pages/DocumentsUpload.aspx"
+	
+	$siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	#$language = $spObj.language
+    $languageWP =  1
+	if ($spObj.language.toLower().contains("en"))
+	{
+		$languageWP =  2
+	}
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "UploadFilesWP"  from the page DocumentsUpload.aspx' -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title.contains("UploadFilesWP")){
+				$wp.WebPart.Properties["Config_Name"] = $spObj.XMLUploadFileName
+				$wp.WebPart.Properties["Config_Path"] = $spObj.XMLUploadPath
+				
+				$wp.WebPart.Properties["Language"] = $languageWP;
+				$wp.WebPart.Properties["Debug"] = $true;
+				
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change 'UploadFilesWP'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change 'UploadFilesWP'")
+	$ctx.ExecuteQuery()
+	
+}
 function edt-FormWP($siteUrlC , $spObj){
 	$pageName = "Pages/Form.aspx"
 	
@@ -3170,6 +3450,8 @@ function copyMail($spObj){
 	$language = $spObj.language
 	$siteName = $spObj.siteName
 	$siteNameEn = $spObj.siteNameEn
+	$facultyEn = $spObj.facultyTitleEn
+	$facultyHe = $spObj.facultyTitleHe
 	
 	#$($spRequestsListObj.MailPath) $($spRequestsListObj.MailFile) 
 	#$($spRequestsListObj.PreviousMail) $($spRequestsListObj.language) 
@@ -3181,8 +3463,8 @@ function copyMail($spObj){
 	$fileNewMailHe = $PathMail + "\" + $spObj.MailFileHe
 	#write-Host $fileNewMailEn
 	#write-Host $fileNewMailHe
-	$contentFileEn = Get-MailContentEn $siteNameEn
-	$contentFileHe = Get-MailContentHe $siteName
+	$contentFileEn = Get-MailContentEn $siteNameEn $facultyEn
+	$contentFileHe = Get-MailContentHe $siteName $facultyHe
 
 	if ($language.toLower().contains("en")){
 
@@ -3213,17 +3495,9 @@ function copyMail($spObj){
 		else
 		{
 			Write-Host "Mail File $fileNewMailHe already exists. Not Copied." -foregroundcolor Yellow
-			
 		}
-		
 	}		
-
-	
-
-	
 }
-
-
 function psiconv ( $f, $t, $string ) {
 	$enc = [system.text.encoding]
 
@@ -3235,7 +3509,7 @@ function psiconv ( $f, $t, $string ) {
     return  $outputstring
 
 }
-function Get-MailContentEn($siteName){
+function Get-MailContentEn($siteName,$faculty){
 	$crlf = [char][int]13 + [char][int]10
 
 	$retStr  = "<br>" + $crlf
@@ -3247,13 +3521,13 @@ function Get-MailContentEn($siteName){
 	$retStr += "The following documents that you have uploaded were received by the system:" + $crlf
 	$retStr += "[documentsListContent]" + $crlf
 	$retStr += "" + $crlf
-	$retStr += "<br>" + $crlf
+	$retStr += "<br>" +$faculty  +   $crlf + "<br>" +   $crlf
 	$retStr += "The Hebrew University in Jerusalem" + $crlf
 
 	return $retStr
 }
 
-function Get-MailContentHe($siteName){
+function Get-MailContentHe($siteName,$faculty){
 	$crlf = [char][int]13 + [char][int]10
 
 	$retStr  = "<br>"+ $crlf
@@ -3268,6 +3542,7 @@ function Get-MailContentHe($siteName){
 	$retStr += "" + $crlf
 	$retStr += "<br>" + $crlf
 	$retStr += "בברכה,<br>" + $crlf
+	$retStr += $faculty  +   "<br>" +   $crlf	
 	$retStr += "האוניברסיטה העברית בירושלים" + $crlf
 	
 	return $retStr
@@ -3959,4 +4234,338 @@ function Log-Generate($spObj,$newSite){
 	$htmlTemplate | Out-File $outLog -encoding UTF8 | out-null
 	Invoke-Expression $outLog
 	return $null
+}
+function get-FormFieldsOrder($listName,	$siteURL){
+	$fieldOrder = @()
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	
+	$contentTypes = $list.ContentTypes
+    $ctx.Load($contentTypes)
+	$ctx.ExecuteQuery()
+	
+	$itemContenType = $contentTypes[0]
+	$ctx.Load($itemContenType)
+	$ctx.ExecuteQuery()
+	
+	$FieldLinks = $itemContenType.FieldLinks
+	$ctx.Load($FieldLinks)
+	$ctx.ExecuteQuery()
+	
+    foreach($el in $FieldLinks){
+		if (!$($el.Name -eq "ContentType")){
+			$fieldOrder += $el.Name
+		}
+	}		
+	
+	return $fieldOrder
+}
+function reorder-FormFields($listName,	$siteURL,$fieldOrder){
+	Write-Host "Reorder Fields on $listName" -foregroundcolor Green	
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	
+	$contentTypes = $list.ContentTypes
+    $ctx.Load($contentTypes)
+	$ctx.ExecuteQuery()
+	
+	$itemContenType = $contentTypes[0]
+	$ctx.Load($itemContenType)
+	$ctx.ExecuteQuery()
+	
+	$FieldLinks = $itemContenType.FieldLinks
+	$ctx.Load($FieldLinks)
+	$ctx.ExecuteQuery()
+	
+
+	$FieldLinks.Reorder($fieldOrder);
+	$itemContenType.Update($false);
+	$ctx.ExecuteQuery()
+	Write-Host "Done"  -foregroundcolor Green	
+	return $null
+}
+function checkForArrElExists($srcArr,$destArr){
+	$resultArr = @()
+	foreach($srcEl in $srcArr){
+		$found = $false
+		foreach($dstEl in $destArr){
+			if ($srcEl -eq $dstEl){
+				$resultArr += $srcEl
+				$found = $true
+				break;
+			}
+		}
+		if (!$found){
+			write-Host "checkForArrElExists : $srcEl not exists in Destination" -foregroundcolor Yellow
+		}
+	}
+	return $resultArr
+}
+function Get-AllViews($listName,	$siteURL){
+	$arrViews = @()
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	
+	
+	$viewCollection = $List.Views
+	$Ctx.Load($viewCollection)
+	$Ctx.ExecuteQuery()
+		
+	foreach($view in $viewCollection){
+		$viewFieldsColl = $view.ViewFields
+		$Ctx.Load($viewFieldsColl)
+		$Ctx.ExecuteQuery()
+	
+		$objView = "" | Select-Object DefaultView,Aggregations,Title, ServerRelativeUrl,ViewQuery,Fields
+		$objView.DefaultView = $view.DefaultView
+		$objView.Aggregations =  $view.Aggregations
+		$objView.Title =  $view.Title
+		$objView.ServerRelativeUrl =  $view.ServerRelativeUrl
+		$objView.ViewQuery =  $view.ViewQuery
+		
+		$arrFields = @()
+		foreach($fld in $viewFieldsColl)
+		{
+			$arrFields += $fld
+		}
+		$objView.Fields = $arrFields
+		
+		#$view | gm
+		#$view | fl
+		#write-Host $view.Title
+		$arrViews += $objView
+	}
+	return $arrViews	
+}
+function Check-ViewExists($listName,	$siteURL, $viewObj){
+	$viewExists = "" | Select-Object Exists, Title, TitleOld
+	$viewExists.Exists = $false
+	$viewExists.Title = $null
+	
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	
+	
+	$viewCollection = $List.Views
+	$Ctx.Load($viewCollection)
+	$Ctx.ExecuteQuery()
+		
+	foreach($view in $viewCollection){
+		$relUrls = $view.ServerRelativeUrl.split("/")[-1]
+		
+		$relUrlo = $viewObj.ServerRelativeUrl.split("/")[-1]
+		
+		if (($relUrls -eq $relUrlo) -or ($view.Title -eq $viewObj.Title)){
+			#Write-Host "Site View : $relUrls"
+			#Write-Host "Obj View : $relUrlo"
+			$viewExists.Exists = $true
+			$viewExists.Title = $view.Title
+			$viewExists.TitleOld = $viewObj.Title
+			break
+		}
+		
+	}
+	
+	return $viewExists
+}
+function check-FieldInView($listName, $viewTitle, $siteURL, $firstField){
+	$fieldInView = $false
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	
+	
+	$view = $List.Views.getByTitle($viewTitle)	
+	$viewFieldsColl = $view.ViewFields
+	$Ctx.Load($viewFieldsColl)
+	$Ctx.ExecuteQuery()
+		
+
+	foreach($fld in $viewFieldsColl){
+		if ($fld -eq $firstField){
+			$fieldInView = $true
+			break
+		}
+	}
+
+	
+	return $fieldInView
+}
+function Add-FieldInView($listName, $viewTitle, $siteURL, $firstField){
+	$fieldInView = $false
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	$view = $List.Views.getByTitle($viewTitle)
+    $view.ViewFields.Add($firstField)
+	$view.Update()
+	$Ctx.ExecuteQuery()
+	return $null
+	
+}
+function remove-AllFieldsFromViewButOne($listName, $viewTitle, $siteURL, $firstField){
+	
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	$view = $List.Views.getByTitle($viewTitle)
+
+
+	$viewFieldsColl = $view.ViewFields
+	$Ctx.Load($viewFieldsColl)
+	$Ctx.ExecuteQuery()
+		
+    For($i = $viewFieldsColl.Count -1 ; $i -ge 0; $i--){
+	    $fieldN = $viewFieldsColl[$i]
+		
+		if (!$($fieldN -eq $firstField)){
+			#write-host $fieldN 
+			#write-host $firstField 
+			#write-host "Equ: $($fieldN -eq $firstField)"
+			
+			$view.ViewFields.Remove($fieldN)
+			$view.Update()
+			$Ctx.ExecuteQuery()
+		}
+	}	
+	return $null
+}
+function Add-FieldsToView($listName, $viewTitle, $siteURL, $Fields){
+	
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	$view = $List.Views.getByTitle($viewTitle)
+	
+	
+    For($i = 1 ; $i -lt $Fields.Count; $i++){ 	
+            $fieldN = $Fields[$i]	
+		    write-host $fieldN
+			$view.ViewFields.Add($fieldN)
+			$view.Update()
+			$Ctx.ExecuteQuery()		
+	}
+	return $null	
+}
+function Rename-View($listName, $viewTitle, $siteURL,$newTitle){
+	
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	$view = $List.Views.getByTitle($viewTitle)
+	
+	$view.Title = $newTitle	
+	$view.Update()
+	$Ctx.ExecuteQuery()
+	return $null	
+}
+function Create-NewView($siteURL,$listName,$viewTitle,$viewFields,$viewQuery, $viewAggregations, $viewDefault)
+{
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	$Ctx.ExecuteQuery()
+	$List = $Ctx.Web.lists.GetByTitle($listName)
+	
+	$ViewCreationInfo = New-Object Microsoft.SharePoint.Client.ViewCreationInformation
+	
+    $ViewCreationInfo.Title = $viewTitle
+    $ViewCreationInfo.Query = $viewQuery
+    $ViewCreationInfo.ViewFields = $viewFields
+    $ViewCreationInfo.SetAsDefaultView = $viewDefault
+   
+    $NewView =$List.Views.Add($ViewCreationInfo)
+    $Ctx.ExecuteQuery() 
+
+	$NewView.Aggregations = $viewAggregations
+	$NewView.Update()
+	$Ctx.ExecuteQuery()	
+ 	
+	return $null	
+}
+function ConvHexFieldToName($str){
+	$result = ""
+	$aStr = $str.split("_x")
+    for($i=0;$i -lt $aStr.count;$i++){
+		if (![string]::isNullOrEmpty($aStr[$i])){
+			$result += [char][int]$([Convert]::ToString("0x"+$aStr[$i],10))
+		}
+	}
+	return $result
 }
