@@ -46,67 +46,97 @@ else
 			#write-host NewSchema
 			#$applSchmDst
 			
-			$xmlFormPath = $spObj.PathXML + "\" +  $spObj.XMLFile
-			# difference между source и destination. Чего не хватает в destination
-			$schemaDifference = get-SchemaDifference $applSchmSrc $applSchmDst 
 			
-			#write-host $schemaDifference
-			$listObj = Map-LookupFields $schemaDifference $oldSiteURL $xmlFormPath
-			$listObj | ConvertTo-Json -Depth 100 | out-file $("..\JSON\"+$groupName+"-ApplFields.json")
+			$xmlFiles = @()
 			
-			foreach($listName in $($listObj.LookupForm)){
-				Clone-List   $siteUrl $oldSiteURL $listName
-			}
+			$oldXMLMask = $spObj.PathXML + "\"+$spObj.OldSiteSuffix+"*.xml"
 			
-			foreach($listName in $($listObj.LookupLists)){
-				Clone-List   $siteUrl $oldSiteURL $listName
-			}
-			
-			foreach($fieldObj in  $($listObj.FieldMap)){
-				if ($fieldObj.Type -eq "Lookup"){
-					#write-host $fieldObj.FieldObj.DisplayName
-					add-LookupFields $siteUrl "Applicants" $($fieldObj.FieldObj) $($fieldObj.LookupTitle)
+			$oldItems   =  get-Item $oldXMLMask
+			foreach($fitem in  $oldItems){
+				$newFileName = $spObj.PathXML + "\"+$fitem.Name.Replace($spObj.OldSiteSuffix, $spObj.RelURL)
+				if (!$(Test-Path $newFileName)){
+				
+					Copy-Item -Path $($fitem.FullName) -Destination $newFileName
 				}
-			}
+				$xmlFiles += $newFileName
+				
 			
-			foreach($fieldObj in  $($listObj.FieldMap)){
-				if ($fieldObj.Type -eq "Choice"){
-					#write-host $fieldObj.FieldObj.DisplayName
-					add-ChoiceFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
-				}
-			}
+				
+			}			
+			$xmlFiles    +=  $spObj.PathXML + "\" +  $spObj.XMLFile
+			$xmlFiles    +=  $spObj.PathXML + "\" +  $spObj.XMLFileEn
+			$xmlFiles    +=  $spObj.PathXML + "\" +  $spObj.XMLFileHe
+			foreach($xmlFormPath in $xmlFiles){
+				if ($(Test-Path $xmlFormPath)){
+					write-Host $xmlFormPath -f Green
+					#$xmlFormPath = $spObj.PathXML + "\" +  $spObj.XMLFile
+					# difference между source и destination. Чего не хватает в destination
+					$schemaDifference = get-SchemaDifference $applSchmSrc $applSchmDst 
+					
+					#write-host $schemaDifference
+					$listObj = Map-LookupFields $schemaDifference $oldSiteURL $xmlFormPath
+					$listObj | ConvertTo-Json -Depth 100 | out-file $("..\JSON\"+$groupName+"-ApplFields.json")
+					
+					foreach($listName in $($listObj.LookupForm)){
+						Clone-List   $siteUrl $oldSiteURL $listName
+					}
+					
+					foreach($listName in $($listObj.LookupLists)){
+						Clone-List   $siteUrl $oldSiteURL $listName
+					}
+					
+					foreach($fieldObj in  $($listObj.FieldMap)){
+						if ($fieldObj.Type -eq "Lookup"){
+							#write-host $fieldObj.FieldObj.DisplayName
+							add-LookupFields $siteUrl "Applicants" $($fieldObj.FieldObj) $($fieldObj.LookupTitle)
+						}
+					}
+					
+					foreach($fieldObj in  $($listObj.FieldMap)){
+						if ($fieldObj.Type -eq "Choice"){
+							#write-host $fieldObj.FieldObj.DisplayName
+							add-ChoiceFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+						}
+					}
 
-			foreach($fieldObj in  $($listObj.FieldMap)){
-				if ($fieldObj.Type -eq "DateTime"){
-					#write-host $fieldObj.FieldObj.DisplayName
-					add-DateTimeFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
-				}
-			}
+					foreach($fieldObj in  $($listObj.FieldMap)){
+						if ($fieldObj.Type -eq "DateTime"){
+							#write-host $fieldObj.FieldObj.DisplayName
+							add-DateTimeFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+						}
+					}
 
-			foreach($fieldObj in  $($listObj.FieldMap)){
-				if ($fieldObj.Type -eq "Note"){
-					#write-host $fieldObj.FieldObj.DisplayName
-					add-NoteFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
-				}
-			}
+					foreach($fieldObj in  $($listObj.FieldMap)){
+						if ($fieldObj.Type -eq "Note"){
+							#write-host $fieldObj.FieldObj.DisplayName
+							add-NoteFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+						}
+					}
 
-			foreach($fieldObj in  $($listObj.FieldMap)){
-				if ($fieldObj.Type -eq "Text"){
-					#write-host $fieldObj.FieldObj.DisplayName
-					add-TextFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
-				}
-			}
+					foreach($fieldObj in  $($listObj.FieldMap)){
+						if ($fieldObj.Type -eq "Text"){
+							#write-host $fieldObj.FieldObj.DisplayName
+							add-TextFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+						}
+					}
+					
+					foreach($fieldObj in  $($listObj.FieldMap)){
+						if ($fieldObj.Type -eq "Boolean"){
+							#write-host $fieldObj.FieldObj.DisplayName
+							add-BooleanFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+						}
+					}
 
 
-			$applSrcFieldsOrder = get-FormFieldsOrder "Applicants" $oldSiteURL
-			
-			$applDestFieldOrder    = get-FormFieldsOrder "Applicants" $siteURL
-			
-			#check for Field in Destination exist in Source
-			$newFieldOrder = checkForArrElExists $applSrcFieldsOrder $applDestFieldOrder
-			reorder-FormFields "Applicants"	$siteURL $newFieldOrder
-			
-							
+					$applSrcFieldsOrder = get-FormFieldsOrder "Applicants" $oldSiteURL
+					
+					$applDestFieldOrder    = get-FormFieldsOrder "Applicants" $siteURL
+					
+					#check for Field in Destination exist in Source
+					$newFieldOrder = checkForArrElExists $applSrcFieldsOrder $applDestFieldOrder
+					reorder-FormFields "Applicants"	$siteURL $newFieldOrder
+				}	
+			}				
 			#$schemaDifference | out-file "diff.xml" -Encoding Default
 			
 		}

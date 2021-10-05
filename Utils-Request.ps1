@@ -386,6 +386,15 @@ function get-FacultyTitle($groupName, $faculty){
 	$facultyList = Get-FacultyList $($currentSystem.appHomeUrl)
 	
 	$facultyNames = "" | Select-Object TitleEn, TitleHe
+	
+	#write-host $faculty
+	
+	#foreach($item in $facultyList){
+	#	write-Host $item
+	#}
+	
+	
+	
 	foreach($item in $facultyList)
 	{
 		
@@ -398,6 +407,8 @@ function get-FacultyTitle($groupName, $faculty){
 			}
 		#}
 	}
+	#write-host $facultyNames
+	#read-host
 	return $facultyNames
 }
 
@@ -477,19 +488,21 @@ function Add-SiteList($ListObj, $facultyList)
 		$listItem["applicantsGroupSP"] = $ListObj.applicantsGroupSP		
 		$listItem["relativeURL"] = $ListObj.relURL
 		$listItem["template"] = $ListObj.relURL
-		$listItem["language"] = $ListObj.language
+		#$listItem["language"] = $ListObj.language
 		$listItem["adminGroupSP"] = $ListObj.adminGroupSP
 		$listItem["adminGroupSP"] = $ListObj.adminGroupSP
 		
-		if ($ListObj.language -eq "He"){
+		#if ($ListObj.language -eq "He"){
 			$listItem["folderName"] = [char][int]1492 + [char][int]1506 + [char][int]1500 + [char][int]1488 + [char][int]1514 + [char][int]32 + [char][int]1502 + [char][int]1505 + [char][int]1502 + [char][int]1499 + [char][int]1497 + [char][int]1501 + ' -'
 			$listItem["docType"] = [char][int]1514 + [char][int]1493 + [char][int]1499 + [char][int]1503 + [char][int]32 + [char][int]1511 + [char][int]1493 + [char][int]1489 + [char][int]1509
-		}
+			$listItem["language"] = "He"
+		#}
 		
-		if ($ListObj.language -eq "En"){
+		if ($ListObj.language.ToLower().contains("en")){
 		
 			$listItem["docType"] = "Document Type"
 			$listItem["folderName"] = "Documents Upload"
+			$listItem["language"] = "En"
 		}
 		
 		$listItem["mailSuffix"] = $ListObj.mailSuffix
@@ -699,6 +712,11 @@ function Write-TextConfig ($ListObj, $groupName)
 		if ($isDoubleLangugeSite){
 			$fileS += "GoTo Template Infrastructure: cd TemplInf\" +   $ListObj[0].assignedGroup +  $crlf+ $crlf
 		}
+		if (![string]::IsNullOrEmpty($ListObj[0].GRSReponseLetterConfigPath)){
+			$fileS += "================  GRS ================"+  $crlf
+			$fileS += "GoTo ReponseLetterConfig: cd "+$ListObj[0].GRSReponseLetterConfigPath +  $crlf
+			$fileS += "GoTo Old: cd "+$ListObj[0].OldGRSReponseLetterConfigPath +  $crlf
+		}
 		
 		$fileS | Out-File $fName -Encoding UTF8
 		
@@ -736,7 +754,31 @@ function GetPrevXML ($Notes){
 		}	
 	}
 }
-
+function Get-OldSiteSuffix($Notes){
+	if ([string]::isNullOrEmpty($Notes)){
+		return ""
+	}
+	else
+	{
+		If ($Notes.toLower().contains("https://")){
+			
+			$urlArr = $Notes.split("/")
+			# write-Host $urlArr
+			if ($urlArr.Count -ge 6)
+			{
+				return $($urlArr[5]).toUpper()
+			}
+			else
+			{
+				return ""
+			}
+		}
+		else
+		{
+			return ""
+		}	
+	}	
+}
 function GetPrevMAIL ($Notes)
 {
 	if ([string]::isNullOrEmpty($Notes)){
@@ -816,6 +858,7 @@ function delete-ListItemIfEmpty($newSite, $listName){
 	
 }
 function Clone-List($newSite, $oldSite, $listName){
+	
 	$listExists = Check-ListExists $newSite $listName
 	if ($listExists){
 		delete-ListItemIfEmpty $newSite $listName
@@ -823,9 +866,24 @@ function Clone-List($newSite, $oldSite, $listName){
 	else
 	{
 		Write-Host "Create List $listName On $newSite" -foregroundcolor Yellow
-		Create-List $newSite $listName $listName
+		Create-List $newSite $listName $listName $oldListSchema
 	}
-	copy-ListOldToNew $newSite $oldSite $listName
+	
+	$newListSchema = get-ListSchema $newSite $listName
+	$oldListSchema = get-ListSchema $oldSite $listName
+	$schemaDifference = get-SchemaDifference $oldListSchema $newListSchema
+	$listObj = Map-LookupFields $schemaDifference $oldSiteURL ""
+	$listObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$ListName+"-ApplFields.json")
+	$fieldNamesAdditional = @()
+	foreach($fieldObj in  $($listObj.FieldMap)){
+		if ($fieldObj.Type -eq "Text"){
+			#write-host $fieldObj.FieldObj.DisplayName
+			add-TextFields $newSite $listName $($fieldObj.FieldObj)
+			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName	
+		}
+	}	
+	
+	copy-ListOldToNew $newSite $oldSite $listName $fieldNamesAdditional
 }
 function check-DocumentsUploadExists($siteURL, $language){
 	$DocumentsUploadExists = $false
@@ -859,7 +917,7 @@ function check-DocumentsUploadExists($siteURL, $language){
 	}	
 	return $DocumentsUploadExists
 }
-function copy-ListOldToNew($newSite, $oldSite, $listName){
+function copy-ListOldToNew($newSite, $oldSite, $listName, $fieldNamesAdditional){
 
 	$siteUrlNew = get-UrlNoF5 $newSite
 	$siteUrlOld = get-UrlNoF5 $oldSite
@@ -887,14 +945,34 @@ function copy-ListOldToNew($newSite, $oldSite, $listName){
 
 	ForEach($Item in $ListItems){
 		$docTypeItem = "" | Select Title
+		if (!$([string]::IsNullOrEmpty($fieldNamesAdditional))){
+			foreach($addFieldName in $fieldNamesAdditional){
+				#Add-Member -InputObject $docTypeItem -TypeName $addFieldName
+				$docTypeItem | Add-Member -MemberType NoteProperty -Name $addFieldName -Value "" -Force
+			}
+			#$docTypeItem 
+			#read-host
+			$docTypeItem.$addFieldName = $Item[$addFieldName]
+		}
 		
 		$docTypeItem.Title = $Item["Title"]
 
 		$aListOld += $docTypeItem
 
-	}	
-
-
+	}
+	
+	<#
+	if (!$([string]::IsNullOrEmpty($fieldNamesAdditional))){
+		write-Host 963
+		foreach($item in $aListOld){
+			write-Host $item
+		}		
+	
+		write-Host Pause...
+		read-host
+	}
+	#>
+	
 	# Write-Host "Adding To Site: $newSite" -foregroundcolor Green 
 	$ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlNew)  
 	
@@ -918,7 +996,17 @@ function copy-ListOldToNew($newSite, $oldSite, $listName){
 			
 			$listItem = $list.AddItem($listItemInfo)  
 			$listItem["Title"] = $item.Title
+			if (!$([string]::IsNullOrEmpty($fieldNamesAdditional))){
+				foreach($addFieldName in $fieldNamesAdditional){
+					$listItem[$addFieldName] = $item.$addFieldName
+				}
+			}
+			<#
 			
+			ERROR
+			Exception calling "ExecuteQuery" with "0" argument(s): "Column 'כותרת' does
+not exist. It may have been deleted by another user.
+			#>
 			$listItem.Update()      
 			$ctx1.load($list)      
 			$ctx1.executeQuery()  
@@ -1112,6 +1200,9 @@ function get-xFieldObjXML($FieldXML,$cType){
 			$fieldObj.Format = $Format
 			
 			$pos1 = $FieldXMLSrc.IndexOf("<Default>")
+			if ($pos1 -eq -1){
+				$pos1 = $FieldXMLSrc.IndexOf("<CHOICES>")
+			}
 			$subs1 = $FieldXMLSrc.Substring($pos1)
 			#Write-host $subs1
 			$pos2 = $subs1.IndexOf("</CHOICES>")
@@ -1222,7 +1313,7 @@ function add-TextFields($siteUrl, $listName, $fieldObj){
         $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
         if($NewField -ne $NULL) 
         {
-            Write-host "Column $Name already exists in the List!" -f Yellow
+            Write-host "Column $($fieldObj.DisplayName) already exists in the List!" -f Yellow
         }
         else
         {
@@ -1362,7 +1453,8 @@ function add-DateTimeFields($siteUrl, $listName, $fieldObj){
 			$IsRequired = $fieldObj.Required
 			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
             
-			$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Required='$IsRequired' Format='DateOnly' />"
+			#$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Required='$IsRequired' Format='DateOnly' />"
+			$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Required='$IsRequired' />"
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1602,25 +1694,26 @@ function Map-LookupFields($schemaDifference,$SiteURL,$xmlForm){
 
     # Form LookUp Lists
     $LookUpFormLists = @()
-	$xmlControlData = Select-Xml -Path $xmlForm -XPath "/rows/row/control"	| ForEach-Object {$_.Node.List}
-	foreach($el in $xmlControlData){
-		
-		if (!$([string]::isNullOrEmpty($el))){
-			$elExists = $false
-			foreach($luEl in $LookUpLists){
-				if ($luEl.ToLower() -eq $el.ToLower()){
-					$elExists = $true
-					break
+	if (!$([string]::IsNullOrEmpty($xmlForm))){
+		$xmlControlData = Select-Xml -Path $xmlForm -XPath "/rows/row/control"	| ForEach-Object {$_.Node.List}
+		foreach($el in $xmlControlData){
+			
+			if (!$([string]::isNullOrEmpty($el))){
+				$elExists = $false
+				foreach($luEl in $LookUpLists){
+					if ($luEl.ToLower() -eq $el.ToLower()){
+						$elExists = $true
+						break
+					}
+				}
+				if (!$elExists){
+					$LookUpFormLists += $el
 				}
 			}
-			if (!$elExists){
-				$LookUpFormLists += $el
-			}
 		}
+		
+		$LookUpFormLists = $LookUpFormLists  | select -Unique
 	}
-	
-	$LookUpFormLists = $LookUpFormLists  | select -Unique
-	
 	$outMap = "" | Select-Object LookupLists,LookupForm, FieldMap 
 	$outMap.LookupLists = $LookUpLists
 	$outMap.LookupForm = $LookUpFormLists
@@ -1751,7 +1844,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
+	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -1787,7 +1880,7 @@ function get-RequestListObject(){
 					$spRequestsListItem.XMLUploadFileName = $relURL + ".xml"
 
 					$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"
-					
+	
 					$spRequestsListItem.MailFile   = $relURL + "-mail.txt"
 					$spRequestsListItem.MailFileEn = $relURL + "-mail-En.txt"
 					$spRequestsListItem.MailFileHe = $relURL + "-mail-He.txt"
@@ -1855,10 +1948,16 @@ function get-RequestListObject(){
 					$spRequestsListItem.systemURL = $currentSystem.appHomeUrl
 					$spRequestsListItem.systemListName = $currentSystem.listName
 					$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
+					$spRequestsListItem.OldSiteSuffix = Get-OldSiteSuffix $spRequestsListItem.oldSiteURL
 					$spRequestsListItem.isUserContactEmpty = $false
 					$facTitle = get-FacultyTitle $groupName $spRequestsListItem.faculty
 					$spRequestsListItem.facultyTitleEn = $facTitle.TitleEn
 					$spRequestsListItem.facultyTitleHe = $facTitle.TitleHe
+					
+					if ($($groupSuffix.toUpper()) -eq "GRS"){
+						$spRequestsListItem.GRSReponseLetterConfigPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\ResponseLetterConfig\"+$relURL
+						$spRequestsListItem.OldGRSReponseLetterConfigPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\ResponseLetterConfig\" + $spRequestsListItem.OldSiteSuffix
+					}					
 					
 					write-Host "Old Site Name : $($spRequestsListItem.oldSiteURL)" -foregroundcolor Green
 
@@ -2080,16 +2179,23 @@ function change-siteSetting($SiteURL) {
 	 
 		#Set Both current and global navigation settings to structural - Other values: PortalProvider,InheritFromParentWeb ,TaxonomyProvider
 		#$NavigationSettings.GlobalNavigation.Source = "PortalProvider"
+		#$NavigationSettings.GlobalNavigation | gm
 		$NavigationSettings.CurrentNavigation.Source = "PortalProvider"
 	 
 		#Show subsites in Global navigation
-		$Web.AllProperties["__IncludeSubSitesInNavigation"] = $False
+		#$Web.AllProperties["__IncludeSubSitesInNavigation"] = $False
 	 
 		#Show pages in global navigation
-		$Web.AllProperties["__IncludePagesInNavigation"] = $True
+		#$Web.AllProperties["__IncludePagesInNavigation"] = $true
+		
+		# GlobalNavigation Not Show Pages and Not Show Subsites
+		$Web.AllProperties["__GlobalNavigationIncludeTypes"]  = 0;
+		# CurrentNavigation show pages Only
+		$Web.AllProperties["__CurrentNavigationIncludeTypes"] = 2;
+		
 	 
 		#Maximum number of dynamic items to in global navigation
-		$web.AllProperties["__GlobalDynamicChildLimit"] = 15
+		$web.AllProperties["__GlobalDynamicChildLimit"] = 25
 	 
 		#Update Settings
 		$Web.Update()
@@ -2456,10 +2562,16 @@ function edt-cancelCandidacy($newSiteName, $language){
 	if ($language.ToLower().contains("en")){
 		$pageTitle = "Cancel Candidacy"
 	}
-	
+
 	$pageFields = $page.ListItemAllFields
-	$pageContent = get-cancelCandidacyContent $pageFields["PublishingPageContent"] $language
-	$pageFields["PublishingPageContent"] = $pageContent
+	$pContent = get-cancelCandidacyContent $pageFields["PublishingPageContent"] $language
+	
+	#write-Host "2498: Check for  pContent" 
+	#write-Host	$pContent.GetType()
+	#write-Host $pContent
+	
+    #read-host
+	$pageFields["PublishingPageContent"] = $pContent
 	$pageFields["Title"] = $pageTitle
 	$pageFields.Update()
 	
@@ -2474,31 +2586,50 @@ function edt-cancelCandidacy($newSiteName, $language){
 
 function get-cancelCandidacyContent($content, $language)
 {
-	$retContent = ""
-	$wToSearch = 'id="div_'
-	if ($content.contains($wToSearch)){
-		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
-		$idSubst = $content.substring($idPos)
-		$kvPos = $idSubst.IndexOf('"')
-		
-		$sId = $idSubst.Substring(0,$kvPos)
-		#write-host $sId
-		
-		$retContent =  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false" unselectable="on">'
-		$retContent += '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId+'" id="div_'+$sId+'" unselectable="on">'
-		$retContent += '</div>'
-		$retContent += '<div id="vid_'+$sId+'" unselectable="on" style="display: none;">'
-		$retContent += '</div>'
-		$retContent += '</div><div></div>'
-		
-		$langContent = CancelCandidacyContentHe
-		if ($language.ToLower().contains("en")){
-			$langContent = CancelCandidacyContentEn
+	$oWP = Get-WPfromContent $content
+	$editContent = ""
+	
+	$i = 1
+	$wpCount = 0 
+	foreach($wp in $oWP){
+		if ($wp.isWP){
+			$wpCount++
 		}
-		
-     	$retContent = $langContent + $retContent	
+	} 
+	#write-host "cancelCandidacywpCount : $wpCount"
+	#read-host
+	if ($wpCount -eq 1){
+		foreach ($wp in $oWP){
+			if ($wp.isWP){
+				$editContent += $wp.Content 
+			}
+			
+			$i++
+		}
 	}
-	return $retContent
+	else
+	{
+		foreach ($wp in $oWP){
+			if ($i -gt 1){
+				if ($wp.isWP){
+					$editContent += $wp.Content 
+				}	
+			}
+			$i++
+		}		
+    }	
+    
+	$langContent = CancelCandidacyContentHe
+	if ($language.ToLower().contains("en")){
+		$langContent = CancelCandidacyContentEn
+	}
+	
+	$editContent = $langContent + $editContent	
+	#write-Host "Content of cancelCandidacy:"
+	#write-host $editContent.GetType()
+	#write-host $editContent
+	#read-host	
+	return $editContent
 }
 
 function CancelCandidacyContentHe(){
@@ -2510,7 +2641,7 @@ function CancelCandidacyContentHe(){
    <br>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו').</span>
 </div>	
 "@
-	 return '<div><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).</span></span></div>'
+	 return '<div dir="rtl" style="text-align: right;"><h1><span aria-hidden="true"></span>הסרת מועמדות</h1><span class="ms-rteFontSize-2"><span lang="HE">ניתן לבטל מועמדות על ידי לחיצה על כפתור &quot;הסרת מועמדות&quot;.<br/>שימו לב, פעולה זו תסיר מהאתר את כל החומרים שהועלו, ללא אפשרות לשחזור.<br/>לרישום מחדש יש לחזור על תהליך הרישום מההתחלה (מילוי טופס/ העלאת קבצים וכו&#39;).</span></span></div>'
 	#return $retStr
 }
 
@@ -2899,6 +3030,9 @@ function edt-DeleteEmptyFolders($newSiteName, $language){
 	
 	$pageFields = $page.ListItemAllFields
 	$pageContent = get-DeleteEmptyFolders $pageFields["PublishingPageContent"] $language $relUrl
+	#write-host "2962: Check for pageContent"
+	#write-host $pageContent
+	#read-host
 	$pageFields["PublishingPageContent"] = $pageContent
 	$pageFields["Title"] = $pageTitle
 	$pageFields.Update()
@@ -2914,32 +3048,50 @@ function edt-DeleteEmptyFolders($newSiteName, $language){
 
 function get-DeleteEmptyFolders($content, $language)
 {
-	$retContent = ""
-	$wToSearch = 'id="div_'
-	if ($content.contains($wToSearch)){
-		$idPos = $content.IndexOf($wToSearch)+$wToSearch.length
-		$idSubst = $content.substring($idPos)
-		$kvPos = $idSubst.IndexOf('"')
-		
-		$sId = $idSubst.Substring(0,$kvPos)
-		#write-host $sId
-		
-		$retContent =  '<div class="ms-rtestate-read ms-rte-wpbox" contenteditable="false" unselectable="on">'
-		$retContent += '<div class="ms-rtestate-notify  ms-rtestate-read '+$sId+'" id="div_'+$sId+'" unselectable="on">'
-		$retContent += '</div>'
-		$retContent += '<div id="vid_'+$sId+'" unselectable="on" style="display: none;">'
-		$retContent += '</div>'
-		$retContent += '</div><div></div>'
-		
-		$langContent = DeleteEmptyFoldersContentHE
-
-		if ($language.ToLower().contains("en")){
-			$langContent = DeleteEmptyFoldersContentEN
+	$oWP = Get-WPfromContent $content
+	$editContent = ""
+	$i = 1
+	$wpCount = 0 
+	foreach($wp in $oWP){
+		if ($wp.isWP){
+			$wpCount++
 		}
-		
-     	$retContent = $langContent + $retContent	
+	} 
+	#write-host "DeleteEmpty wpCount : $wpCount"
+	#read-host
+	if ($wpCount -eq 1){
+		foreach ($wp in $oWP){
+			if ($wp.isWP){
+				$editContent += $wp.Content 
+			}
+			
+			$i++
+		}
 	}
-	return $retContent
+	else
+	{
+		foreach ($wp in $oWP){
+			if ($i -gt 1){
+				if ($wp.isWP){
+					$editContent += $wp.Content 
+				}	
+			}
+			$i++
+		}		
+    }	
+
+	$langContent = DeleteEmptyFoldersContentHE
+
+	if ($language.ToLower().contains("en")){
+		$langContent = DeleteEmptyFoldersContentEN
+	}
+		
+   	$editContent = $langContent + $editContent	
+  	#write-Host "Content of DeleteEmpty:"
+	#write-host $editContent
+	#read-host	
+
+	return $editContent
 }
 function DeleteEmptyFoldersContentHE(){
 	$strOut = @'
@@ -3002,6 +3154,11 @@ function edt-Form($newSiteName, $language){
 	$page.CheckOut()
 	
 	$pageTitle  = "טופס בקשה"
+	if ($newSiteName.ToLower().contains("grs")){
+		$pageTitle  = "טופס הרשמה"
+	}
+	
+	
 	if ($language.ToLower().contains("en")){
 		$pageTitle = "Application Form"
 	}
@@ -3100,9 +3257,11 @@ function edt-DocUploadWP($siteUrlC , $spObj){
 	$pageURL  = $relUrl + $pageName
 	#$language = $spObj.language
     $languageWP =  1
+	$isDebug = $true
 	if ($spObj.language.toLower().contains("en"))
 	{
 		$languageWP =  2
+		$isDebug = $false
 	}
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
@@ -3131,7 +3290,7 @@ function edt-DocUploadWP($siteUrlC , $spObj){
 				$wp.WebPart.Properties["Config_Path"] = $spObj.XMLUploadPath
 				
 				$wp.WebPart.Properties["Language"] = $languageWP;
-				$wp.WebPart.Properties["Debug"] = $true;
+				$wp.WebPart.Properties["Debug"] = $isDebug;
 				
 				$wp.SaveWebPartChanges();				
 			}		
@@ -3196,6 +3355,62 @@ function edt-FormWP($siteUrlC , $spObj){
 	}
 	$page.CheckIn("Change 'Dynamic Form - v 2.0'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
 	$page.Publish("Change 'Dynamic Form - v 2.0'")
+	$ctx.ExecuteQuery()
+	
+}
+
+function edt-cancelCandidacyHeWP($siteUrlC){
+	$pageName = "Pages/CancelCandidacyHe.aspx"
+	
+	$siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	#$language = $spObj.language
+	$textAlign = 0
+	$textDirection = 0
+	
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "CancelApplicationButton"  from the page CancelCandidacyHe.aspx' -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq "CancelApplicationButton"){
+				
+				$wp.WebPart.Properties["BtnTextEn"] = $wp.WebPart.Properties["BtnTextHe"]
+				$wp.WebPart.Properties["YesBtnTextEn"] = $wp.WebPart.Properties["YesBtnTextHe"]
+				$wp.WebPart.Properties["NoBtnTextEn"] = $wp.WebPart.Properties["NoBtnTextHe"]
+				$wp.WebPart.Properties["ConfirmMsgEn"] = $wp.WebPart.Properties["ConfirmMsgHe"]
+				$wp.WebPart.Properties["SuccessMsgEn"] = $wp.WebPart.Properties["SuccessMsgHe"]
+				$wp.WebPart.Properties["NoBtnTextEn"] = $wp.WebPart.Properties["NoBtnTextHe"]
+				$wp.WebPart.Properties["ModalWinConfirmHeaderEn"] = $wp.WebPart.Properties["ModalWinConfirmHeaderHe"]
+				$wp.WebPart.Properties["ModalWinSuccessHeaderEn"] = $wp.WebPart.Properties["ModalWinSuccessHeaderHe"]
+				
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change 'CancelApplicationButton'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change 'CancelApplicationButton'")
 	$ctx.ExecuteQuery()
 	
 }
@@ -3341,14 +3556,14 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 	
 }
 function SwitchToHeb($pageName, $newSiteName){
-	
+	$relUrl   = get-RelURL $newSiteName
 	$content = '​​<div id="switch-to-lang"><div style="width: 40%; height: 5%; margin-bottom: 1%; margin-left: 66%; float: right;"> &#160;&#160;' 
     $content += '<button class="greenButton" aria-label="English Page" onclick="window.open(&#39;'
-	$content += $newSiteName +"Pages/" + $pageName + ".aspx"
+	$content += $relUrl +"Pages/" + $pageName + ".aspx"
 	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #03515b; width: 20%; height: 5%; text-align: center; color: #ffffff; margin-right: 1%; float: right; display: block; background-color: #03515b;">'
 	$content += '<b>English</b></button>'
 	$content += '<button class="greenButton" aria-label="דף העברית" onclick="window.open(&#39;'
-	$content += $newSiteName +"Pages/" + $pageName + 'He.aspx'
+	$content += $relUrl +"Pages/" + $pageName + 'He.aspx'
 	$content += '&#39;, &#39;_self&#39;)" type="button" formtarget="_self" style="padding: 1%; border: 3px solid #157987; width: 20%; height: 5%; text-align: center; color: #ffffff; float: right; display: block; background-color: #157987;">'
 	$content += '<b>עברית</b></button></div></div>'
 	
@@ -3356,14 +3571,14 @@ function SwitchToHeb($pageName, $newSiteName){
 }
 
 function SwitchToEng($pageName, $newSiteName){
-	
+	$relUrl   = get-RelURL $newSiteName	
 	$content =  '<div id="switch-to-lang">​​<div style="width: 40%; height: 5%; margin-right: 66%; margin-bottom: 1%; float: left;">&#160;&#160; &#160;&#160;'
 	$content += '<button class="greenButton" aria-label="English Page" onclick="window.open(&#39;'
-	$content += $newSiteName +"Pages/" + $pageName + ".aspx"
+	$content += $relUrl +"Pages/" + $pageName + ".aspx"
 	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #157987; width: 19%; height: 5%; text-align: center; color: #ffffff; margin-left: 1%; float: left; display: block; background-color: #157987;">'
 	$content += '<b>English</b></button>'
 	$content += '<button class="greenButton" aria-label="דף העברית" onclick="window.open(&#39;'
-	$content += $newSiteName +"Pages/" + $pageName + 'He.aspx'
+	$content += $relUrl +"Pages/" + $pageName + 'He.aspx'
 	$content += '&#39;, &#39;_self&#39;)" type="button" style="padding: 1%; border: 3px solid #03515b; width: 19%; height: 5%; text-align: center; color: #ffffff; float: left; display: block; background-color: #03515b;">'
 	$content += '<b>עברית​</b></button>​​</div></div>'
 	
@@ -3498,6 +3713,21 @@ function copyMail($spObj){
 		}
 	}		
 }
+function copyUpload($spObj){
+	$uploadPath = $spObj.XMLUploadPath + $spObj.XMLUploadFileName
+	if (!$(Test-Path $uploadPath)){
+		Write-Host  "Copying Upload File $uploadPath" -foregroundcolor Green
+		if (!$(Test-Path $spObj.XMLUploadPath -PathType Container)){
+		    New-Item -ItemType Directory -Force -Path $spObj.XMLUploadPath
+		}
+		$sourceFile = ".\UploadFiles\Template.xml"
+		Copy-Item $sourceFile $uploadPath
+	}
+	else
+	{
+		Write-Host  "Upload File $uploadPath already exists. Not copyied." -foregroundcolor Yellow
+	}
+}
 function psiconv ( $f, $t, $string ) {
 	$enc = [system.text.encoding]
 
@@ -3603,6 +3833,9 @@ function Get-WPfromContent($content){
 					
 						$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
 						$wpObj1.Content = $ostatok
+						#write-Host 3708
+						#write-host $ostatok  -f Cyan
+						#read-host
 						$wpObj1.isWP = $false
 						$asherClass = Get-ASHERClass
 						$wpObj1.PSEdit = $ostatok.contains($asherClass)
@@ -3614,6 +3847,10 @@ function Get-WPfromContent($content){
 							
 							$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
 							$wpObj1.Content = $ostatok
+						#write-Host 3721
+						#write-host $ostatok  -f Cyan
+						#read-host
+								
 							$wpObj1.isWP = $false
 							$asherClass = Get-ASHERClass
 							$wpObj1.PSEdit = $ostatok.contains($asherClass)
@@ -3742,13 +3979,23 @@ function Get-WPfromContent($content){
 		else
 		{
 			if ($content.trim().length -gt 0){
-			
-				$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
-				$wpObj1.Content = $content.trim()
-				$wpObj1.isWP = $false
-				$asherClass = Get-ASHERClass
-				$wpObj1.PSEdit = $ostatok.contains($asherClass)
-				$divObjArr += $wpObj1				
+			    if ($content.trim().toLower().substring(0,6) -eq "</div>")
+				{
+					$content = $content.trim().substring(6)
+					if ($content.trim().length -gt 0){
+					
+						$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+						$wpObj1.Content = $content.trim()
+								#write-Host 3856
+								#write-host $($wpObj1.Content)  -f Cyan
+								#read-host
+							
+						$wpObj1.isWP = $false
+						$asherClass = Get-ASHERClass
+						$wpObj1.PSEdit = $ostatok.contains($asherClass)
+						$divObjArr += $wpObj1
+					}					
+				}
 			}
 			
 			break
@@ -4067,7 +4314,49 @@ function Create-List($siteUrl,$ListTitle,$ListDisplayTitle){
 	$list.Update()
 	$Ctx.Load($list)
 	$Ctx.ExecuteQuery()
+	
 	return $null
+}
+function Create-ListFromTemplate($siteUrl,$ListName,$listTemplateName){
+	$siteName = get-UrlNoF5 $siteURL
+	
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 
+ 
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+	#Get the Custom list template
+	
+	$ListTemplates=$Ctx.site.GetCustomListTemplates($Ctx.site.RootWeb)
+	$Ctx.Load($ListTemplates)
+	$Ctx.ExecuteQuery()
+	
+	$ListTemplate = $ListTemplates | where { $_.Name -eq $listTemplateName } 
+	If($ListTemplate -ne $Null)
+	{
+		#Check if the given List exists
+		$List = $Lists | where {$_.Title -eq $ListName}
+		If($List -eq $Null)
+		{
+			#Create new list from custom list template
+			$ListCreation = New-Object Microsoft.SharePoint.Client.ListCreationInformation
+			$ListCreation.Title = $ListName
+			$ListCreation.ListTemplate = $ListTemplate
+			$List = $Lists.Add($ListCreation)
+			$Ctx.ExecuteQuery()
+			Write-host -f Green "List Created from Custom List Template Successfully!"
+		}
+		else
+		{
+			Write-host -f Yellow "List '$($ListName)' Already Exists!"
+		}
+	}
+	else
+	{
+		Write-host -f Yellow "List Template '$($ListTemplateName)' Not Found!"
+	}
+    return $null
 }
 function Delete-List($siteUrl,$ListName){
 		
@@ -4514,7 +4803,7 @@ function Add-FieldsToView($listName, $viewTitle, $siteURL, $Fields){
 	}
 	return $null	
 }
-function Rename-View($listName, $viewTitle, $siteURL,$newTitle){
+function Rename-View($listName, $viewTitle, $siteURL,$newTitle,$viewQuery){
 	
 	$siteName = get-UrlNoF5 $siteURL
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
@@ -4568,4 +4857,53 @@ function ConvHexFieldToName($str){
 		}
 	}
 	return $result
+}
+function Get-NavigationMenu($siteURL){
+	$menu = @()
+	$siteName = get-UrlNoF5 $siteURL
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+ 	
+    foreach($QuickLaunchLink in $QuickLaunch){	
+		$Ctx.Load($QuickLaunchLink)
+		$Ctx.Load($QuickLaunchLink.Children)
+		$Ctx.ExecuteQuery()
+		
+		$menuItem = "" | Select-Object Title,Url, Children, IsDocLib, IsExternal, IsVisible
+		$menuItem.Url = $QuickLaunchLink.Url
+		$menuItem.Title = $QuickLaunchLink.Title
+		$menuItem.Children = $false
+		$menuItem.IsDocLib = $false
+		$menuItem.IsExternal = $false
+		$menuItem.IsVisible = $false
+		$menu += $menuItem
+		
+		$child = $QuickLaunchLink.Children
+		 
+		foreach($childItem in $child) {
+			$Ctx.Load($childItem)
+			
+			$Ctx.ExecuteQuery()
+			$menuItem = "" | Select-Object Title,Url, Children, IsDocLib, IsExternal, IsVisible
+			$menuItem.Url = $childItem.Url
+			$menuItem.Title = $childItem.Title
+			$menuItem.Children = $true
+			$menuItem.IsDocLib = $childItem.IsDocLib
+			$menuItem.IsExternal = $childItem.IsExternal
+			$menuItem.IsVisible = $childItem.IsVisible
+			$menu += $menuItem
+				
+			#$childItem | gm
+			
+			#$childItem 
+		}		
+	}
+ 
+	
+	return $menu
 }

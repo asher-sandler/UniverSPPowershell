@@ -1,6 +1,6 @@
 function check-DLangTemplInfrastruct($siteUrlC, $spRequestsListObj,$oldSiteExists, $oldSiteName){
 
-	$cpath = "TemplInf\"+$spRequestsListObj.GroupName
+	$cpath = Get-CPath $($spRequestsListObj.GroupName)
 	
 	write-host "Check for Template Infrastructure:  $cpath" -foregroundcolor Green
 	
@@ -14,6 +14,11 @@ function check-DLangTemplInfrastruct($siteUrlC, $spRequestsListObj,$oldSiteExist
 			new-item $pagePath -Type Directory | Out-Null
 		}
 	}
+	$pagePath = $cpath+"\Switch"
+	if (!$(Test-Path $pagePath)){
+		new-item $pagePath -Type Directory | Out-Null
+	}
+	
 	
 
 	foreach($page in $pages){
@@ -37,6 +42,10 @@ function check-DLangTemplInfrastruct($siteUrlC, $spRequestsListObj,$oldSiteExist
 	write-Form			   $cpath $siteUrlC $relUrl 
 	write-Default		   $cpath $siteUrlC $relUrl $($spRequestsListObj.deadLineText) $oldSiteExists $oldSiteName
 
+}
+
+function Get-CPath($groupName){
+	return "TemplInf\"+$groupName
 }
 
 function write-CancelCandidacy($cpath,$siteUrlC){
@@ -68,7 +77,7 @@ function write-CancelCandidacy($cpath,$siteUrlC){
 		if ($wp.isWP){
 			$editContent += $wp.Content 
 		}
-		if ($i -eq 1){
+		if ($i -eq 2){
 			$editContent += $crlf + $contentCancelCandEn + $crlf
 		}
 		$i++
@@ -77,6 +86,7 @@ function write-CancelCandidacy($cpath,$siteUrlC){
 	$editContent | Out-File $editContentPathEn -encoding Default
 
     # ========================= Hebrew =================
+	
 	$contentCancelCandHe =  CancelCandidacyContentHe	
 	
 	$originContentPathHe  = $cpath+"\"+$CurrPage+"\OriginHe.txt"
@@ -91,22 +101,29 @@ function write-CancelCandidacy($cpath,$siteUrlC){
 		if ($wp.isWP){
 			$editContent += $wp.Content 
 		}
-		if ($i -eq 1){
+		if ($i -eq 2){
 			$editContent += $crlf + $contentCancelCandHe + $crlf
 		}
 		$i++
 	}
+	
 	$editContentPathHe  = $cpath+"\"+$CurrPage+"\editHe.txt"
 	$editContent | Out-File $editContentPathHe -encoding Default
 	
 	# ======================== Switch to Lang ===================
 	$sName = get-SiteNameFromNote $siteUrlC
 	$swHe = SwitchToHeb $CurrPage $sName
-	$editContentPathHe  = $cpath+"\"+$CurrPage+"\switchHe.txt"
+	$HeStyle = CancelButtonHeStyle
+	$swHe = $HeStyle + $swHe
+	$editContentPathHe  = $cpath+"\"+$CurrPage+"\SwitchHe.txt"
+	$swHe | Out-File $editContentPathHe -encoding Default
+	$editContentPathHe  = $cpath+"\Switch\"+$CurrPage+"SwitchHe.txt"
 	$swHe | Out-File $editContentPathHe -encoding Default
 	
 	$swEn = SwitchToEng $CurrPage $sName
-	$editContentPathEn  = $cpath+"\"+$CurrPage+"\switchEn.txt"
+	$editContentPathEn  = $cpath+"\"+$CurrPage+"\SwitchEn.txt"
+	$swEn | Out-File $editContentPathEn -encoding Default
+	$editContentPathEn  = $cpath+"\Switch\"+$CurrPage+"SwitchEn.txt"
 	$swEn | Out-File $editContentPathEn -encoding Default
 	
 	
@@ -119,7 +136,10 @@ function write-CancelCandidacy($cpath,$siteUrlC){
 	return $null
 }
 
-
+function CancelButtonHeStyle()
+{
+	return '<style unselectable="on">.cancelBtn {float: right;}</style>​​'
+}
 function write-SubmissionStatus($cpath,$siteUrlC, $relUrl){
  	$crlf = [char][int]13 + [char][int]10   
 	$CurrPage = "SubmissionStatus"
@@ -144,7 +164,7 @@ function write-SubmissionStatus($cpath,$siteUrlC, $relUrl){
 		if ($i -eq 1){
 			$editContent += $crlf + $contentSubmissionEn1 + $crlf
 		}
-		if ($i -eq 3){
+		if ($i -eq 2){
 			$editContent += $crlf + $contentSubmissionEn2 + $crlf
 		}		
 		$i++
@@ -171,7 +191,7 @@ function write-SubmissionStatus($cpath,$siteUrlC, $relUrl){
 		if ($i -eq 1){
 			$editContent += $crlf + $contentSubmissionHe1 + $crlf
 		}
-		if ($i -eq 3){
+		if ($i -eq 2){
 			$editContent += $crlf + $contentSubmissionHe2 + $crlf
 		}		
 		$i++
@@ -182,11 +202,15 @@ function write-SubmissionStatus($cpath,$siteUrlC, $relUrl){
 	# ======================== Switch to Lang ===================
 	$sName = get-SiteNameFromNote $siteUrlC
 	$swHe = SwitchToHeb $CurrPage $sName
-	$editContentPathHe  = $cpath+"\"+$CurrPage+"\switchHe.txt"
+	$editContentPathHe  = $cpath+"\"+$CurrPage+"\SwitchHe.txt"
+	$swHe | Out-File $editContentPathHe -encoding Default
+	$editContentPathHe  = $cpath+"\Switch\"+$CurrPage+"SwitchHe.txt"
 	$swHe | Out-File $editContentPathHe -encoding Default
 	
 	$swEn = SwitchToEng $CurrPage $sName
-	$editContentPathEn  = $cpath+"\"+$CurrPage+"\switchEn.txt"
+	$editContentPathEn  = $cpath+"\"+$CurrPage+"\SwitchEn.txt"
+	$swEn | Out-File $editContentPathEn -encoding Default
+	$editContentPathEn  = $cpath+"\Switch\"+$CurrPage+"SwitchEn.txt"
 	$swEn | Out-File $editContentPathEn -encoding Default
 	
 	
@@ -224,7 +248,7 @@ function write-Recommendations($cpath,$siteUrlC, $relUrl){
 		if ($i -eq 1){
 			$editContent +=  $crlf+ $crlf + $contentRecommendationsEn1 + $crlf+ $crlf
 		}
-		if ($i -eq 3){
+		if ($i -eq 2){
 			$editContent += $crlf+ $crlf + $contentRecommendationsEn2 + $crlf+ $crlf
 		}		
 		$i++
@@ -251,7 +275,7 @@ function write-Recommendations($cpath,$siteUrlC, $relUrl){
 		if ($i -eq 1){
 			$editContent += $crlf+ $crlf + $contentRecommendationsHe1 + $crlf+ $crlf
 		}
-		if ($i -eq 3){
+		if ($i -eq 2){
 			$editContent += $crlf+ $crlf + $contentRecommendationsHe2 + $crlf+ $crlf
 		}		
 		$i++
@@ -262,11 +286,15 @@ function write-Recommendations($cpath,$siteUrlC, $relUrl){
 	# ======================== Switch to Lang ===================
 	$sName = get-SiteNameFromNote $siteUrlC
 	$swHe = SwitchToHeb $CurrPage $sName
-	$editContentPathHe  = $cpath+"\"+$CurrPage+"\switchHe.txt"
+	$editContentPathHe  = $cpath+"\"+$CurrPage+"\SwitchHe.txt"
+	$swHe | Out-File $editContentPathHe -encoding Default
+	$editContentPathHe  = $cpath+"\Switch\"+$CurrPage+"SwitchHe.txt"
 	$swHe | Out-File $editContentPathHe -encoding Default
 	
 	$swEn = SwitchToEng $CurrPage $sName
-	$editContentPathEn  = $cpath+"\"+$CurrPage+"\switchEn.txt"
+	$editContentPathEn  = $cpath+"\"+$CurrPage+"\SwitchEn.txt"
+	$swEn | Out-File $editContentPathEn -encoding Default
+	$editContentPathEn  = $cpath+"\Switch\"+$CurrPage+"SwitchEn.txt"
 	$swEn | Out-File $editContentPathEn -encoding Default
 	
 	
@@ -326,13 +354,18 @@ function write-Form ($cpath,$siteUrlC, $relUrl){
 	
 	# ======================== Switch to Lang ===================
 	$sName = get-SiteNameFromNote $siteUrlC
-	$swHe = SwitchToHeb $CurrPage $sName
-	$editContentPathHe  = $cpath+"\"+$CurrPage+"\switchHe.txt"
+	$swhe  =  DefaultHeStyle
+	$swHe += SwitchToHeb $CurrPage $sName
+	$editContentPathHe  = $cpath+"\"+$CurrPage+"\SwitchHe.txt"
+	$swHe | Out-File $editContentPathHe -encoding Default
+	$editContentPathHe  = $cpath+"\Switch\"+$CurrPage+"SwitchHe.txt"
 	$swHe | Out-File $editContentPathHe -encoding Default
 	
-	$swEn  =  DefaultHeStyle
-	$swEn += SwitchToEng $CurrPage $sName
-	$editContentPathEn  = $cpath+"\"+$CurrPage+"\switchEn.txt"
+	#$swEn  =  DefaultHeStyle
+	$swEn  = SwitchToEng $CurrPage $sName
+	$editContentPathEn  = $cpath+"\"+$CurrPage+"\SwitchEn.txt"
+	$swEn | Out-File $editContentPathEn -encoding Default
+	$editContentPathEn  = $cpath+"\Switch\"+$CurrPage+"SwitchEn.txt"
 	$swEn | Out-File $editContentPathEn -encoding Default
 	
 	return $null
@@ -357,7 +390,6 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $ol
 	if ($oldSiteExists){
 		$oldContentEnOrig = Get-PageContent $oldSiteName "Default" 
 		$oldContentEnOrig = $oldContentEnOrig -Replace $oldRelUrl, $relUrl 
-		
 		$oldContentHeOrig = Get-PageContent $oldSiteName "DefaultHe"
 		$oldContentHeOrig = $oldContentHeOrig -Replace $oldRelUrl, $relUrl 
 
@@ -369,6 +401,8 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $ol
 				$oldContentEn += $wp.Content
 			}
 		}
+		#write-host $oldContentEn -f Cyan
+		#read-host 
 		
 		foreach($wp in $oWPOldHe){
 			if (!$wp.isWP){
@@ -469,24 +503,119 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $ol
 	$swHe = SwitchToHeb $CurrPage $sName
 	
 	
-	$editContentPathHe  = $cpath+"\"+$CurrPage+"\switchHe.txt"
+	$editContentPathHe  = $cpath+"\"+$CurrPage+"\SwitchHe.txt"
 	$swHe | Out-File $editContentPathHe -encoding Default
+	$editContentPathHe  = $cpath+"\Switch\"+$CurrPage+"SwitchHe.txt"
+	$swHe | Out-File $editContentPathHe -encoding Default
+
+
 	
 	$swEn = SwitchToEng $CurrPage $sName
-	$editContentPathEn  = $cpath+"\"+$CurrPage+"\switchEn.txt"
+	$editContentPathEn  = $cpath+"\"+$CurrPage+"\SwitchEn.txt"
 	$swEn | Out-File $editContentPathEn -encoding Default
-	
-	
+	$editContentPathEn  = $cpath+"\Switch\"+$CurrPage+"SwitchEn.txt"
+	$swEn | Out-File $editContentPathEn -encoding Default
 
 	#$pagePath = $cpath+"\"+$CurrPage+"\ContentHe.txt"
 	#$contentCancelCandHe | Out-File $pagePath -encoding Default
 	
-	
-		
 	return $null
 }
 
+function edt-SwitchPage2Lang($SiteName){
+	
+	$siteNameN = get-UrlNoF5 $SiteName
+	$pages = "CancelCandidacy","SubmissionStatus","Recommendations","Form","Default"
+	foreach($pg in $pages){
+		$pageName = "Pages/"+$pg+".aspx"	
+		$relUrl   = get-RelURL $siteNameN
+		
+		$pageURL  = $relUrl + $pageName
+		write-host $pageURL -f Cyan
+		
+		
+		$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN) 
+		$ctx.Credentials = $Credentials	
+		$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+		
+		$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+		
+		Write-Host 'Updating webpart "ContentEditorWebPart"  from the page '+$pg+'.aspx' -ForegroundColor Green
+		$page.CheckOut()	
+		$WebParts = $webpartManager.WebParts
+		$ctx.Load($webpartManager);
+		$ctx.Load($WebParts);
+		$ctx.ExecuteQuery();
+		$contentEdited = $false
+		foreach($wp in $webparts){
+				
+				$ctx.Load($wp.WebPart.Properties)
+				$ctx.Load($wp.WebPart)
+				$ctx.Load($wp)
+				$ctx.ExecuteQuery() 
+				if ($wp.WebPart.Title -eq "ContentEditorWebPart"){
+					if ($contentEdited){
+						$wp.WebPart.Properties["Hidden"] = $true
+					}
+					else
+					{
+						$wp.WebPart.Properties["ContentLink"] = $relUrl + "SwitchModule/"+$pg+"SwitchEn.txt"
+						$contentEdited = $true
+					}
+					$wp.SaveWebPartChanges();
+					#break;
+				}		
+		}
+		$page.CheckIn("Change 'ContentEditorWebPart'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+		$page.Publish("Change 'ContentEditorWebPart'")
+		$ctx.ExecuteQuery()
+		
+		$pageName = "Pages/"+$pg+"He.aspx"	
+		$relUrl   = get-RelURL $siteNameN
+		
+		$pageURL  = $relUrl + $pageName
 
+		$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+		
+		$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+		
+		Write-Host 'Updating webpart "ContentEditorWebPart"  from the page '+$pg+'He.aspx' -ForegroundColor Green
+		$page.CheckOut()	
+		$WebParts = $webpartManager.WebParts
+		$ctx.Load($webpartManager);
+		$ctx.Load($WebParts);
+		$ctx.ExecuteQuery();
+		$contentEdited = $false
+		foreach($wp in $webparts){
+				
+				$ctx.Load($wp.WebPart.Properties)
+				$ctx.Load($wp.WebPart)
+				$ctx.Load($wp)
+				$ctx.ExecuteQuery() 
+				if ($wp.WebPart.Title -eq "ContentEditorWebPart"){
+					if ($contentEdited){
+						$wp.WebPart.Properties["Hidden"] = $true
+					}
+					else
+					{
+						
+						$wp.WebPart.Properties["ContentLink"] = $relUrl + "SwitchModule/"+$pg+"SwitchHe.txt"
+						$contentEdited = $true
+					}
+					$wp.SaveWebPartChanges();
+					
+				}		
+		}
+		$page.CheckIn("Change 'ContentEditorWebPart'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+		$page.Publish("Change 'ContentEditorWebPart'")
+		$ctx.ExecuteQuery()
+		
+		
+	}	
+	
+	
+	return $null	
+}
 function get-NewDefault($newSiteName, $language, $deadline){
 	$crlf = [char][int]13 + [char][int]10
 	$result = ""
@@ -512,6 +641,359 @@ function get-NewDefault($newSiteName, $language, $deadline){
 	}
 	return $result
 }
+function create-DocLib($SiteName, $ListName){
+	$siteNameN = get-UrlNoF5 $SiteName
+    $Context = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN) 
+    $Context.Credentials = $Credentials
+	
+	$LibExists = Check-ListExists $siteNameN  $ListName
+    if (!$LibExists){
+		$ListInfo = New-Object Microsoft.SharePoint.Client.ListCreationInformation
+		$ListInfo.Title = $ListName
+		$ListInfo.TemplateType = 101 #Document Library
+		$List = $Context.Web.Lists.Add($ListInfo)
+		 
+		#Set "New Experience" as list property
+		#$List.ListExperienceOptions = "NewExperience" #Or ClassicExperience
+		$List.Update()
+		$Context.ExecuteQuery()
+
+		
+	}
+	<#
+	$Web = $Ctx.web
+	$FolderURL = "/"+$ListName
+	$Folder = $Web.GetFolderByServerRelativeUrl($FolderURL)
+	
+    $Ctx.Load($Folder)
+    $Ctx.ExecuteQuery()
+     
+    #Break Permission inheritence of the folder - Keep all existing folder permissions & keep Item level permissions
+    $Folder.ListItemAllFields.BreakRoleInheritance($False,$True)
+    $Ctx.ExecuteQuery()
+    Write-host -f Yellow "Folder's Permission inheritance broken..."
+	
+    #Get the SharePoint Group & User
+    $Group =$Web.SiteGroups.GetByName($GroupName)
+    $User = $Web.EnsureUser($UserAccount)
+    $Ctx.load($Group)
+    $Ctx.load($User)
+    $Ctx.ExecuteQuery()
+ 
+    #sharepoint online powershell set permissions on folder
+    #Get the role required
+    $Role = $web.RoleDefinitions.GetByName($PermissionLevel)
+    $RoleDB = New-Object Microsoft.SharePoint.Client.RoleDefinitionBindingCollection($Ctx)
+    $RoleDB.Add($Role)
+          
+    #add sharepoint online group to folder using powershell
+    $GroupPermissions = $Folder.ListItemAllFields.RoleAssignments.Add($Group,$RoleDB)
+ 
+    #powershell add user to sharepoint online folder
+    $UserPermissions = $Folder.ListItemAllFields.RoleAssignments.Add($User,$RoleDB)
+    $Folder.Update()
+    $Ctx.ExecuteQuery()
+     
+    Write-host "Permission Granted Successfully!" -ForegroundColor Green
+    #>
+
+	#Read more: https://www.sharepointdiary.com/2016/09/sharepoint-online-set-folder-permissions-powershell.html#ixzz75IjhppEC	
+  
+	return $null
+}
+function Collect-Navigation($siteURL,$isMenuOld){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "Collect Navigation: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$menuDump = @()
+	
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+ 	
+    foreach($QuickLaunchLink in $QuickLaunch){	
+	    $menuItem =  "" | Select Title, Url, Items, IsOldMenu ,CandidateForDelete
+		$Ctx.Load($QuickLaunchLink)
+		$Ctx.Load($QuickLaunchLink.Children)
+		$Ctx.ExecuteQuery()
+		$menuItem.Title = $QuickLaunchLink.Title
+		$menuItem.Url = $QuickLaunchLink.Url
+		$menuItem.IsOldMenu = $isMenuOld
+		$menuItem.CandidateForDelete = $false
+		
+		$docLibNameHe = "העלאת מסמכים"
+		$docLibNameEn = "Documents Upload"
+		if (($QuickLaunchLink.Title.Contains($docLibNameHe)) -or 
+			($QuickLaunchLink.Title.Contains($docLibNameEn))){
+			continue
+		}
+				
+		#write-host $QuickLaunchLink.Url
+		#write-host $QuickLaunchLink.Title
+
+		$child = $QuickLaunchLink.Children
+		$items = @() 
+		foreach($childItem in $child) {
+			$Ctx.Load($childItem)
+			
+			$Ctx.ExecuteQuery()
+			$submenu = "" | Select Title, Url, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+			$submenu.Title = $childItem.Title
+			$submenu.Url = $childItem.Url
+			$submenu.Type = getMenuItemType $submenu.Url 
+			$submenu.InnerName = getMenuItemInnerName $submenu.Url $submenu.Type
+			$submenu.IsOldMenu = $isMenuOld
+			$submenu.CandidateForDelete = $false
+			$items += $submenu
+			#$childItem | gm
+			#$childItem 
+		}
+		$menuItem.Items = $items
+		$menuDump += $menuItem
+		
+		#read-host
+	}
+	
+	return $menuDump
+	
+	
+}
+function Compare-Navig($menuSrc, $menuDst, $oldSuffix , $newSuffix){
+	$menuW = @()
+	#copy to buffer array
+	foreach($menuD in $menuDst){
+		$menuW += $menuD
+	}	
+
+	
+	foreach($menuD in $menuDst){
+		#write-host $menuD.Title -f Cyan
+
+		$itemExists = $true
+		foreach($menuS in $menuSrc){
+			$menuItemS =  "" | Select Title, Url, OldUrl, Items, IsOldMenu , CandidateForDelete
+			$menuItemS.Title = $menuS.Title
+			$menuItemS.OldUrl = $menuS.Url		
+			$menuItemS.Url = $menuS.Url.Replace($oldSuffix , $newSuffix)			
+			$menuItemS.IsOldMenu = $false			
+			
+            $mItems = @()
+			foreach($item in $menuS.Items)
+            {
+				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+				$newItem.Title = $item.Title
+				$newItem.OldUrl = $item.Url
+				$newItem.Url = $item.Url.Replace($oldSuffix , $newSuffix)
+				$newItem.Type = $item.Type
+				$newItem.InnerName = $item.InnerName
+				$newItem.Name = $item.Name
+				$newItem.IsOldMenu = $false
+				$newItem.CandidateForDelete = $false
+				$mItems += $newItem
+				
+				
+            }	
+			$menuItemS.Items = $mItems			
+			$menuItemS.CandidateForDelete = $false			
+			if (!(menuMainItemExists $menuW $menuS)){
+				#write-host $menuItemS.Title -f Yellow
+				$itemExists = $false
+				break
+			}				
+		}
+		if (!$itemExists){
+			write-host "Item Menu Not Exists: $($menuItemS.Title)" -f Yellow
+			#write-host $menuItemS -f Yellow
+			$menuW += $menuItemS	
+			
+		}
+
+	}	
+	
+	#$outfile = ".\JSON\"+ $groupName+"-MenuDmp-W.json"	
+	#$menuW | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
+    #write-host "menuw"	
+	#read-host
+
+	return $menuW
+}
+function Check-SubNavOldItems($menuSrc, $menuDst, $oldSuffix , $newSuffix){
+	
+	$menuW = @()
+	#copy to buffer array
+	foreach($menuD in $menuDst){
+		$menuW += $menuD
+	}
+
+
+	foreach($menuD in $menuW){
+		$titleMenuD = $menuD.Title
+		$itemsD   = $menuD.Items
+		
+		foreach($menuS in $menuSrc){
+			$titleMenuS = $menuS.Title
+			
+			if ($titleMenuD -eq $titleMenuS){
+				write-host "SubNav: $titleMenuD" -f Cyan
+				$itemsS = $menuS.Items
+				break
+			}
+		}
+		$menuArr = @()
+		foreach($itemS in $itemsS){
+			$itemMenuExists = $false
+			$itemSTitl = $itemS.Title
+			foreach($itemD in $itemsD){
+				$itemDTitl = $itemD.Title
+				if ($itemDTitl -eq $itemSTitl){
+					$itemMenuExists = $true
+					break
+				}
+				 
+				
+			}
+			
+			if (!$itemMenuExists){
+				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+				
+				$newItem.Title = $itemS.Title
+				$newItem.OldUrl = $itemS.Url
+				$newItem.Url = $itemS.Url.Replace($oldSuffix , $newSuffix)
+				$newItem.Type = $itemS.Type
+				$newItem.InnerName = $itemS.InnerName
+				$newItem.Name = $itemS.Name
+				$newItem.IsOldMenu = $false
+				$newItem.CandidateForDelete = $false
+				$menuArr += $newItem
+								
+				write-host "SubNavItem: $itemSTitl" -f Green
+			}
+			else
+			{
+				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+				
+				$newItem.Title = $itemD.Title
+				$newItem.OldUrl = $itemD.OldUrlUrl
+				$newItem.Url = $itemD.Url
+				$newItem.Type = $itemD.Type
+				$newItem.InnerName = $itemD.InnerName
+				$newItem.Name = $itemD.Name
+				$newItem.IsOldMenu =  $itemD.IsOldMenu
+				$newItem.CandidateForDelete = $false
+				$menuArr += $newItem
+				
+			}
+		}
+		$menuD.Items = $menuArr
+		
+	}
+	return $menuW	
+	
+}
+function menuMainItemExists( $outMenu, $menuS){
+	$itemExists = $false
+	foreach($mItm in $outMenu){
+		if ($mItm.Title -eq $menuS.Title){
+			$itemExists = $true
+			break
+		}
+	}
+	return $itemExists
+}
+function getMenuItemType($url){
+	$aItems = $url.split("/")
+	$retValue = ""
+	if ($aItems.Count -ge 5){
+		$retValue = $aItems[4]
+		if (!(($retValue -eq "Lists") -or
+			($retValue -eq "Pages"))){
+			if (($aItems[-2] -eq "Forms") -and	
+				($aItems[-1].contains(".aspx"))){
+				$retValue = "DocLib"	
+			} 
+		}
+	}
+	return $retValue
+}
+function getMenuItemInnerName($url,$itemType){
+	$aItems = $url.split("/")
+	$retValue = ""
+	if ($aItems.Count -ge 5){
+		$retValue = $aItems[4]
+		if ($itemType -eq "Pages"){
+			$retValue = $aItems[-1]
+		}
+		if ($itemType -eq "Lists"){
+			$retValue = $aItems[-2]
+		}		
+	}
+	return $retValue
+}
+function Upload-SwitchFiles($siteName, $groupName){
+	$cpath = "TemplInf\" + $groupName + "\Switch\*.txt" 
+	$items = get-ChildItem $cpath | Select FullName
+	foreach($item in $items){
+		#write-host "Upload file $($item.FullName)" -f Yellow
+		Upload-File $siteName "SwitchModule" $($item.FullName)
+		#write-host "Done" -f Green
+		#read-host
+	}
+	return $null
+}
+function Upload-File($siteName,$libName,$filePath){
+	$siteNameN = get-UrlNoF5 $SiteName
+    $Context = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN) 
+    $Context.Credentials = $Credentials
+
+	#Get the Library
+	$Library =  $Context.Web.Lists.GetByTitle($libName)
+	 
+	#Get the file from disk
+	$FileStream = ([System.IO.FileInfo] (Get-Item $filePath)).OpenRead()
+	#Get File Name from source file path
+	$SourceFileName = Split-path $filePath -leaf
+	   
+	#sharepoint online upload file powershell
+	$FileCreationInfo = New-Object Microsoft.SharePoint.Client.FileCreationInformation
+	$FileCreationInfo.Overwrite = $true
+	$FileCreationInfo.ContentStream = $FileStream
+	$FileCreationInfo.URL = $SourceFileName
+	$FileUploaded = $Library.RootFolder.Files.Add($FileCreationInfo)
+	  
+	#powershell upload single file to sharepoint online
+	$Context.Load($FileUploaded)
+	$Context.ExecuteQuery()
+	 
+	#Close file stream
+	$FileStream.Close()
+
+		
+}
+Function Check-ListExists($SiteName, $ListName)
+{
+	$siteNameN = get-UrlNoF5 $SiteName
+    #Setup the context
+    $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN)
+    $Ctx.Credentials = $Credentials
+ 
+    Try {
+            $List = $Ctx.Web.Lists.GetByTitle($ListName)
+            $Ctx.Load($List)
+            $Ctx.ExecuteQuery()
+            Return $True
+        }
+    Catch [Exception] {
+      # Write-host $_.Exception.Message -f Red
+      Return $False
+     }
+}
 
 function Get-PageContent($SiteName, $pageName){
 	$PageContent = ""
@@ -525,6 +1007,7 @@ function Get-PageContent($SiteName, $pageName){
 	
 	write-host "Page URL: $pageURL"
 	write-host "Site Name: $siteNameNew"
+	write-host "Page: $pageURL"
 	
 	
 	
@@ -571,7 +1054,7 @@ function SubmissionStatusDLangContentEn2(){
 	return $outStr
 }
 function SubmissionStatusDLangContentHe1($relURL){
-		$outStr = '<h1>סטטוס מסמכים</h1>
+		$outStr = '<div dir="rtl" style="text-align:right;"><h1 >סטטוס מסמכים</h1>
 	
 <div style="color: #000000; font-size: medium;"> 
    <font class="ms-rteFontSize-2">
@@ -592,11 +1075,11 @@ function SubmissionStatusDLangContentHe1($relURL){
 		</font>
 	  </span>
 	</font>
-</div>'	
+</div></div>'	
 	return $outStr
 }
 function SubmissionStatusDLangContentHe2($relURL){
-		$outStr = '<div>
+		$outStr = '<div dir="rtl" style="text-align:right;">
    <h1>
       <span aria-hidden="true"></span><span aria-hidden="true"></span><span aria-hidden="true"></span>הגשה</h1>
    <div class="ms-rteFontSize-2">בתום ביצוע כל חובות הבקשה בהתאם להנחיות המנהליות, תוכל/י ללחוץ &#39;הגשה&#39;. </div>
@@ -759,8 +1242,8 @@ function DefaultDLangContentEn2($relURL){
 }
 
 function DefaultDLangContentHe1($deadLineText){
-	$msg = " תאריך אחרון להגשת "
-	$outStr = '<div style="text-align: center; text-decoration: underline;">' 
+	$msg = " תאריך אחרון להגשת "  
+	$outStr = '<div dir="rtl" style="text-align: center; text-decoration: underline;">' 
 	$outStr += '<strong class="ms-rteFontSize-3 ms-rteForeColor-1" style="text-decoration: underline;">'
 	$outStr += $msg + $deadLineText +"</strong></div>"
  
@@ -987,6 +1470,107 @@ function edt-SubmissionWP2Lang($siteUrlC , $spObj){
 	return $null	
 
 }
+function edt-Form2LangWP($siteUrlC , $spObj){
+	
+	####################   ENGLISH #####################
+	$pageName = "Pages/Form.aspx"
+	
+	$siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = $Credentials
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "Dynamic Form - v 2.0"  from the page Form.aspx' -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq "Dynamic Form - v 2.0"){
+				$wp.WebPart.Properties["filePath"] = $spObj.PathXML
+				$wp.WebPart.Properties["fileName"] = $spObj.XMLFileEn
+				
+				$wp.WebPart.Properties["addColumns"] = $true;
+				$wp.WebPart.Properties["addLists"] = $true;
+				
+				$textAlign = 1  # English
+				$textDirection = 1
+				
+				$wp.WebPart.Properties["textAlign"] = $textAlign;
+				$wp.WebPart.Properties["textDirection"] = $textDirection;
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change 'Dynamic Form - v 2.0'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change 'Dynamic Form - v 2.0'")
+	$ctx.ExecuteQuery()
+
+	####################   HEBREW #####################
+	$pageName = "Pages/FormHe.aspx"
+	
+	# $siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP On $pageName on Site: $siteName" -foregroundcolor Yellow
+	
+	# $relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+
+	
+		
+	#$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	#$Ctx.Credentials = $Credentials
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	Write-Host 'Updating webpart "Dynamic Form - v 2.0"  from the page Form.aspx' -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery() 
+			if ($wp.WebPart.Title -eq "Dynamic Form - v 2.0"){
+				$wp.WebPart.Properties["filePath"] = $spObj.PathXML
+				$wp.WebPart.Properties["fileName"] = $spObj.XMLFileHe
+				
+				$wp.WebPart.Properties["addColumns"] = $true;
+				$wp.WebPart.Properties["addLists"] = $true;
+				$textAlign = 0 # Hebrew
+				$textDirection = 0
+				
+				$wp.WebPart.Properties["textAlign"] = $textAlign;
+				$wp.WebPart.Properties["textDirection"] = $textDirection;
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change 'Dynamic Form - v 2.0'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change 'Dynamic Form - v 2.0'")
+	$ctx.ExecuteQuery()
+		
+}
 function edt-Form2Lang($newSiteName){
 	$pageName = "Pages/Form.aspx"
 	
@@ -1022,19 +1606,91 @@ function edt-Form2Lang($newSiteName){
 	write-host "$pageName Was Updated" -foregroundcolor Green
 	
 }
-function edt-SubmissionStatus2Lang($newSiteName){
-	$pageName = "Pages/SubmissionStatus.aspx"
+function edt-Default2Lang($newSiteName, $groupName){
+	$CurrPage = "Default"
+	$pageName = "Pages/"+$CurrPage + ".aspx"
 	
+	# Get Content for Saves Files
+	$editContentPathEn  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editEn.txt"
+	$editContentPathHe  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editHe.txt"
+	$contentEn = Get-Content $editContentPathEn -encoding Default -Raw
+	$contentHe = Get-Content $editContentPathHe -encoding Default -Raw
+	
+	# Connect to site
 	$siteName = get-UrlNoF5 $newSiteName
-	
 	$relUrl   = get-RelURL $siteName
 	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = $Credentials
+	
+	################   ENGLISH  PAGE ################	
 	$pageURL  = $relUrl + $pageName
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageFields = $page.ListItemAllFields
+	
+	$pageFields["PublishingPageContent"] = $contentEn	
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+
+	################   HEBREW ################
+	
+	$pageName = "Pages/"+$CurrPage + "He.aspx"
+	$pageURL  = $relUrl + $pageName
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageFields = $page.ListItemAllFields
+	$pageFields["PublishingPageContent"] = $contentHe
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+   	
+		
+}
+function edt-SubmissionStatus2Lang($newSiteName, $groupName){
+	$CurrPage = "SubmissionStatus"
+	$pageName = "Pages/"+$CurrPage + ".aspx"
+	
+	# Get Content for Saves Files
+	$editContentPathEn  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editEn.txt"
+	$editContentPathHe  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editHe.txt"
+	$contentEn = Get-Content $editContentPathEn -encoding Default -Raw
+	$contentHe = Get-Content $editContentPathHe -encoding Default -Raw
+	
+	# Connect to site
+	$siteName = get-UrlNoF5 $newSiteName
+	$relUrl   = get-RelURL $siteName
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
 	$Ctx.Credentials = $Credentials
-
+	
+	################   ENGLISH  PAGE ################	
+	$pageURL  = $relUrl + $pageName
 	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
 	
 	$ctx.Load($page);
@@ -1046,6 +1702,7 @@ function edt-SubmissionStatus2Lang($newSiteName){
 	$pageFields = $page.ListItemAllFields
 	$pageTitle = "Submission Status"
 	$pageFields["Title"] = $pageTitle
+	$pageFields["PublishingPageContent"] = $contentEn	
 	$pageFields.Update()
 	
 	$ctx.Load($pageFields)
@@ -1055,23 +1712,122 @@ function edt-SubmissionStatus2Lang($newSiteName){
 	
 	$ctx.ExecuteQuery()	
 	write-host "$pageName Was Updated" -foregroundcolor Green
+
+	################   HEBREW ################
+	
+	$pageName = "Pages/"+$CurrPage + "He.aspx"
+	$pageURL  = $relUrl + $pageName
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageFields = $page.ListItemAllFields
+	$pageFields["PublishingPageContent"] = $contentHe
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+   	
+		
+}
+function edt-Recommendations2Lang($newSiteName, $groupName){
+	$CurrPage = "Recommendations"
+	$pageName = "Pages/"+$CurrPage + ".aspx"
+	
+	# Get Content for Saves Files
+	$editContentPathEn  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editEn.txt"
+	$editContentPathHe  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editHe.txt"
+	$contentEn = Get-Content $editContentPathEn -encoding Default -Raw
+	$contentHe = Get-Content $editContentPathHe -encoding Default -Raw
+	
+	# Connect to site
+	$siteName = get-UrlNoF5 $newSiteName
+	$relUrl   = get-RelURL $siteName
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = $Credentials
+	
+	################   ENGLISH  PAGE ################	
+	$pageURL  = $relUrl + $pageName
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageFields = $page.ListItemAllFields
+	# $pageTitle = "Submission Status"
+	# $pageFields["Title"] = $pageTitle
+	$pageFields["PublishingPageContent"] = $contentEn	
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+
+	################   HEBREW ################
+	
+	$pageName = "Pages/"+$CurrPage + "He.aspx"
+	$pageURL  = $relUrl + $pageName
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+	
+	$pageFields = $page.ListItemAllFields
+	$pageFields["PublishingPageContent"] = $contentHe
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+   	
 		
 }
 
-function edt-cancelCandidacy2Lang($newSiteName){
-	$pageName = "Pages/CancelCandidacy.aspx"
+function edt-cancelCandidacy2Lang($newSiteName, $groupName){
+	$CurrPage = "CancelCandidacy"
+	$pageName = "Pages/"+$CurrPage + ".aspx"
+	
+	# Get Content for Saves Files
+	$editContentPathEn  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editEn.txt"
+	$editContentPathHe  = $(Get-CPath $groupName)+"\"+$CurrPage+"\editHe.txt"
+	$contentEn = Get-Content $editContentPathEn -encoding Default -Raw
+	$contentHe = Get-Content $editContentPathHe -encoding Default -Raw
+	
+	# Connect to site
 	$siteName = get-UrlNoF5 $newSiteName
 	
 	$relUrl   = get-RelURL $siteName
 	
-	$pageURL  = $relUrl + $pageName
-	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
 	$Ctx.Credentials = $Credentials
 
+	################   ENGLISH  PAGE ################
 
-
+ 	$pageURL  = $relUrl + $pageName
 	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
 	
 	$ctx.Load($page);
@@ -1083,9 +1839,10 @@ function edt-cancelCandidacy2Lang($newSiteName){
 
 	
 	$pageFields = $page.ListItemAllFields
-
+   
 	$pageTitle = "Cancel Candidacy"
 	$pageFields["Title"] = $pageTitle
+	$pageFields["PublishingPageContent"] = $contentEn
 	$pageFields.Update()
 	
 	$ctx.Load($pageFields)
@@ -1096,7 +1853,31 @@ function edt-cancelCandidacy2Lang($newSiteName){
 	$ctx.ExecuteQuery()	
 	write-host "$pageName Was Updated" -foregroundcolor Green
 	
-
+	
+	################   HEBREW ################
+	
+	$pageName = "Pages/"+$CurrPage + "He.aspx"
+	$pageURL  = $relUrl + $pageName
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+	
+	$page.CheckOut()
+		
+	$pageFields = $page.ListItemAllFields
+   	$pageFields["PublishingPageContent"] = $contentHe
+	$pageFields.Update()
+	
+	$ctx.Load($pageFields)
+	$ctx.ExecuteQuery();
+	
+	$page.CheckIn("",1)
+	
+	$ctx.ExecuteQuery()	
+	write-host "$pageName Was Updated" -foregroundcolor Green
+	
 }
 function create-Empty2LangForms( $spObj){
 	$fileNameEn = $spObj.PathXML + "\" + $spObj.XMLFileEn

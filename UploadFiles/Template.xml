@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<config>
+	
+	<mode>applicants</mode>
+	
+	<applicant>    
+		<list>applicants</list>
+		<user_column>userName</user_column>
+		<id_column>userName</id_column>
+	</applicant>
+	
+	<doc_type>
+		<list>docType</list>
+		<permissions>ApplicantPermissions</permissions>
+	</doc_type>
+	
+	<success_message>
+		<upload>
+			<he>הקובץ עלה בהצלחה</he>
+	    	<en>The file was uploaded successfully</en>
+		</upload>
+		<delete>
+			<he>הקובץ נמחק בהצלחה</he>
+			<en>The file was deleted successfully</en>
+		</delete>
+		<read>
+			<he>הקבץ ירד למחשב בהצלחה</he>
+			<en>The file was downloded successfully</en>
+		</read>
+		<file_confirm_delete>
+			<he>?האם למחוק את הקובץ</he>
+			<en>Do you want to delete the file?</en>
+		</file_confirm_delete>
+		<download_btn_text>
+			<he>הורדה</he>
+			<en>Download</en>
+		</download_btn_text>
+	</success_message>
+	
+	<failed_message>
+		<upload>
+			<he>הייתה בעיה בשמירת הקובץ</he>
+			<en>There was an error when uploading the file</en>
+		</upload>
+		<delete>
+			<he>הייתה בעיה במחיקת הקובץ</he>
+			<en>There was an error when deleting the file</en>
+		</delete>
+		<read>
+			<he>הייתה בעיה בהורדת הקובץ</he>
+			<en>There was an error when downloading the file</en>
+		</read>
+		<operation>
+			<he>פעולה שאינה אפשרית</he>
+			<en>Operation error</en>
+		</operation>
+		<file_content>
+			<he>משקל הקובץ גדול מדי</he>
+			<en>The file size is too big</en>
+		</file_content>
+		<file_type>
+			<he>לא ניתן להעלות סוג קובץ זה</he>
+			<en>The file type that you are trying to upload is not allowed</en>
+		</file_type>
+		<file_name>
+			<he>שם הקובץ שהנך מנסה להעלות אינו חוקי</he>
+			<en>There is a problem with the file name</en>
+		</file_name>
+		<file_find>
+			<he>לא ניתן לאתר את הקובץ</he>
+			<en>The file can not be found</en>
+		</file_find>
+	</failed_message>
+	
+	<!--size of file in kilo bytes (KB)-->
+	<size></size>
+	<tooltip>
+		<add>
+			<he>הוסף קובץ</he>
+			<en>Add File</en>
+		</add>
+		<delete>
+			<he>מחק קובץ</he>
+			<en>Delete File</en>
+		</delete>
+	</tooltip>
+	<files>
+		<type>pdf</type>
+		<type>doc</type>
+		<type>docx</type>
+		<type>txt</type>
+	</files>
+</config>

@@ -1,0 +1,404 @@
+[
+    {
+        "Title":  "תפריט ניהול",
+        "Url":  "/home/socialSciences/SOC46-2022/_layouts/viewlsts.aspx?BaseType=0",
+        "Items":  [
+                      {
+                          "Title":  "מועמדים - כללי",
+                          "Url":  "/home/socialSciences/SOC46-2022/Lists/applicants/AllItems.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Lists/applicants/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "מועמדים - מסלול רגיל",
+                          "Url":  "/home/socialSciences/SOC46-2022/Lists/applicants/view1.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Lists/applicants/view1.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "מועמדים - מגזר חרדי",
+                          "Url":  "/home/socialSciences/SOC46-2022/Lists/applicants/view2.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Lists/applicants/view2.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "מועמדים - מגזר ערבי",
+                          "Url":  "/home/socialSciences/SOC46-2022/Lists/applicants/view3.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Lists/applicants/view3.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "רשימת תוכן קובץ",
+                          "Url":  "/home/socialSciences/SOC46-2022/Lists/DocType/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "DocType",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "תיקים שהוגשו",
+                          "Url":  "/home/socialSciences/SOC46-2022/Submitted/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Submitted",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "מחיקת תיקים ריקים",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/DeleteEmptyFolders.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "DeleteEmptyFolders.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "Final",
+                          "Url":  "/home/socialSciences/SOC46-2022/Final/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Final",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "יצירת טופס ראיון - פסיכולוגיה קלינית",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+                          "Type":  "Pages",
+                          "InnerName":  "interviewSchedule306.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "יצירת טופס ראיון - נוירופסיכולוגיה קלינית שיקומית",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule367.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule367.aspx",
+                          "Type":  "Pages",
+                          "InnerName":  "interviewSchedule367.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "טפסי ראיונות PDF",
+                          "Url":  "/home/socialSciences/SOC46-2022/interviewPDF/Forms/AllItems.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/interviewPDF/Forms/AllItems.aspx",
+                          "Type":  "DocLib",
+                          "InnerName":  "interviewPDF",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "ועדות סינון",
+        "Url":  "/home/socialSciences/SOC46-2022",
+        "Items":  [
+                      {
+                          "Title":  "נוירופסיכולוגיה",
+                          "Url":  "/home/socialSciences/SOC46-2022/neuro/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "neuro",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "קלינית",
+                          "Url":  "/home/socialSciences/SOC46-2022/clinical/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "clinical",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "אישית",
+                          "Url":  "/home/socialSciences/SOC46-2022/personal/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "personal",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "חרדי",
+                          "Url":  "/home/socialSciences/SOC46-2022/haredi/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "haredi",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "ערבי",
+                          "Url":  "/home/socialSciences/SOC46-2022/arab/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "arab",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "הגשת מועמדות",
+        "Url":  "/home/socialSciences/SOC46-2022",
+        "Items":  [
+                      {
+                          "Title":  "טופס הרשמה -מסלול רגיל",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/Form.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Pages/Form.aspx",
+                          "Type":  "Pages",
+                          "InnerName":  "Form.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "טופס הרשמה - מגזר חרדי",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/HarediForm.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Pages/HarediForm.aspx",
+                          "Type":  "Pages",
+                          "InnerName":  "HarediForm.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "טופס הרשמה - מגזר ערבי",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/Form3.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Pages/Form3.aspx",
+                          "Type":  "Pages",
+                          "InnerName":  "Form3.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "המלצות",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/Recommendations.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Recommendations.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "תבנית קורות חיים והמלצות",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/CVandRecommendationsForm.aspx",
+                          "OldUrl":  "/home/socialSciences/SOC36-2020/Pages/CVandRecommendationsForm.aspx",
+                          "Type":  "Pages",
+                          "InnerName":  "CVandRecommendationsForm.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "סטטוס הגשה",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/SubmissionStatus.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "SubmissionStatus.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "הסרת מועמדות",
+                          "Url":  "/home/socialSciences/SOC46-2022/Pages/CancelCandidacy.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "CancelCandidacy.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "צור קשר",
+        "Url":  "/home/socialSciences/SOC46-2022/Pages/ContactUs.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "ראיונות",
+        "Url":  "/home/socialSciences/SOC46-2022",
+        "OldUrl":  "/home/socialSciences/SOC36-2020",
+        "Items":  [
+                      {
+                          "Title":  "הלל אביעזר",
+                          "Url":  "/home/socialSciences/SOC46-2022/hillela/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "hillela",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "איתן בכר",
+                          "Url":  "/home/socialSciences/SOC46-2022/eytanba/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "eytanba",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "יונתן הפרט",
+                          "Url":  "/home/socialSciences/SOC46-2022/jonathanHu/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "jonathanHu",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "יפתח יובל",
+                          "Url":  "/home/socialSciences/SOC46-2022/Iftahy/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Iftahy",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "צבי כרמלי",
+                          "Url":  "/home/socialSciences/SOC46-2022/ZviC/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "ZviC",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "תמר פילובסקי-פלג",
+                          "Url":  "/home/socialSciences/SOC46-2022/tammyp/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "tammyp",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "אייל קלנטרוף",
+                          "Url":  "/home/socialSciences/SOC46-2022/eyalkal/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "eyalkal",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "לאורה קנטי",
+                          "Url":  "/home/socialSciences/SOC46-2022/laurac/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "laurac",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "טל שני-אור",
+                          "Url":  "/home/socialSciences/SOC46-2022/shanyurt/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "shanyurt",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "אוריה תשבי",
+                          "Url":  "/home/socialSciences/SOC46-2022/oryaT/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "oryaT",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "שירי בן נאים",
+                          "Url":  "/home/socialSciences/SOC46-2022/shirib/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "shirib",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "איתן כלפה",
+                          "Url":  "/home/socialSciences/SOC46-2022/eitanc/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "eitanc",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      },
+                      {
+                          "Title":  "נילי מור",
+                          "Url":  "/home/socialSciences/SOC46-2022/Nillym/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Nillym",
+                          "Name":  null,
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false
+                      }
+                  ],
+        "IsOldMenu":  false,
+        "CandidateForDelete":  false
+    }
+]

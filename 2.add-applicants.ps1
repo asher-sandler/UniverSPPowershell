@@ -67,6 +67,7 @@ else
 				if ($isDocumentsUploadExists){
 					edt-DocumentsUpload  $siteUrlC  $($spRequestsListObj.language)
 					edt-DocUploadWP $siteUrlC  $spRequestsListObj 
+					copyUpload $spRequestsListObj
 				}
 				
 				if (!$isDoubleLangugeSite){
@@ -104,20 +105,32 @@ else
 						check-DLangTemplInfrastruct  $siteUrlC $spRequestsListObj $oldSiteExists ""
 						#if no form, create form with message, that form is Empty.
 						create-Empty2LangForms $spRequestsListObj
-					}		
-					edt-cancelCandidacy2Lang $siteUrlC
-					edt-SubmissionStatus2Lang $siteUrlC
-					edt-SubmissionWP2Lang $siteUrlC $spRequestsListObj
-					#edt-Recommendations2Lang $siteUrlC
-					edt-Form2Lang $siteUrlC
+					}
+					create-DocLib $siteUrlC	"SwitchModule"
+					edt-cancelCandidacy2Lang $siteUrlC $groupName
+					edt-cancelCandidacyHeWP $siteUrlC 
 					
-					#edt-HomePage2Lang $siteUrlC
+					edt-SubmissionStatus2Lang $siteUrlC $groupName
+					edt-SubmissionWP2Lang $siteUrlC $spRequestsListObj
+					
+					edt-Recommendations2Lang $siteUrlC $groupName
+					# edt-RecommendationsWP2Lang $siteUrlC $spRequestsListObj
+					
+					#edt-Recommendations2Lang $siteUrlC
+					edt-Form2Lang $siteUrlC 
+					edt-Form2LangWP $siteUrlC $spRequestsListObj
+					
+					edt-Default2Lang $siteUrlC $groupName
+					
+					Upload-SwitchFiles $siteUrlC $groupName
+					edt-SwitchPage2Lang $siteUrlC
 					
 					
 				}
 				
 				copyXML  $($spRequestsListObj.PathXML)  $($spRequestsListObj.XMLFile)  $($spRequestsListObj.PreviousXML)  $($spRequestsListObj.language)
 				copyMail $spRequestsListObj
+				
 				Log-Generate $spRequestsListObj $siteUrlC
 				change-applTemplate $siteUrlC  $($spRequestsListObj.language)
 				write-host "Do not forget save ApplicantTemplate as : $($spRequestsListObj.RelURL)" -foregroundcolor Yellow

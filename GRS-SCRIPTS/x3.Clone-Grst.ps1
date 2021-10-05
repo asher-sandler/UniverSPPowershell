@@ -20,8 +20,8 @@ else
 			$Credentials = get-SCred	
 			
 			
-			$siteUrl    = "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022"
-			$oldSiteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU54-2021"
+			$siteUrl    = "https://grs2.ekmd.huji.ac.il/home/Agriculture/AGR13-2021/"
+			$oldSiteURL = "https://grs2.ekmd.huji.ac.il/home/Agriculture/AGR12-2021/"
 			
 			$siteUrl
 			$oldSiteURL
@@ -42,12 +42,13 @@ else
 
 
 			$lists = @()
-			
+			<#
 			$lists += "מסלולים - סמירה"
 			$lists += "מסלולים - בועז"
 			$lists += "מסלולים - עדי"
 			$lists += "מסלולים - אסמהאן"
 			$lists += "מסלולים - פרידה"
+			#>
 			foreach($listName in $lists){
 				write-host "========= Clone Form Lists ===========" -foregroundcolor Green
 				Clone-List   $siteUrl $oldSiteURL $listName

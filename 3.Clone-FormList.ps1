@@ -43,26 +43,58 @@ else
 			#$applSchmSrc
 			#write-host NewSchema
 			#$applSchmDst
+			$xmlFiles = @()
 			
-			$xmlFormPath = $spObj.PathXML + "\" +  $spObj.XMLFile
-			# difference между source и destination. Чего не хватает в destination
-			$schemaDifference = get-SchemaDifference $applSchmSrc $applSchmDst 
+			$oldXMLMask = $spObj.PathXML + "\"+$spObj.OldSiteSuffix+"*.xml"
 			
-			#write-host $schemaDifference
-			$listObj = Map-LookupFields $schemaDifference $oldSiteURL $xmlFormPath
-			$listObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-ApplFields.json")
+			$oldItems   =  get-Item $oldXMLMask
+			foreach($fitem in  $oldItems){
+				$newFileName = $spObj.PathXML + "\"+$fitem.Name.Replace($spObj.OldSiteSuffix, $spObj.RelURL)
+				if (!$(Test-Path $newFileName)){
+				
+					Copy-Item -Path $($fitem.FullName) -Destination $newFileName
+				}
+				$xmlFiles += $newFileName
+				
 			
-			foreach($listName in $($listObj.LookupForm)){
-				write-host "========= Clone Form Lists ===========" -foregroundcolor Green
-				Clone-List   $siteUrl $oldSiteURL $listName
+				
 			}
+			$xmlFiles += $spObj.PathXML + "\" + $spObj.XMLFile
+			$xmlFiles += $spObj.PathXML + "\" + $spObj.XMLFileEn
+			$xmlFiles += $spObj.PathXML + "\" + $spObj.XMLFileHe
+			#write-Host Pause...
+			#read-host
 			
-			foreach($listName in $($listObj.LookupLists)){
-				write-host "========= Clone applicants Lists =========" -foregroundcolor Green
-				Clone-List   $siteUrl $oldSiteURL $listName
-			}
 			
+			#if ($spObj.isDoubleLangugeSite){
 	
+			#}
+			#$xmlFiles
+			$idx=1
+			foreach($xmlFile in $xmlFiles){
+				$xmlFormPath =   $xmlFile
+				write-Host $xmlFormPath -f Green
+				if ($(Test-Path $xmlFormPath)){
+					# difference между source и destination. Чего не хватает в destination
+					$schemaDifference = get-SchemaDifference $applSchmSrc $applSchmDst 
+					
+					#write-host $schemaDifference
+					$listObj = Map-LookupFields $schemaDifference $oldSiteURL $xmlFormPath
+					$listObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-ApplFields-"+$idx.ToString()+".json")
+					
+					foreach($listName in $($listObj.LookupForm)){
+						write-host "========= Clone Form Lists ===========" -foregroundcolor Green
+						Clone-List   $siteUrl $oldSiteURL $listName
+					}
+					
+					foreach($listName in $($listObj.LookupLists)){
+						write-host "========= Clone applicants Lists =========" -foregroundcolor Green
+						Clone-List   $siteUrl $oldSiteURL $listName
+					}
+					$idx ++
+				}
+				
+			}
 		}
 		else
 		{

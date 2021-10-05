@@ -1,0 +1,45 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20210829112249
+Username: EKMD\ashersa
+RunAs User: EKMD\ashersa
+Configuration Name: 
+Machine: DEVORAGO_PC (Microsoft Windows NT 10.0.19043.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 6708
+PSVersion: 5.1.19041.1151
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1151
+BuildVersion: 10.0.19041.1151
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is Test-Applicants-query.log
+Group: GRS_EDU69-2022
+User: AsherSA
+Old Site: https://grs2.ekmd.huji.ac.il/home/Education/EDU55-2021/
+New Site: https://grs.ekmd.huji.ac.il/home/Education/EDU69-2022
+Old Suffix : EDU55-2021
+Pause...
+
+-------------------
+Query  All Items
+Query identical
+-------------------
+Query  short
+Query identical
+-------------------
+Query  English
+Query identical
+-------------------
+Query  Spanish
+Query identical
+-------------------
+Query  Not Submitted
+Query identical
+**********************
+Windows PowerShell transcript end
+End time: 20210829112257
+**********************

@@ -17,6 +17,7 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 $cred = get-SCred
 
  $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+ $siteURL = "https://grs.ekmd.huji.ac.il/home/SocialSciences/SOC36-2020";
  #$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
  
  write-host "URL: $siteURL" -foregroundcolor Yellow
@@ -75,7 +76,7 @@ $cred = get-SCred
 			
 			
 	
-	#>
+	
 	
 	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
 	
@@ -89,6 +90,8 @@ $cred = get-SCred
 			$Ctx.ExecuteQuery()
 		}
 	}
+	#>
+	$menuDump = @()
 	
 	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
 	
@@ -96,30 +99,43 @@ $cred = get-SCred
 	$Ctx.ExecuteQuery()
  	
     foreach($QuickLaunchLink in $QuickLaunch){	
+	    $menuItem =  "" | Select Title, Url, Items
 		$Ctx.Load($QuickLaunchLink)
 		$Ctx.Load($QuickLaunchLink.Children)
 		$Ctx.ExecuteQuery()
-		
+		$menuItem.Title = $QuickLaunchLink.Title
+		$menuItem.Url = $QuickLaunchLink.Url
+		$docLibNameHe = "העלאת מסמכים"
+		if ($QuickLaunchLink.Title.Contains($docLibNameHe)){
+			continue
+		}
 		$QuickLaunchLink.Url
 		$QuickLaunchLink.Title
-		$Ctx.Load($QuickLaunchLink.Properties)
-		$Ctx.ExecuteQuery()
-		 $QuickLaunchLink.Properties["Audience"] 
+		#$Ctx.Load($QuickLaunchLink.Properties)
+		#$Ctx.ExecuteQuery()
+		# $QuickLaunchLink.Properties["Audience"] 
 		
 		#$QuickLaunchLink | gm
 		$child = $QuickLaunchLink.Children
-		 
+		$items = @() 
 		foreach($childItem in $child) {
 			$Ctx.Load($childItem)
 			
 			$Ctx.ExecuteQuery()
+			$submenu = "" | Select Title, Url
+			$submenu.Title = $childItem.Title
+			$submenu.Url = $childItem.Url
+			$items += $submenu
 			#$childItem | gm
-			$childItem 
+			#$childItem 
 		}
-		
+		$menuItem.Items = $items
+		$menuDump += $menuItem
 		
 		#read-host
 	}
+	$outfile = ".\JSON\MenuDmp.json"
+	$menuDump | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
 	#$child = $QuickLaunch.Children 
 	
 	#$Ctx.load($child)

@@ -37,50 +37,80 @@ else
 			
 			$newSite    = get-CreatedSiteName $spObj
 			$oldSite 	= $spObj.oldSiteURL
-			write-host "Old Site: $oldSite" -foregroundcolor Cyan
+			#write-host "Old Site: $oldSite" -foregroundcolor Cyan
 			write-host "New Site: $newSite" -foregroundcolor Green
+			write-host "Pause..." -foregroundcolor Cyan
+			#read-host 
+	
 
-			$listName = "Applicants"
-			$objViews = Get-AllViews $listName $oldSite
-			 
-			$objViews | ConvertTo-Json -Depth 100 | out-file $("..\JSON\Applicants-Views.json")
-			write-host "Pause..."
-			read-host 
-			foreach($view in $objViews){
-				$viewExists = Check-ViewExists $listName  $newSite $view 
-				if ($viewExists.Exists){
-					write-host "view $($view.Title) exists on $newSite" -foregroundcolor Green
-					#check if first field in source view is on destination view
-					$firstField = $view.Fields[0]
-					write-host "First field in source view : $firstField"
-					$fieldInView = check-FieldInView  $listName $($viewExists.Title) $newSite $firstField
-					write-host "$firstField on View : $fieldInView"
-					#if not {add this field}
-					if (!$fieldInView){
-						Add-FieldInView $listName $($viewExists.Title) $newSite $firstField
-						
-					}
-					#delete all fields in destination from view but first field in source
-					 
-					remove-AllFieldsFromViewButOne $listName $($viewExists.Title) $newSite $firstField
-					Add-FieldsToView $listName $($viewExists.Title) $newSite $($view.Fields)
-					#add other view
-					Rename-View $listName $($viewExists.Title) $newSite $($view.Title)
+			$ListName = "ResponseLetters"
+			$listTemplateName = "RespLettr"
+
+			$siteName = get-UrlNoF5 $newSite
+			
+			$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+			$ctx.Credentials = $Credentials
+		 
+		 
+			$Lists = $Ctx.Web.Lists
+			$Ctx.Load($Lists)
+			#Get the Custom list template
+			$Site = $ctx.site
+			$Ctx.Load($Site)
+			$Ctx.ExecuteQuery()
+			#$site | fl
+			
+			
+			$RootWeb = $site.RootWeb
+			$Ctx.Load($RootWeb)
+			$Ctx.ExecuteQuery()
+			$RootWeb | gm
+			
+			$ListTemplates=$Ctx.site.GetCustomListTemplates($Ctx.site.RootWeb)
+			#$ListTemplates=$Ctx.site.GetCustomListTemplates($RootWeb)
+			$Ctx.Load($ListTemplates)
+			$Ctx.ExecuteQuery()
+			
+			
+			$olistTemplateCollection = $ctx.Web.ListTemplates;
+			 $ctx.Load($olistTemplateCollection);
+			 $ctx.ExecuteQuery();
+ 			#$olistTemplateCollection
+			write-Host $listTemplateName -f Yellow
+			foreach ($Templ in $ListTemplates )
+			{
+				# write-Host $($Templ.InternalName) -f Yellow
+			}
+			#Filter Specific List Template
+			$ListTemplate = $ListTemplates | where { $_.Name -eq $listTemplateName } 
+			If($ListTemplate -ne $Null)
+			{
+				#Check if the given List exists
+				$List = $Lists | where {$_.Title -eq $ListName}
+				If($List -eq $Null)
+				{
+					#Create new list from custom list template
+					$ListCreation = New-Object Microsoft.SharePoint.Client.ListCreationInformation
+					$ListCreation.Title = $ListName
+					$ListCreation.ListTemplate = $ListTemplate
+					$List = $Lists.Add($ListCreation)
+					$Ctx.ExecuteQuery()
+					Write-host -f Green "List Created from Custom List Template Successfully!"
 				}
 				else
 				{
-					
-					$viewName = $($view.Title)
-					if ([string]::isNullOrEmpty($viewName)){
-						$viewName = $($view.ServerRelativeUrl.Split("/")[-1]).Replace(".aspx","")
-						
-					}
-					write-host "view $viewName does Not exists on $newSite" -foregroundcolor Yellow
-					$viewDefault = $false
-					Create-NewView $newSite $listName $viewName  $($view.Fields) $($view.Query) $($view.Aggregations) $viewDefault
+					Write-host -f Yellow "List '$($ListName)' Already Exists!"
 				}
 			}
-	 
+			else
+			{
+				Write-host -f Yellow "List Template '$($ListTemplateName)' Not Found!"
+			}
+
+
+			#Create-ListFromTemplate $newSite $ListName $listTemplateName
+			
+
  		}
 		else
 		{
