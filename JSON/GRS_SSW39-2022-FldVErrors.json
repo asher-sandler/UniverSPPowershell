@@ -1,0 +1,239 @@
+[
+    {
+        "ListName":  "Access Requests",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "applicants",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "ApplicantTemplate",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "cancelledApplicantsList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "countryList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "DocType",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Final",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "ממוצע"
+                                     },
+                                     {
+                                         "FieldName":  "אנגלית"
+                                     },
+                                     {
+                                         "FieldName":  "תאריך העברת התיק לפיינל"
+                                     },
+                                     {
+                                         "FieldName":  "סטטיסטיקה"
+                                     },
+                                     {
+                                         "FieldName":  "שיטות מחקר"
+                                     },
+                                     {
+                                         "FieldName":  "מדינת הרווחה"
+                                     },
+                                     {
+                                         "FieldName":  "מסלול מבוקש"
+                                     },
+                                     {
+                                         "FieldName":  "התמחות מבוקשת"
+                                     },
+                                     {
+                                         "FieldName":  "החלטה"
+                                     },
+                                     {
+                                         "FieldName":  "מסלול"
+                                     },
+                                     {
+                                         "FieldName":  "התמחות"
+                                     },
+                                     {
+                                         "FieldName":  "הערות כלליות נוספות"
+                                     },
+                                     {
+                                         "FieldName":  "מכתב קבלה"
+                                     },
+                                     {
+                                         "FieldName":  "דווח 09"
+                                     },
+                                     {
+                                         "FieldName":  "מימוש"
+                                     },
+                                     {
+                                         "FieldName":  "מקדמה"
+                                     },
+                                     {
+                                         "FieldName":  "מוסד לימודים"
+                                     },
+                                     {
+                                         "FieldName":  "מלקת"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "genderListHeb",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "maritalStatusList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "numList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "ResponseLetters",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "specializationList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Submitted",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "description"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "titleListHeb",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "TrackList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yearListHeb",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yesNoList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "גלריית דפים ראשיים",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "דפי אתר",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "דפים",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "מסמכים",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "מראות מורכבים",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "משימות זרימת עבודה",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "נכסים של אתר",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "תבניות המלצה",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "תמונות",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    }
+]

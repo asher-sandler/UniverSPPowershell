@@ -6,101 +6,645 @@
                       {
                           "Title":  "מועמדים - כללי",
                           "Url":  "/home/socialSciences/SOC36-2020/Lists/applicants/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "Lists",
                           "InnerName":  "applicants",
-                          "Name":  null,
+                          "Name":  "applicants",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar37\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField DisplayName=\"firstName\" Name=\"firstName\" Type=\"Text\" ID=\"{012f96a3-6169-4bf6-aa97-c6ea3b0ec88c}\" Group=\"\" StaticName=\"firstName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surname\" Name=\"surname\" Type=\"Text\" ID=\"{95e6bfde-d2b7-4aa3-b6f4-76196a639163}\" Group=\"\" StaticName=\"surname\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"gender\" Name=\"gender\" Type=\"Text\" ID=\"{a8cf3abb-3486-4c81-9f31-41df6c09b43a}\" Group=\"\" StaticName=\"gender\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenship\" Name=\"citizenship\" Type=\"Text\" ID=\"{bd64d1f3-699d-4c52-aa32-7ddd2b563c38}\" Group=\"\" StaticName=\"citizenship\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"email\" Name=\"email\" Type=\"Text\" ID=\"{54f8438b-ab49-45e2-a2ac-069688b37420}\" Group=\"\" StaticName=\"email\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"homePhone\" Name=\"homePhone\" Type=\"Text\" ID=\"{594c3a61-c847-4717-9141-3f5a061f0c8b}\" Group=\"\" StaticName=\"homePhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPhone\" Name=\"workPhone\" Type=\"Text\" ID=\"{ccc5aab7-ed2f-4e43-8910-83c0046bde27}\" Group=\"\" StaticName=\"workPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cellPhone\" Name=\"cellPhone\" Type=\"Text\" ID=\"{b5580ea6-6936-41d2-b6fc-64d4949f12e2}\" Group=\"\" StaticName=\"cellPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"address\" Name=\"address\" Type=\"Text\" ID=\"{b66cb8e7-c330-456d-b4ee-276746e9d691}\" Group=\"\" StaticName=\"address\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"country\" Name=\"country\" Type=\"Text\" ID=\"{518cb54b-2ad2-445e-ba04-de6066c36cfb}\" Group=\"\" StaticName=\"country\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zip\" Name=\"zip\" Type=\"Text\" ID=\"{4723b413-edb7-4f8c-bf34-75f2de1145b3}\" Group=\"\" StaticName=\"zip\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitle\" Name=\"academTitle\" Type=\"Text\" ID=\"{1ef33fd6-0394-4571-8b49-a780132cd538}\" Group=\"\" StaticName=\"academTitle\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"city\" Name=\"city\" Type=\"Text\" ID=\"{f20b85be-f5ab-436a-b0d1-bbb1efc374f3}\" Group=\"\" StaticName=\"city\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"state\" Name=\"state\" Type=\"Text\" ID=\"{4c7d1efa-7728-4f8e-a54c-ffbfe068cb10}\" Group=\"\" StaticName=\"state\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitleHe\" Name=\"academTitleHe\" Type=\"Text\" ID=\"{252ce063-4ac1-41c9-b207-b0d0d917bd3e}\" Group=\"\" StaticName=\"academTitleHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Name=\"firstNameHe\" Type=\"Text\" ID=\"{0fc014a6-af25-47a9-8d35-704044d95049}\" Group=\"\" StaticName=\"firstNameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Name=\"surnameHe\" Type=\"Text\" ID=\"{b45fbff6-bff8-48f5-9e21-b0f1807741cd}\" Group=\"\" StaticName=\"surnameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"IdHe\" Name=\"IdHe\" Type=\"Text\" ID=\"{c15255d4-4f62-4c18-85f4-8845bab27b8d}\" Group=\"\" StaticName=\"IdHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"addressHe\" Name=\"addressHe\" Type=\"Text\" ID=\"{e09c1725-a351-4192-8152-e3134d8227be}\" Group=\"\" StaticName=\"addressHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar21\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"countryHe\" Name=\"countryHe\" Type=\"Text\" ID=\"{012f048a-fafb-42f5-bcaa-2dcecd9b63dc}\" Group=\"\" StaticName=\"countryHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar22\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cityHe\" Name=\"cityHe\" Type=\"Text\" ID=\"{be15e9b4-e255-4b42-99b7-2832217757f5}\" Group=\"\" StaticName=\"cityHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zipHe\" Name=\"zipHe\" Type=\"Text\" ID=\"{1854e4ab-b9c5-4835-93cd-21aa0e6c6527}\" Group=\"\" StaticName=\"zipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenshipHe\" Name=\"citizenshipHe\" Type=\"Text\" ID=\"{6bd8f210-e24b-4631-82c7-4eb554719543}\" Group=\"\" StaticName=\"citizenshipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"userName\" Name=\"userName\" Type=\"Text\" ID=\"{b1c4aeb5-4f44-4cfe-9873-b9db12fdc67f}\" Group=\"\" StaticName=\"userName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderMail\" Name=\"folderMail\" Type=\"Text\" ID=\"{d0fc5d4f-45e1-4d02-aa53-436f04a7981b}\" Group=\"\" StaticName=\"folderMail\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"genderHe\" Name=\"genderHe\" Type=\"Text\" ID=\"{c7112cce-68cb-40fc-acd4-b0bdefaa9f77}\" Group=\"\" StaticName=\"genderHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Format=\"Hyperlink\" Description=\"\" DisplayName=\"folderLink\" Type=\"URL\" ID=\"{4c9ca88b-2269-4a6e-8ea7-00c48f7b3396}\" Name=\"folderLink\" Group=\"\" StaticName=\"folderLink\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar29\" RowOrdinal=\"0\" ColName2=\"nvarchar30\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthYear\" Name=\"birthYear\" Type=\"Text\" ID=\"{c03d3950-3bac-475c-9e0e-b4a2dba9e08e}\" Group=\"\" StaticName=\"birthYear\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderName\" Name=\"folderName\" Type=\"Text\" ID=\"{c9920bf1-c285-4707-9458-c0a19157b30c}\" Group=\"\" StaticName=\"folderName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studentId\" Name=\"studentId\" Type=\"Text\" ID=\"{57f63795-71e5-4006-b92b-6b6604353767}\" Group=\"\" StaticName=\"studentId\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{c10265ac-e797-4c84-8314-d788c9623c67}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" CalType=\"0\" FriendlyDisplayFormat=\"Disabled\" Version=\"4\"\u003e\u003cDefault\u003e2021-05-31T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{67df753e-f9c8-4976-8951-b66d04c7a597}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar34\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{2a593c34-4d37-4a05-9e67-b6ec1154f5aa}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{8c120d6c-a5db-4fc4-a5fb-d6914afe588a}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar35\" RowOrdinal=\"0\" ColName2=\"nvarchar36\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"track\" Type=\"Text\" Required=\"FALSE\" ID=\"{e40fecfb-857a-47c9-9a19-30013bf1284e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"track\" Name=\"track\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization\" Type=\"Text\" Required=\"FALSE\" ID=\"{cd41edb3-5f47-4a12-9bf3-4ef6dcc02141}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization\" Name=\"specialization\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{26583c5e-5a15-4af3-94af-2dff5fe9f73a}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthDate\" Name=\"birthDate\" ColName=\"nvarchar39\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{a2a89edd-0274-4296-8e48-34c571fd1062}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthCountry\" Name=\"birthCountry\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"immigrationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{40a8a3de-f920-4cd0-b9fe-2ae9d1cc4d9e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"immigrationYear\" Name=\"immigrationYear\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phoneHe\" Type=\"Text\" Required=\"FALSE\" ID=\"{9bed9803-fcbb-47ed-98bc-27161d598e76}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"phoneHe\" Name=\"phoneHe\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e8ead77-7813-4cc3-bbd3-7c6ae99b41e0}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeInstitute\" Name=\"firstDegreeInstitute\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishBA\" Type=\"Text\" Required=\"FALSE\" ID=\"{c5ecdb7e-a68c-4152-a121-7984426d1bc8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishBA\" Name=\"finishBA\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeGraduationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{9fb6a699-5be1-43fe-872c-ea4c987780b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeGraduationYear\" Name=\"firstDegreeGraduationYear\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment1\" Type=\"Text\" Required=\"FALSE\" ID=\"{ec9d466f-fe70-48aa-8992-7dc22728fe43}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment1\" Name=\"firstDegreeDepartment1\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade1\" Type=\"Text\" Required=\"FALSE\" ID=\"{52edda2b-4448-4183-886b-740edd50dc78}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade1\" Name=\"firstDegreeDepartmentGrade1\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment2\" Type=\"Text\" Required=\"FALSE\" ID=\"{9de0c847-42d9-4026-895f-a23e69cb3956}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment2\" Name=\"firstDegreeDepartment2\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade2\" Type=\"Text\" Required=\"FALSE\" ID=\"{c8614f16-abc8-443e-97b9-d1836f5418fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade2\" Name=\"firstDegreeDepartmentGrade2\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finalDegreeGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{af2e0fe0-024b-4bf0-a365-40b20a4b8595}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finalDegreeGrade\" Name=\"finalDegreeGrade\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{52f3b47d-9286-4a4c-8984-82d6dc20424f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamYear\" Name=\"mitamExamYear\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{71a52f50-554b-4a6a-bd97-3b3671e56ed6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamGrade\" Name=\"mitamExamGrade\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName1\" Type=\"Text\" Required=\"FALSE\" ID=\"{03ef41ea-49b4-43f0-ab6b-89a5218477be}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName1\" Name=\"refereeName1\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle1\" Type=\"Text\" Required=\"FALSE\" ID=\"{eb0b03bc-ee59-4d65-ae9c-e5a8c872cfc2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle1\" Name=\"refereeJobTitle1\" ColName=\"nvarchar54\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName2\" Type=\"Text\" Required=\"FALSE\" ID=\"{375cf6c1-4ceb-4f42-a306-c7b43f6c5b24}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName2\" Name=\"refereeName2\" ColName=\"nvarchar55\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle2\" Type=\"Text\" Required=\"FALSE\" ID=\"{e770beaa-651d-4dbd-8259-370571655b1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle2\" Name=\"refereeJobTitle2\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"commitmentLetter\" Type=\"Text\" Required=\"FALSE\" ID=\"{76cd1cbd-b8b8-4d99-866a-e4fd5ddb7b0f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"commitmentLetter\" Name=\"commitmentLetter\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{23b6788a-bca1-464a-a33a-04a3aa18fc8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"declaration\" Name=\"declaration\" ColName=\"bit2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization2\" Type=\"Text\" Required=\"FALSE\" ID=\"{3c4f07a5-6cca-4b69-a9e7-d9fc3d3861de}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization2\" Name=\"specialization2\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization3\" Type=\"Text\" Required=\"FALSE\" ID=\"{48dc7a4d-718a-4603-8c67-887bed517215}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization3\" Name=\"specialization3\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishArabOrHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{370d3790-96fb-4782-9d4a-d5e16d62c58b}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishArabOrHarediInstitution\" Name=\"finishArabOrHarediInstitution\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{fad194bf-5604-44b9-9ff4-783faf26b94e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionName\" Name=\"ArabOrHarediInstitutionName\" ColName=\"nvarchar61\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{efae7165-d2fe-4b09-837d-c2f309e0c71f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionCode\" Name=\"ArabOrHarediInstitutionCode\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{a10b7ddf-d0f5-4e71-ad43-7f65085e7b8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishHarediInstitution\" Name=\"finishHarediInstitution\" ColName=\"nvarchar63\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{8f7bea18-f0f7-4cdb-aa02-dac525c2b1d4}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionName\" Name=\"HarediInstitutionName\" ColName=\"nvarchar64\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{0d73316b-426c-4aa5-8438-05ee2443b933}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionCode\" Name=\"HarediInstitutionCode\" ColName=\"nvarchar65\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"clinicalResearcher\" Type=\"Text\" Required=\"FALSE\" ID=\"{1a141d88-395c-41eb-b4b8-3e2e9625b620}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"clinicalResearcher\" Name=\"clinicalResearcher\" ColName=\"nvarchar66\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"A\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{a527daef-40cf-4cba-8cb6-948a7699d3f2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"A\" Name=\"A\" ColName=\"bit3\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"lastSubmit\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{dddd385c-3bae-4e2a-9377-e6f964ce6c53}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"TicketStatus\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{8382b017-022c-4dee-9c70-8cd8798ddd8c}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"TicketStatus\" Name=\"TicketStatus\" ColName=\"nvarchar67\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eממתין לטופס\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eממתין לטופס\u003c/CHOICE\u003e\u003cCHOICE\u003eנוצר טופס\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"AdminUserName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{d1ac163f-ad39-492a-95fe-0144fe40a5b1}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"AdminUserName\" Name=\"AdminUserName\" ColName=\"nvarchar68\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003eEKMD\\sivanb\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"modified\" Type=\"Text\" Required=\"FALSE\" ID=\"{1e719be4-6d49-4fac-b77d-ca7cd2bc0cc6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"modified0\" Name=\"modified0\" ColName=\"nvarchar69\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType1\" Type=\"Text\" Required=\"FALSE\" ID=\"{30f2ecdd-a0df-4f1b-a8f4-9208809de018}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType1\" Name=\"interviewType1\" ColName=\"nvarchar70\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay1\" Type=\"Text\" Required=\"FALSE\" ID=\"{551467fa-1f20-405d-bb5a-d212201be7c8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay1\" Name=\"interviewDay1\" ColName=\"nvarchar71\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate1\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e48c36c-cc47-48d4-ad0d-70d40ab97bd8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate1\" Name=\"interviewDate1\" ColName=\"nvarchar72\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour1\" Type=\"Text\" Required=\"FALSE\" ID=\"{296f4ee2-9615-4757-ac78-393e09590025}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour1\" Name=\"interviewHour1\" ColName=\"nvarchar73\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer1\" Type=\"Text\" Required=\"FALSE\" ID=\"{09a8c77c-2cfc-465c-b6bd-4924e3c919b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer1\" Name=\"interviewer1\" ColName=\"nvarchar74\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom1\" Type=\"Text\" Required=\"FALSE\" ID=\"{cbd3d206-3480-46d6-b91e-b3235bc962ca}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom1\" Name=\"interviewRoom1\" ColName=\"nvarchar75\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType2\" Type=\"Text\" Required=\"FALSE\" ID=\"{6acee900-ee44-4d6c-8740-9a5bc67c8151}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType2\" Name=\"interviewType2\" ColName=\"nvarchar76\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay2\" Type=\"Text\" Required=\"FALSE\" ID=\"{333de2e8-8fa5-45af-8258-4fcd05594e1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay2\" Name=\"interviewDay2\" ColName=\"nvarchar77\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate2\" Type=\"Text\" Required=\"FALSE\" ID=\"{a9b62647-e850-4787-9edb-756bda8de65e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate2\" Name=\"interviewDate2\" ColName=\"nvarchar78\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour2\" Type=\"Text\" Required=\"FALSE\" ID=\"{67afd560-1a50-4cd9-b0a8-f582bce35378}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour2\" Name=\"interviewHour2\" ColName=\"nvarchar79\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer2\" Type=\"Text\" Required=\"FALSE\" ID=\"{48b74314-3df3-41c1-894e-d40f49d32189}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer2\" Name=\"interviewer2\" ColName=\"nvarchar80\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom2\" Type=\"Text\" Required=\"FALSE\" ID=\"{d04451cc-3c98-4532-a9f8-a5d49afb37fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom2\" Name=\"interviewRoom2\" ColName=\"nvarchar81\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "מועמדים - מסלול רגיל",
                           "Url":  "/home/socialSciences/SOC36-2020/Lists/applicants/view1.aspx",
+                          "OldUrl":  null,
                           "Type":  "Lists",
                           "InnerName":  "applicants",
-                          "Name":  null,
+                          "Name":  "applicants",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar37\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField DisplayName=\"firstName\" Name=\"firstName\" Type=\"Text\" ID=\"{012f96a3-6169-4bf6-aa97-c6ea3b0ec88c}\" Group=\"\" StaticName=\"firstName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surname\" Name=\"surname\" Type=\"Text\" ID=\"{95e6bfde-d2b7-4aa3-b6f4-76196a639163}\" Group=\"\" StaticName=\"surname\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"gender\" Name=\"gender\" Type=\"Text\" ID=\"{a8cf3abb-3486-4c81-9f31-41df6c09b43a}\" Group=\"\" StaticName=\"gender\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenship\" Name=\"citizenship\" Type=\"Text\" ID=\"{bd64d1f3-699d-4c52-aa32-7ddd2b563c38}\" Group=\"\" StaticName=\"citizenship\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"email\" Name=\"email\" Type=\"Text\" ID=\"{54f8438b-ab49-45e2-a2ac-069688b37420}\" Group=\"\" StaticName=\"email\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"homePhone\" Name=\"homePhone\" Type=\"Text\" ID=\"{594c3a61-c847-4717-9141-3f5a061f0c8b}\" Group=\"\" StaticName=\"homePhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPhone\" Name=\"workPhone\" Type=\"Text\" ID=\"{ccc5aab7-ed2f-4e43-8910-83c0046bde27}\" Group=\"\" StaticName=\"workPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cellPhone\" Name=\"cellPhone\" Type=\"Text\" ID=\"{b5580ea6-6936-41d2-b6fc-64d4949f12e2}\" Group=\"\" StaticName=\"cellPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"address\" Name=\"address\" Type=\"Text\" ID=\"{b66cb8e7-c330-456d-b4ee-276746e9d691}\" Group=\"\" StaticName=\"address\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"country\" Name=\"country\" Type=\"Text\" ID=\"{518cb54b-2ad2-445e-ba04-de6066c36cfb}\" Group=\"\" StaticName=\"country\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zip\" Name=\"zip\" Type=\"Text\" ID=\"{4723b413-edb7-4f8c-bf34-75f2de1145b3}\" Group=\"\" StaticName=\"zip\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitle\" Name=\"academTitle\" Type=\"Text\" ID=\"{1ef33fd6-0394-4571-8b49-a780132cd538}\" Group=\"\" StaticName=\"academTitle\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"city\" Name=\"city\" Type=\"Text\" ID=\"{f20b85be-f5ab-436a-b0d1-bbb1efc374f3}\" Group=\"\" StaticName=\"city\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"state\" Name=\"state\" Type=\"Text\" ID=\"{4c7d1efa-7728-4f8e-a54c-ffbfe068cb10}\" Group=\"\" StaticName=\"state\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitleHe\" Name=\"academTitleHe\" Type=\"Text\" ID=\"{252ce063-4ac1-41c9-b207-b0d0d917bd3e}\" Group=\"\" StaticName=\"academTitleHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Name=\"firstNameHe\" Type=\"Text\" ID=\"{0fc014a6-af25-47a9-8d35-704044d95049}\" Group=\"\" StaticName=\"firstNameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Name=\"surnameHe\" Type=\"Text\" ID=\"{b45fbff6-bff8-48f5-9e21-b0f1807741cd}\" Group=\"\" StaticName=\"surnameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"IdHe\" Name=\"IdHe\" Type=\"Text\" ID=\"{c15255d4-4f62-4c18-85f4-8845bab27b8d}\" Group=\"\" StaticName=\"IdHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"addressHe\" Name=\"addressHe\" Type=\"Text\" ID=\"{e09c1725-a351-4192-8152-e3134d8227be}\" Group=\"\" StaticName=\"addressHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar21\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"countryHe\" Name=\"countryHe\" Type=\"Text\" ID=\"{012f048a-fafb-42f5-bcaa-2dcecd9b63dc}\" Group=\"\" StaticName=\"countryHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar22\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cityHe\" Name=\"cityHe\" Type=\"Text\" ID=\"{be15e9b4-e255-4b42-99b7-2832217757f5}\" Group=\"\" StaticName=\"cityHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zipHe\" Name=\"zipHe\" Type=\"Text\" ID=\"{1854e4ab-b9c5-4835-93cd-21aa0e6c6527}\" Group=\"\" StaticName=\"zipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenshipHe\" Name=\"citizenshipHe\" Type=\"Text\" ID=\"{6bd8f210-e24b-4631-82c7-4eb554719543}\" Group=\"\" StaticName=\"citizenshipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"userName\" Name=\"userName\" Type=\"Text\" ID=\"{b1c4aeb5-4f44-4cfe-9873-b9db12fdc67f}\" Group=\"\" StaticName=\"userName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderMail\" Name=\"folderMail\" Type=\"Text\" ID=\"{d0fc5d4f-45e1-4d02-aa53-436f04a7981b}\" Group=\"\" StaticName=\"folderMail\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"genderHe\" Name=\"genderHe\" Type=\"Text\" ID=\"{c7112cce-68cb-40fc-acd4-b0bdefaa9f77}\" Group=\"\" StaticName=\"genderHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Format=\"Hyperlink\" Description=\"\" DisplayName=\"folderLink\" Type=\"URL\" ID=\"{4c9ca88b-2269-4a6e-8ea7-00c48f7b3396}\" Name=\"folderLink\" Group=\"\" StaticName=\"folderLink\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar29\" RowOrdinal=\"0\" ColName2=\"nvarchar30\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthYear\" Name=\"birthYear\" Type=\"Text\" ID=\"{c03d3950-3bac-475c-9e0e-b4a2dba9e08e}\" Group=\"\" StaticName=\"birthYear\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderName\" Name=\"folderName\" Type=\"Text\" ID=\"{c9920bf1-c285-4707-9458-c0a19157b30c}\" Group=\"\" StaticName=\"folderName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studentId\" Name=\"studentId\" Type=\"Text\" ID=\"{57f63795-71e5-4006-b92b-6b6604353767}\" Group=\"\" StaticName=\"studentId\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{c10265ac-e797-4c84-8314-d788c9623c67}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" CalType=\"0\" FriendlyDisplayFormat=\"Disabled\" Version=\"4\"\u003e\u003cDefault\u003e2021-05-31T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{67df753e-f9c8-4976-8951-b66d04c7a597}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar34\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{2a593c34-4d37-4a05-9e67-b6ec1154f5aa}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{8c120d6c-a5db-4fc4-a5fb-d6914afe588a}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar35\" RowOrdinal=\"0\" ColName2=\"nvarchar36\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"track\" Type=\"Text\" Required=\"FALSE\" ID=\"{e40fecfb-857a-47c9-9a19-30013bf1284e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"track\" Name=\"track\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization\" Type=\"Text\" Required=\"FALSE\" ID=\"{cd41edb3-5f47-4a12-9bf3-4ef6dcc02141}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization\" Name=\"specialization\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{26583c5e-5a15-4af3-94af-2dff5fe9f73a}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthDate\" Name=\"birthDate\" ColName=\"nvarchar39\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{a2a89edd-0274-4296-8e48-34c571fd1062}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthCountry\" Name=\"birthCountry\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"immigrationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{40a8a3de-f920-4cd0-b9fe-2ae9d1cc4d9e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"immigrationYear\" Name=\"immigrationYear\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phoneHe\" Type=\"Text\" Required=\"FALSE\" ID=\"{9bed9803-fcbb-47ed-98bc-27161d598e76}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"phoneHe\" Name=\"phoneHe\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e8ead77-7813-4cc3-bbd3-7c6ae99b41e0}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeInstitute\" Name=\"firstDegreeInstitute\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishBA\" Type=\"Text\" Required=\"FALSE\" ID=\"{c5ecdb7e-a68c-4152-a121-7984426d1bc8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishBA\" Name=\"finishBA\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeGraduationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{9fb6a699-5be1-43fe-872c-ea4c987780b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeGraduationYear\" Name=\"firstDegreeGraduationYear\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment1\" Type=\"Text\" Required=\"FALSE\" ID=\"{ec9d466f-fe70-48aa-8992-7dc22728fe43}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment1\" Name=\"firstDegreeDepartment1\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade1\" Type=\"Text\" Required=\"FALSE\" ID=\"{52edda2b-4448-4183-886b-740edd50dc78}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade1\" Name=\"firstDegreeDepartmentGrade1\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment2\" Type=\"Text\" Required=\"FALSE\" ID=\"{9de0c847-42d9-4026-895f-a23e69cb3956}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment2\" Name=\"firstDegreeDepartment2\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade2\" Type=\"Text\" Required=\"FALSE\" ID=\"{c8614f16-abc8-443e-97b9-d1836f5418fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade2\" Name=\"firstDegreeDepartmentGrade2\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finalDegreeGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{af2e0fe0-024b-4bf0-a365-40b20a4b8595}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finalDegreeGrade\" Name=\"finalDegreeGrade\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{52f3b47d-9286-4a4c-8984-82d6dc20424f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamYear\" Name=\"mitamExamYear\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{71a52f50-554b-4a6a-bd97-3b3671e56ed6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamGrade\" Name=\"mitamExamGrade\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName1\" Type=\"Text\" Required=\"FALSE\" ID=\"{03ef41ea-49b4-43f0-ab6b-89a5218477be}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName1\" Name=\"refereeName1\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle1\" Type=\"Text\" Required=\"FALSE\" ID=\"{eb0b03bc-ee59-4d65-ae9c-e5a8c872cfc2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle1\" Name=\"refereeJobTitle1\" ColName=\"nvarchar54\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName2\" Type=\"Text\" Required=\"FALSE\" ID=\"{375cf6c1-4ceb-4f42-a306-c7b43f6c5b24}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName2\" Name=\"refereeName2\" ColName=\"nvarchar55\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle2\" Type=\"Text\" Required=\"FALSE\" ID=\"{e770beaa-651d-4dbd-8259-370571655b1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle2\" Name=\"refereeJobTitle2\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"commitmentLetter\" Type=\"Text\" Required=\"FALSE\" ID=\"{76cd1cbd-b8b8-4d99-866a-e4fd5ddb7b0f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"commitmentLetter\" Name=\"commitmentLetter\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{23b6788a-bca1-464a-a33a-04a3aa18fc8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"declaration\" Name=\"declaration\" ColName=\"bit2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization2\" Type=\"Text\" Required=\"FALSE\" ID=\"{3c4f07a5-6cca-4b69-a9e7-d9fc3d3861de}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization2\" Name=\"specialization2\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization3\" Type=\"Text\" Required=\"FALSE\" ID=\"{48dc7a4d-718a-4603-8c67-887bed517215}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization3\" Name=\"specialization3\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishArabOrHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{370d3790-96fb-4782-9d4a-d5e16d62c58b}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishArabOrHarediInstitution\" Name=\"finishArabOrHarediInstitution\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{fad194bf-5604-44b9-9ff4-783faf26b94e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionName\" Name=\"ArabOrHarediInstitutionName\" ColName=\"nvarchar61\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{efae7165-d2fe-4b09-837d-c2f309e0c71f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionCode\" Name=\"ArabOrHarediInstitutionCode\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{a10b7ddf-d0f5-4e71-ad43-7f65085e7b8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishHarediInstitution\" Name=\"finishHarediInstitution\" ColName=\"nvarchar63\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{8f7bea18-f0f7-4cdb-aa02-dac525c2b1d4}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionName\" Name=\"HarediInstitutionName\" ColName=\"nvarchar64\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{0d73316b-426c-4aa5-8438-05ee2443b933}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionCode\" Name=\"HarediInstitutionCode\" ColName=\"nvarchar65\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"clinicalResearcher\" Type=\"Text\" Required=\"FALSE\" ID=\"{1a141d88-395c-41eb-b4b8-3e2e9625b620}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"clinicalResearcher\" Name=\"clinicalResearcher\" ColName=\"nvarchar66\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"A\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{a527daef-40cf-4cba-8cb6-948a7699d3f2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"A\" Name=\"A\" ColName=\"bit3\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"lastSubmit\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{dddd385c-3bae-4e2a-9377-e6f964ce6c53}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"TicketStatus\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{8382b017-022c-4dee-9c70-8cd8798ddd8c}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"TicketStatus\" Name=\"TicketStatus\" ColName=\"nvarchar67\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eממתין לטופס\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eממתין לטופס\u003c/CHOICE\u003e\u003cCHOICE\u003eנוצר טופס\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"AdminUserName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{d1ac163f-ad39-492a-95fe-0144fe40a5b1}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"AdminUserName\" Name=\"AdminUserName\" ColName=\"nvarchar68\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003eEKMD\\sivanb\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"modified\" Type=\"Text\" Required=\"FALSE\" ID=\"{1e719be4-6d49-4fac-b77d-ca7cd2bc0cc6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"modified0\" Name=\"modified0\" ColName=\"nvarchar69\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType1\" Type=\"Text\" Required=\"FALSE\" ID=\"{30f2ecdd-a0df-4f1b-a8f4-9208809de018}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType1\" Name=\"interviewType1\" ColName=\"nvarchar70\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay1\" Type=\"Text\" Required=\"FALSE\" ID=\"{551467fa-1f20-405d-bb5a-d212201be7c8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay1\" Name=\"interviewDay1\" ColName=\"nvarchar71\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate1\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e48c36c-cc47-48d4-ad0d-70d40ab97bd8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate1\" Name=\"interviewDate1\" ColName=\"nvarchar72\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour1\" Type=\"Text\" Required=\"FALSE\" ID=\"{296f4ee2-9615-4757-ac78-393e09590025}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour1\" Name=\"interviewHour1\" ColName=\"nvarchar73\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer1\" Type=\"Text\" Required=\"FALSE\" ID=\"{09a8c77c-2cfc-465c-b6bd-4924e3c919b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer1\" Name=\"interviewer1\" ColName=\"nvarchar74\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom1\" Type=\"Text\" Required=\"FALSE\" ID=\"{cbd3d206-3480-46d6-b91e-b3235bc962ca}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom1\" Name=\"interviewRoom1\" ColName=\"nvarchar75\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType2\" Type=\"Text\" Required=\"FALSE\" ID=\"{6acee900-ee44-4d6c-8740-9a5bc67c8151}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType2\" Name=\"interviewType2\" ColName=\"nvarchar76\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay2\" Type=\"Text\" Required=\"FALSE\" ID=\"{333de2e8-8fa5-45af-8258-4fcd05594e1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay2\" Name=\"interviewDay2\" ColName=\"nvarchar77\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate2\" Type=\"Text\" Required=\"FALSE\" ID=\"{a9b62647-e850-4787-9edb-756bda8de65e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate2\" Name=\"interviewDate2\" ColName=\"nvarchar78\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour2\" Type=\"Text\" Required=\"FALSE\" ID=\"{67afd560-1a50-4cd9-b0a8-f582bce35378}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour2\" Name=\"interviewHour2\" ColName=\"nvarchar79\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer2\" Type=\"Text\" Required=\"FALSE\" ID=\"{48b74314-3df3-41c1-894e-d40f49d32189}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer2\" Name=\"interviewer2\" ColName=\"nvarchar80\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom2\" Type=\"Text\" Required=\"FALSE\" ID=\"{d04451cc-3c98-4532-a9f8-a5d49afb37fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom2\" Name=\"interviewRoom2\" ColName=\"nvarchar81\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "מועמדים - מגזר חרדי",
                           "Url":  "/home/socialSciences/SOC36-2020/Lists/applicants/view2.aspx",
+                          "OldUrl":  null,
                           "Type":  "Lists",
                           "InnerName":  "applicants",
-                          "Name":  null,
+                          "Name":  "applicants",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar37\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField DisplayName=\"firstName\" Name=\"firstName\" Type=\"Text\" ID=\"{012f96a3-6169-4bf6-aa97-c6ea3b0ec88c}\" Group=\"\" StaticName=\"firstName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surname\" Name=\"surname\" Type=\"Text\" ID=\"{95e6bfde-d2b7-4aa3-b6f4-76196a639163}\" Group=\"\" StaticName=\"surname\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"gender\" Name=\"gender\" Type=\"Text\" ID=\"{a8cf3abb-3486-4c81-9f31-41df6c09b43a}\" Group=\"\" StaticName=\"gender\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenship\" Name=\"citizenship\" Type=\"Text\" ID=\"{bd64d1f3-699d-4c52-aa32-7ddd2b563c38}\" Group=\"\" StaticName=\"citizenship\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"email\" Name=\"email\" Type=\"Text\" ID=\"{54f8438b-ab49-45e2-a2ac-069688b37420}\" Group=\"\" StaticName=\"email\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"homePhone\" Name=\"homePhone\" Type=\"Text\" ID=\"{594c3a61-c847-4717-9141-3f5a061f0c8b}\" Group=\"\" StaticName=\"homePhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPhone\" Name=\"workPhone\" Type=\"Text\" ID=\"{ccc5aab7-ed2f-4e43-8910-83c0046bde27}\" Group=\"\" StaticName=\"workPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cellPhone\" Name=\"cellPhone\" Type=\"Text\" ID=\"{b5580ea6-6936-41d2-b6fc-64d4949f12e2}\" Group=\"\" StaticName=\"cellPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"address\" Name=\"address\" Type=\"Text\" ID=\"{b66cb8e7-c330-456d-b4ee-276746e9d691}\" Group=\"\" StaticName=\"address\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"country\" Name=\"country\" Type=\"Text\" ID=\"{518cb54b-2ad2-445e-ba04-de6066c36cfb}\" Group=\"\" StaticName=\"country\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zip\" Name=\"zip\" Type=\"Text\" ID=\"{4723b413-edb7-4f8c-bf34-75f2de1145b3}\" Group=\"\" StaticName=\"zip\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitle\" Name=\"academTitle\" Type=\"Text\" ID=\"{1ef33fd6-0394-4571-8b49-a780132cd538}\" Group=\"\" StaticName=\"academTitle\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"city\" Name=\"city\" Type=\"Text\" ID=\"{f20b85be-f5ab-436a-b0d1-bbb1efc374f3}\" Group=\"\" StaticName=\"city\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"state\" Name=\"state\" Type=\"Text\" ID=\"{4c7d1efa-7728-4f8e-a54c-ffbfe068cb10}\" Group=\"\" StaticName=\"state\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitleHe\" Name=\"academTitleHe\" Type=\"Text\" ID=\"{252ce063-4ac1-41c9-b207-b0d0d917bd3e}\" Group=\"\" StaticName=\"academTitleHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Name=\"firstNameHe\" Type=\"Text\" ID=\"{0fc014a6-af25-47a9-8d35-704044d95049}\" Group=\"\" StaticName=\"firstNameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Name=\"surnameHe\" Type=\"Text\" ID=\"{b45fbff6-bff8-48f5-9e21-b0f1807741cd}\" Group=\"\" StaticName=\"surnameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"IdHe\" Name=\"IdHe\" Type=\"Text\" ID=\"{c15255d4-4f62-4c18-85f4-8845bab27b8d}\" Group=\"\" StaticName=\"IdHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"addressHe\" Name=\"addressHe\" Type=\"Text\" ID=\"{e09c1725-a351-4192-8152-e3134d8227be}\" Group=\"\" StaticName=\"addressHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar21\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"countryHe\" Name=\"countryHe\" Type=\"Text\" ID=\"{012f048a-fafb-42f5-bcaa-2dcecd9b63dc}\" Group=\"\" StaticName=\"countryHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar22\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cityHe\" Name=\"cityHe\" Type=\"Text\" ID=\"{be15e9b4-e255-4b42-99b7-2832217757f5}\" Group=\"\" StaticName=\"cityHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zipHe\" Name=\"zipHe\" Type=\"Text\" ID=\"{1854e4ab-b9c5-4835-93cd-21aa0e6c6527}\" Group=\"\" StaticName=\"zipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenshipHe\" Name=\"citizenshipHe\" Type=\"Text\" ID=\"{6bd8f210-e24b-4631-82c7-4eb554719543}\" Group=\"\" StaticName=\"citizenshipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"userName\" Name=\"userName\" Type=\"Text\" ID=\"{b1c4aeb5-4f44-4cfe-9873-b9db12fdc67f}\" Group=\"\" StaticName=\"userName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderMail\" Name=\"folderMail\" Type=\"Text\" ID=\"{d0fc5d4f-45e1-4d02-aa53-436f04a7981b}\" Group=\"\" StaticName=\"folderMail\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"genderHe\" Name=\"genderHe\" Type=\"Text\" ID=\"{c7112cce-68cb-40fc-acd4-b0bdefaa9f77}\" Group=\"\" StaticName=\"genderHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Format=\"Hyperlink\" Description=\"\" DisplayName=\"folderLink\" Type=\"URL\" ID=\"{4c9ca88b-2269-4a6e-8ea7-00c48f7b3396}\" Name=\"folderLink\" Group=\"\" StaticName=\"folderLink\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar29\" RowOrdinal=\"0\" ColName2=\"nvarchar30\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthYear\" Name=\"birthYear\" Type=\"Text\" ID=\"{c03d3950-3bac-475c-9e0e-b4a2dba9e08e}\" Group=\"\" StaticName=\"birthYear\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderName\" Name=\"folderName\" Type=\"Text\" ID=\"{c9920bf1-c285-4707-9458-c0a19157b30c}\" Group=\"\" StaticName=\"folderName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studentId\" Name=\"studentId\" Type=\"Text\" ID=\"{57f63795-71e5-4006-b92b-6b6604353767}\" Group=\"\" StaticName=\"studentId\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{c10265ac-e797-4c84-8314-d788c9623c67}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" CalType=\"0\" FriendlyDisplayFormat=\"Disabled\" Version=\"4\"\u003e\u003cDefault\u003e2021-05-31T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{67df753e-f9c8-4976-8951-b66d04c7a597}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar34\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{2a593c34-4d37-4a05-9e67-b6ec1154f5aa}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{8c120d6c-a5db-4fc4-a5fb-d6914afe588a}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar35\" RowOrdinal=\"0\" ColName2=\"nvarchar36\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"track\" Type=\"Text\" Required=\"FALSE\" ID=\"{e40fecfb-857a-47c9-9a19-30013bf1284e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"track\" Name=\"track\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization\" Type=\"Text\" Required=\"FALSE\" ID=\"{cd41edb3-5f47-4a12-9bf3-4ef6dcc02141}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization\" Name=\"specialization\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{26583c5e-5a15-4af3-94af-2dff5fe9f73a}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthDate\" Name=\"birthDate\" ColName=\"nvarchar39\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{a2a89edd-0274-4296-8e48-34c571fd1062}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthCountry\" Name=\"birthCountry\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"immigrationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{40a8a3de-f920-4cd0-b9fe-2ae9d1cc4d9e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"immigrationYear\" Name=\"immigrationYear\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phoneHe\" Type=\"Text\" Required=\"FALSE\" ID=\"{9bed9803-fcbb-47ed-98bc-27161d598e76}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"phoneHe\" Name=\"phoneHe\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e8ead77-7813-4cc3-bbd3-7c6ae99b41e0}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeInstitute\" Name=\"firstDegreeInstitute\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishBA\" Type=\"Text\" Required=\"FALSE\" ID=\"{c5ecdb7e-a68c-4152-a121-7984426d1bc8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishBA\" Name=\"finishBA\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeGraduationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{9fb6a699-5be1-43fe-872c-ea4c987780b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeGraduationYear\" Name=\"firstDegreeGraduationYear\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment1\" Type=\"Text\" Required=\"FALSE\" ID=\"{ec9d466f-fe70-48aa-8992-7dc22728fe43}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment1\" Name=\"firstDegreeDepartment1\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade1\" Type=\"Text\" Required=\"FALSE\" ID=\"{52edda2b-4448-4183-886b-740edd50dc78}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade1\" Name=\"firstDegreeDepartmentGrade1\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment2\" Type=\"Text\" Required=\"FALSE\" ID=\"{9de0c847-42d9-4026-895f-a23e69cb3956}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment2\" Name=\"firstDegreeDepartment2\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade2\" Type=\"Text\" Required=\"FALSE\" ID=\"{c8614f16-abc8-443e-97b9-d1836f5418fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade2\" Name=\"firstDegreeDepartmentGrade2\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finalDegreeGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{af2e0fe0-024b-4bf0-a365-40b20a4b8595}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finalDegreeGrade\" Name=\"finalDegreeGrade\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{52f3b47d-9286-4a4c-8984-82d6dc20424f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamYear\" Name=\"mitamExamYear\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{71a52f50-554b-4a6a-bd97-3b3671e56ed6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamGrade\" Name=\"mitamExamGrade\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName1\" Type=\"Text\" Required=\"FALSE\" ID=\"{03ef41ea-49b4-43f0-ab6b-89a5218477be}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName1\" Name=\"refereeName1\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle1\" Type=\"Text\" Required=\"FALSE\" ID=\"{eb0b03bc-ee59-4d65-ae9c-e5a8c872cfc2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle1\" Name=\"refereeJobTitle1\" ColName=\"nvarchar54\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName2\" Type=\"Text\" Required=\"FALSE\" ID=\"{375cf6c1-4ceb-4f42-a306-c7b43f6c5b24}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName2\" Name=\"refereeName2\" ColName=\"nvarchar55\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle2\" Type=\"Text\" Required=\"FALSE\" ID=\"{e770beaa-651d-4dbd-8259-370571655b1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle2\" Name=\"refereeJobTitle2\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"commitmentLetter\" Type=\"Text\" Required=\"FALSE\" ID=\"{76cd1cbd-b8b8-4d99-866a-e4fd5ddb7b0f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"commitmentLetter\" Name=\"commitmentLetter\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{23b6788a-bca1-464a-a33a-04a3aa18fc8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"declaration\" Name=\"declaration\" ColName=\"bit2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization2\" Type=\"Text\" Required=\"FALSE\" ID=\"{3c4f07a5-6cca-4b69-a9e7-d9fc3d3861de}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization2\" Name=\"specialization2\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization3\" Type=\"Text\" Required=\"FALSE\" ID=\"{48dc7a4d-718a-4603-8c67-887bed517215}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization3\" Name=\"specialization3\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishArabOrHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{370d3790-96fb-4782-9d4a-d5e16d62c58b}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishArabOrHarediInstitution\" Name=\"finishArabOrHarediInstitution\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{fad194bf-5604-44b9-9ff4-783faf26b94e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionName\" Name=\"ArabOrHarediInstitutionName\" ColName=\"nvarchar61\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{efae7165-d2fe-4b09-837d-c2f309e0c71f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionCode\" Name=\"ArabOrHarediInstitutionCode\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{a10b7ddf-d0f5-4e71-ad43-7f65085e7b8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishHarediInstitution\" Name=\"finishHarediInstitution\" ColName=\"nvarchar63\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{8f7bea18-f0f7-4cdb-aa02-dac525c2b1d4}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionName\" Name=\"HarediInstitutionName\" ColName=\"nvarchar64\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{0d73316b-426c-4aa5-8438-05ee2443b933}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionCode\" Name=\"HarediInstitutionCode\" ColName=\"nvarchar65\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"clinicalResearcher\" Type=\"Text\" Required=\"FALSE\" ID=\"{1a141d88-395c-41eb-b4b8-3e2e9625b620}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"clinicalResearcher\" Name=\"clinicalResearcher\" ColName=\"nvarchar66\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"A\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{a527daef-40cf-4cba-8cb6-948a7699d3f2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"A\" Name=\"A\" ColName=\"bit3\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"lastSubmit\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{dddd385c-3bae-4e2a-9377-e6f964ce6c53}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"TicketStatus\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{8382b017-022c-4dee-9c70-8cd8798ddd8c}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"TicketStatus\" Name=\"TicketStatus\" ColName=\"nvarchar67\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eממתין לטופס\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eממתין לטופס\u003c/CHOICE\u003e\u003cCHOICE\u003eנוצר טופס\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"AdminUserName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{d1ac163f-ad39-492a-95fe-0144fe40a5b1}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"AdminUserName\" Name=\"AdminUserName\" ColName=\"nvarchar68\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003eEKMD\\sivanb\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"modified\" Type=\"Text\" Required=\"FALSE\" ID=\"{1e719be4-6d49-4fac-b77d-ca7cd2bc0cc6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"modified0\" Name=\"modified0\" ColName=\"nvarchar69\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType1\" Type=\"Text\" Required=\"FALSE\" ID=\"{30f2ecdd-a0df-4f1b-a8f4-9208809de018}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType1\" Name=\"interviewType1\" ColName=\"nvarchar70\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay1\" Type=\"Text\" Required=\"FALSE\" ID=\"{551467fa-1f20-405d-bb5a-d212201be7c8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay1\" Name=\"interviewDay1\" ColName=\"nvarchar71\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate1\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e48c36c-cc47-48d4-ad0d-70d40ab97bd8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate1\" Name=\"interviewDate1\" ColName=\"nvarchar72\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour1\" Type=\"Text\" Required=\"FALSE\" ID=\"{296f4ee2-9615-4757-ac78-393e09590025}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour1\" Name=\"interviewHour1\" ColName=\"nvarchar73\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer1\" Type=\"Text\" Required=\"FALSE\" ID=\"{09a8c77c-2cfc-465c-b6bd-4924e3c919b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer1\" Name=\"interviewer1\" ColName=\"nvarchar74\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom1\" Type=\"Text\" Required=\"FALSE\" ID=\"{cbd3d206-3480-46d6-b91e-b3235bc962ca}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom1\" Name=\"interviewRoom1\" ColName=\"nvarchar75\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType2\" Type=\"Text\" Required=\"FALSE\" ID=\"{6acee900-ee44-4d6c-8740-9a5bc67c8151}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType2\" Name=\"interviewType2\" ColName=\"nvarchar76\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay2\" Type=\"Text\" Required=\"FALSE\" ID=\"{333de2e8-8fa5-45af-8258-4fcd05594e1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay2\" Name=\"interviewDay2\" ColName=\"nvarchar77\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate2\" Type=\"Text\" Required=\"FALSE\" ID=\"{a9b62647-e850-4787-9edb-756bda8de65e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate2\" Name=\"interviewDate2\" ColName=\"nvarchar78\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour2\" Type=\"Text\" Required=\"FALSE\" ID=\"{67afd560-1a50-4cd9-b0a8-f582bce35378}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour2\" Name=\"interviewHour2\" ColName=\"nvarchar79\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer2\" Type=\"Text\" Required=\"FALSE\" ID=\"{48b74314-3df3-41c1-894e-d40f49d32189}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer2\" Name=\"interviewer2\" ColName=\"nvarchar80\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom2\" Type=\"Text\" Required=\"FALSE\" ID=\"{d04451cc-3c98-4532-a9f8-a5d49afb37fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom2\" Name=\"interviewRoom2\" ColName=\"nvarchar81\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "מועמדים - מגזר ערבי",
                           "Url":  "/home/socialSciences/SOC36-2020/Lists/applicants/view3.aspx",
+                          "OldUrl":  null,
                           "Type":  "Lists",
                           "InnerName":  "applicants",
-                          "Name":  null,
+                          "Name":  "applicants",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar37\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField DisplayName=\"firstName\" Name=\"firstName\" Type=\"Text\" ID=\"{012f96a3-6169-4bf6-aa97-c6ea3b0ec88c}\" Group=\"\" StaticName=\"firstName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surname\" Name=\"surname\" Type=\"Text\" ID=\"{95e6bfde-d2b7-4aa3-b6f4-76196a639163}\" Group=\"\" StaticName=\"surname\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"gender\" Name=\"gender\" Type=\"Text\" ID=\"{a8cf3abb-3486-4c81-9f31-41df6c09b43a}\" Group=\"\" StaticName=\"gender\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenship\" Name=\"citizenship\" Type=\"Text\" ID=\"{bd64d1f3-699d-4c52-aa32-7ddd2b563c38}\" Group=\"\" StaticName=\"citizenship\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"email\" Name=\"email\" Type=\"Text\" ID=\"{54f8438b-ab49-45e2-a2ac-069688b37420}\" Group=\"\" StaticName=\"email\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"homePhone\" Name=\"homePhone\" Type=\"Text\" ID=\"{594c3a61-c847-4717-9141-3f5a061f0c8b}\" Group=\"\" StaticName=\"homePhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPhone\" Name=\"workPhone\" Type=\"Text\" ID=\"{ccc5aab7-ed2f-4e43-8910-83c0046bde27}\" Group=\"\" StaticName=\"workPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cellPhone\" Name=\"cellPhone\" Type=\"Text\" ID=\"{b5580ea6-6936-41d2-b6fc-64d4949f12e2}\" Group=\"\" StaticName=\"cellPhone\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"address\" Name=\"address\" Type=\"Text\" ID=\"{b66cb8e7-c330-456d-b4ee-276746e9d691}\" Group=\"\" StaticName=\"address\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"country\" Name=\"country\" Type=\"Text\" ID=\"{518cb54b-2ad2-445e-ba04-de6066c36cfb}\" Group=\"\" StaticName=\"country\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zip\" Name=\"zip\" Type=\"Text\" ID=\"{4723b413-edb7-4f8c-bf34-75f2de1145b3}\" Group=\"\" StaticName=\"zip\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitle\" Name=\"academTitle\" Type=\"Text\" ID=\"{1ef33fd6-0394-4571-8b49-a780132cd538}\" Group=\"\" StaticName=\"academTitle\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"city\" Name=\"city\" Type=\"Text\" ID=\"{f20b85be-f5ab-436a-b0d1-bbb1efc374f3}\" Group=\"\" StaticName=\"city\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"state\" Name=\"state\" Type=\"Text\" ID=\"{4c7d1efa-7728-4f8e-a54c-ffbfe068cb10}\" Group=\"\" StaticName=\"state\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitleHe\" Name=\"academTitleHe\" Type=\"Text\" ID=\"{252ce063-4ac1-41c9-b207-b0d0d917bd3e}\" Group=\"\" StaticName=\"academTitleHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Name=\"firstNameHe\" Type=\"Text\" ID=\"{0fc014a6-af25-47a9-8d35-704044d95049}\" Group=\"\" StaticName=\"firstNameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Name=\"surnameHe\" Type=\"Text\" ID=\"{b45fbff6-bff8-48f5-9e21-b0f1807741cd}\" Group=\"\" StaticName=\"surnameHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"IdHe\" Name=\"IdHe\" Type=\"Text\" ID=\"{c15255d4-4f62-4c18-85f4-8845bab27b8d}\" Group=\"\" StaticName=\"IdHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"addressHe\" Name=\"addressHe\" Type=\"Text\" ID=\"{e09c1725-a351-4192-8152-e3134d8227be}\" Group=\"\" StaticName=\"addressHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar21\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"countryHe\" Name=\"countryHe\" Type=\"Text\" ID=\"{012f048a-fafb-42f5-bcaa-2dcecd9b63dc}\" Group=\"\" StaticName=\"countryHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar22\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cityHe\" Name=\"cityHe\" Type=\"Text\" ID=\"{be15e9b4-e255-4b42-99b7-2832217757f5}\" Group=\"\" StaticName=\"cityHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zipHe\" Name=\"zipHe\" Type=\"Text\" ID=\"{1854e4ab-b9c5-4835-93cd-21aa0e6c6527}\" Group=\"\" StaticName=\"zipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenshipHe\" Name=\"citizenshipHe\" Type=\"Text\" ID=\"{6bd8f210-e24b-4631-82c7-4eb554719543}\" Group=\"\" StaticName=\"citizenshipHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"userName\" Name=\"userName\" Type=\"Text\" ID=\"{b1c4aeb5-4f44-4cfe-9873-b9db12fdc67f}\" Group=\"\" StaticName=\"userName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderMail\" Name=\"folderMail\" Type=\"Text\" ID=\"{d0fc5d4f-45e1-4d02-aa53-436f04a7981b}\" Group=\"\" StaticName=\"folderMail\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"genderHe\" Name=\"genderHe\" Type=\"Text\" ID=\"{c7112cce-68cb-40fc-acd4-b0bdefaa9f77}\" Group=\"\" StaticName=\"genderHe\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Format=\"Hyperlink\" Description=\"\" DisplayName=\"folderLink\" Type=\"URL\" ID=\"{4c9ca88b-2269-4a6e-8ea7-00c48f7b3396}\" Name=\"folderLink\" Group=\"\" StaticName=\"folderLink\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar29\" RowOrdinal=\"0\" ColName2=\"nvarchar30\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthYear\" Name=\"birthYear\" Type=\"Text\" ID=\"{c03d3950-3bac-475c-9e0e-b4a2dba9e08e}\" Group=\"\" StaticName=\"birthYear\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderName\" Name=\"folderName\" Type=\"Text\" ID=\"{c9920bf1-c285-4707-9458-c0a19157b30c}\" Group=\"\" StaticName=\"folderName\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studentId\" Name=\"studentId\" Type=\"Text\" ID=\"{57f63795-71e5-4006-b92b-6b6604353767}\" Group=\"\" StaticName=\"studentId\" SourceID=\"{1008aef2-8724-471e-899f-68dedce46991}\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{c10265ac-e797-4c84-8314-d788c9623c67}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" CalType=\"0\" FriendlyDisplayFormat=\"Disabled\" Version=\"4\"\u003e\u003cDefault\u003e2021-05-31T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{67df753e-f9c8-4976-8951-b66d04c7a597}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar34\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{2a593c34-4d37-4a05-9e67-b6ec1154f5aa}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{8c120d6c-a5db-4fc4-a5fb-d6914afe588a}\" SourceID=\"{C8CEA52A-0873-4098-87F7-23569F54B229}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar35\" RowOrdinal=\"0\" ColName2=\"nvarchar36\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"track\" Type=\"Text\" Required=\"FALSE\" ID=\"{e40fecfb-857a-47c9-9a19-30013bf1284e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"track\" Name=\"track\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization\" Type=\"Text\" Required=\"FALSE\" ID=\"{cd41edb3-5f47-4a12-9bf3-4ef6dcc02141}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization\" Name=\"specialization\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{26583c5e-5a15-4af3-94af-2dff5fe9f73a}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthDate\" Name=\"birthDate\" ColName=\"nvarchar39\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{a2a89edd-0274-4296-8e48-34c571fd1062}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"birthCountry\" Name=\"birthCountry\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"immigrationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{40a8a3de-f920-4cd0-b9fe-2ae9d1cc4d9e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"immigrationYear\" Name=\"immigrationYear\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phoneHe\" Type=\"Text\" Required=\"FALSE\" ID=\"{9bed9803-fcbb-47ed-98bc-27161d598e76}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"phoneHe\" Name=\"phoneHe\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e8ead77-7813-4cc3-bbd3-7c6ae99b41e0}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeInstitute\" Name=\"firstDegreeInstitute\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishBA\" Type=\"Text\" Required=\"FALSE\" ID=\"{c5ecdb7e-a68c-4152-a121-7984426d1bc8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishBA\" Name=\"finishBA\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeGraduationYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{9fb6a699-5be1-43fe-872c-ea4c987780b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeGraduationYear\" Name=\"firstDegreeGraduationYear\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment1\" Type=\"Text\" Required=\"FALSE\" ID=\"{ec9d466f-fe70-48aa-8992-7dc22728fe43}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment1\" Name=\"firstDegreeDepartment1\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade1\" Type=\"Text\" Required=\"FALSE\" ID=\"{52edda2b-4448-4183-886b-740edd50dc78}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade1\" Name=\"firstDegreeDepartmentGrade1\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartment2\" Type=\"Text\" Required=\"FALSE\" ID=\"{9de0c847-42d9-4026-895f-a23e69cb3956}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartment2\" Name=\"firstDegreeDepartment2\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstDegreeDepartmentGrade2\" Type=\"Text\" Required=\"FALSE\" ID=\"{c8614f16-abc8-443e-97b9-d1836f5418fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"firstDegreeDepartmentGrade2\" Name=\"firstDegreeDepartmentGrade2\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finalDegreeGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{af2e0fe0-024b-4bf0-a365-40b20a4b8595}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finalDegreeGrade\" Name=\"finalDegreeGrade\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{52f3b47d-9286-4a4c-8984-82d6dc20424f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamYear\" Name=\"mitamExamYear\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mitamExamGrade\" Type=\"Text\" Required=\"FALSE\" ID=\"{71a52f50-554b-4a6a-bd97-3b3671e56ed6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"mitamExamGrade\" Name=\"mitamExamGrade\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName1\" Type=\"Text\" Required=\"FALSE\" ID=\"{03ef41ea-49b4-43f0-ab6b-89a5218477be}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName1\" Name=\"refereeName1\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle1\" Type=\"Text\" Required=\"FALSE\" ID=\"{eb0b03bc-ee59-4d65-ae9c-e5a8c872cfc2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle1\" Name=\"refereeJobTitle1\" ColName=\"nvarchar54\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeName2\" Type=\"Text\" Required=\"FALSE\" ID=\"{375cf6c1-4ceb-4f42-a306-c7b43f6c5b24}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeName2\" Name=\"refereeName2\" ColName=\"nvarchar55\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"refereeJobTitle2\" Type=\"Text\" Required=\"FALSE\" ID=\"{e770beaa-651d-4dbd-8259-370571655b1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"refereeJobTitle2\" Name=\"refereeJobTitle2\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"commitmentLetter\" Type=\"Text\" Required=\"FALSE\" ID=\"{76cd1cbd-b8b8-4d99-866a-e4fd5ddb7b0f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"commitmentLetter\" Name=\"commitmentLetter\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{23b6788a-bca1-464a-a33a-04a3aa18fc8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"declaration\" Name=\"declaration\" ColName=\"bit2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization2\" Type=\"Text\" Required=\"FALSE\" ID=\"{3c4f07a5-6cca-4b69-a9e7-d9fc3d3861de}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization2\" Name=\"specialization2\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"specialization3\" Type=\"Text\" Required=\"FALSE\" ID=\"{48dc7a4d-718a-4603-8c67-887bed517215}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"specialization3\" Name=\"specialization3\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishArabOrHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{370d3790-96fb-4782-9d4a-d5e16d62c58b}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishArabOrHarediInstitution\" Name=\"finishArabOrHarediInstitution\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{fad194bf-5604-44b9-9ff4-783faf26b94e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionName\" Name=\"ArabOrHarediInstitutionName\" ColName=\"nvarchar61\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"ArabOrHarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{efae7165-d2fe-4b09-837d-c2f309e0c71f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"ArabOrHarediInstitutionCode\" Name=\"ArabOrHarediInstitutionCode\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishHarediInstitution\" Type=\"Text\" Required=\"FALSE\" ID=\"{a10b7ddf-d0f5-4e71-ad43-7f65085e7b8f}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"finishHarediInstitution\" Name=\"finishHarediInstitution\" ColName=\"nvarchar63\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionName\" Type=\"Text\" Required=\"FALSE\" ID=\"{8f7bea18-f0f7-4cdb-aa02-dac525c2b1d4}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionName\" Name=\"HarediInstitutionName\" ColName=\"nvarchar64\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"HarediInstitutionCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{0d73316b-426c-4aa5-8438-05ee2443b933}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"HarediInstitutionCode\" Name=\"HarediInstitutionCode\" ColName=\"nvarchar65\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"clinicalResearcher\" Type=\"Text\" Required=\"FALSE\" ID=\"{1a141d88-395c-41eb-b4b8-3e2e9625b620}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"clinicalResearcher\" Name=\"clinicalResearcher\" ColName=\"nvarchar66\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"A\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{a527daef-40cf-4cba-8cb6-948a7699d3f2}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"A\" Name=\"A\" ColName=\"bit3\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"lastSubmit\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{dddd385c-3bae-4e2a-9377-e6f964ce6c53}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"TicketStatus\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{8382b017-022c-4dee-9c70-8cd8798ddd8c}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"TicketStatus\" Name=\"TicketStatus\" ColName=\"nvarchar67\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eממתין לטופס\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eממתין לטופס\u003c/CHOICE\u003e\u003cCHOICE\u003eנוצר טופס\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"AdminUserName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{d1ac163f-ad39-492a-95fe-0144fe40a5b1}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"AdminUserName\" Name=\"AdminUserName\" ColName=\"nvarchar68\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003eEKMD\\sivanb\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField DisplayName=\"modified\" Type=\"Text\" Required=\"FALSE\" ID=\"{1e719be4-6d49-4fac-b77d-ca7cd2bc0cc6}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"modified0\" Name=\"modified0\" ColName=\"nvarchar69\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType1\" Type=\"Text\" Required=\"FALSE\" ID=\"{30f2ecdd-a0df-4f1b-a8f4-9208809de018}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType1\" Name=\"interviewType1\" ColName=\"nvarchar70\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay1\" Type=\"Text\" Required=\"FALSE\" ID=\"{551467fa-1f20-405d-bb5a-d212201be7c8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay1\" Name=\"interviewDay1\" ColName=\"nvarchar71\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate1\" Type=\"Text\" Required=\"FALSE\" ID=\"{6e48c36c-cc47-48d4-ad0d-70d40ab97bd8}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate1\" Name=\"interviewDate1\" ColName=\"nvarchar72\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour1\" Type=\"Text\" Required=\"FALSE\" ID=\"{296f4ee2-9615-4757-ac78-393e09590025}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour1\" Name=\"interviewHour1\" ColName=\"nvarchar73\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer1\" Type=\"Text\" Required=\"FALSE\" ID=\"{09a8c77c-2cfc-465c-b6bd-4924e3c919b5}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer1\" Name=\"interviewer1\" ColName=\"nvarchar74\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom1\" Type=\"Text\" Required=\"FALSE\" ID=\"{cbd3d206-3480-46d6-b91e-b3235bc962ca}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom1\" Name=\"interviewRoom1\" ColName=\"nvarchar75\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewType2\" Type=\"Text\" Required=\"FALSE\" ID=\"{6acee900-ee44-4d6c-8740-9a5bc67c8151}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewType2\" Name=\"interviewType2\" ColName=\"nvarchar76\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDay2\" Type=\"Text\" Required=\"FALSE\" ID=\"{333de2e8-8fa5-45af-8258-4fcd05594e1e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDay2\" Name=\"interviewDay2\" ColName=\"nvarchar77\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewDate2\" Type=\"Text\" Required=\"FALSE\" ID=\"{a9b62647-e850-4787-9edb-756bda8de65e}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewDate2\" Name=\"interviewDate2\" ColName=\"nvarchar78\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewHour2\" Type=\"Text\" Required=\"FALSE\" ID=\"{67afd560-1a50-4cd9-b0a8-f582bce35378}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewHour2\" Name=\"interviewHour2\" ColName=\"nvarchar79\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewer2\" Type=\"Text\" Required=\"FALSE\" ID=\"{48b74314-3df3-41c1-894e-d40f49d32189}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewer2\" Name=\"interviewer2\" ColName=\"nvarchar80\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"interviewRoom2\" Type=\"Text\" Required=\"FALSE\" ID=\"{d04451cc-3c98-4532-a9f8-a5d49afb37fe}\" SourceID=\"{c8cea52a-0873-4098-87f7-23569f54b229}\" StaticName=\"interviewRoom2\" Name=\"interviewRoom2\" ColName=\"nvarchar81\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "רשימת תוכן קובץ",
                           "Url":  "/home/socialSciences/SOC36-2020/Lists/DocType/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "Lists",
                           "InnerName":  "DocType",
-                          "Name":  null,
+                          "Name":  "DocType",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"Required\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{b040d97a-e708-40d3-85bb-52c1ddb007fb}\" SourceID=\"{79948A61-C6D4-4779-A349-1E63D7645EE7}\" StaticName=\"Required\" Name=\"Required\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Number\" DisplayName=\"FilesNumber\" Required=\"TRUE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Decimals=\"0\" Direction=\"None\" ID=\"{6cea2dd4-2587-43d6-a453-bb861a86e3d1}\" SourceID=\"{79948A61-C6D4-4779-A349-1E63D7645EE7}\" StaticName=\"FilesNumber\" Name=\"FilesNumber\" ColName=\"float1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"fromMail\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{a8da55e7-ea90-4770-ab68-d19316976c46}\" SourceID=\"{79948A61-C6D4-4779-A349-1E63D7645EE7}\" StaticName=\"fromMail\" Name=\"fromMail\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\all_apps_grpsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Read,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_judgesSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_judges-SinunSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_judges-InterviewSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "תיקים שהוגשו",
                           "Url":  "/home/socialSciences/SOC36-2020/Submitted/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "Submitted",
-                          "Name":  null,
+                          "Name":  "Submitted",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"תוכן קובץ\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{79948A61-C6D4-4779-A349-1E63D7645EE7}\" ShowField=\"Title\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{7c2efdc0-8baf-4150-a0d3-f91564a9b5bb}\" SourceID=\"{F925EC31-5D3B-46DC-B68D-CA6040DDEE7E}\" StaticName=\"_x05ea__x05d5__x05db__x05df__x0020__x05e7__x05d5__x05d1__x05e5_\" Name=\"_x05ea__x05d5__x05db__x05df__x0020__x05e7__x05d5__x05d1__x05e5_\" ColName=\"int1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"description\" Type=\"Text\" Required=\"FALSE\" ID=\"{d5e4b72c-032e-4194-a344-a15e67f23a88}\" SourceID=\"{f925ec31-5d3b-46dc-b68d-ca6040ddee7e}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar1\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "מחיקת תיקים ריקים",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/DeleteEmptyFolders.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "DeleteEmptyFolders.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "Final",
                           "Url":  "/home/socialSciences/SOC36-2020/Final/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "Final",
-                          "Name":  null,
+                          "Name":  "Final",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "יצירת טופס ראיון - פסיכולוגיה קלינית",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "interviewSchedule306.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "יצירת טופס ראיון - נוירופסיכולוגיה קלינית שיקומית",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule367.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "interviewSchedule367.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "טפסי ראיונות PDF",
                           "Url":  "/home/socialSciences/SOC36-2020/interviewPDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "interviewPDF",
-                          "Name":  null,
+                          "Name":  "interviewPDF",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{9b441867-83f8-4ee8-96ce-d7a9340f7cfe}\" SourceID=\"{01cac1f2-48fe-4b14-89b7-780678c020f3}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 }
+                                             ]
                       }
                   ],
         "IsOldMenu":  true,
@@ -113,47 +657,152 @@
                       {
                           "Title":  "נוירופסיכולוגיה",
                           "Url":  "/home/socialSciences/SOC36-2020/neuro/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "neuro",
-                          "Name":  null,
+                          "Name":  "נוירופסיכולוגיה",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\grs_soc36-2020_judgesneuroug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "קלינית",
                           "Url":  "/home/socialSciences/SOC36-2020/clinical/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "clinical",
-                          "Name":  null,
+                          "Name":  "קלינית",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\grs_soc36-2020_judgesclinicug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "אישית",
                           "Url":  "/home/socialSciences/SOC36-2020/personal/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "personal",
-                          "Name":  null,
+                          "Name":  "אישית",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\grs_soc36-2020_judgespersonug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "חרדי",
                           "Url":  "/home/socialSciences/SOC36-2020/haredi/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "haredi",
-                          "Name":  null,
+                          "Name":  "חרדי",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\grs_soc36-2020_judgesharediug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "ערבי",
                           "Url":  "/home/socialSciences/SOC36-2020/arab/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "arab",
-                          "Name":  null,
+                          "Name":  "ערבי",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\grs_soc36-2020_judgesarabug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 }
+                                             ]
                       }
                   ],
         "IsOldMenu":  true,
@@ -166,119 +815,405 @@
                       {
                           "Title":  "הלל אביעזר",
                           "Url":  "/home/socialSciences/SOC36-2020/hillela/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "hillela",
-                          "Name":  null,
+                          "Name":  "הלל אביעזר",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "hillel aviezer",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "איתן בכר",
                           "Url":  "/home/socialSciences/SOC36-2020/eytanba/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "eytanba",
-                          "Name":  null,
+                          "Name":  "איתן בכר",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "eytan bachar",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "יונתן הפרט",
                           "Url":  "/home/socialSciences/SOC36-2020/jonathanHu/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "jonathanHu",
-                          "Name":  null,
+                          "Name":  "יונתן הפרט",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "jonathan Huppert",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "יפתח יובל",
                           "Url":  "/home/socialSciences/SOC36-2020/Iftahy/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "Iftahy",
-                          "Name":  null,
+                          "Name":  "יפתח יובל",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Iftah yovel",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "צבי כרמלי",
                           "Url":  "/home/socialSciences/SOC36-2020/ZviC/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "ZviC",
-                          "Name":  null,
+                          "Name":  "צבי כרמלי",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Zvi Carmeli",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "תמר פילובסקי-פלג",
                           "Url":  "/home/socialSciences/SOC36-2020/tammyp/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "tammyp",
-                          "Name":  null,
+                          "Name":  "תמר פילובסקי-פלג",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Tammy Pilowsky",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "אייל קלנטרוף",
                           "Url":  "/home/socialSciences/SOC36-2020/eyalkal/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "eyalkal",
-                          "Name":  null,
+                          "Name":  "אייל קלנטרוף",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Eyal Kalanthroff",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "לאורה קנטי",
                           "Url":  "/home/socialSciences/SOC36-2020/laurac/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "laurac",
-                          "Name":  null,
+                          "Name":  "לאורה קנטי",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "laura canetti",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "טל שני-אור",
                           "Url":  "/home/socialSciences/SOC36-2020/shanyurt/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "shanyurt",
-                          "Name":  null,
+                          "Name":  "טל שני-אור",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Shany-Ur tal",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "אוריה תשבי",
                           "Url":  "/home/socialSciences/SOC36-2020/oryaT/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "oryaT",
-                          "Name":  null,
+                          "Name":  "אוריה תשבי",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "orya Tishby",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "שירי בן נאים",
                           "Url":  "/home/socialSciences/SOC36-2020/shirib/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "shirib",
-                          "Name":  null,
+                          "Name":  "שירי בן נאים",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Shiri Bennaim",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "איתן כלפה",
                           "Url":  "/home/socialSciences/SOC36-2020/eitanc/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "eitanc",
-                          "Name":  null,
+                          "Name":  "איתן כלפה",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "eitan calfa",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       },
                       {
                           "Title":  "נילי מור",
                           "Url":  "/home/socialSciences/SOC36-2020/Nillym/Forms/AllItems.aspx",
+                          "OldUrl":  null,
                           "Type":  "DocLib",
                           "InnerName":  "Nillym",
-                          "Name":  null,
+                          "Name":  "נילי מור",
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\sharepoint_temp_editorsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Nilly mor",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_SOC36-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
                       }
                   ],
         "IsOldMenu":  true,
@@ -291,65 +1226,86 @@
                       {
                           "Title":  "טופס הרשמה -מסלול רגיל",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/Form.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "Form.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "טופס הרשמה - מגזר חרדי",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/HarediForm.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "HarediForm.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "טופס הרשמה - מגזר ערבי",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/Form3.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "Form3.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "המלצות",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/Recommendations.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "Recommendations.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "תבנית קורות חיים והמלצות",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/CVandRecommendationsForm.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "CVandRecommendationsForm.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "סטטוס הגשה",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/SubmissionStatus.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "SubmissionStatus.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       },
                       {
                           "Title":  "הסרת מועמדות",
                           "Url":  "/home/socialSciences/SOC36-2020/Pages/CancelCandidacy.aspx",
+                          "OldUrl":  null,
                           "Type":  "Pages",
                           "InnerName":  "CancelCandidacy.aspx",
                           "Name":  null,
                           "IsOldMenu":  true,
-                          "CandidateForDelete":  false
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
                       }
                   ],
         "IsOldMenu":  true,

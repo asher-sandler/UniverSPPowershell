@@ -1,0 +1,18 @@
+[
+    {
+        "SourcePageURL":  "/home/SocialSciences/SOC200-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/SocialSciences/SOC215-2021/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "SOC200-2021.xml",
+        "WebPartValueDST":  "SOC215-2021.xml"
+    },
+    {
+        "SourcePageURL":  "/home/SocialSciences/SOC200-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/SocialSciences/SOC215-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "SOC200-2021-mail.txt",
+        "WebPartValueDST":  "SOC215-2021-mail-He.txt"
+    }
+]

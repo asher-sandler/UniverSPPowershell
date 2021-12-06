@@ -1,0 +1,154 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20211019112446
+Username: EKMD\ashersa
+RunAs User: EKMD\ashersa
+Configuration Name: 
+Machine: DEVORAGO_PC (Microsoft Windows NT 10.0.19043.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 18236
+PSVersion: 5.1.19041.1237
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1237
+BuildVersion: 10.0.19041.1237
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is UpdateListAndLibs.log
+User: AsherSA
+@{ID=20819129; Phone=אבו אסאב ביאן; FullName=052-2026022; Email=bayan.aboasab@mail.huji.ac.il}
+@{ID=32278698; Phone=אבו גנאם אמינה; FullName=050-3011281; Email=amina.abughanam@mail.huji.ac.il}
+@{ID=21135113; Phone=אבו דהים איה; FullName=053-9949434; Email=aya.abudhaim@mail.huji.ac.il}
+@{ID=32485445; Phone=אבו טיר איה; FullName=052-5533374; Email=aya.abutair@mail.huji.ac.il}
+@{ID=20715783; Phone=אבו סארה סיהאם; FullName=052-8491721; Email=siham.abusara@gmail.com}
+@{ID=21257635; Phone=אבו עומר חלא; FullName=054-5431776; Email=hala.abuomar@mail.huji.ac.il}
+@{ID=32414641; Phone=אבו קוויק מלאק; FullName=053-2141402; Email=malak.abukwaik@mail.huji.ac.il}
+@{ID=21244027; Phone=אבו שאפע דאניה; FullName=058-6469847; Email=danya.aboshafa@mail.huji.ac.il}
+@{ID=20945720; Phone=אבן חיים גלי; FullName=052-2432056; Email=gali.evenhaim@mail.huji.ac.il}
+@{ID=21169132; Phone=אזולאי ירדן; FullName=050-8414051; Email=yarden.azulay3@mail.huji.ac.il}
+@{ID=34637010; Phone=איגואלקה מריאנה; FullName=053-4719063; Email=mariana.iguelka@mail.huji.ac.il}
+@{ID=20656453; Phone=אלון תמר; FullName=052-6043534; Email=tamar.alon5@mail.huji.ac.il}
+@{ID=21193293; Phone=אלראמני פאטמה; FullName=054-5401256; Email=fatima.alramouni@mail.huji.ac.il}
+@{ID=21177374; Phone=אנגרט שירז; FullName=058-7737427; Email=shiraz.angert@mail.huji.ac.il}
+@{ID=21394368; Phone=אעראר לין; FullName=050-9918500; Email=leen.arar@mail.huji.ac.il}
+@{ID=20739568; Phone=בג'אלי נטלי; FullName=052-6259576; Email=natalie.bajjali@mail.huji.ac.il}
+@{ID=21252426; Phone=בידון רנין; FullName=050-9800854; Email=raneen.baidoun@mail.huji.ac.il}
+@{ID=20751251; Phone=בן אשר שני; FullName=050-2033012; Email=shani.benasher@mail.huji.ac.il}
+@{ID=34628413; Phone=בן זקן רוח מרים; FullName=050-7816230; Email=miryam.benzaquenr@mail.huji.ac.il}
+@{ID=21642880; Phone=בסמה נדא; FullName=053-9591521; Email=nada.basma@mail.huji.ac.il}
+@{ID=20795161; Phone=בר גל; FullName=054-3454017; Email=gal.bar2@mail.huji.ac.il}
+@{ID=21231289; Phone=בר כהן עדה; FullName=050-8262383; Email=ada.barcohen@mail.huji.ac.il}
+@{ID=21245074; Phone=ברוך אורית; FullName=052-3771958; Email=orit.baruch@mail.huji.ac.il}
+@{ID=21288546; Phone=בשאראת גופראן; FullName=054-4559230; Email=bsarat.jofran@mail.huji.ac.il}
+@{ID=21257505; Phone=ג'אביס אסראא; FullName=; Email=esraa.jaabees@mail.huji.ac.il}
+@{ID=21130125; Phone=גאבר למא; FullName=052-6670046; Email=lama.jaber@mail.huji.ac.il}
+@{ID=31391933; Phone=גבע דניאל; FullName=054-2454740; Email=danielle.geva@mail.huji.ac.il}
+@{ID=21131251; Phone=גודה מרוות; FullName=054-8802696; Email=mirvat.jodeh@mail.huji.ac.il}
+@{ID=32307317; Phone=גול הלא; FullName=052-3774593; Email=hala.goul@mail.huji.ac.il}
+@{ID=32421210; Phone=גול תמארא; FullName=052-8073723; Email=tamara.ghoul@mail.huji.ac.il}
+@{ID=33284722; Phone=גית אלאא; FullName=054-9892922; Email=alaa.ghaith@mail.huji.ac.il}
+@{ID=20580105; Phone=גלעד דקל; FullName=054-6769384; Email=dekel.gilad@mail.huji.ac.il}
+@{ID=20653224; Phone=גלר נעמה; FullName=050-4227525; Email=naama.galler@mail.huji.ac.il}
+@{ID=21233630; Phone=געפר שהד; FullName=058-4888710; Email=shahd.jafar@mail.huji.ac.il}
+@{ID=8695534; Phone=גריב קמר; FullName=050-8334961; Email=qamar.ghrayeb@mail.huji.ac.il}
+@{ID=31883900; Phone=גרינברג לאה; FullName=058-5934375; Email=leah.grynberg@mail.huji.ac.il}
+@{ID=20760462; Phone=גרינברג ליאל; FullName=052-4147272; Email=liel.greenberg@mail.huji.ac.il}
+@{ID=34130555; Phone=דה פז שנה; FullName=053-7084600; Email=chana.depaz@mail.huji.ac.il}
+@{ID=21141581; Phone=דוויק דאנא; FullName=050-9150926; Email=dana.dweik@mail.huji.ac.il}
+@{ID=31836947; Phone=דולב עדי; FullName=054-7257819; Email=adi.dolev@mail.huji.ac.il}
+@{ID=77762883; Phone=הא סוקיונג; FullName=; Email=sookyoun.ha@mail.huji.ac.il}
+@{ID=31861467; Phone=הופנשטיין טלי; FullName=054-6762896; Email=tali.hoppenstein@mail.huji.ac.il}
+@{ID=32500860; Phone=הלסה רנד; FullName=052-7706499; Email=rand.halaseh@mail.huji.ac.il}
+@{ID=21332893; Phone=הלסי אסיל; FullName=052-5147457; Email=aseel.halaseh@mail.huji.ac.il}
+@{ID=20891771; Phone=הרשקוביץ אלה; FullName=050-2028170; Email=ella.hershkovitz@mail.huji.ac.il}
+@{ID=21259723; Phone=השלמון מרים; FullName=052-8243667; Email=mariam.hashlamoun@mail.huji.ac.il}
+@{ID=55677495; Phone=וונג סונג האן; FullName=058-4064638; Email=seonghan.wang@mail.huji.ac.il}
+@{ID=32420331; Phone=זגייר תאלא; FullName=055-9989566; Email=tala.zughayar@mail.huji.ac.il}
+@{ID=21244211; Phone=זואהרה מיישם; FullName=052-2768292; Email=maysam.zawahreh@mail.huji.ac.il}
+@{ID=34613929; Phone=זרביב שיינא; FullName=050-7905789; Email=sheina.zerbib@mail.huji.ac.il}
+@{ID=20736038; Phone=זרגריאן ניב; FullName=050-7479563; Email=niv.zargarian@mail.huji.ac.il}
+@{ID=34136833; Phone=חג'אזי אנגים; FullName=058-5404171; Email=anagheem.hejazi@mail.huji.ac.il}
+@{ID=21311063; Phone=חורי מריה; FullName=054-9423303; Email=maria.khoury@mail.huji.ac.il}
+@{ID=31901292; Phone=חושן טל; FullName=054-2501428; Email=tal.hoshen@mail.huji.ac.il}
+@{ID=21131406; Phone=חטיב אלאא; FullName=053-8228545; Email=alaa.khateeb1@mail.huji.ac.il}
+@{ID=32671632; Phone=חטיב פריאל; FullName=050-3451140; Email=firyal.khatib@mail.huji.ac.il}
+@{ID=21252271; Phone=חמאדה זהראא; FullName=052-7317780; Email=zahraa.hamada@mail.huji.ac.il}
+@{ID=32501000; Phone=חמאמי לין; FullName=053-3217833; Email=leen.hamami@mail.huji.ac.il}
+@{ID=32414598; Phone=חמודה תאלא; FullName=050-8168680; Email=tala.hamodeh@mail.huji.ac.il}
+@{ID=20991365; Phone=טבק מרטינה; FullName=052-5374602; Email=martina.tabak@mail.huji.ac.il}
+@{ID=20954335; Phone=טואג ירדן; FullName=054-6877944; Email=yarden.toueg@mail.huji.ac.il}
+@{ID=32236346; Phone=טורגמן טל; FullName=050-9279911; Email=tal.turgeman1@mail.huji.ac.il}
+@{ID=32313770; Phone=טמס מאריסא; FullName=051-5586816; Email=marissa.tams@mail.huji.ac.il}
+@{ID=31517785; Phone=יהלי רוטנברג; FullName=; Email=yali.rothenberg@mail.huji.ac.il}
+@{ID=34249188; Phone=יו ז'צ'אן; FullName=058-4654542; Email=jechen.you@mail.huji.ac.il}
+@{ID=20775787; Phone=כהן יובל; FullName=050-9661055; Email=yuval.cohen19@mail.huji.ac.il}
+@{ID=32234494; Phone=כואזבה שימאא; FullName=052-3377449; Email=shayma.kawazbeh@mail.huji.ac.il}
+@{ID=21169381; Phone=כרפסי שחר; FullName=054-7447464; Email=shahar.carpassi@mail.huji.ac.il}
+@{ID=20839240; Phone=לוי רועי; FullName=054-3362897; Email=roy.levy5@mail.huji.ac.il}
+@{ID=20792328; Phone=ליברטי אביב; FullName=050-2882249; Email=aviv.liberty@mail.huji.ac.il}
+@{ID=32524210; Phone=מוסטפא ערין; FullName=052-6520636; Email=areen.mustafa@mail.huji.ac.il}
+@{ID=20778827; Phone=מושקוביץ' אמילי; FullName=054-5577416; Email=emily.moshkovich@mail.huji.ac.il}
+@{ID=32297319; Phone=מחפוז זינה; FullName=058-5533447; Email=zeina.mahfouz@mail.huji.ac.il}
+@{ID=20768699; Phone=מייסטר שקד; FullName=052-5249725; Email=shaked.maister@mail.huji.ac.il}
+@{ID=20417490; Phone=מימוני מעיין; FullName=052-4559202; Email=maayan.maimoni@mail.huji.ac.il}
+@{ID=31464607; Phone=ממן הילה; FullName=052-4501093; Email=hila.maman1@mail.huji.ac.il}
+@{ID=32420113; Phone=מסוואדי זהירה; FullName=058-4002415; Email=zaheera.maswadeh@mail.huji.ac.il}
+@{ID=32294760; Phone=מראר סיהאם; FullName=; Email=siat.morar@mail.huji.ac.il}
+@{ID=21203953; Phone=משה תמר; FullName=054-6896262; Email=tamar.moshe2@mail.huji.ac.il}
+@{ID=32867771; Phone=נזרי דינה; FullName=050-9077537; Email=dina.nezri@gmail.com}
+@{ID=32231257; Phone=סגל שירה; FullName=053-3409298; Email=shira.segal2@mail.huji.ac.il}
+@{ID=32414875; Phone=סואלחי נור; FullName=052-4956304; Email=noor.sawalhi@mail.huji.ac.il}
+@{ID=20642528; Phone=סוואחרה אריג; FullName=052-5197284; Email=areej.swahry@mail.huji.ac.il}
+@{ID=99910704; Phone=סונג האיון; FullName=; Email=haeun.song@mail.huji.ac.il}
+@{ID=32229803; Phone=סונגו רעות; FullName=050-5887643; Email=reut.sonego@mail.huji.ac.il}
+@{ID=21244149; Phone=סליימה אנפל; FullName=058-6997442; Email=anfal.salaymah@mail.huji.ac.il}
+@{ID=32498857; Phone=סנדוקה היאם; FullName=058-4917117; Email=hiyam.sandoka@mail.huji.ac.il}
+@{ID=21246026; Phone=סנדוקה יאסמין; FullName=052-6169255; Email=yasmeen.sandouka@mail.huji.ac.il}
+@{ID=32480516; Phone=סעיד ניכול; FullName=052-4751755; Email=nicole.said@mail.huji.ac.il}
+@{ID=21252101; Phone=עבאסי אשראק; FullName=052-8939770; Email=eshraq.abbassi@mail.huji.ac.il}
+@{ID=21252011; Phone=עויסאת נרמין; FullName=053-5568964; Email=narmen.awesat@mail.huji.ac.il}
+@{ID=20917742; Phone=עזרא נגה; FullName=054-3420793; Email=noga.ezra@mail.huji.ac.il}
+@{ID=21244484; Phone=עליאן לאנא; FullName=052-6814700; Email=lana.alian@mail.huji.ac.il}
+@{ID=32234279; Phone=עלייאן סוואר; FullName=050-3329243; Email=siwar.elayan@mail.huji.ac.il}
+@{ID=20787861; Phone=פאר עדן; FullName=054-4395874; Email=eden.peer@mail.huji.ac.il}
+@{ID=31521158; Phone=פוואקה שימאא; FullName=050-9900382; Email=shayma.fawaqa@mail.huji.ac.il}
+@{ID=21209197; Phone=פוקק מוחמד; FullName=054-9792065; Email=mohammad.foqahq@mail.huji.ac.il}
+@{ID=21137748; Phone=פלאס גרייס; FullName=050-6707510; Email=grace.fallas@mail.huji.ac.il}
+@{ID=20553336; Phone=פלח רועי; FullName=054-7938212; Email=roei.pelach@mail.huji.ac.il}
+@{ID=32374169; Phone=צירינג אליענה; FullName=052-8227512; Email=eliana.ziering@mail.huji.ac.il}
+@{ID=21246038; Phone=קוואסמי אנפאל; FullName=052-9931699; Email=anfal.qwasmi@mail.huji.ac.il}
+@{ID=32294775; Phone=קומבר איאת; FullName=058-4088669; Email=eiat.alikombar@mail.huji.ac.il}
+@{ID=20783509; Phone=קופל נועה; FullName=050-7177870; Email=noa.kopel@mail.huji.ac.il}
+@{ID=20728017; Phone=קורץ נועה; FullName=054-7575149; Email=noa.kurtz@mail.huji.ac.il}
+@{ID=21252497; Phone=קסוואני מרים; FullName=052-3832393; Email=mareyam.kiswane@mail.huji.ac.il}
+@{ID=21135334; Phone=קרדיה דעאא; FullName=052-8857559; Email=doa.kurdieh@mail.huji.ac.il}
+@{ID=31093192; Phone=קריכלי תמר; FullName=050-9007657; Email=tamar.kricheli@mail.huji.ac.il}
+@{ID=21244499; Phone=רביע תאלא; FullName=054-7836750; Email=tala.rabee@mail.huji.ac.il}
+@{ID=21233974; Phone=רגבי סוהיר; FullName=058-7447949; Email=suhair.rajabi@mail.huji.ac.il}
+@{ID=31549906; Phone=רודקו שנקר אסף; FullName=052-5662214; Email=asaf.rudko@mail.huji.ac.il}
+@{ID=34268731; Phone=רוימי דורין; FullName=053-7087908; Email=dorine.ruimy@mail.huji.ac.il}
+@{ID=20772621; Phone=רייטר עדי; FullName=050-4336056; Email=adi.reiter1@mail.huji.ac.il}
+@{ID=32410699; Phone=רשק לילא; FullName=053-9724964; Email=laila.risheq@mail.huji.ac.il}
+@{ID=33277855; Phone=שאמיה סלוא; FullName=054-2838566; Email=salwa.shamieh@mail.huji.ac.il}
+@{ID=20867222; Phone=שאקי אוריין; FullName=052-5234288; Email=oryan.shaki@mail.huji.ac.il}
+@{ID=21257947; Phone=שומאן סחר; FullName=050-7744708; Email=sahar.shoman@mail.huji.ac.il}
+@{ID=20650325; Phone=שושן לירז; FullName=052-3846166; Email=liraz.shushan@mail.huji.ac.il}
+@{ID=21184973; Phone=שטרסר אורי; FullName=058-4930921; Email=ori.strasser@mail.huji.ac.il}
+@{ID=31881220; Phone=שימונוב רחל; FullName=052-7811242; Email=rachel.shimonov1@mail.huji.ac.il}
+@{ID=34120200; Phone=שפירו שושנה; FullName=058-5789402; Email=shoshana.shapiro@mail.huji.ac.il}
+@{ID=20541723; Phone=שרון עידן; FullName=054-2297071; Email=idan.sharon1@mail.huji.ac.il}
+@{ID=20893262; Phone=שרוני סתו; FullName=050-6994402; Email=stav.sharoni@mail.huji.ac.il}
+@{ID=31829740; Phone=שריג שחר; FullName=054-5943668; Email=shahar.sarig@mail.huji.ac.il}
+@{ID=8699472; Phone=שריף שהד; FullName=054-8944411; Email=shahd.sharif@mail.huji.ac.il}
+@{ID=31511026; Phone=תגר נעה; FullName=054-8050493; Email=noa.tagar@mail.huji.ac.il}
+@{ID=21242624; Phone=תרתיר לאנא; FullName=058-7199566; Email=lana.tarteer@mail.huji.ac.il}
+PS C:\AdminDir\SP Powershell\Daniel> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS C:\AdminDir\SP Powershell\Daniel> .\UpdateBa.ps1
+**********************
+Windows PowerShell transcript end
+End time: 20211019112541
+**********************

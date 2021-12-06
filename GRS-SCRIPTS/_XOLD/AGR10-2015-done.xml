@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+  <config>
+    <fileName>registrationForm</fileName>
+    <docHeader>טופס הרשמה לימודי מוסמך</docHeader>
+    <finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+    <missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+    <registrationMessage>אינך רשום לתכנית זו.
+	&lt;a href=&quot;http://grs2.ekmd.huji.ac.il/home&quot;&gt;הירשם כאן&lt;/a&gt;
+	</registrationMessage>
+    <docTypeList>docType</docTypeList>
+    <docTypeColumn>תוכן קובץ</docTypeColumn>
+    <docType>8. אישור</docType>
+    <destinationFolder></destinationFolder>
+    <destinationList></destinationList>
+    <ticketNum></ticketNum>
+	<calculations>no</calculations>
+	<createPDF>no</createPDF>
+  </config>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>	
+    <control>
+      <Type>CheckBox</Type>
+      <Data>done</Data>
+      <width>20</width>
+    </control>
+	
+	<Label>
+      <text>סיימתי את כל חובות ההגשה ואני מוכן שידונו בתיק שלי</text>
+      <width>480</width>
+    </Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header></Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+
+    <Button>שמור</Button>
+  </row>
+  <row>
+    <Label></Label>
+  </row>
+  <row>
+    <control>
+      <Type>finalMessage</Type>
+      <Data>MyCustomLabel</Data>
+      <Text></Text>
+    </control>
+  </row>
+ 
+</rows>

@@ -1,0 +1,577 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>scholarshipForm</fileName>
+		<docHeader>Scholarship Application Form</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+		<registrationMessage>You are not registered for this program. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>10. Scholarship Application Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Label>
+			<text>First Name:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Surname:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Program you are applying to:</text>
+			<width>200</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>program</Data>
+			<List>programList</List>
+			<width>300</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Personal Information</Header>
+	</row>
+
+	<row>
+	    <Label>
+			<text>Country:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>country</Data>
+			<width>150</width>
+			<List>countryList</List>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>Date of birth:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>dateOfBirth</Data>
+			<width>100</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+			<required>yes</required>
+		</control>
+	
+		<Label>
+			<text>(DD/MM/YYYY)</text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Gender:</text>
+			<width>50</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>gender</Data>
+			<List>genderList</List>
+			<width>100</width>
+		</control>	
+	
+		<Label>
+			<text>Marital Status:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>maritalStatus</Data>
+			<List>maritalStatusList</List>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Number of children financially dependent on me:</text>
+			<width>400</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>childrenNum</Data>
+			<width>70</width>
+		</control>
+    </row>
+	
+	<row>
+		<Label>
+			<text>Dependents other than those listed above:</text>
+			<width>400</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>otherDependentsNum</Data>
+			<width>70</width>
+		</control>
+    </row>
+
+    <row>
+		<Label>
+			<text>Total number of people financially dependent on me:</text>
+			<width>400</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>totalDependentsNum</Data>
+			<width>70</width>
+		</control>
+    </row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Annual Income</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Main Income</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Place of employment:</text>
+			<width>200</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>employmentPlace</Data>
+			<width>200</width>
+		</control>
+    </row>
+	
+	<row>
+		<Label>
+			<text>Profession:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>profession</Data>
+			<width>200</width>
+		</control>
+
+		<Label>
+			<text>Annual income (in US dollars):</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>mainIncome</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+    <row>
+		<Label>
+			<text>Secondary Income</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Sources:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>incomeSources</Data>
+			<width>300</width>
+		</control>
+    </row>
+	
+	<row>
+		<Label>
+			<text>Annual income from these sources (in US dollars):</text>
+			<width>200</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>secondaryIncome</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Main income of your immediate family (spouse/parent)</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Sources:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>familySources</Data>
+			<width>300</width>
+		</control>
+    </row>
+	
+	<row>
+		<Label>
+			<text>Annual income from these sources (in US dollars):</text>
+			<width>200</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>familyIncome</Data>
+			<width>70</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Employer income during study</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Monthly amount you will receive during a leave of absence:</text>
+			<width>450</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>leaveOfAbsenceIncome</Data>
+			<width>70</width>
+		</control>
+    </row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Personal Assets and Debts</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Assets such as bank savings, land, home, if any</text>
+			<width>500</width>
+		</Label>
+    </row>
+	
+	<row>
+		<Label>
+			<text>1. Asset type:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>asset1</Data>
+			<width>150</width>
+		</control>
+		
+		<Label>
+			<text>Current value (in US dollars):</text>
+			<width>200</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>asset1Value</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>2. Asset type:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>asset2</Data>
+			<width>150</width>
+		</control>
+		
+		<Label>
+			<text>Current value (in US dollars):</text>
+			<width>200</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>asset2Value</Data>
+			<width>70</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Amount of debts, if any:</text>
+			<width>200</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>debts</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Supplementary Funding</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Please detail how you will provide funding for costs not covered by the scholarship, whether they are your own funds, family support, bank loans, other scholarships or grants, organizations, your place of employment, or other persons who will provide you with financial assistance.</text>
+			<width>520</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Source of funding:</text>
+			<width>520</width>
+		</Label>
+	</row>	
+
+	<row>
+		<Label>
+			<text>1.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingSource1</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingAmount1</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>2.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingSource2</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingAmount2</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>3.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingSource3</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingAmount3</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>4.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingSource4</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingAmount4</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>5.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingSource5</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>SupplementaryFundingAmount5</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Declaration</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declarationScholarship</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>I, the undersigned, certify that all information supplied in this application is complete and correct. I understand and agree that the Hebrew University reserves the right to take any necessary measures in connection with candidates who submit partial, incorrect and/or false information. I waive my right to privacy regarding all academic documentation relevant to processing this application.</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>400</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

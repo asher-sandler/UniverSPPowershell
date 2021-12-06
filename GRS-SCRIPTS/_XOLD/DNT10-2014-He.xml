@@ -1,0 +1,911 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+  <config>
+    <fileName>registrationForm</fileName>
+    <docHeader>טופס הרשמה</docHeader>
+    <finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+    <missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+    <registrationMessage>אינך רשום לתכנית זו.
+	&lt;a href=&quot;http://grs2.ekmd.huji.ac.il/home&quot;&gt;הרשם כאן&lt;/a&gt;
+	</registrationMessage>
+    <docTypeList>docType</docTypeList>
+    <docTypeColumn>Document Type</docTypeColumn>
+    <docType>0. Registration Form</docType>
+    <destinationFolder></destinationFolder>
+    <destinationList></destinationList>
+    <ticketNum></ticketNum>
+	<calculations>no</calculations>
+  </config>
+  
+  <row>
+    <Label> </Label>
+  </row>
+
+  <row>
+    <Header>פרטי מגיש הבקשה:</Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Label>
+      <text>שם פרטי:</text>
+      <width>90</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>firstNameHe</Data>
+      <width>200</width>
+      <required>yes</required>
+    </control>
+	
+	<Label>
+      <text>(אנגלית):</text>
+      <width>85</width>
+    </Label>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>firstName</Data>
+      <width>200</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+      <text>שם משפחה:</text>
+      <width>90</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>surnameHe</Data>
+      <width>200</width>
+      <required>yes</required>
+    </control>
+	
+	<Label>
+      <text>(אנגלית):</text>
+      <width>85</width>
+    </Label>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>surname</Data>
+      <width>200</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+      <text>שם משפחה קודם:</text>
+      <width>90</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>previousSurnameHe</Data>
+      <width>200</width>
+    </control>
+	
+	<Label>
+      <text>(אנגלית):</text>
+      <width>85</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>previousSurname</Data>
+      <width>200</width>
+    </control>
+  </row>
+
+   <row>
+    <Label>
+	  <text>ת.ז.</text>
+	  <width>90</width>
+	</Label>
+	<control>
+	  <Type>TextLabel</Type>
+	  <Data>studentId</Data>
+	  <width>200</width>
+	</control>
+	
+	<Label>
+	  <text>מין:</text>
+	  <width>85</width>
+	</Label>
+	<control>
+	  <Type>DropDownList</Type>
+	  <Data>gender</Data>
+	  <width>65</width>
+	  <List>genderListHe</List>
+	  <required>yes</required>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>ארץ לידה:</text>
+	  <width>90</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>birthCountry</Data>
+	  <width>200</width>
+	  <required>yes</required>
+	</control>
+	  
+    <Label>
+	  <text>תאריך לידה:</text>
+	  <width>85</width>
+	</Label>
+	<control>
+	  <Type>datepicker</Type>
+	  <Data>birthDate</Data>
+	  <width>80</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנת עלייה:</text>
+	  <width>90</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>immigrationYear</Data>
+	  <width>200</width>
+    </control>
+	
+    <Label>
+	  <text>אזרחות:</text>
+	  <width>85</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>citizenship</Data>
+	  <width>200</width>
+	  <required>yes</required>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>אזרחות נוספת:</text>
+	  <width>90</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>seconedCitizenship</Data>
+	  <width>200</width>
+    </control>
+	
+    <Label>
+	  <text>מצב משפחתי:</text>
+	  <width>85</width>
+	</Label>
+	<control>
+	  <Type>DropDownList</Type>
+	  <Data>maritelStatus</Data>
+	  <width>65</width>
+	  <List>maritelStatusListHe</List>
+	  <required>yes</required>
+    </control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פרטי התקשרות:</Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Label>
+      <text>כתובת:</text>
+      <width>90</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>address</Data>
+      <width>200</width>
+      <required>yes</required>
+    </control>
+
+    <Label>
+      <text>עיר/ישוב:</text>
+      <width>85</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>city</Data>
+      <width>200</width>
+      <required>yes</required>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>מיקוד:</text>
+	  <width>90</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>zip</Data>
+	  <width>200</width>
+	  <required>yes</required>
+    </control>
+
+
+    <Label>
+       <text>טלפון בבית:</text>
+       <width>85</width>
+    </Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>homePhone</Data>
+      <width>200</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+       <text>טלפון בעבודה:</text>
+       <width>90</width>
+    </Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>workPhone</Data>
+      <width>200</width>
+	</control>
+	
+  <Label>
+       <text>טלפון נייד:</text>
+       <width>85</width>
+    </Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>mobile</Data>
+      <width>200</width>
+      <required>yes</required>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+      <text>דוא"ל:</text>
+      <width>90</width>
+    </Label>
+   
+    <control>
+      <Type>TextLabel</Type>
+      <Data>email</Data>
+      <width>300</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+      <text>שירות צבאי:</text>
+      <width>90</width>
+    </Label>
+   
+    <control>
+      <Type>TextBox</Type>
+      <Data>armyService</Data>
+      <width>200</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+      <text>מקום עבודה נוכחי:</text>
+      <width>90</width>
+    </Label>
+   
+    <control>
+      <Type>TextBox</Type>
+      <Data>currentJob</Data>
+      <width>200</width>
+    </control>
+
+    <Label>
+      <text>כתובת:</text>
+      <width>85</width>
+    </Label>
+   
+    <control>
+      <Type>TextBox</Type>
+      <Data>currentJobAddress</Data>
+      <width>200</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+      <text>מקצוע האב:</text>
+      <width>90</width>
+    </Label>
+   
+    <control>
+      <Type>TextBox</Type>
+      <Data>fatherOccupation</Data>
+      <width>200</width>
+    </control>
+
+    <Label>
+      <text>מקצוע האם:</text>
+      <width>85</width>
+    </Label>
+   
+    <control>
+      <Type>TextBox</Type>
+      <Data>motherOccupation</Data>
+      <width>200</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פרט ניסיון מעשי ברפואת שיניים:</Header>
+  </row>
+  <row>
+    <control>
+      <Type>MultiLineTextBox</Type>
+      <Data>dentistryPracticalExp</Data>
+      <width>450</width>
+    </control>
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>השכלה:</Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+      <text></text>
+      <width>50</width>
+    </Label>
+	
+	<Label>
+      <text>מוסד</text>
+      <width>100</width>
+    </Label>
+	
+	<Label>
+      <text>ארץ ועיר</text>
+      <width>100</width>
+    </Label>
+	
+	<Label>
+      <text>שנת התחלה</text>
+      <width>70</width>
+    </Label>
+	
+	<Label>
+      <text>שנת סיום</text>
+      <width>70</width>
+    </Label>
+	
+	<Label>
+      <text>תאר</text>
+      <width>100</width>
+    </Label>
+  </row>
+  <row>
+    <Label>
+      <text>תיכונית</text>
+      <width>50</width>
+    </Label>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>HighSchoolInstitution</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>HighSchoolPlace</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>HighSchoolStartYear</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>HighSchoolEndYear</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>HighSchoolDegree</Data>
+      <width>100</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+      <text>גבוהה</text>
+      <width>50</width>
+    </Label>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationInstitution1</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationPlace1</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationStartYear1</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationEndYear1</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationDegree1</Data>
+      <width>100</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+      <text>גבוהה</text>
+      <width>50</width>
+    </Label>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationInstitution2</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationPlace2</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationStartYear2</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationEndYear2</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationDegree2</Data>
+      <width>100</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+      <text>גבוהה</text>
+      <width>50</width>
+    </Label>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationInstitution3</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationPlace3</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationStartYear3</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationEndYear3</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>higherEducationDegree3</Data>
+      <width>100</width>
+    </control>
+  </row>
+ 
+  <row> 
+    <Label>
+      <text>השתלמות</text>
+      <width>50</width>
+    </Label>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>supplementaryTrainingInstitution</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>supplementaryTrainingPlace</Data>
+      <width>100</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>supplementaryTrainingStartYear</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>supplementaryTrainingEndYear</Data>
+      <width>70</width>
+    </control>
+	
+	<control>
+      <Type>TextBox</Type>
+	  <Data>supplementaryTrainingDegree</Data>
+      <width>100</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פרסומים:</Header>
+  </row>
+  <row>
+    <control>
+      <Type>MultiLineTextBox</Type>
+      <Data>publications</Data>
+      <width>450</width>
+    </control>
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פרסים ותארים:</Header>
+  </row>
+  <row>
+    <control>
+      <Type>MultiLineTextBox</Type>
+      <Data>prizesAndHonors</Data>
+      <width>450</width>
+    </control>
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+      <text>האם יש לך פטור באנגלית:</text>
+      <width>150</width>
+    </Label>
+	<control>
+	  <Type>RadioButtonList</Type>
+	  <Data>englishExemption</Data>
+	  <width>150</width>
+	  <List>yesNoListHe</List>
+	  <direction>horizontal</direction>
+	  <required>yes</required>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>שטחי התעניינות נוספים פרט לרפואת שיניים (כמו ספורט, תחביב):</Header>
+  </row>
+  <row>
+    <control>
+      <Type>MultiLineTextBox</Type>
+      <Data>hobbies</Data>
+      <width>450</width>
+    </control>
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>דברים אחרים שלדעתך יכולים לעניין את ועדת הקבלה: (שירות לקהילה וכד'):</Header>
+  </row>
+  <row>
+    <control>
+      <Type>MultiLineTextBox</Type>
+      <Data>moreInfo</Data>
+      <width>450</width>
+    </control>
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>מהן תוכניותיך לאחר גמר התמחותך:</Header>
+  </row>
+  <row>
+    <control>
+      <Type>MultiLineTextBox</Type>
+      <Data>graduationPlans</Data>
+      <width>450</width>
+    </control>
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>לימודי רפואת שיניים:</Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה</text>
+	  <width>50</width>
+	</Label>
+	
+	<Label>
+	  <text>ציון ממוצע</text>
+	  <width>65</width>
+	</Label>
+	
+	<Label>
+	  <text>מיקום בכיתה</text>
+	  <width>65</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה א'</text>
+	  <width>50</width>
+	</Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>gradeYear1</Data>
+	  <width>65</width>
+	</control>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>classPlaceYear1</Data>
+	  <width>65</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה ב'</text>
+	  <width>50</width>
+	</Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>gradeYear2</Data>
+	  <width>65</width>
+	</control>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>classPlaceYear2</Data>
+	  <width>65</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה ג'</text>
+	  <width>50</width>
+	</Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>gradeYear3</Data>
+	  <width>65</width>
+	</control>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>classPlaceYear3</Data>
+	  <width>65</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה ד'</text>
+	  <width>50</width>
+	</Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>gradeYear4</Data>
+	  <width>65</width>
+	</control>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>classPlaceYear4</Data>
+	  <width>65</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה ה'</text>
+	  <width>50</width>
+	</Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>gradeYear5</Data>
+	  <width>65</width>
+	</control>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>classPlaceYear5</Data>
+	  <width>65</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנה ו'</text>
+	  <width>50</width>
+	</Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>gradeYear6</Data>
+	  <width>65</width>
+	</control>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>classPlaceYear6</Data>
+	  <width>65</width>
+	</control>
+  </row>
+	  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <control>
+	  <Type>CheckBox</Type>
+	  <Data>declaration</Data>
+	  <width>20</width>
+	  <required>yes</required>
+	</control>
+	<Label>
+	  <text>הנני מצהיר בזאת כי כל המידע המפורט לעיל הינו נכון.</text>
+	  <width>300</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Header></Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+
+    <Button>שמור</Button>
+  </row>
+  <row>
+    <Label></Label>
+  </row>
+  <row>
+    <control>
+      <Type>finalMessage</Type>
+      <Data>MyCustomLabel</Data>
+      <Text></Text>
+    </control>
+  </row>
+ 
+</rows>

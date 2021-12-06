@@ -1,0 +1,3 @@
+﻿"Group","SiteSource","SiteDest","List","PermDifference","PermSource","PermDest"
+"TTP_MED32-2021","https://ttp.ekmd.huji.ac.il/home/Medicine/MED32-2021","https://ttp2.ekmd.huji.ac.il/home/Medicine/MED21-2020/","DocType","TTP_MED32-2021_ADMINSP;TTP_MED32-2021_JUDGESUG;","System.Object[]","System.Object[]"
+"TTP_MED32-2021","https://ttp.ekmd.huji.ac.il/home/Medicine/MED32-2021","https://ttp2.ekmd.huji.ac.il/home/Medicine/MED21-2020/","Final","TTP_MED20-2019_judgesUG;TTP_MED32-2021_JUDGESUG;","System.Object[]","System.Object[]"

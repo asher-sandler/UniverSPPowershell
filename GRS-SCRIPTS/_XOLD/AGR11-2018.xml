@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>applicationForm</fileName>
+		<docHeader>Application Form</docHeader>
+		<finalMessage>The Information has been saved successfully</finalMessage>
+		<missingDataMessage>Please fill out all of the marked fields</missingDataMessage>
+		<registrationMessage>You are not registered for this program. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>0. Application Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Header>Personal Information</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Given Name:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+		
+		<Label>
+			<text>Surname:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Passport/Israeli ID:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Gender:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>gender</Data>
+			<List>genderList</List>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Date of Birth:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>birthDate</Data>
+			<width>150</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+		</control>
+
+		<Label>
+			<text>Nationality:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>nationality</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Contact Information</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Phone:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>phone</Data>
+			<width>150</width>
+		</control>
+	
+		<Label>
+			<text>Email:</text>
+			<width>70</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>email</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Postal address:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>address</Data>
+			<width>350</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Education</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Degree:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>degreeType</Data>
+			<List>degreeTypeList</List>
+			<width>150</width>
+		</control>
+		
+		<Label>
+			<text>If Other:</text>
+			<width>70</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>degreeTypeOther</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Field:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>field</Data>
+			<width>350</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Year Completed:</text>
+			<width>125</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>yearCompleted</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Academic institute:</text>
+			<width>125</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>academicInstitute</Data>
+			<width>250</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>English Proficiency</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>TOEFL score</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>TOEFL</Data>
+			<width>70</width>
+		</control>
+		
+		<Label>
+			<text>/</text>
+			<width>10</width>
+		</Label>
+	
+		<Label>
+			<text>IELTS score</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>IELTS</Data>
+			<width>70</width>
+		</control>
+		
+		<Label>
+			<text>/</text>
+			<width>10</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>previousEnglish</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>Previous academic studies in English (please provide documentation)</text>
+			<width>480</width>
+		</Label>	
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Employment</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Current employer:</text>
+			<width>130</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentEmployer</Data>
+			<width>250</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Position:</text>
+			<width>130</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>position</Data>
+			<width>250</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Desired MDP track:</text>
+			<width>130</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>MDPTrack</Data>
+			<List>MDPTrackList</List>
+			<width>360</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>I hereby declare that all the details I have filled out in the form are correct and accurate</text>
+			<width>480</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

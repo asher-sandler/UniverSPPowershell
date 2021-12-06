@@ -1,0 +1,638 @@
+[
+    {
+        "Title":  "Admin Menu",
+        "Url":  "/home/General/GEN158-2021/_layouts/viewlsts.aspx?BaseType=0",
+        "Items":  [
+                      {
+                          "Title":  "applicants",
+                          "Url":  "/home/General/GEN158-2021/Lists/applicants/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  "applicants",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar38\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField DisplayName=\"firstName\" Name=\"firstName\" Type=\"Text\" ID=\"{12333bf7-7a8a-4b66-929f-c4e028931522}\" Group=\"\" StaticName=\"firstName\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surname\" Name=\"surname\" Type=\"Text\" ID=\"{45b7d911-1731-4bf4-a032-896bc0131457}\" Group=\"\" StaticName=\"surname\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"gender\" Name=\"gender\" Type=\"Text\" ID=\"{f3622226-690c-43b7-a00d-44d1d5871486}\" Group=\"\" StaticName=\"gender\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenship\" Name=\"citizenship\" Type=\"Text\" ID=\"{a4c26422-7ff6-4ff4-9208-ec7c4f8394f4}\" Group=\"\" StaticName=\"citizenship\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"email\" Name=\"email\" Type=\"Text\" ID=\"{00e95961-0f31-4f68-b1fb-cb19a0fb9d4d}\" Group=\"\" StaticName=\"email\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"homePhone\" Name=\"homePhone\" Type=\"Text\" ID=\"{aa7de1d5-c2d8-4725-8486-c64a304787d7}\" Group=\"\" StaticName=\"homePhone\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPhone\" Name=\"workPhone\" Type=\"Text\" ID=\"{a95ea5e2-aefd-47b8-b0dc-93fe6d049944}\" Group=\"\" StaticName=\"workPhone\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cellPhone\" Name=\"cellPhone\" Type=\"Text\" ID=\"{429714b4-e250-4850-bc95-a45480af1881}\" Group=\"\" StaticName=\"cellPhone\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"address\" Name=\"address\" Type=\"Text\" ID=\"{1dc38464-1c51-42a3-b8b9-41d84b9f33b2}\" Group=\"\" StaticName=\"address\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"country\" Name=\"country\" Type=\"Text\" ID=\"{471753fe-9454-4296-8e75-574c337ba544}\" Group=\"\" StaticName=\"country\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zip\" Name=\"zip\" Type=\"Text\" ID=\"{5e520dfa-ea54-4f80-abfc-e4e4f8bd0f6b}\" Group=\"\" StaticName=\"zip\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitle\" Name=\"academTitle\" Type=\"Text\" ID=\"{87377406-51db-4fab-b6ba-698fc164950e}\" Group=\"\" StaticName=\"academTitle\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"city\" Name=\"city\" Type=\"Text\" ID=\"{eb9a49eb-352e-4366-8b79-058407e828f6}\" Group=\"\" StaticName=\"city\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"state\" Name=\"state\" Type=\"Text\" ID=\"{b1190a1f-7237-46ad-a50a-320f8f932b19}\" Group=\"\" StaticName=\"state\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitleHe\" Name=\"academTitleHe\" Type=\"Text\" ID=\"{01de456c-4c64-4377-821d-6eb91243f39e}\" Group=\"\" StaticName=\"academTitleHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Name=\"firstNameHe\" Type=\"Text\" ID=\"{aadda960-20ac-4a3b-98c1-72d94224f4c6}\" Group=\"\" StaticName=\"firstNameHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Name=\"surnameHe\" Type=\"Text\" ID=\"{acc3688c-1f3b-49ce-b550-4fa209ef8444}\" Group=\"\" StaticName=\"surnameHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"IdHe\" Name=\"IdHe\" Type=\"Text\" ID=\"{a3e4624f-def4-4741-9101-f8f796a76b38}\" Group=\"\" StaticName=\"IdHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"addressHe\" Name=\"addressHe\" Type=\"Text\" ID=\"{6fa773a3-81c8-48e5-b512-746a7ad87eb7}\" Group=\"\" StaticName=\"addressHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar21\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"countryHe\" Name=\"countryHe\" Type=\"Text\" ID=\"{c9a23649-92e1-48a9-8f80-778434c34d5a}\" Group=\"\" StaticName=\"countryHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar22\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cityHe\" Name=\"cityHe\" Type=\"Text\" ID=\"{4479e8ad-99a0-4304-97ef-879d18fb4ae9}\" Group=\"\" StaticName=\"cityHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zipHe\" Name=\"zipHe\" Type=\"Text\" ID=\"{635860f5-c6b9-43df-bf6c-ccb80c47d91c}\" Group=\"\" StaticName=\"zipHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenshipHe\" Name=\"citizenshipHe\" Type=\"Text\" ID=\"{71ac9f47-9e77-4264-a381-66eb2b827575}\" Group=\"\" StaticName=\"citizenshipHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"userName\" Name=\"userName\" Type=\"Text\" ID=\"{dcecf634-8640-4316-9c93-893464f7ec78}\" Group=\"\" StaticName=\"userName\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderMail\" Name=\"folderMail\" Type=\"Text\" ID=\"{67f311ea-eef7-4361-8c96-b640b89e3bbb}\" Group=\"\" StaticName=\"folderMail\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"genderHe\" Name=\"genderHe\" Type=\"Text\" ID=\"{317f2d41-7a32-43ab-87aa-ea0e4e2a238e}\" Group=\"\" StaticName=\"genderHe\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderLink\" Name=\"folderLink\" Type=\"URL\" ID=\"{4dbede90-a99e-4ca4-8e62-ca88a81793b2}\" Group=\"\" StaticName=\"folderLink\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar29\" RowOrdinal=\"0\" ColName2=\"nvarchar30\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthYear\" Name=\"birthYear\" Type=\"Text\" ID=\"{32f44178-6112-465f-9386-83590d0ff84a}\" Group=\"\" StaticName=\"birthYear\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderName\" Name=\"folderName\" Type=\"Text\" ID=\"{ca1cae4e-e9ce-458d-b332-49b4c967f4f6}\" Group=\"\" StaticName=\"folderName\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studentId\" Name=\"studentId\" Type=\"Text\" ID=\"{45dd4fcb-7558-450b-8c12-9a064ac99b60}\" Group=\"\" StaticName=\"studentId\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{ef8abc65-c4e0-46eb-99ff-7ebefb829575}\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e2022-10-01T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{a8c64760-5892-42bd-9f02-35860474851f}\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar34\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{ba84705f-8176-4e1f-8ee5-d47060e0cc73}\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{bacafbda-4f35-4508-a47b-6b0978c01bcf}\" SourceID=\"{83D0F499-8DAC-437C-B901-3CBD85CF8B57}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar35\" RowOrdinal=\"0\" ColName2=\"nvarchar36\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"bi_Currency\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"TRUE\" Group=\"BI-EKMD\" ID=\"{47c11e5a-adc8-4500-984e-961fa330de1e}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_Currency\" Name=\"bi_Currency\" Version=\"1\" ColName=\"nvarchar37\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eשקל\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eשקל\u003c/CHOICE\u003e\u003cCHOICE\u003eדולר\u003c/CHOICE\u003e\u003cCHOICE\u003eיורו\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"bi_IsWinner\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Group=\"BI-EKMD\" ID=\"{6ce62d1f-2e97-4ba2-91b7-ea1f2d277338}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_IsWinner\" Name=\"bi_IsWinner\" Version=\"1\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Note\" DisplayName=\"bi_Notes\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" NumLines=\"6\" RichText=\"FALSE\" Sortable=\"FALSE\" Group=\"BI-EKMD\" ID=\"{f3a8765f-8e91-4869-bbe8-2b503e4328c2}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_Notes\" Name=\"bi_Notes\" Version=\"1\" ColName=\"ntext2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Note\" DisplayName=\"bi_Reason\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" NumLines=\"6\" RichText=\"FALSE\" Sortable=\"FALSE\" Group=\"BI-EKMD\" ID=\"{0b00d7db-9e71-4c00-a955-4e397be31d71}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_Reason\" Name=\"bi_Reason\" Version=\"1\" ColName=\"ntext3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"bi_ScholarshipReportDate\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" Group=\"BI-EKMD\" FriendlyDisplayFormat=\"Disabled\" ID=\"{8ca5e9c4-ed1c-4c18-8482-649b33cd1d98}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_ScholarshipReportDate\" Name=\"bi_ScholarshipReportDate\" Version=\"1\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Number\" DisplayName=\"bi_SumDistributed\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Group=\"BI-EKMD\" ID=\"{49cb4183-e0c7-4254-a8fc-844226094ae4}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_SumDistributed\" Name=\"bi_SumDistributed\" Version=\"1\" ColName=\"float1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"passport\" Type=\"Text\" Required=\"FALSE\" ID=\"{00e7897e-751d-49e6-90f0-7bfc8e4bf987}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"passport\" Name=\"passport\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{89a5eb6a-0cff-4c8f-a080-15edbfbb2504}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"birthDate\" Name=\"birthDate\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"BADateReceived\" Type=\"Text\" Required=\"FALSE\" ID=\"{6c2a1f67-16d7-4c2c-b7df-e4953aaf8cdc}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"BADateReceived\" Name=\"BADateReceived\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"BAInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{3ca05909-a302-468d-8a6b-514d80b3c5a4}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"BAInstitute\" Name=\"BAInstitute\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"BADepartment\" Type=\"Text\" Required=\"FALSE\" ID=\"{4912c206-644e-4881-8788-97ca3a76d798}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"BADepartment\" Name=\"BADepartment\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"MADateReceived\" Type=\"Text\" Required=\"FALSE\" ID=\"{777ebe6f-bd1a-4b4a-ac8b-74330b545b77}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"MADateReceived\" Name=\"MADateReceived\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"MAInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{71764dab-008a-4ea0-84b1-c7861e906e31}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"MAInstitute\" Name=\"MAInstitute\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"MADepartment\" Type=\"Text\" Required=\"FALSE\" ID=\"{d45d96ea-6a23-468a-b72a-6bfc91257fc9}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"MADepartment\" Name=\"MADepartment\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"PhDDateReceived\" Type=\"Text\" Required=\"FALSE\" ID=\"{cac5d38b-ade0-4c46-9187-a9ecbd222306}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"PhDDateReceived\" Name=\"PhDDateReceived\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"PhDInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{58a193f2-eff0-4316-9a73-bb151a8f39d1}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"PhDInstitute\" Name=\"PhDInstitute\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"PhDDepartment\" Type=\"Text\" Required=\"FALSE\" ID=\"{975039a9-fedf-405d-8486-66a36569515d}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"PhDDepartment\" Name=\"PhDDepartment\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPlace\" Type=\"Text\" Required=\"FALSE\" ID=\"{11811292-ea3e-4f17-a278-15284b79adb7}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"workPlace\" Name=\"workPlace\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPosition\" Type=\"Text\" Required=\"FALSE\" ID=\"{f2653b56-83a7-4e77-8a7c-e889038622da}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"workPosition\" Name=\"workPosition\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workHours\" Type=\"Text\" Required=\"FALSE\" ID=\"{59943378-7556-485c-8527-e4b11eb3ebb0}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"workHours\" Name=\"workHours\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"receiveOtherFellow\" Type=\"Text\" Required=\"FALSE\" ID=\"{7c428441-6da3-4f86-9a75-a28edb00fa4d}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"receiveOtherFellow\" Name=\"receiveOtherFellow\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"receiveOtherFellowName\" Type=\"Text\" Required=\"FALSE\" ID=\"{798ed85b-4ff3-442b-bea0-9d4f648f9560}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"receiveOtherFellowName\" Name=\"receiveOtherFellowName\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"receiveOtherFellowPeriod\" Type=\"Text\" Required=\"FALSE\" ID=\"{ba74c805-84f5-4b07-a715-8962226e7b37}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"receiveOtherFellowPeriod\" Name=\"receiveOtherFellowPeriod\" ColName=\"nvarchar54\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"receiveOtherFellowAmount\" Type=\"Text\" Required=\"FALSE\" ID=\"{cdbba2c9-cce4-41ec-9249-9393d7ded74c}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"receiveOtherFellowAmount\" Name=\"receiveOtherFellowAmount\" ColName=\"nvarchar55\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"requestOtherFellow\" Type=\"Text\" Required=\"FALSE\" ID=\"{f2ccd937-7c77-44e5-8aa8-e7e4fca3bda5}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"requestOtherFellow\" Name=\"requestOtherFellow\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"requestOtherFellowName\" Type=\"Text\" Required=\"FALSE\" ID=\"{5f6d29a7-f06d-45b2-b2a8-413ecfd8cf05}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"requestOtherFellowName\" Name=\"requestOtherFellowName\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"requestOtherFellowDateSubmitted\" Type=\"Text\" Required=\"FALSE\" ID=\"{71feecf0-91fa-4e63-aa00-62c3dc70190a}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"requestOtherFellowDateSubmitted\" Name=\"requestOtherFellowDateSubmitted\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"requestOtherFellowName2\" Type=\"Text\" Required=\"FALSE\" ID=\"{cad6543e-fa66-4de3-8d48-49a4a1d30b55}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"requestOtherFellowName2\" Name=\"requestOtherFellowName2\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"requestOtherFellowDateSubmitted2\" Type=\"Text\" Required=\"FALSE\" ID=\"{4e3484d9-7c48-4be2-8730-ca183127f43d}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"requestOtherFellowDateSubmitted2\" Name=\"requestOtherFellowDateSubmitted2\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"researchSubEn\" Type=\"Note\" Required=\"FALSE\" ID=\"{486dd00f-227a-4560-ae9d-a689c6f6b03e}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"researchSubEn\" Name=\"researchSubEn\" ColName=\"ntext1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"researchSubHe\" Type=\"Note\" Required=\"FALSE\" ID=\"{4e5c7dce-205c-4d24-b0da-ca910ce90583}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"researchSubHe\" Name=\"researchSubHe\" ColName=\"ntext5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"LanguageProficiency:\" Type=\"Text\" Required=\"FALSE\" ID=\"{381c4193-b98a-4eff-837f-4eeaf0666eae}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"LanguageProficiency_x003a_\" Name=\"LanguageProficiency_x003a_\" ColName=\"nvarchar61\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"ApplicationPeriod\" Type=\"Text\" Required=\"FALSE\" ID=\"{27e7ac50-e4b3-4e18-b58e-0b9c98146ef1}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"ApplicationPeriod\" Name=\"ApplicationPeriod\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"lastSubmit\" Required=\"FALSE\" ID=\"{58190b67-71c9-4178-b5c8-c078aed677d9}\" SourceID=\"{83d0f499-8dac-437c-b901-3cbd85cf8b57}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN158-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Document Type list",
+                          "Url":  "/home/General/GEN158-2021/Lists/DocType/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "DocType",
+                          "Name":  "DocType",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"Required\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{db410384-4847-4203-87c5-6abfa6f20e9b}\" SourceID=\"{62E36C54-3006-4C99-8BF6-73A65FA1170C}\" StaticName=\"Required\" Name=\"Required\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Number\" DisplayName=\"FilesNumber\" Required=\"TRUE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Decimals=\"0\" ID=\"{3a43383a-cd30-4b1c-af36-e4d40071af2f}\" SourceID=\"{62E36C54-3006-4C99-8BF6-73A65FA1170C}\" StaticName=\"FilesNumber\" Name=\"FilesNumber\" ColName=\"float1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"fromMail\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{3ef8e247-7fee-4c4f-b601-0b78c32f2b16}\" SourceID=\"{62E36C54-3006-4C99-8BF6-73A65FA1170C}\" StaticName=\"fromMail\" Name=\"fromMail\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"source_field\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{0ab20342-516a-4daf-a87d-39c7eae8491d}\" SourceID=\"{62E36C54-3006-4C99-8BF6-73A65FA1170C}\" StaticName=\"source_field\" Name=\"source_field\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\all_apps_grpsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN158-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Submitted",
+                          "Url":  "/home/General/GEN158-2021/Submitted/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Submitted",
+                          "Name":  "Submitted",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"Name\" AuthoringInfo=\"(for use in forms)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"Title\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Document Type\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{62E36C54-3006-4C99-8BF6-73A65FA1170C}\" ShowField=\"Title\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{00bbf391-8359-42af-8b48-aa09746c60c8}\" SourceID=\"{ED5B7AF0-F5F8-4301-8E8A-FA5DF1EBFD6C}\" StaticName=\"Document_x0020_Type\" Name=\"Document_x0020_Type\" ColName=\"int1\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN158-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Delete Empty Folders",
+                          "Url":  "/home/General/GEN158-2021/Pages/DeleteEmptyFolders.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "DeleteEmptyFolders.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Final",
+                          "Url":  "/home/General/GEN158-2021/Final/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Final",
+                          "Name":  "Final",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"Name\" AuthoringInfo=\"(for use in forms)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"Title\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Stage\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{293c1c79-8e2f-48c3-ac16-5bf16c52d258}\" SourceID=\"{4D45419F-AFB8-4432-8D08-6CB0CA8513F4}\" StaticName=\"Stage\" Name=\"Stage\" ColName=\"nvarchar10\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e-\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e-\u003c/CHOICE\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN158-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "cancelled applicants",
+                          "Url":  "/home/General/GEN158-2021/Lists/cancelledApplicantsList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "cancelledApplicantsList",
+                          "Name":  "cancelledApplicantsList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"firstName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{ce0f5b71-3a90-468d-9a9b-756631ca702f}\" SourceID=\"{A0E855C2-2C4E-4A69-82C5-A559820AD1FD}\" StaticName=\"firstName\" Name=\"firstName\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"surname\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{38b1daf7-1734-4646-bb5d-47838b2c3044}\" SourceID=\"{A0E855C2-2C4E-4A69-82C5-A559820AD1FD}\" StaticName=\"surname\" Name=\"surname\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"idNumber\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{1840c84e-a22b-4a2e-b35e-291cb491f043}\" SourceID=\"{A0E855C2-2C4E-4A69-82C5-A559820AD1FD}\" StaticName=\"idNumber\" Name=\"idNumber\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"email\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{1e8271ba-651e-4f67-8da2-07ab46f350c0}\" SourceID=\"{A0E855C2-2C4E-4A69-82C5-A559820AD1FD}\" StaticName=\"email\" Name=\"email\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN158-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Orit Kedar",
+                          "Url":  "/home/General/GEN158-2021/Lists/orit kedar/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/orit kedar/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "orit kedar",
+                          "Name":  "Orit Kedar",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"3\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "orit kedar",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Louise Bethlehem",
+                          "Url":  "/home/General/GEN158-2021/Lists/louise bethlehem/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/louise bethlehem/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "louise bethlehem",
+                          "Name":  "Louise Bethlehem",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "Louise Bethlehem",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Itay Greenspan",
+                          "Url":  "/home/General/GEN158-2021/Lists/Itay Greenspan/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/Itay Greenspan/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "Itay Greenspan",
+                          "Name":  "Itay Greenspan",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "itay Greenspan",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Badi Hasisi",
+                          "Url":  "/home/General/GEN158-2021/Lists/Badi Hasisi/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/Badi Hasisi/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "Badi Hasisi",
+                          "Name":  "Badi Hasisi",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "badi Hasisi",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Abigail Jacobson",
+                          "Url":  "/home/General/GEN158-2021/Lists/Abigail Jacobson/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/Abigail Jacobson/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "Abigail Jacobson",
+                          "Name":  "Abigail Jacobson",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Abigail Jacobson",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Oded Lowenheim",
+                          "Url":  "/home/General/GEN158-2021/Lists/Oded Lowenheim/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/Oded Lowenheim/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "Oded Lowenheim",
+                          "Name":  "Oded Lowenheim",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "oded Lowenheim",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Dan Miodownik",
+                          "Url":  "/home/General/GEN158-2021/Lists/dan miodownik/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/dan miodownik/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "dan miodownik",
+                          "Name":  "dan miodownik",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "Dan Miodownik",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Vered Vinitzky-Seroussi",
+                          "Url":  "/home/General/GEN158-2021/Lists/Vered VinitzkySeroussi/AllItems.aspx",
+                          "OldUrl":  "/home/General/GEN144-2020/Lists/Vered VinitzkySeroussi/AllItems.aspx",
+                          "Type":  "Lists",
+                          "InnerName":  "Vered VinitzkySeroussi",
+                          "Name":  "Vered Vinitzky-Seroussi",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar1\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Name\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{732061cd-515f-4819-8b9c-b46d98e34723}\" ShowField=\"firstName\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{77162bb9-4744-4e93-bfaa-20141df603df}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Name\" Name=\"Name\" ColName=\"int1\" RowOrdinal=\"0\" Group=\"\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Grade\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{bcb72036-98f8-4104-b0c9-37294980b61e}\" SourceID=\"{a08464e9-9309-46bb-9d45-0ab5187ec575}\" StaticName=\"Grade\" Name=\"Grade\" ColName=\"nvarchar3\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003cCHOICE\u003e3\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "Vered Vinitzky-Seroussi",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Contribute"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_GEN144-2020_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Application",
+        "Url":  "/home/General/GEN158-2021",
+        "Items":  [
+                      {
+                          "Title":  "Application Form",
+                          "Url":  "/home/General/GEN158-2021/Pages/Form.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Form.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Recommendations",
+                          "Url":  "/home/General/GEN158-2021/Pages/Recommendations.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Recommendations.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Submission Status",
+                          "Url":  "/home/General/GEN158-2021/Pages/SubmissionStatus.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "SubmissionStatus.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Cancel Candidacy",
+                          "Url":  "/home/General/GEN158-2021/Pages/CancelCandidacy.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "CancelCandidacy.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Contact Us",
+        "Url":  "/home/General/GEN158-2021/Pages/ContactUs.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Recent",
+        "Url":  "",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    }
+]

@@ -1,0 +1,250 @@
+[
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/DeleteEmptyFolders.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/DeleteEmptyFolders.aspx",
+        "WebPartName":  "RemoveEmptyDocLibApplicants",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Default.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Default.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ContentLink",
+        "WebPartValueSRC":  "",
+        "WebPartValueDST":  "/home/natureScience/SCI26-2022/SwitchModule/DefaultSwitchEn.txt"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Default.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Default.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "Description",
+        "WebPartValueSRC":  "השתמש עבור טקסט מעוצב, טבלאות ותמונות.",
+        "WebPartValueDST":  "Use for formatted text, tables, and images."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Default.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Default.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Default.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Default.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "MissingAssembly",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "SCI24-2021.xml",
+        "WebPartValueDST":  "SCI26-2022-En.xml"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "textAlign",
+        "WebPartValueSRC":  "0",
+        "WebPartValueDST":  "1"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "textDirection",
+        "WebPartValueSRC":  "0",
+        "WebPartValueDST":  "1"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/Recommendations.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/Recommendations.aspx",
+        "WebPartName":  "ScholarshipFolderMailDisplay",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "SCI24-2021-mail.txt",
+        "WebPartValueDST":  "SCI26-2022-mail-En.txt"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetDisableAttribute",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetReadingPermission",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "WP_Language",
+        "WebPartValueSRC":  "0",
+        "WebPartValueDST":  "1"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "StatusBoard",
+        "WebPartKey":  "Text_Direction",
+        "WebPartValueSRC":  "0",
+        "WebPartValueDST":  "1"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ContentLink",
+        "WebPartValueSRC":  "",
+        "WebPartValueDST":  "/home/natureScience/SCI26-2022/SwitchModule/CancelCandidacySwitchEn.txt"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "Description",
+        "WebPartValueSRC":  "השתמש עבור טקסט מעוצב, טבלאות ותמונות.",
+        "WebPartValueDST":  "Use for formatted text, tables, and images."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "MissingAssembly",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "Description",
+        "WebPartValueSRC":  "השתמש עבור טקסט מעוצב, טבלאות ותמונות.",
+        "WebPartValueDST":  "Use for formatted text, tables, and images."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "MissingAssembly",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "Button_Send_Mail_To_Applicant",
+        "WebPartKey":  "Config_File_Path",
+        "WebPartValueSRC":  "\\\\ekeksql00\\SP_Resources$\\GRS\\ResponseLetterConfig\\‏‏‏‏SCI24-2021",
+        "WebPartValueDST":  "\\\\ekeksql00\\SP_Resources$\\GRS\\ResponseLetterConfig\\SCI26-2022"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "Button_Send_Mail_To_Applicant",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ImportErrorMessage",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "f801dc7e-3893-48af-8f5c-92e7140ba258",
+        "WebPartValueDST":  "8788728d-5d34-4c4a-82f0-706624ebd009"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{F801DC7E-3893-48AF-8F5C-92E7140BA258}",
+        "WebPartValueDST":  "{8788728D-5D34-4C4A-82F0-706624EBD009}"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "MissingAssembly",
+        "WebPartValueSRC":  "אין אפשרות לייבא Web Part זה.",
+        "WebPartValueDST":  "Cannot import this Web Part."
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/natureScience/SCI24-2021/Lists/applicants",
+        "WebPartValueDST":  "/home/natureScience/SCI26-2022/Lists/applicants"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI24-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/natureScience/SCI26-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ViewFlags",
+        "WebPartValueSRC":  "8388621",
+        "WebPartValueDST":  "13"
+    }
+]

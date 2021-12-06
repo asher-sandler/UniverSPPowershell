@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>housingForm</fileName>
+		<docHeader>Housing Form</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+		<registrationMessage>You are not registered for this program. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>14. Housing Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Label>
+			<text>First Name:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Surname:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Program you are applying to:</text>
+			<width>200</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>program</Data>
+			<List>programList</List>
+			<width>300</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+	    <Label>
+			<text>Country:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>country</Data>
+			<width>150</width>
+			<List>countryList</List>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Dormitory Reservation</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>doubleRoom</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I request dormitory accommodations in a double room (860 NIS per month)</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>singleRoom</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I request dormitory accommodations in a single room (subject to availability) (1240 NIS per month)</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>apartmentRoom</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I request dormitory accommodations in a single room in an apartment (subject to availability) (1400 NIS per month)</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>noRoom</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I do not wish to reserve a dormitory room. I undertake full responsibility for the arrangement of my accommodations</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>My address in Israel:</text>
+			<width>150</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>israelAdress</Data>
+			<width>520</width>
+		</control>
+	</row>
+
+    <row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Special Requests</Header>
+	</row>
+
+    <row>
+		<Label>
+			<text>If you would like to share a room with a specific person or if you have a specific request, please note it here. We will do our best to accommodate you. </text>
+			<width>520</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+    <row>       
+	   <control>
+			<Type>MultiLineTextBox</Type>
+			<Data>specialRequest</Data>
+			<width>520</width>
+		</control>	
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Household Items</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>roomItems</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I request to purchase Bedding and Towels (Cost: approx. $100) [1 blanket, 2 blanket covers, 2 sheets, 1 pillow, 2 pillowcases, 2 hand-towels, 2 bath towels]</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>kitchenItems</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I request to purchase Kitchen Utensils (Cost: approx. $100) [1 small pot, 1 small frying pan, 1 ladle, 2 dinner plates, 2 dessert plates, 2 bowls, 2 cups, 2 forks, 2 knives, 2 tablespoons, 2 teaspoons]</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>noItems</Data>
+			<width>20</width>
+		</control>
+		
+		<Label>
+			<text>I do not wish to purchase household items prior to my arrival</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>400</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

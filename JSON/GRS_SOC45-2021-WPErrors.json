@@ -1,0 +1,226 @@
+[
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "‏‏SOC39-2021.xml",
+        "WebPartValueDST":  "SOC45-2021.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "‏‏SOC39-2021-mail.txt",
+        "WebPartValueDST":  "SOC45-2021-mail-En.txt"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/Pages/References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/Pages/References.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "formURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC39-2021/Pages/References.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC45-2021/Pages/References.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/Pages/References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/Pages/References.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0 - Anonymous",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "‏‏SOC39-2021-ref.xml",
+        "WebPartValueDST":  "SOC45-2021-ref.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/Pages/Personal-Statement.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/Pages/Personal-Statement.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "‏‏SOC39-2021-PersonalStatment.xml",
+        "WebPartValueDST":  "SOC45-2021-PersonalStatment.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "Finances_Send_Eshel_Button - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "‏‏SOC39-2021_button_Academic.xml",
+        "WebPartValueDST":  "SOC45-2021_button_Academic.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "​​ ​Waitnig \u0027Academic\u0027 References",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "cd9e7d75-36f0-4185-811e-a6c4aeab25d6",
+        "WebPartValueDST":  "8563b2e2-e26f-4d3d-8c15-27b2fdbeed9b"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "​​ ​Waitnig \u0027Academic\u0027 References",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{CD9E7D75-36F0-4185-811E-A6C4AEAB25D6}",
+        "WebPartValueDST":  "{8563B2E2-E26F-4D3D-8C15-27B2FDBEED9B}"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "​​ ​Waitnig \u0027Academic\u0027 References",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/socialSciences/SOC39-2021/Lists/references",
+        "WebPartValueDST":  "/home/socialSciences/SOC45-2021/Lists/references"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "Sent \u0027Academic\u0027 References",
+        "WebPartKey":  "ChromeType",
+        "WebPartValueSRC":  "2",
+        "WebPartValueDST":  "1"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "Sent \u0027Academic\u0027 References",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "cd9e7d75-36f0-4185-811e-a6c4aeab25d6",
+        "WebPartValueDST":  "8563b2e2-e26f-4d3d-8c15-27b2fdbeed9b"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "Sent \u0027Academic\u0027 References",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{CD9E7D75-36F0-4185-811E-A6C4AEAB25D6}",
+        "WebPartValueDST":  "{8563B2E2-E26F-4D3D-8C15-27B2FDBEED9B}"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Academic.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Academic.aspx",
+        "WebPartName":  "Sent \u0027Academic\u0027 References",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/socialSciences/SOC39-2021/Lists/references",
+        "WebPartValueDST":  "/home/socialSciences/SOC45-2021/Lists/references"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "Finances_Send_Eshel_Button - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "‏‏SOC39-2021_button_Professional.xml",
+        "WebPartValueDST":  "SOC45-2021_button_Professional.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "​​ ​Waitnig \u0027Professional\u0027 References",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "cd9e7d75-36f0-4185-811e-a6c4aeab25d6",
+        "WebPartValueDST":  "8563b2e2-e26f-4d3d-8c15-27b2fdbeed9b"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "​​ ​Waitnig \u0027Professional\u0027 References",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{CD9E7D75-36F0-4185-811E-A6C4AEAB25D6}",
+        "WebPartValueDST":  "{8563B2E2-E26F-4D3D-8C15-27B2FDBEED9B}"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "​​ ​Waitnig \u0027Professional\u0027 References",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/socialSciences/SOC39-2021/Lists/references",
+        "WebPartValueDST":  "/home/socialSciences/SOC45-2021/Lists/references"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "​​​Sent \u0027Professional\u0027 References",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "cd9e7d75-36f0-4185-811e-a6c4aeab25d6",
+        "WebPartValueDST":  "8563b2e2-e26f-4d3d-8c15-27b2fdbeed9b"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "​​​Sent \u0027Professional\u0027 References",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{CD9E7D75-36F0-4185-811E-A6C4AEAB25D6}",
+        "WebPartValueDST":  "{8563B2E2-E26F-4D3D-8C15-27B2FDBEED9B}"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References.aspx",
+        "WebPartName":  "​​​Sent \u0027Professional\u0027 References",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/socialSciences/SOC39-2021/Lists/references",
+        "WebPartValueDST":  "/home/socialSciences/SOC45-2021/Lists/references"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  "Finances_Send_Eshel_Button - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "‏‏SOC39-2021_button_Other.xml",
+        "WebPartValueDST":  "SOC45-2021_button_Other.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  " ​Waitnig \u0027Other\u0027 References",
+        "WebPartKey":  "ChromeType",
+        "WebPartValueSRC":  "2",
+        "WebPartValueDST":  "0"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  " ​Waitnig \u0027Other\u0027 References",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "cd9e7d75-36f0-4185-811e-a6c4aeab25d6",
+        "WebPartValueDST":  "8563b2e2-e26f-4d3d-8c15-27b2fdbeed9b"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  " ​Waitnig \u0027Other\u0027 References",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{CD9E7D75-36F0-4185-811E-A6C4AEAB25D6}",
+        "WebPartValueDST":  "{8563B2E2-E26F-4D3D-8C15-27B2FDBEED9B}"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  " ​Waitnig \u0027Other\u0027 References",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/socialSciences/SOC39-2021/Lists/references",
+        "WebPartValueDST":  "/home/socialSciences/SOC45-2021/Lists/references"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  "Sent \u0027Other\u0027 References",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "cd9e7d75-36f0-4185-811e-a6c4aeab25d6",
+        "WebPartValueDST":  "8563b2e2-e26f-4d3d-8c15-27b2fdbeed9b"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  "Sent \u0027Other\u0027 References",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{CD9E7D75-36F0-4185-811E-A6C4AEAB25D6}",
+        "WebPartValueDST":  "{8563B2E2-E26F-4D3D-8C15-27B2FDBEED9B}"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC39-2021/SitePages/Send_References_Other.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC45-2021/SitePages/Send_References_Other.aspx",
+        "WebPartName":  "Sent \u0027Other\u0027 References",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/socialSciences/SOC39-2021/Lists/references",
+        "WebPartValueDST":  "/home/socialSciences/SOC45-2021/Lists/references"
+    }
+]

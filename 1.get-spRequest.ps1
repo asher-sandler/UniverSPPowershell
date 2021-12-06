@@ -8,6 +8,11 @@ param([string] $groupName = "",
 	[string[]]$InitUser = "No"
 	
 	)
+# dotnet add package Microsoft.SharePointOnline.CSOM --version 16.1.21812.12000	
+# nuget.exe install Microsoft.SharePointOnline.CSOM
+# cd \AdminDir\nuget
+# Install-Package -Name 'Microsoft.SharePointOnline.CSOM' -Source .\Microsoft.SharePointOnline.CSOM.16.1.21812.12000
+#Import-Module 'C:\nuget\Microsoft.SharePointOnline.CSOM.16.1.21812.12000\lib\net45\Microsoft.SharePoint.Client.dll
 write-host "Init User: $InitUser"
 $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)

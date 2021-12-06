@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>healthDeclarationForm</fileName>
+		<docHeader>Personal Health Declaration</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+		<registrationMessage>You are not registered for this program. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>12. Personal Health Declaration Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Label>
+			<text>First Name:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Surname:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Your Country:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>country</Data>
+			<width>150</width>
+			<List>countryList</List>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Program you are applying to:</text>
+			<width>200</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>program</Data>
+			<List>programList</List>
+			<width>300</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>1. Have you had in the past or do you currently have problems related to:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>If you answer "yes" to any question, include details and date of illness.</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Heart (cardiovascular), lung and/or respiratory system (tuberculosis, asthma, tumor, etc.)</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>chestConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>chestConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Stomach, intestines, liver, kidney (nephritis, stones, etc.)</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>abdominalConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>abdominalConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Infectious diseases (malaria, etc.)</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>infectiousConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>infectiousConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Nervous system (convulsions, stroke, mental illness, stress-related disorders, etc.)</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>nervousSystemConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>nervousSystemConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Glandular system (such as goiter, diabetes, anemia)</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>glandularSystemConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>glandularSystemConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Skin, muscles, bones, joints</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>softTissueAndBoneConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>softTissueAndBoneConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Sensory organs (eyes, ears, etc.)</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>sensoryConditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>sensoryConditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>STD (sexually transmitted diseases), including HIV</text>
+			<width>220</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>STDconditions</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>STDconditionsDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>2.	Have you been vaccinated for Measles?</Header>
+	</row>
+	
+	<row>
+	    <control>
+			<Type>RadioButtonList</Type>
+			<Data>measlesVaccination</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>measlesVaccinationDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>3. Do you have any allergies?</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>If "yes" please detail what you are allergic to.</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+	    <control>
+			<Type>RadioButtonList</Type>
+			<Data>allergies</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>allergiesDetails</Data>
+			<width>250</width>
+		</control>		
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+    <row>
+		<Header>Declaration</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declarationHealth</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>I, the undersigned, understand that the Hebrew University reserves the right to take any necessary measures in connection with candidates who submit partial, incorrect and/or false information, and I certify that all information given here is full and correct. I waive my right to privacy regarding all medical information and documentation relevant to processing my application to the study program.</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>400</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

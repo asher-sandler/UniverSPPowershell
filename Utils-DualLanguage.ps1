@@ -641,12 +641,18 @@ function get-NewDefault($newSiteName, $language, $deadline){
 	}
 	return $result
 }
-function create-DocLib($SiteName, $ListName){
+function create-DocLib($SiteName, $ListName, $DisplayName=""){
 	$siteNameN = get-UrlNoF5 $SiteName
     $Context = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN) 
     $Context.Credentials = $Credentials
-	
-	$LibExists = Check-ListExists $siteNameN  $ListName
+	$LibExists = $true
+	if ([string]::IsNullOrEmpty($DisplayName)){
+		$LibExists = Check-ListExists $siteNameN  $ListName
+	}
+	else
+	{	
+		$LibExists = Check-ListExists $siteNameN  $DisplayName
+	}
     if (!$LibExists){
 		$ListInfo = New-Object Microsoft.SharePoint.Client.ListCreationInformation
 		$ListInfo.Title = $ListName
@@ -655,6 +661,10 @@ function create-DocLib($SiteName, $ListName){
 		 
 		#Set "New Experience" as list property
 		#$List.ListExperienceOptions = "NewExperience" #Or ClassicExperience
+		if (![string]::IsNullOrEmpty($DisplayName)){
+			$List.Title = $DisplayName
+		}
+		$List.OnQuickLaunch = $false;
 		$List.Update()
 		$Context.ExecuteQuery()
 
@@ -701,6 +711,77 @@ function create-DocLib($SiteName, $ListName){
   
 	return $null
 }
+#function get-FolderRelUrl($RelURL){
+#	$lastEl = $RelURL.split("/")[-1]
+#	$rlUrl = $RelURL.Replace("/"+$lastEl,"")
+#	return $rlUrl
+#}
+function get-ListPermissions($siteURL, $RelURL){
+	$siteName = get-UrlNoF5 $SiteURL
+	
+	#$rlUrl = get-FolderRelUrl $RelURL
+	write-host "Collect ListPermissions: $relUrl" -foregroundcolor Green
+	
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+	
+ 	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	
+	#$ListRel = $Ctx.Web.GetFolderByServerRelativeUrl($rlUrl)
+	$List = $Web.GetList($relUrl)
+	$Ctx.Load($List)
+	$Ctx.ExecuteQuery()
+
+	$RoleAssignments = $List.RoleAssignments
+	$Ctx.Load($RoleAssignments)
+	$Ctx.ExecuteQuery()
+
+	#Loop through each permission assigned and extract details
+	$PermissionCollection = @()
+	
+	$roleCount = $RoleAssignments.count
+	write-host "Permissions role Count: $roleCount" -f Magenta
+	$countDown = $roleCount
+	#read-host
+	if ($roleCount -lt 2000){
+		Foreach($RoleAssignment in $RoleAssignments)
+		{
+			$Ctx.Load($RoleAssignment.Member)
+			$Ctx.executeQuery()
+
+			#Get the User Type
+			$PermissionType = $RoleAssignment.Member.PrincipalType
+			#write-host "751:" -f Magenta
+			#Get the Permission Levels assigned
+			$Ctx.Load($RoleAssignment.RoleDefinitionBindings)
+			$Ctx.ExecuteQuery()
+			$PermissionLevels = ($RoleAssignment.RoleDefinitionBindings | Select -ExpandProperty Name) -join ","
+			 
+			#Get the User/Group Name
+			$Name = $RoleAssignment.Member.Title # $RoleAssignment.Member.LoginName
+			#write-host "759:" -f Magenta
+			#Add the Data to Object
+			$Permissions = New-Object PSObject
+			$Permissions | Add-Member NoteProperty Name($Name)
+			$Permissions | Add-Member NoteProperty Type($PermissionType)
+			$Permissions | Add-Member NoteProperty PermissionLevels($PermissionLevels)
+			if (!$($Permissions.PermissionLevels -eq "Limited Access")){
+				$PermissionCollection += $Permissions
+			}
+			$countDown--
+			$sCountDown = $countDown.ToString().PadLeft(3," ")
+			write-host "`r$sCountDown" -f Magenta -NoNewLine
+		}
+	}
+	
+	#write-host "768:" -f Magenta
+	write-host 
+	Return $PermissionCollection
+
+}
 function Collect-Navigation($siteURL,$isMenuOld){
 	$siteName = get-UrlNoF5 $SiteURL
 	write-host "Collect Navigation: $siteURL" -foregroundcolor Green
@@ -744,11 +825,23 @@ function Collect-Navigation($siteURL,$isMenuOld){
 			$Ctx.Load($childItem)
 			
 			$Ctx.ExecuteQuery()
-			$submenu = "" | Select Title, Url, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+			$submenu = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete, ListSchema, ListPermissons 
 			$submenu.Title = $childItem.Title
 			$submenu.Url = $childItem.Url
 			$submenu.Type = getMenuItemType $submenu.Url 
 			$submenu.InnerName = getMenuItemInnerName $submenu.Url $submenu.Type
+			$submenu.Name = getListOrDocName $SiteURL $submenu.Url $submenu.Type
+			
+			if ($submenu.Type -eq "Lists" -or $submenu.Type -eq "DocLib"){
+				#write-Host "762: $siteName $($submenu.Name)"
+				#read-host
+				$subMenu.ListSchema = get-ListSchema $siteName $submenu.Name
+				#$subMenu.ListPermissons = @()
+				$subMenu.ListPermissons = get-ListPermissions $siteName $submenu.URL 
+			}
+			
+			
+			
 			$submenu.IsOldMenu = $isMenuOld
 			$submenu.CandidateForDelete = $false
 			$items += $submenu
@@ -764,6 +857,28 @@ function Collect-Navigation($siteURL,$isMenuOld){
 	return $menuDump
 	
 	
+}
+function getListOrDocName ($SiteURL, $url, $itemType){
+	$retValue = $null
+	if ($itemType -eq "Lists" -or $itemType -eq "DocLib"){
+		
+		$siteName = get-UrlNoF5 $SiteURL
+		#write-host "Get List  Or Doc Name : $siteURL" -foregroundcolor Green
+		#write-host "Get List  Or Doc Name : $url" -foregroundcolor Green
+		$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+		$ctx.Credentials = $Credentials
+		
+		$Web = $Ctx.Web
+		$ctx.Load($Web)
+		$Ctx.ExecuteQuery()
+		$list = $Web.GetList($url);
+		$ctx.Load($list)
+		$Ctx.ExecuteQuery()
+		#Error - error 
+		#get real name list name
+		$retValue +=  $list.Title 		
+	}
+	return $retValue
 }
 function Compare-Navig($menuSrc, $menuDst, $oldSuffix , $newSuffix){
 	$menuW = @()
@@ -787,13 +902,15 @@ function Compare-Navig($menuSrc, $menuDst, $oldSuffix , $newSuffix){
             $mItems = @()
 			foreach($item in $menuS.Items)
             {
-				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete, ListSchema, ListPermissons 
 				$newItem.Title = $item.Title
 				$newItem.OldUrl = $item.Url
 				$newItem.Url = $item.Url.Replace($oldSuffix , $newSuffix)
 				$newItem.Type = $item.Type
 				$newItem.InnerName = $item.InnerName
 				$newItem.Name = $item.Name
+				$newItem.ListSchema = $item.ListSchema
+				$newItem.ListPermissons = $item.ListPermissons
 				$newItem.IsOldMenu = $false
 				$newItem.CandidateForDelete = $false
 				$mItems += $newItem
@@ -809,7 +926,7 @@ function Compare-Navig($menuSrc, $menuDst, $oldSuffix , $newSuffix){
 			}				
 		}
 		if (!$itemExists){
-			write-host "Item Menu Not Exists: $($menuItemS.Title)" -f Yellow
+			#write-host "Item Menu Not Exists: $($menuItemS.Title)" -f Yellow
 			#write-host $menuItemS -f Yellow
 			$menuW += $menuItemS	
 			
@@ -841,7 +958,7 @@ function Check-SubNavOldItems($menuSrc, $menuDst, $oldSuffix , $newSuffix){
 			$titleMenuS = $menuS.Title
 			
 			if ($titleMenuD -eq $titleMenuS){
-				write-host "SubNav: $titleMenuD" -f Cyan
+				#write-host "SubNav: $titleMenuD" -f Cyan
 				$itemsS = $menuS.Items
 				break
 			}
@@ -861,7 +978,7 @@ function Check-SubNavOldItems($menuSrc, $menuDst, $oldSuffix , $newSuffix){
 			}
 			
 			if (!$itemMenuExists){
-				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete, ListSchema, ListPermissons 
 				
 				$newItem.Title = $itemS.Title
 				$newItem.OldUrl = $itemS.Url
@@ -869,22 +986,26 @@ function Check-SubNavOldItems($menuSrc, $menuDst, $oldSuffix , $newSuffix){
 				$newItem.Type = $itemS.Type
 				$newItem.InnerName = $itemS.InnerName
 				$newItem.Name = $itemS.Name
+				$newItem.ListSchema = $itemS.ListSchema
+				$newItem.ListPermissons = $itemS.ListPermissons
 				$newItem.IsOldMenu = $false
 				$newItem.CandidateForDelete = $false
 				$menuArr += $newItem
 								
-				write-host "SubNavItem: $itemSTitl" -f Green
+				#write-host "SubNavItem: $itemSTitl" -f Green
 			}
 			else
 			{
-				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete 
+				$newItem = "" | Select Title, Url, OldUrl, Type, InnerName, Name,  IsOldMenu, CandidateForDelete, ListSchema, ListPermissons 
 				
 				$newItem.Title = $itemD.Title
-				$newItem.OldUrl = $itemD.OldUrlUrl
+				$newItem.OldUrl = $itemD.OldUrl
 				$newItem.Url = $itemD.Url
 				$newItem.Type = $itemD.Type
 				$newItem.InnerName = $itemD.InnerName
 				$newItem.Name = $itemD.Name
+				$newItem.ListSchema = $itemD.ListSchema
+				$newItem.ListPermissons = $itemD.ListPermissons
 				$newItem.IsOldMenu =  $itemD.IsOldMenu
 				$newItem.CandidateForDelete = $false
 				$menuArr += $newItem
@@ -896,6 +1017,430 @@ function Check-SubNavOldItems($menuSrc, $menuDst, $oldSuffix , $newSuffix){
 	}
 	return $menuW	
 	
+}
+function Create-MainMenu($siteUrl, $menu){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "Create Main Navigation: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+ 	
+	
+	foreach($item in $menu){
+		if (!$item.IsOldMenu){
+			#new item. Create new
+			write-host $("MenuItem Title:" + $item.Title) -f Cyan
+			write-host $("MenuItem URL  :" + $item.Url) -f Cyan
+			
+			#Add link to Quick Launch Navigation
+			$NavigationNode = New-Object Microsoft.SharePoint.Client.NavigationNodeCreationInformation
+			$NavigationNode.Title = $item.Title
+			$NavigationNode.Url = $item.Url
+			$NavigationNode.AsLastNode = $True
+			$Ctx.Load($QuickLaunch.Add($NavigationNode))
+			$Ctx.ExecuteQuery()
+
+		}
+	}
+}
+function change-AllListFieldAndViews($menu,$groupName,$spObj, $oldSiteURL, $siteUrl){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "change-AllListFieldAndViews DocLib: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+		
+	$docLibNames =  @()	
+	foreach($item in $menu){
+		foreach($subMenuItem in $item.Items)
+		{
+			if ($subMenuItem.Type -eq "DocLib"){
+				write-host $("DocLibNames :" + $subMenuItem.Title) -f Cyan
+				if (!(($subMenuItem.InnerName -eq "Submitted") -or 
+					($subMenuItem.InnerName -eq "Final"))){
+						$list = $Web.GetList($subMenuItem.Url);
+						$ctx.Load($list)
+						$Ctx.ExecuteQuery()
+					    #Error - error 
+						#get real name list name
+						$docLibNames +=  $list.Title 
+					}
+			}
+		}
+	}	
+	write-host "959: Press any key..."
+	
+   	foreach($docLibName in $docLibNames){
+		write-Host $docLibName -f Cyan
+	}
+	
+	write-host "965: Press any key..."
+	#read-host
+	
+	foreach($docLibName in $docLibNames){
+	
+		$schemaDocLibSrc1 =  get-ListSchema $oldSiteURL $docLibName
+		
+		#$schemaDocLib1 | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-DocLib1.json")
+		$sourceDocObj = get-SchemaObject $schemaDocLibSrc1 
+		$sourceDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-Doc"+$docLibName+".json")
+		create-DocLib $siteUrl $docLibName
+		
+		# ======================= new DocLib
+		$schemaDocLibDst1 =  get-ListSchema $siteUrl $docLibName
+		$dstDocObj = get-SchemaObject $schemaDocLibDst1 
+		$dstDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-DocLibDst1.json")
+			
+		foreach($srcEl in $sourceDocObj){
+				$fieldExists = $false
+				foreach($dstEl in $dstDocObj){
+					if ($srcEl.Name -eq $dstEl.Name){
+						write-Host "$($dstEl.Name) Exists in Destination List" -foregroundcolor Yellow
+						$fieldExists = $true
+						break
+					}
+					
+				}
+				if (!$fieldExists){
+					write-Host "Add $($srcEl.DisplayName) to Destination List" -foregroundcolor Green
+					$type= $srcEl.Type
+					switch ($type)
+					{
+						"Text" {
+							Write-Host "It is Text.";
+							add-TextFields $siteUrl $docLibName $srcEl;
+							Break
+							}
+						
+						"Choice" {
+							Write-Host "It is Choice.";
+							add-ChoiceFields $siteUrl $docLibName $srcEl;
+							Break
+							}
+							
+						"Note" {
+							Write-Host  "It is Note.";
+							add-NoteFields $siteUrl $docLibName $srcEl;
+							Break}
+							
+						"Boolean" {
+							Write-Host  "It is Boolean.";
+							add-BooleanFields $siteUrl $docLibName $srcEl;
+							Break}
+							
+						"DateTime" {
+							Write-Host  "It is DateTime.";
+							add-DateTimeFields $siteUrl $docLibName $srcEl;
+							Break}
+							
+						Default {
+							Write-Host "No matches"
+								}
+					}					
+				}
+							
+			}
+			$SrcFieldsOrder = get-FormFieldsOrder $docLibName $oldSiteURL
+			
+			$DestFieldOrder    = get-FormFieldsOrder $docLibName $siteURL
+			
+			#check for Field in Destination exist in Source
+			$newFieldOrder = checkForArrElExists $SrcFieldsOrder $DestFieldOrder
+			reorder-FormFields $docLibName	$siteURL $newFieldOrder
+			
+			$objViews = Get-AllViews $docLibName $oldSiteURL
+	 
+			$objViews | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$docLibName+"-Views.json")
+			
+			foreach($view in $objViews){
+				$viewExists = Check-ViewExists $docLibName  $siteURL $view 
+				if ($viewExists.Exists){
+					write-host "view $($view.Title) exists on $newSite" -foregroundcolor Green
+					#check if first field in source view is on destination view
+					$firstField = $view.Fields[0]
+					write-host "First field in source view : $firstField"
+					$fieldInView = check-FieldInView  $docLibName $($viewExists.Title) $siteURL $firstField
+					write-host "$firstField on View : $fieldInView"
+					#if not {add this field}
+					if (!$fieldInView){
+						Add-FieldInView $docLibName $($viewExists.Title) $siteURL $firstField
+						
+					}
+					#delete all fields in destination from view but first field in source
+					 
+					remove-AllFieldsFromViewButOne $docLibName $($viewExists.Title) $siteURL $firstField
+					Add-FieldsToView $docLibName $($viewExists.Title) $siteURL $($view.Fields)
+					#add other view
+					Rename-View $docLibName $($viewExists.Title) $siteURL $($view.Title) $($view.ViewQuery)
+				}
+				else
+				{
+					
+					$viewName = $($view.Title)
+					if ([string]::isNullOrEmpty($viewName)){
+						$viewName = $($view.ServerRelativeUrl.Split("/")[-1]).Replace(".aspx","")
+						
+					}
+					write-host "view $viewName does Not exists on $newSite" -foregroundcolor Yellow
+					write-host "ViewQuery : $($view.ViewQuery)"
+					write-host "Check for View! "
+					
+					$viewDefault = $false
+					Create-NewView $siteURL $docLibName $viewName  $($view.Fields) $($view.ViewQuery) $($view.Aggregations) $viewDefault
+				}
+			}
+						
+			
+
+
+	}		
+}
+function change-ApplicantsFieldAndViews($groupName,$spObj, $oldSiteURL, $siteUrl){
+	
+	$applSchmSrc = get-ApplicantsSchema $oldSiteURL
+	$applSchmDst = get-ApplicantsSchema $siteUrl
+	$schemaDifference = get-SchemaDifference $applSchmSrc $applSchmDst
+	$newSite = $siteUrl
+	$oldSite = $oldSiteURL
+		
+	$xmlFiles = @()
+	$xmlFiles    +=  $spObj.PathXML + "\" +  $spObj.XMLFile
+	$xmlFiles    +=  $spObj.PathXML + "\" +  $spObj.XMLFileEn
+	$xmlFiles    +=  $spObj.PathXML + "\" +  $spObj.XMLFileHe
+
+	foreach($xmlFormPath in $xmlFiles){
+		if ($(Test-Path $xmlFormPath)){
+			
+			write-Host $xmlFormPath -f Magenta
+			$schemaDifference = get-SchemaDifference $applSchmSrc $applSchmDst 
+
+			$listObj = Map-LookupFields $schemaDifference $oldSiteURL $xmlFormPath
+			$listObj | ConvertTo-Json -Depth 100 | out-file $(".\JSON\"+$groupName+"-ApplFields.json")
+
+			foreach($listName in $($listObj.LookupForm)){
+				Clone-List   $siteUrl $oldSiteURL $listName
+			}
+			
+			foreach($listName in $($listObj.LookupLists)){
+				Clone-List   $siteUrl $oldSiteURL $listName
+			}
+		
+					
+			foreach($fieldObj in  $($listObj.FieldMap)){
+				if ($fieldObj.Type -eq "Lookup"){
+					#write-host $fieldObj.FieldObj.DisplayName
+					add-LookupFields $siteUrl "Applicants" $($fieldObj.FieldObj) $($fieldObj.LookupTitle)
+				}
+			}
+			
+			foreach($fieldObj in  $($listObj.FieldMap)){
+				if ($fieldObj.Type -eq "Choice"){
+					#write-host $fieldObj.FieldObj.DisplayName
+					add-ChoiceFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+				}
+			}
+
+			foreach($fieldObj in  $($listObj.FieldMap)){
+				if ($fieldObj.Type -eq "DateTime"){
+					#write-host $fieldObj.FieldObj.DisplayName
+					add-DateTimeFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+				}
+			}
+
+			foreach($fieldObj in  $($listObj.FieldMap)){
+				if ($fieldObj.Type -eq "Note"){
+					#write-host $fieldObj.FieldObj.DisplayName
+					add-NoteFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+				}
+			}
+
+			foreach($fieldObj in  $($listObj.FieldMap)){
+				if ($fieldObj.Type -eq "Text"){
+					#write-host $fieldObj.FieldObj.DisplayName
+					add-TextFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+				}
+			}
+			
+			foreach($fieldObj in  $($listObj.FieldMap)){
+				if ($fieldObj.Type -eq "Boolean"){
+					#write-host $fieldObj.FieldObj.DisplayName
+					add-BooleanFields $siteUrl "Applicants" $($fieldObj.FieldObj) 
+				}
+			}
+
+			#write-host "1016: Press any key..."
+			#read-host
+			
+		}
+	}
+	
+	$applSrcFieldsOrder = get-FormFieldsOrder "Applicants" $oldSiteURL
+	
+	$applDestFieldOrder    = get-FormFieldsOrder "Applicants" $siteURL
+	
+	#check for Field in Destination exist in Source
+	$newFieldOrder = checkForArrElExists $applSrcFieldsOrder $applDestFieldOrder
+	reorder-FormFields "Applicants"	$siteURL $newFieldOrder	
+
+	
+	$listName = "Applicants"
+	$objViews = Get-AllViews $listName $oldSite
+	 
+	$objViews | ConvertTo-Json -Depth 100 | out-file $(".\JSON\Applicants-Views.json")
+	#write-host "Pause..."
+	#read-host 
+	foreach($view in $objViews){
+		$viewExists = Check-ViewExists $listName  $newSite $view 
+		if ($viewExists.Exists){
+			write-host "view $($view.Title) exists on $newSite" -foregroundcolor Green
+			#check if first field in source view is on destination view
+			$firstField = $view.Fields[0]
+			write-host "First field in source view : $firstField"
+			$fieldInView = check-FieldInView  $listName $($viewExists.Title) $newSite $firstField
+			write-host "$firstField on View : $fieldInView"
+			#if not {add this field}
+			if (!$fieldInView){
+				Add-FieldInView $listName $($viewExists.Title) $newSite $firstField
+				
+			}
+			#delete all fields in destination from view but first field in source
+			 
+			remove-AllFieldsFromViewButOne $listName $($viewExists.Title) $newSite $firstField
+			Add-FieldsToView $listName $($viewExists.Title) $newSite $($view.Fields)
+			#add other view
+			Rename-View $listName $($viewExists.Title) $newSite $($view.Title) $($view.ViewQuery)
+		}
+		else
+		{
+			
+			$viewName = $($view.Title)
+			if ([string]::isNullOrEmpty($viewName)){
+				$viewName = $($view.ServerRelativeUrl.Split("/")[-1]).Replace(".aspx","")
+				
+			}
+			write-host "view $viewName does Not exists on $newSite" -foregroundcolor Yellow
+			write-host "ViewQuery : $($view.ViewQuery)"
+			write-host "Check for View! "
+			
+			$viewDefault = $false
+			Create-NewView $newSite $listName $viewName  $($view.Fields) $($view.ViewQuery) $($view.Aggregations) $viewDefault
+		}
+	}	
+}
+function Create-NavSubMenu($menu, $SiteURLNew){
+	$siteName = get-UrlNoF5 $SiteURLNew
+	write-host "Create Nav SubMenu: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	
+	#Get the Quick Launch Navigation of the web
+	$Navigation = $Ctx.Web.Navigation.QuickLaunch
+	$Ctx.load($Navigation)
+	$Ctx.ExecuteQuery()
+	 
+
+
+	foreach($item in $menu){
+		foreach($subMenuItem in $item.Items)
+		{
+			if (!$subMenuItem.IsOldMenu){
+				
+				#Get the Parent Node
+				$ParentNode = $Navigation | Where-Object {$_.Title -eq $item.Title}
+				If($ParentNode -eq $null)
+				{
+					write-host write-host $("Menu Item Does Not Exist:" + $item.Title) -f Magenta
+				}
+				else
+				{
+					write-host $("Menu Item:" + $item.Title) -f Yellow
+					write-host $("Create SubMenuItem Name:" + $subMenuItem.Title) -f Cyan
+					write-host $("Create SubMenuItem Url :" + $subMenuItem.Url) -f Cyan
+					write-host 					
+				}
+ 
+
+
+
+					
+			}
+		}
+	}	
+		
+	return $menu
+}
+function Create-NavDocLibs($menu,  $oldSiteURL, $SiteURLNew){
+	foreach($item in $menu){
+		foreach($subMenuItem in $item.Items)
+		{
+			if (!$subMenuItem.IsOldMenu){
+				if ($subMenuItem.Type -eq "DocLib"){
+					write-host $("Create New DocLib:" + $subMenuItem.Title) -f Cyan
+					
+					create-DocLib $SiteURLNew $subMenuItem.InnerName $subMenuItem.Name
+	
+				}
+				elseif ($subMenuItem.Type -eq "Lists")
+				{
+					create-ListfromOld   $SiteURLNew $oldSiteURL $subMenuItem.Title
+				}
+			}
+		}
+	}
+	return $menu	
+}
+function Get-DocLibCollectionsRealNames($menu, $SiteURLOld, $SiteURLNew){
+	$siteName = get-UrlNoF5 $SiteURLOld
+	write-host "Populate DocLib: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	foreach($item in $menu){
+		foreach($subMenuItem in $item.Items)
+		{
+			if (!$subMenuItem.IsOldMenu){
+				if ($subMenuItem.Type -eq "DocLib"){
+					if ([string]::IsNullOrEmpty($subMenuItem.Name)){
+						write-host $("Strange, but we are here") -f Magenta
+						write-host $("SubMenuItem Title:" + $subMenuItem.Title) -f Cyan
+						write-host $("SubMenuItem URL  :" + $subMenuItem.OldUrl) -f Cyan
+						$list = $Web.GetList($subMenuItem.OldUrl);
+						$ctx.Load($list)
+						$Ctx.ExecuteQuery()
+						$subMenuItem.Name = $list.Title
+						$subMenuItem.ListSchema = get-ListSchema $siteName $list.Title
+						write-host $("Name   :" + $subMenuItem.InnerName) -f Cyan
+						write-host $("Title  :" + $subMenuItem.Name) -f Cyan
+						write-host $("Site  :" + $SiteURLNew) -f Cyan
+					}
+					
+					
+					
+
+				}
+			}
+		}
+	}
+	return $menu
+	
+		
 }
 function menuMainItemExists( $outMenu, $menuS){
 	$itemExists = $false

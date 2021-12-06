@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>registrationForm</fileName>
+		<docHeader>טופס מועמדות להתמחות ברפואת הפה</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה למלגה זו. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס הרשמה</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Header>פרטים אישיים:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם פרטי:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstNameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>65</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם משפחה:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>surnameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>65</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם קודם:</text>
+			<width>70</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousNameHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>65</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousNameEn</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מספר זהות:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>מין:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>genderHe</Data>
+			<width>70</width>
+			<List>genderListHeb</List>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>תאריך לידה:</text>
+			<width>70</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>birthDate</Data>
+			<width>150</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+		</control>
+
+		<Label>
+			<text>(DD/MM/YYYY)</text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>ארץ לידה:</text>
+			<width>70</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>birthCountry</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>תאריך עלייה:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>immigrationDate</Data>
+			<width>150</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text></text>
+			<width>70</width>
+			<print>no</print>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>150</width>
+			<print>no</print>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+
+		<Label>
+			<text>(DD/MM/YYYY)</text>
+			<width>150</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>מארץ:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>immigrationCountry</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>אזרחות:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>citizenshipHe</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>פרטי התקשרות:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>כתובת:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>addressHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>עיר:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>cityHe</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מיקוד:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>zipHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>טלפון נייד:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobile</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>טלפון בבית:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>phoneHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>טלפון מרפאה:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>workPhone</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>דוא"ל:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>email</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>פרטים על לימודי רפואת שיניים:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם האוניברסיטה:</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryUniversity</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>מקום:</text>
+			<width>50</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryPlace</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>התואר:</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryDegree</Data>
+			<width>400</width>
+		</control>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>משך הלימודים:</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryStudyDuration</Data>
+			<width>140</width>
+		</control>
+
+		<Label>
+			<text>שנת קבלת התואר:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryGraduationYear</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>ממוצע הציונים בשלוש השנים האחרונות:</text>
+			<width>190</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryGradeAverage</Data>
+			<width>55</width>
+		</control>
+
+		<Label>
+			<text>מיקום בכיתה:</text>
+			<width>70</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryClassRank</Data>
+			<width>50</width>
+		</control>
+
+		<Label>
+			<text>נא לצרף אישור</text>
+			<width>70</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>רישיון ישראלי מספר:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>dentistryIsraeliLicense</Data>
+			<width>145</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>שמות האנשים שהתבקשו לשלוח המלצה:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם משפחה ופרטי:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeName1</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>מען:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeAddress1</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>תפקיד:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeJobTitle1</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>כתובת דוא"ל:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeEmail1</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם משפחה ופרטי:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeName2</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>מען:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeAddress2</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>תפקיד:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeJobTitle2</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>כתובת דוא"ל:</text>
+			<width>65</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeEmail2</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>הצהרה:</Header>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration1</Data>
+			<width>20</width>
+			<required>yes</required>
+			<print>yes</print>
+		</control>
+
+		<Label>
+			<text>הנני מציע/ה בזה את מועמדותי לתכנית ההתמחות בפקולטה לרפואת שיניים, כפי שנדרש לפי תקנות רופאי השיניים (אישור תואר מומחה ובחינות) תשל"ז 1977</text>
+			<width>500</width>
+			<print>yes</print>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration2</Data>
+			<width>20</width>
+			<required>yes</required>
+			<print>yes</print>
+		</control>
+
+		<Label>
+			<text>הנני מצהיר/ה שכל הפרטים הרשומים לעיל ובקורות החיים הנם נכונים</text>
+			<width>500</width>
+			<print>yes</print>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration3</Data>
+			<width>20</width>
+			<required>yes</required>
+			<print>yes</print>
+		</control>
+
+		<Label>
+			<text>הנני מתחייב/ת למלא את כל דרישות עפ"י המועצה המדעית</text>
+			<width>500</width>
+			<print>yes</print>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Button>שמירה</Button>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+
+</rows>

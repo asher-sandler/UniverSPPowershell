@@ -1,0 +1,66 @@
+[
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/Form.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020.xml",
+        "WebPartValueDST":  "MED86-2022.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "MED73-2020-mail.txt",
+        "WebPartValueDST":  "MED86-2022-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/confidentiality.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/confidentiality.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020-confidentiality.xml",
+        "WebPartValueDST":  "MED86-2022-confidentiality.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/healthDeclaration.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/healthDeclaration.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020-healthDeclaration.xml",
+        "WebPartValueDST":  "MED86-2022-healthDeclaration.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/learningDisorders.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/learningDisorders.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020-learningDisorders.xml",
+        "WebPartValueDST":  "MED86-2022-learningDisorders.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/immunization.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/immunization.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020-immunization.xml",
+        "WebPartValueDST":  "MED86-2022-immunization.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/volunteering.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/volunteering.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020-volunteering.xml",
+        "WebPartValueDST":  "MED86-2022-volunteering.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED73-2020/Pages/filming.aspx",
+        "DestPageURL":  "/home/Medicine/MED86-2022/Pages/filming.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED73-2020-filming.xml",
+        "WebPartValueDST":  "MED86-2022-filming.xml"
+    }
+]

@@ -76,8 +76,8 @@ function Get-CurrentSystem($groupName){
 function Test-AllSystems()
 {
 
-	$userName  = "ekmd\ashersa"
-	$userPWD   = "GrapeFloor789"
+	#$userName  = "ekmd\ashersa"
+	#$userPWD   = ""
 	
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
@@ -136,7 +136,7 @@ function Get-AvailableSystems(){
 
     # ===============--------- GSS  ------------==========
 	
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 	
 	$system.appHomeUrl = "https://gss.ekmd.huji.ac.il/home/"
 	$system.workLink   = "https://gss2.ekmd.huji.ac.il"
@@ -147,12 +147,15 @@ function Get-AvailableSystems(){
 	$system.GroupPrefix = "GSS"
 	$system.App = "מענקים"
 	$system.isImplemented = $false
+	$system.NameEn = ""
+	$system.NameHe = ""
+	
 	
 	$availableSystems += $system
 
     # ===============--------- HSS  ------------==========
 	
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 	
 	$system.appHomeUrl = "https://hss.ekmd.huji.ac.il/home/"
 	$system.workLink   = "https://scholarships2.ekmd.huji.ac.il"
@@ -163,6 +166,9 @@ function Get-AvailableSystems(){
 	$system.GroupPrefix = "HSS"
 	$system.App = "מלגות"
 	$system.isImplemented = $true
+	$system.NameEn = ""
+	$system.NameHe = ""
+	
 	
 	
 	$availableSystems += $system
@@ -170,7 +176,7 @@ function Get-AvailableSystems(){
     # ===============--------- SEP  ------------==========
 
 	
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 	
 	$system.appHomeUrl = "https://sep.ekmd.huji.ac.il/home/"
 	$system.workLink   = "https://sep2.ekmd.huji.ac.il"
@@ -180,13 +186,16 @@ function Get-AvailableSystems(){
 	$system.runConfirmRecommendations = $true
 	$system.GroupPrefix = "SEP"
 	$system.App = "חילופי סטודנטים וסגל"
-	$system.isImplemented = $false	
+	$system.isImplemented = $false
+	$system.NameEn = ""
+	$system.NameHe = ""
+	
 
 	$availableSystems += $system	
 
     # ===============--------- GRS  ------------==========
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 	
 	$system.appHomeUrl = "https://grs.ekmd.huji.ac.il/home/"		
 	$system.workLink   = "https://grs2.ekmd.huji.ac.il"		
@@ -197,13 +206,16 @@ function Get-AvailableSystems(){
 	$system.GroupPrefix = "GRS"
 	$system.App = "הרשמה ללימודים"
 	$system.isImplemented = $false
+	$system.NameEn = ""
+	$system.NameHe = ""
+	
 	
 	$availableSystems += $system	
 
     # ===============--------- PORTALS  ------------==========
 	
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 
 	$system.appHomeUrl = "https://portals.ekmd.huji.ac.il/home/tap/"
 	$system.workLink   = "https://portals2.ekmd.huji.ac.il"
@@ -214,13 +226,16 @@ function Get-AvailableSystems(){
 	$system.GroupPrefix = "PRT_TAP"
 	$system.App = "משרות תרגול"
 	$system.isImplemented = $false	
+	$system.NameEn = ""
+	$system.NameHe = ""
+	
 
 	$availableSystems += $system	
 
     # ===============--------- TTP  ------------==========
 
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 
 	$system.appHomeUrl = "https://ttp.ekmd.huji.ac.il/home/"
 	$system.workLink   = "https://ttp2.ekmd.huji.ac.il"
@@ -230,13 +245,16 @@ function Get-AvailableSystems(){
 	$system.runConfirmRecommendations = $true
 	$system.GroupPrefix = "TTP"
 	$system.App = "משרות אקדמיות"
-	$system.isImplemented = $false	
+	$system.isImplemented = $false
+	$system.NameEn = ""
+	$system.NameHe = ""
+	
 
 	$availableSystems += $system	
 
     # ===============--------- TSS  ------------==========
 
-	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
 
 	$system.appHomeUrl = "https://tss.ekmd.huji.ac.il/home/"
 	$system.workLink   = "https://tss2.ekmd.huji.ac.il"
@@ -247,10 +265,30 @@ function Get-AvailableSystems(){
 	$system.GroupPrefix = "TSS"
 	$system.App = "עבודות גמר"
 	$system.isImplemented = $false	
+	$system.NameEn = ""
+	$system.NameHe = ""
+
+	$availableSystems += $system	
+    # ===============---------AAP------------==========
+
+
+	$system = "" | select appHomeUrl,appTitle,listName,runRemovePermissions,runConfirmRecommendations,workLink,GroupPrefix,App,isImplemented,NameEn,NameHe
+
+	$system.appHomeUrl = "https://aap.ekmd.huji.ac.il/home/"
+	$system.workLink   = "https://aap2.ekmd.huji.ac.il"
+	$system.appTitle   = "HUJI Appointments and Promotions System"
+	$system.listName   = "availableAAPList"
+	$system.runRemovePermissions = $false
+	$system.runConfirmRecommendations = $false
+	$system.GroupPrefix = "AAP"
+	$system.App = "עבודות גמר"
+	$system.isImplemented = $false	
+	$system.NameEn = ""
+	$system.NameHe = ""
 
 	$availableSystems += $system	
     # ===============---------   ------------==========
-	
+		
 	
 	return $availableSystems
 
@@ -326,7 +364,19 @@ function Add-GroupMember($groupName, $email, $userName){
 	}
 	else
 	{
-		write-host "User $userName was NOT added to AD Group $admGroupName" -foregroundcolor Yellow
+		# EKMD ?
+		$result=Get-ADuser -Filter 'mail -like $email' -Properties SamAccountName
+		if (![string]::IsNullOrEmpty($result.SamAccountName)){
+			$usrObj =  Get-ADuser $result.SamAccountName
+			Add-ADGroupMember -Identity $admGroupName -Members $usrObj
+			write-host "User $($usrObj.SamAccountName) was added to AD Group $admGroupName" -foregroundcolor Green
+			
+		}
+		else
+		{
+		
+			write-host "User $userName was NOT added to AD Group $admGroupName" -foregroundcolor Yellow
+		}
 		
 	}
 }
@@ -637,7 +687,7 @@ function Write-TextConfig ($ListObj, $groupName)
 		$relURL = $groupName.ToUpper().Split("_")[1]
 		
 		$fileS =  $crlf + $crlf + "GROUP TEMPLATE:"+ $relURL + $crlf + $crlf 
-		$fileS =  "System List: "+ $ListObj[0].systemListUrl + $crlf 
+		$fileS =  "System List: "+ $(get-UrlWithF5 $($ListObj[0].systemListUrl)) + $crlf 
 		$fileS += "Assigned Group: "+ $ListObj[0].assignedGroup + $crlf
 		$fileS += "Site Name:"+$ListObj[0].siteName + $crlf
 		$fileS += "Site Title:"+$ListObj[0].siteName + $crlf
@@ -686,15 +736,11 @@ function Write-TextConfig ($ListObj, $groupName)
 			$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf
 		}
 
-		$fileS += $crlf
-		$fileS += "XML Upload Path: " + $ListObj[0].XMLUploadPath + $crlf
-		$fileS += "XML Upload File:" + $ListObj[0].XMLUploadFileName + $crlf
-		$fileS += "Goto XML Upload File: cd " + $ListObj[0].XMLUploadPath + $ListObj[0].XMLUploadFileName + $crlf + $crlf
-		
-		
-		
-		
-		
+		$fileS += $crlf + $crlf
+		#$fileS += "XML Upload Path: " + $ListObj[0].XMLUploadPath + $crlf
+		#$fileS += "XML Upload File:" + $ListObj[0].XMLUploadFileName + $crlf
+		#$fileS += "Goto XML Upload File: cd " + $ListObj[0].XMLUploadPath + $ListObj[0].XMLUploadFileName + $crlf + $crlf
+	
 		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
 		$fileS += "Email Template:" +  $ListObj[0].MailFile+ $crlf
 		$fileS += "GoTo Email: cd " +  $ListObj[0].MailPath+ "\" + $ListObj[0].MailFile+ $crlf
@@ -717,6 +763,9 @@ function Write-TextConfig ($ListObj, $groupName)
 			$fileS += "GoTo ReponseLetterConfig: cd "+$ListObj[0].GRSReponseLetterConfigPath +  $crlf
 			$fileS += "GoTo Old: cd "+$ListObj[0].OldGRSReponseLetterConfigPath +  $crlf
 		}
+		$fileS += $crlf
+		$fileS += "Site Report: file://C:\AdminDir\SP Powershell\Log\"+$ListObj[0].GroupName +  ".html"+$crlf
+		$fileS += "Compare Report: file://C:\AdminDir\SP Powershell\Log\"+$ListObj[0].GroupName +  "-CompareSites.html"+$crlf
 		
 		$fileS | Out-File $fName -Encoding UTF8
 		
@@ -858,6 +907,12 @@ function delete-ListItemIfEmpty($newSite, $listName){
 	
 }
 function Clone-List($newSite, $oldSite, $listName){
+	$fieldNamesAdditional = create-ListfromOld	$newSite  $oldSite $listName
+	
+	copy-ListOldToNew $newSite $oldSite $listName $fieldNamesAdditional
+}
+function create-ListfromOld($newSite, $oldSite, $listName)
+{
 	
 	$listExists = Check-ListExists $newSite $listName
 	if ($listExists){
@@ -866,24 +921,32 @@ function Clone-List($newSite, $oldSite, $listName){
 	else
 	{
 		Write-Host "Create List $listName On $newSite" -foregroundcolor Yellow
-		Create-List $newSite $listName $listName $oldListSchema
+		Create-List $newSite $listName $listName 
 	}
-	
 	$newListSchema = get-ListSchema $newSite $listName
 	$oldListSchema = get-ListSchema $oldSite $listName
 	$schemaDifference = get-SchemaDifference $oldListSchema $newListSchema
 	$listObj = Map-LookupFields $schemaDifference $oldSiteURL ""
 	$listObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$ListName+"-ApplFields.json")
+	
 	$fieldNamesAdditional = @()
 	foreach($fieldObj in  $($listObj.FieldMap)){
+		write-Host "fieldObjType: $($fieldObj.Type)" -f Magenta
 		if ($fieldObj.Type -eq "Text"){
 			#write-host $fieldObj.FieldObj.DisplayName
 			add-TextFields $newSite $listName $($fieldObj.FieldObj)
 			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName	
 		}
+		if ($fieldObj.Type -eq "Choice"){
+			add-ChoiceFields $newSite $listName $($fieldObj.FieldObj);
+			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName
+		}
+		if ($fieldObj.Type -eq "Lookup"){
+			write-Host "add-LookupFields" -f Cyan
+			add-LookupFields $newSite $listName $($fieldObj.FieldObj) $($fieldObj.LookupTitle)$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
+		}
 	}	
-	
-	copy-ListOldToNew $newSite $oldSite $listName $fieldNamesAdditional
+	return $fieldNamesAdditional
 }
 function check-DocumentsUploadExists($siteURL, $language){
 	$DocumentsUploadExists = $false
@@ -1025,6 +1088,70 @@ not exist. It may have been deleted by another user.
 	return $null
 
 	
+}
+function get-DefaultViewByURL($siteURL,$listUrl){
+	$siteUrlC = get-UrlNoF5 $siteUrl
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Web.GetList($listUrl)
+	$Ctx.Load($List)
+	$Ctx.ExecuteQuery()
+   
+	$DefaultView = $list.DefaultView
+    $Ctx.load($DefaultView) 
+    $Ctx.ExecuteQuery()
+
+    $ViewFields = $DefaultView.ViewFields
+	$Ctx.load($ViewFields) 
+    $Ctx.ExecuteQuery()
+	
+	return $ViewFields
+	
+}
+function get-ListSchemaByUrl($siteURL,$listUrl){
+	$fieldsSchema = @()
+	
+	$siteUrlC = get-UrlNoF5 $siteUrl
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Web.GetList($listUrl)
+	$Ctx.Load($List)
+	$Ctx.ExecuteQuery()
+	
+    $Ctx.load($List.Fields) 
+    $Ctx.ExecuteQuery()	
+
+
+	foreach($field in $List.Fields){
+		# write-host "$($field.Title) : Hidden : $($field.Hidden)"
+		if ($field.SchemaXml.Contains('ReadOnly="TRUE"')){
+		}
+		else{
+			if ($field.SchemaXml.Contains('Group="_Hidden"')){
+			}
+			else{
+		
+				If (!($field.Hidden -or $field.ReadOnly )){
+					$fieldsSchema += $field.SchemaXml
+				}
+		
+			}
+		}	
+	}	
+	
+	return $fieldsSchema	
 }
 function get-ListSchema($siteURL,$listName){
 	
@@ -1326,7 +1453,7 @@ function add-TextFields($siteUrl, $listName, $fieldObj){
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
             $Ctx.ExecuteQuery()   
  
-            Write-host "New Column $DisplayName Added to the List Successfully!" -ForegroundColor Green 
+            Write-host "New Column $DisplayName Added to the $listName Successfully!" -ForegroundColor Green 
 
 
 		
@@ -1363,7 +1490,7 @@ function add-BooleanFields($siteUrl, $listName, $fieldObj){
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
             $Ctx.ExecuteQuery()   
  
-            Write-host "New Column $DisplayName Added to the List Successfully!" -ForegroundColor Green 
+            Write-host "New Column $DisplayName Added to the $listName Successfully!" -ForegroundColor Green 
 
 
 		
@@ -1422,7 +1549,7 @@ function add-NoteFields($siteUrl, $listName, $fieldObj){
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
  
-            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+            Write-host "New Column $DisplayName Added to the $listName Successfully!" -ForegroundColor Green 
 			
 			
 		}
@@ -1459,7 +1586,7 @@ function add-DateTimeFields($siteUrl, $listName, $fieldObj){
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
  
-            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+            Write-host "New Column $DisplayName Added to the $listName Successfully!" -ForegroundColor Green 
 
 
 		}
@@ -1498,7 +1625,7 @@ function add-ChoiceFields($siteUrl, $listName, $fieldObj){
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
  
-            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+            Write-host "New Column $DisplayName Added to the $listName Successfully!" -ForegroundColor Green 
 
 
 		}
@@ -1508,6 +1635,12 @@ function add-ChoiceFields($siteUrl, $listName, $fieldObj){
 }
 function add-LookupFields($siteUrl, $listName, $fieldObj, $lookupListName){
 	
+	    #write-Host "1638: $siteUrl, $listName, $fieldObj, $lookupListName" -f Yellow
+		<#
+1638: https://scholarships.ekmd.huji.ac.il/home/General/GEN158-2021, Oded Lowenheim, @{DisplayName=Name; Required=FALSE; EnforceUniqueValues=FALSE; ShowField=firstName}, applicants
+Column Name already exists in the Oded Lowenheim!		
+		
+		#>
         #Setup the context
         $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
         $ctx.Credentials = $Credentials
@@ -1525,10 +1658,18 @@ function add-LookupFields($siteUrl, $listName, $fieldObj, $lookupListName){
         $Fields = $List.Fields
         $Ctx.Load($Fields)
         $Ctx.executeQuery()
-        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+		$NewField = $Null
+		if ($fieldObj.DisplayName -eq "Name"){
+			$NewField = $Fields | where { ($_.InternalName -eq $($fieldObj.DisplayName))   }
+		}
+		else
+		{
+			$NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))   }
+		}	
+        
         if($NewField -ne $NULL) 
         {
-            Write-host "Column $Name already exists in the $listName!" -f Yellow
+            Write-host "Column $($fieldObj.DisplayName) already exists in the $listName!" -f Yellow
         }
         else
         {
@@ -1545,7 +1686,7 @@ function add-LookupFields($siteUrl, $listName, $fieldObj, $lookupListName){
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
  
-            Write-host "New Column Added to the List Successfully!" -ForegroundColor Green 
+            Write-host "New Column $($fieldObj.DisplayName) Added to the $listName Successfully!" -ForegroundColor Green 
  		
 		}
   
@@ -1928,6 +2069,7 @@ function get-RequestListObject(){
 					
 					$spRequestsListItem.contactEmail = $Item["contactEmail"]
 					$spRequestsListItem.userName = "CC\"+$spRequestsListItem.contactEmail.split('@')[0]
+					$spRequestsListItem.userName = Get-UsrNameAD $Item["contactEmail"]
 					
 					$spRequestsListItem.contactPhone = $Item["contactPhone"]
 					$spRequestsListItem.system = $Item["system"]
@@ -1978,7 +2120,32 @@ function get-RequestListObject(){
 		
 	return $spRequestsListItem;
 }
-
+function Get-UsrNameAD($email){
+	$retStr = ""
+	if ($email.contains("savion.huji.ac.il")){
+		
+		$usrObj =  Get-ADuser -Filter 'mail -like $email' -Properties SamAccountName -Server hustaff.huji.local
+		
+		$retStr = "CC\"+ $usrObj.SamAccountName
+	}
+	else
+	{
+		# EKMD ?
+		$usrObj=Get-ADuser -Filter 'mail -like $email' -Properties SamAccountName
+		if (![string]::IsNullOrEmpty($usrObj.SamAccountName)){
+			$retStr = "EKMD\"+ $usrObj.SamAccountName 
+	
+			
+		}
+		else
+		{
+		
+			write-host "User with mail $email NOT found in AD!!!" -foregroundcolor Yellow
+		}
+		
+	}
+	return $retStr	
+}
 function get-CreatedSiteName($spObj){
 
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
@@ -2247,7 +2414,8 @@ function get-UrlNoF5($url){
 }
 
 function get-allListItemsByID($site, $listName){
-	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext(get-UrlNoF5 $site)  
+	$siteName = get-UrlNoF5 $site
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)  
 	#$ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
 	$ctx.Credentials = $Credentials
 	
@@ -2314,6 +2482,8 @@ function get-SiteNameFromNote($note){
 }
 
 function get-RelURL($url){
+# get-RelURL "https://grs2.ekmd.huji.ac.il/home/Medicine/MED86-2022"
+# /home/Medicine/MED86-2022/	
 	$relUrl = ""
 	
 	if (![string]::IsNullOrEmpty($url)){
@@ -3190,6 +3360,73 @@ function edt-Form($newSiteName, $language){
 	$ctx.ExecuteQuery()
 	write-host "$pageName Was Updated" -foregroundcolor Green
 }
+function edt-WPPage($siteUrlC ,$pageURL, $wpName ,$wpKey, $wpValue){
+	$siteName = get-UrlNoF5 $siteUrlC
+	write-host "Change WP $wpName " -foregroundcolor Yellow 
+	write-host "On $pageURL " -foregroundcolor Yellow
+	write-host "on Site: $siteName" -foregroundcolor Yellow
+	
+	write-Host "$wpKey, $wpValue" -f Cyan
+
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+	
+	# Write-Host 'Updating webpart "'+$wpName+'" on the page ' + $pageName -ForegroundColor Green
+	$page.CheckOut()	
+	$WebParts = $webpartManager.WebParts
+	$ctx.Load($webpartManager);
+	$ctx.Load($WebParts);
+	$ctx.ExecuteQuery();
+	foreach($wp in $webparts){
+			
+			$ctx.Load($wp.WebPart.Properties)
+			$ctx.Load($wp.WebPart)
+			$ctx.Load($wp)
+			$ctx.ExecuteQuery()
+			Write-Host "WP IS : $($wp.WebPart.Title)" -f Magenta		
+			if ($wp.WebPart.Title -eq $wpName){
+				Write-Host "Found Web Part : $wpName" -f Green
+				[Int32]$OutNumber = $null
+				$valueChanged = $false
+
+				if ([Int32]::TryParse($wpValue, [ref]$OutNumber)){
+					#Write-Host "Valid Number"
+					$wpValue = $OutNumber
+				} else {
+						
+					if ($wpValue -eq "True"){
+						$wp.WebPart.Properties[$wpKey] = $true
+						$valueChanged = $true
+					}
+					if ($wpValue -eq "False"){
+						$wp.WebPart.Properties[$wpKey] = $false
+						$valueChanged = $true
+					}
+				}
+				if (!$valueChanged){
+					$wp.WebPart.Properties[$wpKey] = $wpValue
+				}	
+				if ($wp.WebPart.Title -eq "Dynamic Form - v 2.0"){
+					
+					#$wp.WebPart.Properties["addColumns"] = $true;
+					#$wp.WebPart.Properties["addLists"] = $true;
+					#$wp.WebPart.Properties["submit"] = $true;
+					
+				}
+				
+				$wp.SaveWebPartChanges();				
+			}		
+	}
+	$page.CheckIn("Change '"+$wpName+"'", [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+	$page.Publish("Change '"+$wpName+"'")
+	$ctx.ExecuteQuery()
+	
+	
+}
 function edt-SubmissionWP($siteUrlC , $spObj){
 	$pageName = "Pages/SubmissionStatus.aspx"
 	
@@ -3257,11 +3494,13 @@ function edt-DocUploadWP($siteUrlC , $spObj){
 	$pageURL  = $relUrl + $pageName
 	#$language = $spObj.language
     $languageWP =  1
-	$isDebug = $true
+	$configFileName = "UploadFilesHe.xml"
+	$isDebug = $false
 	if ($spObj.language.toLower().contains("en"))
 	{
+		$configFileName = "UploadFilesEn.xml"
 		$languageWP =  2
-		$isDebug = $false
+		
 	}
 	
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
@@ -3286,7 +3525,7 @@ function edt-DocUploadWP($siteUrlC , $spObj){
 			$ctx.Load($wp)
 			$ctx.ExecuteQuery() 
 			if ($wp.WebPart.Title.contains("UploadFilesWP")){
-				$wp.WebPart.Properties["Config_Name"] = $spObj.XMLUploadFileName
+				$wp.WebPart.Properties["Config_Name"] = $configFileName
 				$wp.WebPart.Properties["Config_Path"] = $spObj.XMLUploadPath
 				
 				$wp.WebPart.Properties["Language"] = $languageWP;
@@ -4676,7 +4915,7 @@ function Check-ViewExists($listName,	$siteURL, $viewObj){
 		
 	foreach($view in $viewCollection){
 		$relUrls = $view.ServerRelativeUrl.split("/")[-1]
-		
+		# write-Host $relUrls -> AllItems.aspx
 		$relUrlo = $viewObj.ServerRelativeUrl.split("/")[-1]
 		
 		if (($relUrls -eq $relUrlo) -or ($view.Title -eq $viewObj.Title)){
@@ -4906,4 +5145,302 @@ function Get-NavigationMenu($siteURL){
  
 	
 	return $menu
+}
+function Add-MemberToSpGroup($siteURL, $spGroupName, $UserAccount)
+{
+	$siteName = get-UrlNoF5 $siteURL
+	$retValue = ""
+
+	Try {
+		#Setup the context
+		$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+		$ctx.Credentials = $Credentials
+		 
+		#Get the Web and Group
+		$Web = $Ctx.Web
+		$Group= $Web.SiteGroups.GetByName($spGroupName)
+	    
+		#ensure user sharepoint online powershell - Resolve the User
+		$User=$web.EnsureUser($UserAccount)
+	 
+		#Add user to the group
+		$Result = $Group.Users.AddUser($User)
+		$Ctx.Load($Result)
+		$Ctx.ExecuteQuery()
+	 
+		write-host  -f Green "User '$UserAccount' has been added to '$spGroupName'"
+	}
+	Catch {
+		
+		write-host -f Yellow "Error Adding user '$UserAccount' to '$spGroupName' !" $_.Exception.Message
+		$retValue = $UserAccount
+	}
+	
+	return $retValue
+
+	
+}
+function get-PermDifference($newSuffix, $OldSuffix,  $ListPermSrc, $ListPermDst, $ListName){
+	$perm ="" #| Select List, Permdiff
+	#$perm.List = $ListName
+	#$perm.Permdiff = @()
+	foreach ($permSrc in $ListPermSrc){
+		$permSrcName =  $permSrc.Name 
+		$permSrcNameNew = $permSrc.Name
+		$permSrcLevelNew = $permSrc.PermissionLevels
+		
+		#Write-host "5035 $permSrcName $OldSuffix $($permSrcName.ToUpper().Contains($OldSuffix.toUpper()))"
+		if ($permSrcName.ToUpper().Contains($OldSuffix.toUpper())){
+			$permSrcNameNew = $permSrcName.toUpper() -Replace $OldSuffix.ToUpper(),$newSuffix.toUpper()
+			#write-Host $permSrcNameNew -f Cyan
+		}
+		#Write-Host $permSrcName -f Cyan
+
+		$permExistInDestination = $false
+		forEach($permDst in $ListPermDst){
+			#$permDst.PermissionLevels = $permDst.PermissionLevels -Replace "Limited Access", ""
+			#$permDst.PermissionLevels = $permDst.PermissionLevels -Replace ",", ""
+			
+			#Write-Host "List: $ListName" -f Green
+			#write-Host $permDst.PermissionLevels
+			$permSrcLevelNew = $permSrcLevelNew -Replace ",Limited Access",""
+			#write-Host $permSrcLevelNew -f Magenta
+			if ($permDst.Name -eq $permSrcNameNew){
+				if ( $permDst.PermissionLevels.Contains($permSrcLevelNew)){
+					$permExistInDestination = $true
+					break
+				}
+			}
+		}
+		if (!$permExistInDestination){
+			
+			Write-Host "List: $ListName" -f Yellow
+			Write-Host "$permSrcNameNew $permSrcLevelNew not Found In Destination" -f Cyan
+			
+			$perm += $permSrcNameNew + ";"
+		}
+		
+	}
+	return $perm 
+}
+	
+
+function get-DestListObjPerm($newSuffix, $OldSuffix, $spSrc, $ListName, $ListPerm){
+	$resultPerm = ""
+	#$objPermArr = @()
+	foreach($itemMenu in $spSrc){
+		forEach($itemSubm in $itemMenu.Items){
+			if ($itemSubm.Type -eq "Lists" -or $itemSubm.Type -eq "DocLib" ){		
+				if ($itemSubm.Name -eq $ListName){
+					#write-Host "Find $ListName" -f Green
+					$resultPerm = get-PermDifference $newSuffix $OldSuffix $itemSubm.ListPermissons $ListPerm $ListName
+					break
+				}
+			}
+		}
+	}
+	return $resultPerm
+}
+function Delete-RecentMainMenu($siteURL,$MenuTitle){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "Delete-RecentMainMenu: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$menuDump = @()
+	
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()	
+    foreach($QuickLaunchLink in $QuickLaunch){	
+	    
+		if (($QuickLaunchLink.Title -eq $MenuTitle) ){
+			$QuickLaunchLink.DeleteObject()
+			$Ctx.ExecuteQuery()
+			break			
+		}
+	}	
+}
+function Delete-RecentsSubMenu($siteURL,$MenuTitle){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "Delete Recent Submenus: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$menuDump = @()
+	
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+	$isItemWasDeleted = $false
+ 	#write-host 18
+	$noMoreSubItems = $false
+	$recentMenuFound = $false
+    foreach($QuickLaunchLink in $QuickLaunch){	
+	    
+		if (($QuickLaunchLink.Title -eq $MenuTitle) ){
+			write-host $QuickLaunchLink.Title -f Yellow	
+			$recentMenuFound = $true
+					
+			#write-host $QuickLaunchLink.Url
+			#write-host $QuickLaunchLink.Title
+
+			$child = $QuickLaunchLink.Children
+			$Ctx.load($child)
+			$Ctx.ExecuteQuery()
+			if ($child.Count -gt 0){
+				For($i = $child.Count -1 ; $i -ge 0; $i--){
+				
+					$subItem = $child[$i]
+					$Ctx.Load($subItem)
+					
+					$Ctx.ExecuteQuery()
+					
+					
+					write-host $subItem.Title -f Yellow
+					$subItem.DeleteObject()
+					$Ctx.ExecuteQuery()
+					$isItemWasDeleted = $true
+					
+				}
+
+				
+			}
+			else
+			{
+				$noMoreSubItems	= $true
+			}
+		}
+		if ($isItemWasDeleted){
+			break
+		}
+		
+		#read-host
+	}
+	if (!$recentMenuFound){
+		 $noMoreSubItems	= $true
+	}
+	
+	
+	return $noMoreSubItems
+	
+	
+}
+function Get-FiveRandomLetters()
+{
+	return $(-join ((65..90) + (97..122) | Get-Random -Count 5 | % {[char]$_}))
+}
+function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
+	$siteName = get-UrlNoF5 $SiteURL
+	if (!$pageName.toLower().Contains('.aspx')){
+		$pageName += '.aspx'
+	} 
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+	
+
+
+ 	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$rlURL =  $(get-RelURL $siteName)
+	$pageListUrl = $rlURL +"Pages"
+	# write-host $pageListUrl
+	$PageList = $Web.GetList($pageListUrl)
+	$Ctx.Load($PageList)
+	$Ctx.ExecuteQuery()
+	#$pageName = "default.aspx"
+	$query = New-Object Microsoft.SharePoint.Client.CamlQuery  
+	$query.ViewXml = "<View><Query><Where><Contains><FieldRef Name='FileLeafRef' /><Value Type='Text'>"+$pageName+"</Value></Contains></Where></Query></View>"  
+	$listItems = $PageList.GetItems($query)  
+	$ctx.load($listItems) 
+	$ctx.executeQuery()  	
+	
+	if ($listItems.Count -eq 0){
+		write-host "Create-WPPage: $pageName on $siteURL" -foregroundcolor Cyan
+		
+		Write-host -f Yellow "Getting Page Layout..." -NoNewline
+		#Get the publishing Web 
+		$PublishingWeb = [Microsoft.SharePoint.Client.Publishing.PublishingWeb]::GetPublishingWeb($Ctx, $Ctx.Web) 
+		$ctx.Load($PublishingWeb)
+		$Ctx.ExecuteQuery()
+ 		
+		#Get the Page Layout
+		$RootWeb = $Ctx.Site.RootWeb
+		$PageLayoutName = "BlankWebPartPage.aspx"
+		$MasterPageList = $RootWeb.Lists.GetByTitle('Master Page Gallery')
+		$CAMLQuery = New-Object Microsoft.SharePoint.Client.CamlQuery
+		$CAMLQuery.ViewXml = "<View><Query><Where><Eq><FieldRef Name='FileLeafRef' /><Value Type='Text'>$PageLayoutName</Value></Eq></Where></Query></View>"
+		$PageLayouts = $MasterPageList.GetItems($CAMLQuery)
+		$Ctx.Load($PageLayouts)
+		$Ctx.ExecuteQuery()
+		$PageLayoutItem = $PageLayouts[0]
+		write-Host "PageLayouts Count: $($PageLayouts.count)"
+		$Ctx.Load($PageLayoutItem)
+		$Ctx.ExecuteQuery()
+		Write-host -f Green "Done!"
+		 
+		#Create Publishing page
+		Write-host -f Yellow "Creating New Page..." -NoNewline
+		$PageInfo = New-Object Microsoft.SharePoint.Client.Publishing.PublishingPageInformation 
+		$PageInfo.Name = $PageName
+		$PageInfo.PageLayoutListItem = $PageLayoutItem
+		$Page = $PublishingWeb.AddPublishingPage($PageInfo) 
+		$Ctx.ExecuteQuery()
+		Write-host -f Green "Done!"
+		 
+		#Get the List item of the page
+		Write-host -f Yellow "Updating Page Content..." -NoNewline
+		$ListItem = $Page.ListItem
+		$Ctx.Load($ListItem)
+		$Ctx.ExecuteQuery()
+		 
+		#Update Page Contents
+		$ListItem["Title"] = $PageTitle
+		#$ListItem["PublishingPageContent"] = $PageContent
+		$ListItem.Update()
+		$Ctx.ExecuteQuery()
+		Write-host -f Green "Done!"
+		 
+		#Publish the page
+		Write-host -f Yellow "Checking-In and Publishing the Page..." -NoNewline
+		$ListItem.File.CheckIn([string]::Empty, [Microsoft.SharePoint.Client.CheckinType]::MajorCheckIn)
+		$ListItem.File.Publish([string]::Empty)
+		$Ctx.ExecuteQuery()
+		Write-host -f Green "Done!"
+
+
+	}
+	
+	return $null
+}
+function Create-PublishingPages($siteURL, $menuItems){
+	
+	forEach ($menuItm in $menuItems){
+		
+		forEach($itm in $menuItm.Items){
+			
+			if ($itm.Type -eq "Pages" ){
+				
+				if (!$itm.IsOldMenu){
+					#write-Host 5286
+					if ($itm.Url.Contains("/Pages/")){
+						Create-WPPage $siteURL $itm.InnerName $itm.Title #"כתב ויתור על סודיות רפואית"
+						#write-Host $itm.InnerName -f Magenta
+					}
+				}
+			}
+		}
+	}
 }

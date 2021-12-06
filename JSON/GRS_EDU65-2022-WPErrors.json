@@ -1,0 +1,90 @@
+[
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "EDU52-2021.xml",
+        "WebPartValueDST":  "EDU65-2022.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "EDU52-2021-mail.txt",
+        "WebPartValueDST":  "EDU65-2022-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetDisableAttribute",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetReadingPermission",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "Button_Send_Mail_To_Applicant",
+        "WebPartKey":  "Button_Text",
+        "WebPartValueSRC":  "null",
+        "WebPartValueDST":  "Config_Letters.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "Button_Send_Mail_To_Applicant",
+        "WebPartKey":  "Config_File_Path",
+        "WebPartValueSRC":  "\\\\ekeksql00\\SP_Resources$\\GRS\\ResponseLetterConfig\\EDU52-2021",
+        "WebPartValueDST":  "\\\\ekeksql00\\SP_Resources$\\GRS\\ResponseLetterConfig\\EDU65-2022"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "Button_Send_Mail_To_Applicant",
+        "WebPartKey":  "No_Items_Selected_Text",
+        "WebPartValueSRC":  "No Items Selected",
+        "WebPartValueDST":  "לא נבחרו פריטים"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "c7336f34-4a72-4530-8ca9-8ea67baf3fb1",
+        "WebPartValueDST":  "c9c3bce5-e6df-495d-ac5d-1a3224772fd6"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{C7336F34-4A72-4530-8CA9-8EA67BAF3FB1}",
+        "WebPartValueDST":  "{C9C3BCE5-E6DF-495D-AC5D-1A3224772FD6}"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/Education/EDU52-2021/Lists/applicants",
+        "WebPartValueDST":  "/home/Education/EDU65-2022/Lists/applicants"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU52-2021/SitePages/ResponseLetters.aspx",
+        "DestPageURL":  "/home/Education/EDU65-2022/SitePages/ResponseLetters.aspx",
+        "WebPartName":  "applicants",
+        "WebPartKey":  "ViewFlags",
+        "WebPartValueSRC":  "8388621",
+        "WebPartValueDST":  "13"
+    }
+]

@@ -1,0 +1,313 @@
+[
+    {
+        "ListName":  "Access Requests",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "applicants",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "ApplicantTemplate",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "שם"
+                                     },
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "הערות למגיש"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "cancelledApplicantsList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "countryList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "departmentList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "departmentListEn",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "DocType",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "Final",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "שם"
+                                     },
+                                     {
+                                         "FieldName":  "כותרת"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "genderListEn",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "genderListHeb",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "maritalStatusList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "ResponseLetters",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "שם"
+                                     },
+                                     {
+                                         "FieldName":  "כותרת"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "Submitted",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "שם"
+                                     },
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "description"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "titleListHeb",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yearListHeb",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yesNoList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "כותרת"
+                                     },
+                                     {
+                                         "FieldName":  "קבצים מצורפים"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "ביוטכנולוגיה (890)",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "גלריית דפים ראשיים",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "דפי אתר",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "דפים",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "טופס אישור מנחה",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "כדור הארץ",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "כימיה (560)",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "לימודי הסביבה",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "מדעי החיים",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "מסמכים",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "מראות מורכבים",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "משימות זרימת עבודה",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "מתמטיקה (530)",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "נכסים של אתר",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "פיסיקה (541)",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "פיסיקה יישומית",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "תמונות",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    }
+]

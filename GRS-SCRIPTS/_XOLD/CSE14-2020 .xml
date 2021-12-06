@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>registrationForm</fileName>
+		<docHeader>טופס הרשמה לימודי מוסמך - סמסטר ב 2020</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה לתכנית זו. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס הרשמה</docType>
+		<calculations>no</calculations>
+	</config>
+	
+	<row>
+		<Header>בית הספר להנדסה ומדעי המחשב</Header>
+	</row>
+
+	<row>
+		<Header>פרטים אישיים</Header>
+	</row>
+
+	<row>	
+		<Label>
+			<text>שם פרטי:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstNameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>	
+		<Label>
+			<text>שם משפחה:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>surnameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>(אנגלית):</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מספר זהות*:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+			<regex>^[0-9]{9}$</regex>
+			<tooltip>9 ספרות</tooltip>
+		</control>
+
+		<Label>
+			<text>מין:</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>genderHe</Data>
+			<List>genderListHeb</List>
+			<width>100</width>
+			<required>no</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text></text>
+			<width>95</width>
+			<print>no</print>
+		</Label>
+		
+		<Label>
+			<text><![CDATA[<b>*יש לרשום מספר זהות מלא בעל 9 ספרות.</b>]]></text>
+			<width>350</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>פרטי התקשרות</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>כתובת:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>addressHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>עיר:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>cityHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מיקוד:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>zipHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>טלפון נייד:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobile</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>טלפון:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>phoneHe</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>דוא"ל:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>email</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>תחום לימודים מבוקש</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>אבקש להירשם ללימודי מוסמך בחוג:</text>
+			<width>300</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>DropDownList</Type>
+			<List>departmentList</List>
+			<Data>department1</Data>
+			<width>520</width>
+			<print>yes</print>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>עדיפות 2:</text>
+			<width>300</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>DropDownList</Type>
+			<List>departmentList</List>
+			<Data>department2</Data>
+			<width>520</width>
+			<print>yes</print>
+			<required>no</required>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>מועמדותך תדון לפי סדר העדיפויות שציינת בטופס</text>
+			<width>500</width>
+		</Label> 
+	</row>	
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>השכלה אקדמית קודמת</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>מוסד תואר ראשון:</text>
+			<width>120</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstDegreeInstitute</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>בחוג:</text>
+			<width>120</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstDegreeDepartment</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>תאריך סיום*:</text>
+			<width>120</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstDegreeGraduation</Data>
+			<width>80</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+		</control>
+
+		<Label>
+			<text>ממוצע ציונים*:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstDegreeGrades</Data>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>ממוצע חוגי*:</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstDegreeDepartmentGrade</Data>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>(בחוג הרלוונטי)</text>
+			<width>105</width>
+			<print>no</print>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text><![CDATA[<b>*מי שטרם סיים את התואר,יש לרשום ממוצעים זמניים ותאריך סיום משוער. יש לרשום ממוצע מדויק כפי שמופיע בגיליון הציונים.</b>]]></text>
+			<width>500</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>שים/י לב, המועד האחרון לסגירת תואר בוגר הוא פתיחת סמסטר ב' שנה"ל תש"פ</text>
+			<width>500</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>הצהרה כללית וויתור סודיות</Header>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration1</Data>
+			<width>20</width>
+			<required>yes</required>
+			<print>yes</print>
+		</control>
+
+		<Label>
+			<text>אני מסכים/ה שתקבלו את כל ציוני התואר הראשון שלי באוניברסיטה לצורך דיון בבקשה זו.</text>
+			<width>500</width>
+			<print>yes</print>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration2</Data>
+			<width>20</width>
+			<required>yes</required>
+			<print>yes</print>
+		</control>
+
+		<Label>
+			<text>אני מצהיר/ה כי כל הפרטים שנמסרו בטופס זה נכונים.</text>
+			<width>500</width>
+			<print>yes</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+
+		<Button>שמירה</Button>
+	</row>
+	<row>
+		<Label></Label>
+	</row>
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+
+</rows>

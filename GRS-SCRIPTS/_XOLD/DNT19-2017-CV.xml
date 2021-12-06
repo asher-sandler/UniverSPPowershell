@@ -1,0 +1,332 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+  <config>
+    <fileName>cvForm</fileName>
+    <docHeader>טופס קורות חיים</docHeader>
+    <finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+    <missingDataMessage>יש למלא את כל השדות הצבועים באדום</missingDataMessage>
+    <registrationMessage>אינך רשום לתכנית זו.
+	&lt;a href=&quot;http://grs2.ekmd.huji.ac.il/home&quot;&gt;הירשם כאן&lt;/a&gt;
+	</registrationMessage>
+    <docTypeList>docType</docTypeList>
+    <docTypeColumn>תוכן קובץ</docTypeColumn>
+    <docType>1. טופס קורות חיים</docType>
+    <destinationFolder></destinationFolder>
+    <destinationList></destinationList>
+    <ticketNum></ticketNum>
+	<calculations>no</calculations>
+  </config>
+  
+  <row>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>firstName</Data>
+	  <width>100</width>
+	  <adData>Name</adData>
+	  <print>no</print>
+    </control>
+	
+    <control>
+      <Type>TextLabel</Type>
+      <Data>surname</Data>
+	  <width>100</width>
+	  <adData>Surname</adData>
+	  <print>no</print>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+	  <print>no</print>
+	</Label>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>בכל סעיף נא למלא את הפרטים בסדר כרונולוגי, מן המוקדם למאוחר.</text>
+	  <width>500</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>השכלה גבוהה:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>תאריך, שם המוסד, תחומי הלימוד, תואר (בוגר, מוסמך, לדוקטור, פוסט-דוקטור –לציין שם מנחה) ממוצע ציונים, מיקום יחסי בכיתה עבור שלושת שנים אחרונות</text>
+	  <width>500</width>
+	</Label>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>higherEducation</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>מחקר:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>תאריך, שם המוסד, נושא המחקר, מנחה</text>
+	  <width>500</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>research</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>רקע אקדמי - מענקי מחקר:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>מקור מממן, תקופה, סכום כללי וסכום ההקצבה למועמד/ת, שותפים, נושא</text>
+	  <width>500</width>
+	</Label>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>researchGrants</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>לימודים והשתלמויות נוספים:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>תאריך, שם המוסד, נושאי הלימוד, תואר (אם יש)</text>
+	  <width>500</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>additionalEducation</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פעילויות אחרות:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>חברות במערכת כתב-עת, ארגון כנסים, פרסים, פעילויות ותפקידים ציבוריים אחרים בתחום המקצועי וכד',כולל ציון מועדים ומקומות</text>
+	  <width>500</width>
+	</Label>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>otherActivities</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>ניסיון מקצועי:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>תקופת העסקה, מקום העבודה, תחומי עבודה</text>
+	  <width>500</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>workExpirience</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פעילות התנדבותית וקהילתית:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>תקופת הפעילות, מקום ,תפקיד</text>
+	  <width>500</width>
+	</Label>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>volunteerWork</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>תחביבים ושטחי התעניינות:</Header>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>hobbies</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>מידע נוסף רלבנטי להתמחות, לדעת המועמד:</Header>
+  </row>
+  
+  <row>
+	<control>
+	  <Type>MultiLineTextBox</Type>
+	  <Data>relevantInfo</Data>
+	  <width>500</width>
+	</control>
+	
+	<Label>
+	  <text></text>
+	  <width>2</width>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header></Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+
+    <Button>שמור</Button>
+  </row>
+  <row>
+    <Label></Label>
+  </row>
+  <row>
+    <control>
+      <Type>finalMessage</Type>
+      <Data>MyCustomLabel</Data>
+	  <width>400</width>
+      <Text></Text>
+    </control>
+  </row>
+ 
+</rows>

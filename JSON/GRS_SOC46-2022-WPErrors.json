@@ -1,0 +1,130 @@
+[
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/Form.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "SOC36-2020.xml",
+        "WebPartValueDST":  "SOC46-2022.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "SOC36-2020-mail.txt",
+        "WebPartValueDST":  "SOC46-2022-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "SOC36-2020-Interview306.xml",
+        "WebPartValueDST":  "SOC46-2022-Interview306.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "loadFormByIdPageURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "successPageUrl",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm367.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm367.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "SOC36-2020-Interview367.xml",
+        "WebPartValueDST":  "SOC46-2022-Interview367.xml"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm367.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm367.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "loadFormByIdPageURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm367.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm367.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm367.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm367.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "successPageUrl",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule367.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule367.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "formURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "Filter_1_Value",
+        "WebPartValueSRC":  "נוצר טופס",
+        "WebPartValueDST":  "ממתין לטופס"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "formURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "Open_In_New_Window",
+        "WebPartValueSRC":  "False",
+        "WebPartValueDST":  "True"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "formURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "Filter_1_Value",
+        "WebPartValueSRC":  "נוצר טופס",
+        "WebPartValueDST":  "ממתין לטופס"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "formURL",
+        "WebPartValueSRC":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC36-2020/Pages/interviews/interviewForm306.aspx",
+        "WebPartValueDST":  "https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022/Pages/interviews/interviewForm306.aspx"
+    },
+    {
+        "SourcePageURL":  "/home/socialSciences/SOC36-2020/Pages/interviews/interviewSchedule306.aspx",
+        "DestPageURL":  "/home/socialSciences/SOC46-2022/Pages/interviews/interviewSchedule306.aspx",
+        "WebPartName":  "Display my tickets",
+        "WebPartKey":  "Open_In_New_Window",
+        "WebPartValueSRC":  "False",
+        "WebPartValueDST":  "True"
+    }
+]

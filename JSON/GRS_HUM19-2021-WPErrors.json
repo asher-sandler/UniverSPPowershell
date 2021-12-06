@@ -1,0 +1,58 @@
+[
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/Form.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "HUM18-2020.xml",
+        "WebPartValueDST":  "HUM19-2021.xml"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "HUM18-2020-mail.txt",
+        "WebPartValueDST":  "HUM19-2021-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "ListsNames",
+        "WebPartValueSRC":  "applicants;referees",
+        "WebPartValueDST":  "applicants;"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetDisableAttribute",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetReadingPermission",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/CancelCandidacy.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/CancelCandidacy.aspx",
+        "WebPartName":  "CancelApplicationButton",
+        "WebPartKey":  "ListsNames",
+        "WebPartValueSRC":  "applicants;referees",
+        "WebPartValueDST":  "applicants;"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM18-2020/Pages/refereesForm.aspx",
+        "DestPageURL":  "/home/humanities/HUM19-2021/Pages/refereesForm.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "HUM18-2020-referees.xml",
+        "WebPartValueDST":  "HUM19-2021-referees.xml"
+    }
+]

@@ -24,11 +24,17 @@ else
 			
 			$siteUrl    = get-CreatedSiteName $spObj
 			$oldSiteURL = $spObj.oldSiteURL
-			
+			$oldSiteSuffix = $spObj.OldSiteSuffix
+			if ([string]::isNullOrEmpty($oldSiteSuffix)){
+				$oldSiteSuffix = $spObj.oldSiteURL.split("/")[-2]
+			}
+			write-host "oldSiteSuffix : $oldSiteSuffix" -f Cyan
+				
 			
 			write-host "Old Site: $oldSiteURL" -foregroundcolor Cyan
 			write-host "New Site: $siteUrl" -foregroundcolor Green
-			
+			write-Host "Press any key..."
+			read-host
 			# TEST ONLY VARS
 			#$siteUrl = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace"
 			#$oldSiteURL =  "https://grs2.ekmd.huji.ac.il/home/Education/EDU57-2021/"
@@ -45,13 +51,18 @@ else
 			#$applSchmDst
 			$xmlFiles = @()
 			
-			$oldXMLMask = $spObj.PathXML + "\"+$spObj.OldSiteSuffix+"*.xml"
+			$oldXMLMask = $spObj.PathXML + "\"+$oldSiteSuffix+"*.xml"
 			
 			$oldItems   =  get-Item $oldXMLMask
 			foreach($fitem in  $oldItems){
-				$newFileName = $spObj.PathXML + "\"+$fitem.Name.Replace($spObj.OldSiteSuffix, $spObj.RelURL)
+				$newFileName = $spObj.PathXML + "\"+$fitem.Name.Replace($oldSiteSuffix, $spObj.RelURL)
 				if (!$(Test-Path $newFileName)){
-				
+				    
+					write-Host "Copy From: " -noNewLine -f Green
+					write-Host $($fitem.FullName) -f Cyan -noNewLine
+					write-Host " To: " -noNewLine -f Green
+					write-Host  $newFileName -f Cyan
+					
 					Copy-Item -Path $($fitem.FullName) -Destination $newFileName
 				}
 				$xmlFiles += $newFileName

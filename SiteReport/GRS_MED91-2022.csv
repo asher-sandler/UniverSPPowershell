@@ -1,0 +1,4 @@
+﻿"Group","SiteSource","SiteDest","List","PermDifference","PermSource","PermDest"
+"GRS_MED91-2022","https://grs.ekmd.huji.ac.il/home/Medicine/MED91-2022","https://grs2.ekmd.huji.ac.il/home/Medicine/MED80-2021/","DocType","GRS_MED91-2022_ADMINSP;GRS_MED91-2022_JUDGESSP;","System.Object[]","System.Object[]"
+"GRS_MED91-2022","https://grs.ekmd.huji.ac.il/home/Medicine/MED91-2022","https://grs2.ekmd.huji.ac.il/home/Medicine/MED80-2021/","Final","GRS_MED91-2022_JUDGESUG;","System.Object[]","System.Object[]"
+"GRS_MED91-2022","https://grs.ekmd.huji.ac.il/home/Medicine/MED91-2022","https://grs2.ekmd.huji.ac.il/home/Medicine/MED80-2021/","filmingPermitList","resultPerm","System.Object[]","System.Object[]"

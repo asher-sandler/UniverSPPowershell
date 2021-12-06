@@ -1,0 +1,507 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+  <config>
+    <fileName>registrationForm</fileName>
+    <docHeader>Application form for Postgraduate Program in Pediatric Dentistry</docHeader>
+    <finalMessage>The information was saved successfully</finalMessage>
+    <missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+    <registrationMessage>You are not registered for this programme.
+	&lt;a href=&quot;http://grs2.ekmd.huji.ac.il/home&quot;&gt; Register here &lt;/a&gt;
+	</registrationMessage>
+    <docTypeList>docType</docTypeList>
+    <docTypeColumn>Document Type</docTypeColumn>
+    <docType>0. Application Form</docType>
+    <destinationFolder></destinationFolder>
+    <destinationList></destinationList>
+    <ticketNum></ticketNum>
+	<calculations>no</calculations>
+  </config>
+
+  <row>
+    <Header>Personal Details:</Header>
+  </row>
+
+  <row>
+	  <Label>
+      <text>First name:</text>
+      <width>65</width>
+    </Label>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>firstName</Data>
+      <width>150</width>
+    </control>
+  </row>
+
+  <row>
+	  <Label>
+      <text>Last name:</text>
+      <width>65</width>
+    </Label>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>surname</Data>
+      <width>150</width>
+    </control>
+  </row>
+
+  <row>
+	  <Label>
+      <text>Previous last name:</text>
+      <width>110</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>previousLastName</Data>
+      <width>150</width>
+    </control>
+  </row>
+
+  <row>
+	  <Label>
+  	  <text>Passport number:</text>
+  	  <width>110</width>
+	  </Label>
+	  <control>
+  	  <Type>TextBox</Type>
+  	  <Data>passportNumber</Data>
+  	  <width>150</width>
+	   </control>
+  </row>
+
+  <row>
+	  <Label>
+      <text>Date of birth:</text>
+      <width>110</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>birthDate</Data>
+      <width>150</width>
+    </control>
+
+    <Label>
+      <text>(dd/mm/yyyy)</text>
+      <width>75</width>
+      <print>no</print>
+    </Label>
+  </row>
+
+  <row>
+    <Label>
+      <text>Citizenship:</text>
+      <width>110</width>
+    </Label>
+
+    <control>
+      <Type>DropDownList</Type>
+      <Data>citizenship</Data>
+      <List>countryList</List>
+      <width>150</width>
+    </control>
+  </row>
+
+  <row>
+    <Label>
+  	  <text>Country of birth:</text>
+  	  <width>110</width>
+  	</Label>
+  	<control>
+  	  <Type>DropDownList</Type>
+  	  <Data>birthCountry</Data>
+  	  <List>countryList</List>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label>
+      <text>Sex:</text>
+      <width>110</width>
+    </Label>
+
+    <control>
+      <Type>DropDownList</Type>
+      <Data>gender</Data>
+      <width>70</width>
+      <List>genderList</List>
+    </control>
+  </row>
+
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Header>Contact Information:</Header>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>Email:</text>
+  	  <width>40</width>
+  	</Label>
+  	<control>
+  	  <Type>TextLabel</Type>
+  	  <Data>email</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label>
+      <text>Country:</text>
+      <width>45</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>Country</Data>
+      <width>150</width>
+    </control>
+  </row>
+
+  <row>
+    <Label>
+  	  <text>street:</text>
+  	  <width>45</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>address</Data>
+  	  <width>150</width>
+  	</control>
+
+    <Label>
+      <text>Phone Home:</text>
+      <width>80</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>phone</Data>
+      <width>150</width>
+    </control>
+  </row>
+
+  <row>
+    <Label>
+      <text>city:</text>
+      <width>45</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>city</Data>
+      <width>150</width>
+    </control>
+
+  	<Label>
+  	  <text>Mobile:</text>
+  	  <width>80</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>mobile</Data>
+  	  <width>150</width>
+    </control>
+  </row>
+
+  <row>
+    <Label>
+      <text>zip:</text>
+      <width>45</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>zip</Data>
+      <width>150</width>
+    </control>
+
+  	<Label>
+  	  <text>Phone clinic:</text>
+  	  <width>80</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>workPhone</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label>
+      <text></text>
+      <width>240</width>
+      <print>no</print>
+    </Label>
+    <Label>
+      <text>(Country code - area code - number)</text>
+      <width>200</width>
+      <print>no</print>
+    </Label>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Header>Dental School Education:</Header>
+  </row>
+
+
+  <row>
+    <Label>
+  	  <text>Degree:</text>
+  	  <width>110</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>dentistryDegree</Data>
+  	  <width>300</width>
+  	</control>
+
+  	<Label>
+  	  <text></text>
+  	  <width>2</width>
+  	</Label>
+  </row>
+
+  <row>
+    <Label>
+  	  <text>Name of university:</text>
+  	  <width>110</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>dentistryUniversity</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>City / Country:</text>
+  	  <width>110</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>dentistryPlace</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label>
+  	  <text>Years:</text>
+  	  <width>110</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>dentistryStudyDuration</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>Year of graduation:</text>
+  	  <width>110</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>dentistryGraduationYear</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label>
+  	  <text>Average grade of past 3 years:</text>
+  	  <width>190</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>GradeAverage</Data>
+  	  <width>70</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label>
+  	  <text>Class rank:</text>
+  	  <width>190</width>
+  	</Label>
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>classRank</Data>
+  	  <width>70</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Header>People requested to send recommendation letters:</Header>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>First name:</text>
+  	  <width>90</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeFirstName1</Data>
+  	  <width>150</width>
+  	</control>
+
+  	<Label>
+  	  <text>Last name:</text>
+  	  <width>65</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeLastName1</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>Position:</text>
+  	  <width>90</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeJobTitle1</Data>
+  	  <width>150</width>
+  	</control>
+
+  	<Label>
+  	  <text>Email:</text>
+  	  <width>65</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeEmail1</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>First name:</text>
+  	  <width>90</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeFirstName2</Data>
+  	  <width>150</width>
+  	</control>
+
+  	<Label>
+  	  <text>Last name:</text>
+  	  <width>65</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeLastName2</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+  	<Label>
+  	  <text>Position:</text>
+  	  <width>90</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeJobTitle2</Data>
+  	  <width>150</width>
+  	</control>
+
+  	<Label>
+  	  <text>Email:</text>
+  	  <width>65</width>
+  	</Label>
+
+  	<control>
+  	  <Type>TextBox</Type>
+  	  <Data>refereeEmail2</Data>
+  	  <width>150</width>
+  	</control>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Header>Declaration:</Header>
+  </row>
+
+  <row>
+    <control>
+  	  <Type>CheckBox</Type>
+  	  <Data>declaration1</Data>
+  	  <width>20</width>
+  	  <required>yes</required>
+  	  <print>yes</print>
+  	</control>
+
+    <Label>
+  	  <text>I declare that all information provided in this application and in documents submitted is true and correct.</text>
+  	  <width>500</width>
+  	  <print>yes</print>
+  	</Label>
+
+  	<Label>
+  	  <text></text>
+  	  <width>2</width>
+  	</Label>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Header></Header>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+
+    <Button>Save</Button>
+  </row>
+  <row>
+    <Label></Label>
+  </row>
+  <row>
+    <control>
+      <Type>finalMessage</Type>
+      <Data>MyCustomLabel</Data>
+      <Text></Text>
+    </control>
+  </row>
+
+</rows>

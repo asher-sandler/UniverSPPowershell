@@ -1,0 +1,94 @@
+[
+    {
+        "Group":  "HSS_HUM179-2021",
+        "SiteSource":  "https://scholarships.ekmd.huji.ac.il/home/Humanities/HUM179-2021",
+        "SiteDest":  "https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM160-2021/",
+        "List":  "DocType",
+        "PermDifference":  "HSS_HUM179-2021_ADMINSP;HSS_HUM179-2021_JUDGESSP;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "HSS_HUM179-2021_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "HSS_HUM179-2021_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "HSS_HUM179-2021",
+        "SiteSource":  "https://scholarships.ekmd.huji.ac.il/home/Humanities/HUM179-2021",
+        "SiteDest":  "https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM160-2021/",
+        "List":  "Final",
+        "PermDifference":  "HSS_HUM179-2021_JUDGESUG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "HSS_HUM179-2021_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "HSS_HUM179-2021_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    }
+]

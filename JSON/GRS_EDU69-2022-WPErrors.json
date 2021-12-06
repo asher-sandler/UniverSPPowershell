@@ -1,0 +1,34 @@
+[
+    {
+        "SourcePageURL":  "/home/Education/EDU55-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/Education/EDU69-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "EDU55-2021.xml",
+        "WebPartValueDST":  "EDU69-2022.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU55-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Education/EDU69-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "EDU55-2021-mail.txt",
+        "WebPartValueDST":  "EDU69-2022-mail-En.txt"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU55-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Education/EDU69-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetDisableAttribute",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    },
+    {
+        "SourcePageURL":  "/home/Education/EDU55-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Education/EDU69-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "SetReadingPermission",
+        "WebPartValueSRC":  "True",
+        "WebPartValueDST":  "False"
+    }
+]

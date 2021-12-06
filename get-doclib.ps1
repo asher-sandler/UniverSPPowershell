@@ -48,15 +48,25 @@ start-transcript "HideDocLib.log"
 
 		 $siteURL = "https://scholarships.ekmd.huji.ac.il/home/SocialSciences/SOC36-2015";
 		 $siteURL = "https://scholarships2.ekmd.huji.ac.il/home/Agriculture/AGR36-2015";
+		 $siteURL = "https://crs.ekmd.huji.ac.il/home/exempt/2019";
+		 
+<#
+https://crs2.ekmd.huji.ac.il/home/murshe/2019
+
+https://crs2.ekmd.huji.ac.il/home/services/2019
+
+https://crs2.ekmd.huji.ac.il/home/exempt/2019
+
+
+
+#>		 
 		 write-host $siteURL -ForegroundColor Yellow
 		 $siteNameN = get-UrlNoF5 $siteURL
 		 $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameN) 
 
 		 $ctx.Credentials = $Credentials
-			
-
-
-		GetDocLib $ctx 
+	
+	 	GetDocLib $ctx 
 	}
 Stop-Transcript
 .\HideDocLib.log

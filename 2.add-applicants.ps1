@@ -125,6 +125,17 @@ else
 					Upload-SwitchFiles $siteUrlC $groupName
 					edt-SwitchPage2Lang $siteUrlC
 					
+					#delete Recent Menu from Navigation
+					$RecentsTitle = "Recent"
+					$NOmoreSubItems = $false
+					while (!$NOmoreSubItems){
+						$NOmoreSubItems =  Delete-RecentsSubMenu $siteUrlC $RecentsTitle 
+				
+					}
+
+					Delete-RecentMainMenu $siteUrlC $RecentsTitle 	
+					
+					
 					
 				}
 				

@@ -1,0 +1,1238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>MScProgramApplication</fileName>
+		<docHeader>MSc Program Application</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+		<registrationMessage>You are not registered for this program. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>01. MSc Program Application Form</docType>
+		<calculations>no</calculations>
+	</config>
+	
+	<row>
+		<Label>
+			<text>First Name:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Surname:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Your Country:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>country</Data>
+			<width>150</width>
+			<List>countryList</List>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Program you are applying to:</text>
+			<width>200</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>program</Data>
+			<width>300</width>
+			<List>programList</List>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Personal Information</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>How did you hear about the International MSc Program?</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>programSource</Data>
+			<List>programSourceList</List>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>If you chose "other" please explain:</text>
+			<width>250</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>programSourceOther</Data>
+			<width>200</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Have you applied to the International MSc Program before?</text>
+			<width>400</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>previousApplication</Data>
+			<List>yesNoList</List>
+			<width>70</width>
+			<required>yes</required>
+		</control>		
+	</row>
+
+    <row>
+		<Label>
+			<text>If yes, for which program?</text>
+			<width>200</width>
+		</Label>
+		
+		<Label>
+			<text>Year:</text>
+			<width>70</width>
+		</Label>
+		
+		<Label>
+			<text>What was the result of your application?</text>
+			<width>250</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousApplicationProgram</Data>
+			<width>200</width>
+		</control>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousApplicationYear</Data>
+			<width>70</width>
+		</control>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousApplicationResult</Data>
+			<width>250</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Date of birth:</text>
+			<width>100</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>dateOfBirth</Data>
+			<width>100</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+			<required>yes</required>
+		</control>
+	
+		<Label>
+			<text>(DD/MM/YYYY)</text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+		
+		<Label>
+			<text>Gender:</text>
+			<width>50</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<Data>gender</Data>
+			<List>genderList</List>
+			<width>100</width>
+		</control>	
+	</row>
+	
+	<row>
+		<Label>
+			<text>Marital Status:</text>
+			<width>165</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>maritalStatus</Data>
+			<List>maritalStatusList</List>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Passport Number:</text>
+			<width>165</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Israeli passport Number:</text>
+			<width>165</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>israeliPassport</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>(where applicable)</text>
+			<width>150</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+
+	<row>
+		<Label>
+			<text>Israeli ID Number:</text>
+			<width>165</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>israeliId</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>(where applicable)</text>
+			<width>150</width>
+			<print>no</print>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Mailing Address for all correspondence. Please notify the office of any changes.</text>
+			<width>520</width>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Number:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>streetNum</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Street:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>street</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>City:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>city</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>State:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>state</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Postal Code:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>postalCode</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Country:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>correspondenceCountry</Data>
+			<width>150</width>
+			<List>countryList</List>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Telephone:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>phone</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Mobile:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobile</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Email:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>email</Data>
+			<width>300</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Skype username (we may interview you via Skype):</text>
+			<width>350</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>skype</Data>
+			<width>300</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Emergency contact:</text>
+			<width>520</width>
+		</Label>
+
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Name:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>emergencyName</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Relation:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>emergencyRelation</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Telephone:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>emergencyTelephone</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Email:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>emergencyEmail</Data>
+			<width>300</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>English Proficiency</Header>
+	</row>
+
+	<row>
+	    <control>
+			<Type>DropDownList</Type>
+			<Data>englishProficiency</Data>
+			<List>englishProficiencyList</List>
+			<width>200</width>
+			<required>yes</required>
+		</control> 
+	</row>
+
+	<row>
+		<Label>
+			<text>*If you choose either 1 or 2, you must enclose TOEFL or IELTS scores or an English proficiency letter from your university. We may request that you take an English exam.</text>
+			<width>520</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Computer Skills</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Word:</text>
+			<width>100</width>
+		</Label>
+		
+		<Label>
+			<text>PowerPoint:</text>
+			<width>100</width>
+		</Label>
+		
+		<Label>
+			<text>Other computer programs:</text>
+			<width>200</width>
+		</Label>
+	</row>
+	
+	<row>
+		 <control>
+			<Type>DropDownList</Type>
+			<Data>word</Data>
+			<List>wordProficiencyList</List>
+			<width>100</width>
+			<required>yes</required>
+		</control> 
+		
+		 <control>
+			<Type>DropDownList</Type>
+			<Data>powerpoint</Data>
+			<List>powerpointProficiencyList</List>
+			<width>100</width>
+			<required>yes</required>
+		</control> 
+		
+		 <control>
+			<Type>TextBox</Type>
+			<Data>otherComputerSkills</Data>
+			<width>300</width>
+		</control> 
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Academic Background:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Name of institution of BSc degree:</text>
+			<width>225</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>BScInstitution</Data>
+			<width>300</width>
+			<required>yes</required>
+		</control>
+    </row>
+
+	<row>
+		<Label>
+			<text>Institution country:</text>
+			<width>125</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>institutionCountry</Data>
+			<List>countryList</List>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>City:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>institutionCity</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Title of BSc degree:</text>
+			<width>130</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>BScTitle</Data>
+			<width>210</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>Year completed:</text>
+			<width>110</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>BScYear</Data>
+			<width>70</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+    <row>
+		<Label>
+			<text>Final Grade Point Average (GPA):</text>
+			<width>215</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>GPA</Data>
+			<width>70</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+    <row>	
+		<Label>
+			<text>If not completed, expected completion date:</text>
+			<width>295</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>BScCompletionDate</Data>
+			<width>100</width>
+			<required>no</required>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Name of additional academic institution, if any:</text>
+			<width>310</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>additionalInstitution</Data>
+			<width>210</width>
+		</control>
+    </row>
+
+	<row>
+		<Label>
+			<text>Institution country:</text>
+			<width>125</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>additionalInstitutionCountry</Data>
+			<List>countryList</List>
+			<width>150</width>
+		</control>
+		
+		<Label>
+			<text>City:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>additionalInstitutionCity</Data>
+			<width>150</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Title of degree:</text>
+			<width>125</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>additionalDegreeTitle</Data>
+			<width>215</width>
+		</control>
+		
+		<Label>
+			<text>Year completed:</text>
+			<width>110</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>additionalDegreeYear</Data>
+			<width>70</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Employment</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Name of current employer:</text>
+			<width>200</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>employerName</Data>
+			<width>300</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Position:</text>
+			<width>70</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>employmentPosition</Data>
+			<width>200</width>
+		</control>
+		
+		<Label>
+			<text>Employment dates:</text>
+			<width>130</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>employmentDates</Data>
+			<width>120</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Will you receive a salary from this employer while studying?</text>
+			<width>470</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>currentSalary</Data>
+			<List>yesNoList</List>
+			<width>50</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Name of previous employer:</text>
+			<width>200</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousEmployerName</Data>
+			<width>300</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Position:</text>
+			<width>70</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousEmploymentPosition</Data>
+			<width>200</width>
+		</control>
+		
+		<Label>
+			<text>Employment dates:</text>
+			<width>130</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousEmploymentDates</Data>
+			<width>120</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Will you receive a salary from this employer while studying?</text>
+			<width>470</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>previousSalary</Data>
+			<List>yesNoList</List>
+			<width>50</width>
+		</control>		
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Additional Experience</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>For applicants that studied or worked in Israel</text>
+			<width>400</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Experience in Israel:</text>
+			<width>200</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>experienceIsrael</Data>
+			<width>520</width>
+			<regex>^.{0,255}$</regex>
+			<tooltip>Up to 255 characters, including spaces</tooltip>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Dates:</text>
+			<width>70</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>experienceIsraelDates</Data>
+			<width>150</width>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>Supervisor name:</text>
+			<width>115</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>experienceIsraelSupervisor</Data>
+			<width>130</width>
+		</control>
+	</row>
+	
+	<row>
+        <Label>
+			<text>Contact details:</text>
+			<width>115</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>experienceIsraelContact</Data>
+			<width>400</width>
+		</control>			
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Assessments</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>List below 3 assessors. At least one must be an academic assessor. The other assessors may be academic or professional. She/he must have known you for at least one year (e.g., teacher, trainer, advisor, employer).</text>
+			<width>520</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>1. Name of assessor:</text>
+			<width>150</width>
+		</Label>
+
+        <Label>
+			<text>Position:</text>
+			<width>150</width>
+		</Label>
+		
+		<Label>
+			<text>Email:</text>
+			<width>100</width>
+		</Label>		
+	</row>
+	
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>assessor1</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>assessorPosition1</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>emailAssessor1</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>2. Name of assessor:</text>
+			<width>150</width>
+		</Label>
+
+        <Label>
+			<text>Position:</text>
+			<width>150</width>
+		</Label>
+		
+		<Label>
+			<text>Email:</text>
+			<width>100</width>
+		</Label>		
+	</row>
+	
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>assessor2</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>assessorPosition2</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>emailAssessor2</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>		
+	</row>
+	
+	<row>
+		<Label>
+			<text>3. Name of assessor:</text>
+			<width>150</width>
+		</Label>
+
+        <Label>
+			<text>Position:</text>
+			<width>150</width>
+		</Label>
+		
+		<Label>
+			<text>Email:</text>
+			<width>100</width>
+		</Label>		
+	</row>
+	
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>assessor3</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>assessorPosition3</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+        <control>
+			<Type>TextBox</Type>
+			<Data>emailAssessor3</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>		
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Funding</Header>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Visiting students must have sufficient funds to complete their studies. To protect you from a possible situation in which you cannot complete your studies, please ensure that your funding is sufficient for application and enrollment fees, and travel and other expenses during the entire duration of the program.</text>
+			<width>520</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>For scholarship options, please visit:     <![CDATA[<a href="http://intschool.agri.huji.ac.il/schol-sources" target="_blank">http://intschool.agri.huji.ac.il/schol-sources</a>]]></text>
+			<width>520</width>
+			<print>no</print>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Will you be applying for a scholarship with your application to the International School?</text>
+			<width>450</width>
+		</Label>
+	
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>funding</Data>
+			<List>yesNoList</List>
+			<width>60</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+    <row>
+		<Label>
+			<text>Other funding sources (personal funds, family support, and any income you may receive from your employer while you are studying):</text>
+			<width>520</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>	
+
+	<row>
+		<Label>
+			<text>1.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingSource1</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingAmount1</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>2.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingSource2</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingAmount2</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>3.</text>
+			<width>20</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingSource3</Data>
+			<width>300</width>
+		</control>
+		
+		<Label>
+			<text>Amount in US Dollars:</text>
+			<width>100</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingAmount3</Data>
+			<width>100</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Declaration</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>
+		
+		<Label>
+			<text>I, the undersigned, certify that all information supplied in this application is complete and correct. I understand and agree that the Hebrew University reserves the right to take any necessary measures in connection with candidates who submit partial, incorrect and/or false information. I waive my right to privacy regarding all academic documentation relevant to processing this application. IMPORTANT NOTE ON SAFEGUARDING: Our program takes responsibility to ensure that our students have a safe and secure learning environment, and expects our students to conduct themselves in an appropriate manner with all whom they encounter.</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Header>Photo Release Permission</Header>
+	</row>
+	
+	<row>
+	    <Label>
+			<text>*Your reply will not affect your application</text>
+			<width>500</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>photoPermission</Data>
+			<width>20</width>
+			<required>no</required>
+		</control>
+		
+		<Label>
+			<text>If I am accepted to the program, I hereby give my permission to be included in any Hebrew University of Jerusalem photos, videos or interviews, and for the information collected by the media to be used as part of news stories, public relations and marketing collateral to be published in print, Internet, broadcast or video by the University or media. I understand that images and/or filmed or audio recordings will not be used for commercial gain and will not be sold to anyone for commercial use.</text>
+			<width>500</width>
+		</Label>
+	</row>
+
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>400</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>

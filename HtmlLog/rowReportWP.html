@@ -1,0 +1,71 @@
+	  <div class="row border-top border-2 border-secondary">
+		<div class="col alert alert-info">
+		    <div class="position-relative">
+				<div class="position-absolute top-100 start-50 translate-middle">		
+					<h1 class="display-6">SourcePage</h1>
+				</div>
+			</div>
+		</div>
+		<div class="col alert alert-primary">
+		    <div class="position-relative">
+				<div class="position-absolute top-100 start-50 translate-middle">				
+					<h1 class="display-6">DestPage</h1>
+				</div>
+			</div>
+		</div>
+	  </div>
+		
+	  <div class="row border-start border-end ">
+		<div class="col alert alert-info">
+				<h1 class="display-6">
+		   		<a href="{SourcePageURL}" target="_blank" class="link-secondary">{SourcePageName}
+				</a>
+				</h1>				
+				
+		</div>
+		<div class="col alert alert-primary">
+				<h1 class="display-6">
+		    		<a href="{DestPageURL}" target="_blank" class="link-primary">{DestPageName}</a>	
+				</h1>	
+					
+				
+		</div>
+
+		</div>
+		<div class="row border-bottom border-2 border-secondary">
+			<div class="accordion" id="accordionExample">
+				<div class="accordion-item">
+					<h2 class="accordion-header" id="headingOne">
+					  <button class="accordion-button collapsed text-white bg-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="False" aria-controls="collapseOne">
+					    <h1 class="display-6">
+						WebPartName : {WebPartName}
+						</h1>
+						
+						
+					  </button>
+					</h2>
+					<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+					  <div class="accordion-body">
+			<div class="col alert alert-info" data-bs-toggle="tooltip" data-bs-placement="top" title="{WebPartValueSRC}">
+		    				
+					<b>Key : {WebPartKey}</b>
+				
+		</div>						  
+			<div class="col alert alert-info" data-bs-toggle="tooltip" data-bs-placement="top" title="{WebPartValueSRC}">
+		    				
+					Source Page Value: {WebPartValueSRC}
+				
+		</div>	
+		<div class="col alert alert-danger" data-bs-toggle="tooltip" data-bs-placement="top" title="{WebPartValueDST}">
+		    
+							
+					Destin Page Value:{WebPartValueDST}
+				
+			
+		</div>	
+					  </div>
+					</div>
+				  </div>			
+			</div>			
+		</div>
+<br/><br/><hr/><br/>

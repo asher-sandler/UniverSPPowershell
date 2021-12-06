@@ -1,0 +1,106 @@
+{
+    "Source":  {
+                   "URL":  "https://scholarships2.ekmd.huji.ac.il/home/General/GEN144-2020/",
+                   "RelPath":  "/home/General/GEN144-2020/",
+                   "Lists":  null,
+                   "Pages":  [
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/Default.aspx",
+                                     "Name":  "Pages/Default.aspx",
+                                     "InnerName":  "Default"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/DeleteEmptyFolders.aspx",
+                                     "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                     "InnerName":  "DeleteEmptyFolders"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/Form.aspx",
+                                     "Name":  "Pages/Form.aspx",
+                                     "InnerName":  "Form"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/Recommendations.aspx",
+                                     "Name":  "Pages/Recommendations.aspx",
+                                     "InnerName":  "Recommendations"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/SubmissionStatus.aspx",
+                                     "Name":  "Pages/SubmissionStatus.aspx",
+                                     "InnerName":  "SubmissionStatus"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/CancelCandidacy.aspx",
+                                     "Name":  "Pages/CancelCandidacy.aspx",
+                                     "InnerName":  "CancelCandidacy"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/Pages/ContactUs.aspx",
+                                     "Name":  "Pages/ContactUs.aspx",
+                                     "InnerName":  "ContactUs"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/SitePages/Home.aspx",
+                                     "Name":  "SitePages/Home.aspx",
+                                     "InnerName":  "Home"
+                                 },
+                                 {
+                                     "URL":  "/home/General/GEN144-2020/SitePages/How To Use This Library.aspx",
+                                     "Name":  "SitePages/How To Use This Library.aspx",
+                                     "InnerName":  "How To Use This Library"
+                                 }
+                             ]
+               },
+    "Destination":  {
+                        "URL":  "https://scholarships.ekmd.huji.ac.il/home/General/GEN158-2021",
+                        "RelPath":  "/home/General/GEN158-2021/",
+                        "Lists":  null,
+                        "Pages":  [
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/Default.aspx",
+                                          "Name":  "Pages/Default.aspx",
+                                          "InnerName":  "Default"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/DeleteEmptyFolders.aspx",
+                                          "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                          "InnerName":  "DeleteEmptyFolders"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/Form.aspx",
+                                          "Name":  "Pages/Form.aspx",
+                                          "InnerName":  "Form"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/Recommendations.aspx",
+                                          "Name":  "Pages/Recommendations.aspx",
+                                          "InnerName":  "Recommendations"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/SubmissionStatus.aspx",
+                                          "Name":  "Pages/SubmissionStatus.aspx",
+                                          "InnerName":  "SubmissionStatus"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/CancelCandidacy.aspx",
+                                          "Name":  "Pages/CancelCandidacy.aspx",
+                                          "InnerName":  "CancelCandidacy"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/Pages/ContactUs.aspx",
+                                          "Name":  "Pages/ContactUs.aspx",
+                                          "InnerName":  "ContactUs"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/SitePages/Home.aspx",
+                                          "Name":  "SitePages/Home.aspx",
+                                          "InnerName":  "Home"
+                                      },
+                                      {
+                                          "URL":  "/home/General/GEN158-2021/SitePages/How To Use This Library.aspx",
+                                          "Name":  "SitePages/How To Use This Library.aspx",
+                                          "InnerName":  "How To Use This Library"
+                                      }
+                                  ]
+                    }
+}

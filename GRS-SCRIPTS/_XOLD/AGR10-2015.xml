@@ -1,0 +1,386 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+  <config>
+    <fileName>registrationForm</fileName>
+    <docHeader>טופס הרשמה לימודי מוסמך</docHeader>
+    <finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+    <missingDataMessage>All fields marked in red must be filled.</missingDataMessage>
+    <registrationMessage>אינך רשום לתכנית זו.
+	&lt;a href=&quot;http://grs2.ekmd.huji.ac.il/home&quot;&gt;הירשם כאן&lt;/a&gt;
+	</registrationMessage>
+    <docTypeList>docType</docTypeList>
+    <docTypeColumn>תוכן קובץ</docTypeColumn>
+    <docType>0. טופס הרשמה</docType>
+    <destinationFolder></destinationFolder>
+    <destinationList></destinationList>
+    <ticketNum></ticketNum>
+	<calculations>no</calculations>
+  </config>
+  
+  <row>
+    <Header>הפקולטה לחקלאות מזון וסביבה ע"ש רוברט ה. סמית</Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>	
+    <control>
+      <Type>CheckBox</Type>
+      <Data>agriGraduate</Data>
+      <width>20</width>
+    </control>
+	
+	<Label>
+      <text>אני בוגר הפקולטה לחקלאות, מזון וסביבה</text>
+      <width>250</width>
+    </Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>	
+	<Label>
+      <text>אני ניגש ללימודי:</text>
+      <width>100</width>
+    </Label>
+	
+	<control>
+      <Type>RadioButtonList</Type>
+      <Data>degreeType</Data>
+      <List>degreeTypeList</List>
+      <width>100</width>
+    </control>
+  </row>
+
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Header>פרטים אישיים:</Header>
+  </row>
+
+  <row>	
+	<Label>
+      <text>שם פרטי:</text>
+      <width>65</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>firstNameHe</Data>
+      <width>150</width>
+	  <required>yes</required>
+    </control>
+	
+	<Label>
+      <text>(אנגלית):</text>
+      <width>65</width>
+    </Label>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>firstName</Data>
+      <width>150</width>
+    </control>
+  </row>
+  
+  <row>	
+	<Label>
+      <text>שם משפחה:</text>
+      <width>65</width>
+    </Label>
+    <control>
+      <Type>TextBox</Type>
+      <Data>surnameHe</Data>
+      <width>150</width>
+	  <required>yes</required>
+    </control>
+	
+	<Label>
+      <text>(אנגלית):</text>
+      <width>65</width>
+    </Label>
+    <control>
+      <Type>TextLabel</Type>
+      <Data>surname</Data>
+      <width>150</width>
+    </control>
+  </row>
+
+   <row>
+	<Label>
+	  <text>מספר זהות:</text>
+	  <width>65</width>
+	</Label>
+	<control>
+	  <Type>TextLabel</Type>
+	  <Data>studentId</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פרטי התקשרות:</Header>
+  </row>
+
+  <row>
+    <Label>
+	  <text>כתובת:</text>
+	  <width>70</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>address</Data>
+	  <width>150</width>
+	</control>
+	  
+    <Label>
+	  <text>עיר:</text>
+	  <width>70</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>city</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>מיקוד:</text>
+	  <width>70</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>zip</Data>
+	  <width>150</width>
+    </control>
+	
+	<Label>
+	  <text>טלפון נייד:</text>
+	  <width>70</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>mobile</Data>
+	  <width>150</width>
+    </control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>טלפון:</text>
+	  <width>70</width>
+	</Label>
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>phoneHe</Data>
+	  <width>150</width>
+	</control>
+	
+	<Label>
+	  <text>דוא"ל:</text>
+	  <width>70</width>
+	</Label>
+	<control>
+	  <Type>TextLabel</Type>
+	  <Data>email</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>החוג המיועד ללימודים:</Header>
+  </row>
+
+  <row>
+	<control>
+	  <Type>DropDownList</Type>
+	  <Data>department1</Data>
+	  <List>departmentList</List>
+	  <width>310</width>
+	  <required>yes</required>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שם המדריך/ים:</text>
+	  <width>75</width>
+    </Label>
+	
+	<Label>
+	  <text>1.</text>
+	  <width>20</width>
+    </Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>advisor1</Data>
+	  <width>150</width>
+	</control>
+	
+	<Label>
+	  <text>מהמוסד</text>
+	  <width>50</width>
+    </Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>advisorInstitute1</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text></text>
+	  <width>75</width>
+    </Label>
+	
+	<Label>
+	  <text>2.</text>
+	  <width>20</width>
+    </Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>advisor2</Data>
+	  <width>150</width>
+	</control>
+	
+	<Label>
+	  <text>מהמוסד</text>
+	  <width>50</width>
+    </Label>
+	
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>advisorInstitute2</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+
+  <row>
+    <Label>
+	  <text>מועמדותך תדון לפי סדר העדיפויות שציינת בטופס</text>
+	  <width>500</width>
+    </Label> 
+  </row>	
+
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>פרטי תואר בוגר:</Header>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>מוסד הלימודים:</text>
+	  <width>75</width>
+	</Label>
+
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>firstDegreeInstitute</Data>
+	  <width>150</width>
+	</control>
+	
+	<Label>
+	  <text>החוג:</text>
+	  <width>30</width>
+	</Label>
+
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>firstDegreeDepartment</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label>
+	  <text>שנת סיום:</text>
+	  <width>75</width>
+	</Label>
+
+	<control>
+	  <Type>TextBox</Type>
+	  <Data>firstDegreeGraduation</Data>
+	  <width>150</width>
+	</control>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header>הצהרה כללית:</Header>
+  </row>
+  
+  <row>
+    <control>
+	  <Type>CheckBox</Type>
+	  <Data>declaration</Data>
+	  <width>20</width>
+	  <required>yes</required>
+	  	  <print>yes</print>
+	</control>
+	
+    <Label>
+	  <text>אני מצהיר/ה כי כל הפרטים שנמסרו בטופס זה נכונים.</text>
+	  <width>500</width>
+	  	  <print>yes</print>
+	</Label>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+    <Header></Header>
+  </row>
+  
+  <row>
+    <Label></Label>
+  </row>
+  
+  <row>
+
+    <Button>שמור</Button>
+  </row>
+  <row>
+    <Label></Label>
+  </row>
+  <row>
+    <control>
+      <Type>finalMessage</Type>
+      <Data>MyCustomLabel</Data>
+      <Text></Text>
+    </control>
+  </row>
+ 
+</rows>

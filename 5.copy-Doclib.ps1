@@ -34,9 +34,13 @@ else
 			#$docLibNames += "ResponseLetters"
 			# $docLibNames += "Biotechnology (890)"
 			
-			$docLibNames += "Computer Science (521)"
-			$docLibNames += "Computational Biology (532)"
-			$docLibNames += "Bioengineering (582)"
+			#$docLibNames += "Computer Science (521)"
+			#$docLibNames += "Computational Biology (532)"
+			#$docLibNames += "Bioengineering (582)"
+			$docLibNames += "אסמהאן מסרי-חרזאללה"
+			$docLibNames += "פרידה ניסים-אמיתי"
+			#$docLibNames += "C MA and PhD students"
+			
 			
 			foreach($docLibName in $docLibNames){
 			

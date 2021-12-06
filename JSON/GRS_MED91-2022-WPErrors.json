@@ -1,0 +1,50 @@
+[
+    {
+        "SourcePageURL":  "/home/Medicine/MED80-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/Medicine/MED91-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED80-2021.xml",
+        "WebPartValueDST":  "MED91-2022.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED80-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/Medicine/MED91-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "MED80-2021-mail.txt",
+        "WebPartValueDST":  "MED91-2022-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED80-2021/Pages/healthDeclaration.aspx",
+        "DestPageURL":  "/home/Medicine/MED91-2022/Pages/healthDeclaration.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED80-2021 - healthDeclaration.xml",
+        "WebPartValueDST":  "MED91-2022 - healthDeclaration.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED80-2021/Pages/confidentialityForm.aspx",
+        "DestPageURL":  "/home/Medicine/MED91-2022/Pages/confidentialityForm.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED80-2021 - confidentiality.xml",
+        "WebPartValueDST":  "MED91-2022 - confidentiality.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED80-2021/Pages/filmingForm.aspx",
+        "DestPageURL":  "/home/Medicine/MED91-2022/Pages/filmingForm.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED80-2021 - filming.xml",
+        "WebPartValueDST":  "MED91-2022 - filming.xml"
+    },
+    {
+        "SourcePageURL":  "/home/Medicine/MED80-2021/Pages/immunization.aspx",
+        "DestPageURL":  "/home/Medicine/MED91-2022/Pages/immunization.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "MED80-2021-immunization.xml",
+        "WebPartValueDST":  "MED91-2022-immunization.xml"
+    }
+]

@@ -1,0 +1,1070 @@
+[
+    {
+        "Title":  "rakefet lists",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022",
+        "Items":  [
+                      {
+                          "Title":  "yesNoAtudaList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/yesNoAtudaList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "yesNoAtudaList",
+                          "Name":  "yesNoAtudaList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{a980debb-d516-4376-8e69-09c39de5bd42}\" SourceID=\"{70C68200-3CA7-4562-94F6-4E72E9F530D4}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "israelStatusList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/israelStatusList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "israelStatusList",
+                          "Name":  "israelStatusList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{fe68a347-b0ba-42a1-a010-3041a23e1088}\" SourceID=\"{E6B6A73A-035D-4D5E-B211-D4D7D93B0CE8}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "genderList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/genderList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "genderList",
+                          "Name":  "genderList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{a3bfb3cb-5885-44c7-9e31-f465e61a4e8a}\" SourceID=\"{F5D281C3-B5DC-4122-B753-E378517023AE}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "ramaRakefetList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/ramaRakefetList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "ramaRakefetList",
+                          "Name":  "ramaRakefetList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{ab0e9127-a293-4593-98af-9cd3370dc73c}\" SourceID=\"{58C5E908-10F4-4192-A8F0-C9128EB6EE43}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "countryListRakefet",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/countryListRakefet/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "countryListRakefet",
+                          "Name":  "countryListRakefet",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{facdd2f1-32bb-49ba-b9e0-794665255b76}\" SourceID=\"{E79C6FCF-30E5-4FC5-8153-6C95F98E5D3C}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "areaOfStudyList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/areaOfStudyList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "areaOfStudyList",
+                          "Name":  "areaOfStudyList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"FALSE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" MaxLength=\"255\" Indexed=\"FALSE\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"degree\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{b66a90b3-5b1b-4db0-bff6-78c32d8b2d8e}\" SourceID=\"{dc7e12b1-e16a-45cc-97c8-c378d08d0be7}\" StaticName=\"degree\" Name=\"degree\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"origin\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{7f40b19b-4e5e-4e5b-806d-3d13510c984f}\" SourceID=\"{dc7e12b1-e16a-45cc-97c8-c378d08d0be7}\" StaticName=\"origin\" Name=\"origin\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{56fadfe5-744c-4449-a416-37c2d4e442bd}\" SourceID=\"{8A65B72E-3DC6-4564-A820-6EC49DB63B97}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Status\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{fc88902b-60a6-4117-957e-e2fbf023828b}\" SourceID=\"{8A65B72E-3DC6-4564-A820-6EC49DB63B97}\" StaticName=\"Status\" Name=\"Status\" ColName=\"nvarchar6\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eOpen\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eOpen\u003c/CHOICE\u003e\u003cCHOICE\u003eClosed\u003c/CHOICE\u003e\u003cCHOICE\u003eWaiting List\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "testStatusList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/testStatusList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "testStatusList",
+                          "Name":  "testStatusList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{0e1973ee-9cde-4af1-a0f1-19498258fd38}\" SourceID=\"{9738C9C6-28EC-4300-BF0D-017D70E7196A}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "psyExamStatusList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/psyExamStatusList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "psyExamStatusList",
+                          "Name":  "psyExamStatusList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{1a439eaa-bfb4-4e06-80b6-5813a2050d31}\" SourceID=\"{FC5A719D-5BF1-41C7-918C-68EBD3A31DB3}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "paymentCodeList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/paymentCodeList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "paymentCodeList",
+                          "Name":  "paymentCodeList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{4c926cf9-1634-4cab-b97d-c5748f9b5f82}\" SourceID=\"{B1C4269D-5CF4-4DCD-8714-EF47DEFB5959}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "mobilePrefixList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/mobilePrefixList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "mobilePrefixList",
+                          "Name":  "mobilePrefixList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{fca0d7b9-1fbd-45b7-98a4-3b1cea4d9c0d}\" SourceID=\"{3AA8A2FB-DE2C-4C10-AC6D-88824223EC7B}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "phonePrefixList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/phonePrefixList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "phonePrefixList",
+                          "Name":  "phonePrefixList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{64a3ee87-70e4-47a2-bc58-e89e491f774d}\" SourceID=\"{A57A3D09-8558-45A4-9E10-9C12AC81FFF4}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Admin Menu",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/_layouts/viewlsts.aspx?BaseType=0",
+        "Items":  [
+                      {
+                          "Title":  "applicants",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/applicants/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  "applicants",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar95\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"firstName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{57428186-1820-4df3-bef6-a841079006e0}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"firstName\" Name=\"firstName\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"surname\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{d4aed490-0fd3-478b-93f4-b2e29740b051}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"surname\" Name=\"surname\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"gender\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{1e558119-b867-45c3-a1b4-0f2f0fef1b8d}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"gender\" Name=\"gender\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"citizenship\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{7e65723e-35f4-4796-a019-69a270fd92fa}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"citizenship\" Name=\"citizenship\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"email\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{10e49c17-d036-4f57-80d9-5455c77c53f0}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"email\" Name=\"email\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"homePhone\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{ff3ed43a-4d63-4927-9f7e-f7309096dd24}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"homePhone\" Name=\"homePhone\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"workPhone\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{91c10b69-bc52-4fcc-a095-4c358ddc035c}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"workPhone\" Name=\"workPhone\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"cellPhone\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{544cb248-311d-497f-850b-c7cb26760eaf}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"cellPhone\" Name=\"cellPhone\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"address\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{2e42f3c7-da96-45f2-a4f6-dd1481d67362}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"address\" Name=\"address\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"country\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{d016d171-ecb9-4a66-911a-38e7d76a83cc}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"country\" Name=\"country\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"zip\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{6cd69b8b-9a13-4203-a41c-33fe3455b56b}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"zip\" Name=\"zip\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"academTitle\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{79293853-9ba0-4c12-a94d-5b8330b7e713}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"academTitle\" Name=\"academTitle\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"city\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{c1e8ceea-1ffa-42d9-bf5e-253e196113c9}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"city\" Name=\"city\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"state\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{2b98f886-d189-46c2-b726-0c144bafb84b}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"state\" Name=\"state\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"IdHe\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{6060bba4-941a-462f-a90f-fddd83bd270d}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"IdHe\" Name=\"IdHe\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"userName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{bad25ed0-7dda-46ff-9a34-7d79e324596c}\" SourceID=\"{a6b491d2-f268-4790-92d8-2a80eed4e1eb}\" StaticName=\"userName\" Name=\"userName\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"folderMail\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{732f55a9-d326-4c92-b148-7bf963dbd549}\" SourceID=\"{2150698d-f7a2-411e-97ac-3f0cb91086ef}\" StaticName=\"folderMail\" Name=\"folderMail\" ColName=\"nvarchar91\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"folderLink\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{48bb3a61-79e9-4725-921c-7f8c2056c8c3}\" SourceID=\"{2150698d-f7a2-411e-97ac-3f0cb91086ef}\" StaticName=\"folderLink\" Name=\"folderLink\" ColName=\"nvarchar93\" RowOrdinal=\"0\" ColName2=\"nvarchar94\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{2450ee31-32a4-45e1-8924-d64c544b88b2}\" SourceID=\"{FD3546F7-7DE5-4CB9-BFCC-40D6873FB5A6}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" CalType=\"0\" FriendlyDisplayFormat=\"Disabled\" Version=\"1\"\u003e\u003cDefault\u003e2022-09-30T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"folderName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{2bcdd3d6-6270-4502-a178-7985fcf24457}\" SourceID=\"{FD3546F7-7DE5-4CB9-BFCC-40D6873FB5A6}\" StaticName=\"folderName\" Name=\"folderName\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{4a9a126e-3583-44d1-82b5-fac79a14d14f}\" SourceID=\"{FD3546F7-7DE5-4CB9-BFCC-40D6873FB5A6}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"studentId\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{c584b454-a315-47d6-9457-41fa8623384f}\" SourceID=\"{FD3546F7-7DE5-4CB9-BFCC-40D6873FB5A6}\" StaticName=\"studentId\" Name=\"studentId\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{a0d9d68a-9dd9-4db3-bfa9-13f7fe3c3761}\" SourceID=\"{FD3546F7-7DE5-4CB9-BFCC-40D6873FB5A6}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{d1635ee0-8fb6-4098-997a-43fe41847e1b}\" SourceID=\"{FD3546F7-7DE5-4CB9-BFCC-40D6873FB5A6}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar21\" RowOrdinal=\"0\" ColName2=\"nvarchar22\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"previousFamilyName\" Type=\"Text\" Required=\"FALSE\" ID=\"{4c10ffa4-3c08-42f0-9e03-a1229002db67}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"previousFamilyName\" Name=\"previousFamilyName\" ColName=\"nvarchar1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israeliId\" Type=\"Text\" Required=\"FALSE\" ID=\"{f542d45f-e4e0-4a50-bd7d-1ba5fda0c748}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israeliId\" Name=\"israeliId\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"fatherName\" Type=\"Text\" Required=\"FALSE\" ID=\"{773591ea-56b8-421b-95cd-889218e64acd}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"fatherName\" Name=\"fatherName\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"motherName\" Type=\"Text\" Required=\"FALSE\" ID=\"{67f7f06e-1547-434b-a63f-b77d30f54c35}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"motherName\" Name=\"motherName\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"streetNum\" Type=\"Text\" Required=\"FALSE\" ID=\"{a2fbb284-f246-4790-bc44-957a845319bb}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"streetNum\" Name=\"streetNum\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"street\" Type=\"Text\" Required=\"FALSE\" ID=\"{7fb59e8e-ff24-48ae-8c0e-a32727e3947c}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"street\" Name=\"street\" ColName=\"nvarchar29\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"postalCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{3c6e0f84-33a7-47fe-8de9-0ebdfc782ec3}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"postalCode\" Name=\"postalCode\" ColName=\"nvarchar30\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phone\" Type=\"Text\" Required=\"FALSE\" ID=\"{2b7f2f8c-2e29-426c-a620-040f28b156a7}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"phone\" Name=\"phone\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"guardianName\" Type=\"Text\" Required=\"FALSE\" ID=\"{1c498c47-514b-44f4-a3e2-f255703f67f7}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"guardianName\" Name=\"guardianName\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"guardianAddress\" Type=\"Text\" Required=\"FALSE\" ID=\"{703d6239-9cb1-497f-aebc-a827e2a2cd3a}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"guardianAddress\" Name=\"guardianAddress\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"guardianPhone\" Type=\"Text\" Required=\"FALSE\" ID=\"{6f36537f-0687-43b2-a25c-b0f462df841d}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"guardianPhone\" Name=\"guardianPhone\" ColName=\"nvarchar34\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelContactName\" Type=\"Text\" Required=\"FALSE\" ID=\"{a9f628d9-a4cf-4f37-b8f1-a2f0eb1af6b7}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelContactName\" Name=\"israelContactName\" ColName=\"nvarchar35\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelContactAddress\" Type=\"Text\" Required=\"FALSE\" ID=\"{2cd4f2a3-b204-4608-bc0b-9731195df692}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelContactAddress\" Name=\"israelContactAddress\" ColName=\"nvarchar36\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelContactPhone\" Type=\"Text\" Required=\"FALSE\" ID=\"{2d587eef-da61-4157-bc2a-313bc60e6972}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelContactPhone\" Name=\"israelContactPhone\" ColName=\"nvarchar37\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelPhone\" Type=\"Text\" Required=\"FALSE\" ID=\"{05c7d234-7f15-416a-8140-8846e4ba68b6}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelPhone\" Name=\"israelPhone\" ColName=\"nvarchar38\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Type=\"Text\" Required=\"FALSE\" ID=\"{f02551c1-0054-46ed-b661-cf7e1fd94f04}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"firstNameHe\" Name=\"firstNameHe\" ColName=\"nvarchar39\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Type=\"Text\" Required=\"FALSE\" ID=\"{72729232-bea1-4824-be72-be43f9688f67}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"surnameHe\" Name=\"surnameHe\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelStreet\" Type=\"Text\" Required=\"FALSE\" ID=\"{3857cdc3-c962-48f9-81d3-a06d94618adf}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelStreet\" Name=\"israelStreet\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelStreetNumber\" Type=\"Text\" Required=\"FALSE\" ID=\"{7e236140-37dc-4766-a8de-cb84f4e22792}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelStreetNumber\" Name=\"israelStreetNumber\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelCity\" Type=\"Text\" Required=\"FALSE\" ID=\"{21d02df1-91b6-460c-a28f-191cef8aa85c}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelCity\" Name=\"israelCity\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelPostalCode\" Type=\"Text\" Required=\"FALSE\" ID=\"{3abb5527-d574-49b7-ba53-3c705536c82e}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelPostalCode\" Name=\"israelPostalCode\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelCareOf\" Type=\"Text\" Required=\"FALSE\" ID=\"{8238f39a-d252-439c-87c7-126e6c68dd49}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelCareOf\" Name=\"israelCareOf\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"careOfPhone\" Type=\"Text\" Required=\"FALSE\" ID=\"{489b736e-6f48-4107-a570-e1f3196fca88}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"careOfPhone\" Name=\"careOfPhone\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelStatus\" Type=\"Text\" Required=\"FALSE\" ID=\"{d8e645e8-01b0-42e2-b998-c5ead8bf2684}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelStatus\" Name=\"israelStatus\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelArrivalDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{bf44355e-ea7d-45e5-aa60-1f36e02c46cb}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"israelArrivalDate\" Name=\"israelArrivalDate\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"dateOfBirth\" Type=\"Text\" Required=\"FALSE\" ID=\"{35a170d8-60fe-43d5-850e-aade67ce8ccb}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"dateOfBirth\" Name=\"dateOfBirth\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"lastCountryOfSchooling\" Type=\"Text\" Required=\"FALSE\" ID=\"{7ecaf881-2b9a-488e-8acd-b625da25bd2e}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"lastCountryOfSchooling\" Name=\"lastCountryOfSchooling\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{260d876c-7625-436f-86e2-a1bf4ad27dc7}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"birthCountry\" Name=\"birthCountry\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountryMother\" Type=\"Text\" Required=\"FALSE\" ID=\"{db3177d7-991a-447c-a983-aba1f26123f0}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"birthCountryMother\" Name=\"birthCountryMother\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthCountryFather\" Type=\"Text\" Required=\"FALSE\" ID=\"{8ab1f68e-ba9f-4411-9059-1531db26ba69}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"birthCountryFather\" Name=\"birthCountryFather\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit docs\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{ae9bf53c-c1a2-40b9-82d7-a7488da6aeaf}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"submit_x0020_docs\" Name=\"submit_x0020_docs\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Status\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{0afe4453-7151-4fde-a7c2-bea7c91fd52f}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"Status\" Name=\"Status\" ColName=\"nvarchar54\" RowOrdinal=\"0\"\u003e\u003cDefault\u003ewaiting\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003ewaiting\u003c/CHOICE\u003e\u003cCHOICE\u003efile opened\u003c/CHOICE\u003e\u003cCHOICE\u003efile to faculty\u003c/CHOICE\u003e\u003cCHOICE\u003eback from faculty\u003c/CHOICE\u003e\u003cCHOICE\u003eunrelevant\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"advisors\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{0d7b5179-266b-4c84-941f-9dd6730c82b1}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"advisors\" Name=\"advisors\" ColName=\"nvarchar55\" RowOrdinal=\"0\"\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e-\u003c/CHOICE\u003e\u003cCHOICE\u003eOrit\u003c/CHOICE\u003e\u003cCHOICE\u003eVeronica\u003c/CHOICE\u003e\u003cCHOICE\u003eAhmad\u003c/CHOICE\u003e\u003cCHOICE\u003eOther\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003cDefault\u003e-\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"file number\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{9ba34a6d-a78a-4504-b0ea-39025a63b39f}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"file_x0020_number\" Name=\"file_x0020_number\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"lastSubmit\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{733a3c06-d6a3-4143-8566-d9ff3e0ddc3c}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"lastSubmitDocs\" Type=\"DateTime\" Required=\"FALSE\" ID=\"{a7934b9b-57d9-465f-8b4c-33fd1a1889e4}\" SourceID=\"{ddedc9d4-0926-400e-bce7-50ed037d24d4}\" StaticName=\"lastSubmitDocs\" Name=\"lastSubmitDocs\" ColName=\"datetime3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phonePrefix\" Type=\"Text\" Required=\"FALSE\" ID=\"{bbe11f75-9866-4e84-a8b8-544ff02cd6a5}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"phonePrefix\" Name=\"phonePrefix\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mobilePrefix\" Type=\"Text\" Required=\"FALSE\" ID=\"{369f2936-54bd-4555-bf1d-4611b106cd7e}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"mobilePrefix\" Name=\"mobilePrefix\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelMobile\" Type=\"Text\" Required=\"FALSE\" ID=\"{0de55daf-4043-4d4d-9090-d459c98fc5d4}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"israelMobile\" Name=\"israelMobile\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelAppartmentNum\" Type=\"Text\" Required=\"FALSE\" ID=\"{cf7ab584-6025-49e7-b41f-737ec28f8586}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"israelAppartmentNum\" Name=\"israelAppartmentNum\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"israelPOBox\" Type=\"Text\" Required=\"FALSE\" ID=\"{32fd03ce-b354-42c0-b98d-2dd62f7f2a7d}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"israelPOBox\" Name=\"israelPOBox\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"secondarySchoolName\" Type=\"Text\" Required=\"FALSE\" ID=\"{e3886bdb-5a91-40bc-ab52-b5d3447c8882}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"secondarySchoolName\" Name=\"secondarySchoolName\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"secondarySchoolGraduation\" Type=\"Text\" Required=\"FALSE\" ID=\"{6ce9d322-27a9-4aa2-b937-1b6b6a50383e}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"secondarySchoolGraduation\" Name=\"secondarySchoolGraduation\" ColName=\"nvarchar61\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"secondarySchoolCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{75b83cac-8e2d-4557-abe4-9845bfb061b0}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"secondarySchoolCountry\" Name=\"secondarySchoolCountry\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"secondarySchoolType\" Type=\"Text\" Required=\"FALSE\" ID=\"{d9fe3d6b-44a5-4d4a-859d-23a1e80d9f0d}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"secondarySchoolType\" Name=\"secondarySchoolType\" ColName=\"nvarchar63\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{d483ee37-c961-477f-b73f-add6fdac180e}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityInstitute\" Name=\"universityInstitute\" ColName=\"nvarchar64\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{c49cfcbf-35ec-4beb-87bc-0e19fddc9d2d}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityCountry\" Name=\"universityCountry\" ColName=\"nvarchar65\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityYearsNum\" Type=\"Text\" Required=\"FALSE\" ID=\"{bb6cb412-2fcc-4afb-b79b-97fe73627ddc}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityYearsNum\" Name=\"universityYearsNum\" ColName=\"nvarchar66\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityDatesAttended\" Type=\"Text\" Required=\"FALSE\" ID=\"{c91f3508-2915-463f-9ae3-c31a251229e9}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityDatesAttended\" Name=\"universityDatesAttended\" ColName=\"nvarchar67\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityMajorAreasOfStudy\" Type=\"Text\" Required=\"FALSE\" ID=\"{a22955e3-6989-495d-9f6d-ccad5c65bf7a}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityMajorAreasOfStudy\" Name=\"universityMajorAreasOfStudy\" ColName=\"nvarchar68\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityDegree\" Type=\"Text\" Required=\"FALSE\" ID=\"{1eb142d9-a9ca-4da8-8ab9-8d0a26f746b8}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityDegree\" Name=\"universityDegree\" ColName=\"nvarchar69\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"universityGraduationDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{1e058f74-edf0-42ba-963e-c2d2268a5921}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"universityGraduationDate\" Name=\"universityGraduationDate\" ColName=\"nvarchar70\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"preparatoryProgramsInstitute\" Type=\"Text\" Required=\"FALSE\" ID=\"{584f26b6-e07e-46d6-a26b-ee5d4529f7b1}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"preparatoryProgramsInstitute\" Name=\"preparatoryProgramsInstitute\" ColName=\"nvarchar71\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"preparatoryProgramsName\" Type=\"Text\" Required=\"FALSE\" ID=\"{a38666e7-0705-4090-9bf2-b6310b5532fe}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"preparatoryProgramsName\" Name=\"preparatoryProgramsName\" ColName=\"nvarchar72\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"preparatoryProgramsDates\" Type=\"Text\" Required=\"FALSE\" ID=\"{3468a5c0-b7c4-466a-8823-b3a7d29c7859}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"preparatoryProgramsDates\" Name=\"preparatoryProgramsDates\" ColName=\"nvarchar73\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"armyServiceCountry\" Type=\"Text\" Required=\"FALSE\" ID=\"{af4b0bef-2ae6-428b-83a7-54c130eba24f}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"armyServiceCountry\" Name=\"armyServiceCountry\" ColName=\"nvarchar74\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"armyServiceDates\" Type=\"Text\" Required=\"FALSE\" ID=\"{b29d983b-611f-4c9e-b483-25c8d80e5f1e}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"armyServiceDates\" Name=\"armyServiceDates\" ColName=\"nvarchar75\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"atuda\" Type=\"Text\" Required=\"FALSE\" ID=\"{a0db1451-8099-4172-a271-8d9a56bd8a3f}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"atuda\" Name=\"atuda\" ColName=\"nvarchar76\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"psyNitePreviousDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{5c2fa425-cfeb-4562-8f9c-9a9cf468c789}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"psyNitePreviousDate\" Name=\"psyNitePreviousDate\" ColName=\"nvarchar77\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"psyNitePreviousPlace\" Type=\"Text\" Required=\"FALSE\" ID=\"{0da155f7-9560-4800-9469-fe43f0f10907}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"psyNitePreviousPlace\" Name=\"psyNitePreviousPlace\" ColName=\"nvarchar78\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"psyNitePreviousID\" Type=\"Text\" Required=\"FALSE\" ID=\"{2c3d6ee8-b739-4237-be7e-7317876fd57d}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"psyNitePreviousID\" Name=\"psyNitePreviousID\" ColName=\"nvarchar79\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"psyNitePlannedDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{1902f827-04c2-409e-84fe-c652b1ec7451}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"psyNitePlannedDate\" Name=\"psyNitePlannedDate\" ColName=\"nvarchar80\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"psyNitePlannedPlace\" Type=\"Text\" Required=\"FALSE\" ID=\"{3a454df1-9f05-4f6e-82c7-57ff61d96991}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"psyNitePlannedPlace\" Name=\"psyNitePlannedPlace\" ColName=\"nvarchar81\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"psyNitePlannedID\" Type=\"Text\" Required=\"FALSE\" ID=\"{652be8ce-6b77-4249-ba13-74d6c9b22561}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"psyNitePlannedID\" Name=\"psyNitePlannedID\" ColName=\"nvarchar82\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"AMIR_AMIRAM\" Type=\"Text\" Required=\"FALSE\" ID=\"{c5230007-11cb-42b3-a291-7ddcf691b0ad}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"AMIR_AMIRAM\" Name=\"AMIR_AMIRAM\" ColName=\"nvarchar83\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"YAEL_YAELNET\" Type=\"Text\" Required=\"FALSE\" ID=\"{068fd5a7-6d5d-4494-b90e-43352b2db5f5}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"YAEL_YAELNET\" Name=\"YAEL_YAELNET\" ColName=\"nvarchar84\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"SATReading\" Type=\"Text\" Required=\"FALSE\" ID=\"{2be000c2-bbe2-4b86-8e31-102461a2ea2a}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SATReading\" Name=\"SATReading\" ColName=\"nvarchar85\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"SATMath\" Type=\"Text\" Required=\"FALSE\" ID=\"{d13abc37-6494-4d5d-9ad2-72bd4ec92bce}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SATMath\" Name=\"SATMath\" ColName=\"nvarchar86\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"SATDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{758992a6-b63e-4015-a18c-90c20a4b93cf}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SATDate\" Name=\"SATDate\" ColName=\"nvarchar87\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"actCompositeScore\" Type=\"Text\" Required=\"FALSE\" ID=\"{4cb0b3d2-66c6-4953-afe6-469df62354db}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"actCompositeScore\" Name=\"actCompositeScore\" ColName=\"nvarchar88\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"actDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{bbe4c9e0-9ce0-4a4f-ae54-eb610b296d45}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"actDate\" Name=\"actDate\" ColName=\"nvarchar89\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"GREDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{9516cd90-68f6-4c50-93b7-3d6437473cf1}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"GREDate\" Name=\"GREDate\" ColName=\"nvarchar90\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"GRESubject\" Type=\"Text\" Required=\"FALSE\" ID=\"{ee57f632-ae93-4d7d-804b-033814909304}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"GRESubject\" Name=\"GRESubject\" ColName=\"nvarchar92\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"GMATDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{fd3fe135-7ac7-4004-9dc1-d3d41aef36f3}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"GMATDate\" Name=\"GMATDate\" ColName=\"nvarchar97\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"TOEFL-IELTSDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{28d7c466-3644-4ae1-9b06-a7be265737e9}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"TOEFL_x002d_IELTSDate\" Name=\"TOEFL_x002d_IELTSDate\" ColName=\"nvarchar98\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"TOEFL-IELTSScore\" Type=\"Text\" Required=\"FALSE\" ID=\"{d2a73a1c-a321-4226-92ac-b0cee7f683b3}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"TOEFL_x002d_IELTSScore\" Name=\"TOEFL_x002d_IELTSScore\" ColName=\"nvarchar99\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"hebrewSpeaking\" Type=\"Text\" Required=\"FALSE\" ID=\"{0699b9ea-8a84-4d5e-8a6f-62a79b985bb0}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"hebrewSpeaking\" Name=\"hebrewSpeaking\" ColName=\"nvarchar100\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"hebrewReading\" Type=\"Text\" Required=\"FALSE\" ID=\"{278d446a-647c-4453-af71-6331ca40ade6}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"hebrewReading\" Name=\"hebrewReading\" ColName=\"nvarchar101\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"hebrewWriting\" Type=\"Text\" Required=\"FALSE\" ID=\"{8f9dea12-5adb-46d3-bdf4-fbfbee744134}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"hebrewWriting\" Name=\"hebrewWriting\" ColName=\"nvarchar102\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"englishSpeaking\" Type=\"Text\" Required=\"FALSE\" ID=\"{f2964b22-ac7c-4f15-a049-ef3bb08bc748}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"englishSpeaking\" Name=\"englishSpeaking\" ColName=\"nvarchar103\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"englishReading\" Type=\"Text\" Required=\"FALSE\" ID=\"{8c952918-3851-4b43-b7f6-d30ef96d6505}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"englishReading\" Name=\"englishReading\" ColName=\"nvarchar104\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"englishWriting\" Type=\"Text\" Required=\"FALSE\" ID=\"{52135cab-342f-45c8-9250-a4434d5c4fb4}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"englishWriting\" Name=\"englishWriting\" ColName=\"nvarchar105\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference1Degree\" Type=\"Text\" Required=\"FALSE\" ID=\"{67257358-9ff1-4bad-9f69-bdbbb8daa75d}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference1Degree\" Name=\"studyPreference1Degree\" ColName=\"nvarchar106\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference1\" Type=\"Text\" Required=\"FALSE\" ID=\"{b5823bc6-0aa6-40e9-bd07-5afd2e96d52c}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference1\" Name=\"studyPreference1\" ColName=\"nvarchar107\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference1Status\" Type=\"Text\" Required=\"FALSE\" ID=\"{8c8c5434-53c0-409a-94aa-d098b79a210c}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference1Status\" Name=\"studyPreference1Status\" ColName=\"nvarchar108\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference2Degree\" Type=\"Text\" Required=\"FALSE\" ID=\"{6ce87c93-c480-487b-882e-bf61f22da673}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference2Degree\" Name=\"studyPreference2Degree\" ColName=\"nvarchar109\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference2\" Type=\"Text\" Required=\"FALSE\" ID=\"{38847eec-c85a-4c1e-a07b-e91f1babe60a}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference2\" Name=\"studyPreference2\" ColName=\"nvarchar110\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference2Status\" Type=\"Text\" Required=\"FALSE\" ID=\"{75e8f529-f587-40c0-b149-539d40eb70bd}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference2Status\" Name=\"studyPreference2Status\" ColName=\"nvarchar111\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference3Degree\" Type=\"Text\" Required=\"FALSE\" ID=\"{3f53dfd2-f436-40b0-a04e-84fefb4d88fe}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference3Degree\" Name=\"studyPreference3Degree\" ColName=\"nvarchar112\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference3\" Type=\"Text\" Required=\"FALSE\" ID=\"{c29c84b2-04e0-4f99-8bff-5313ad0c3ea0}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference3\" Name=\"studyPreference3\" ColName=\"nvarchar113\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference3Status\" Type=\"Text\" Required=\"FALSE\" ID=\"{0ea61878-4690-43e6-b986-1082ec80b574}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference3Status\" Name=\"studyPreference3Status\" ColName=\"nvarchar114\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference4Degree\" Type=\"Text\" Required=\"FALSE\" ID=\"{37b7aeef-6301-4a27-8098-44c509401934}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference4Degree\" Name=\"studyPreference4Degree\" ColName=\"nvarchar115\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference4\" Type=\"Text\" Required=\"FALSE\" ID=\"{8599a639-96be-4037-b34a-683fa95b41a4}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference4\" Name=\"studyPreference4\" ColName=\"nvarchar116\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference4Status\" Type=\"Text\" Required=\"FALSE\" ID=\"{ec69492f-6867-4f27-bdb6-cd7a54fe9689}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference4Status\" Name=\"studyPreference4Status\" ColName=\"nvarchar117\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference5Degree\" Type=\"Text\" Required=\"FALSE\" ID=\"{7123dcb9-00bc-4f32-b642-ece680496843}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference5Degree\" Name=\"studyPreference5Degree\" ColName=\"nvarchar118\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference5\" Type=\"Text\" Required=\"FALSE\" ID=\"{f78621c8-cb95-4107-8520-d4f2b3c51153}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference5\" Name=\"studyPreference5\" ColName=\"nvarchar119\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studyPreference5Status\" Type=\"Text\" Required=\"FALSE\" ID=\"{fd288937-e905-4e27-8a02-44aecd0c1058}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"studyPreference5Status\" Name=\"studyPreference5Status\" ColName=\"nvarchar120\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"appliedToHUJI\" Type=\"Text\" Required=\"FALSE\" ID=\"{53a93f97-a80b-439f-83bd-0c1b28ca176b}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"appliedToHUJI\" Name=\"appliedToHUJI\" ColName=\"nvarchar121\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"appliedToHUJIYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{b6abe67c-1f12-42e9-8239-e24bb255c57d}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"appliedToHUJIYear\" Name=\"appliedToHUJIYear\" ColName=\"nvarchar122\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"appliedToHUJIStudentNum\" Type=\"Text\" Required=\"FALSE\" ID=\"{99bbae07-e159-439b-8fdf-db8648d42752}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"appliedToHUJIStudentNum\" Name=\"appliedToHUJIStudentNum\" ColName=\"nvarchar123\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"confirmationNumber\" Type=\"Text\" Required=\"FALSE\" ID=\"{f27fdfcd-9a3a-4c4d-94df-fa642c60064a}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"confirmationNumber\" Name=\"confirmationNumber\" ColName=\"nvarchar124\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration1\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{93550924-c646-4bf1-966f-a19b9a0e9883}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"declaration1\" Name=\"declaration1\" ColName=\"bit3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration2\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{36df3f4e-cffe-4200-b390-1f0ca1cbe7ca}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"declaration2\" Name=\"declaration2\" ColName=\"bit4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"declaration3\" Type=\"Boolean\" Required=\"FALSE\" ID=\"{5c2af2dc-550e-427b-994c-f5b09914ec37}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"declaration3\" Name=\"declaration3\" ColName=\"bit5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"SugZehut\" Required=\"FALSE\" Format=\"Dropdown\" ID=\"{a4c32aed-0010-4d37-a411-2a33dc2c4a7f}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SugZehut\" Name=\"SugZehut\" ColName=\"nvarchar125\" RowOrdinal=\"0\"\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e4\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"payment\" Required=\"FALSE\" Format=\"Dropdown\" ID=\"{86a602b4-c1ff-4f0a-b2d3-4fc46c43e74f}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"payment\" Name=\"payment\" ColName=\"nvarchar126\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e-\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e-\u003c/CHOICE\u003e\u003cCHOICE\u003eשילם\u003c/CHOICE\u003e\u003cCHOICE\u003eלא שילם\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"Semester\" Required=\"FALSE\" ID=\"{813d36fe-1dc0-487e-8e8e-a09eaba0afb2}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"Semester\" Name=\"Semester\" ColName=\"nvarchar127\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"RegistrationSource\" Required=\"FALSE\" ID=\"{164272d8-079a-4393-b3f6-db58ef082651}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"RegistrationSource\" Name=\"RegistrationSource\" ColName=\"nvarchar128\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"SourceMaktakh\" Required=\"FALSE\" ID=\"{19f9fc43-d1cf-486f-9b6b-1a3a2372f252}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SourceMaktakh\" Name=\"SourceMaktakh\" ColName=\"nvarchar129\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"SourceOAU\" Required=\"FALSE\" ID=\"{f266916a-c24a-49b9-b978-a07e0c31edf0}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SourceOAU\" Name=\"SourceOAU\" ColName=\"nvarchar130\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"registrationYear\" Required=\"FALSE\" ID=\"{c765d0a7-6079-414b-b192-b4712925ac57}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"registrationYear\" Name=\"registrationYear\" ColName=\"nvarchar131\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"educationMother\" Required=\"FALSE\" ID=\"{9c8df07d-418b-4d88-8ead-13c5e35f6ed7}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"educationMother\" Name=\"educationMother\" ColName=\"nvarchar132\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"educationFather\" Required=\"FALSE\" ID=\"{d086ea37-3afa-4eb1-abb5-6567bc06c066}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"educationFather\" Name=\"educationFather\" ColName=\"nvarchar133\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"hujiId\" Required=\"FALSE\" ID=\"{a8181796-8687-41fa-80f8-3e06c0715b74}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"hujiId\" Name=\"hujiId\" ColName=\"nvarchar134\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"A\" Required=\"\" ID=\"{ad05b775-57b5-4fd3-8d09-6e93b4bc8c8c}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"A\" Name=\"A\" ColName=\"bit6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"SendToRakefet\" Required=\"\" ID=\"{e893a03b-402b-4a83-ad2d-351254232a7f}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"SendToRakefet\" Name=\"SendToRakefet\" ColName=\"bit7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"RakefetDone\" Required=\"\" ID=\"{5e6daa75-144c-4629-bc28-1c957a4192bb}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"RakefetDone\" Name=\"RakefetDone\" ColName=\"bit8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"copeidToExpList\" Required=\"\" ID=\"{44c5951b-08d5-4e31-af1e-04adbf50f0f4}\" SourceID=\"{fd3546f7-7de5-4cb9-bfcc-40d6873fb5a6}\" StaticName=\"copeidToExpList\" Name=\"copeidToExpList\" ColName=\"bit9\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Document Type list",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/DocType/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "DocType",
+                          "Name":  "DocType",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"Required\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{e634b88a-1940-4385-ba02-748805844670}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"Required\" Name=\"Required\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Number\" DisplayName=\"FilesNumber\" Required=\"TRUE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Decimals=\"0\" ID=\"{d82f1f8d-97e3-4aed-8cbc-c452c2c88555}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"FilesNumber\" Name=\"FilesNumber\" ColName=\"float1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"fromMail\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{963ff59c-4147-484c-826a-22408270a560}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"fromMail\" Name=\"fromMail\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"source_field\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{98f782d8-876d-4578-85c0-bb36148e1364}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"source_field\" Name=\"source_field\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"ApplicantPermissions\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{879f26d6-1bcc-42ee-adfb-02b9eeaea744}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"ApplicantPermissions\" Name=\"ApplicantPermissions\" ColName=\"nvarchar4\" RowOrdinal=\"0\"\u003e\u003cDefault\u003econtribute\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003econtribute\u003c/CHOICE\u003e\u003cCHOICE\u003eread\u003c/CHOICE\u003e\u003cCHOICE\u003eview\u003c/CHOICE\u003e\u003cCHOICE\u003enone\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"path\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{cb91a5d0-47ff-46e7-a353-5704ff02aa63}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"path\" Name=\"path\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"limit_upload\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{56d51280-7ac6-427a-a0b7-734332f45b38}\" SourceID=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" StaticName=\"limit_upload\" Name=\"limit_upload\" ColName=\"bit3\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "EKMD\\all_apps_grpsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_judgesSP",
+                                                     "Type":  8,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "areaOfStudyList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/areaOfStudyList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "areaOfStudyList",
+                          "Name":  "areaOfStudyList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"FALSE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" MaxLength=\"255\" Indexed=\"FALSE\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"degree\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{b66a90b3-5b1b-4db0-bff6-78c32d8b2d8e}\" SourceID=\"{dc7e12b1-e16a-45cc-97c8-c378d08d0be7}\" StaticName=\"degree\" Name=\"degree\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"origin\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{7f40b19b-4e5e-4e5b-806d-3d13510c984f}\" SourceID=\"{dc7e12b1-e16a-45cc-97c8-c378d08d0be7}\" StaticName=\"origin\" Name=\"origin\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"code\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{56fadfe5-744c-4449-a416-37c2d4e442bd}\" SourceID=\"{8A65B72E-3DC6-4564-A820-6EC49DB63B97}\" StaticName=\"code\" Name=\"code\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Status\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{fc88902b-60a6-4117-957e-e2fbf023828b}\" SourceID=\"{8A65B72E-3DC6-4564-A820-6EC49DB63B97}\" StaticName=\"Status\" Name=\"Status\" ColName=\"nvarchar6\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eOpen\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eOpen\u003c/CHOICE\u003e\u003cCHOICE\u003eClosed\u003c/CHOICE\u003e\u003cCHOICE\u003eWaiting List\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Submitted",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Submitted/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Submitted",
+                          "Name":  "Submitted",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"Name\" AuthoringInfo=\"(for use in forms)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"Title\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"Document Type\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{B9A49217-C958-4BFC-BCDE-EE5B502CE7A6}\" ShowField=\"Title\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{278c7cc2-e0f1-449e-9ac0-f16cd87cd549}\" SourceID=\"{C3471E1D-CEC3-49ED-BFBE-5B9E390C0E2B}\" StaticName=\"Document_x0020_Type\" Name=\"Document_x0020_Type\" ColName=\"int1\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Offline Applicants",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Offline Applicants/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Offline Applicants",
+                          "Name":  "Offline Applicants",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"Name\" AuthoringInfo=\"(for use in forms)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"Title\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "cancelledApplicantsList",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Lists/cancelledApplicantsList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "cancelledApplicantsList",
+                          "Name":  "cancelledApplicantsList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"Title\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"Attachments\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"firstName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{8542ace6-2b76-42fb-bd45-9250bb15c4b0}\" SourceID=\"{4484581E-6658-4918-BEEC-51E6A3D895C0}\" StaticName=\"firstName\" Name=\"firstName\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"surname\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{b5a99671-3ef2-4460-a93e-edf1368c646f}\" SourceID=\"{4484581E-6658-4918-BEEC-51E6A3D895C0}\" StaticName=\"surname\" Name=\"surname\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"idNumber\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{05cb9d2b-8667-425c-886e-d71c0808ce1c}\" SourceID=\"{4484581E-6658-4918-BEEC-51E6A3D895C0}\" StaticName=\"idNumber\" Name=\"idNumber\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"email\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{19a7892d-b3a2-464a-99ec-5363f9e07aa3}\" SourceID=\"{4484581E-6658-4918-BEEC-51E6A3D895C0}\" StaticName=\"email\" Name=\"email\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "GRS_GEN32-2022_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Delete Empty Folders",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/DeleteEmptyFolders.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "DeleteEmptyFolders.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Rakefet",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/Administration/Rakefet.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Rakefet.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Faculty or School",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Application",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022",
+        "Items":  [
+                      {
+                          "Title":  "Personal Details Form",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/Form.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Form.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Academic Info Form",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/academicFrom.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "academicFrom.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Proposed Studies Form",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/studiesForm.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "studiesForm.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Payment",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/payment.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "payment.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Declaration Form",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/declarationForm.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "declarationForm.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Documents Upload",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/DocumentsUpload.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "DocumentsUpload.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Recommendations",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/Recommendations.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Recommendations.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Submission Status",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/SubmissionStatus.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "SubmissionStatus.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "Cancel Candidacy",
+                          "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/CancelCandidacy.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "CancelCandidacy.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Contact Us",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/ContactUs.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "DefaultFR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/DefaultFR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "DefaultES",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/DefaultES.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "DefaultRU",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/DefaultRU.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "DefaultAR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/DefaultAR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "personalDetailsFormAR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/personalDetailsFormAR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "personalDetailsFormFR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/personalDetailsFormFR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "personalDetailsFormES",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/personalDetailsFormES.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "personalDetailsFormRU",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/personalDetailsFormRU.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "academicFromAR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/academicFromAR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "academicFromFR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/academicFromFR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "academicFromRU",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/academicFromRU.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "academicFromES",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/academicFromES.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "studiesFormAR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/studiesFormAR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "studiesFormFR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/studiesFormFR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "studiesFormRU",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/studiesFormRU.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "studiesFormES",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/studiesFormES.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "declarationFormAR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/declarationFormAR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "declarationFormFR",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/declarationFormFR.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "declarationFormRU",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/declarationFormRU.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "declarationFormES",
+        "Url":  "/home/OverseasApplicantsUnit/GEN32-2022/Pages/declarationFormES.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    }
+]

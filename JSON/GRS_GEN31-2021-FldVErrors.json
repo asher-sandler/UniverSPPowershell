@@ -1,0 +1,596 @@
+[
+    {
+        "ListName":  "academicInfo",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "AMIR_AMIRAM"
+                                     },
+                                     {
+                                         "FieldName":  "YAEL_YAELNET"
+                                     },
+                                     {
+                                         "FieldName":  "secondarySchoolType"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "Access Requests",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "administration",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Agriculture",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Announcements",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "applicants",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "ApplicantTemplate",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "areaOfStudyList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Biomedical Sciences",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Brain Science",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Business Adminstration",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "cancelledApplicantsList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Composed Looks",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Computer Science and Engineering",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "countryList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "countryListRakefet",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Criminology",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "declarations",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "degreeNonPhdAndSpecial",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Dental Medicine",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "DocType",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "DocType1",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "DocType2",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Documents",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Education",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Final",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "genderList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Humanities",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Images",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "israelStatusList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "languageProficiency",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Law",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "maritalStatusList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Master Page Gallery",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Melton Center",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Melton Center - Spanish",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "mobilePrefixList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "NumTo99",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Nursing",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Occupational Therapy",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Offline Applicants",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Pages",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "paymentCodeList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Pharmacy",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "phonePrefixList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "psyExamStatusList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Public Health",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "rakefetExp",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "rakefetExport",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "ramaRakefetList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Science",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "secondarySchoolCountryList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Site Assets",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Site Pages",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Social Sceinces",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Social Work",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "specialFacultyList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "code"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "studies",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "studyPreference1Degree"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference1"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference2Degree"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference2"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference3Degree"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference3"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference4Degree"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference4"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference5Degree"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference5"
+                                     },
+                                     {
+                                         "FieldName":  "phDDepartment"
+                                     },
+                                     {
+                                         "FieldName":  "specialFaculty"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceNum1"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceNum2"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceNum3"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceNum4"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceNum5"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceWaitingList1"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceWaitingList2"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceWaitingList3"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceWaitingList4"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceWaitingList5"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceAppeal1"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceAppeal2"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceAppeal3"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceAppeal4"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceAppeal5"
+                                     },
+                                     {
+                                         "FieldName":  "submit docs"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceTrack1"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceTrack2"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceTrack3"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceTrack4"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreferenceTrack5"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference1Status"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference2Status"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference3Status"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference4Status"
+                                     },
+                                     {
+                                         "FieldName":  "studyPreference5Status"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "Submitted",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "description"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "Teaching Certificate",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "testStatusList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "TitleList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Veterinary School",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Workflow Tasks",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yearList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yesNoAtudaList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "yesNoList",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    }
+]

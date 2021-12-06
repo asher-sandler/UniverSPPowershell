@@ -1,0 +1,8 @@
+{
+    "SourcePageURL":  "/home/schoolofsocialwork/SSW37-2021/external_forms/Pages/instructorApprovalForm.aspx",
+    "DestPageURL":  "/home/schoolofsocialwork/SSW45-2022/external_forms/Pages/instructorApprovalForm.aspx",
+    "WebPartName":  "Survey_Form ",
+    "WebPartKey":  "fileName",
+    "WebPartValueSRC":  "SSW37-2021-instructorApprovalForm.xml",
+    "WebPartValueDST":  "SSW45-2022-instructorApprovalForm.xml"
+}

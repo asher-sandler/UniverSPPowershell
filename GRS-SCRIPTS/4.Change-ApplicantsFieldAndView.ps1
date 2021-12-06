@@ -45,15 +45,18 @@ else
 			#$applSchmSrc
 			#write-host NewSchema
 			#$applSchmDst
-			
+			$oldSiteSuffix = $spObj.OldSiteSuffix
+			if ([string]::isNullOrEmpty($oldSiteSuffix)){
+				$oldSiteSuffix = $spObj.oldSiteURL.split("/")[-2]
+			}
 			
 			$xmlFiles = @()
 			
-			$oldXMLMask = $spObj.PathXML + "\"+$spObj.OldSiteSuffix+"*.xml"
+			$oldXMLMask = $spObj.PathXML + "\"+$oldSiteSuffix+"*.xml"
 			
 			$oldItems   =  get-Item $oldXMLMask
 			foreach($fitem in  $oldItems){
-				$newFileName = $spObj.PathXML + "\"+$fitem.Name.Replace($spObj.OldSiteSuffix, $spObj.RelURL)
+				$newFileName = $spObj.PathXML + "\"+$fitem.Name.Replace($oldSiteSuffix, $spObj.RelURL)
 				if (!$(Test-Path $newFileName)){
 				
 					Copy-Item -Path $($fitem.FullName) -Destination $newFileName

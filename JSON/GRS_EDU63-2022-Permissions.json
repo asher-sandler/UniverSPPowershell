@@ -1,0 +1,512 @@
+[
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "סמירה עליאן",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES1UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges1ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges1ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "מסלולים - סמירה",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES1UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges1ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges1ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "בועז צבר",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES2UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges2ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges2ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "מסלולים - בועז",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES2UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges2ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges2ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "עדי בן-דוד",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES3UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges3ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges3ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "מסלולים - עדי",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES3UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges3ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges3ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "אסמהאן מסרי-חרזאללה",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES4UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges4ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges4ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "מסלולים - אסמהאן",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES4UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges4ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read,Limited Access"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges4ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read,Limited Access"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "פרידה ניסים-אמיתי",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES5UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges5ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges5ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_EDU63-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Education/EDU54-2021/",
+        "List":  "מסלולים - פרידה",
+        "PermDifference":  "EKMD\\GRS_EDU63-2022_JUDGES5UG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\grs_edu54-2021_judges5ug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "GRS_EDU63-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\grs_edu54-2021_judges5ug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "GRS_EDU63-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    }
+]

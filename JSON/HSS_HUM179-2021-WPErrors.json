@@ -1,0 +1,26 @@
+[
+    {
+        "SourcePageURL":  "/home/humanities/HUM160-2021/Pages/Default.aspx",
+        "DestPageURL":  "/home/humanities/HUM179-2021/Pages/Default.aspx",
+        "WebPartName":  "AE Banner Rotator",
+        "WebPartKey":  "InstallDate",
+        "WebPartValueSRC":  "18-Feb-21 2:25:07 PM",
+        "WebPartValueDST":  "17-Nov-21 2:54:43 PM"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM160-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/humanities/HUM179-2021/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "‏‏HUM160-2021.xml",
+        "WebPartValueDST":  "HUM179-2021.xml"
+    },
+    {
+        "SourcePageURL":  "/home/humanities/HUM160-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/humanities/HUM179-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "HUM160-2021-mail.txt",
+        "WebPartValueDST":  "HUM179-2021-mail-He.txt"
+    }
+]

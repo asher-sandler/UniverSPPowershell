@@ -1,0 +1,1415 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>registrationForm</fileName>
+		<docHeader>Registration Form</docHeader>
+		<finalMessage>All the information was saved successfully</finalMessage>
+		<missingDataMessage>Please fill out all of the marked fields</missingDataMessage>
+		<registrationMessage>You are not registered for this program. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">Register here</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>Document Type</docTypeColumn>
+		<docType>0. Registration Form</docType>
+		<calculations>no</calculations>
+	</config>
+
+	<row>
+		<Header>Applicant Personal Details:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>First Name:</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Middle Name:</text>
+			<width>135</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>middleName</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Last Name:</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Previous Last Name:</text>
+			<width>135</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>previousSurname</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Gender:</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>gender</Data>
+			<width>150</width>
+			<List>genderList</List>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Country of Birth:</text>
+			<width>115</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>birthCountry</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Date of Birth:</text>
+			<width>115</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>birthDate</Data>
+			<width>150</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+		</control>
+		
+		<Label>
+			<text>DD/MM/YYYY</text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Citizenship:</text>
+			<width>115</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>citizenship</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Nationality:</text>
+			<width>115</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>nationality</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Country of residence:</text>
+			<width>145</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>countryOfResidence</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Foreign Passport No.</text>
+			<width>145</width>
+		</Label>
+		
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Country (Passport):</text>
+			<width>145</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>passportCountry</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Valid until:</text>
+			<width>70</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>passportValid</Data>
+			<width>80</width>
+			<required>yes</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Name of Spouse:</text>
+			<width>120</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>nameOfSpouse</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Personal Status:</text>
+			<width>105</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>maritelStatus</Data>
+			<width>150</width>
+			<List>maritalStatusList</List>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Children under 18:</text>
+			<width>120</width>
+		</Label>
+		<control>
+			<Type>DropDownList</Type>
+			<Data>children</Data>
+			<width>100</width>
+			<List>childrenList</List>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Contact Information:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Address:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>address</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>City:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>city</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Country:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>country</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>Zip code:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>zip</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Area code:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>areaCode</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Home phone:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>homePhone</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Country code:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>countryCode</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Mobile:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobile</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Email:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>email</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Current work place:</text>
+			<width>130</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentJob</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Address:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentJobAddress</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>City:</text>
+			<width>130</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentJobCity</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Country:</text>
+			<width>95</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>currentJobCountry</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Zip code:</text>
+			<width>130</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentWorkZip</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Area code:</text>
+			<width>95</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentWorkAreaCode</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Work phone:</text>
+			<width>130</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>workPhone</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Country code:</text>
+			<width>95</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>currentWorkCountryCode</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Address for correspondence:</text>
+			<width>300</width>
+		</Label>
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>correspondenceAddress</Data>
+			<width>450</width>
+		</control>
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Your source of funding for this program</text>
+			<width>300</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Self:</text>
+			<width>100</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingSelf</Data>
+			<width>200</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Other sources:</text>
+			<width>100</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>fundingOtherSources</Data>
+			<width>200</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>English Proficiency</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Reading:</text>
+			<width>160</width>
+		</Label>
+
+		<Label>
+			<text>Speaking:</text>
+			<width>160</width>
+		</Label>
+
+		<Label>
+			<text>Writing:</text>
+			<width>160</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>englishReading</Data>
+			<width>160</width>
+			<List>englishProficiency</List>
+		</control>
+
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>englishSpeaking</Data>
+			<width>160</width>
+			<List>englishProficiency</List>
+		</control>
+
+		<control>
+			<Type>RadioButtonList</Type>
+			<Data>englishWriting</Data>
+			<width>160</width>
+			<List>englishProficiency</List>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Education:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text></text>
+			<width>75</width>
+		</Label>
+
+		<Label>
+			<text>Institution</text>
+			<width>100</width>
+		</Label>
+
+		<Label>
+			<text>City, Country</text>
+			<width>100</width>
+		</Label>
+
+		<Label>
+			<text>Start Year</text>
+			<width>70</width>
+		</Label>
+
+		<Label>
+			<text>Graduation Year</text>
+			<width>90</width>
+		</Label>
+
+		<Label>
+			<text>Degree</text>
+			<width>100</width>
+		</Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>Pre-Dental</text>
+			<width>75</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>preDentalInstitution</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>preDentalPlace</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>preDentalStartYear</Data>
+			<width>70</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>preDentalEndYear</Data>
+			<width>90</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>preDentalDegree</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Dental</text>
+			<width>75</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>DentalInstitution</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>DentalPlace</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>DentalStartYear</Data>
+			<width>70</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>DentalEndYear</Data>
+			<width>90</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>DentalDegree</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Post Dental</text>
+			<width>75</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>postDentalInstitution</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>postDentalPlace</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>postDentalStartYear</Data>
+			<width>70</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>postDentalEndYear</Data>
+			<width>90</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>postDentalDescribe</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Undergraduate Dental Studies:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Year</text>
+			<width>85</width>
+		</Label>
+
+		<Label>
+			<text>Average grade</text>
+			<width>100</width>
+		</Label>
+
+		<Label>
+			<text>Rank in class</text>
+			<width>100</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>First year</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>gradeYear1</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>classPlaceYear1</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Second year</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>gradeYear2</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>classPlaceYear2</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Third year</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>gradeYear3</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>classPlaceYear3</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Fourth year</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>gradeYear4</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>classPlaceYear4</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Fifth year</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>gradeYear5</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>classPlaceYear5</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Sixth year</text>
+			<width>85</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>gradeYear6</Data>
+			<width>100</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>classPlaceYear6</Data>
+			<width>100</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>License to practice dentistry</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>(if you have a license for more than one country please indicate)</text>
+			<width>450</width>
+			<print>no</print>
+		</Label>
+	
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>No.</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>licenseNum1</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Country issued:</text>
+			<width>105</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>licenseCountry1</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Date issued:</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>licenseDate1</Data>
+			<width>150</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+		</control>
+		
+		<Label>
+			<text>(DD/MM/YYYY)</text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>No.</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>licenseNum2</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>Country issued:</text>
+			<width>105</width>
+		</Label>
+		
+		<control>
+			<Type>DropDownList</Type>
+			<List>countryList</List>
+			<Data>licenseCountry2</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Date issued:</text>
+			<width>85</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>licenseDate2</Data>
+			<width>150</width>
+			<regex>^($|(((0[1-9]|[12][0-9]|3[01])\/(0[13578]|1[02])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|[12][0-9]|30)\/(0[13456789]|1[012])\/((19|[2-9][0-9])[0-9]{2}))|((0[1-9]|1[0-9]|2[0-8])\/02\/((19|[2-9][0-9])[0-9]{2}))|(29\/02\/((1[6-9]|[2-9][0-9])(0[48]|[2468][048]|[13579][26])|((16|[2468][048]|[3579][26])00)))))$</regex>
+			<tooltip>DD/MM/YYYY</tooltip>
+		</control>
+		
+		<Label>
+			<text>(DD/MM/YYYY)</text>
+			<width>100</width>
+			<print>no</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Publications:</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>publications</Data>
+			<width>450</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Awards and Honors:</Header>
+	</row>
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>prizesAndHonors</Data>
+			<width>450</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Work Exprerience after Dental School Graduation (latest first):</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Employer:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolEmployer1</Data>
+			<width>200</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>City, Country:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolCityCountry1</Data>
+			<width>200</width>
+		</control>
+
+		<Label>
+			<text>Dates:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolDates1</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Duties:</text>
+			<width>65</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>afterDentalSchoolDuties1</Data>
+			<width>500</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Employer:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolEmployer2</Data>
+			<width>200</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>City, Country:</text>
+			<width>90</width>
+		</Label>
+	
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolCityCountry2</Data>
+			<width>200</width>
+		</control>
+
+		<Label>
+			<text>Dates:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolDates2</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Duties:</text>
+			<width>65</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>afterDentalSchoolDuties2</Data>
+			<width>500</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Employer:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolEmployer3</Data>
+			<width>200</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>City, Country:</text>
+			<width>90</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolCityCountry3</Data>
+			<width>200</width>
+		</control>
+
+		<Label>
+			<text>Dates:</text>
+			<width>50</width>
+		</Label>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>afterDentalSchoolDates3</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Duties:</text>
+			<width>65</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+	
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>afterDentalSchoolDuties3</Data>
+			<width>500</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Hobbies:</Header>
+	</row>
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>hobbies</Data>
+			<width>450</width>
+		</control>
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>What are your plans after completion of orthodontic education?</Header>
+	</row>
+	
+	<row>
+		<control>
+			<Type>MultiLineTextBox</Type>
+			<Data>graduationPlans</Data>
+			<width>450</width>
+		</control>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>Letters of Recommendation:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>Please supply the names, titles/positions, and institution of individuals from whom you have requested letters of recommendation.</text>
+			<width>500</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>2</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Label>
+			<text>Name</text>
+			<width>170</width>
+		</Label>
+
+		<Label>
+			<text>Title/Position</text>
+			<width>170</width>
+		</Label>
+
+		<Label>
+			<text>Institution</text>
+			<width>170</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeName1</Data>
+			<width>170</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeTitle1</Data>
+			<width>170</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeInstitution1</Data>
+			<width>170</width>
+		</control>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeName2</Data>
+			<width>170</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeTitle2</Data>
+			<width>170</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeInstitution2</Data>
+			<width>170</width>
+		</control>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeName3</Data>
+			<width>170</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeTitle3</Data>
+			<width>170</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>refereeInstitution3</Data>
+			<width>170</width>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration</Data>
+			<width>20</width>
+			<required>yes</required>
+		</control>
+		<Label>
+			<text>I hereby declare that the information provided above is accurate.</text>
+			<width>480</width>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Button>Save</Button>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>400</width>
+			<Text></Text>
+		</control>
+	</row>
+</rows>
