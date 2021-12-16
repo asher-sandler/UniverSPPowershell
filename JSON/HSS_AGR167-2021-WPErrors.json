@@ -1,0 +1,50 @@
+[
+    {
+        "SourcePageURL":  "/home/agriculture/AGR159-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/agriculture/AGR167-2021/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "AGR159-2021.xml",
+        "WebPartValueDST":  "AGR167-2021.xml"
+    },
+    {
+        "SourcePageURL":  "/home/agriculture/AGR159-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/agriculture/AGR167-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "AGR159-2021-mail-He.txt",
+        "WebPartValueDST":  "AGR167-2021-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/agriculture/AGR159-2021/SitePages/Advisor.aspx",
+        "DestPageURL":  "/home/agriculture/AGR167-2021/SitePages/Advisor.aspx",
+        "WebPartName":  "MyAdvisor",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "8f93133c-ea75-4184-a726-53b5e5f378c5",
+        "WebPartValueDST":  "e87b4ed6-6433-4e55-b2d7-f08646801bf4"
+    },
+    {
+        "SourcePageURL":  "/home/agriculture/AGR159-2021/SitePages/Advisor.aspx",
+        "DestPageURL":  "/home/agriculture/AGR167-2021/SitePages/Advisor.aspx",
+        "WebPartName":  "MyAdvisor",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{8F93133C-EA75-4184-A726-53B5E5F378C5}",
+        "WebPartValueDST":  "{E87B4ED6-6433-4E55-B2D7-F08646801BF4}"
+    },
+    {
+        "SourcePageURL":  "/home/agriculture/AGR159-2021/SitePages/Advisor.aspx",
+        "DestPageURL":  "/home/agriculture/AGR167-2021/SitePages/Advisor.aspx",
+        "WebPartName":  "MyAdvisor",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/agriculture/AGR159-2021/Lists/MyAdvisor",
+        "WebPartValueDST":  "/home/agriculture/AGR167-2021/Lists/MyAdvisor"
+    },
+    {
+        "SourcePageURL":  "/home/agriculture/AGR159-2021/SitePages/Advisor.aspx",
+        "DestPageURL":  "/home/agriculture/AGR167-2021/SitePages/Advisor.aspx",
+        "WebPartName":  "Button_Send_Mail - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "AGR159-2021-instructorMailConfig.xml",
+        "WebPartValueDST":  "AGR167-2021-instructorMailConfig.xml"
+    }
+]

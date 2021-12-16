@@ -24,7 +24,7 @@
     },
     {
         "ListName":  "Applied Physics (511)",
-        "ListExistsOnDest":  false,
+        "ListExistsOnDest":  true,
         "FieldsNotFoundInDest":  [
 
                                  ]
@@ -86,6 +86,13 @@
                                  ]
     },
     {
+        "ListName":  "DocTypeExt",
+        "ListExistsOnDest":  false,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
         "ListName":  "Documents",
         "ListExistsOnDest":  true,
         "FieldsNotFoundInDest":  [
@@ -93,8 +100,15 @@
                                  ]
     },
     {
-        "ListName":  "Environmental Sciences (591)",
-        "ListExistsOnDest":  false,
+        "ListName":  "Earth Science",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "Enviormental Sciences (591)",
+        "ListExistsOnDest":  true,
         "FieldsNotFoundInDest":  [
 
                                  ]
@@ -149,6 +163,13 @@
                                  ]
     },
     {
+        "ListName":  "Life Science",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
         "ListName":  "maritalStatusList",
         "ListExistsOnDest":  true,
         "FieldsNotFoundInDest":  [
@@ -164,6 +185,13 @@
     },
     {
         "ListName":  "Mathematics (530)",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "MySupervisors",
         "ListExistsOnDest":  true,
         "FieldsNotFoundInDest":  [
 
@@ -206,6 +234,22 @@
     },
     {
         "ListName":  "Submitted",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+                                     {
+                                         "FieldName":  "description"
+                                     }
+                                 ]
+    },
+    {
+        "ListName":  "SupervisorsData",
+        "ListExistsOnDest":  true,
+        "FieldsNotFoundInDest":  [
+
+                                 ]
+    },
+    {
+        "ListName":  "SupervisorsResponse",
         "ListExistsOnDest":  true,
         "FieldsNotFoundInDest":  [
 

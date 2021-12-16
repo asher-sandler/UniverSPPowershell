@@ -14,12 +14,16 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
 . "$dp0\Utils-DualLanguage.ps1"
 
-$cred = get-SCred
+$Credentials = get-SCred
 
  
- $siteURL = "";
+ $siteName = "";
  
  
  write-host "URL: $siteURL" -foregroundcolor Yellow
+ 
+ $siteUrl = get-UrlNoF5 $siteName
 
-
+ $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+ $Ctx.Credentials = $Credentials
+ 

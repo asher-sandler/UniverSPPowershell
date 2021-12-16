@@ -1,0 +1,4 @@
+﻿"Group","SiteSource","SiteDest","List","PermDifference","PermSource","PermDest"
+"SEP_HUM17-2021","https://sep.ekmd.huji.ac.il/home/Humanities/HUM17-2021","https://sep2.ekmd.huji.ac.il/home/Humanities/HUM16-2020/","applicants","SEP_HUM17-2021_ADMINUG;","System.Object[]","System.Object[]"
+"SEP_HUM17-2021","https://sep.ekmd.huji.ac.il/home/Humanities/HUM17-2021","https://sep2.ekmd.huji.ac.il/home/Humanities/HUM16-2020/","DocType","SEP_HUM17-2021_ADMINUG;SEP_HUM17-2021_ADMINSP;","System.Object[]","System.Object[]"
+"SEP_HUM17-2021","https://sep.ekmd.huji.ac.il/home/Humanities/HUM17-2021","https://sep2.ekmd.huji.ac.il/home/Humanities/HUM16-2020/","Final","SEP_HUM17-2021_ADMINUG;SEP_HUM17-2021_JUDGESUG;SEP_HUM17-2021_JUDGESSP;","System.Object[]","System.Object[]"

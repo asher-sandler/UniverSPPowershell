@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet"  href="w3.css" />
+</head>
+<body>
+    <div class="w3-container">
+        <h2>Tabs</h2>
+        <p>Tabs are perfect for single page web applications, or for web pages capable of displaying different subjects. Click on the links below.</p>
+        <div id="ashrS-InsertedField"></div>
+    </div>
+      
+      <div class="w3-bar w3-black">
+        <div class="w3-bar-item w3-button" onclick="openCity('London')">London</div>
+        <div class="w3-bar-item w3-button" onclick="openCity('Paris')">Paris</div>
+        <div class="w3-bar-item w3-button" onclick="openCity('Tokyo')">Tokyo</div>
+      </div>
+      <div id="Capitals">
+        <div id="London" class="w3-container city">
+            <h2>London</h2>
+            <p>London is the capital city of England.</p>
+        </div>
+        
+        <div id="Paris" class="w3-container city" style="display:none">
+            <h2>Paris</h2>
+            <p>Paris is the capital of France.</p> 
+        </div> 
+
+        <div id="Tokyo" class="w3-container city" style="display:none">
+            <h2>Tokyo</h2>
+            <p>Tokyo is the capital of Japan.</p>
+        </div>
+      </div>
+
+      <input type="text" value="Ananas" maxlength="255" id="Title_fa564e0f-0c70-4ab9-b863-0177e6ddd247_$TextField" title="Title Required Field" style="ime-mode : " class="ms-long ms-spellcheck-true">
+      
+      <script src="code.js"></script>
+</body>
+</html>

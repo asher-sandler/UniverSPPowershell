@@ -3,6 +3,14 @@
         "SourcePageURL":  "/home/natureScience/SCI26-2022/Pages/Default.aspx",
         "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/Default.aspx",
         "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ChromeState",
+        "WebPartValueSRC":  "1",
+        "WebPartValueDST":  "0"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/Pages/Default.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/Default.aspx",
+        "WebPartName":  "ContentEditorWebPart",
         "WebPartKey":  "ContentLink",
         "WebPartValueSRC":  "/home/natureScience/SCI26-2022/SwitchModule/DefaultSwitchEn.txt",
         "WebPartValueDST":  "/home/NatureScience/SCI25-2021/SwitchModule/DefaultSwitchEn.txt"
@@ -12,7 +20,7 @@
         "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/DefaultHe.aspx",
         "WebPartName":  "ContentEditorWebPart",
         "WebPartKey":  "ContentLink",
-        "WebPartValueSRC":  "/home/natureScience/SCI26-2022/SwitchModule/DefaultSwitchHe.txt",
+        "WebPartValueSRC":  "",
         "WebPartValueDST":  "/home/NatureScience/SCI25-2021/SwitchModule/DefaultSwitchHe.txt"
     },
     {
@@ -67,9 +75,25 @@
         "SourcePageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
         "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/SubmissionStatus.aspx",
         "WebPartName":  "ContentEditorWebPart",
+        "WebPartKey":  "ChromeState",
+        "WebPartValueSRC":  "1",
+        "WebPartValueDST":  "0"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "ContentEditorWebPart",
         "WebPartKey":  "ContentLink",
         "WebPartValueSRC":  "/home/natureScience/SCI26-2022/SwitchModule/SubmissionStatusSwitchEn.txt",
         "WebPartValueDST":  "/home/NatureScience/SCI25-2021/SwitchModule/SubmissionStatusSwitchEn.txt"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "DocumentTypeListName",
+        "WebPartValueSRC":  "DocTypeExt",
+        "WebPartValueDST":  "DocType"
     },
     {
         "SourcePageURL":  "/home/natureScience/SCI26-2022/Pages/SubmissionStatus.aspx",
@@ -84,7 +108,7 @@
         "DestPageURL":  "/home/natureScience/SCI25-2021/Pages/SubmissionStatusHe.aspx",
         "WebPartName":  "ContentEditorWebPart",
         "WebPartKey":  "ContentLink",
-        "WebPartValueSRC":  "/home/natureScience/SCI26-2022/SwitchModule/SubmissionStatusSwitchHe.txt",
+        "WebPartValueSRC":  "",
         "WebPartValueDST":  "/home/NatureScience/SCI25-2021/SwitchModule/SubmissionStatusSwitchHe.txt"
     },
     {
@@ -206,5 +230,77 @@
         "WebPartKey":  "TitleUrl",
         "WebPartValueSRC":  "/home/natureScience/SCI26-2022/Lists/applicants",
         "WebPartValueDST":  "/home/natureScience/SCI25-2021/Lists/applicants"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "Direction",
+        "WebPartValueSRC":  "0",
+        "WebPartValueDST":  "2"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "44e78bff-b1db-4d1e-93a7-a79413e53ba5",
+        "WebPartValueDST":  "d7f87af1-9f7e-4669-b0dc-9fafa6070e92"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{44E78BFF-B1DB-4D1E-93A7-A79413E53BA5}",
+        "WebPartValueDST":  "{D7F87AF1-9F7E-4669-B0DC-9FAFA6070E92}"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/natureScience/SCI26-2022/Lists/MySupervisors",
+        "WebPartValueDST":  "/home/natureScience/SCI25-2021/Lists/MySupervisors"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx",
+        "WebPartName":  "Button_Send_Mail - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "SCI26-2022-instructorMailConfigEn.xml",
+        "WebPartValueDST":  "SCI25-2021-instructorMailConfigEn.xml"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApproval.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApproval.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "44e78bff-b1db-4d1e-93a7-a79413e53ba5",
+        "WebPartValueDST":  "d7f87af1-9f7e-4669-b0dc-9fafa6070e92"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApproval.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApproval.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{44E78BFF-B1DB-4D1E-93A7-A79413E53BA5}",
+        "WebPartValueDST":  "{D7F87AF1-9F7E-4669-B0DC-9FAFA6070E92}"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApproval.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApproval.aspx",
+        "WebPartName":  "MySupervisors",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/natureScience/SCI26-2022/Lists/MySupervisors",
+        "WebPartValueDST":  "/home/natureScience/SCI25-2021/Lists/MySupervisors"
+    },
+    {
+        "SourcePageURL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApproval.aspx",
+        "DestPageURL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApproval.aspx",
+        "WebPartName":  "Button_Send_Mail - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "SCI26-2022-instructorMailConfigEn.xml",
+        "WebPartValueDST":  "SCI25-2021-instructorMailConfigEn.xml"
     }
 ]

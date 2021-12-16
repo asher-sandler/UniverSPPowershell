@@ -908,7 +908,9 @@ function delete-ListItemIfEmpty($newSite, $listName){
 }
 function Clone-List($newSite, $oldSite, $listName){
 	$fieldNamesAdditional = create-ListfromOld	$newSite  $oldSite $listName
-	
+	#write-Host $fieldNamesAdditional -f Cyan
+	#write-Host 912
+	#read-host
 	copy-ListOldToNew $newSite $oldSite $listName $fieldNamesAdditional
 }
 function create-ListfromOld($newSite, $oldSite, $listName)
@@ -916,6 +918,7 @@ function create-ListfromOld($newSite, $oldSite, $listName)
 	
 	$listExists = Check-ListExists $newSite $listName
 	if ($listExists){
+		
 		delete-ListItemIfEmpty $newSite $listName
 	}
 	else
@@ -923,27 +926,48 @@ function create-ListfromOld($newSite, $oldSite, $listName)
 		Write-Host "Create List $listName On $newSite" -foregroundcolor Yellow
 		Create-List $newSite $listName $listName 
 	}
+	
 	$newListSchema = get-ListSchema $newSite $listName
 	$oldListSchema = get-ListSchema $oldSite $listName
+	
+	
 	$schemaDifference = get-SchemaDifference $oldListSchema $newListSchema
-	$listObj = Map-LookupFields $schemaDifference $oldSiteURL ""
+	#write-Host 935
+	$listObj = Map-LookupFields $schemaDifference $oldSite ""
 	$listObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$ListName+"-ApplFields.json")
 	
 	$fieldNamesAdditional = @()
 	foreach($fieldObj in  $($listObj.FieldMap)){
 		write-Host "fieldObjType: $($fieldObj.Type)" -f Magenta
 		if ($fieldObj.Type -eq "Text"){
+			write-Host "add-Text" -f Cyan
 			#write-host $fieldObj.FieldObj.DisplayName
 			add-TextFields $newSite $listName $($fieldObj.FieldObj)
 			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName	
 		}
 		if ($fieldObj.Type -eq "Choice"){
+			write-Host "add-Choice" -f Cyan
 			add-ChoiceFields $newSite $listName $($fieldObj.FieldObj);
 			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName
 		}
 		if ($fieldObj.Type -eq "Lookup"){
 			write-Host "add-LookupFields" -f Cyan
 			add-LookupFields $newSite $listName $($fieldObj.FieldObj) $($fieldObj.LookupTitle)$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
+		}
+		if ($fieldObj.Type -eq "Boolean"){
+			write-Host "add-Boolean" -f Cyan
+			add-BooleanFields $newSite $listName $($fieldObj.FieldObj)
+			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
+		}
+		if ($fieldObj.Type -eq "DateTime"){
+			write-Host "add-DateTime" -f Cyan
+			add-DateTimeFields $newSite $listName $($fieldObj.FieldObj)
+			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
+		}
+		if ($fieldObj.Type -eq "Note"){
+			write-Host "add-Note" -f Cyan
+			add-NoteFields $newSite $listName $($fieldObj.FieldObj)
+			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
 		}
 	}	
 	return $fieldNamesAdditional
@@ -1011,11 +1035,15 @@ function copy-ListOldToNew($newSite, $oldSite, $listName, $fieldNamesAdditional)
 		if (!$([string]::IsNullOrEmpty($fieldNamesAdditional))){
 			foreach($addFieldName in $fieldNamesAdditional){
 				#Add-Member -InputObject $docTypeItem -TypeName $addFieldName
+				#write-Host $addFieldName -f Cyan
 				$docTypeItem | Add-Member -MemberType NoteProperty -Name $addFieldName -Value "" -Force
 			}
 			#$docTypeItem 
+			#write-host 1018 
 			#read-host
-			$docTypeItem.$addFieldName = $Item[$addFieldName]
+			foreach($addFieldName1 in $fieldNamesAdditional){
+				$docTypeItem.$addFieldName1 = $Item[$addFieldName1]
+			}
 		}
 		
 		$docTypeItem.Title = $Item["Title"]
@@ -1116,7 +1144,7 @@ function get-DefaultViewByURL($siteURL,$listUrl){
 }
 function get-ListSchemaByUrl($siteURL,$listUrl){
 	$fieldsSchema = @()
-	
+	#Write-Host "$siteURL , $listUrl" -f Cyan
 	$siteUrlC = get-UrlNoF5 $siteUrl
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
 	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
@@ -1156,7 +1184,7 @@ function get-ListSchemaByUrl($siteURL,$listUrl){
 function get-ListSchema($siteURL,$listName){
 	
 	$fieldsSchema = @()
-	
+	#write-Host "$siteURL , $listName" -f Cyan
 	$siteUrlC = get-UrlNoF5 $siteUrl
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
 	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
@@ -1184,7 +1212,7 @@ function get-ListSchema($siteURL,$listName){
 			}
 		}	
 	}	
-	
+	#write-Host 1214
 	return $fieldsSchema
 
 }
@@ -5081,7 +5109,9 @@ function Create-NewView($siteURL,$listName,$viewTitle,$viewFields,$viewQuery, $v
     $NewView =$List.Views.Add($ViewCreationInfo)
     $Ctx.ExecuteQuery() 
 
-	$NewView.Aggregations = $viewAggregations
+    if (![string]::isNullOrEmpty($viewAggregations)){
+		$NewView.Aggregations = $viewAggregations
+	}
 	$NewView.Update()
 	$Ctx.ExecuteQuery()	
  	

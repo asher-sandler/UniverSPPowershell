@@ -1,0 +1,135 @@
+[
+    {
+        "Group":  "SEP_HUM17-2021",
+        "SiteSource":  "https://sep.ekmd.huji.ac.il/home/Humanities/HUM17-2021",
+        "SiteDest":  "https://sep2.ekmd.huji.ac.il/home/Humanities/HUM16-2020/",
+        "List":  "applicants",
+        "PermDifference":  "SEP_HUM17-2021_ADMINUG;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "SEP_HUM17-2021_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "SEP_HUM17-2021_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "SEP_HUM17-2021",
+        "SiteSource":  "https://sep.ekmd.huji.ac.il/home/Humanities/HUM17-2021",
+        "SiteDest":  "https://sep2.ekmd.huji.ac.il/home/Humanities/HUM16-2020/",
+        "List":  "DocType",
+        "PermDifference":  "SEP_HUM17-2021_ADMINUG;SEP_HUM17-2021_ADMINSP;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "SEP_HUM17-2021_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "SEP_HUM17-2021_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "SEP_HUM17-2021",
+        "SiteSource":  "https://sep.ekmd.huji.ac.il/home/Humanities/HUM17-2021",
+        "SiteDest":  "https://sep2.ekmd.huji.ac.il/home/Humanities/HUM16-2020/",
+        "List":  "Final",
+        "PermDifference":  "SEP_HUM17-2021_ADMINUG;SEP_HUM17-2021_JUDGESUG;SEP_HUM17-2021_JUDGESSP;",
+        "PermSource":  [
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "SEP_HUM17-2021_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Contribute"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "SEP_HUM17-2021_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Contribute"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    }
+]

@@ -44,8 +44,9 @@ $cred = get-SCred
    <OrderBy>
       <FieldRef Name='Created' Ascending='False' />
    </OrderBy>
-
+	
 </Query>
+<RowLimit>50</RowLimit>
 </View>"
     $Query.ViewXml = $qry
   

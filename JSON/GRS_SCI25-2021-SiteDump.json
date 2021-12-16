@@ -319,7 +319,7 @@
                                  },
                                  {
                                      "Title":  "Applied Physics (511)",
-                                     "URL":  "/home/natureScience/SCI26-2022/Applied Physics 511",
+                                     "URL":  "/home/natureScience/SCI26-2022/511",
                                      "Fields":  [
                                                     {
                                                         "DisplayName":  "Name",
@@ -341,7 +341,7 @@
                                  },
                                  {
                                      "Title":  "Biotechnology (890)",
-                                     "URL":  "/home/natureScience/SCI26-2022/Biotechnology 890",
+                                     "URL":  "/home/natureScience/SCI26-2022/890",
                                      "Fields":  [
                                                     {
                                                         "DisplayName":  "Name",
@@ -393,7 +393,7 @@
                                  },
                                  {
                                      "Title":  "Chemistry (560)",
-                                     "URL":  "/home/natureScience/SCI26-2022/Chemistry 560",
+                                     "URL":  "/home/natureScience/SCI26-2022/560",
                                      "Fields":  [
                                                     {
                                                         "DisplayName":  "Name",
@@ -544,6 +544,36 @@
                                                 ]
                                  },
                                  {
+                                     "Title":  "DocTypeExt",
+                                     "URL":  "/home/natureScience/SCI26-2022/Lists/DocTypeExt",
+                                     "Fields":  [
+                                                    {
+                                                        "DisplayName":  "Title",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Attachments",
+                                                        "Type":  "Attachments"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Required",
+                                                        "Type":  "Boolean"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "FilesNumber",
+                                                        "Type":  "Number"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "fromMail",
+                                                        "Type":  "Boolean"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "source_field",
+                                                        "Type":  "Text"
+                                                    }
+                                                ]
+                                 },
+                                 {
                                      "Title":  "Documents",
                                      "URL":  "/home/natureScience/SCI26-2022/Documents",
                                      "Fields":  [
@@ -558,8 +588,30 @@
                                                 ]
                                  },
                                  {
-                                     "Title":  "Environmental Sciences (591)",
-                                     "URL":  "/home/natureScience/SCI26-2022/Environmental Sciences 591",
+                                     "Title":  "Earth Science",
+                                     "URL":  "/home/natureScience/SCI26-2022/Earth",
+                                     "Fields":  [
+                                                    {
+                                                        "DisplayName":  "Name",
+                                                        "Type":  "File"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Title",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Department",
+                                                        "Type":  "Choice"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Reason / Completion Courses",
+                                                        "Type":  "Note"
+                                                    }
+                                                ]
+                                 },
+                                 {
+                                     "Title":  "Enviormental Sciences (591)",
+                                     "URL":  "/home/natureScience/SCI26-2022/591",
                                      "Fields":  [
                                                     {
                                                         "DisplayName":  "Name",
@@ -714,6 +766,28 @@
                                                 ]
                                  },
                                  {
+                                     "Title":  "Life Science",
+                                     "URL":  "/home/natureScience/SCI26-2022/Life",
+                                     "Fields":  [
+                                                    {
+                                                        "DisplayName":  "Name",
+                                                        "Type":  "File"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Title",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Department",
+                                                        "Type":  "Choice"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Reason / Completion Courses",
+                                                        "Type":  "Note"
+                                                    }
+                                                ]
+                                 },
+                                 {
                                      "Title":  "maritalStatusList",
                                      "URL":  "/home/natureScience/SCI26-2022/Lists/maritalStatusList",
                                      "Fields":  [
@@ -775,7 +849,7 @@
                                  },
                                  {
                                      "Title":  "Mathematics (530)",
-                                     "URL":  "/home/natureScience/SCI26-2022/Mathematics 530",
+                                     "URL":  "/home/natureScience/SCI26-2022/530",
                                      "Fields":  [
                                                     {
                                                         "DisplayName":  "Name",
@@ -792,6 +866,36 @@
                                                     {
                                                         "DisplayName":  "Reason / Completion Courses",
                                                         "Type":  "Note"
+                                                    }
+                                                ]
+                                 },
+                                 {
+                                     "Title":  "MySupervisors",
+                                     "URL":  "/home/natureScience/SCI26-2022/Lists/MySupervisors",
+                                     "Fields":  [
+                                                    {
+                                                        "DisplayName":  "Title",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Academic Title",
+                                                        "Type":  "Choice"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Name",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Email",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Status",
+                                                        "Type":  "Choice"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Attachments",
+                                                        "Type":  "Attachments"
                                                     }
                                                 ]
                                  },
@@ -883,7 +987,7 @@
                                  },
                                  {
                                      "Title":  "Physics (541)",
-                                     "URL":  "/home/natureScience/SCI26-2022/Physics 541",
+                                     "URL":  "/home/natureScience/SCI26-2022/541",
                                      "Fields":  [
                                                     {
                                                         "DisplayName":  "Name",
@@ -960,6 +1064,70 @@
                                                     {
                                                         "DisplayName":  "Title",
                                                         "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "description",
+                                                        "Type":  "Text"
+                                                    }
+                                                ]
+                                 },
+                                 {
+                                     "Title":  "SupervisorsData",
+                                     "URL":  "/home/natureScience/SCI26-2022/Lists/SupervisorsData",
+                                     "Fields":  [
+                                                    {
+                                                        "DisplayName":  "Title",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "folderLink",
+                                                        "Type":  "URL"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Name",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Email",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Signature",
+                                                        "Type":  "Note"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "firstName",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "surname",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "studentId",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Attachments",
+                                                        "Type":  "Attachments"
+                                                    }
+                                                ]
+                                 },
+                                 {
+                                     "Title":  "SupervisorsResponse",
+                                     "URL":  "/home/natureScience/SCI26-2022/Lists/SupervisorsResponse",
+                                     "Fields":  [
+                                                    {
+                                                        "DisplayName":  "Title",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "item_id",
+                                                        "Type":  "Text"
+                                                    },
+                                                    {
+                                                        "DisplayName":  "Attachments",
+                                                        "Type":  "Attachments"
                                                     }
                                                 ]
                                  },
@@ -1145,7 +1313,7 @@
                                                                          "Direction":  0,
                                                                          "ExportMode":  1,
                                                                          "Width":  "",
-                                                                         "ChromeState":  0,
+                                                                         "ChromeState":  1,
                                                                          "AllowClose":  true,
                                                                          "ChromeType":  2,
                                                                          "Hidden":  false,
@@ -1198,7 +1366,7 @@
                                                                          "AuthorizationFilter":  "",
                                                                          "MissingAssembly":  "Cannot import this Web Part.",
                                                                          "ImportErrorMessage":  "Cannot import this Web Part.",
-                                                                         "ContentLink":  "/home/natureScience/SCI26-2022/SwitchModule/DefaultSwitchHe.txt",
+                                                                         "ContentLink":  "",
                                                                          "ContentHasToken":  false,
                                                                          "PartStorage":  ""
                                                                      }
@@ -1717,7 +1885,7 @@
                                                                              "Direction":  0,
                                                                              "ExportMode":  1,
                                                                              "Width":  "",
-                                                                             "ChromeState":  0,
+                                                                             "ChromeState":  1,
                                                                              "AllowClose":  true,
                                                                              "ChromeType":  2,
                                                                              "Hidden":  false,
@@ -1779,7 +1947,7 @@
                                                                              "ApplicantsListName":  "applicants",
                                                                              "ListsNames":  "applicants;",
                                                                              "CopyFolderDescColumn":  "description",
-                                                                             "DocumentTypeListName":  "DocType",
+                                                                             "DocumentTypeListName":  "DocTypeExt",
                                                                              "DocumentUploadColumnHe":  "תוכן קובץ",
                                                                              "ApplicantCopyFolderNameHe":  "[SPF:studentId] - [SPF:firstNameHe] [SPF:surnameHe]",
                                                                              "ApplicantCopyFolderNameEn":  "[SPF:studentId] - [SPF:firstName] [SPF:surname]",
@@ -1829,7 +1997,7 @@
                                                                              "ImportErrorMessage":  "Cannot import this Web Part.",
                                                                              "Username_Column":  "userName",
                                                                              "Column_1_Text":  "",
-                                                                             "Doc_Type_List":  "docType",
+                                                                             "Doc_Type_List":  "docTypeExt",
                                                                              "Applicants_List":  "applicants",
                                                                              "Column_2_Text":  "",
                                                                              "Text_Direction":  1,
@@ -1869,7 +2037,7 @@
                                                                              "AuthorizationFilter":  "",
                                                                              "MissingAssembly":  "Cannot import this Web Part.",
                                                                              "ImportErrorMessage":  "Cannot import this Web Part.",
-                                                                             "ContentLink":  "/home/natureScience/SCI26-2022/SwitchModule/SubmissionStatusSwitchHe.txt",
+                                                                             "ContentLink":  "",
                                                                              "ContentHasToken":  false,
                                                                              "PartStorage":  ""
                                                                          }
@@ -2341,6 +2509,290 @@
                                                                          }
                                                       }
                                                   ]
+                                 },
+                                 {
+                                     "URL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApproval.aspx",
+                                     "WebParts":  [
+                                                      {
+                                                          "Title":  "ContentEditorWebPart",
+                                                          "Properties":  {
+                                                                             "Height":  "",
+                                                                             "Direction":  0,
+                                                                             "ExportMode":  1,
+                                                                             "Width":  "",
+                                                                             "ChromeState":  0,
+                                                                             "AllowClose":  true,
+                                                                             "ChromeType":  2,
+                                                                             "Hidden":  false,
+                                                                             "CatalogIconImageUrl":  "",
+                                                                             "AllowConnect":  true,
+                                                                             "AllowEdit":  true,
+                                                                             "AllowHide":  true,
+                                                                             "HelpUrl":  "",
+                                                                             "HelpMode":  1,
+                                                                             "TitleIconImageUrl":  "",
+                                                                             "TitleUrl":  "",
+                                                                             "AllowMinimize":  true,
+                                                                             "Description":  "Use for formatted text, tables, and images.",
+                                                                             "Title":  "ContentEditorWebPart",
+                                                                             "AllowZoneChange":  true,
+                                                                             "AuthorizationFilter":  "",
+                                                                             "MissingAssembly":  "Cannot import this Web Part.",
+                                                                             "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                             "ContentLink":  "/home/natureScience/SCI26-2022/SwitchModule/SupervisorApprovalSwitchEn.txt",
+                                                                             "ContentHasToken":  false,
+                                                                             "PartStorage":  ""
+                                                                         }
+                                                      },
+                                                      {
+                                                          "Title":  "MySupervisors",
+                                                          "Properties":  {
+                                                                             "ExportMode":  0,
+                                                                             "Direction":  0,
+                                                                             "ChromeState":  0,
+                                                                             "AllowClose":  true,
+                                                                             "ChromeType":  2,
+                                                                             "Height":  "",
+                                                                             "Width":  "",
+                                                                             "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                             "MissingAssembly":  "Cannot import this Web Part.",
+                                                                             "AuthorizationFilter":  "",
+                                                                             "TitleUrl":  "/home/natureScience/SCI26-2022/Lists/MySupervisors",
+                                                                             "CatalogIconImageUrl":  "/_layouts/15/images/itgen.png?rev=23",
+                                                                             "TitleIconImageUrl":  "",
+                                                                             "HelpMode":  1,
+                                                                             "HelpUrl":  "",
+                                                                             "Hidden":  false,
+                                                                             "Title":  "MySupervisors",
+                                                                             "Description":  "",
+                                                                             "AllowEdit":  true,
+                                                                             "AllowConnect":  true,
+                                                                             "AllowHide":  true,
+                                                                             "AllowMinimize":  true,
+                                                                             "AllowZoneChange":  true,
+                                                                             "UseSQLDataSourcePaging":  true,
+                                                                             "DataSourceID":  "",
+                                                                             "PageSize":  -1,
+                                                                             "DataSourcesString":  "",
+                                                                             "SampleData":  null,
+                                                                             "DataFields":  "",
+                                                                             "ShowWithSampleData":  false,
+                                                                             "Xsl":  null,
+                                                                             "Default":  "",
+                                                                             "ListUrl":  null,
+                                                                             "ViewContentTypeId":  "",
+                                                                             "EnableOriginalValue":  false,
+                                                                             "DisplayName":  "",
+                                                                             "ListDisplayName":  null,
+                                                                             "ViewFlags":  8388621,
+                                                                             "PageType":  1,
+                                                                             "ListName":  "{44E78BFF-B1DB-4D1E-93A7-A79413E53BA5}",
+                                                                             "ListId":  "44e78bff-b1db-4d1e-93a7-a79413e53ba5",
+                                                                             "XmlDefinitionLink":  "",
+                                                                             "XmlDefinition":  "\u003cView Name=\"{FF5CFEF1-7A60-4DB6-BA6C-7E50066B1FBF}\" MobileView=\"TRUE\" Type=\"HTML\" Hidden=\"TRUE\" DisplayName=\"\" Url=\"/home/natureScience/SCI26-2022/SitePages/SupervisorApproval.aspx\" Level=\"255\" BaseViewID=\"1\" ContentTypeID=\"0x\" ImageUrl=\"/_layouts/15/images/generic.png?rev=23\" \u003e\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\"/\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Edit\"/\u003e\u003cFieldRef Name=\"Academic_x0020_Title\"/\u003e\u003cFieldRef Name=\"Name\"/\u003e\u003cFieldRef Name=\"Email\"/\u003e\u003cFieldRef Name=\"Status\"/\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e300\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\"/\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"None\"/\u003e\u003c/View\u003e",
+                                                                             "CacheXslTimeOut":  86400,
+                                                                             "FireInitialRow":  true,
+                                                                             "CacheXslStorage":  true,
+                                                                             "AutoRefreshInterval":  60,
+                                                                             "AutoRefresh":  false,
+                                                                             "AsyncRefresh":  false,
+                                                                             "ManualRefresh":  false,
+                                                                             "XslLink":  null,
+                                                                             "WebId":  "00000000-0000-0000-0000-000000000000",
+                                                                             "IsClientRender":  false,
+                                                                             "GhostedXslLink":  "main.xsl",
+                                                                             "JSLink":  null,
+                                                                             "BaseXsltHashKey":  null,
+                                                                             "NoDefaultStyle":  "",
+                                                                             "ServerRender":  false,
+                                                                             "InplaceSearchEnabled":  true,
+                                                                             "InitialAsyncDataFetch":  false,
+                                                                             "ShowTimelineIfAvailable":  true,
+                                                                             "DisableViewSelectorMenu":  false,
+                                                                             "ViewFlag":  "",
+                                                                             "DisableSaveAsNewViewButton":  false,
+                                                                             "DataSourceMode":  0,
+                                                                             "SelectParameters":  "",
+                                                                             "ParameterBindings":  "\u003cParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\" /\u003e\u003cParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u003e\u003cParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u003e\u003cParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u003e\u003cParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noXinviewofY_LIST)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noXinviewofY_DEFAULT)\" /\u003e"
+                                                                         }
+                                                      },
+                                                      {
+                                                          "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                          "Properties":  {
+                                                                             "Description":  "My Visual Web Part",
+                                                                             "Direction":  0,
+                                                                             "ChromeType":  2,
+                                                                             "ExportMode":  0,
+                                                                             "ChromeState":  0,
+                                                                             "AllowEdit":  true,
+                                                                             "AllowHide":  true,
+                                                                             "AllowClose":  true,
+                                                                             "AllowConnect":  true,
+                                                                             "AuthorizationFilter":  "",
+                                                                             "CatalogIconImageUrl":  "",
+                                                                             "AllowMinimize":  true,
+                                                                             "AllowZoneChange":  true,
+                                                                             "TitleUrl":  "",
+                                                                             "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                                             "TitleIconImageUrl":  "",
+                                                                             "Hidden":  false,
+                                                                             "HelpMode":  2,
+                                                                             "HelpUrl":  "",
+                                                                             "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                             "Config_File_Name":  "SCI26-2022-instructorMailConfigEn.xml",
+                                                                             "Mail_Server":  "ekekcas01.ekmd.huji.uni",
+                                                                             "Show_Log":  false,
+                                                                             "Config_File_Path":  "\\\\ekeksql00\\SP_Resources$\\GRS\\default",
+                                                                             "Mail_Sender":  "do-not-reply@ekmd.huji.ac.il",
+                                                                             "No_Items_Selected_Text":  "No Supervisors Selected",
+                                                                             "User_Name_Column":  "userName",
+                                                                             "Send_CC_Mail":  false,
+                                                                             "Button_Text":  "Send"
+                                                                         }
+                                                      }
+                                                  ]
+                                 },
+                                 {
+                                     "URL":  "/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx",
+                                     "WebParts":  [
+                                                      {
+                                                          "Title":  "MySupervisors",
+                                                          "Properties":  {
+                                                                             "ExportMode":  0,
+                                                                             "Direction":  0,
+                                                                             "ChromeState":  0,
+                                                                             "AllowClose":  true,
+                                                                             "ChromeType":  2,
+                                                                             "Height":  "",
+                                                                             "Width":  "",
+                                                                             "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                             "MissingAssembly":  "Cannot import this Web Part.",
+                                                                             "AuthorizationFilter":  "",
+                                                                             "TitleUrl":  "/home/natureScience/SCI26-2022/Lists/MySupervisors",
+                                                                             "CatalogIconImageUrl":  "/_layouts/15/images/itgen.png?rev=23",
+                                                                             "TitleIconImageUrl":  "",
+                                                                             "HelpMode":  1,
+                                                                             "HelpUrl":  "",
+                                                                             "Hidden":  false,
+                                                                             "Title":  "MySupervisors",
+                                                                             "Description":  "",
+                                                                             "AllowEdit":  true,
+                                                                             "AllowConnect":  true,
+                                                                             "AllowHide":  true,
+                                                                             "AllowMinimize":  true,
+                                                                             "AllowZoneChange":  true,
+                                                                             "UseSQLDataSourcePaging":  true,
+                                                                             "DataSourceID":  "",
+                                                                             "PageSize":  -1,
+                                                                             "DataSourcesString":  "",
+                                                                             "SampleData":  null,
+                                                                             "DataFields":  "",
+                                                                             "ShowWithSampleData":  false,
+                                                                             "Xsl":  null,
+                                                                             "Default":  "",
+                                                                             "ListUrl":  null,
+                                                                             "ViewContentTypeId":  "",
+                                                                             "EnableOriginalValue":  false,
+                                                                             "DisplayName":  "",
+                                                                             "ListDisplayName":  null,
+                                                                             "ViewFlags":  8388621,
+                                                                             "PageType":  1,
+                                                                             "ListName":  "{44E78BFF-B1DB-4D1E-93A7-A79413E53BA5}",
+                                                                             "ListId":  "44e78bff-b1db-4d1e-93a7-a79413e53ba5",
+                                                                             "XmlDefinitionLink":  "",
+                                                                             "XmlDefinition":  "\u003cView Name=\"{6315ADB9-A4C1-49D3-9DFE-D756C01C41E8}\" MobileView=\"TRUE\" Type=\"HTML\" Hidden=\"TRUE\" DisplayName=\"\" Url=\"/home/natureScience/SCI26-2022/SitePages/SupervisorApprovalHe.aspx\" Level=\"255\" BaseViewID=\"1\" ContentTypeID=\"0x\" ImageUrl=\"/_layouts/15/images/generic.png?rev=23\" \u003e\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\"/\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Edit\"/\u003e\u003cFieldRef Name=\"Academic_x0020_Title\"/\u003e\u003cFieldRef Name=\"Name\"/\u003e\u003cFieldRef Name=\"Email\"/\u003e\u003cFieldRef Name=\"Status\"/\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e300\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\"/\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"None\"/\u003e\u003c/View\u003e",
+                                                                             "CacheXslTimeOut":  86400,
+                                                                             "FireInitialRow":  true,
+                                                                             "CacheXslStorage":  true,
+                                                                             "AutoRefreshInterval":  60,
+                                                                             "AutoRefresh":  false,
+                                                                             "AsyncRefresh":  false,
+                                                                             "ManualRefresh":  false,
+                                                                             "XslLink":  null,
+                                                                             "WebId":  "00000000-0000-0000-0000-000000000000",
+                                                                             "IsClientRender":  false,
+                                                                             "GhostedXslLink":  "main.xsl",
+                                                                             "JSLink":  null,
+                                                                             "BaseXsltHashKey":  null,
+                                                                             "NoDefaultStyle":  "",
+                                                                             "ServerRender":  false,
+                                                                             "InplaceSearchEnabled":  true,
+                                                                             "InitialAsyncDataFetch":  false,
+                                                                             "ShowTimelineIfAvailable":  true,
+                                                                             "DisableViewSelectorMenu":  false,
+                                                                             "ViewFlag":  "",
+                                                                             "DisableSaveAsNewViewButton":  false,
+                                                                             "DataSourceMode":  0,
+                                                                             "SelectParameters":  "",
+                                                                             "ParameterBindings":  "\u003cParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\" /\u003e\u003cParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u003e\u003cParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u003e\u003cParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u003e\u003cParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noXinviewofY_LIST)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noXinviewofY_DEFAULT)\" /\u003e"
+                                                                         }
+                                                      },
+                                                      {
+                                                          "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                          "Properties":  {
+                                                                             "Description":  "My Visual Web Part",
+                                                                             "Direction":  0,
+                                                                             "ChromeType":  2,
+                                                                             "ExportMode":  0,
+                                                                             "ChromeState":  0,
+                                                                             "AllowEdit":  true,
+                                                                             "AllowHide":  true,
+                                                                             "AllowClose":  true,
+                                                                             "AllowConnect":  true,
+                                                                             "AuthorizationFilter":  "",
+                                                                             "CatalogIconImageUrl":  "",
+                                                                             "AllowMinimize":  true,
+                                                                             "AllowZoneChange":  true,
+                                                                             "TitleUrl":  "",
+                                                                             "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                                             "TitleIconImageUrl":  "",
+                                                                             "Hidden":  false,
+                                                                             "HelpMode":  2,
+                                                                             "HelpUrl":  "",
+                                                                             "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                             "Config_File_Name":  "SCI26-2022-instructorMailConfigEn.xml",
+                                                                             "Mail_Server":  "ekekcas01.ekmd.huji.uni",
+                                                                             "Show_Log":  false,
+                                                                             "Config_File_Path":  "\\\\ekeksql00\\SP_Resources$\\GRS\\default",
+                                                                             "Mail_Sender":  "do-not-reply@ekmd.huji.ac.il",
+                                                                             "No_Items_Selected_Text":  "לא נבחרו מנחים/ות",
+                                                                             "User_Name_Column":  "userName",
+                                                                             "Send_CC_Mail":  false,
+                                                                             "Button_Text":  "שליחה"
+                                                                         }
+                                                      },
+                                                      {
+                                                          "Title":  "ContentEditorWebPart",
+                                                          "Properties":  {
+                                                                             "Height":  "",
+                                                                             "Direction":  0,
+                                                                             "ExportMode":  1,
+                                                                             "Width":  "",
+                                                                             "ChromeState":  0,
+                                                                             "AllowClose":  true,
+                                                                             "ChromeType":  2,
+                                                                             "Hidden":  false,
+                                                                             "CatalogIconImageUrl":  "",
+                                                                             "AllowConnect":  true,
+                                                                             "AllowEdit":  true,
+                                                                             "AllowHide":  true,
+                                                                             "HelpUrl":  "",
+                                                                             "HelpMode":  1,
+                                                                             "TitleIconImageUrl":  "",
+                                                                             "TitleUrl":  "",
+                                                                             "AllowMinimize":  true,
+                                                                             "Description":  "Use for formatted text, tables, and images.",
+                                                                             "Title":  "ContentEditorWebPart",
+                                                                             "AllowZoneChange":  true,
+                                                                             "AuthorizationFilter":  "",
+                                                                             "MissingAssembly":  "Cannot import this Web Part.",
+                                                                             "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                             "ContentLink":  "/home/natureScience/SCI26-2022/SwitchModule/SupervisorApprovalSwitchHe.txt",
+                                                                             "ContentHasToken":  false,
+                                                                             "PartStorage":  ""
+                                                                         }
+                                                      }
+                                                  ]
                                  }
                              ]
                },
@@ -2659,8 +3111,30 @@
                                                      ]
                                       },
                                       {
+                                          "Title":  "Applied Physics (511)",
+                                          "URL":  "/home/natureScience/SCI25-2021/511",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Name",
+                                                             "Type":  "File"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Department",
+                                                             "Type":  "Choice"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Reason / Completion Courses",
+                                                             "Type":  "Note"
+                                                         }
+                                                     ]
+                                      },
+                                      {
                                           "Title":  "Biotechnology (890)",
-                                          "URL":  "/home/natureScience/SCI25-2021/Biotechnology 890",
+                                          "URL":  "/home/natureScience/SCI25-2021/890",
                                           "Fields":  [
                                                          {
                                                              "DisplayName":  "Name",
@@ -2712,7 +3186,7 @@
                                       },
                                       {
                                           "Title":  "Chemistry (560)",
-                                          "URL":  "/home/natureScience/SCI25-2021/Chemistry 560",
+                                          "URL":  "/home/natureScience/SCI25-2021/560",
                                           "Fields":  [
                                                          {
                                                              "DisplayName":  "Name",
@@ -2877,6 +3351,50 @@
                                                      ]
                                       },
                                       {
+                                          "Title":  "Earth Science",
+                                          "URL":  "/home/natureScience/SCI25-2021/Earth",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Name",
+                                                             "Type":  "File"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Department",
+                                                             "Type":  "Choice"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Reason / Completion Courses",
+                                                             "Type":  "Note"
+                                                         }
+                                                     ]
+                                      },
+                                      {
+                                          "Title":  "Enviormental Sciences (591)",
+                                          "URL":  "/home/natureScience/SCI25-2021/591",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Name",
+                                                             "Type":  "File"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Department",
+                                                             "Type":  "Choice"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Reason / Completion Courses",
+                                                             "Type":  "Note"
+                                                         }
+                                                     ]
+                                      },
+                                      {
                                           "Title":  "Final",
                                           "URL":  "/home/natureScience/SCI25-2021/Final",
                                           "Fields":  [
@@ -2997,6 +3515,28 @@
                                                      ]
                                       },
                                       {
+                                          "Title":  "Life Science",
+                                          "URL":  "/home/natureScience/SCI25-2021/Life",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Name",
+                                                             "Type":  "File"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Department",
+                                                             "Type":  "Choice"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Reason / Completion Courses",
+                                                             "Type":  "Note"
+                                                         }
+                                                     ]
+                                      },
+                                      {
                                           "Title":  "maritalStatusList",
                                           "URL":  "/home/natureScience/SCI25-2021/Lists/maritalStatusList",
                                           "Fields":  [
@@ -3058,7 +3598,7 @@
                                       },
                                       {
                                           "Title":  "Mathematics (530)",
-                                          "URL":  "/home/natureScience/SCI25-2021/Mathematics 530",
+                                          "URL":  "/home/natureScience/SCI25-2021/530",
                                           "Fields":  [
                                                          {
                                                              "DisplayName":  "Name",
@@ -3075,6 +3615,36 @@
                                                          {
                                                              "DisplayName":  "Reason / Completion Courses",
                                                              "Type":  "Note"
+                                                         }
+                                                     ]
+                                      },
+                                      {
+                                          "Title":  "MySupervisors",
+                                          "URL":  "/home/natureScience/SCI25-2021/Lists/MySupervisors",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Academic Title",
+                                                             "Type":  "Choice"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Name",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Email",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Status",
+                                                             "Type":  "Choice"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Attachments",
+                                                             "Type":  "Attachments"
                                                          }
                                                      ]
                                       },
@@ -3166,7 +3736,7 @@
                                       },
                                       {
                                           "Title":  "Physics (541)",
-                                          "URL":  "/home/natureScience/SCI25-2021/Physics 541",
+                                          "URL":  "/home/natureScience/SCI25-2021/541",
                                           "Fields":  [
                                                          {
                                                              "DisplayName":  "Name",
@@ -3243,6 +3813,66 @@
                                                          {
                                                              "DisplayName":  "Title",
                                                              "Type":  "Text"
+                                                         }
+                                                     ]
+                                      },
+                                      {
+                                          "Title":  "SupervisorsData",
+                                          "URL":  "/home/natureScience/SCI25-2021/Lists/SupervisorsData",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "folderLink",
+                                                             "Type":  "URL"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Name",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Email",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Signature",
+                                                             "Type":  "Note"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "firstName",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "surname",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "studentId",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Attachments",
+                                                             "Type":  "Attachments"
+                                                         }
+                                                     ]
+                                      },
+                                      {
+                                          "Title":  "SupervisorsResponse",
+                                          "URL":  "/home/natureScience/SCI25-2021/Lists/SupervisorsResponse",
+                                          "Fields":  [
+                                                         {
+                                                             "DisplayName":  "Title",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "item_id",
+                                                             "Type":  "Text"
+                                                         },
+                                                         {
+                                                             "DisplayName":  "Attachments",
+                                                             "Type":  "Attachments"
                                                          }
                                                      ]
                                       },
@@ -4653,6 +5283,290 @@
                                                                                   "DataSourceMode":  0,
                                                                                   "SelectParameters":  "",
                                                                                   "ParameterBindings":  "\u003cParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\" /\u003e\u003cParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u003e\u003cParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u003e\u003cParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u003e\u003cParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noXinviewofY_LIST)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noXinviewofY_DEFAULT)\" /\u003e"
+                                                                              }
+                                                           }
+                                                       ]
+                                      },
+                                      {
+                                          "URL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx",
+                                          "WebParts":  [
+                                                           {
+                                                               "Title":  "Content Editor",
+                                                               "Properties":  {
+                                                                                  "Height":  "",
+                                                                                  "Direction":  0,
+                                                                                  "ExportMode":  1,
+                                                                                  "Width":  "",
+                                                                                  "ChromeState":  0,
+                                                                                  "AllowClose":  true,
+                                                                                  "ChromeType":  2,
+                                                                                  "Hidden":  false,
+                                                                                  "CatalogIconImageUrl":  "/_layouts/15/images/mscontl.gif",
+                                                                                  "AllowConnect":  true,
+                                                                                  "AllowEdit":  true,
+                                                                                  "AllowHide":  true,
+                                                                                  "HelpUrl":  "",
+                                                                                  "HelpMode":  1,
+                                                                                  "TitleIconImageUrl":  "",
+                                                                                  "TitleUrl":  "",
+                                                                                  "AllowMinimize":  true,
+                                                                                  "Description":  "Allows authors to enter rich text content.",
+                                                                                  "Title":  "Content Editor",
+                                                                                  "AllowZoneChange":  true,
+                                                                                  "AuthorizationFilter":  "",
+                                                                                  "MissingAssembly":  "Cannot import this Web Part.",
+                                                                                  "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                                  "ContentLink":  "/home/natureScience/SCI25-2021/SwitchModule/SupervisorApprovalSwitchHe.txt",
+                                                                                  "ContentHasToken":  false,
+                                                                                  "PartStorage":  ""
+                                                                              }
+                                                           },
+                                                           {
+                                                               "Title":  "MySupervisors",
+                                                               "Properties":  {
+                                                                                  "ExportMode":  0,
+                                                                                  "Direction":  2,
+                                                                                  "ChromeState":  0,
+                                                                                  "AllowClose":  true,
+                                                                                  "ChromeType":  2,
+                                                                                  "Height":  "",
+                                                                                  "Width":  "",
+                                                                                  "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                                  "MissingAssembly":  "Cannot import this Web Part.",
+                                                                                  "AuthorizationFilter":  "",
+                                                                                  "TitleUrl":  "/home/natureScience/SCI25-2021/Lists/MySupervisors",
+                                                                                  "CatalogIconImageUrl":  "/_layouts/15/images/itgen.png?rev=23",
+                                                                                  "TitleIconImageUrl":  "",
+                                                                                  "HelpMode":  1,
+                                                                                  "HelpUrl":  "",
+                                                                                  "Hidden":  false,
+                                                                                  "Title":  "MySupervisors",
+                                                                                  "Description":  "",
+                                                                                  "AllowEdit":  true,
+                                                                                  "AllowConnect":  true,
+                                                                                  "AllowHide":  true,
+                                                                                  "AllowMinimize":  true,
+                                                                                  "AllowZoneChange":  true,
+                                                                                  "UseSQLDataSourcePaging":  true,
+                                                                                  "DataSourceID":  "",
+                                                                                  "PageSize":  -1,
+                                                                                  "DataSourcesString":  "",
+                                                                                  "SampleData":  null,
+                                                                                  "DataFields":  "",
+                                                                                  "ShowWithSampleData":  false,
+                                                                                  "Xsl":  null,
+                                                                                  "Default":  "",
+                                                                                  "ListUrl":  null,
+                                                                                  "ViewContentTypeId":  "",
+                                                                                  "EnableOriginalValue":  false,
+                                                                                  "DisplayName":  "",
+                                                                                  "ListDisplayName":  null,
+                                                                                  "ViewFlags":  8388621,
+                                                                                  "PageType":  1,
+                                                                                  "ListName":  "{D7F87AF1-9F7E-4669-B0DC-9FAFA6070E92}",
+                                                                                  "ListId":  "d7f87af1-9f7e-4669-b0dc-9fafa6070e92",
+                                                                                  "XmlDefinitionLink":  "",
+                                                                                  "XmlDefinition":  "\u003cView Name=\"{23E191FB-8E09-4504-8D59-0D78BF930C8D}\" MobileView=\"TRUE\" Type=\"HTML\" Hidden=\"TRUE\" DisplayName=\"\" Url=\"/home/natureScience/SCI25-2021/SitePages/SupervisorApprovalHe.aspx\" Level=\"255\" BaseViewID=\"1\" ContentTypeID=\"0x\" ImageUrl=\"/_layouts/15/images/generic.png?rev=23\" \u003e\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\"/\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Edit\"/\u003e\u003cFieldRef Name=\"Academic_x0020_Title\"/\u003e\u003cFieldRef Name=\"Name\"/\u003e\u003cFieldRef Name=\"Email\"/\u003e\u003cFieldRef Name=\"Status\"/\u003e\u003cFieldRef Name=\"Author\"/\u003e\u003cFieldRef Name=\"ID\"/\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e300\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\"/\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"None\"/\u003e\u003c/View\u003e",
+                                                                                  "CacheXslTimeOut":  86400,
+                                                                                  "FireInitialRow":  true,
+                                                                                  "CacheXslStorage":  true,
+                                                                                  "AutoRefreshInterval":  60,
+                                                                                  "AutoRefresh":  false,
+                                                                                  "AsyncRefresh":  false,
+                                                                                  "ManualRefresh":  false,
+                                                                                  "XslLink":  null,
+                                                                                  "WebId":  "00000000-0000-0000-0000-000000000000",
+                                                                                  "IsClientRender":  false,
+                                                                                  "GhostedXslLink":  "main.xsl",
+                                                                                  "JSLink":  null,
+                                                                                  "BaseXsltHashKey":  null,
+                                                                                  "NoDefaultStyle":  "",
+                                                                                  "ServerRender":  false,
+                                                                                  "InplaceSearchEnabled":  true,
+                                                                                  "InitialAsyncDataFetch":  false,
+                                                                                  "ShowTimelineIfAvailable":  true,
+                                                                                  "DisableViewSelectorMenu":  false,
+                                                                                  "ViewFlag":  "",
+                                                                                  "DisableSaveAsNewViewButton":  false,
+                                                                                  "DataSourceMode":  0,
+                                                                                  "SelectParameters":  "",
+                                                                                  "ParameterBindings":  "\u003cParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\" /\u003e\u003cParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u003e\u003cParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u003e\u003cParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u003e\u003cParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noXinviewofY_LIST)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noXinviewofY_DEFAULT)\" /\u003e"
+                                                                              }
+                                                           },
+                                                           {
+                                                               "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                               "Properties":  {
+                                                                                  "Description":  "My Visual Web Part",
+                                                                                  "Direction":  0,
+                                                                                  "ChromeType":  2,
+                                                                                  "ExportMode":  0,
+                                                                                  "ChromeState":  0,
+                                                                                  "AllowEdit":  true,
+                                                                                  "AllowHide":  true,
+                                                                                  "AllowClose":  true,
+                                                                                  "AllowConnect":  true,
+                                                                                  "AuthorizationFilter":  "",
+                                                                                  "CatalogIconImageUrl":  "",
+                                                                                  "AllowMinimize":  true,
+                                                                                  "AllowZoneChange":  true,
+                                                                                  "TitleUrl":  "",
+                                                                                  "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                                                  "TitleIconImageUrl":  "",
+                                                                                  "Hidden":  false,
+                                                                                  "HelpMode":  2,
+                                                                                  "HelpUrl":  "",
+                                                                                  "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                                  "Config_File_Name":  "SCI25-2021-instructorMailConfigEn.xml",
+                                                                                  "Mail_Server":  "ekekcas01.ekmd.huji.uni",
+                                                                                  "Show_Log":  false,
+                                                                                  "Config_File_Path":  "\\\\ekeksql00\\SP_Resources$\\GRS\\default",
+                                                                                  "Mail_Sender":  "do-not-reply@ekmd.huji.ac.il",
+                                                                                  "No_Items_Selected_Text":  "לא נבחרו מנחים/ות",
+                                                                                  "User_Name_Column":  "userName",
+                                                                                  "Send_CC_Mail":  false,
+                                                                                  "Button_Text":  "שליחה"
+                                                                              }
+                                                           }
+                                                       ]
+                                      },
+                                      {
+                                          "URL":  "/home/natureScience/SCI25-2021/SitePages/SupervisorApproval.aspx",
+                                          "WebParts":  [
+                                                           {
+                                                               "Title":  "Content Editor",
+                                                               "Properties":  {
+                                                                                  "Height":  "",
+                                                                                  "Direction":  0,
+                                                                                  "ExportMode":  1,
+                                                                                  "Width":  "",
+                                                                                  "ChromeState":  0,
+                                                                                  "AllowClose":  true,
+                                                                                  "ChromeType":  2,
+                                                                                  "Hidden":  false,
+                                                                                  "CatalogIconImageUrl":  "/_layouts/15/images/mscontl.gif",
+                                                                                  "AllowConnect":  true,
+                                                                                  "AllowEdit":  true,
+                                                                                  "AllowHide":  true,
+                                                                                  "HelpUrl":  "",
+                                                                                  "HelpMode":  1,
+                                                                                  "TitleIconImageUrl":  "",
+                                                                                  "TitleUrl":  "",
+                                                                                  "AllowMinimize":  true,
+                                                                                  "Description":  "Allows authors to enter rich text content.",
+                                                                                  "Title":  "Content Editor",
+                                                                                  "AllowZoneChange":  true,
+                                                                                  "AuthorizationFilter":  "",
+                                                                                  "MissingAssembly":  "Cannot import this Web Part.",
+                                                                                  "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                                  "ContentLink":  "/home/natureScience/SCI25-2021/SwitchModule/SupervisorApprovalSwitchEn.txt",
+                                                                                  "ContentHasToken":  false,
+                                                                                  "PartStorage":  ""
+                                                                              }
+                                                           },
+                                                           {
+                                                               "Title":  "MySupervisors",
+                                                               "Properties":  {
+                                                                                  "ExportMode":  0,
+                                                                                  "Direction":  0,
+                                                                                  "ChromeState":  0,
+                                                                                  "AllowClose":  true,
+                                                                                  "ChromeType":  2,
+                                                                                  "Height":  "",
+                                                                                  "Width":  "",
+                                                                                  "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                                  "MissingAssembly":  "Cannot import this Web Part.",
+                                                                                  "AuthorizationFilter":  "",
+                                                                                  "TitleUrl":  "/home/natureScience/SCI25-2021/Lists/MySupervisors",
+                                                                                  "CatalogIconImageUrl":  "/_layouts/15/images/itgen.png?rev=23",
+                                                                                  "TitleIconImageUrl":  "",
+                                                                                  "HelpMode":  1,
+                                                                                  "HelpUrl":  "",
+                                                                                  "Hidden":  false,
+                                                                                  "Title":  "MySupervisors",
+                                                                                  "Description":  "",
+                                                                                  "AllowEdit":  true,
+                                                                                  "AllowConnect":  true,
+                                                                                  "AllowHide":  true,
+                                                                                  "AllowMinimize":  true,
+                                                                                  "AllowZoneChange":  true,
+                                                                                  "UseSQLDataSourcePaging":  true,
+                                                                                  "DataSourceID":  "",
+                                                                                  "PageSize":  -1,
+                                                                                  "DataSourcesString":  "",
+                                                                                  "SampleData":  null,
+                                                                                  "DataFields":  "",
+                                                                                  "ShowWithSampleData":  false,
+                                                                                  "Xsl":  null,
+                                                                                  "Default":  "",
+                                                                                  "ListUrl":  null,
+                                                                                  "ViewContentTypeId":  "",
+                                                                                  "EnableOriginalValue":  false,
+                                                                                  "DisplayName":  "",
+                                                                                  "ListDisplayName":  null,
+                                                                                  "ViewFlags":  8388621,
+                                                                                  "PageType":  1,
+                                                                                  "ListName":  "{D7F87AF1-9F7E-4669-B0DC-9FAFA6070E92}",
+                                                                                  "ListId":  "d7f87af1-9f7e-4669-b0dc-9fafa6070e92",
+                                                                                  "XmlDefinitionLink":  "",
+                                                                                  "XmlDefinition":  "\u003cView Name=\"{D1FEF977-D890-4940-9756-80035E37B78B}\" MobileView=\"TRUE\" Type=\"HTML\" Hidden=\"TRUE\" DisplayName=\"\" Url=\"/home/natureScience/SCI25-2021/SitePages/SupervisorApproval.aspx\" Level=\"255\" BaseViewID=\"1\" ContentTypeID=\"0x\" ImageUrl=\"/_layouts/15/images/generic.png?rev=23\" \u003e\u003cQuery\u003e\u003cOrderBy\u003e\u003cFieldRef Name=\"ID\"/\u003e\u003c/OrderBy\u003e\u003c/Query\u003e\u003cViewFields\u003e\u003cFieldRef Name=\"Edit\"/\u003e\u003cFieldRef Name=\"Academic_x0020_Title\"/\u003e\u003cFieldRef Name=\"Name\"/\u003e\u003cFieldRef Name=\"Email\"/\u003e\u003cFieldRef Name=\"Status\"/\u003e\u003cFieldRef Name=\"Author\"/\u003e\u003cFieldRef Name=\"ID\"/\u003e\u003c/ViewFields\u003e\u003cRowLimit Paged=\"TRUE\"\u003e300\u003c/RowLimit\u003e\u003cAggregations Value=\"Off\"/\u003e\u003cJSLink\u003eclienttemplates.js\u003c/JSLink\u003e\u003cXslLink Default=\"TRUE\"\u003emain.xsl\u003c/XslLink\u003e\u003cToolbar Type=\"None\"/\u003e\u003c/View\u003e",
+                                                                                  "CacheXslTimeOut":  86400,
+                                                                                  "FireInitialRow":  true,
+                                                                                  "CacheXslStorage":  true,
+                                                                                  "AutoRefreshInterval":  60,
+                                                                                  "AutoRefresh":  false,
+                                                                                  "AsyncRefresh":  false,
+                                                                                  "ManualRefresh":  false,
+                                                                                  "XslLink":  null,
+                                                                                  "WebId":  "00000000-0000-0000-0000-000000000000",
+                                                                                  "IsClientRender":  false,
+                                                                                  "GhostedXslLink":  "main.xsl",
+                                                                                  "JSLink":  null,
+                                                                                  "BaseXsltHashKey":  null,
+                                                                                  "NoDefaultStyle":  "",
+                                                                                  "ServerRender":  false,
+                                                                                  "InplaceSearchEnabled":  true,
+                                                                                  "InitialAsyncDataFetch":  false,
+                                                                                  "ShowTimelineIfAvailable":  true,
+                                                                                  "DisableViewSelectorMenu":  false,
+                                                                                  "ViewFlag":  "",
+                                                                                  "DisableSaveAsNewViewButton":  false,
+                                                                                  "DataSourceMode":  0,
+                                                                                  "SelectParameters":  "",
+                                                                                  "ParameterBindings":  "\u003cParameterBinding Name=\"dvt_sortdir\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_sortfield\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"dvt_startposition\" Location=\"Postback\" DefaultValue=\"\" /\u003e\u003cParameterBinding Name=\"dvt_firstrow\" Location=\"Postback;Connection\" /\u003e\u003cParameterBinding Name=\"OpenMenuKeyAccessible\" Location=\"Resource(wss,OpenMenuKeyAccessible)\" /\u003e\u003cParameterBinding Name=\"open_menu\" Location=\"Resource(wss,open_menu)\" /\u003e\u003cParameterBinding Name=\"select_deselect_all\" Location=\"Resource(wss,select_deselect_all)\" /\u003e\u003cParameterBinding Name=\"idPresEnabled\" Location=\"Resource(wss,idPresEnabled)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncements\" Location=\"Resource(wss,noXinviewofY_LIST)\" /\u003e\u003cParameterBinding Name=\"NoAnnouncementsHowTo\" Location=\"Resource(wss,noXinviewofY_DEFAULT)\" /\u003e"
+                                                                              }
+                                                           },
+                                                           {
+                                                               "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                               "Properties":  {
+                                                                                  "Description":  "My Visual Web Part",
+                                                                                  "Direction":  0,
+                                                                                  "ChromeType":  2,
+                                                                                  "ExportMode":  0,
+                                                                                  "ChromeState":  0,
+                                                                                  "AllowEdit":  true,
+                                                                                  "AllowHide":  true,
+                                                                                  "AllowClose":  true,
+                                                                                  "AllowConnect":  true,
+                                                                                  "AuthorizationFilter":  "",
+                                                                                  "CatalogIconImageUrl":  "",
+                                                                                  "AllowMinimize":  true,
+                                                                                  "AllowZoneChange":  true,
+                                                                                  "TitleUrl":  "",
+                                                                                  "Title":  "Button_Send_Mail - VisualWebPart1",
+                                                                                  "TitleIconImageUrl":  "",
+                                                                                  "Hidden":  false,
+                                                                                  "HelpMode":  2,
+                                                                                  "HelpUrl":  "",
+                                                                                  "ImportErrorMessage":  "Cannot import this Web Part.",
+                                                                                  "Config_File_Name":  "SCI25-2021-instructorMailConfigEn.xml",
+                                                                                  "Mail_Server":  "ekekcas01.ekmd.huji.uni",
+                                                                                  "Show_Log":  false,
+                                                                                  "Config_File_Path":  "\\\\ekeksql00\\SP_Resources$\\GRS\\default",
+                                                                                  "Mail_Sender":  "do-not-reply@ekmd.huji.ac.il",
+                                                                                  "No_Items_Selected_Text":  "No Supervisors Selected",
+                                                                                  "User_Name_Column":  "userName",
+                                                                                  "Send_CC_Mail":  false,
+                                                                                  "Button_Text":  "Send"
                                                                               }
                                                            }
                                                        ]

@@ -1,0 +1,162 @@
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>שם פרטי</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@Title"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>שם משפחה</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@FamilyName"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>תעודת זהות</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@StudentID"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>דוא&quot;ל</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@Email"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>טלפון</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@PhoneNumber"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>סטאטוס טיפול</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@TreatmentStatus"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>תיק אישי</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<a href="{substring-before(@LinkToPersonalFolder, ', ')}">
+								<xsl:value-of select="substring-after(@LinkToPersonalFolder, ', ')"/>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>מקצוע קבלה 1</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@Profession1"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>קצוע קבלה 2</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@Profession2"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>מקצוע קבלה 3</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@Profession3"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>סוג מסלול</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@RouteType"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>מסלול</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@Route"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>סטאטוס לימודים</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@StudyStatus"/>
+						</td>
+					</tr>
+					<tr>
+						<td width="190px" valign="top" class="ms-formlabel">
+							<H3 class="ms-standardheader">
+								<nobr>תאריך לידה</nobr>
+							</H3>
+						</td>
+						<td width="400px" valign="top" class="ms-formbody">
+							<xsl:value-of select="@_x05ea__x05d0__x05e8__x05d9__x05"/>
+						</td>
+					</tr>
+					<tr id="idAttachmentsRow">
+						<td nowrap="true" valign="top" class="ms-formlabel" width="20%">
+							<SharePoint:FieldLabel ControlMode="Display" FieldName="Attachments" runat="server"/>
+						</td>
+						<td valign="top" class="ms-formbody" width="80%">
+							<SharePoint:FormField runat="server" id="AttachmentsField" ControlMode="Display" FieldName="Attachments" __designer:bind="{ddwrt:DataBind('u','AttachmentsField','Value','ValueChanged','ID',ddwrt:EscapeDelims(string(@ID)),'@Attachments')}"/>
+							<script>
+          var elm = document.getElementById("idAttachmentsTable");
+          if (elm == null || elm.rows.length == 0)
+          document.getElementById("idAttachmentsRow").style.display='none';
+        </script>
+						</td>
+					</tr>
+					<xsl:if test="$dvt_1_automode = '1'" ddwrt:cf_ignore="1">
+						<tr>
+							<td colspan="99" class="ms-vb">
+								<span ddwrt:amkeyfield="ID" ddwrt:amkeyvalue="ddwrt:EscapeDelims(string(@ID))" ddwrt:ammode="view"></span>
+							</td>
+						</tr>
+					</xsl:if>
