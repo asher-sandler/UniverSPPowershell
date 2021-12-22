@@ -1,0 +1,116 @@
+{
+    "Source":  {
+                   "URL":  "https://scholarships2.ekmd.huji.ac.il/home/SocialSciences/SOC216-2021/",
+                   "RelPath":  "/home/SocialSciences/SOC216-2021/",
+                   "Lists":  null,
+                   "Pages":  [
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/Default.aspx",
+                                     "Name":  "Pages/Default.aspx",
+                                     "InnerName":  "Default"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/DeleteEmptyFolders.aspx",
+                                     "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                     "InnerName":  "DeleteEmptyFolders"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/Form.aspx",
+                                     "Name":  "Pages/Form.aspx",
+                                     "InnerName":  "Form"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/Recommendations.aspx",
+                                     "Name":  "Pages/Recommendations.aspx",
+                                     "InnerName":  "Recommendations"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/SubmissionStatus.aspx",
+                                     "Name":  "Pages/SubmissionStatus.aspx",
+                                     "InnerName":  "SubmissionStatus"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/CancelCandidacy.aspx",
+                                     "Name":  "Pages/CancelCandidacy.aspx",
+                                     "InnerName":  "CancelCandidacy"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/ContactUs.aspx",
+                                     "Name":  "Pages/ContactUs.aspx",
+                                     "InnerName":  "ContactUs"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/Pages/AddDocs.aspx",
+                                     "Name":  "Pages/AddDocs.aspx",
+                                     "InnerName":  "AddDocs"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/SitePages/דף הבית.aspx",
+                                     "Name":  "SitePages/דף הבית.aspx",
+                                     "InnerName":  "דף הבית"
+                                 },
+                                 {
+                                     "URL":  "/home/SocialSciences/SOC216-2021/SitePages/כיצד להשתמש בספריה זו.aspx",
+                                     "Name":  "SitePages/כיצד להשתמש בספריה זו.aspx",
+                                     "InnerName":  "כיצד להשתמש בספריה זו"
+                                 }
+                             ]
+               },
+    "Destination":  {
+                        "URL":  "https://scholarships.ekmd.huji.ac.il/home/SchoolofSocialWork/SOC217-2021",
+                        "RelPath":  "/home/SchoolofSocialWork/SOC217-2021/",
+                        "Lists":  null,
+                        "Pages":  [
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/Default.aspx",
+                                          "Name":  "Pages/Default.aspx",
+                                          "InnerName":  "Default"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/DeleteEmptyFolders.aspx",
+                                          "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                          "InnerName":  "DeleteEmptyFolders"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/Form.aspx",
+                                          "Name":  "Pages/Form.aspx",
+                                          "InnerName":  "Form"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/Recommendations.aspx",
+                                          "Name":  "Pages/Recommendations.aspx",
+                                          "InnerName":  "Recommendations"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/SubmissionStatus.aspx",
+                                          "Name":  "Pages/SubmissionStatus.aspx",
+                                          "InnerName":  "SubmissionStatus"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/CancelCandidacy.aspx",
+                                          "Name":  "Pages/CancelCandidacy.aspx",
+                                          "InnerName":  "CancelCandidacy"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/ContactUs.aspx",
+                                          "Name":  "Pages/ContactUs.aspx",
+                                          "InnerName":  "ContactUs"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/Pages/AddDocs.aspx",
+                                          "Name":  "Pages/AddDocs.aspx",
+                                          "InnerName":  "AddDocs"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/SitePages/דף הבית.aspx",
+                                          "Name":  "SitePages/דף הבית.aspx",
+                                          "InnerName":  "דף הבית"
+                                      },
+                                      {
+                                          "URL":  "/home/SchoolofSocialWork/SOC217-2021/SitePages/כיצד להשתמש בספריה זו.aspx",
+                                          "Name":  "SitePages/כיצד להשתמש בספריה זו.aspx",
+                                          "InnerName":  "כיצד להשתמש בספריה זו"
+                                      }
+                                  ]
+                    }
+}

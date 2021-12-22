@@ -20,7 +20,7 @@ $Credentials = get-SCred
  $siteSrcURL ="https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN32-2022";
  
  $sourceListName = "Applicants"
- $needViewName = "Rakefet"
+ $needViewName = "administration"
  
  
   
@@ -61,7 +61,7 @@ $Credentials = get-SCred
 		if ($view.Title -eq $needViewName){
 			$outFileName = $("Evgenia-Custom Forms\"+$needViewName+".txt")
 			foreach($fld in $view.Fields){
-				$outViewFields += "+"+$fld
+				$outViewFields += '"'+$fld+'",'
 			}
 			$outViewFields | Out-File $outFileName -encoding UTF8
 			write-host "$needViewName Found" -f Green

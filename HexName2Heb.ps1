@@ -8,5 +8,6 @@ function ConvHexFieldToName($str){
 	}
 	return $result
 }
-ConvHexFieldToName "_x05de__x05d2__x05de__x05d4_"
+#ConvHexFieldToName "_x05de__x05d2__x05de__x05d4_"
+ConvHexFieldToName "_x05db__x05d5__x05e1__x0020__x05"
 

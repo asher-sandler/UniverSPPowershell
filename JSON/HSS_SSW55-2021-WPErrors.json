@@ -1,0 +1,18 @@
+[
+    {
+        "SourcePageURL":  "/home/SocialSciences/SOC216-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/SchoolofSocialWork/SSW55-2021/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "SOC216-2021.xml",
+        "WebPartValueDST":  "SSW55-2021.xml"
+    },
+    {
+        "SourcePageURL":  "/home/SocialSciences/SOC216-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/SchoolofSocialWork/SSW55-2021/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "SOC216-2021-mail-He.txt",
+        "WebPartValueDST":  "SSW55-2021-mail-He.txt"
+    }
+]
