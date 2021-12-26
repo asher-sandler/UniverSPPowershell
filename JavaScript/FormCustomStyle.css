@@ -1,74 +1,29 @@
-/*
-.tofes-row-show{
-	display:block;
-}
-*/
-.tofes-row-hide{
-	/* display:none; */
-	color: rgb(236, 233, 13);
-	background-color: mediumblue;
-
-}
-
-.tofes-row-indigo{
-	/* display:none; */
-	color: rgb(236, 233, 13);
-	background-color: indigo;
-
-}
-
-.tofes-row-red{
-	/* display:none; */
-	color: white;
-	background-color: tomato;
-
-}
-
-.tofes-row-coral{
-	/* display:none; */
-	color: black;
-	background-color:  #e4d1d1;
-
-}
-
 .tofes-row-hide{
 	display:none; 
 	
 
 }
 
-.ms-list-itemLink {
-    margin-right: auto;
-    margin-left: auto;
-    text-align: center;
-    width: 30px;
-    height: 25px;
-}
 
-.ms-ellipsis-a, .ms-ellipsis-a-tile {
-    position: relative;
-    display: inline-block;
-    overflow: hidden;
-	text-decoration: none;
-}
-
-.ms-lstItmLinkAnchor {
-    margin-top: 6px;
-}
 
 
 .dropbtn {
-	background-color: #3498DB;
-	color: white;
-	padding: 16px;
-	font-size: 16px;
-	border: none;
+	
 	cursor: pointer;
-  }
+	min-width: 6em;
+	padding: 7px 10px;
+	border: 1px solid #ABABAB;
+	margin-left: 10px;
+	font-family: "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+	font-size: 11px;
+	color: #444;
+	width: 175px;
+	text-align: center;
+	}
   
   /* Dropdown button on hover & focus */
   .dropbtn:hover, .dropbtn:focus {
-	background-color: #2980B9;
+	background-color: #e6f2fa;
   }
   
   /* The container <div> - needed to position the dropdown content */
@@ -99,17 +54,29 @@
   .dropdown-content a:hover {background-color: #ddd}
   
   /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
+.show {display:block;}
 
 .div-link{
-	background: #ff6d05;
-    padding: 10px;
-    color: #fff;
-    text-align: center;
-    width: 175px;
+
+	padding: 10px;
+	color: #fff;
+	text-align: center;
+	width: 175px;
+	min-width: 6em;
+	padding: 7px 10px;
+	border-bottom: 1px solid #ABABAB;
+	border-right: 1px solid #ABABAB;
+	border-left: 1px solid #ABABAB;
+
+	background-color: #FDFDFD;
+	margin-left: 10px;
+	font-family: "Segoe UI","Segoe",Tahoma,Helvetica,Arial,sans-serif;
+	font-size: 11px;
+	color: #444;
 }
 
 .div-link:hover{
 	background:#05d1ff;
+  background:#e6f2fa;
   cursor: default;
 }

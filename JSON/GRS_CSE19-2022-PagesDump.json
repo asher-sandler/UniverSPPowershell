@@ -1,0 +1,131 @@
+{
+    "Source":  {
+                   "URL":  "https://grs2.ekmd.huji.ac.il/home/ComputerScienceandEngineering/CSE17-2021/",
+                   "RelPath":  "/home/ComputerScienceandEngineering/CSE17-2021/",
+                   "Lists":  null,
+                   "Pages":  [
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/Default.aspx",
+                                     "Name":  "Pages/Default.aspx",
+                                     "InnerName":  "Default"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/DeleteEmptyFolders.aspx",
+                                     "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                     "InnerName":  "DeleteEmptyFolders"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/Form.aspx",
+                                     "Name":  "Pages/Form.aspx",
+                                     "InnerName":  "Form"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/Recommendations.aspx",
+                                     "Name":  "Pages/Recommendations.aspx",
+                                     "InnerName":  "Recommendations"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/SubmissionStatus.aspx",
+                                     "Name":  "Pages/SubmissionStatus.aspx",
+                                     "InnerName":  "SubmissionStatus"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/CancelCandidacy.aspx",
+                                     "Name":  "Pages/CancelCandidacy.aspx",
+                                     "InnerName":  "CancelCandidacy"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/ContactUs.aspx",
+                                     "Name":  "Pages/ContactUs.aspx",
+                                     "InnerName":  "ContactUs"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/DefaultEn.aspx",
+                                     "Name":  "Pages/DefaultEn.aspx",
+                                     "InnerName":  "DefaultEn"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/FormEn.aspx",
+                                     "Name":  "Pages/FormEn.aspx",
+                                     "InnerName":  "FormEn"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/RecommendationsEn.aspx",
+                                     "Name":  "Pages/RecommendationsEn.aspx",
+                                     "InnerName":  "RecommendationsEn"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/Pages/SubmissionStatusEn.aspx",
+                                     "Name":  "Pages/SubmissionStatusEn.aspx",
+                                     "InnerName":  "SubmissionStatusEn"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/SitePages/דף הבית.aspx",
+                                     "Name":  "SitePages/דף הבית.aspx",
+                                     "InnerName":  "דף הבית"
+                                 },
+                                 {
+                                     "URL":  "/home/ComputerScienceandEngineering/CSE17-2021/SitePages/כיצד להשתמש בספריה זו.aspx",
+                                     "Name":  "SitePages/כיצד להשתמש בספריה זו.aspx",
+                                     "InnerName":  "כיצד להשתמש בספריה זו"
+                                 }
+                             ]
+               },
+    "Destination":  {
+                        "URL":  "https://grs.ekmd.huji.ac.il/home/ComputerScienceandEngineering/CSE19-2022",
+                        "RelPath":  "/home/ComputerScienceandEngineering/CSE19-2022/",
+                        "Lists":  null,
+                        "Pages":  [
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/Default.aspx",
+                                          "Name":  "Pages/Default.aspx",
+                                          "InnerName":  "Default"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/DeleteEmptyFolders.aspx",
+                                          "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                          "InnerName":  "DeleteEmptyFolders"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/Form.aspx",
+                                          "Name":  "Pages/Form.aspx",
+                                          "InnerName":  "Form"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/DocumentsUpload.aspx",
+                                          "Name":  "Pages/DocumentsUpload.aspx",
+                                          "InnerName":  "DocumentsUpload"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/Recommendations.aspx",
+                                          "Name":  "Pages/Recommendations.aspx",
+                                          "InnerName":  "Recommendations"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/SubmissionStatus.aspx",
+                                          "Name":  "Pages/SubmissionStatus.aspx",
+                                          "InnerName":  "SubmissionStatus"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/CancelCandidacy.aspx",
+                                          "Name":  "Pages/CancelCandidacy.aspx",
+                                          "InnerName":  "CancelCandidacy"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/Pages/ContactUs.aspx",
+                                          "Name":  "Pages/ContactUs.aspx",
+                                          "InnerName":  "ContactUs"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/SitePages/דף הבית.aspx",
+                                          "Name":  "SitePages/דף הבית.aspx",
+                                          "InnerName":  "דף הבית"
+                                      },
+                                      {
+                                          "URL":  "/home/ComputerScienceandEngineering/CSE19-2022/SitePages/כיצד להשתמש בספריה זו.aspx",
+                                          "Name":  "SitePages/כיצד להשתמש בספריה זו.aspx",
+                                          "InnerName":  "כיצד להשתמש בספריה זו"
+                                      }
+                                  ]
+                    }
+}

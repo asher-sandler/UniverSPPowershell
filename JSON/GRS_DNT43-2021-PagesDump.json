@@ -1,0 +1,121 @@
+{
+    "Source":  {
+                   "URL":  "https://grs2.ekmd.huji.ac.il/home/Dental/DNT37-2020/",
+                   "RelPath":  "/home/Dental/DNT37-2020/",
+                   "Lists":  null,
+                   "Pages":  [
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/Default.aspx",
+                                     "Name":  "Pages/Default.aspx",
+                                     "InnerName":  "Default"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/DeleteEmptyFolders.aspx",
+                                     "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                     "InnerName":  "DeleteEmptyFolders"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/Form.aspx",
+                                     "Name":  "Pages/Form.aspx",
+                                     "InnerName":  "Form"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/Recommendations.aspx",
+                                     "Name":  "Pages/Recommendations.aspx",
+                                     "InnerName":  "Recommendations"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/SubmissionStatus.aspx",
+                                     "Name":  "Pages/SubmissionStatus.aspx",
+                                     "InnerName":  "SubmissionStatus"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/CancelCandidacy.aspx",
+                                     "Name":  "Pages/CancelCandidacy.aspx",
+                                     "InnerName":  "CancelCandidacy"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/ContactUs.aspx",
+                                     "Name":  "Pages/ContactUs.aspx",
+                                     "InnerName":  "ContactUs"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/Pages/FormCV.aspx",
+                                     "Name":  "Pages/FormCV.aspx",
+                                     "InnerName":  "FormCV"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/SitePages/דף הבית.aspx",
+                                     "Name":  "SitePages/דף הבית.aspx",
+                                     "InnerName":  "דף הבית"
+                                 },
+                                 {
+                                     "URL":  "/home/dental/DNT37-2020/SitePages/כיצד להשתמש בספריה זו.aspx",
+                                     "Name":  "SitePages/כיצד להשתמש בספריה זו.aspx",
+                                     "InnerName":  "כיצד להשתמש בספריה זו"
+                                 }
+                             ]
+               },
+    "Destination":  {
+                        "URL":  "https://grs.ekmd.huji.ac.il/home/Dental/DNT43-2021",
+                        "RelPath":  "/home/Dental/DNT43-2021/",
+                        "Lists":  null,
+                        "Pages":  [
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/Default.aspx",
+                                          "Name":  "Pages/Default.aspx",
+                                          "InnerName":  "Default"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/DeleteEmptyFolders.aspx",
+                                          "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                          "InnerName":  "DeleteEmptyFolders"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/Form.aspx",
+                                          "Name":  "Pages/Form.aspx",
+                                          "InnerName":  "Form"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/DocumentsUpload.aspx",
+                                          "Name":  "Pages/DocumentsUpload.aspx",
+                                          "InnerName":  "DocumentsUpload"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/Recommendations.aspx",
+                                          "Name":  "Pages/Recommendations.aspx",
+                                          "InnerName":  "Recommendations"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/SubmissionStatus.aspx",
+                                          "Name":  "Pages/SubmissionStatus.aspx",
+                                          "InnerName":  "SubmissionStatus"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/CancelCandidacy.aspx",
+                                          "Name":  "Pages/CancelCandidacy.aspx",
+                                          "InnerName":  "CancelCandidacy"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/ContactUs.aspx",
+                                          "Name":  "Pages/ContactUs.aspx",
+                                          "InnerName":  "ContactUs"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/Pages/FormCV.aspx",
+                                          "Name":  "Pages/FormCV.aspx",
+                                          "InnerName":  "FormCV"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/SitePages/דף הבית.aspx",
+                                          "Name":  "SitePages/דף הבית.aspx",
+                                          "InnerName":  "דף הבית"
+                                      },
+                                      {
+                                          "URL":  "/home/dental/DNT43-2021/SitePages/כיצד להשתמש בספריה זו.aspx",
+                                          "Name":  "SitePages/כיצד להשתמש בספריה זו.aspx",
+                                          "InnerName":  "כיצד להשתמש בספריה זו"
+                                      }
+                                  ]
+                    }
+}

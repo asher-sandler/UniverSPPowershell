@@ -1,0 +1,51 @@
+{
+    "Group":  "GRS_DNT43-2021",
+    "SiteSource":  "https://grs.ekmd.huji.ac.il/home/Dental/DNT43-2021",
+    "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/Dental/DNT37-2020/",
+    "List":  "DocType",
+    "PermDifference":  "GRS_DNT43-2021_ADMINSP;GRS_DNT43-2021_JUDGESSP;",
+    "PermSource":  [
+                       {
+                           "Name":  "EKMD\\all_apps_grpsug",
+                           "Type":  4,
+                           "PermissionLevels":  "Read"
+                       },
+                       {
+                           "Name":  "ekccUG",
+                           "Type":  4,
+                           "PermissionLevels":  "Full Control"
+                       },
+                       {
+                           "Name":  "GRS_DNT43-2021_adminUG",
+                           "Type":  4,
+                           "PermissionLevels":  "Full Control,Limited Access"
+                       },
+                       {
+                           "Name":  "System Account",
+                           "Type":  1,
+                           "PermissionLevels":  "Full Control"
+                       }
+                   ],
+    "PermDest":  [
+                     {
+                         "Name":  "EKMD\\all_apps_grpsug",
+                         "Type":  4,
+                         "PermissionLevels":  "Read"
+                     },
+                     {
+                         "Name":  "ekccUG",
+                         "Type":  4,
+                         "PermissionLevels":  "Full Control"
+                     },
+                     {
+                         "Name":  "GRS_DNT43-2021_adminUG",
+                         "Type":  4,
+                         "PermissionLevels":  "Full Control,Limited Access"
+                     },
+                     {
+                         "Name":  "System Account",
+                         "Type":  1,
+                         "PermissionLevels":  "Full Control"
+                     }
+                 ]
+}

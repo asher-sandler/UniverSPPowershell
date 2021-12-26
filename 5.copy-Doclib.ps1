@@ -37,15 +37,17 @@ else
 			#$docLibNames += "Computer Science (521)"
 			#$docLibNames += "Computational Biology (532)"
 			#$docLibNames += "Bioengineering (582)"
-			$docLibNames += "אסמהאן מסרי-חרזאללה"
-			$docLibNames += "פרידה ניסים-אמיתי"
+			#$docLibNames += "אסמהאן מסרי-חרזאללה"
+			#$docLibNames += "פרידה ניסים-אמיתי"
+			$docLibNames += "applicantsCV"
 			#$docLibNames += "C MA and PhD students"
 			
 			
 			foreach($docLibName in $docLibNames){
 			
 				$schemaDocLibSrc1 =  get-ListSchema $oldSiteURL $docLibName
-				
+				write-Host 48
+				read-host
 				#$schemaDocLib1 | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-DocLib1.json")
 				$sourceDocObj = get-SchemaObject $schemaDocLibSrc1 
 				$sourceDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-DocLibSrc1.json")

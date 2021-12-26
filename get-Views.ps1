@@ -21,6 +21,7 @@ $Credentials = get-SCred
  
  $sourceListName = "Applicants"
  $needViewName = "administration"
+ $needViewName = "rakefet"
  
  
   
@@ -59,11 +60,18 @@ $Credentials = get-SCred
  $outViewFields = @()
  foreach($view in $objViews){
 		if ($view.Title -eq $needViewName){
-			$outFileName = $("Evgenia-Custom Forms\"+$needViewName+".txt")
+			
 			foreach($fld in $view.Fields){
-				$outViewFields += '"'+$fld+'",'
+				$outViewFields += $fld
 			}
-			$outViewFields | Out-File $outFileName -encoding UTF8
+			$outFileList = @()
+			
+			foreach ($fldn in $outViewFields)
+			{
+				$outFileList += '"'+$fldn+'",'
+			}
+			$outFileName = $("Evgenia-Custom Forms\"+$needViewName+".txt")
+			$outFileList | Out-File $outFileName -encoding UTF8
 			write-host "$needViewName Found" -f Green
 			write-host "Created File : $outFileName" -f Green
 			
@@ -71,6 +79,28 @@ $Credentials = get-SCred
 			
 			
 		}		
- } 
+ }
+
+$excludeFromFields = @()
+foreach($fldobj in $sourceListObj){
+	$addListToExclude = $true
+	foreach($fldx in $outViewFields){
+		if ($fldx -eq $fldobj.DisplayName){
+			$addListToExclude = $false
+			break;
+		}
+	}
+	if ($addListToExclude){
+		
+		$excludeFromFields += '"'+$fldobj.DisplayName+'",'	
+	}
+	
+}
+$outFileName = $("Evgenia-Custom Forms\"+$needViewName+"-exclude.txt")
+$excludeFromFields | Out-File $outFileName -encoding UTF8
+write-host "Created File : $outFileName" -f Green
+
+ 
+ 
 	 
  

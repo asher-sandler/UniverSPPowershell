@@ -1,0 +1,18 @@
+[
+    {
+        "Name":  "Pages/DefaultEn.aspx",
+        "InnerName":  "DefaultEn"
+    },
+    {
+        "Name":  "Pages/FormEn.aspx",
+        "InnerName":  "FormEn"
+    },
+    {
+        "Name":  "Pages/RecommendationsEn.aspx",
+        "InnerName":  "RecommendationsEn"
+    },
+    {
+        "Name":  "Pages/SubmissionStatusEn.aspx",
+        "InnerName":  "SubmissionStatusEn"
+    }
+]

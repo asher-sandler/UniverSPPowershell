@@ -184,9 +184,9 @@ const user2Fields = ["Field001","כותרת"];
 const user3Fields = ["Title","Field004","Field014","כותרת"];
 
 const userActions = [{user:"Return to Origin",className:"",fields:""},
-  {user:"user1",className:"tofes-row-indigo",fields:user1Fields},
-{user:"user2",className:"tofes-row-red",fields:user2Fields},
-{user:"user3",className:"tofes-row-coral",fields:user3Fields}]
+  {user:"user1",className:"tofes-row-hide",fields:user1Fields},
+{user:"user2",className:"tofes-row-hide",fields:user2Fields},
+{user:"user3",className:"tofes-row-hide",fields:user3Fields}]
 
 //{User:"user3",Action:'htmlElements.addClassToRow("tofes-row-coral","Field001")'},]
 
