@@ -1,0 +1,116 @@
+{
+    "Source":  {
+                   "URL":  "https://grs2.ekmd.huji.ac.il/home/General/GEN30-2021/",
+                   "RelPath":  "/home/General/GEN30-2021/",
+                   "Lists":  null,
+                   "Pages":  [
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/Default.aspx",
+                                     "Name":  "Pages/Default.aspx",
+                                     "InnerName":  "Default"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/DeleteEmptyFolders.aspx",
+                                     "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                     "InnerName":  "DeleteEmptyFolders"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/Form.aspx",
+                                     "Name":  "Pages/Form.aspx",
+                                     "InnerName":  "Form"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/Recommendations.aspx",
+                                     "Name":  "Pages/Recommendations.aspx",
+                                     "InnerName":  "Recommendations"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/SubmissionStatus.aspx",
+                                     "Name":  "Pages/SubmissionStatus.aspx",
+                                     "InnerName":  "SubmissionStatus"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/CancelCandidacy.aspx",
+                                     "Name":  "Pages/CancelCandidacy.aspx",
+                                     "InnerName":  "CancelCandidacy"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/ContactUs.aspx",
+                                     "Name":  "Pages/ContactUs.aspx",
+                                     "InnerName":  "ContactUs"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/Pages/DefaultHe.aspx",
+                                     "Name":  "Pages/DefaultHe.aspx",
+                                     "InnerName":  "DefaultHe"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/SitePages/Home.aspx",
+                                     "Name":  "SitePages/Home.aspx",
+                                     "InnerName":  "Home"
+                                 },
+                                 {
+                                     "URL":  "/home/general/GEN30-2021/SitePages/How To Use This Library.aspx",
+                                     "Name":  "SitePages/How To Use This Library.aspx",
+                                     "InnerName":  "How To Use This Library"
+                                 }
+                             ]
+               },
+    "Destination":  {
+                        "URL":  "https://grs.ekmd.huji.ac.il/home/General/GEN35-2022",
+                        "RelPath":  "/home/General/GEN35-2022/",
+                        "Lists":  null,
+                        "Pages":  [
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/Default.aspx",
+                                          "Name":  "Pages/Default.aspx",
+                                          "InnerName":  "Default"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/DeleteEmptyFolders.aspx",
+                                          "Name":  "Pages/DeleteEmptyFolders.aspx",
+                                          "InnerName":  "DeleteEmptyFolders"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/Form.aspx",
+                                          "Name":  "Pages/Form.aspx",
+                                          "InnerName":  "Form"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/DocumentsUpload.aspx",
+                                          "Name":  "Pages/DocumentsUpload.aspx",
+                                          "InnerName":  "DocumentsUpload"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/Recommendations.aspx",
+                                          "Name":  "Pages/Recommendations.aspx",
+                                          "InnerName":  "Recommendations"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/SubmissionStatus.aspx",
+                                          "Name":  "Pages/SubmissionStatus.aspx",
+                                          "InnerName":  "SubmissionStatus"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/CancelCandidacy.aspx",
+                                          "Name":  "Pages/CancelCandidacy.aspx",
+                                          "InnerName":  "CancelCandidacy"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/Pages/ContactUs.aspx",
+                                          "Name":  "Pages/ContactUs.aspx",
+                                          "InnerName":  "ContactUs"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/SitePages/Home.aspx",
+                                          "Name":  "SitePages/Home.aspx",
+                                          "InnerName":  "Home"
+                                      },
+                                      {
+                                          "URL":  "/home/general/GEN35-2022/SitePages/How To Use This Library.aspx",
+                                          "Name":  "SitePages/How To Use This Library.aspx",
+                                          "InnerName":  "How To Use This Library"
+                                      }
+                                  ]
+                    }
+}

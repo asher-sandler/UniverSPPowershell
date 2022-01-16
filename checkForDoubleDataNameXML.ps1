@@ -76,7 +76,7 @@ else
 			}
 
 			if (!$isError){
-				write-host "   Everething looks fine!" -ForeGroundColor Green -NoNewLine;
+				write-host "   Everything looks fine!" -ForeGroundColor Green -NoNewLine;
 			}
 		}
 		else

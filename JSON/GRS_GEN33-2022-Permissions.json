@@ -1,0 +1,512 @@
+[
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "DocType",
+        "PermDifference":  "GRS_GEN33-2022_ADMINSP;GRS_GEN33-2022_JUDGESSP;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "פיסיקה (541)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-541ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "מתמטיקה (530)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-530ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "כימיה (560)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-560ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "ביוטכנולוגיה (890)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-890ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "פיסיקה יישומית (511)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci19-2018_judges-511ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "מדעי החיים",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-lifeug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "מדעי כדור הארץ",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-earthug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "מדעי הסביבה (591)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-591ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    },
+    {
+        "Group":  "GRS_GEN33-2022",
+        "SiteSource":  "https://grs.ekmd.huji.ac.il/home/General/GEN33-2022",
+        "SiteDest":  "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI25-2021/",
+        "List":  "ביו-הנדסה (582)",
+        "PermDifference":  "EKMD\\sharepoint_temp_editorsug;EKMD\\grs_sci17-2017_judges-582ug;",
+        "PermSource":  [
+                           {
+                               "Name":  "EKMD\\all_apps_grpsug",
+                               "Type":  4,
+                               "PermissionLevels":  "Read"
+                           },
+                           {
+                               "Name":  "ekccUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control"
+                           },
+                           {
+                               "Name":  "GRS_GEN33-2022_adminUG",
+                               "Type":  4,
+                               "PermissionLevels":  "Full Control,Limited Access"
+                           },
+                           {
+                               "Name":  "System Account",
+                               "Type":  1,
+                               "PermissionLevels":  "Full Control"
+                           }
+                       ],
+        "PermDest":  [
+                         {
+                             "Name":  "EKMD\\all_apps_grpsug",
+                             "Type":  4,
+                             "PermissionLevels":  "Read"
+                         },
+                         {
+                             "Name":  "ekccUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control"
+                         },
+                         {
+                             "Name":  "GRS_GEN33-2022_adminUG",
+                             "Type":  4,
+                             "PermissionLevels":  "Full Control,Limited Access"
+                         },
+                         {
+                             "Name":  "System Account",
+                             "Type":  1,
+                             "PermissionLevels":  "Full Control"
+                         }
+                     ]
+    }
+]

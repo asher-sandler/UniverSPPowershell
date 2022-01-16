@@ -67,7 +67,7 @@ else
 				if ($isDocumentsUploadExists){
 					edt-DocumentsUpload  $siteUrlC  $($spRequestsListObj.language)
 					edt-DocUploadWP $siteUrlC  $spRequestsListObj 
-					copyUpload $spRequestsListObj
+					#copyUpload $spRequestsListObj
 				}
 				
 				if (!$isDoubleLangugeSite){

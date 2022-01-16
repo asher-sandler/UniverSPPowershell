@@ -1,0 +1,2220 @@
+[
+    {
+        "Title":  "יום פתוח",
+        "Url":  "/home/socialWork/Pages/FRM_SSW01.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "success",
+        "Url":  "/home/socialWork/Pages/success.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW02",
+        "Url":  "/home/socialWork/Pages/FRM_SSW02.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW03",
+        "Url":  "/home/socialWork/Pages/FRM_SSW03.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW04",
+        "Url":  "/home/socialWork/Pages/FRM_SSW04.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס שיבוץ - מעורבות חברתית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW09.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה קהילתית - שנה ב\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW05.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה קהילתית - שנה ג\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW06.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה פרטנית - שנה ג\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW08.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה פרטנית - שנה ב\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW07.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "המלצה לפרס",
+        "Url":  "/home/socialWork/Pages/FRM_SSW10.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW11",
+        "Url":  "/home/socialWork/Pages/FRM_SSW11.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW12",
+        "Url":  "/home/socialWork/Pages/FRM_SSW12.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW13",
+        "Url":  "/home/socialWork/Pages/FRM_SSW13.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW14",
+        "Url":  "/home/socialWork/Pages/FRM_SSW14.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW15",
+        "Url":  "/home/socialWork/Pages/FRM_SSW15.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW16",
+        "Url":  "/home/socialWork/Pages/FRM_SSW16.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "successEn",
+        "Url":  "/home/socialWork/Pages/successEn.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW17",
+        "Url":  "/home/socialWork/Pages/FRM_SSW17.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW18",
+        "Url":  "/home/socialWork/Pages/FRM_SSW18.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW19",
+        "Url":  "/home/socialWork/Pages/FRM_SSW19.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "אישור הגעה לטקס מוסמך",
+        "Url":  "/home/socialWork/Pages/FRM_SSW20.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Confirmation of arrival to Master\u0027s ceremony",
+        "Url":  "/home/socialWork/Pages/FRM_SSW20_En.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW21_He",
+        "Url":  "/home/socialWork/Pages/FRM_SSW21_He.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW21_En",
+        "Url":  "/home/socialWork/Pages/FRM_SSW21_En.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW22",
+        "Url":  "/home/socialWork/Pages/FRM_SSW22.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "הערכה למעורבות החברתית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW23.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW23_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialWork",
+                          "InnerName":  "socialWork",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "מעורבות חברתית - משוב סטודנטים",
+        "Url":  "/home/socialWork/Pages/FRM_SSW24.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס בחירת התמחות בתכנית שוורץ לניהול מלכ\"רים וארגונים קהילתיים",
+        "Url":  "/home/socialWork/Pages/FRM_SSW25.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW26",
+        "Url":  "/home/socialWork/Pages/FRM_SSW26.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW27",
+        "Url":  "/home/socialWork/Pages/FRM_SSW27.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW28",
+        "Url":  "/home/socialWork/Pages/FRM_SSW28.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "FRM_SSW29",
+        "Url":  "/home/socialWork/Pages/FRM_SSW29.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  " שיבוץ בהכשרה מקצועית מחוץ לירושלים - מגמה פרטנית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW30.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס שיבוץ לפרקטיקום ב\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW26.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - תשפ\"ב",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW26_List/v2021-2022.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW26_List",
+                          "InnerName":  "FRM_SSW26_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - תשפ\"א",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW26_List/v2021-2022.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW26_List",
+                          "InnerName":  "FRM_SSW26_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW26_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW26_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw26_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Design"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס פנייה לממונה על המעמד האקדמי והיועצת האקדמית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW22.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW22_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW22_List",
+                          "InnerName":  "FRM_SSW22_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW22_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW22_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw22_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "בקשה למועד מיוחד",
+        "Url":  "/home/socialWork/Pages/FRM_SSW02.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW02_List/2.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW02_List",
+                          "InnerName":  "FRM_SSW02_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW02_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW02_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{7b6290be-1a7e-4ef2-8cff-cadd1fce0783}\" SourceID=\"{675ac1ff-414e-4fc8-9ca6-9340db29ac00}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw02_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "ערעור על ציון בחינה",
+        "Url":  "/home/socialWork/Pages/FRM_SSW03.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW03_List/3.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW03_List",
+                          "InnerName":  "FRM_SSW03_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW03_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW03_List",
+                          "InnerName":  "FRM_SSW03_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW03_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW03_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{64a63ba1-7e02-449d-9412-30a5d1ff3ccb}\" SourceID=\"{d1df7d09-ed2d-4752-bebe-80467c3c730c}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw03_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "סגירת תואר בוגר",
+        "Url":  "/home/socialWork/Pages/FRM_SSW14.aspx",
+        "Items":  [
+                      {
+                          "Title":  "טבלת נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW14_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW14_List",
+                          "InnerName":  "FRM_SSW14_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW14_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW14_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw14_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "סגירת תואר מוסמך",
+        "Url":  "/home/socialWork/Pages/FRM_SSW15.aspx",
+        "Items":  [
+                      {
+                          "Title":  "טבלת נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW15_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW15_List",
+                          "InnerName":  "FRM_SSW15_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW15_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW15_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"סטטוס\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{8293815f-28a3-45cb-9ac8-f8f5aa952926}\" SourceID=\"{98ace910-7a26-4c9e-bfd1-aaf86e69d4e3}\" StaticName=\"_x05e1__x05d8__x05d8__x05d5__x05e1_\" Name=\"_x05e1__x05d8__x05d8__x05d5__x05e1_\" ColName=\"nvarchar11\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw15_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס רישום פוסט-דוקטורנט",
+        "Url":  "/home/socialWork",
+        "Items":  [
+                      {
+                          "Title":  "טופס בעברית",
+                          "Url":  "/home/socialWork/Pages/FRM_SSW21_He.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW21_He.aspx",
+                          "InnerName":  "FRM_SSW21_He.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טופס באנגלית",
+                          "Url":  "/home/socialWork/Pages/FRM_SSW21_En.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW21_En.aspx",
+                          "InnerName":  "FRM_SSW21_En.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW21_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW21_List",
+                          "InnerName":  "FRM_SSW21_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW21_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW21_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw21_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "המלצה לפרס",
+        "Url":  "/home/socialWork/Pages/FRM_SSW10.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_List",
+                          "InnerName":  "FRM_SSW10_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_List",
+                          "InnerName":  "FRM_SSW10_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_List",
+                          "InnerName":  "FRM_SSW10_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_List",
+                          "InnerName":  "FRM_SSW10_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2017",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_List/2017.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_List",
+                          "InnerName":  "FRM_SSW10_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2016",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_List/2016.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_List",
+                          "InnerName":  "FRM_SSW10_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2015",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW10_arc2015_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW10_arc2015_List",
+                          "InnerName":  "FRM_SSW10_arc2015_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס בחירת התמחות – מוסמך בעבודה סוציאלית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW18.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - תשפ\"א",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW18_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW18_List",
+                          "InnerName":  "FRM_SSW18_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - תש\"פ",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW18_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW18_List",
+                          "InnerName":  "FRM_SSW18_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - תשע\"ט",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW18_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW18_List",
+                          "InnerName":  "FRM_SSW18_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW18_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW18_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw18_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס בחירת התמחות - מוסמך בתכנית לניהול מלכ\"רים וארגונים קהילתיים",
+        "Url":  "/home/socialWork/Pages/FRM_SSW25.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים – תשפ\"ב",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW25_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW25_List",
+                          "InnerName":  "FRM_SSW25_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - תשפ\"א",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW25_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW25_List",
+                          "InnerName":  "FRM_SSW25_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - תש\"פ",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW25_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW25_List",
+                          "InnerName":  "FRM_SSW25_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW25_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW25_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw25_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "בקשה להכרה בקורס/ים אקדמיים קודמים",
+        "Url":  "/home/socialWork/Pages/FRM_SSW12.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW12_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW12_List",
+                          "InnerName":  "FRM_SSW12_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW12_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW12_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{1ea80643-572e-4184-9c46-d1f1d4baa845}\" SourceID=\"{421ca9b9-bee6-462f-bb05-0d3729592ff1}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw12_adminug",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ מעורבות חברתית - שנה א\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW09.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - עדכני",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_List",
+                          "InnerName":  "FRM_SSW09_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW09_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW09_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{7b25ac63-ebd8-45b5-9574-a5b5bdeceb37}\" SourceID=\"{ecb33b25-5876-4664-a697-d084df56133f}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw09_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_List",
+                          "InnerName":  "FRM_SSW09_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_List",
+                          "InnerName":  "FRM_SSW09_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_List",
+                          "InnerName":  "FRM_SSW09_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_List",
+                          "InnerName":  "FRM_SSW09_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - ארכיב 10/17",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_List/2017.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_List",
+                          "InnerName":  "FRM_SSW09_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - ארכיב 17",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_arc2017_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_arc2017_List",
+                          "InnerName":  "FRM_SSW09_arc2017_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - ארכיב 16",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_arc2016_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_arc2016_List",
+                          "InnerName":  "FRM_SSW09_arc2016_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - ארכיב 15",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW09_arc2015_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW09_arc2015_List",
+                          "InnerName":  "FRM_SSW09_arc2015_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF - ארכיב",
+                          "Url":  "/home/socialWork/PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "PDF - ארכיב",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{7b25ac63-ebd8-45b5-9574-a5b5bdeceb37}\" SourceID=\"{ecb33b25-5876-4664-a697-d084df56133f}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw09_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "סוכנויות",
+                          "Url":  "/home/socialWork/Lists/socialInvovlmentPreferenceList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialInvovlmentPreferenceList",
+                          "InnerName":  "socialInvovlmentPreferenceList",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "אישור הגעה לטקס מוסמך",
+        "Url":  "/home/socialWork",
+        "Items":  [
+                      {
+                          "Title":  "טופס בעברית",
+                          "Url":  "/home/socialWork/Pages/FRM_SSW20.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW20.aspx",
+                          "InnerName":  "FRM_SSW20.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טופס באנגלית",
+                          "Url":  "/home/socialWork/Pages/FRM_SSW20_En.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW20_En.aspx",
+                          "InnerName":  "FRM_SSW20_En.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טבלת נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW20_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW20_List",
+                          "InnerName":  "FRM_SSW20_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "יום פתוח",
+        "Url":  "/home/socialWork/Pages/FRM_SSW01.aspx",
+        "Items":  [
+                      {
+                          "Title":  "יום פתוח - נתונים",
+                          "Url":  "/home/socialWork/Lists/List",
+                          "OldUrl":  null,
+                          "Type":  "List",
+                          "InnerName":  "List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס קבלה לשנים מתקדמות בוגר",
+        "Url":  "/home/socialWork/Pages/FRM_SSW04.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW04_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW04_List",
+                          "InnerName":  "FRM_SSW04_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW04_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW04_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{f56b5f03-ceb5-48e2-b95f-7d22e8b2ead4}\" SourceID=\"{5e70d3e6-0d6e-4c1f-84a0-e3450ee0369f}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw04_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "משובי סטודנטים",
+        "Url":  "/home/socialWork/Pages/FRM_SSW11.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW11_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW11_List",
+                          "InnerName":  "FRM_SSW11_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW11_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW11_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{9225f35f-a7da-433e-8086-46a6e6658be4}\" SourceID=\"{2ce08661-fbc4-4000-b30e-65463342fab6}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw11_adminug",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שאלון למועמד להדרכת סטודנטים בהכשרה מקצועית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW19.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW19_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW19_List",
+                          "InnerName":  "FRM_SSW19_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW19_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW19_List",
+                          "InnerName":  "FRM_SSW19_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW19_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW19_List",
+                          "InnerName":  "FRM_SSW19_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW19_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW19_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw19_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW19_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialWork",
+                          "InnerName":  "socialWork",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Learning Agreement for Huji - Outgoing Exchange Students",
+        "Url":  "/home/socialWork/Pages/FRM_SSW16.aspx",
+        "Items":  [
+                      {
+                          "Title":  "טבלת נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW16_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW16_List",
+                          "InnerName":  "FRM_SSW16_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW16_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW16_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw16_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "Changes To The Original Learning Agreement",
+        "Url":  "/home/socialWork/Pages/FRM_SSW17.aspx",
+        "Items":  [
+                      {
+                          "Title":  "טבלת נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW17_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW17_List",
+                          "InnerName":  "FRM_SSW17_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW17_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW17_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw17_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה קהילתית - שנה ב\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW05.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - עדכני",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW05_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW05_List",
+                          "InnerName":  "FRM_SSW05_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW05_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW05_List",
+                          "InnerName":  "FRM_SSW05_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW05_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW05_List",
+                          "InnerName":  "FRM_SSW05_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW05_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW05_List",
+                          "InnerName":  "FRM_SSW05_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2017",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW05_List/2017.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW05_List",
+                          "InnerName":  "FRM_SSW05_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW05_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW05_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{090b608a-d704-4984-8158-61bacc4a8dc3}\" SourceID=\"{96722741-06aa-4d46-88a2-34f41d6a1ab1}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw05_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW05_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialWork",
+                          "InnerName":  "socialWork",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה קהילתית - שנה ג\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW06.aspx",
+        "Items":  [
+                      {
+                          "Title":  "סוכנויות",
+                          "Url":  "/home/socialWork/Lists/communalAgencyYear3List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "communalAgencyYear3List",
+                          "InnerName":  "communalAgencyYear3List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - עדכני",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW06_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW06_List",
+                          "InnerName":  "FRM_SSW06_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW06_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW06_List",
+                          "InnerName":  "FRM_SSW06_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW06_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW06_List",
+                          "InnerName":  "FRM_SSW06_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW06_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW06_List",
+                          "InnerName":  "FRM_SSW06_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2017",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW06_List/2017.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW06_List",
+                          "InnerName":  "FRM_SSW06_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW06_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW06_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{c6a6a6c4-0805-40ed-9707-e5700987bb0d}\" SourceID=\"{bfe362a8-e320-41f1-a78e-5e461ef52860}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw06_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW06_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialWork",
+                          "InnerName":  "socialWork",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה פרטנית - שנה ב\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW07.aspx",
+        "Items":  [
+                      {
+                          "Title":  "מרכזי למידה",
+                          "Url":  "/home/socialWork/Lists/individualCentersList07/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "individualCentersList07",
+                          "InnerName":  "individualCentersList07",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - עדכני",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW07_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW07_List",
+                          "InnerName":  "FRM_SSW07_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW07_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW07_List",
+                          "InnerName":  "FRM_SSW07_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW07_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW07_List",
+                          "InnerName":  "FRM_SSW07_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW07_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW07_List",
+                          "InnerName":  "FRM_SSW07_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2017",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW07_List/2017.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW07_List",
+                          "InnerName":  "FRM_SSW07_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW07_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW07_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{cbf2a8ae-5a82-40f1-b652-a798bf3c84e8}\" SourceID=\"{19f3687d-1dbb-4703-a34b-a2a2a0025a03}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw07_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW07_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialWork",
+                          "InnerName":  "socialWork",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית - מגמה פרטנית - שנה ג\u0027",
+        "Url":  "/home/socialWork/Pages/FRM_SSW08.aspx",
+        "Items":  [
+                      {
+                          "Title":  "מרכזי למידה",
+                          "Url":  "/home/socialWork/Lists/individualCentersList08/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "individualCentersList08",
+                          "InnerName":  "individualCentersList08",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - עדכני",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW08_List/view.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW08_List",
+                          "InnerName":  "FRM_SSW08_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW08_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW08_List",
+                          "InnerName":  "FRM_SSW08_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW08_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW08_List",
+                          "InnerName":  "FRM_SSW08_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW08_List/2018.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW08_List",
+                          "InnerName":  "FRM_SSW08_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2017",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW08_List/2017.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW08_List",
+                          "InnerName":  "FRM_SSW08_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW08_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW08_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{14dbe643-9b5d-452a-ae60-f09fbf723211}\" SourceID=\"{5fe9d255-25ad-44a4-91ae-b0154cf0db83}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw08_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW08_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "socialWork",
+                          "InnerName":  "socialWork",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שאלון משוב על הכשרה מקצועית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW13.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים - עדכני",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW13_List/view1.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW13_List",
+                          "InnerName":  "FRM_SSW13_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW13_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW13_List",
+                          "InnerName":  "FRM_SSW13_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW13_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW13_List",
+                          "InnerName":  "FRM_SSW13_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2019",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW13_List/2019.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW13_List",
+                          "InnerName":  "FRM_SSW13_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF",
+                          "Url":  "/home/socialWork/FRM_SSW13_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW13_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw13_adminug",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      },
+                      {
+                          "Title":  "טבלת נתונים ארכיב 2018",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW13_List_2018/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW13_List_2018",
+                          "InnerName":  "FRM_SSW13_List_2018",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "טפסי PDF ארכיב  2018",
+                          "Url":  "/home/socialWork/FRM_SSW13_PDF_2018/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW13_PDF_2018",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw13_adminug",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "מעורבות חברתית - משוב סטודנטים",
+        "Url":  "/home/socialWork/Pages/FRM_SSW24.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW24_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW24_List",
+                          "InnerName":  "FRM_SSW24_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW24_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW24_List",
+                          "InnerName":  "FRM_SSW24_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW24_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW24_List",
+                          "InnerName":  "FRM_SSW24_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW24_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW24_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw24_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "הערכה למעורבות החברתית",
+        "Url":  "/home/socialWork/Pages/FRM_SSW23.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW23_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW23_List",
+                          "InnerName":  "FRM_SSW23_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW23_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW23_List",
+                          "InnerName":  "FRM_SSW23_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2020",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW23_List/2020.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW23_List",
+                          "InnerName":  "FRM_SSW23_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW23_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW23_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw23_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "תכנית הגיל הרך – טופס שיבוץ לפרקטיקום",
+        "Url":  "/home/socialWork/Pages/FRM_SSW27.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW27_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW27_List",
+                          "InnerName":  "FRM_SSW27_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW27_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW27_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw27_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Contribute"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס הרשמה ותשלום לקורסי השלמה בסטטיסטיקה / שיטות מחקר",
+        "Url":  "/home/socialWork/Pages/FRM_SSW28.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW28_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW28_List",
+                          "InnerName":  "FRM_SSW28_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW28_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW28_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw28_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Design"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "טופס הרשמה לבחינת פטור בעיבוד נתונים (סטטיסטיקה)",
+        "Url":  "/home/socialWork/Pages/FRM_SSW29.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW29_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW29_List",
+                          "InnerName":  "FRM_SSW29_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW29_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW29_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw29_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Design"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "שיבוץ בהכשרה מקצועית מחוץ לירושלים - מגמה פרטנית ",
+        "Url":  "/home/socialWork/Pages/FRM_SSW30.aspx",
+        "Items":  [
+                      {
+                          "Title":  "נתונים",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW30_List/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW30_List",
+                          "InnerName":  "FRM_SSW30_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "נתונים - 2021",
+                          "Url":  "/home/socialWork/Lists/FRM_SSW30_List/2021.aspx",
+                          "OldUrl":  null,
+                          "Type":  "FRM_SSW30_List",
+                          "InnerName":  "FRM_SSW30_List",
+                          "Name":  null,
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "PDF",
+                          "Url":  "/home/socialWork/FRM_SSW30_PDF/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Forms",
+                          "Name":  "FRM_SSW30_PDF",
+                          "IsOldMenu":  null,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"description\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" Direction=\"None\" ID=\"{744e9834-0bd7-47e3-8772-503fa935ae38}\" SourceID=\"{94df94c3-75bf-4ff4-bb00-b29e9e4fbd69}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar10\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  {
+                                                 "Name":  "EKMD\\frm_ssw08_admindl",
+                                                 "Type":  4,
+                                                 "PermissionLevels":  "Full Control,Limited Access"
+                                             }
+                      }
+                  ],
+        "IsOldMenu":  null,
+        "CandidateForDelete":  false
+    }
+]

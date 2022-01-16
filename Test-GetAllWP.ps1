@@ -81,7 +81,9 @@ $cred = get-SCred
 
  
  $siteURL = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN31-2021";
+ $siteURL = "https://scholarships2.ekmd.huji.ac.il/home/General/GEN156-2021";
  $pageURL = "/home/OverseasApplicantsUnit/GEN31-2021/Pages/declarationFormRU.aspx"
+ $pageURL = "/home/General/GEN156-2021/Pages/DocumentsUpload.aspx"
  
  write-host "URL : $siteURL" -foregroundcolor Yellow
  write-host "Page: $pageURL" -foregroundcolor Yellow

@@ -17,8 +17,10 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 $cred = get-SCred
 
  
- $siteSrcURL = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN27-2020";
- $sourceList = "/home/OverseasApplicantsUnit/GEN27-2020/Lists/administration/AllItems.aspx"
+ $siteSrcURL = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN32-2022";
+ $sourceList = "/home/OverseasApplicantsUnit/GEN32-2022/Lists/applicants/AllItems.aspx"
+ $siteDstName = "https://portals2.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace/"
+ $dstListName = "applTest"
  
   
  $siteName = get-UrlNoF5 $siteSrcURL
@@ -73,9 +75,7 @@ $cred = get-SCred
  
  $pureFieldList = get-Content $("Daniel\"+$docLibName+"-ListSourcePure.txt")
 
- $siteDstName = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN31-2021"
  $siteUrlDst =  get-UrlNoF5 $siteDstName
- $dstListName = "applicants"
  $schemaDocLibDst1 =  get-ListSchema $siteUrlDst $dstListName
  $dstDocObj = get-SchemaObject $schemaDocLibDst1 
  $outFileName = "JSON\"+$dstListName+"-ListDest.json"

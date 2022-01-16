@@ -1,0 +1,234 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20220110160105
+Username: EKMD\ashersa
+RunAs User: EKMD\ashersa
+Configuration Name: 
+Machine: DEVORAGO_PC (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 6420
+PSVersion: 5.1.19041.1320
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1320
+BuildVersion: 10.0.19041.1320
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is HideDocLib.log
+User: AsherSA
+https://scholarships.ekmd.huji.ac.il/home/SocialSciences/SOC212-2021
+Get Doc Lib
+Found: העלאת מסמכים - Chelomo Lubliner 342531167
+Found: העלאת מסמכים - Ester GOLAN 04340226
+Found: העלאת מסמכים - Itty Zicherman 04034946
+Found: העלאת מסמכים - Lee Aldar 20357396
+Found: העלאת מסמכים - Lisya Kaspi 345445159
+Found: העלאת מסמכים - Michal Gal 206725707
+Found: העלאת מסמכים - Rawan Natsheh 06083939
+Found: העלאת מסמכים - Shaina Silberstein 33812530
+Found: העלאת מסמכים - Yan Yue e54094607
+https://scholarships.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW38-2021
+Get Doc Lib
+Found: העלאת מסמכים - Ahlam Abo 03137848
+Found: העלאת מסמכים - Alon Aviram 06655384
+Found: העלאת מסמכים - Einat Kramer 03444502
+Found: העלאת מסמכים - Lea Soferhabif 03874136
+Found: העלאת מסמכים - Or Alter 03470887
+Found: העלאת מסמכים - Shiran Tayeb 30136665
+Found: העלאת מסמכים - Shuli Levy 05983919
+https://scholarships.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW51-2021
+Get Doc Lib
+Found: העלאת מסמכים - Alon Aviram 06655384
+Found: העלאת מסמכים - Amal Nasser 03464552
+Found: העלאת מסמכים - Lea Soferhabif 03874136
+Found: העלאת מסמכים - Li-At Perry 02948970
+Found: העלאת מסמכים - Maia Ram-Berger 03659378
+Found: העלאת מסמכים - Miriam Cohen 20035878
+Found: העלאת מסמכים - Or Alter 03470887
+Found: העלאת מסמכים - Rivka Keesing 01524572
+Found: העלאת מסמכים - Shireen Sokar 03450674
+Found: העלאת מסמכים - Shuli Levy 05983919
+https://scholarships.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW52-2021
+Get Doc Lib
+Found: העלאת מסמכים - Ahlam Abo 03137848
+Found: העלאת מסמכים - Einat Kramer 03444502
+Found: העלאת מסמכים - Rivka Keesing 01524572
+https://scholarships.ekmd.huji.ac.il/home/Humanities/HUM182-2021
+Get Doc Lib
+Found: Documents Upload Adiel Breuer 30295034
+Found: Documents Upload Alon Brand 30835871
+Found: Documents Upload Ami Asyag 20051279
+Found: Documents Upload Anna Veselovsky 34509786
+Found: Documents Upload Ariella Lehmann 321062291
+Found: Documents Upload Arseniy Agroskin 34531730
+Found: Documents Upload Asya Zyskina 34122492
+Found: Documents Upload Atara Benhanan 30550141
+Found: Documents Upload Avi Mashiach 31924246
+Found: Documents Upload Ayana Sassoon 204056311
+Found: Documents Upload Ayelet Wenger 77763097
+Found: Documents Upload Binyamin Ehrlich 20352597
+Found: Documents Upload Daniel Avrin 31317801
+Found: Documents Upload David Forward 777830332
+Found: Documents Upload Eitan Ishai 30149202
+Found: Documents Upload Eliyahu Freedman 34280939
+Found: Documents Upload Esther Rute 33617093
+Found: Documents Upload Evyatar Varman 20076270
+Found: Documents Upload Eylon Cohen 06673339
+Found: Documents Upload Hanan Amouyal 30309500
+Found: Documents Upload Ilana Peters 332275890
+Found: Documents Upload Inbal Kol 20345859
+Found: Documents Upload Jingchao Chen eh4107970
+Found: Documents Upload Julian Hirsch 583891791
+Found: Documents Upload Lior Nissim 302504055
+Found: Documents Upload Liora Ortega 66601156
+Found: Documents Upload Lonnie Monka 20007820
+Found: Documents Upload Lorenzo Guarnieri 88805315
+Found: Documents Upload Lotem Allouche 20347123
+Found: Documents Upload Margarita Lerman 77785056
+Found: Documents Upload Marina Bekker 30916242
+Found: Documents Upload Matan Aviel 30222450
+Found: Documents Upload Maya Kreiner 20614736
+Found: Documents Upload Michael Sadeh 30518873
+Found: Documents Upload Michal Moussaffi 30103749
+Found: Documents Upload Naama Schwartz 20348952
+Found: Documents Upload Nicholas Lua k1317557a
+Found: Documents Upload Noam Perlson 03585885
+Found: Documents Upload Noga Inbar 20386244
+Found: Documents Upload Olivier Catel 77750053
+Found: Documents Upload Omri Elmaleh 066459926
+Found: Documents Upload Rachel Rosenbaum 20634414
+Found: Documents Upload Roberto Oltramonti 98989108
+Found: Documents Upload Roi Irani 30807981
+Found: Documents Upload Ronit Hemyan 05742307
+Found: Documents Upload Sarit Shley-Zondi 06650156
+Found: Documents Upload Shani Goldfrad 20374961
+Found: Documents Upload Shir Hoori 31254154
+Found: Documents Upload Shir Twerski 20302116
+Found: Documents Upload Shlomo Brand 30473404
+Found: Documents Upload Tal Henia 03748463
+Found: Documents Upload Theodore Motzkin 302308267
+Found: Documents Upload Timothy Keiderling 98989056
+Found: Documents Upload Tom Parnass 30828717
+Found: Documents Upload Yael Halfon 20892689
+Found: Documents Upload Yael Leokumovich 20434305
+Found: Documents Upload Yakov Podolniy 345278402
+Found: Documents Upload Yitzhak Mor 30095514
+Found: Documents Upload Yossi Mendelovich 02163429
+Found: Documents Upload Youngjae Lee 890732308
+https://scholarships.ekmd.huji.ac.il/home/General/GEN158-2021
+Get Doc Lib
+Found: Documents Upload Adi Schwartz 027162957
+Found: Documents Upload Adva Blau 040028615
+Found: Documents Upload Amit Loewenthal 032586216
+Found: Documents Upload Ben Bornstein 300093911
+Found: Documents Upload Efraim Panfil 02190076
+Found: Documents Upload Eran Tzidkiyahu 040192585
+Found: Documents Upload Idit Miller 066078213
+Found: Documents Upload Irit Shmuel 023780414
+Found: Documents Upload Itamar Dubinsky 032583684
+Found: Documents Upload Khader Sawaed 031481468
+Found: Documents Upload Limor Benyossef 02531534
+Found: Documents Upload Livnat Konopnydecleve 024297780
+Found: Documents Upload Maor Milgrom 036593192
+Found: Documents Upload Marta Furlan yb1396869
+Found: Documents Upload Michal Lehmann 04063871
+Found: Documents Upload Moria Barmaoz 066525460
+Found: Documents Upload Omri Elmaleh 066459926
+Found: Documents Upload Ronen Eidelman 017565672
+Found: Documents Upload Shirili Weisman 02905421
+Found: Documents Upload Uri Ansenberg 032567976
+https://scholarships.ekmd.huji.ac.il/home/NaturalScience/SCI75-2021
+Get Doc Lib
+Found: העלאת מסמכים - David Lilienfeldt 207238452
+Found: העלאת מסמכים - Efraim Panfil 02190076
+Found: העלאת מסמכים - Ignasi Valles pam732699
+Found: העלאת מסמכים - Kuku Blabla 058763178
+Found: העלאת מסמכים - Nikhil Arora k5247508
+Found: העלאת מסמכים - Priya Sharma u8140991
+Found: העלאת מסמכים - Songlin Shi e09746696
+Found: העלאת מסמכים - Surajit Kalita r2178176
+Found: העלאת מסמכים - Vladimiro Mujica 530902445
+Found: העלאת מסמכים - Yafei Zhang ec9715147
+https://scholarships.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW54-2021
+Get Doc Lib
+Found: העלאת מסמכים - Georgina Assfour 033715277
+Found: העלאת מסמכים - Li-At Perry 02948970
+Found: העלאת מסמכים - Shuli Levy 05983919
+https://scholarships.ekmd.huji.ac.il/home/SocialSciences/SOC215-2021
+Get Doc Lib
+Found: העלאת מסמכים - Alon Shalev 01189503
+Found: העלאת מסמכים - Chelomo Lubliner 342531167
+Found: העלאת מסמכים - crs 2082 327004263
+Found: העלאת מסמכים - Daniel Vainberg 30395028
+Found: העלאת מסמכים - Gal Chen 20432672
+Found: העלאת מסמכים - Michal Gal 206725707
+Found: העלאת מסמכים - Michal Lehmann 04063871
+Found: העלאת מסמכים - Noam Peterburg 30243984
+Found: העלאת מסמכים - Scott Singer 529149092
+Found: העלאת מסמכים - Shir Berebbi 20564495
+Found: העלאת מסמכים - Talia Fried 200124790
+Found: העלאת מסמכים - Yair Gorni 30835321
+Found: העלאת מסמכים - yonatan brander 34138231
+https://scholarships.ekmd.huji.ac.il/home/Agriculture/AGR167-2021
+Get Doc Lib
+Found: העלאת מסמכים - Peleg Schneider 315334664
+Found: העלאת מסמכים - Sivan Shiponi 30302651
+https://scholarships.ekmd.huji.ac.il/home/SocialSciences/SOC217-2021
+Get Doc Lib
+Found: העלאת מסמכים - Avital Sicron 30856580
+Found: העלאת מסמכים - Bar Rapaport 201081817
+Found: העלאת מסמכים - Bitya Neuhof 20104755
+Found: העלאת מסמכים - crs 2082 327004263
+Found: העלאת מסמכים - Devora Newman 30816074
+Found: העלאת מסמכים - Ester GOLAN 04340226
+Found: העלאת מסמכים - Gal Chen 20432672
+Found: העלאת מסמכים - Gideon Yoffe 305246548
+Found: העלאת מסמכים - Noa Cohen 20445010
+Found: העלאת מסמכים - Nur Kassem 31842722
+Found: העלאת מסמכים - Rawan Natsheh 06083939
+Found: העלאת מסמכים - Sera-Mar Wiechert 98989572
+Found: העלאת מסמכים - Shira Hebel 20570473
+Found: העלאת מסמכים - Tom Ziv 30264956
+Found: העלאת מסמכים - Yair Gorni 30835321
+Found: העלאת מסמכים - yonatan brander 34138231
+https://scholarships.ekmd.huji.ac.il/home/BUS/BUS11-2019
+Get Doc Lib
+Found: העלאת מסמכים - Mika Guzikevits 20424900
+https://scholarships.ekmd.huji.ac.il/home/Education/EDU127-2021
+Get Doc Lib
+Found: העלאת מסמכים - bar shutzman 30554947
+Found: העלאת מסמכים - Yonatan Fangervexler 32694167
+https://scholarships.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW56-2021
+Get Doc Lib
+Found: העלאת מסמכים - Einat Kramer 03444502
+https://scholarships.ekmd.huji.ac.il/home/Education/EDU128-2021
+Get Doc Lib
+Found: העלאת מסמכים - Baraah Abusaleh 318470069
+Found: העלאת מסמכים - Batsheva Wygoda 300076502
+Found: העלאת מסמכים - Dina Yosef 04065340
+Found: העלאת מסמכים - Gal Berman 20461327
+Found: העלאת מסמכים - Hadas Gabay 30549702
+Found: העלאת מסמכים - hadas zeitlin 20438489
+Found: העלאת מסמכים - Maya Carmon 312433691
+Found: העלאת מסמכים - Meirav Levin 02777687
+Found: העלאת מסמכים - Merav Shattah 02562017
+Found: העלאת מסמכים - Natali Goueta 037122173
+Found: העלאת מסמכים - Ruth Netzerturg 03231282
+Found: העלאת מסמכים - Shani Cohen 315706176
+Found: העלאת מסמכים - Shir Rozenblat 203526041
+Found: העלאת מסמכים - Tamar Eisenstock 01534383
+Found: העלאת מסמכים - Tomer Danziger 03447225
+Found: העלאת מסמכים - Vered Gavrielov 301604070
+Found: העלאת מסמכים - Yuval Zonenberg 20571223
+https://scholarships.ekmd.huji.ac.il/home/Education/EDU129-2021
+Get Doc Lib
+Found: העלאת מסמכים - Ortal Gabrieli 30539176
+Found: העלאת מסמכים - Ruth Netzerturg 03231282
+https://scholarships.ekmd.huji.ac.il/home/Education/EDU130-2021
+Get Doc Lib
+**********************
+Windows PowerShell transcript end
+End time: 20220110160152
+**********************

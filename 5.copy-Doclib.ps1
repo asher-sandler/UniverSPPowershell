@@ -39,15 +39,24 @@ else
 			#$docLibNames += "Bioengineering (582)"
 			#$docLibNames += "אסמהאן מסרי-חרזאללה"
 			#$docLibNames += "פרידה ניסים-אמיתי"
-			$docLibNames += "applicantsCV"
+			#$docLibNames += "applicantsCV"
+			#$docLibNames += "פיסיקה (541)"
+			$docLibNames += "מתמטיקה (530)"
+			$docLibNames += "כימיה (560)"
+			$docLibNames += "ביוטכנולוגיה (890)"
+			$docLibNames += "פיסיקה יישומית (511)"
+			$docLibNames += "מדעי החיים"
+			$docLibNames += "מדעי כדור הארץ"
+			$docLibNames += "מדעי הסביבה (591)"
+			$docLibNames += "ביו-הנדסה (582)"
 			#$docLibNames += "C MA and PhD students"
 			
 			
 			foreach($docLibName in $docLibNames){
 			
 				$schemaDocLibSrc1 =  get-ListSchema $oldSiteURL $docLibName
-				write-Host 48
-				read-host
+				#write-Host 48
+				#read-host
 				#$schemaDocLib1 | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-DocLib1.json")
 				$sourceDocObj = get-SchemaObject $schemaDocLibSrc1 
 				$sourceDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$groupName+"-DocLibSrc1.json")

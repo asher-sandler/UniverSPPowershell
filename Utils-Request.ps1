@@ -1489,6 +1489,8 @@ function add-TextFields($siteUrl, $listName, $fieldObj){
 }
 
 function add-BooleanFields($siteUrl, $listName, $fieldObj){
+	#write-Host "$siteUrl, $listName, $fieldObj"
+	#$read-host
         #Setup the context
         $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
         $Ctx.Credentials = $Credentials
@@ -1503,7 +1505,7 @@ function add-BooleanFields($siteUrl, $listName, $fieldObj){
         $Ctx.Load($Fields)
         $Ctx.executeQuery()
         $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
-        if($NewField -ne $NULL) 
+        if(($NewField -ne $NULL) -and ($NewField.InternalName -eq $($fieldObj.Name))) 
         {
             Write-host "Column $Name already exists in the List!" -f Yellow
         }
@@ -1511,9 +1513,9 @@ function add-BooleanFields($siteUrl, $listName, $fieldObj){
         {
 			$DisplayName = $fieldObj.DisplayName
 			$IsRequired = $fieldObj.Required
+			$DefaultValue="0"
 			
-			#Define XML for Field Schema
-            $FieldSchema = "<Field Type='Boolean' DisplayName='$DisplayName' Required='$IsRequired'  />"
+            $FieldSchema = "<Field Type='Boolean' DisplayName='$DisplayName' Required='$IsRequired'><Default>$DefaultValue</Default></Field>"
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
             $Ctx.ExecuteQuery()   
@@ -3797,7 +3799,73 @@ function edt-HomePage($newSiteName, $content){
 	$ctx.ExecuteQuery()
 	write-host "$pageName Was Updated" -foregroundcolor Green
 }
+function get-HtmlInstructTag($siteURL, $htmlContent){
+	$aHtmlTags = @()
+	$instrHe =  'href="/home/Pages/InstructionsHe.aspx"'
+	$instrEn =  'href="/home/Pages/InstructionsEn.aspx"'
+	
+	
+    $HTML = New-Object -Com "HTMLFile"
+	$HTML.IHTMLDocument2_write($htmlContent)
 
+		$HTML.All.Tags('a') | ForEach-Object{
+		 $aTag = "" | Select-Object URL,lang,innerHTML,outerHTML,innerText,outerText,href,parent
+		 if ($_.outerHTML.Contains($instrHe)){
+			$aTag.URL = $siteURL
+			$aTag.innerHTML = $_.innerHTML
+			$aTag.outerHTML = $_.outerHTML
+			$aTag.outerText = $_.outerText
+			 
+			$xt = $_.innerText
+			#write-host "XT: $xt" -f Cyan
+			 
+			$aTag.innerText = $_.parentNode.innerText -replace $aTag.outerText,""
+			$aTag.innerText = $aTag.innerText.Trim()
+			$aTag.innerHTML = $aTag.innerHTML
+			$aTag.parent = $_.parentNode.outerHTML
+
+			$xto = $_.parentNode.innerText
+			#write-host "XTO: $xto" -f Green
+			 
+			$xtx = $xto -replace $xt, ""
+			#write-host $xtx -f Yellow
+			 
+			$aTag.innerText = $xtx.trim()
+			$aTag.href = $_.pathname
+			#$aTag.foundInFile = $fileCont.ToLower().contains($_.parentNode.outerHTML.ToLower())
+			$aTag.lang = "He"
+			$aHtmlTags += $aTag
+			#Write-Host "He" -f Green
+		}
+		if ($_.outerHTML.Contains($instrEn)){
+			$aTag.URL = $oldSiteURL
+			$aTag.innerHTML = $_.innerHTML
+			$aTag.outerHTML = $_.outerHTML
+			$aTag.outerText = $_.outerText
+
+			$xt = $_.innerText
+			#write-host "XT: $xt" -f Cyan
+			 
+			$aTag.innerText = $_.parentNode.innerText -replace $aTag.outerText,""
+			$aTag.innerText = $aTag.innerText.Trim()
+			$aTag.innerHTML = $aTag.innerHTML
+			$aTag.parent = $_.parentNode.outerHTML
+
+			$xto = $_.parentNode.innerText
+			#write-host "XTO: $xto" -f Green
+			$xtx = $xto -replace $xt, ""
+			#write-host $xtx -f Yellow
+			$aTag.innerText = $xtx.trim()
+			$aTag.href = $_.pathname
+			 
+			$aTag.lang = "En"
+			$aHtmlTags += $aTag
+			#Write-Host "En" -f Yellow
+		}
+		 
+	}	
+	return $aHtmlTags	
+}
 function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 	$siteNameOld = get-UrlWithF5 $oldSiteName
 	$siteNameNew = get-UrlWithF5 $newSiteName
@@ -3805,12 +3873,43 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 	$relUrlOld = get-RelURL $siteNameOld
 	$relUrlNew = get-RelURL $siteNameNew
 	$crlf = [char][int]13+[char][int]10
+
 	$backupPageContent = $pageContent+$crlf+$crlf+"======================="+$crlf+$crlf
-	write-host "Replace content in Default Page:" -foregroundcolor Yellow
-	write-host "Find what: $relUrlOld" -foregroundcolor Yellow
-	write-host "Replace To: $relUrlNew" -foregroundcolor Yellow
+	#write-host "Replace content in Default Page:" -foregroundcolor Yellow
+	#write-host "Find what: $relUrlOld" -foregroundcolor Yellow
+	#write-host "Replace To: $relUrlNew" -foregroundcolor Yellow
+
+	$newPageCont = $pageContent -Replace $relUrlOld, $relUrlNew	
+	
+	$aHtmlTags = get-HtmlInstructTag $oldSiteName $pageContent
+
+    write-Host "newSiteName : $newSiteName" -f Cyan
+	if (![string]::isNullOrEmpty($aHtmlTags)){
+		
+		$stringA = 'a href="/home/Pages/InstructionsEn.aspx" target="_blank"'
+		$stringARX = 'a href="' + $newSiteName + "/Pages/DocumentsUpload.aspx"+'"'
+		
+		$stringATR = 'Documents Upload page'
+		$stringSR  = 'B. The following documents should be uploaded via the '
+		
+		if ($aHtmlTags.Lang -eq "He"){
+			$stringATR = "דף העלאת המסמכים"
+			$stringSR  = 'ב. להעלות את המסמכים הבאים באמצעות '
+			$stringA = 'a href="/home/Pages/InstructionsHe.aspx" target="_blank"'
+		}
+		
+		# "innerText":  "ב. להעלות את המסמכים הבאים לתיקיית העלאת מסמכים אישית לפי",
+		$newPageCont = $newPageCont -Replace $aHtmlTags.innerText, $stringSR
+
+		# "outerText":  "ההוראות המופיעות כאן"
+		$newPageCont = $newPageCont -Replace $aHtmlTags.outerText, $stringATR
+
+		$newPageCont = $newPageCont -Replace $stringA, $stringARX
+			
+	}
+	
 				
-	$newPageCont = $pageContent -Replace $relUrlOld, $relUrlNew
+	
 	$backupPageContent += "Replace content in Default Page:" + $crlf
 	$backupPageContent += "Find what: $relUrlOld" + $crlf
 	$backupPageContent += "Replace To: $relUrlNew" + $crlf + $crlf+$crlf+"======================="+$crlf+$crlf
@@ -5400,7 +5499,7 @@ function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
 	if ($listItems.Count -eq 0){
 		write-host "Create-WPPage: $pageName on $siteURL" -foregroundcolor Cyan
 		
-		Write-host -f Yellow "Getting Page Layout..." -NoNewline
+		#Write-host -f Yellow "Getting Page Layout..." -NoNewline
 		#Get the publishing Web 
 		$PublishingWeb = [Microsoft.SharePoint.Client.Publishing.PublishingWeb]::GetPublishingWeb($Ctx, $Ctx.Web) 
 		$ctx.Load($PublishingWeb)
@@ -5419,7 +5518,7 @@ function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
 		write-Host "PageLayouts Count: $($PageLayouts.count)"
 		$Ctx.Load($PageLayoutItem)
 		$Ctx.ExecuteQuery()
-		Write-host -f Green "Done!"
+		#Write-host -f Green "Done!"
 		 
 		#Create Publishing page
 		Write-host -f Yellow "Creating New Page..." -NoNewline
@@ -5428,7 +5527,7 @@ function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
 		$PageInfo.PageLayoutListItem = $PageLayoutItem
 		$Page = $PublishingWeb.AddPublishingPage($PageInfo) 
 		$Ctx.ExecuteQuery()
-		Write-host -f Green "Done!"
+		#Write-host -f Green "Done!"
 		 
 		#Get the List item of the page
 		Write-host -f Yellow "Updating Page Content..." -NoNewline
@@ -5441,7 +5540,7 @@ function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
 		#$ListItem["PublishingPageContent"] = $PageContent
 		$ListItem.Update()
 		$Ctx.ExecuteQuery()
-		Write-host -f Green "Done!"
+		#Write-host -f Green "Done!"
 		 
 		#Publish the page
 		Write-host -f Yellow "Checking-In and Publishing the Page..." -NoNewline

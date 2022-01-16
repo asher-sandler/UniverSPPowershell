@@ -18,6 +18,7 @@ $Credentials = get-SCred
 
  
  $siteSrcURL ="https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN32-2022";
+ $siteSrcURL ="https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN31-2021";
  
  $sourceListName = "Applicants"
  $needViewName = "administration"
@@ -81,7 +82,7 @@ $Credentials = get-SCred
 		}		
  }
 
-$excludeFromFields = @()
+$excludeFromFields = ""
 foreach($fldobj in $sourceListObj){
 	$addListToExclude = $true
 	foreach($fldx in $outViewFields){
@@ -92,7 +93,7 @@ foreach($fldobj in $sourceListObj){
 	}
 	if ($addListToExclude){
 		
-		$excludeFromFields += '"'+$fldobj.DisplayName+'",'	
+		$excludeFromFields += $fldobj.DisplayName+','	
 	}
 	
 }

@@ -1,0 +1,58 @@
+[
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/Pages/Form.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/Pages/Form.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "GEN31-2021.xml",
+        "WebPartValueDST":  "GEN32-2022.xml"
+    },
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/Pages/SubmissionStatus.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/Pages/SubmissionStatus.aspx",
+        "WebPartName":  "SubmissionButton WP",
+        "WebPartKey":  "EmailTemplateName",
+        "WebPartValueSRC":  "GEN31-2021-mail-He.txt",
+        "WebPartValueDST":  "GEN32-2022-mail-He.txt"
+    },
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/Pages/FormArrng.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/Pages/FormArrng.aspx",
+        "WebPartName":  "Dynamic Form - v 2.0",
+        "WebPartKey":  "fileName",
+        "WebPartValueSRC":  "GEN31-2021-Arrang.xml",
+        "WebPartValueDST":  "GEN32-2022-arrang.xml"
+    },
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/SitePages/UnitHeadRecommendation.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/SitePages/UnitHeadRecommendation.aspx",
+        "WebPartName":  "MyUnitHead",
+        "WebPartKey":  "ListId",
+        "WebPartValueSRC":  "5d0904cf-fcb2-4acf-b61c-d2235982876a",
+        "WebPartValueDST":  "5575d334-ee22-4b4b-91b8-8448b3757e99"
+    },
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/SitePages/UnitHeadRecommendation.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/SitePages/UnitHeadRecommendation.aspx",
+        "WebPartName":  "MyUnitHead",
+        "WebPartKey":  "ListName",
+        "WebPartValueSRC":  "{5D0904CF-FCB2-4ACF-B61C-D2235982876A}",
+        "WebPartValueDST":  "{5575D334-EE22-4B4B-91B8-8448B3757E99}"
+    },
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/SitePages/UnitHeadRecommendation.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/SitePages/UnitHeadRecommendation.aspx",
+        "WebPartName":  "MyUnitHead",
+        "WebPartKey":  "TitleUrl",
+        "WebPartValueSRC":  "/home/general/GEN31-2021/Lists/MyUnitHead",
+        "WebPartValueDST":  "/home/general/GEN32-2022/Lists/MyUnitHead"
+    },
+    {
+        "SourcePageURL":  "/home/general/GEN31-2021/SitePages/UnitHeadRecommendation.aspx",
+        "DestPageURL":  "/home/general/GEN32-2022/SitePages/UnitHeadRecommendation.aspx",
+        "WebPartName":  "Button_Send_Mail - VisualWebPart1",
+        "WebPartKey":  "Config_File_Name",
+        "WebPartValueSRC":  "GEN31-2021-RecMailConfig.xml",
+        "WebPartValueDST":  "GEN32-2022-RecMailConfig.xml"
+    }
+]

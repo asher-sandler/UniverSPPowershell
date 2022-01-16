@@ -1,0 +1,329 @@
+[
+    {
+        "Title":  "תפריט ניהול",
+        "Url":  "/home/humanities/HUM184-2021/_layouts/viewlsts.aspx?BaseType=0",
+        "Items":  [
+                      {
+                          "Title":  "מועמדים",
+                          "Url":  "/home/humanities/HUM184-2021/Lists/applicants/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "applicants",
+                          "Name":  "applicants",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar38\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField DisplayName=\"firstName\" Name=\"firstName\" Type=\"Text\" ID=\"{012f96a3-6169-4bf6-aa97-c6ea3b0ec88c}\" Group=\"\" StaticName=\"firstName\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surname\" Name=\"surname\" Type=\"Text\" ID=\"{95e6bfde-d2b7-4aa3-b6f4-76196a639163}\" Group=\"\" StaticName=\"surname\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"gender\" Name=\"gender\" Type=\"Text\" ID=\"{a8cf3abb-3486-4c81-9f31-41df6c09b43a}\" Group=\"\" StaticName=\"gender\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenship\" Name=\"citizenship\" Type=\"Text\" ID=\"{bd64d1f3-699d-4c52-aa32-7ddd2b563c38}\" Group=\"\" StaticName=\"citizenship\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"email\" Name=\"email\" Type=\"Text\" ID=\"{54f8438b-ab49-45e2-a2ac-069688b37420}\" Group=\"\" StaticName=\"email\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"homePhone\" Name=\"homePhone\" Type=\"Text\" ID=\"{594c3a61-c847-4717-9141-3f5a061f0c8b}\" Group=\"\" StaticName=\"homePhone\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar8\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"workPhone\" Name=\"workPhone\" Type=\"Text\" ID=\"{ccc5aab7-ed2f-4e43-8910-83c0046bde27}\" Group=\"\" StaticName=\"workPhone\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar9\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cellPhone\" Name=\"cellPhone\" Type=\"Text\" ID=\"{b5580ea6-6936-41d2-b6fc-64d4949f12e2}\" Group=\"\" StaticName=\"cellPhone\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar10\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"address\" Name=\"address\" Type=\"Text\" ID=\"{b66cb8e7-c330-456d-b4ee-276746e9d691}\" Group=\"\" StaticName=\"address\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar11\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"country\" Name=\"country\" Type=\"Text\" ID=\"{518cb54b-2ad2-445e-ba04-de6066c36cfb}\" Group=\"\" StaticName=\"country\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar12\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zip\" Name=\"zip\" Type=\"Text\" ID=\"{4723b413-edb7-4f8c-bf34-75f2de1145b3}\" Group=\"\" StaticName=\"zip\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar13\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitle\" Name=\"academTitle\" Type=\"Text\" ID=\"{1ef33fd6-0394-4571-8b49-a780132cd538}\" Group=\"\" StaticName=\"academTitle\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar14\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"city\" Name=\"city\" Type=\"Text\" ID=\"{f20b85be-f5ab-436a-b0d1-bbb1efc374f3}\" Group=\"\" StaticName=\"city\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar15\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"state\" Name=\"state\" Type=\"Text\" ID=\"{4c7d1efa-7728-4f8e-a54c-ffbfe068cb10}\" Group=\"\" StaticName=\"state\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar16\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"academTitleHe\" Name=\"academTitleHe\" Type=\"Text\" ID=\"{252ce063-4ac1-41c9-b207-b0d0d917bd3e}\" Group=\"\" StaticName=\"academTitleHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar17\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"firstNameHe\" Name=\"firstNameHe\" Type=\"Text\" ID=\"{0fc014a6-af25-47a9-8d35-704044d95049}\" Group=\"\" StaticName=\"firstNameHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar18\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"surnameHe\" Name=\"surnameHe\" Type=\"Text\" ID=\"{b45fbff6-bff8-48f5-9e21-b0f1807741cd}\" Group=\"\" StaticName=\"surnameHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar19\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"IdHe\" Name=\"IdHe\" Type=\"Text\" ID=\"{c15255d4-4f62-4c18-85f4-8845bab27b8d}\" Group=\"\" StaticName=\"IdHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar20\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"addressHe\" Name=\"addressHe\" Type=\"Text\" ID=\"{e09c1725-a351-4192-8152-e3134d8227be}\" Group=\"\" StaticName=\"addressHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar21\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"countryHe\" Name=\"countryHe\" Type=\"Text\" ID=\"{012f048a-fafb-42f5-bcaa-2dcecd9b63dc}\" Group=\"\" StaticName=\"countryHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar22\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"cityHe\" Name=\"cityHe\" Type=\"Text\" ID=\"{be15e9b4-e255-4b42-99b7-2832217757f5}\" Group=\"\" StaticName=\"cityHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar23\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"zipHe\" Name=\"zipHe\" Type=\"Text\" ID=\"{1854e4ab-b9c5-4835-93cd-21aa0e6c6527}\" Group=\"\" StaticName=\"zipHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar24\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"citizenshipHe\" Name=\"citizenshipHe\" Type=\"Text\" ID=\"{6bd8f210-e24b-4631-82c7-4eb554719543}\" Group=\"\" StaticName=\"citizenshipHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar25\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"userName\" Name=\"userName\" Type=\"Text\" ID=\"{b1c4aeb5-4f44-4cfe-9873-b9db12fdc67f}\" Group=\"\" StaticName=\"userName\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar26\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderMail\" Name=\"folderMail\" Type=\"Text\" ID=\"{d0fc5d4f-45e1-4d02-aa53-436f04a7981b}\" Group=\"\" StaticName=\"folderMail\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar27\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"genderHe\" Name=\"genderHe\" Type=\"Text\" ID=\"{c7112cce-68cb-40fc-acd4-b0bdefaa9f77}\" Group=\"\" StaticName=\"genderHe\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar28\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Format=\"Hyperlink\" Description=\"\" DisplayName=\"folderLink\" Type=\"URL\" ID=\"{4c9ca88b-2269-4a6e-8ea7-00c48f7b3396}\" Name=\"folderLink\" Group=\"\" StaticName=\"folderLink\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar29\" RowOrdinal=\"0\" ColName2=\"nvarchar30\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"birthYear\" Name=\"birthYear\" Type=\"Text\" ID=\"{c03d3950-3bac-475c-9e0e-b4a2dba9e08e}\" Group=\"\" StaticName=\"birthYear\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar31\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"folderName\" Name=\"folderName\" Type=\"Text\" ID=\"{c9920bf1-c285-4707-9458-c0a19157b30c}\" Group=\"\" StaticName=\"folderName\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar32\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"studentId\" Name=\"studentId\" Type=\"Text\" ID=\"{57f63795-71e5-4006-b92b-6b6604353767}\" Group=\"\" StaticName=\"studentId\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" ColName=\"nvarchar33\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"deadline\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" ID=\"{3da5c911-7cdf-464e-b0de-fd45e1829111}\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" StaticName=\"deadline\" Name=\"deadline\" ColName=\"datetime1\" RowOrdinal=\"0\" Version=\"1\"\u003e\u003cDefault\u003e2022-02-15T00:00:00Z\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"mobile\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{53aaeacc-2f69-4990-9ccb-c534a6955f99}\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" StaticName=\"mobile\" Name=\"mobile\" ColName=\"nvarchar35\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"submit\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{c8da52ae-4f1d-4f7d-adfe-20886b402e5a}\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" StaticName=\"submit\" Name=\"submit\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"URL\" DisplayName=\"documentsCopyFolder\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Hyperlink\" ID=\"{6f6b16d7-9655-456f-8cd6-b463dae77704}\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" StaticName=\"documentsCopyFolder\" Name=\"documentsCopyFolder\" ColName=\"nvarchar34\" RowOrdinal=\"0\" ColName2=\"nvarchar36\" RowOrdinal2=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"bi_Currency\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"TRUE\" Group=\"BI-EKMD\" ID=\"{47c11e5a-adc8-4500-984e-961fa330de1e}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_Currency\" Name=\"bi_Currency\" Version=\"1\" ColName=\"nvarchar37\" RowOrdinal=\"0\"\u003e\u003cDefault\u003eשקל\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003eשקל\u003c/CHOICE\u003e\u003cCHOICE\u003eדולר\u003c/CHOICE\u003e\u003cCHOICE\u003eיורו\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"bi_IsWinner\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Group=\"BI-EKMD\" ID=\"{6ce62d1f-2e97-4ba2-91b7-ea1f2d277338}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_IsWinner\" Name=\"bi_IsWinner\" Version=\"1\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Note\" DisplayName=\"bi_Notes\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" NumLines=\"6\" RichText=\"FALSE\" Sortable=\"FALSE\" Group=\"BI-EKMD\" ID=\"{f3a8765f-8e91-4869-bbe8-2b503e4328c2}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_Notes\" Name=\"bi_Notes\" Version=\"1\" ColName=\"ntext2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Note\" DisplayName=\"bi_Reason\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" NumLines=\"6\" RichText=\"FALSE\" Sortable=\"FALSE\" Group=\"BI-EKMD\" ID=\"{0b00d7db-9e71-4c00-a955-4e397be31d71}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_Reason\" Name=\"bi_Reason\" Version=\"1\" ColName=\"ntext3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"bi_ScholarshipReportDate\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateOnly\" Group=\"BI-EKMD\" FriendlyDisplayFormat=\"Disabled\" ID=\"{8ca5e9c4-ed1c-4c18-8482-649b33cd1d98}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_ScholarshipReportDate\" Name=\"bi_ScholarshipReportDate\" Version=\"1\" ColName=\"datetime2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Number\" DisplayName=\"bi_SumDistributed\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Group=\"BI-EKMD\" ID=\"{49cb4183-e0c7-4254-a8fc-844226094ae4}\" SourceID=\"{1ac6c060-a99e-4ddc-b33a-9fa311c35b48}\" StaticName=\"bi_SumDistributed\" Name=\"bi_SumDistributed\" Version=\"1\" ColName=\"float1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"DateTime\" DisplayName=\"lastSubmit\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"DateTime\" FriendlyDisplayFormat=\"Disabled\" ID=\"{cafa161f-0e1e-42dc-9abc-8ad585adc8b0}\" SourceID=\"{E177BCFF-75BA-42A3-9EB0-C88AAC24ACA4}\" StaticName=\"lastSubmit\" Name=\"lastSubmit\" ColName=\"datetime3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"Country\" Type=\"Text\" Required=\"FALSE\" ID=\"{e778556c-26df-49b9-82e7-3e66bb65d66d}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"Country0\" Name=\"Country0\" ColName=\"nvarchar1\" RowOrdinal=\"0\" Version=\"1\" /\u003e",
+                                             "\u003cField DisplayName=\"birthDate\" Type=\"Text\" Required=\"FALSE\" ID=\"{52979cf5-e11f-4cc4-873f-163147db948d}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"birthDate\" Name=\"birthDate\" ColName=\"nvarchar2\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"maritalStatus\" Type=\"Text\" Required=\"FALSE\" ID=\"{55f7efd5-f6bd-4adb-a946-3134330ed409}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"maritalStatus\" Name=\"maritalStatus\" ColName=\"nvarchar40\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"childrenNum\" Type=\"Text\" Required=\"FALSE\" ID=\"{74cc8ed4-3592-44b8-b7e5-f91bb628cfa8}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"childrenNum\" Name=\"childrenNum\" ColName=\"nvarchar41\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"phone\" Type=\"Text\" Required=\"FALSE\" ID=\"{034c0e23-0024-42c1-bf45-a795bbe18fec}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"phone\" Name=\"phone\" ColName=\"nvarchar42\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"department\" Type=\"Text\" Required=\"FALSE\" ID=\"{617aac00-1440-4369-bc5b-b17fc7b693ec}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"department\" Name=\"department\" ColName=\"nvarchar43\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"researchSubject\" Type=\"Text\" Required=\"FALSE\" ID=\"{437370b4-8480-4173-be52-a42b333f78c6}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"researchSubject\" Name=\"researchSubject\" ColName=\"nvarchar44\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"instructor\" Type=\"Text\" Required=\"FALSE\" ID=\"{4573b5ae-5bef-4913-a019-bc9be942a4f5}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"instructor\" Name=\"instructor\" ColName=\"nvarchar45\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"instructor2\" Type=\"Text\" Required=\"FALSE\" ID=\"{537e43d9-d75f-4f55-b7ae-9113857ece6f}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"instructor2\" Name=\"instructor2\" ColName=\"nvarchar46\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishMa\" Type=\"Text\" Required=\"FALSE\" ID=\"{353475a9-a3d2-4c97-bf59-b404f5aa62ab}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"finishMa\" Name=\"finishMa\" ColName=\"nvarchar47\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"finishMaYear\" Type=\"Text\" Required=\"FALSE\" ID=\"{24b0bea2-4c46-454e-b420-f78f3ec30207}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"finishMaYear\" Name=\"finishMaYear\" ColName=\"nvarchar48\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"transitionStage2\" Type=\"Text\" Required=\"FALSE\" ID=\"{6bf54e68-2bdb-4a8c-a895-653951991096}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"transitionStage2\" Name=\"transitionStage2\" ColName=\"nvarchar49\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"transitionStage2Date\" Type=\"Text\" Required=\"FALSE\" ID=\"{2013e144-6822-4784-a6e7-1fdc8b61f684}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"transitionStage2Date\" Name=\"transitionStage2Date\" ColName=\"nvarchar50\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"EnglishLevel\" Type=\"Text\" Required=\"FALSE\" ID=\"{5efd2212-88ec-4cda-932d-7cebbdc6d2a0}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"EnglishLevel\" Name=\"EnglishLevel\" ColName=\"nvarchar51\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"Lang1\" Type=\"Text\" Required=\"FALSE\" ID=\"{9e361441-ba75-4487-a75d-f2c840eba633}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"Lang1\" Name=\"Lang1\" ColName=\"nvarchar52\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"LangLevel1\" Type=\"Text\" Required=\"FALSE\" ID=\"{54043f3e-51ed-495d-a04c-b3a74f72d5f8}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"LangLevel1\" Name=\"LangLevel1\" ColName=\"nvarchar53\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"Lang2\" Type=\"Text\" Required=\"FALSE\" ID=\"{7d0feb66-be37-453a-88d3-ce6537fd1cf1}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"Lang2\" Name=\"Lang2\" ColName=\"nvarchar54\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"LangLevel2\" Type=\"Text\" Required=\"FALSE\" ID=\"{9c8b1da5-07fa-42c7-bb77-3546196666c1}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"LangLevel2\" Name=\"LangLevel2\" ColName=\"nvarchar55\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"Lang3\" Type=\"Text\" Required=\"FALSE\" ID=\"{f09c0018-4b13-4ae4-8e14-2ac6914f4a29}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"Lang3\" Name=\"Lang3\" ColName=\"nvarchar56\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"LangLevel3\" Type=\"Text\" Required=\"FALSE\" ID=\"{f6109a1a-1dfc-4b31-875a-0c1e96f81dd5}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"LangLevel3\" Name=\"LangLevel3\" ColName=\"nvarchar57\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"additionalPassport\" Type=\"Text\" Required=\"FALSE\" ID=\"{74e7e4b7-5e8a-49c8-a52e-e69c3612a13e}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"additionalPassport\" Name=\"additionalPassport\" ColName=\"nvarchar58\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"RecommendName1\" Type=\"Text\" Required=\"FALSE\" ID=\"{e5bea09b-bac1-4e5b-aae3-b0a03ddd8488}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"RecommendName1\" Name=\"RecommendName1\" ColName=\"nvarchar59\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"RecommendEmail1\" Type=\"Text\" Required=\"FALSE\" ID=\"{48ef3f37-2ad8-49e5-adb1-9198f1c26473}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"RecommendEmail1\" Name=\"RecommendEmail1\" ColName=\"nvarchar60\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"RecommendName2\" Type=\"Text\" Required=\"FALSE\" ID=\"{d8916077-d8c4-4873-82ca-21dbd19ac900}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"RecommendName2\" Name=\"RecommendName2\" ColName=\"nvarchar61\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"RecommendEmail2\" Type=\"Text\" Required=\"FALSE\" ID=\"{c54038eb-5324-4ca6-a9f2-20873620e46e}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"RecommendEmail2\" Name=\"RecommendEmail2\" ColName=\"nvarchar62\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mentor1\" Type=\"Text\" Required=\"FALSE\" ID=\"{c3dcd8cc-1a04-4283-a35d-020dc3b8cda0}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"mentor1\" Name=\"mentor1\" ColName=\"nvarchar63\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"mentor2\" Type=\"Text\" Required=\"FALSE\" ID=\"{e71a4dd4-2c26-48c7-943d-5fe510631e17}\" SourceID=\"{e177bcff-75ba-42a3-9eb0-c88aac24aca4}\" StaticName=\"mentor2\" Name=\"mentor2\" ColName=\"nvarchar64\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_HUM184-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "רשימת תוכן קובץ",
+                          "Url":  "/home/humanities/HUM184-2021/Lists/DocType/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "DocType",
+                          "Name":  "DocType",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"Required\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{50522a9e-bc2f-41b4-ab65-c650f64f30aa}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"Required\" Name=\"Required\" ColName=\"bit1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Number\" DisplayName=\"FilesNumber\" Required=\"TRUE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Decimals=\"0\" Direction=\"None\" ID=\"{6d6ba94a-f3bb-4e47-830a-00d54aebeb46}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"FilesNumber\" Name=\"FilesNumber\" ColName=\"float1\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e1\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"fromMail\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{573be5e9-5f4e-4f33-bd7d-a28ad35fb239}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"fromMail\" Name=\"fromMail\" ColName=\"bit2\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"source_field\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{3735110f-5ba6-4097-8713-8181fb7f09a8}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"source_field\" Name=\"source_field\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"ApplicantPermissions\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" FillInChoice=\"FALSE\" ID=\"{ff35ba1f-5769-4101-9002-f4c290c37090}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"ApplicantPermissions\" Name=\"ApplicantPermissions\" ColName=\"nvarchar4\" RowOrdinal=\"0\"\u003e\u003cDefault\u003econtribute\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003econtribute\u003c/CHOICE\u003e\u003cCHOICE\u003eread\u003c/CHOICE\u003e\u003cCHOICE\u003eview\u003c/CHOICE\u003e\u003cCHOICE\u003enone\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"path\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{0149799f-d80a-419a-a91e-ca2957b35f14}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"path\" Name=\"path\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Boolean\" DisplayName=\"limit_upload\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" ID=\"{900e01ed-26e9-468e-a7e7-f34b8641eecc}\" SourceID=\"{921AF80E-F794-4D47-8BC3-13F5EC48B334}\" StaticName=\"limit_upload\" Name=\"limit_upload\" ColName=\"bit3\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e0\u003c/Default\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "EKMD\\all_apps_grpsug",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Read"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_HUM184-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control,Limited Access"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "מחיקת תיקים ריקים",
+                          "Url":  "/home/humanities/HUM184-2021/Pages/DeleteEmptyFolders.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "DeleteEmptyFolders.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "תיקים שהוגשו",
+                          "Url":  "/home/humanities/HUM184-2021/Submitted/Forms/AllItems.aspx",
+                          "OldUrl":  "/home/humanities/HUM146-2021/Submitted/Forms/AllItems.aspx",
+                          "Type":  "DocLib",
+                          "InnerName":  "Submitted",
+                          "Name":  "Submitted",
+                          "IsOldMenu":  false,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Lookup\" DisplayName=\"תוכן קובץ\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" List=\"{A580884A-25DB-422B-B346-DC8AF453CF48}\" ShowField=\"Title\" UnlimitedLengthInDocumentLibrary=\"FALSE\" RelationshipDeleteBehavior=\"None\" ID=\"{b5f560c2-0f8d-4085-8cbe-a3ec56b88951}\" SourceID=\"{4AFD5CEC-89B6-4356-B26B-971B287A66C2}\" StaticName=\"_x05ea__x05d5__x05db__x05df__x0020__x05e7__x05d5__x05d1__x05e5_\" Name=\"_x05ea__x05d5__x05db__x05df__x0020__x05e7__x05d5__x05d1__x05e5_\" ColName=\"int1\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField DisplayName=\"description\" Type=\"Text\" Required=\"FALSE\" ID=\"{d14688cd-f3e1-4a9f-b6d6-7dd680d27e40}\" SourceID=\"{4afd5cec-89b6-4356-b26b-971b287a66c2}\" StaticName=\"description0\" Name=\"description0\" ColName=\"nvarchar1\" RowOrdinal=\"0\" Version=\"1\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_HUM146-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "Final",
+                          "Url":  "/home/humanities/HUM184-2021/Final/Forms/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "DocLib",
+                          "InnerName":  "Final",
+                          "Name":  "Final",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{8553196d-ec8d-4564-9861-3dbe931050c8}\" ShowInFileDlg=\"FALSE\" ShowInVersionHistory=\"FALSE\" Type=\"File\" Name=\"FileLeafRef\" DisplayName=\"שם\" AuthoringInfo=\"(לשימוש בטפסים)\" List=\"Docs\" FieldRef=\"ID\" ShowField=\"LeafName\" JoinColName=\"DoclibRowId\" JoinRowOrdinal=\"0\" JoinType=\"INNER\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"FileLeafRef\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" ShowInNewForm=\"FALSE\" ShowInFileDlg=\"FALSE\" DisplayName=\"כותרת\" Sealed=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Choice\" DisplayName=\"Stage\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" Format=\"Dropdown\" Direction=\"None\" FillInChoice=\"FALSE\" ID=\"{1c2f4f2d-56b5-4c5c-aece-f813a94eb266}\" SourceID=\"{AB0AB3AF-7735-4203-BB89-66D89F667E35}\" StaticName=\"Stage\" Name=\"Stage\" ColName=\"nvarchar10\" RowOrdinal=\"0\"\u003e\u003cDefault\u003e-\u003c/Default\u003e\u003cCHOICES\u003e\u003cCHOICE\u003e-\u003c/CHOICE\u003e\u003cCHOICE\u003e1\u003c/CHOICE\u003e\u003cCHOICE\u003e2\u003c/CHOICE\u003e\u003c/CHOICES\u003e\u003c/Field\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_HUM184-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      },
+                      {
+                          "Title":  "מועמדים שביטלו",
+                          "Url":  "/home/humanities/HUM184-2021/Lists/cancelledApplicantsList/AllItems.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Lists",
+                          "InnerName":  "cancelledApplicantsList",
+                          "Name":  "cancelledApplicantsList",
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  [
+                                             "\u003cField ID=\"{fa564e0f-0c70-4ab9-b863-0177e6ddd247}\" Type=\"Text\" Name=\"Title\" DisplayName=\"כותרת\" Required=\"TRUE\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Title\" FromBaseType=\"TRUE\" ColName=\"nvarchar7\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField ID=\"{67df98f4-9dec-48ff-a553-29bece9c5bf4}\" ColName=\"tp_HasAttachment\" RowOrdinal=\"0\" Type=\"Attachments\" Name=\"Attachments\" DisplayName=\"קבצים מצורפים\" SourceID=\"http://schemas.microsoft.com/sharepoint/v3\" StaticName=\"Attachments\" FromBaseType=\"TRUE\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"firstName\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{43d1def9-be30-4c65-8ece-4e35a0cb1711}\" SourceID=\"{E3D48858-20A3-43A6-989D-021D6F5B79FB}\" StaticName=\"firstName\" Name=\"firstName\" ColName=\"nvarchar3\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"surname\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{96c8ceb4-8f1c-45f1-aa67-68aeee9c2bc9}\" SourceID=\"{E3D48858-20A3-43A6-989D-021D6F5B79FB}\" StaticName=\"surname\" Name=\"surname\" ColName=\"nvarchar4\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"idNumber\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{9202e667-3cbe-494f-b642-929b6ecc2203}\" SourceID=\"{E3D48858-20A3-43A6-989D-021D6F5B79FB}\" StaticName=\"idNumber\" Name=\"idNumber\" ColName=\"nvarchar5\" RowOrdinal=\"0\" /\u003e",
+                                             "\u003cField Type=\"Text\" DisplayName=\"email\" Required=\"FALSE\" EnforceUniqueValues=\"FALSE\" Indexed=\"FALSE\" MaxLength=\"255\" ID=\"{559f2cff-3d4f-4b23-b305-7335a0fac29e}\" SourceID=\"{E3D48858-20A3-43A6-989D-021D6F5B79FB}\" StaticName=\"email\" Name=\"email\" ColName=\"nvarchar6\" RowOrdinal=\"0\" /\u003e"
+                                         ],
+                          "ListPermissons":  [
+                                                 {
+                                                     "Name":  "ekccUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "HSS_HUM184-2021_adminUG",
+                                                     "Type":  4,
+                                                     "PermissionLevels":  "Full Control"
+                                                 },
+                                                 {
+                                                     "Name":  "System Account",
+                                                     "Type":  1,
+                                                     "PermissionLevels":  "Full Control"
+                                                 }
+                                             ]
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "הגשת מועמדות",
+        "Url":  "/home/humanities/HUM184-2021",
+        "Items":  [
+                      {
+                          "Title":  "טופס בקשה",
+                          "Url":  "/home/humanities/HUM184-2021/Pages/Form.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Form.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "המלצות",
+                          "Url":  "/home/humanities/HUM184-2021/Pages/Recommendations.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "Recommendations.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "סטטוס הגשה",
+                          "Url":  "/home/humanities/HUM184-2021/Pages/SubmissionStatus.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "SubmissionStatus.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      },
+                      {
+                          "Title":  "הסרת מועמדות",
+                          "Url":  "/home/humanities/HUM184-2021/Pages/CancelCandidacy.aspx",
+                          "OldUrl":  null,
+                          "Type":  "Pages",
+                          "InnerName":  "CancelCandidacy.aspx",
+                          "Name":  null,
+                          "IsOldMenu":  true,
+                          "CandidateForDelete":  false,
+                          "ListSchema":  null,
+                          "ListPermissons":  null
+                      }
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    },
+    {
+        "Title":  "צור קשר",
+        "Url":  "/home/humanities/HUM184-2021/Pages/ContactUs.aspx",
+        "Items":  [
+
+                  ],
+        "IsOldMenu":  true,
+        "CandidateForDelete":  false
+    }
+]

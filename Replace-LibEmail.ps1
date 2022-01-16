@@ -13,6 +13,7 @@ $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
 . "$dp0\Utils-DualLanguage.ps1"
+# diego
 Function Get-ParentLookupID($siteURL,$ParentListName, $ParentListLookupField, $ParentListLookupValue)
 {
 	$ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext(get-UrlNoF5 $siteURL)

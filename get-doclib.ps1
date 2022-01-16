@@ -50,6 +50,11 @@ start-transcript "HideDocLib.log"
 		 $siteURL = "https://scholarships2.ekmd.huji.ac.il/home/Agriculture/AGR36-2015";
 		 $siteURL = "https://crs.ekmd.huji.ac.il/home/exempt/2019";
 		 
+		 
+        		 
+		 #$xUrl=Import-Csv .\JSON\HSS_Sites.csv
+		 
+		 #foreach($siteURL in $xUrl.URL) { 	 
 <#
 https://crs2.ekmd.huji.ac.il/home/murshe/2019
 
@@ -67,6 +72,7 @@ https://crs2.ekmd.huji.ac.il/home/exempt/2019
 		 $ctx.Credentials = $Credentials
 	
 	 	GetDocLib $ctx 
+	#}
 	}
 Stop-Transcript
 .\HideDocLib.log

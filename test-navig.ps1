@@ -77,14 +77,14 @@ $cred = get-SCred
     $TopNavigationBar = $Ctx.Web.Navigation.TopNavigationBar
     #$TopNavigationBar = $Ctx.Web.Navigation.CurrentNavigationBar
 	
-	$nav = Ctx.Web.Navigation
+	$nav = $Ctx.Web.Navigation
     $Ctx.load($nav)
     $Ctx.load($TopNavigationBar)
     $Ctx.ExecuteQuery()
  
  $nav | gm | fl
  
- 
+ write-host 87
     #Populate New node data
     $NavigationNode = New-Object Microsoft.SharePoint.Client.NavigationNodeCreationInformation
     $NavigationNode.Title ="Kaluga"
