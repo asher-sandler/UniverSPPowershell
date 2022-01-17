@@ -49,6 +49,196 @@ function Kill-Word()
  
 }
 
+
+function Is-DocLibExists($SiteURL,$id ){
+	$siteName = get-UrlNoF5 $SiteURL
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	
+	$Ctx.Credentials = $Credentials
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+    $Ctx.ExecuteQuery()
+	
+	$libExists = $false
+	ForEach($list in $Lists)
+	{	
+			if ($list.Title.contains($id)){
+				$libExists = $true
+				#write-host $list.Title -f Cyan
+				break
+			}	
+			
+	}
+	return $libExists
+	
+}
+function get-StudentByIDExists($SiteURL,$ListName,$id){
+	$siteName = get-UrlNoF5 $SiteURL
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	
+	$Ctx.Credentials = $Credentials
+
+	#Get the List
+		
+	$List = $Ctx.Web.lists.GetByTitle($ListName)
+	
+
+    write-host $List.SchemaXML
+	#Define the CAML Query
+	$Query = New-Object Microsoft.SharePoint.Client.CamlQuery
+	
+	$qry = "<View><Query><Where><Eq><FieldRef Name='StudentID' /><Value Type='Text'>"+$id+"</Value></Eq></Where></Query></View>"
+	#$qry = "<View><Query></Query></View>"
+	$Query.ViewXml = $qry
+
+	#Get All List Items matching the query
+	$ListItems = $List.GetItems($Query)
+	$Ctx.Load($ListItems)
+	$Ctx.ExecuteQuery()
+	
+	
+	return ($listItems.count -gt 0)
+			
+}
+function Add-allstudentsItem($siteURL,$listName, $studentItem){
+	$siteName = get-UrlNoF5 $SiteURL
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	
+	$Ctx.Credentials = $Credentials
+
+	try{  
+		$lists = $ctx.web.Lists  
+		$list  = $lists.GetByTitle($listName)  
+		$listItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation  
+		$listItem = $list.AddItem($listItemInfo)  
+		
+		$listItem["Title"] 			= $studentItem.Surname
+		$listItem["FamilyName"] 	= $studentItem.FamilyName
+		$listItem["StudentID"] 		= $studentItem.StudentID
+		$listItem["EmailPersonal"]	= $studentItem.Email
+		$listItem["PhoneNumber"] 	= $studentItem.Phone
+		$listItem["_x05de__x05d2__x05de__x05d4_"] 	= $studentItem.Magema
+		
+		
+		
+		$HyperLinkField= New-Object Microsoft.SharePoint.Client.FieldUrlValue
+        $HyperLinkField.Url = $studentItem.URL
+        $HyperLinkField.Description = $studentItem.URLDescription
+		$listItem["LinkToPersonalFolder"] =[Microsoft.SharePoint.Client.FieldUrlValue]$HyperLinkField
+		
+		$listItem.Update()      
+		$ctx.load($list)      
+		$ctx.executeQuery()  
+		Write-Host "Item Added with ID - " $listItem.Id  		
+	}  
+	catch{  
+		write-host "$($_.Exception.Message)" -foregroundcolor red  
+	}
+	return $null
+	
+}
+function Create-Folders($SiteURL, $libName){
+	$foldersNew = @()
+	$foldersNew += "התכתבויות"
+	$foldersNew += "אישורים אקדמיים"
+	$foldersNew += "וועדת הוראה"
+	$foldersNew += "יתרת חובות"
+	$foldersNew += "תיק מועמדות"
+
+	#$foldersNew = "התכתבויות","וועדות הוראה","יתרת חובות"
+	$siteName = get-UrlNoF5 $SiteURL
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	
+	$Ctx.Credentials = $Credentials
+	$Lists = $Ctx.Web.Lists
+	$Ctx.Load($Lists)
+    $Ctx.ExecuteQuery()
+
+    #write-host $libName -f Yellow
+	$TargetLibrary = $Ctx.Web.Lists.GetByTitle($libName)
+    $Ctx.Load($TargetLibrary)
+    $Ctx.Load($TargetLibrary.RootFolder)
+    $Ctx.ExecuteQuery()	
+	
+    $CtxFld = $TargetLibrary.RootFolder.Context
+    #Get all Folders from the Source
+    $SubFolders = $TargetLibrary.RootFolder.Folders
+    $CtxFld.Load($SubFolders)
+    $CtxFld.ExecuteQuery()
+	
+	$targetFolderUrlPrefix = ""
+	Foreach($SubFolder in $SubFolders)	
+	{
+		if ($SubFolder.Name -eq "Forms")
+		{
+			$targetFolderUrlPrefix =  $SubFolder.ServerRelativeUrl -Replace "Forms" , ""
+			break
+		}
+		
+	}	
+    
+	foreach($fldN in $foldersNew){
+		$TargetFolderURL = $targetFolderUrlPrefix + $fldN
+		Try{
+			$Folder=$CtxFld.web.GetFolderByServerRelativeUrl($TargetFolderURL)
+			$CtxFld.load($Folder)
+			$CtxFld.ExecuteQuery()
+			Write-host "Folder Already Exists:"$TargetFolderURL -f Yellow
+		}
+		catch{
+			#Create Folder
+			if(!$Folder.Exists){
+				
+				$Folder=$CtxFld.Web.Folders.Add($TargetFolderURL)
+				$CtxFld.Load($Folder)
+				$CtxFld.ExecuteQuery()
+				Write-host "Folder Created:"$TargetFolderURL -f Green
+			}
+		}
+	}
+	
+}
+
+function copyPdf($drive, $FolderName,$source){
+	if(Test-Path $source){
+		write-host "Copy From: $source" -f Green
+		$destination = $drive+$FolderName+"\"+"תיק מועמדות"
+		if (Test-Path $destination){
+			write-host "Copy To: $destination" -f Green
+			
+		    $itm = Get-Item $source
+			$dtFile = $destination + "\" + $itm.Name
+			#write-host $dtFile -f Green
+			if (Test-Path $dtFile)
+			{
+				write-host "$dtFile Already Exists" -f Yellow
+			}
+			else
+			{
+				Copy-Item -Path $source -Destination $destination
+				write-host "Ok" -f Green
+			}
+			
+			
+		}
+		else
+		{
+			write-host "$destination Does Not exists" -f Yellow
+		}
+	}
+	else
+	{
+		write-host "$source File Does not Exists" - f Yellow
+	}
+	return $null
+	
+}
+
+
 $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
@@ -84,9 +274,13 @@ $Credentials = get-SCred
 	
 	$studentsL = @()
 	foreach($litem in $listItems){
-		
-		$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
-		$isAppr = isApproved $approved
+		if ($potok -eq "238"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}
+		if ($potok -eq "245"){
+			$isAppr = $true
+		}
 		
 		if ($isAppr){
 			$stud = "" | Select-Object FileName 
@@ -257,11 +451,30 @@ $Credentials = get-SCred
 		
 		foreach($applicant in $applicants){
 			$studentID = $applicant["studentId"]
+			if($studentID -eq "207206186"){
+				#write-host -------------------
+				#write-host 261
+				#write-host $studentID -f Magenta
+				#write-host -------------------
+			}
 			if ($studentID -eq $TZItem.TZ){
-				$candidateItm = "" | Select-Object Surname,FamilyName,StudentID,Email,Phone,URL,URLDescription,PhoneNumber,EmailUniv,EmailPersonal,Track,SchoolLeaderShip,Magema,Status,PDFFile
+				if ($TZItem.TZ -eq  "207206186"){
+				write-host -------------------
+				write-host 380
+				write-host $studentID -f Cyan
+				write-host -------------------
+					
+				}
+				$candidateItm = "" | Select-Object Surname,FamilyName,SurnameFinal, FamilyNameFinal,StudentID,Email,Phone,URL,URLDescription,PhoneNumber,EmailUniv,EmailPersonal,Track,SchoolLeaderShip,Magema,Status,PDFFile
 				
 				$candidateItm.Surname    = $applicant["firstNameHe"]
 				$candidateItm.FamilyName = $applicant["surnameHe"]
+				
+				$snFinal = $TZItem.UserName.split(" ")[0].trim()
+				$fnFinal = $TZItem.UserName.replace($snFinal,"").Trim()
+				$candidateItm.SurnameFinal    = $snFinal
+				$candidateItm.FamilyNameFinal = $fnFinal
+				
 				$candidateItm.StudentID  = $studentID
 				$candidateItm.Email  = $applicant["email"]
 				$candidateItm.Phone  = $applicant["cellPhone"]
@@ -281,10 +494,10 @@ $Credentials = get-SCred
 				
 				
 				
-				write-host $studentID -f Yellow
-				write-host $TZItem.UserName -f Green
-				write-host $applicant["firstNameHe"] -f Cyan
-				write-host $applicant["surnameHe"] -f Cyan
+				#write-host $studentID -f Yellow
+				#write-host $TZItem.UserName -f Green
+				#write-host $applicant["firstNameHe"] -f Cyan
+				#write-host $applicant["surnameHe"] -f Cyan
 				$foundInList = $true
 				break
 				
@@ -296,19 +509,62 @@ $Credentials = get-SCred
 	}
 	
 	$outFileName = ".\"+$rootflr +$potok+"-candidateList.csv"
-	#if (!$(Test-Path $outFileName)){
+	if (!$(Test-Path $outFileName)){
 		$candidateList | Export-CSV $outFileName -NoTypeInfo -Encoding UTF8
-	#}
+	}
 	
-	
+	net use w: /del	
+	net use w: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders /yes /user:ekmd\ashersa GrapeFloor789
 	$siteUrl = get-UrlNoF5 "https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders"
 	
 	$outlist = "מוסמך"
+	$i = 0
+	foreach($itemS in $candidateList){
+	      
+		  $itemExists = get-StudentByIDExists $siteURL $outlist $itemS.StudentID
+		  if (!$itemExists){
+			write-host "Item Not Exists: " -F Green
+			Add-allstudentsItem $siteURL $outlist $itemS 
+			write-host $itemS.StudentID  -f CyAN	
+		  }
+		  else
+		  {
+			write-host "Item  Exists: " -F Yellow 
+			write-host $itemS.StudentID  -f Magenta			
+		  }
+		  
+		  $doclibInternalName = $itemS.StudentID
+		  $doclibExternalName = $itemS.FamilyName.trim()+" "+$itemS.Surname.trim()+" "+$doclibInternalName
+		  
+		  $isDocLibExists = Is-DocLibExists $siteURL $doclibInternalName
+		  if (!$isDocLibExists){
+			  write-host $doclibInternalName -f Magenta
+			  write-host $doclibExternalName -f Cyan
+			  create-DocLib $siteURL $doclibInternalName $doclibExternalName
+			  
+		  }
+		  Create-Folders $siteURL $doclibExternalName
+		  
+		  copyPdf "W:" $itemS.StudentID $itemS.PDFFile
+			  
+		  write-host "I : $i"
+
+		  
+		  $i++
+		  if ($i -ge 1){
+			  break
+		  }
+		
+	}		
 	
 	
-	$schemaDocLibSrc3 = get-ListSchema	$siteUrl $outlist
-	$sourceDocObj3 = get-SchemaObject $schemaDocLibSrc3 
-	$sourceDocObj3 | ConvertTo-Json -Depth 100 | out-file $("JSON\ma-DocLibEvg.json")
+	
+	
+	#$schemaDocLibSrc3 = get-ListSchema	$siteUrl $outlist
+	#$sourceDocObj3 = get-SchemaObject $schemaDocLibSrc3 
+	#$sourceDocObj3 | ConvertTo-Json -Depth 100 | out-file $("JSON\ma-DocLibEvg.json")
+
+	
 	
 	#$Ctx1 = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
 	#$Ctx1.Credentials = $Credentials
