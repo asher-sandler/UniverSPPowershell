@@ -15,6 +15,12 @@ function isApproved($approved){
 	if($approved -eq "קבלה"){
 		$retValue = $true
 	}
+	if($approved -eq "Master's"){
+		$retValue = $true
+	}
+	if($approved -eq "אישור"){
+		$retValue = $true
+	}	
 	return $retValue
 }
 function Get-Magema($magema){
@@ -115,8 +121,8 @@ function Add-allstudentsItem($siteURL,$listName, $studentItem){
 		$listItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation  
 		$listItem = $list.AddItem($listItemInfo)  
 		
-		$listItem["Title"] 			= $studentItem.Surname
-		$listItem["FamilyName"] 	= $studentItem.FamilyName
+		$listItem["Title"] 			= $studentItem.SurnameFinal
+		$listItem["FamilyName"] 	= $studentItem.FamilyNameFinal
 		$listItem["StudentID"] 		= $studentItem.StudentID
 		$listItem["EmailPersonal"]	= $studentItem.Email
 		$listItem["PhoneNumber"] 	= $studentItem.Phone
@@ -244,12 +250,13 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
 . "$dp0\Utils-DualLanguage.ps1"
 
+Start-Transcript DocumentFill-Final.log
 # Evgenia
 
 $Credentials = get-SCred
  $rootflr = "Evgenia-FillFinal\"
  $destFiles = import-csv $(".\"+$rootflr +"finalList.csv" )
- 
+ $errorsInFinal = @()
   
  foreach($rowf in $destFiles){
 	 $siteName = $rowf.site;
@@ -267,9 +274,10 @@ $Credentials = get-SCred
 	
 	$schemaDocLibSrc1 = get-ListSchema	$siteUrl $libName
 	$sourceDocObj = get-SchemaObject $schemaDocLibSrc1 
-	$sourceDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$libName+"-DocLibEvg.json")
+	$sourceDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$potok+"-"+$libName+"LibEvg.json")
 
-	
+#write-host ....
+#read-host	
 	$listItems = get-allListItemsByID $siteURL  $libName
 	
 	$studentsL = @()
@@ -278,7 +286,25 @@ $Credentials = get-SCred
 			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
 			$isAppr = isApproved $approved
 		}
+		if ($potok -eq "239"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}
+		if ($potok -eq "240"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}		
+		
+		if ($potok -eq "243"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}		
 		if ($potok -eq "245"){
+			$approved = $litem["Faculty_x0027_s_x0020_Decision"]
+			$isAppr = isApproved $approved
+		}
+		if ($potok.contains("237")){
+			#$approved = $litem["Faculty_x0027_s_x0020_Decision"]
 			$isAppr = $true
 		}
 		
@@ -400,8 +426,10 @@ $Credentials = get-SCred
 		$tz = ""
 		$i=0
 		foreach($line in $contentTxt){
-			if ($line.contains('מספר זהות:'))
+			if ($line.contains('מספר זהות:') -or $line.contains('Passport Number:'))
 			{
+				#write-host 410
+				#write-host $line
 				$foundTZ = $true
 				$tz=$contentTxt[$i-1]
 				break
@@ -420,13 +448,13 @@ $Credentials = get-SCred
 			#write-host $tz -f Green
 		}
 	}
-	$outFileName = ".\"+$rootflr +"userList.csv"
+	$outFileName = ".\"+$targetDir +"\userList.csv"
 	if (!$(Test-Path $outFileName)){
 		$TZList | Export-CSV $outFileName -NoTypeInfo -Encoding UTF8
 	}
 	$schemaAppl = get-ListSchema	$siteUrl "Applicants"
 	$applDocObj = get-SchemaObject $schemaAppl
-	$applDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\appli-DocLibEvg.json")
+	$applDocObj | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$potok+"-appli-DocLibEvg.json")
 	
 	$ListName="Applicants"
 	$List = $Ctx.Web.lists.GetByTitle($ListName)
@@ -448,23 +476,27 @@ $Credentials = get-SCred
 	foreach($TZItem in $TZListNew){	
 	    $foundInList = $false
 		
+		#if ($potok -eq "245"){
+		#	write-host $TZItem.TZ
+		#	read-host
+		#}
 		
 		foreach($applicant in $applicants){
-			$studentID = $applicant["studentId"]
-			if($studentID -eq "207206186"){
-				#write-host -------------------
-				#write-host 261
-				#write-host $studentID -f Magenta
-				#write-host -------------------
-			}
+			$studentID = [string]$applicant["studentId"]
+			#if($studentID -eq "029671013"){
+			#	write-host -------------------
+			#	write-host 462
+			#	write-host $studentID -f Magenta
+			#	write-host -------------------
+			#}
 			if ($studentID -eq $TZItem.TZ){
-				if ($TZItem.TZ -eq  "207206186"){
-				write-host -------------------
-				write-host 380
-				write-host $studentID -f Cyan
-				write-host -------------------
+			#	if ($TZItem.TZ -eq  "029671013"){
+			#	write-host -------------------
+			#	write-host 470
+			#	write-host $studentID -f Cyan
+			#	write-host -------------------
 					
-				}
+			#	}
 				$candidateItm = "" | Select-Object Surname,FamilyName,SurnameFinal, FamilyNameFinal,StudentID,Email,Phone,URL,URLDescription,PhoneNumber,EmailUniv,EmailPersonal,Track,SchoolLeaderShip,Magema,Status,PDFFile
 				
 				$candidateItm.Surname    = $applicant["firstNameHe"]
@@ -504,7 +536,17 @@ $Credentials = get-SCred
 			}
 		}
 		if (!$foundInList){
-			write-host $studentID
+			$errInF = "" | Select-Object URL,StudentID, UserName, PDFFile
+			$errInF.URL = $siteName
+			$errInF.UserName = $($TZItem.UserName)
+			$errInF.StudentID = $($TZItem.TZ)
+			$errInF.PDFFile = $dp0 + "\" + $targetDir + "\$($TZItem.UserName)" + ".pdf"
+			
+			$errorsInFinal +=$errInF
+			
+			write-host "515: $($TZItem.TZ)" -f Red
+			write-host "515: $($TZItem.UserName)" -f Red
+			
 		}
 	}
 	
@@ -523,9 +565,9 @@ $Credentials = get-SCred
 	      
 		  $itemExists = get-StudentByIDExists $siteURL $outlist $itemS.StudentID
 		  if (!$itemExists){
-			write-host "Item Not Exists: " -F Green
+			#write-host "Item Not Exists: " -F Green
 			Add-allstudentsItem $siteURL $outlist $itemS 
-			write-host $itemS.StudentID  -f CyAN	
+			#write-host $itemS.StudentID  -f CyAN	
 		  }
 		  else
 		  {
@@ -534,10 +576,12 @@ $Credentials = get-SCred
 		  }
 		  
 		  $doclibInternalName = $itemS.StudentID
-		  $doclibExternalName = $itemS.FamilyName.trim()+" "+$itemS.Surname.trim()+" "+$doclibInternalName
+		  write-host "Creating DocLib: $doclibInternalName"
+		  $doclibExternalName = $itemS.FamilyNameFinal.trim()+" "+$itemS.SurnameFinal.trim()+" "+$doclibInternalName
 		  
 		  $isDocLibExists = Is-DocLibExists $siteURL $doclibInternalName
 		  if (!$isDocLibExists){
+			  write-host "Document Library Creating"
 			  write-host $doclibInternalName -f Magenta
 			  write-host $doclibExternalName -f Cyan
 			  create-DocLib $siteURL $doclibInternalName $doclibExternalName
@@ -558,6 +602,15 @@ $Credentials = get-SCred
 	}		
 	
 	
+	$RecentsTitle = "לאחרונה"
+	$NOmoreSubItems = $false
+	while (!$NOmoreSubItems){
+		$NOmoreSubItems =  Delete-RecentsSubMenu $siteURL $RecentsTitle 
+				
+	}
+
+	Delete-RecentMainMenu $siteURL $RecentsTitle 	
+
 	
 	
 	#$schemaDocLibSrc3 = get-ListSchema	$siteUrl $outlist
@@ -587,6 +640,14 @@ $Credentials = get-SCred
 
 	 
  } 
+ 
+ $outFileName = ".\"+$rootflr +"-ErrorsInFinal.csv"
+	
+	$ErrorsInFinal | Export-CSV $outFileName -NoTypeInfo -Encoding UTF8
+	
+	write-host "Writed File $outFileName"
+
+ STOP-Transcript
 
  
  

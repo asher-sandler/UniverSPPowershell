@@ -1,0 +1,286 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20220117201820
+Username: EKMD\ashersa
+RunAs User: EKMD\ashersa
+Configuration Name: 
+Machine: DEVORAGO_PC (Microsoft Windows NT 10.0.19044.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 12676
+PSVersion: 5.1.19041.1320
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1320
+BuildVersion: 10.0.19041.1320
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is DocumentFill-Final.log
+User: AsherSA
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU58-2021/
+Final
+238-EDU58-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\אביב בן אור.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\איידל גשטטנר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\איציק טל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\אליאב גביר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\ג'ושוע קופר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\גבריאל סונא.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\דוד שלוח.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\דורון פוקסמן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\חיים נחמן קובלסקי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\לוטם גלזר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\ליאת מנשה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\מרדכי פסל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\נועה כנפו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\עדי קנדלר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\עופר יצחקי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\רויטל אסולין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\רועי ברקוביץ.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\רעות בן עמי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\שובה סמסון.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\שירה שדות ברקמן-תלמידת חול.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\שירן ברוש תלמידת חול.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\שמואל בן עוליאל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\שני שקד.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\תמר גלברט.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\תמר צדקני.pdf
+
+
+
+Item  Exists:
+312504442
+Creating DocLib: 312504442
+Folder Already Exists: /home/EDU/stdFolders/312504442/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/312504442/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/312504442/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/312504442/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/312504442/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\אביב בן אור.pdf
+Copy To: W:312504442\תיק מועמדות
+W:312504442\תיק מועמדות\אביב בן אור.pdf Already Exists
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU56-2021/
+Final
+245-EDU56-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\EKMDortalpאורטל פינקס2.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\אורטל פינקס.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\אורית ג'יבלי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\אורלי נעים.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\בת שבע מיכאלי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\ג'יני שביב.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\גוזלן לילאנה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\דניאל רוזין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\יצחק סבו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\ליטל יואכימוביץ.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\מאיה קריספין-ישעיה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\מיכל מדינה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\עידית לוטרינגר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\שרית סבו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\שרית קריגר.pdf
+515: 043021005
+515: אורלי נעים
+515: 25685942
+515: מאיה קריספין-ישעיה
+
+
+
+Item  Exists:
+066013699
+Creating DocLib: 066013699
+Folder Already Exists: /home/EDU/stdFolders/066013699/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/066013699/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/066013699/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/066013699/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/066013699/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\אורטל פינקס.pdf
+Copy To: W:066013699\תיק מועמדות
+W:066013699\תיק מועמדות\אורטל פינקס.pdf Already Exists
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU55-2021/
+Final
+245-EDU55-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\אליסה בנגל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\דו צוי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\דלית מיטב.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\דקלה קפקא.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\ורד בן-אבו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\טל רגב.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\ליאור בקשיץ.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\מרסלה אפלבום.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\נטע אסנר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\סלבדור פלמן הומברטו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\עדי ביטון.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\ענבל ארנון.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\פלורנסיה שלזינגר.pdf
+515: 031821432
+515: ורד בן-אבו
+
+
+
+Item  Exists:
+312039324
+Creating DocLib: 312039324
+Folder Already Exists: /home/EDU/stdFolders/312039324/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/312039324/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/312039324/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/312039324/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/312039324/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\אליסה בנגל.pdf
+Copy To: W:312039324\תיק מועמדות
+W:312039324\תיק מועמדות\אליסה בנגל.pdf Already Exists
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU53-2021/
+Final
+237-EDU53-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\טהה יארא.pdf
+
+
+
+Item  Exists:
+302463690
+Creating DocLib: 302463690
+Folder Already Exists: /home/EDU/stdFolders/302463690/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/302463690/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/302463690/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/302463690/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/302463690/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\טהה יארא.pdf
+Copy To: W:302463690\תיק מועמדות
+W:302463690\תיק מועמדות\טהה יארא.pdf Already Exists
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU52-2021/
+Final
+243-EDU52-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\אזהאר שלבי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\אחינועם בובלי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\הדר רוזנברג.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\הילה חן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\לאה טריגנו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\ליאור זונטג.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\לילך כרמלי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\לירז אזולאי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\מודי חיים דובקין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\מרים פינקלשטיין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\נוגה דותן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\נועה חודדה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\נופר אלון טוכנר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\נעם לנדאו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\נעמה גולדרייך.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\שונית אמינפור.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\שירה קאפח.pdf
+
+
+
+Item  Exists:
+300295391
+Creating DocLib: 300295391
+Folder Already Exists: /home/EDU/stdFolders/300295391/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/300295391/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/300295391/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/300295391/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/300295391/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\אזהאר שלבי.pdf
+Copy To: W:300295391\תיק מועמדות
+W:300295391\תיק מועמדות\אזהאר שלבי.pdf Already Exists
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU51-2021/
+Final
+240-EDU51-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\אורית לוי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\אסיל עבדאל רחמן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\אסמאא מכיא.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\ג'נאן מג'אדלה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\הלל רובין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\ויקטוריה סלם.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\חלא גושה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\ליאורה אטל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\מוריה לוי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\מחמוד אבו רמילה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\מצעב סלאח.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\נופר וולפרט.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\ניבין עאבדין- תלמידת חול.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\ערין עוודאלה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\רים סעד.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\ריקי לוי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\תהל גרומבק.pdf
+
+
+
+Item Added with ID -  15
+Creating DocLib: 205550676
+Document Library Creating
+205550676
+לוי אורית 205550676
+Folder Created: /home/EDU/stdFolders/205550676/התכתבויות
+Folder Created: /home/EDU/stdFolders/205550676/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/205550676/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/205550676/יתרת חובות
+Folder Created: /home/EDU/stdFolders/205550676/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\אורית לוי.pdf
+Copy To: W:205550676\תיק מועמדות
+Ok
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+לוי אורית 205550676
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU50-2021/
+239
+239-EDU50-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\אוראל פוראטי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\איילה לרנר  זיכרמן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\אלישבע מליק.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\אסיל חטאב.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\בנימין דכטריוב.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\בת אל אטינגר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\דוניה חליל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\הדס שטרן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\חמוטל באומן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\יאנה סימנובסקי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\יפעת פרלמוטר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\ליאת טולצ'ינסקי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\לינוי לוי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\למא כיאל.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\מור שפירא.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\מתנאל ראט.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\סגא בדארנה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\סמדר ברגר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\עדי מזרחי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\ראובן רן דיין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\רחל אסתר הולס.pdf
+
+
+
+Item  Exists:
+308358381
+Creating DocLib: 308358381
+Folder Already Exists: /home/EDU/stdFolders/308358381/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/308358381/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/308358381/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/308358381/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/308358381/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\אוראל פוראטי.pdf
+Copy To: W:308358381\תיק מועמדות
+W:308358381\תיק מועמדות\אוראל פוראטי.pdf Already Exists
+I : 0
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+Writed File .\Evgenia-FillFinal\-ErrorsInFinal.csv
+**********************
+Windows PowerShell transcript end
+End time: 20220117202022
+**********************
