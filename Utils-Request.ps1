@@ -2034,6 +2034,7 @@ function get-RequestListObject(){
 					$spRequestsListItem.GroupName = $Item["assignedGroup"]
 					
 					$spRequestsListItem.relURL = $relURL
+					$spRequestsListItem.language = $Item["language"]
 					
 					$spRequestsListItem.Status = $Item["status"]
 					$spRequestsListItem.adminGroup = $groupSuffix +"_"+ $relURL + "_AdminUG"
@@ -2047,8 +2048,14 @@ function get-RequestListObject(){
 					$spRequestsListItem.XMLFileEn =  $relURL + "-En.xml"
 					$spRequestsListItem.XMLFileHe =  $relURL + "-He.xml"
 					$spRequestsListItem.PathXML = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\default" 
-					$spRequestsListItem.XMLUploadPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\UploadFiles\" 
-					$spRequestsListItem.XMLUploadFileName = $relURL + ".xml"
+					$spRequestsListItem.XMLUploadPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\UploadFiles\"
+					
+					
+					$spRequestsListItem.XMLUploadFileName = "UploadFilesHe.xml"
+					if ($spRequestsListItem.language.toLower().contains("en")){
+						$spRequestsListItem.XMLUploadFileName = "UploadFilesEn.xml"	
+					}
+					
 
 					$spRequestsListItem.MailPath = "\\ekeksql00\SP_Resources$\"+$groupSuffix.toUpper()+"\mailTemplates"
 	
@@ -2061,7 +2068,7 @@ function get-RequestListObject(){
 					$spRequestsListItem.targetAudiency = "EkccUG" 
 					$spRequestsListItem.targetAudiencysharepointGroup = $groupSuffix +"_"+ $relURL + "_AdminSP; "+ $groupSuffix +"_" +  $relURL + "_JudgesSP"
 					$spRequestsListItem.targetAudiencyDistributionSecurityGroup = $groupSuffix +"_"+ $relURL + "_JudgesUG"
-					$spRequestsListItem.language = $Item["language"]
+					
 					
 					$isDoubleLangugeSite = $($spRequestsListItem.language).toLower().contains("en") -and $($spRequestsListItem.language).toLower().contains("he")
 					$spRequestsListItem.isDoubleLangugeSite = $isDoubleLangugeSite
