@@ -1,6 +1,6 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20220117201820
+Start time: 20220118144612
 Username: EKMD\ashersa
 RunAs User: EKMD\ashersa
 Configuration Name: 
@@ -52,6 +52,7 @@ C:\AdminDir\SP Powershell\Evgenia-FillFinal\238-EDU58-2021\תמר צדקני.pdf
 Item  Exists:
 312504442
 Creating DocLib: 312504442
+LinkFilename
 Folder Already Exists: /home/EDU/stdFolders/312504442/התכתבויות
 Folder Already Exists: /home/EDU/stdFolders/312504442/אישורים אקדמיים
 Folder Already Exists: /home/EDU/stdFolders/312504442/וועדת הוראה
@@ -60,8 +61,334 @@ Folder Already Exists: /home/EDU/stdFolders/312504442/תיק מועמדות
 Copy From: Evgenia-FillFinal\238-EDU58-2021\אביב בן אור.pdf
 Copy To: W:312504442\תיק מועמדות
 W:312504442\תיק מועמדות\אביב בן אור.pdf Already Exists
-I : 0
+
+Item  Exists:
+32374095
+Creating DocLib: 32374095
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/32374095/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/32374095/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/32374095/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/32374095/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/32374095/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\איידל גשטטנר.pdf
+Copy To: W:32374095\תיק מועמדות
+W:32374095\תיק מועמדות\איידל גשטטנר.pdf Already Exists
+
+Item  Exists:
+305162265
+Creating DocLib: 305162265
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/305162265/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/305162265/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/305162265/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/305162265/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/305162265/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\איציק טל.pdf
+Copy To: W:305162265\תיק מועמדות
+W:305162265\תיק מועמדות\איציק טל.pdf Already Exists
+
+Item  Exists:
+318163250
+Creating DocLib: 318163250
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/318163250/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/318163250/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/318163250/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/318163250/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/318163250/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\אליאב גביר.pdf
+Copy To: W:318163250\תיק מועמדות
+W:318163250\תיק מועמדות\אליאב גביר.pdf Already Exists
+
+Item  Exists:
+336183777
+Creating DocLib: 336183777
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/336183777/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/336183777/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/336183777/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/336183777/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/336183777/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\ג'ושוע קופר.pdf
+Copy To: W:336183777\תיק מועמדות
+W:336183777\תיק מועמדות\ג'ושוע קופר.pdf Already Exists
+
+Item  Exists:
+316879642
+Creating DocLib: 316879642
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/316879642/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/316879642/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/316879642/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/316879642/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/316879642/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\גבריאל סונא.pdf
+Copy To: W:316879642\תיק מועמדות
+W:316879642\תיק מועמדות\גבריאל סונא.pdf Already Exists
+
+Item  Exists:
+206326357
+Creating DocLib: 206326357
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/206326357/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/206326357/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/206326357/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/206326357/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/206326357/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\דוד שלוח.pdf
+Copy To: W:206326357\תיק מועמדות
+W:206326357\תיק מועמדות\דוד שלוח.pdf Already Exists
+
+Item  Exists:
+039824503
+Creating DocLib: 039824503
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/039824503/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/039824503/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/039824503/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/039824503/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/039824503/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\דורון פוקסמן.pdf
+Copy To: W:039824503\תיק מועמדות
+W:039824503\תיק מועמדות\דורון פוקסמן.pdf Already Exists
+
+Item  Exists:
+301590899
+Creating DocLib: 301590899
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/301590899/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/301590899/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/301590899/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/301590899/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/301590899/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\חיים נחמן קובלסקי.pdf
+Copy To: W:301590899\תיק מועמדות
+W:301590899\תיק מועמדות\חיים נחמן קובלסקי.pdf Already Exists
+
+Item  Exists:
+206174328
+Creating DocLib: 206174328
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/206174328/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/206174328/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/206174328/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/206174328/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/206174328/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\לוטם גלזר.pdf
+Copy To: W:206174328\תיק מועמדות
+W:206174328\תיק מועמדות\לוטם גלזר.pdf Already Exists
+
+Item  Exists:
+206224198
+Creating DocLib: 206224198
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/206224198/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/206224198/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/206224198/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/206224198/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/206224198/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\ליאת מנשה.pdf
+Copy To: W:206224198\תיק מועמדות
+W:206224198\תיק מועמדות\ליאת מנשה.pdf Already Exists
+
+Item  Exists:
+060770492
+Creating DocLib: 060770492
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/060770492/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/060770492/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/060770492/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/060770492/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/060770492/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\מרדכי פסל.pdf
+Copy To: W:060770492\תיק מועמדות
+W:060770492\תיק מועמדות\מרדכי פסל.pdf Already Exists
+
+Item  Exists:
+20622087
+Creating DocLib: 20622087
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/20622087/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/20622087/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/20622087/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/20622087/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/20622087/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\נועה כנפו.pdf
+Copy To: W:20622087\תיק מועמדות
+W:20622087\תיק מועמדות\נועה כנפו.pdf Already Exists
+
+Item  Exists:
+207206186
+Creating DocLib: 207206186
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/207206186/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/207206186/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/207206186/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/207206186/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/207206186/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\עדי קנדלר.pdf
+Copy To: W:207206186\תיק מועמדות
+W:207206186\תיק מועמדות\עדי קנדלר.pdf Already Exists
+
+Item  Exists:
+305705360
+Creating DocLib: 305705360
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/305705360/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/305705360/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/305705360/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/305705360/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/305705360/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\עופר יצחקי.pdf
+Copy To: W:305705360\תיק מועמדות
+W:305705360\תיק מועמדות\עופר יצחקי.pdf Already Exists
+
+Item  Exists:
+200705739
+Creating DocLib: 200705739
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/200705739/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/200705739/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/200705739/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/200705739/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/200705739/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\רויטל אסולין.pdf
+Copy To: W:200705739\תיק מועמדות
+W:200705739\תיק מועמדות\רויטל אסולין.pdf Already Exists
+
+Item  Exists:
+300203361
+Creating DocLib: 300203361
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/300203361/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/300203361/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/300203361/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/300203361/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/300203361/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\רועי ברקוביץ.pdf
+Copy To: W:300203361\תיק מועמדות
+W:300203361\תיק מועמדות\רועי ברקוביץ.pdf Already Exists
+
+Item  Exists:
+205418577
+Creating DocLib: 205418577
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/205418577/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/205418577/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/205418577/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/205418577/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/205418577/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\רעות בן עמי.pdf
+Copy To: W:205418577\תיק מועמדות
+W:205418577\תיק מועמדות\רעות בן עמי.pdf Already Exists
+
+Item  Exists:
+039276092
+Creating DocLib: 039276092
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/039276092/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/039276092/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/039276092/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/039276092/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/039276092/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\שובה סמסון.pdf
+Copy To: W:039276092\תיק מועמדות
+W:039276092\תיק מועמדות\שובה סמסון.pdf Already Exists
+
+Item  Exists:
+345487284
+Creating DocLib: 345487284
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/345487284/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/345487284/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/345487284/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/345487284/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/345487284/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\שירה שדות ברקמן-תלמידת חול.pdf
+Copy To: W:345487284\תיק מועמדות
+W:345487284\תיק מועמדות\שירה שדות ברקמן-תלמידת חול.pdf Already Exists
+
+Item  Exists:
+036732691
+Creating DocLib: 036732691
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/036732691/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/036732691/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/036732691/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/036732691/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/036732691/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\שירן ברוש תלמידת חול.pdf
+Copy To: W:036732691\תיק מועמדות
+W:036732691\תיק מועמדות\שירן ברוש תלמידת חול.pdf Already Exists
+
+Item  Exists:
+314369638
+Creating DocLib: 314369638
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/314369638/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/314369638/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/314369638/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/314369638/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/314369638/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\שמואל בן עוליאל.pdf
+Copy To: W:314369638\תיק מועמדות
+W:314369638\תיק מועמדות\שמואל בן עוליאל.pdf Already Exists
+
+Item  Exists:
+036894491
+Creating DocLib: 036894491
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/036894491/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/036894491/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/036894491/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/036894491/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/036894491/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\שני שקד.pdf
+Copy To: W:036894491\תיק מועמדות
+W:036894491\תיק מועמדות\שני שקד.pdf Already Exists
+
+Item  Exists:
+204008726
+Creating DocLib: 204008726
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/204008726/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/204008726/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/204008726/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/204008726/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/204008726/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\תמר גלברט.pdf
+Copy To: W:204008726\תיק מועמדות
+W:204008726\תיק מועמדות\תמר גלברט.pdf Already Exists
+
+Item  Exists:
+028781516
+Creating DocLib: 028781516
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/028781516/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/028781516/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/028781516/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/028781516/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/028781516/תיק מועמדות
+Copy From: Evgenia-FillFinal\238-EDU58-2021\תמר צדקני.pdf
+Copy To: W:028781516\תיק מועמדות
+W:028781516\תיק מועמדות\תמר צדקני.pdf Already Exists
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+יואכימוביץ ליטל 037076536
+מדינה מיכל 027295237
+לוטרינגר עידית 028942472
+סבו שרית 039940028
+קריגר שרית 029671013
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+ג'יבלי אורית 300765039
+שביב ג'יני 317948685
+לילאנה גוזלן 013083605
+רוזין דניאל 204058473
+סבו יצחק 043227198
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 URL: https://grs.ekmd.huji.ac.il/home/Education/EDU56-2021/
 Final
@@ -91,6 +418,7 @@ C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU56-2021\שרית קריגר.p
 Item  Exists:
 066013699
 Creating DocLib: 066013699
+LinkFilename
 Folder Already Exists: /home/EDU/stdFolders/066013699/התכתבויות
 Folder Already Exists: /home/EDU/stdFolders/066013699/אישורים אקדמיים
 Folder Already Exists: /home/EDU/stdFolders/066013699/וועדת הוראה
@@ -99,8 +427,189 @@ Folder Already Exists: /home/EDU/stdFolders/066013699/תיק מועמדות
 Copy From: Evgenia-FillFinal\245-EDU56-2021\אורטל פינקס.pdf
 Copy To: W:066013699\תיק מועמדות
 W:066013699\תיק מועמדות\אורטל פינקס.pdf Already Exists
-I : 0
+
+Item  Exists:
+300765039
+Creating DocLib: 300765039
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/300765039/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/300765039/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/300765039/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/300765039/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/300765039/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\אורית ג'יבלי.pdf
+Copy To: W:300765039\תיק מועמדות
+W:300765039\תיק מועמדות\אורית ג'יבלי.pdf Already Exists
+
+Item  Exists:
+024311789
+Creating DocLib: 024311789
+Document Library Creating
+024311789
+שבע מיכאלי בת 024311789
+LinkFilename
+Folder Created: /home/EDU/stdFolders/024311789/התכתבויות
+Folder Created: /home/EDU/stdFolders/024311789/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/024311789/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/024311789/יתרת חובות
+Folder Created: /home/EDU/stdFolders/024311789/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\בת שבע מיכאלי.pdf
+Copy To: W:024311789\תיק מועמדות
+Ok
+
+Item  Exists:
+317948685
+Creating DocLib: 317948685
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/317948685/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/317948685/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/317948685/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/317948685/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/317948685/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\ג'יני שביב.pdf
+Copy To: W:317948685\תיק מועמדות
+W:317948685\תיק מועמדות\ג'יני שביב.pdf Already Exists
+
+Item  Exists:
+013083605
+Creating DocLib: 013083605
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/013083605/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/013083605/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/013083605/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/013083605/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/013083605/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\גוזלן לילאנה.pdf
+Copy To: W:013083605\תיק מועמדות
+W:013083605\תיק מועמדות\גוזלן לילאנה.pdf Already Exists
+
+Item  Exists:
+204058473
+Creating DocLib: 204058473
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/204058473/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/204058473/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/204058473/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/204058473/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/204058473/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\דניאל רוזין.pdf
+Copy To: W:204058473\תיק מועמדות
+W:204058473\תיק מועמדות\דניאל רוזין.pdf Already Exists
+
+Item  Exists:
+043227198
+Creating DocLib: 043227198
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/043227198/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/043227198/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/043227198/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/043227198/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/043227198/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\יצחק סבו.pdf
+Copy To: W:043227198\תיק מועמדות
+W:043227198\תיק מועמדות\יצחק סבו.pdf Already Exists
+
+Item  Exists:
+037076536
+Creating DocLib: 037076536
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/037076536/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/037076536/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/037076536/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/037076536/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/037076536/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\ליטל יואכימוביץ.pdf
+Copy To: W:037076536\תיק מועמדות
+W:037076536\תיק מועמדות\ליטל יואכימוביץ.pdf Already Exists
+
+Item  Exists:
+027295237
+Creating DocLib: 027295237
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/027295237/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/027295237/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/027295237/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/027295237/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/027295237/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\מיכל מדינה.pdf
+Copy To: W:027295237\תיק מועמדות
+W:027295237\תיק מועמדות\מיכל מדינה.pdf Already Exists
+
+Item  Exists:
+028942472
+Creating DocLib: 028942472
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/028942472/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/028942472/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/028942472/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/028942472/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/028942472/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\עידית לוטרינגר.pdf
+Copy To: W:028942472\תיק מועמדות
+W:028942472\תיק מועמדות\עידית לוטרינגר.pdf Already Exists
+
+Item  Exists:
+039940028
+Creating DocLib: 039940028
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/039940028/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/039940028/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/039940028/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/039940028/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/039940028/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\שרית סבו.pdf
+Copy To: W:039940028\תיק מועמדות
+W:039940028\תיק מועמדות\שרית סבו.pdf Already Exists
+
+Item  Exists:
+029671013
+Creating DocLib: 029671013
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/029671013/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/029671013/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/029671013/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/029671013/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/029671013/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\שרית קריגר.pdf
+Copy To: W:029671013\תיק מועמדות
+W:029671013\תיק מועמדות\שרית קריגר.pdf Already Exists
+
+Item Added with ID -  73
+Creating DocLib: 21964367
+Document Library Creating
+21964367
+קריספין-ישעיה מאיה 21964367
+LinkFilename
+Folder Created: /home/EDU/stdFolders/21964367/התכתבויות
+Folder Created: /home/EDU/stdFolders/21964367/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/21964367/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/21964367/יתרת חובות
+Folder Created: /home/EDU/stdFolders/21964367/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\מאיה קריספין-ישעיה.pdf
+Copy To: W:21964367\תיק מועמדות
+Ok
+
+Item Added with ID -  74
+Creating DocLib: 043021005
+Document Library Creating
+043021005
+נעים אורלי 043021005
+LinkFilename
+Folder Created: /home/EDU/stdFolders/043021005/התכתבויות
+Folder Created: /home/EDU/stdFolders/043021005/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/043021005/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/043021005/יתרת חובות
+Folder Created: /home/EDU/stdFolders/043021005/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU56-2021\אורלי נעים.pdf
+Copy To: W:043021005\תיק מועמדות
+Ok
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+שבע מיכאלי בת 024311789
+קריספין-ישעיה מאיה 21964367
+נעים אורלי 043021005
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 URL: https://grs.ekmd.huji.ac.il/home/Education/EDU55-2021/
 Final
@@ -126,6 +635,7 @@ C:\AdminDir\SP Powershell\Evgenia-FillFinal\245-EDU55-2021\פלורנסיה של
 Item  Exists:
 312039324
 Creating DocLib: 312039324
+LinkFilename
 Folder Already Exists: /home/EDU/stdFolders/312039324/התכתבויות
 Folder Already Exists: /home/EDU/stdFolders/312039324/אישורים אקדמיים
 Folder Already Exists: /home/EDU/stdFolders/312039324/וועדת הוראה
@@ -134,29 +644,561 @@ Folder Already Exists: /home/EDU/stdFolders/312039324/תיק מועמדות
 Copy From: Evgenia-FillFinal\245-EDU55-2021\אליסה בנגל.pdf
 Copy To: W:312039324\תיק מועמדות
 W:312039324\תיק מועמדות\אליסה בנגל.pdf Already Exists
-I : 0
+
+Item Added with ID -  75
+Creating DocLib: e40554130
+Document Library Creating
+e40554130
+צוי דו e40554130
+LinkFilename
+Folder Created: /home/EDU/stdFolders/e40554130/התכתבויות
+Folder Created: /home/EDU/stdFolders/e40554130/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/e40554130/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/e40554130/יתרת חובות
+Folder Created: /home/EDU/stdFolders/e40554130/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\דו צוי.pdf
+Copy To: W:e40554130\תיק מועמדות
+Ok
+
+Item Added with ID -  76
+Creating DocLib: 300109832
+Document Library Creating
+300109832
+מיטב דלית 300109832
+LinkFilename
+Folder Created: /home/EDU/stdFolders/300109832/התכתבויות
+Folder Created: /home/EDU/stdFolders/300109832/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/300109832/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/300109832/יתרת חובות
+Folder Created: /home/EDU/stdFolders/300109832/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\דלית מיטב.pdf
+Copy To: W:300109832\תיק מועמדות
+Ok
+
+Item Added with ID -  77
+Creating DocLib: 036061497
+Document Library Creating
+036061497
+קפקא דקלה 036061497
+LinkFilename
+Folder Created: /home/EDU/stdFolders/036061497/התכתבויות
+Folder Created: /home/EDU/stdFolders/036061497/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/036061497/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/036061497/יתרת חובות
+Folder Created: /home/EDU/stdFolders/036061497/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\דקלה קפקא.pdf
+Copy To: W:036061497\תיק מועמדות
+Ok
+
+Item Added with ID -  78
+Creating DocLib: 033694191
+Document Library Creating
+033694191
+רגב טל 033694191
+LinkFilename
+Folder Created: /home/EDU/stdFolders/033694191/התכתבויות
+Folder Created: /home/EDU/stdFolders/033694191/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/033694191/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/033694191/יתרת חובות
+Folder Created: /home/EDU/stdFolders/033694191/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\טל רגב.pdf
+Copy To: W:033694191\תיק מועמדות
+Ok
+
+Item Added with ID -  79
+Creating DocLib: 040379224
+Document Library Creating
+040379224
+בקשיץ ליאור 040379224
+LinkFilename
+Folder Created: /home/EDU/stdFolders/040379224/התכתבויות
+Folder Created: /home/EDU/stdFolders/040379224/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/040379224/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/040379224/יתרת חובות
+Folder Created: /home/EDU/stdFolders/040379224/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\ליאור בקשיץ.pdf
+Copy To: W:040379224\תיק מועמדות
+Ok
+
+Item Added with ID -  80
+Creating DocLib: 011791563
+Document Library Creating
+011791563
+אפלבום מרסלה 011791563
+LinkFilename
+Folder Created: /home/EDU/stdFolders/011791563/התכתבויות
+Folder Created: /home/EDU/stdFolders/011791563/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/011791563/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/011791563/יתרת חובות
+Folder Created: /home/EDU/stdFolders/011791563/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\מרסלה אפלבום.pdf
+Copy To: W:011791563\תיק מועמדות
+Ok
+
+Item Added with ID -  81
+Creating DocLib: 204819007
+Document Library Creating
+204819007
+אסנר נטע 204819007
+LinkFilename
+Folder Created: /home/EDU/stdFolders/204819007/התכתבויות
+Folder Created: /home/EDU/stdFolders/204819007/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/204819007/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/204819007/יתרת חובות
+Folder Created: /home/EDU/stdFolders/204819007/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\נטע אסנר.pdf
+Copy To: W:204819007\תיק מועמדות
+Ok
+
+Item Added with ID -  82
+Creating DocLib: 0501196708478
+Document Library Creating
+0501196708478
+פלמן הומברטו סלבדור 0501196708478
+LinkFilename
+Folder Created: /home/EDU/stdFolders/0501196708478/התכתבויות
+Folder Created: /home/EDU/stdFolders/0501196708478/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/0501196708478/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/0501196708478/יתרת חובות
+Folder Created: /home/EDU/stdFolders/0501196708478/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\סלבדור פלמן הומברטו.pdf
+Copy To: W:0501196708478\תיק מועמדות
+Ok
+
+Item Added with ID -  83
+Creating DocLib: 025692716
+Document Library Creating
+025692716
+ביטון עדי 025692716
+LinkFilename
+Folder Created: /home/EDU/stdFolders/025692716/התכתבויות
+Folder Created: /home/EDU/stdFolders/025692716/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/025692716/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/025692716/יתרת חובות
+Folder Created: /home/EDU/stdFolders/025692716/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\עדי ביטון.pdf
+Copy To: W:025692716\תיק מועמדות
+Ok
+
+Item Added with ID -  84
+Creating DocLib: 033640574
+Document Library Creating
+033640574
+ארנון ענבל 033640574
+LinkFilename
+Folder Created: /home/EDU/stdFolders/033640574/התכתבויות
+Folder Created: /home/EDU/stdFolders/033640574/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/033640574/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/033640574/יתרת חובות
+Folder Created: /home/EDU/stdFolders/033640574/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\ענבל ארנון.pdf
+Copy To: W:033640574\תיק מועמדות
+Ok
+
+Item Added with ID -  85
+Creating DocLib: 319314639
+Document Library Creating
+319314639
+שלזינגר פלורנסיה 319314639
+LinkFilename
+Folder Created: /home/EDU/stdFolders/319314639/התכתבויות
+Folder Created: /home/EDU/stdFolders/319314639/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/319314639/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/319314639/יתרת חובות
+Folder Created: /home/EDU/stdFolders/319314639/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\פלורנסיה שלזינגר.pdf
+Copy To: W:319314639\תיק מועמדות
+Ok
+
+Item Added with ID -  86
+Creating DocLib: 521338148
+Document Library Creating
+521338148
+בן-אבו ורד 521338148
+LinkFilename
+Folder Created: /home/EDU/stdFolders/521338148/התכתבויות
+Folder Created: /home/EDU/stdFolders/521338148/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/521338148/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/521338148/יתרת חובות
+Folder Created: /home/EDU/stdFolders/521338148/תיק מועמדות
+Copy From: Evgenia-FillFinal\245-EDU55-2021\ורד בן-אבו.pdf
+Copy To: W:521338148\תיק מועמדות
+Ok
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+פלמן הומברטו סלבדור 0501196708478
+ביטון עדי 025692716
+ארנון ענבל 033640574
+שלזינגר פלורנסיה 319314639
+בן-אבו ורד 521338148
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+קפקא דקלה 036061497
+רגב טל 033694191
+בקשיץ ליאור 040379224
+אפלבום מרסלה 011791563
+אסנר נטע 204819007
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+צוי דו e40554130
+מיטב דלית 300109832
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 URL: https://grs.ekmd.huji.ac.il/home/Education/EDU53-2021/
-Final
+237
 237-EDU53-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\אבירן אטיאס.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\אבראר בדריה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\אזהאר ברהום.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\אילנית  שער.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\אינדי ג'בר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\אליען גדעון.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\גילה מולה אצ'אם.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\דורית קוטלי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\חדווה אוחנה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\חן מאיר שקלרסק.pdf
 C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\טהה יארא.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\יאיר פלד.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\נדאא אבו שרה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\סמאא חמדן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\עינב יצחקוב.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\פאטימה ג'בר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\רנא בדרייה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\רעות לאה חן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\תלמידת חול -אנאס עליאן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\237-EDU53-2021\תמארה דלקי.pdf
+515: 32182646
+515: גילה מולה אצ'אם
 
 
 
 Item  Exists:
-302463690
+311375919
+Creating DocLib: 311375919
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/311375919/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/311375919/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/311375919/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/311375919/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/311375919/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\אבירן אטיאס.pdf
+Copy To: W:311375919\תיק מועמדות
+W:311375919\תיק מועמדות\אבירן אטיאס.pdf Already Exists
+
+Item Added with ID -  87
+Creating DocLib: 318498565
+Document Library Creating
+318498565
+בדריה אבראר 318498565
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318498565/התכתבויות
+Folder Created: /home/EDU/stdFolders/318498565/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318498565/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318498565/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318498565/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\אבראר בדריה.pdf
+Copy To: W:318498565\תיק מועמדות
+Ok
+
+Item Added with ID -  88
+Creating DocLib: 207445727
+Document Library Creating
+207445727
+ברהום אזהאר 207445727
+LinkFilename
+Folder Created: /home/EDU/stdFolders/207445727/התכתבויות
+Folder Created: /home/EDU/stdFolders/207445727/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/207445727/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/207445727/יתרת חובות
+Folder Created: /home/EDU/stdFolders/207445727/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\אזהאר ברהום.pdf
+Copy To: W:207445727\תיק מועמדות
+Ok
+
+Item Added with ID -  89
+Creating DocLib: 032241531
+Document Library Creating
+032241531
+שער אילנית 032241531
+LinkFilename
+Folder Created: /home/EDU/stdFolders/032241531/התכתבויות
+Folder Created: /home/EDU/stdFolders/032241531/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/032241531/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/032241531/יתרת חובות
+Folder Created: /home/EDU/stdFolders/032241531/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\אילנית  שער.pdf
+Copy To: W:032241531\תיק מועמדות
+Ok
+
+Item Added with ID -  90
+Creating DocLib: 315708008
+Document Library Creating
+315708008
+ג'בר אינדי 315708008
+LinkFilename
+Folder Created: /home/EDU/stdFolders/315708008/התכתבויות
+Folder Created: /home/EDU/stdFolders/315708008/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/315708008/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/315708008/יתרת חובות
+Folder Created: /home/EDU/stdFolders/315708008/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\אינדי ג'בר.pdf
+Copy To: W:315708008\תיק מועמדות
+Ok
+
+Item Added with ID -  91
+Creating DocLib: 205538747
+Document Library Creating
+205538747
+גדעון אליען 205538747
+LinkFilename
+Folder Created: /home/EDU/stdFolders/205538747/התכתבויות
+Folder Created: /home/EDU/stdFolders/205538747/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/205538747/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/205538747/יתרת חובות
+Folder Created: /home/EDU/stdFolders/205538747/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\אליען גדעון.pdf
+Copy To: W:205538747\תיק מועמדות
+Ok
+
+Item Added with ID -  92
+Creating DocLib: 023589393
+Document Library Creating
+023589393
+קוטלי דורית 023589393
+LinkFilename
+Folder Created: /home/EDU/stdFolders/023589393/התכתבויות
+Folder Created: /home/EDU/stdFolders/023589393/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/023589393/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/023589393/יתרת חובות
+Folder Created: /home/EDU/stdFolders/023589393/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\דורית קוטלי.pdf
+Copy To: W:023589393\תיק מועמדות
+Ok
+
+Item Added with ID -  93
+Creating DocLib: 066637810
+Document Library Creating
+066637810
+אוחנה חדווה 066637810
+LinkFilename
+Folder Created: /home/EDU/stdFolders/066637810/התכתבויות
+Folder Created: /home/EDU/stdFolders/066637810/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/066637810/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/066637810/יתרת חובות
+Folder Created: /home/EDU/stdFolders/066637810/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\חדווה אוחנה.pdf
+Copy To: W:066637810\תיק מועמדות
+Ok
+
+Item Added with ID -  94
+Creating DocLib: 208930404
+Document Library Creating
+208930404
+מאיר שקלרסק חן 208930404
+LinkFilename
+Folder Created: /home/EDU/stdFolders/208930404/התכתבויות
+Folder Created: /home/EDU/stdFolders/208930404/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/208930404/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/208930404/יתרת חובות
+Folder Created: /home/EDU/stdFolders/208930404/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\חן מאיר שקלרסק.pdf
+Copy To: W:208930404\תיק מועמדות
+Ok
+
+Item Added with ID -  95
 Creating DocLib: 302463690
-Folder Already Exists: /home/EDU/stdFolders/302463690/התכתבויות
-Folder Already Exists: /home/EDU/stdFolders/302463690/אישורים אקדמיים
-Folder Already Exists: /home/EDU/stdFolders/302463690/וועדת הוראה
-Folder Already Exists: /home/EDU/stdFolders/302463690/יתרת חובות
-Folder Already Exists: /home/EDU/stdFolders/302463690/תיק מועמדות
+Document Library Creating
+302463690
+יארא טהה 302463690
+LinkFilename
+Folder Created: /home/EDU/stdFolders/302463690/התכתבויות
+Folder Created: /home/EDU/stdFolders/302463690/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/302463690/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/302463690/יתרת חובות
+Folder Created: /home/EDU/stdFolders/302463690/תיק מועמדות
 Copy From: Evgenia-FillFinal\237-EDU53-2021\טהה יארא.pdf
 Copy To: W:302463690\תיק מועמדות
-W:302463690\תיק מועמדות\טהה יארא.pdf Already Exists
-I : 0
+Ok
+
+Item Added with ID -  96
+Creating DocLib: 066593997
+Document Library Creating
+066593997
+פלד יאיר 066593997
+LinkFilename
+Folder Created: /home/EDU/stdFolders/066593997/התכתבויות
+Folder Created: /home/EDU/stdFolders/066593997/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/066593997/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/066593997/יתרת חובות
+Folder Created: /home/EDU/stdFolders/066593997/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\יאיר פלד.pdf
+Copy To: W:066593997\תיק מועמדות
+Ok
+
+Item Added with ID -  97
+Creating DocLib: 081096893
+Document Library Creating
+081096893
+אבו שרה נדאא 081096893
+LinkFilename
+Folder Created: /home/EDU/stdFolders/081096893/התכתבויות
+Folder Created: /home/EDU/stdFolders/081096893/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/081096893/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/081096893/יתרת חובות
+Folder Created: /home/EDU/stdFolders/081096893/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\נדאא אבו שרה.pdf
+Copy To: W:081096893\תיק מועמדות
+Ok
+
+Item Added with ID -  98
+Creating DocLib: 318839578
+Document Library Creating
+318839578
+חמדן סמאא 318839578
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318839578/התכתבויות
+Folder Created: /home/EDU/stdFolders/318839578/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318839578/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318839578/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318839578/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\סמאא חמדן.pdf
+Copy To: W:318839578\תיק מועמדות
+Ok
+
+Item Added with ID -  99
+Creating DocLib: 040703829
+Document Library Creating
+040703829
+יצחקוב עינב 040703829
+LinkFilename
+Folder Created: /home/EDU/stdFolders/040703829/התכתבויות
+Folder Created: /home/EDU/stdFolders/040703829/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/040703829/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/040703829/יתרת חובות
+Folder Created: /home/EDU/stdFolders/040703829/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\עינב יצחקוב.pdf
+Copy To: W:040703829\תיק מועמדות
+Ok
+
+Item Added with ID -  100
+Creating DocLib: 312382310
+Document Library Creating
+312382310
+ג'בר פאטימה 312382310
+LinkFilename
+Folder Created: /home/EDU/stdFolders/312382310/התכתבויות
+Folder Created: /home/EDU/stdFolders/312382310/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/312382310/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/312382310/יתרת חובות
+Folder Created: /home/EDU/stdFolders/312382310/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\פאטימה ג'בר.pdf
+Copy To: W:312382310\תיק מועמדות
+Ok
+
+Item Added with ID -  101
+Creating DocLib: 204742100
+Document Library Creating
+204742100
+בדרייה רנא 204742100
+LinkFilename
+Folder Created: /home/EDU/stdFolders/204742100/התכתבויות
+Folder Created: /home/EDU/stdFolders/204742100/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/204742100/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/204742100/יתרת חובות
+Folder Created: /home/EDU/stdFolders/204742100/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\רנא בדרייה.pdf
+Copy To: W:204742100\תיק מועמדות
+Ok
+
+Item Added with ID -  102
+Creating DocLib: 311549299
+Document Library Creating
+311549299
+לאה חן רעות 311549299
+LinkFilename
+Folder Created: /home/EDU/stdFolders/311549299/התכתבויות
+Folder Created: /home/EDU/stdFolders/311549299/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/311549299/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/311549299/יתרת חובות
+Folder Created: /home/EDU/stdFolders/311549299/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\רעות לאה חן.pdf
+Copy To: W:311549299\תיק מועמדות
+Ok
+
+Item Added with ID -  103
+Creating DocLib: 312443443
+Document Library Creating
+312443443
+חול -אנאס עליאן תלמידת 312443443
+LinkFilename
+Folder Created: /home/EDU/stdFolders/312443443/התכתבויות
+Folder Created: /home/EDU/stdFolders/312443443/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/312443443/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/312443443/יתרת חובות
+Folder Created: /home/EDU/stdFolders/312443443/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\תלמידת חול -אנאס עליאן.pdf
+Copy To: W:312443443\תיק מועמדות
+Ok
+
+Item Added with ID -  104
+Creating DocLib: 300500857
+Document Library Creating
+300500857
+דלקי תמארה 300500857
+LinkFilename
+Folder Created: /home/EDU/stdFolders/300500857/התכתבויות
+Folder Created: /home/EDU/stdFolders/300500857/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/300500857/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/300500857/יתרת חובות
+Folder Created: /home/EDU/stdFolders/300500857/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\תמארה דלקי.pdf
+Copy To: W:300500857\תיק מועמדות
+Ok
+
+Item Added with ID -  105
+Creating DocLib: 32182646
+Document Library Creating
+32182646
+מולה אצ'אם גילה 32182646
+LinkFilename
+Folder Created: /home/EDU/stdFolders/32182646/התכתבויות
+Folder Created: /home/EDU/stdFolders/32182646/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/32182646/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/32182646/יתרת חובות
+Folder Created: /home/EDU/stdFolders/32182646/תיק מועמדות
+Copy From: Evgenia-FillFinal\237-EDU53-2021\גילה מולה אצ'אם.pdf
+Copy To: W:32182646\תיק מועמדות
+Ok
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+בדרייה רנא 204742100
+לאה חן רעות 311549299
+חול -אנאס עליאן תלמידת 312443443
+דלקי תמארה 300500857
+מולה אצ'אם גילה 32182646
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+פלד יאיר 066593997
+אבו שרה נדאא 081096893
+חמדן סמאא 318839578
+יצחקוב עינב 040703829
+ג'בר פאטימה 312382310
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+גדעון אליען 205538747
+קוטלי דורית 023589393
+אוחנה חדווה 066637810
+מאיר שקלרסק חן 208930404
+יארא טהה 302463690
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+בדריה אבראר 318498565
+ברהום אזהאר 207445727
+שער אילנית 032241531
+ג'בר אינדי 315708008
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 URL: https://grs.ekmd.huji.ac.il/home/Education/EDU52-2021/
 Final
@@ -184,6 +1226,7 @@ C:\AdminDir\SP Powershell\Evgenia-FillFinal\243-EDU52-2021\שירה קאפח.pdf
 Item  Exists:
 300295391
 Creating DocLib: 300295391
+LinkFilename
 Folder Already Exists: /home/EDU/stdFolders/300295391/התכתבויות
 Folder Already Exists: /home/EDU/stdFolders/300295391/אישורים אקדמיים
 Folder Already Exists: /home/EDU/stdFolders/300295391/וועדת הוראה
@@ -192,8 +1235,272 @@ Folder Already Exists: /home/EDU/stdFolders/300295391/תיק מועמדות
 Copy From: Evgenia-FillFinal\243-EDU52-2021\אזהאר שלבי.pdf
 Copy To: W:300295391\תיק מועמדות
 W:300295391\תיק מועמדות\אזהאר שלבי.pdf Already Exists
-I : 0
+
+Item Added with ID -  106
+Creating DocLib: 208915520
+Document Library Creating
+208915520
+בובלי אחינועם 208915520
+LinkFilename
+Folder Created: /home/EDU/stdFolders/208915520/התכתבויות
+Folder Created: /home/EDU/stdFolders/208915520/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/208915520/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/208915520/יתרת חובות
+Folder Created: /home/EDU/stdFolders/208915520/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\אחינועם בובלי.pdf
+Copy To: W:208915520\תיק מועמדות
+Ok
+
+Item Added with ID -  107
+Creating DocLib: 315441352
+Document Library Creating
+315441352
+רוזנברג הדר 315441352
+LinkFilename
+Folder Created: /home/EDU/stdFolders/315441352/התכתבויות
+Folder Created: /home/EDU/stdFolders/315441352/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/315441352/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/315441352/יתרת חובות
+Folder Created: /home/EDU/stdFolders/315441352/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\הדר רוזנברג.pdf
+Copy To: W:315441352\תיק מועמדות
+Ok
+
+Item Added with ID -  108
+Creating DocLib: 040182347
+Document Library Creating
+040182347
+חן הילה 040182347
+LinkFilename
+Folder Created: /home/EDU/stdFolders/040182347/התכתבויות
+Folder Created: /home/EDU/stdFolders/040182347/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/040182347/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/040182347/יתרת חובות
+Folder Created: /home/EDU/stdFolders/040182347/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\הילה חן.pdf
+Copy To: W:040182347\תיק מועמדות
+Ok
+
+Item Added with ID -  109
+Creating DocLib: 336312244
+Document Library Creating
+336312244
+טריגנו לאה 336312244
+LinkFilename
+Folder Created: /home/EDU/stdFolders/336312244/התכתבויות
+Folder Created: /home/EDU/stdFolders/336312244/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/336312244/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/336312244/יתרת חובות
+Folder Created: /home/EDU/stdFolders/336312244/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\לאה טריגנו.pdf
+Copy To: W:336312244\תיק מועמדות
+Ok
+
+Item Added with ID -  110
+Creating DocLib: 312248792
+Document Library Creating
+312248792
+זונטג ליאור 312248792
+LinkFilename
+Folder Created: /home/EDU/stdFolders/312248792/התכתבויות
+Folder Created: /home/EDU/stdFolders/312248792/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/312248792/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/312248792/יתרת חובות
+Folder Created: /home/EDU/stdFolders/312248792/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\ליאור זונטג.pdf
+Copy To: W:312248792\תיק מועמדות
+Ok
+
+Item Added with ID -  111
+Creating DocLib: 301616728
+Document Library Creating
+301616728
+כרמלי לילך 301616728
+LinkFilename
+Folder Created: /home/EDU/stdFolders/301616728/התכתבויות
+Folder Created: /home/EDU/stdFolders/301616728/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/301616728/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/301616728/יתרת חובות
+Folder Created: /home/EDU/stdFolders/301616728/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\לילך כרמלי.pdf
+Copy To: W:301616728\תיק מועמדות
+Ok
+
+Item Added with ID -  112
+Creating DocLib: 315685784
+Document Library Creating
+315685784
+אזולאי לירז 315685784
+LinkFilename
+Folder Created: /home/EDU/stdFolders/315685784/התכתבויות
+Folder Created: /home/EDU/stdFolders/315685784/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/315685784/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/315685784/יתרת חובות
+Folder Created: /home/EDU/stdFolders/315685784/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\לירז אזולאי.pdf
+Copy To: W:315685784\תיק מועמדות
+Ok
+
+Item Added with ID -  113
+Creating DocLib: 038203980
+Document Library Creating
+038203980
+חיים דובקין מודי 038203980
+LinkFilename
+Folder Created: /home/EDU/stdFolders/038203980/התכתבויות
+Folder Created: /home/EDU/stdFolders/038203980/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/038203980/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/038203980/יתרת חובות
+Folder Created: /home/EDU/stdFolders/038203980/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\מודי חיים דובקין.pdf
+Copy To: W:038203980\תיק מועמדות
+Ok
+
+Item Added with ID -  114
+Creating DocLib: 21210221
+Document Library Creating
+21210221
+פינקלשטיין מרים 21210221
+LinkFilename
+Folder Created: /home/EDU/stdFolders/21210221/התכתבויות
+Folder Created: /home/EDU/stdFolders/21210221/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/21210221/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/21210221/יתרת חובות
+Folder Created: /home/EDU/stdFolders/21210221/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\מרים פינקלשטיין.pdf
+Copy To: W:21210221\תיק מועמדות
+Ok
+
+Item Added with ID -  115
+Creating DocLib: 205712417
+Document Library Creating
+205712417
+דותן נוגה 205712417
+LinkFilename
+Folder Created: /home/EDU/stdFolders/205712417/התכתבויות
+Folder Created: /home/EDU/stdFolders/205712417/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/205712417/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/205712417/יתרת חובות
+Folder Created: /home/EDU/stdFolders/205712417/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\נוגה דותן.pdf
+Copy To: W:205712417\תיק מועמדות
+Ok
+
+Item Added with ID -  116
+Creating DocLib: 319134284
+Document Library Creating
+319134284
+חודדה נועה 319134284
+LinkFilename
+Folder Created: /home/EDU/stdFolders/319134284/התכתבויות
+Folder Created: /home/EDU/stdFolders/319134284/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/319134284/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/319134284/יתרת חובות
+Folder Created: /home/EDU/stdFolders/319134284/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\נועה חודדה.pdf
+Copy To: W:319134284\תיק מועמדות
+Ok
+
+Item Added with ID -  117
+Creating DocLib: 305322224
+Document Library Creating
+305322224
+אלון טוכנר נופר 305322224
+LinkFilename
+Folder Created: /home/EDU/stdFolders/305322224/התכתבויות
+Folder Created: /home/EDU/stdFolders/305322224/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/305322224/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/305322224/יתרת חובות
+Folder Created: /home/EDU/stdFolders/305322224/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\נופר אלון טוכנר.pdf
+Copy To: W:305322224\תיק מועמדות
+Ok
+
+Item Added with ID -  118
+Creating DocLib: 039995758
+Document Library Creating
+039995758
+לנדאו נעם 039995758
+LinkFilename
+Folder Created: /home/EDU/stdFolders/039995758/התכתבויות
+Folder Created: /home/EDU/stdFolders/039995758/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/039995758/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/039995758/יתרת חובות
+Folder Created: /home/EDU/stdFolders/039995758/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\נעם לנדאו.pdf
+Copy To: W:039995758\תיק מועמדות
+Ok
+
+Item Added with ID -  119
+Creating DocLib: 302978804
+Document Library Creating
+302978804
+גולדרייך נעמה 302978804
+LinkFilename
+Folder Created: /home/EDU/stdFolders/302978804/התכתבויות
+Folder Created: /home/EDU/stdFolders/302978804/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/302978804/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/302978804/יתרת חובות
+Folder Created: /home/EDU/stdFolders/302978804/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\נעמה גולדרייך.pdf
+Copy To: W:302978804\תיק מועמדות
+Ok
+
+Item Added with ID -  120
+Creating DocLib: 066458365
+Document Library Creating
+066458365
+אמינפור שונית 066458365
+LinkFilename
+Folder Created: /home/EDU/stdFolders/066458365/התכתבויות
+Folder Created: /home/EDU/stdFolders/066458365/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/066458365/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/066458365/יתרת חובות
+Folder Created: /home/EDU/stdFolders/066458365/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\שונית אמינפור.pdf
+Copy To: W:066458365\תיק מועמדות
+Ok
+
+Item Added with ID -  121
+Creating DocLib: 318431764
+Document Library Creating
+318431764
+קאפח שירה 318431764
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318431764/התכתבויות
+Folder Created: /home/EDU/stdFolders/318431764/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318431764/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318431764/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318431764/תיק מועמדות
+Copy From: Evgenia-FillFinal\243-EDU52-2021\שירה קאפח.pdf
+Copy To: W:318431764\תיק מועמדות
+Ok
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+אלון טוכנר נופר 305322224
+לנדאו נעם 039995758
+גולדרייך נעמה 302978804
+אמינפור שונית 066458365
+קאפח שירה 318431764
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+אזולאי לירז 315685784
+חיים דובקין מודי 038203980
+פינקלשטיין מרים 21210221
+דותן נוגה 205712417
+חודדה נועה 319134284
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+רוזנברג הדר 315441352
+חן הילה 040182347
+טריגנו לאה 336312244
+זונטג ליאור 312248792
+כרמלי לילך 301616728
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+בובלי אחינועם 208915520
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 URL: https://grs.ekmd.huji.ac.il/home/Education/EDU51-2021/
 Final
@@ -218,23 +1525,282 @@ C:\AdminDir\SP Powershell\Evgenia-FillFinal\240-EDU51-2021\תהל גרומבק.p
 
 
 
-Item Added with ID -  15
-Creating DocLib: 205550676
-Document Library Creating
+Item  Exists:
 205550676
-לוי אורית 205550676
-Folder Created: /home/EDU/stdFolders/205550676/התכתבויות
-Folder Created: /home/EDU/stdFolders/205550676/אישורים אקדמיים
-Folder Created: /home/EDU/stdFolders/205550676/וועדת הוראה
-Folder Created: /home/EDU/stdFolders/205550676/יתרת חובות
-Folder Created: /home/EDU/stdFolders/205550676/תיק מועמדות
+Creating DocLib: 205550676
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/205550676/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/205550676/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/205550676/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/205550676/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/205550676/תיק מועמדות
 Copy From: Evgenia-FillFinal\240-EDU51-2021\אורית לוי.pdf
 Copy To: W:205550676\תיק מועמדות
+W:205550676\תיק מועמדות\אורית לוי.pdf Already Exists
+
+Item Added with ID -  122
+Creating DocLib: 206504342
+Document Library Creating
+206504342
+עבדאל רחמן אסיל 206504342
+LinkFilename
+Folder Created: /home/EDU/stdFolders/206504342/התכתבויות
+Folder Created: /home/EDU/stdFolders/206504342/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/206504342/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/206504342/יתרת חובות
+Folder Created: /home/EDU/stdFolders/206504342/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\אסיל עבדאל רחמן.pdf
+Copy To: W:206504342\תיק מועמדות
 Ok
-I : 0
+
+Item Added with ID -  123
+Creating DocLib: 208979963
+Document Library Creating
+208979963
+מכיא אסמאא 208979963
+LinkFilename
+Folder Created: /home/EDU/stdFolders/208979963/התכתבויות
+Folder Created: /home/EDU/stdFolders/208979963/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/208979963/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/208979963/יתרת חובות
+Folder Created: /home/EDU/stdFolders/208979963/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\אסמאא מכיא.pdf
+Copy To: W:208979963\תיק מועמדות
+Ok
+
+Item Added with ID -  124
+Creating DocLib: 318968310
+Document Library Creating
+318968310
+מג'אדלה ג'נאן 318968310
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318968310/התכתבויות
+Folder Created: /home/EDU/stdFolders/318968310/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318968310/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318968310/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318968310/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\ג'נאן מג'אדלה.pdf
+Copy To: W:318968310\תיק מועמדות
+Ok
+
+Item Added with ID -  125
+Creating DocLib: 066165226
+Document Library Creating
+066165226
+רובין הלל 066165226
+LinkFilename
+Folder Created: /home/EDU/stdFolders/066165226/התכתבויות
+Folder Created: /home/EDU/stdFolders/066165226/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/066165226/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/066165226/יתרת חובות
+Folder Created: /home/EDU/stdFolders/066165226/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\הלל רובין.pdf
+Copy To: W:066165226\תיק מועמדות
+Ok
+
+Item Added with ID -  126
+Creating DocLib: 340876648
+Document Library Creating
+340876648
+סלם ויקטוריה 340876648
+LinkFilename
+Folder Created: /home/EDU/stdFolders/340876648/התכתבויות
+Folder Created: /home/EDU/stdFolders/340876648/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/340876648/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/340876648/יתרת חובות
+Folder Created: /home/EDU/stdFolders/340876648/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\ויקטוריה סלם.pdf
+Copy To: W:340876648\תיק מועמדות
+Ok
+
+Item Added with ID -  127
+Creating DocLib: 208444059
+Document Library Creating
+208444059
+גושה חלא 208444059
+LinkFilename
+Folder Created: /home/EDU/stdFolders/208444059/התכתבויות
+Folder Created: /home/EDU/stdFolders/208444059/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/208444059/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/208444059/יתרת חובות
+Folder Created: /home/EDU/stdFolders/208444059/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\חלא גושה.pdf
+Copy To: W:208444059\תיק מועמדות
+Ok
+
+Item Added with ID -  128
+Creating DocLib: 34132270
+Document Library Creating
+34132270
+אטל ליאורה 34132270
+LinkFilename
+Folder Created: /home/EDU/stdFolders/34132270/התכתבויות
+Folder Created: /home/EDU/stdFolders/34132270/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/34132270/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/34132270/יתרת חובות
+Folder Created: /home/EDU/stdFolders/34132270/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\ליאורה אטל.pdf
+Copy To: W:34132270\תיק מועמדות
+Ok
+
+Item Added with ID -  129
+Creating DocLib: 318281078
+Document Library Creating
+318281078
+לוי מוריה 318281078
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318281078/התכתבויות
+Folder Created: /home/EDU/stdFolders/318281078/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318281078/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318281078/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318281078/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\מוריה לוי.pdf
+Copy To: W:318281078\תיק מועמדות
+Ok
+
+Item Added with ID -  130
+Creating DocLib: 203067228
+Document Library Creating
+203067228
+אבו רמילה מחמוד 203067228
+LinkFilename
+Folder Created: /home/EDU/stdFolders/203067228/התכתבויות
+Folder Created: /home/EDU/stdFolders/203067228/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/203067228/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/203067228/יתרת חובות
+Folder Created: /home/EDU/stdFolders/203067228/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\מחמוד אבו רמילה.pdf
+Copy To: W:203067228\תיק מועמדות
+Ok
+
+Item Added with ID -  131
+Creating DocLib: 312559743
+Document Library Creating
+312559743
+סלאח מצעב 312559743
+LinkFilename
+Folder Created: /home/EDU/stdFolders/312559743/התכתבויות
+Folder Created: /home/EDU/stdFolders/312559743/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/312559743/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/312559743/יתרת חובות
+Folder Created: /home/EDU/stdFolders/312559743/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\מצעב סלאח.pdf
+Copy To: W:312559743\תיק מועמדות
+Ok
+
+Item Added with ID -  132
+Creating DocLib: 314882028
+Document Library Creating
+314882028
+וולפרט נופר 314882028
+LinkFilename
+Folder Created: /home/EDU/stdFolders/314882028/התכתבויות
+Folder Created: /home/EDU/stdFolders/314882028/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/314882028/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/314882028/יתרת חובות
+Folder Created: /home/EDU/stdFolders/314882028/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\נופר וולפרט.pdf
+Copy To: W:314882028\תיק מועמדות
+Ok
+
+Item Added with ID -  133
+Creating DocLib: 021743687
+Document Library Creating
+021743687
+עאבדין- תלמידת חול ניבין 021743687
+LinkFilename
+Folder Created: /home/EDU/stdFolders/021743687/התכתבויות
+Folder Created: /home/EDU/stdFolders/021743687/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/021743687/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/021743687/יתרת חובות
+Folder Created: /home/EDU/stdFolders/021743687/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\ניבין עאבדין- תלמידת חול.pdf
+Copy To: W:021743687\תיק מועמדות
+Ok
+
+Item Added with ID -  134
+Creating DocLib: 312302615
+Document Library Creating
+312302615
+עוודאלה ערין 312302615
+LinkFilename
+Folder Created: /home/EDU/stdFolders/312302615/התכתבויות
+Folder Created: /home/EDU/stdFolders/312302615/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/312302615/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/312302615/יתרת חובות
+Folder Created: /home/EDU/stdFolders/312302615/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\ערין עוודאלה.pdf
+Copy To: W:312302615\תיק מועמדות
+Ok
+
+Item Added with ID -  135
+Creating DocLib: 206804346
+Document Library Creating
+206804346
+סעד רים 206804346
+LinkFilename
+Folder Created: /home/EDU/stdFolders/206804346/התכתבויות
+Folder Created: /home/EDU/stdFolders/206804346/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/206804346/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/206804346/יתרת חובות
+Folder Created: /home/EDU/stdFolders/206804346/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\רים סעד.pdf
+Copy To: W:206804346\תיק מועמדות
+Ok
+
+Item Added with ID -  136
+Creating DocLib: 025290685
+Document Library Creating
+025290685
+לוי ריקי 025290685
+LinkFilename
+Folder Created: /home/EDU/stdFolders/025290685/התכתבויות
+Folder Created: /home/EDU/stdFolders/025290685/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/025290685/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/025290685/יתרת חובות
+Folder Created: /home/EDU/stdFolders/025290685/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\ריקי לוי.pdf
+Copy To: W:025290685\תיק מועמדות
+Ok
+
+Item Added with ID -  137
+Creating DocLib: 207448416
+Document Library Creating
+207448416
+גרומבק תהל 207448416
+LinkFilename
+Folder Created: /home/EDU/stdFolders/207448416/התכתבויות
+Folder Created: /home/EDU/stdFolders/207448416/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/207448416/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/207448416/יתרת חובות
+Folder Created: /home/EDU/stdFolders/207448416/תיק מועמדות
+Copy From: Evgenia-FillFinal\240-EDU51-2021\תהל גרומבק.pdf
+Copy To: W:207448416\תיק מועמדות
+Ok
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-לוי אורית 205550676
+עאבדין- תלמידת חול ניבין 021743687
+עוודאלה ערין 312302615
+סעד רים 206804346
+לוי ריקי 025290685
+גרומבק תהל 207448416
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+אטל ליאורה 34132270
+לוי מוריה 318281078
+אבו רמילה מחמוד 203067228
+סלאח מצעב 312559743
+וולפרט נופר 314882028
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+מכיא אסמאא 208979963
+מג'אדלה ג'נאן 318968310
+רובין הלל 066165226
+סלם ויקטוריה 340876648
+גושה חלא 208444059
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+עבדאל רחמן אסיל 206504342
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
@@ -268,6 +1834,7 @@ C:\AdminDir\SP Powershell\Evgenia-FillFinal\239-EDU50-2021\רחל אסתר הו�
 Item  Exists:
 308358381
 Creating DocLib: 308358381
+LinkFilename
 Folder Already Exists: /home/EDU/stdFolders/308358381/התכתבויות
 Folder Already Exists: /home/EDU/stdFolders/308358381/אישורים אקדמיים
 Folder Already Exists: /home/EDU/stdFolders/308358381/וועדת הוראה
@@ -276,11 +1843,738 @@ Folder Already Exists: /home/EDU/stdFolders/308358381/תיק מועמדות
 Copy From: Evgenia-FillFinal\239-EDU50-2021\אוראל פוראטי.pdf
 Copy To: W:308358381\תיק מועמדות
 W:308358381\תיק מועמדות\אוראל פוראטי.pdf Already Exists
-I : 0
+
+Item Added with ID -  138
+Creating DocLib: 207049404
+Document Library Creating
+207049404
+לרנר  זיכרמן איילה 207049404
+LinkFilename
+Folder Created: /home/EDU/stdFolders/207049404/התכתבויות
+Folder Created: /home/EDU/stdFolders/207049404/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/207049404/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/207049404/יתרת חובות
+Folder Created: /home/EDU/stdFolders/207049404/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\איילה לרנר  זיכרמן.pdf
+Copy To: W:207049404\תיק מועמדות
+Ok
+
+Item Added with ID -  139
+Creating DocLib: 205789365
+Document Library Creating
+205789365
+מליק אלישבע 205789365
+LinkFilename
+Folder Created: /home/EDU/stdFolders/205789365/התכתבויות
+Folder Created: /home/EDU/stdFolders/205789365/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/205789365/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/205789365/יתרת חובות
+Folder Created: /home/EDU/stdFolders/205789365/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\אלישבע מליק.pdf
+Copy To: W:205789365\תיק מועמדות
+Ok
+
+Item Added with ID -  140
+Creating DocLib: 208705988
+Document Library Creating
+208705988
+חטאב אסיל 208705988
+LinkFilename
+Folder Created: /home/EDU/stdFolders/208705988/התכתבויות
+Folder Created: /home/EDU/stdFolders/208705988/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/208705988/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/208705988/יתרת חובות
+Folder Created: /home/EDU/stdFolders/208705988/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\אסיל חטאב.pdf
+Copy To: W:208705988\תיק מועמדות
+Ok
+
+Item Added with ID -  141
+Creating DocLib: 207634171
+Document Library Creating
+207634171
+דכטריוב בנימין 207634171
+LinkFilename
+Folder Created: /home/EDU/stdFolders/207634171/התכתבויות
+Folder Created: /home/EDU/stdFolders/207634171/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/207634171/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/207634171/יתרת חובות
+Folder Created: /home/EDU/stdFolders/207634171/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\בנימין דכטריוב.pdf
+Copy To: W:207634171\תיק מועמדות
+Ok
+
+Item Added with ID -  142
+Creating DocLib: 315531525
+Document Library Creating
+315531525
+אל אטינגר בת 315531525
+LinkFilename
+Folder Created: /home/EDU/stdFolders/315531525/התכתבויות
+Folder Created: /home/EDU/stdFolders/315531525/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/315531525/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/315531525/יתרת חובות
+Folder Created: /home/EDU/stdFolders/315531525/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\בת אל אטינגר.pdf
+Copy To: W:315531525\תיק מועמדות
+Ok
+
+Item Added with ID -  143
+Creating DocLib: 315937367
+Document Library Creating
+315937367
+חליל דוניה 315937367
+LinkFilename
+Folder Created: /home/EDU/stdFolders/315937367/התכתבויות
+Folder Created: /home/EDU/stdFolders/315937367/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/315937367/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/315937367/יתרת חובות
+Folder Created: /home/EDU/stdFolders/315937367/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\דוניה חליל.pdf
+Copy To: W:315937367\תיק מועמדות
+Ok
+
+Item Added with ID -  144
+Creating DocLib: 205686322
+Document Library Creating
+205686322
+שטרן הדס 205686322
+LinkFilename
+Folder Created: /home/EDU/stdFolders/205686322/התכתבויות
+Folder Created: /home/EDU/stdFolders/205686322/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/205686322/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/205686322/יתרת חובות
+Folder Created: /home/EDU/stdFolders/205686322/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\הדס שטרן.pdf
+Copy To: W:205686322\תיק מועמדות
+Ok
+
+Item Added with ID -  145
+Creating DocLib: 313181315
+Document Library Creating
+313181315
+באומן חמוטל 313181315
+LinkFilename
+Folder Created: /home/EDU/stdFolders/313181315/התכתבויות
+Folder Created: /home/EDU/stdFolders/313181315/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/313181315/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/313181315/יתרת חובות
+Folder Created: /home/EDU/stdFolders/313181315/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\חמוטל באומן.pdf
+Copy To: W:313181315\תיק מועמדות
+Ok
+
+Item Added with ID -  146
+Creating DocLib: 321252702
+Document Library Creating
+321252702
+סימנובסקי יאנה 321252702
+LinkFilename
+Folder Created: /home/EDU/stdFolders/321252702/התכתבויות
+Folder Created: /home/EDU/stdFolders/321252702/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/321252702/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/321252702/יתרת חובות
+Folder Created: /home/EDU/stdFolders/321252702/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\יאנה סימנובסקי.pdf
+Copy To: W:321252702\תיק מועמדות
+Ok
+
+Item Added with ID -  147
+Creating DocLib: 208242727
+Document Library Creating
+208242727
+פרלמוטר יפעת 208242727
+LinkFilename
+Folder Created: /home/EDU/stdFolders/208242727/התכתבויות
+Folder Created: /home/EDU/stdFolders/208242727/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/208242727/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/208242727/יתרת חובות
+Folder Created: /home/EDU/stdFolders/208242727/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\יפעת פרלמוטר.pdf
+Copy To: W:208242727\תיק מועמדות
+Ok
+
+Item Added with ID -  148
+Creating DocLib: 203568118
+Document Library Creating
+203568118
+טולצ'ינסקי ליאת 203568118
+LinkFilename
+Folder Created: /home/EDU/stdFolders/203568118/התכתבויות
+Folder Created: /home/EDU/stdFolders/203568118/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/203568118/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/203568118/יתרת חובות
+Folder Created: /home/EDU/stdFolders/203568118/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\ליאת טולצ'ינסקי.pdf
+Copy To: W:203568118\תיק מועמדות
+Ok
+
+Item Added with ID -  149
+Creating DocLib: 313569717
+Document Library Creating
+313569717
+לוי לינוי 313569717
+LinkFilename
+Folder Created: /home/EDU/stdFolders/313569717/התכתבויות
+Folder Created: /home/EDU/stdFolders/313569717/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/313569717/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/313569717/יתרת חובות
+Folder Created: /home/EDU/stdFolders/313569717/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\לינוי לוי.pdf
+Copy To: W:313569717\תיק מועמדות
+Ok
+
+Item Added with ID -  150
+Creating DocLib: 206982449
+Document Library Creating
+206982449
+כיאל למא 206982449
+LinkFilename
+Folder Created: /home/EDU/stdFolders/206982449/התכתבויות
+Folder Created: /home/EDU/stdFolders/206982449/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/206982449/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/206982449/יתרת חובות
+Folder Created: /home/EDU/stdFolders/206982449/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\למא כיאל.pdf
+Copy To: W:206982449\תיק מועמדות
+Ok
+
+Item Added with ID -  151
+Creating DocLib: 313363319
+Document Library Creating
+313363319
+שפירא מור 313363319
+LinkFilename
+Folder Created: /home/EDU/stdFolders/313363319/התכתבויות
+Folder Created: /home/EDU/stdFolders/313363319/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/313363319/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/313363319/יתרת חובות
+Folder Created: /home/EDU/stdFolders/313363319/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\מור שפירא.pdf
+Copy To: W:313363319\תיק מועמדות
+Ok
+
+Item Added with ID -  152
+Creating DocLib: 308427699
+Document Library Creating
+308427699
+ראט מתנאל 308427699
+LinkFilename
+Folder Created: /home/EDU/stdFolders/308427699/התכתבויות
+Folder Created: /home/EDU/stdFolders/308427699/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/308427699/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/308427699/יתרת חובות
+Folder Created: /home/EDU/stdFolders/308427699/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\מתנאל ראט.pdf
+Copy To: W:308427699\תיק מועמדות
+Ok
+
+Item Added with ID -  153
+Creating DocLib: 207391616
+Document Library Creating
+207391616
+בדארנה סגא 207391616
+LinkFilename
+Folder Created: /home/EDU/stdFolders/207391616/התכתבויות
+Folder Created: /home/EDU/stdFolders/207391616/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/207391616/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/207391616/יתרת חובות
+Folder Created: /home/EDU/stdFolders/207391616/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\סגא בדארנה.pdf
+Copy To: W:207391616\תיק מועמדות
+Ok
+
+Item Added with ID -  154
+Creating DocLib: 204232318
+Document Library Creating
+204232318
+ברגר סמדר 204232318
+LinkFilename
+Folder Created: /home/EDU/stdFolders/204232318/התכתבויות
+Folder Created: /home/EDU/stdFolders/204232318/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/204232318/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/204232318/יתרת חובות
+Folder Created: /home/EDU/stdFolders/204232318/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\סמדר ברגר.pdf
+Copy To: W:204232318\תיק מועמדות
+Ok
+
+Item Added with ID -  155
+Creating DocLib: 312546518
+Document Library Creating
+312546518
+מזרחי עדי 312546518
+LinkFilename
+Folder Created: /home/EDU/stdFolders/312546518/התכתבויות
+Folder Created: /home/EDU/stdFolders/312546518/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/312546518/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/312546518/יתרת חובות
+Folder Created: /home/EDU/stdFolders/312546518/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\עדי מזרחי.pdf
+Copy To: W:312546518\תיק מועמדות
+Ok
+
+Item Added with ID -  156
+Creating DocLib: 308324789
+Document Library Creating
+308324789
+רן דיין ראובן 308324789
+LinkFilename
+Folder Created: /home/EDU/stdFolders/308324789/התכתבויות
+Folder Created: /home/EDU/stdFolders/308324789/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/308324789/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/308324789/יתרת חובות
+Folder Created: /home/EDU/stdFolders/308324789/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\ראובן רן דיין.pdf
+Copy To: W:308324789\תיק מועמדות
+Ok
+
+Item Added with ID -  157
+Creating DocLib: 342636586
+Document Library Creating
+342636586
+אסתר הולס רחל 342636586
+LinkFilename
+Folder Created: /home/EDU/stdFolders/342636586/התכתבויות
+Folder Created: /home/EDU/stdFolders/342636586/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/342636586/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/342636586/יתרת חובות
+Folder Created: /home/EDU/stdFolders/342636586/תיק מועמדות
+Copy From: Evgenia-FillFinal\239-EDU50-2021\רחל אסתר הולס.pdf
+Copy To: W:342636586\תיק מועמדות
+Ok
 Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+בדארנה סגא 207391616
+ברגר סמדר 204232318
+מזרחי עדי 312546518
+רן דיין ראובן 308324789
+אסתר הולס רחל 342636586
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+טולצ'ינסקי ליאת 203568118
+לוי לינוי 313569717
+כיאל למא 206982449
+שפירא מור 313363319
+ראט מתנאל 308427699
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+חליל דוניה 315937367
+שטרן הדס 205686322
+באומן חמוטל 313181315
+סימנובסקי יאנה 321252702
+פרלמוטר יפעת 208242727
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+לרנר  זיכרמן איילה 207049404
+מליק אלישבע 205789365
+חטאב אסיל 208705988
+דכטריוב בנימין 207634171
+אל אטינגר בת 315531525
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU53-2021/
+230
+230-EDU53-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\אור ארוך- מסלול מצטיינים.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\אלון טולדו.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\אסתר וקסלר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\ורד גבריאלוב- מסלול מצטיינים.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\סיגליה היים.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\סמדר גלעד-מסלול מצטיינים.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\עריב סורי.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\רהף אלסעד- מסלול מצטיינים.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\רן יפרח-חידוש.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\230-EDU53-2021\שרה נובנשטרן- מסלול מצטיינים.pdf
+
+
+
+Item  Exists:
+203713763
+Creating DocLib: 203713763
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/203713763/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/203713763/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/203713763/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/203713763/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/203713763/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\אור ארוך- מסלול מצטיינים.pdf
+Copy To: W:203713763\תיק מועמדות
+W:203713763\תיק מועמדות\אור ארוך- מסלול מצטיינים.pdf Already Exists
+
+Item Added with ID -  158
+Creating DocLib: 024480717
+Document Library Creating
+024480717
+טולדו אלון 024480717
+LinkFilename
+Folder Created: /home/EDU/stdFolders/024480717/התכתבויות
+Folder Created: /home/EDU/stdFolders/024480717/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/024480717/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/024480717/יתרת חובות
+Folder Created: /home/EDU/stdFolders/024480717/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\אלון טולדו.pdf
+Copy To: W:024480717\תיק מועמדות
+Ok
+
+Item Added with ID -  159
+Creating DocLib: 319208674
+Document Library Creating
+319208674
+וקסלר אסתר 319208674
+LinkFilename
+Folder Created: /home/EDU/stdFolders/319208674/התכתבויות
+Folder Created: /home/EDU/stdFolders/319208674/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/319208674/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/319208674/יתרת חובות
+Folder Created: /home/EDU/stdFolders/319208674/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\אסתר וקסלר.pdf
+Copy To: W:319208674\תיק מועמדות
+Ok
+
+Item Added with ID -  160
+Creating DocLib: 301604070
+Document Library Creating
+301604070
+גבריאלוב- מסלול מצטיינים ורד 301604070
+LinkFilename
+Folder Created: /home/EDU/stdFolders/301604070/התכתבויות
+Folder Created: /home/EDU/stdFolders/301604070/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/301604070/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/301604070/יתרת חובות
+Folder Created: /home/EDU/stdFolders/301604070/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\ורד גבריאלוב- מסלול מצטיינים.pdf
+Copy To: W:301604070\תיק מועמדות
+Ok
+
+Item Added with ID -  161
+Creating DocLib: 013878806
+Document Library Creating
+013878806
+היים סיגליה 013878806
+LinkFilename
+Folder Created: /home/EDU/stdFolders/013878806/התכתבויות
+Folder Created: /home/EDU/stdFolders/013878806/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/013878806/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/013878806/יתרת חובות
+Folder Created: /home/EDU/stdFolders/013878806/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\סיגליה היים.pdf
+Copy To: W:013878806\תיק מועמדות
+Ok
+
+Item Added with ID -  162
+Creating DocLib: 059799718
+Document Library Creating
+059799718
+גלעד-מסלול מצטיינים סמדר 059799718
+LinkFilename
+Folder Created: /home/EDU/stdFolders/059799718/התכתבויות
+Folder Created: /home/EDU/stdFolders/059799718/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/059799718/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/059799718/יתרת חובות
+Folder Created: /home/EDU/stdFolders/059799718/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\סמדר גלעד-מסלול מצטיינים.pdf
+Copy To: W:059799718\תיק מועמדות
+Ok
+
+Item Added with ID -  163
+Creating DocLib: 20096346
+Document Library Creating
+20096346
+סורי עריב 20096346
+LinkFilename
+Folder Created: /home/EDU/stdFolders/20096346/התכתבויות
+Folder Created: /home/EDU/stdFolders/20096346/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/20096346/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/20096346/יתרת חובות
+Folder Created: /home/EDU/stdFolders/20096346/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\עריב סורי.pdf
+Copy To: W:20096346\תיק מועמדות
+Ok
+
+Item Added with ID -  164
+Creating DocLib: 318539269
+Document Library Creating
+318539269
+אלסעד- מסלול מצטיינים רהף 318539269
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318539269/התכתבויות
+Folder Created: /home/EDU/stdFolders/318539269/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318539269/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318539269/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318539269/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\רהף אלסעד- מסלול מצטיינים.pdf
+Copy To: W:318539269\תיק מועמדות
+Ok
+
+Item Added with ID -  165
+Creating DocLib: 038029831
+Document Library Creating
+038029831
+יפרח-חידוש רן 038029831
+LinkFilename
+Folder Created: /home/EDU/stdFolders/038029831/התכתבויות
+Folder Created: /home/EDU/stdFolders/038029831/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/038029831/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/038029831/יתרת חובות
+Folder Created: /home/EDU/stdFolders/038029831/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\רן יפרח-חידוש.pdf
+Copy To: W:038029831\תיק מועמדות
+Ok
+
+Item Added with ID -  166
+Creating DocLib: 055527139
+Document Library Creating
+055527139
+נובנשטרן- מסלול מצטיינים שרה 055527139
+LinkFilename
+Folder Created: /home/EDU/stdFolders/055527139/התכתבויות
+Folder Created: /home/EDU/stdFolders/055527139/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/055527139/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/055527139/יתרת חובות
+Folder Created: /home/EDU/stdFolders/055527139/תיק מועמדות
+Copy From: Evgenia-FillFinal\230-EDU53-2021\שרה נובנשטרן- מסלול מצטיינים.pdf
+Copy To: W:055527139\תיק מועמדות
+Ok
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+גלעד-מסלול מצטיינים סמדר 059799718
+סורי עריב 20096346
+אלסעד- מסלול מצטיינים רהף 318539269
+יפרח-חידוש רן 038029831
+נובנשטרן- מסלול מצטיינים שרה 055527139
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+טולדו אלון 024480717
+וקסלר אסתר 319208674
+גבריאלוב- מסלול מצטיינים ורד 301604070
+היים סיגליה 013878806
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU53-2021/
+241
+241-EDU53-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\אסראא  חלביה.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\דוד טוטנאור.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\הדס שטיינר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\מהא אסמר.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\מוחמד חלוואני.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\נגה לדרמן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\נטלי שלם.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\נטע רוטשטיין.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\241-EDU53-2021\נעים חאג יחיא.pdf
+
+
+
+Item  Exists:
+086953015
+Creating DocLib: 086953015
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/086953015/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/086953015/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/086953015/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/086953015/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/086953015/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\אסראא  חלביה.pdf
+Copy To: W:086953015\תיק מועמדות
+W:086953015\תיק מועמדות\אסראא  חלביה.pdf Already Exists
+
+Item Added with ID -  167
+Creating DocLib: 066612482
+Document Library Creating
+066612482
+טוטנאור דוד 066612482
+LinkFilename
+Folder Created: /home/EDU/stdFolders/066612482/התכתבויות
+Folder Created: /home/EDU/stdFolders/066612482/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/066612482/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/066612482/יתרת חובות
+Folder Created: /home/EDU/stdFolders/066612482/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\דוד טוטנאור.pdf
+Copy To: W:066612482\תיק מועמדות
+Ok
+
+Item Added with ID -  168
+Creating DocLib: 38682639
+Document Library Creating
+38682639
+שטיינר הדס 38682639
+LinkFilename
+Folder Created: /home/EDU/stdFolders/38682639/התכתבויות
+Folder Created: /home/EDU/stdFolders/38682639/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/38682639/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/38682639/יתרת חובות
+Folder Created: /home/EDU/stdFolders/38682639/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\הדס שטיינר.pdf
+Copy To: W:38682639\תיק מועמדות
+Ok
+
+Item Added with ID -  169
+Creating DocLib: 322421314
+Document Library Creating
+322421314
+אסמר מהא 322421314
+LinkFilename
+Folder Created: /home/EDU/stdFolders/322421314/התכתבויות
+Folder Created: /home/EDU/stdFolders/322421314/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/322421314/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/322421314/יתרת חובות
+Folder Created: /home/EDU/stdFolders/322421314/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\מהא אסמר.pdf
+Copy To: W:322421314\תיק מועמדות
+Ok
+
+Item Added with ID -  170
+Creating DocLib: 318706298
+Document Library Creating
+318706298
+חלוואני מוחמד 318706298
+LinkFilename
+Folder Created: /home/EDU/stdFolders/318706298/התכתבויות
+Folder Created: /home/EDU/stdFolders/318706298/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/318706298/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/318706298/יתרת חובות
+Folder Created: /home/EDU/stdFolders/318706298/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\מוחמד חלוואני.pdf
+Copy To: W:318706298\תיק מועמדות
+Ok
+
+Item Added with ID -  171
+Creating DocLib: 028923365
+Document Library Creating
+028923365
+לדרמן נגה 028923365
+LinkFilename
+Folder Created: /home/EDU/stdFolders/028923365/התכתבויות
+Folder Created: /home/EDU/stdFolders/028923365/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/028923365/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/028923365/יתרת חובות
+Folder Created: /home/EDU/stdFolders/028923365/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\נגה לדרמן.pdf
+Copy To: W:028923365\תיק מועמדות
+Ok
+
+Item Added with ID -  172
+Creating DocLib: 204847040
+Document Library Creating
+204847040
+שלם נטלי 204847040
+LinkFilename
+Folder Created: /home/EDU/stdFolders/204847040/התכתבויות
+Folder Created: /home/EDU/stdFolders/204847040/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/204847040/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/204847040/יתרת חובות
+Folder Created: /home/EDU/stdFolders/204847040/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\נטלי שלם.pdf
+Copy To: W:204847040\תיק מועמדות
+Ok
+
+Item Added with ID -  173
+Creating DocLib: 041853235
+Document Library Creating
+041853235
+רוטשטיין נטע 041853235
+LinkFilename
+Folder Created: /home/EDU/stdFolders/041853235/התכתבויות
+Folder Created: /home/EDU/stdFolders/041853235/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/041853235/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/041853235/יתרת חובות
+Folder Created: /home/EDU/stdFolders/041853235/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\נטע רוטשטיין.pdf
+Copy To: W:041853235\תיק מועמדות
+Ok
+
+Item Added with ID -  174
+Creating DocLib: 316415223
+Document Library Creating
+316415223
+חאג יחיא נעים 316415223
+LinkFilename
+Folder Created: /home/EDU/stdFolders/316415223/התכתבויות
+Folder Created: /home/EDU/stdFolders/316415223/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/316415223/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/316415223/יתרת חובות
+Folder Created: /home/EDU/stdFolders/316415223/תיק מועמדות
+Copy From: Evgenia-FillFinal\241-EDU53-2021\נעים חאג יחיא.pdf
+Copy To: W:316415223\תיק מועמדות
+Ok
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+חלוואני מוחמד 318706298
+לדרמן נגה 028923365
+שלם נטלי 204847040
+רוטשטיין נטע 041853235
+חאג יחיא נעים 316415223
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+טוטנאור דוד 066612482
+שטיינר הדס 38682639
+אסמר מהא 322421314
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+URL: https://grs.ekmd.huji.ac.il/home/Education/EDU53-2021/
+242
+242-EDU53-2021
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\242-EDU53-2021\דינה קייזרמן.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\242-EDU53-2021\ישראלה גלאס.pdf
+C:\AdminDir\SP Powershell\Evgenia-FillFinal\242-EDU53-2021\רואן מנסור.pdf
+
+
+
+Item  Exists:
+311663264
+Creating DocLib: 311663264
+LinkFilename
+Folder Already Exists: /home/EDU/stdFolders/311663264/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/311663264/אישורים אקדמיים
+Folder Already Exists: /home/EDU/stdFolders/311663264/וועדת הוראה
+Folder Already Exists: /home/EDU/stdFolders/311663264/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/311663264/תיק מועמדות
+Copy From: Evgenia-FillFinal\242-EDU53-2021\דינה קייזרמן.pdf
+Copy To: W:311663264\תיק מועמדות
+W:311663264\תיק מועמדות\דינה קייזרמן.pdf Already Exists
+
+Item Added with ID -  175
+Creating DocLib: 309883395
+Document Library Creating
+309883395
+גלאס ישראלה 309883395
+LinkFilename
+Folder Created: /home/EDU/stdFolders/309883395/התכתבויות
+Folder Created: /home/EDU/stdFolders/309883395/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/309883395/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/309883395/יתרת חובות
+Folder Created: /home/EDU/stdFolders/309883395/תיק מועמדות
+Copy From: Evgenia-FillFinal\242-EDU53-2021\ישראלה גלאס.pdf
+Copy To: W:309883395\תיק מועמדות
+Ok
+
+Item Added with ID -  176
+Creating DocLib: 037179173
+Document Library Creating
+037179173
+מנסור רואן 037179173
+LinkFilename
+Folder Created: /home/EDU/stdFolders/037179173/התכתבויות
+Folder Created: /home/EDU/stdFolders/037179173/אישורים אקדמיים
+Folder Created: /home/EDU/stdFolders/037179173/וועדת הוראה
+Folder Created: /home/EDU/stdFolders/037179173/יתרת חובות
+Folder Created: /home/EDU/stdFolders/037179173/תיק מועמדות
+Copy From: Evgenia-FillFinal\242-EDU53-2021\רואן מנסור.pdf
+Copy To: W:037179173\תיק מועמדות
+Ok
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
+גלאס ישראלה 309883395
+מנסור רואן 037179173
+Delete Recent Submenus: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
+לאחרונה
 Delete-RecentMainMenu: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders
 Writed File .\Evgenia-FillFinal\-ErrorsInFinal.csv
 **********************
 Windows PowerShell transcript end
-End time: 20220117202022
+End time: 20220118153327
 **********************

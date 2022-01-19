@@ -125,7 +125,7 @@ function Add-allstudentsItem($siteURL,$listName, $studentItem){
 		$listItem["FamilyName"] 	= $studentItem.FamilyNameFinal
 		$listItem["StudentID"] 		= $studentItem.StudentID
 		$listItem["EmailPersonal"]	= $studentItem.Email
-		$listItem["PhoneNumber"] 	= $studentItem.Phone
+		$listItem["PhoneNumber"] 	= $studentItem.PhoneNumber
 		$listItem["_x05de__x05d2__x05de__x05d4_"] 	= $studentItem.Magema
 		
 		
@@ -243,6 +243,41 @@ function copyPdf($drive, $FolderName,$source){
 	return $null
 	
 }
+function get-ListSchemaX2($siteURL,$listName){
+	
+	$fieldsSchema = @()
+	#write-Host "$siteURL , $listName" -f Cyan
+	$siteUrlC = get-UrlNoF5 $siteUrl
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+	
+	$List = $Ctx.Web.lists.GetByTitle($ListName)
+	
+    $Ctx.load($List.Fields) 
+    $Ctx.ExecuteQuery()	
+
+
+	foreach($field in $List.Fields){
+		# write-host "$($field.Title) : Hidden : $($field.Hidden)"
+		#if ($field.SchemaXml.Contains('ReadOnly="TRUE"')){
+		#}
+		#else{
+		#	if ($field.SchemaXml.Contains('Group="_Hidden"')){
+		#	}
+		#	else{
+		
+		#		If (!($field.Hidden -or $field.ReadOnly )){
+					$fieldsSchema += $field.SchemaXml
+		#		}
+		
+		#	}
+		#}	
+	}	
+	#write-Host 1214
+	return $fieldsSchema
+
+}
 
 
 $0 = $myInvocation.MyCommand.Definition
@@ -304,9 +339,22 @@ $Credentials = get-SCred
 			$isAppr = isApproved $approved
 		}
 		if ($potok.contains("237")){
-			#$approved = $litem["Faculty_x0027_s_x0020_Decision"]
-			$isAppr = $true
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
 		}
+		if ($potok -eq "230"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}		
+		if ($potok -eq "241"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}		
+		if ($potok -eq "242"){ 
+			$approved = $litem["_x05d4__x05d7__x05dc__x05d8__x05ea__x0020__x05e8__x05db__x05d6_"]
+			$isAppr = isApproved $approved
+		}		
+		
 		
 		if ($isAppr){
 			$stud = "" | Select-Object FileName 
@@ -550,10 +598,12 @@ $Credentials = get-SCred
 		}
 	}
 	
-	$outFileName = ".\"+$rootflr +$potok+"-candidateList.csv"
+	$outFileName = ".\"+$rootflr +$destFolder+"-candidateList.csv"
 	if (!$(Test-Path $outFileName)){
 		$candidateList | Export-CSV $outFileName -NoTypeInfo -Encoding UTF8
 	}
+	
+	$candList1 = Import-CSV $outFileName -Encoding UTF8
 	
 	net use w: /del	
 	net use w: https://portals.ekmd.huji.ac.il/home/EDU/stdFolders /yes /user:ekmd\ashersa GrapeFloor789
@@ -561,7 +611,7 @@ $Credentials = get-SCred
 	
 	$outlist = "מוסמך"
 	$i = 0
-	foreach($itemS in $candidateList){
+	foreach($itemS in $candList1){
 	      
 		  $itemExists = get-StudentByIDExists $siteURL $outlist $itemS.StudentID
 		  if (!$itemExists){
@@ -580,6 +630,7 @@ $Credentials = get-SCred
 		  $doclibExternalName = $itemS.FamilyNameFinal.trim()+" "+$itemS.SurnameFinal.trim()+" "+$doclibInternalName
 		  
 		  $isDocLibExists = Is-DocLibExists $siteURL $doclibInternalName
+		  
 		  if (!$isDocLibExists){
 			  write-host "Document Library Creating"
 			  write-host $doclibInternalName -f Magenta
@@ -587,17 +638,42 @@ $Credentials = get-SCred
 			  create-DocLib $siteURL $doclibInternalName $doclibExternalName
 			  
 		  }
+		  
+		  			
+ 
+		  $docLibFields = "DocIcon","LinkFilename"
+          $objViews = Get-AllViews $doclibExternalName $siteURL
+		  remove-AllFieldsFromViewButOne $doclibExternalName "כל המסמכים" $siteURL "DocIcon"
+		  Add-FieldsToView  $doclibExternalName "כל המסמכים" $siteURL $docLibFields
+
+<#
+		  if ($doclibInternalName -eq "312504442"){
+			  write-host "DOCLIB 609: $doclibInternalName" -f Cyan
+			  $schemaDocLib4 =  get-ListSchemaX2 $siteUrl $doclibExternalName
+			  $dstDocObj4 = get-SchemaObject $schemaDocLib4 
+			  $dstDocObj4 | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$doclibInternalName+"-"+$destFolder+"EvgDocLib.json")
+			  
+              $objViews = Get-AllViews $doclibExternalName $siteURL
+		 
+			  $objViews | ConvertTo-Json -Depth 100 | out-file $("JSON\"+$doclibInternalName+"-Views.json")
+			  
+			  remove-AllFieldsFromViewButOne $doclibExternalName "כל המסמכים" $siteURL "DocIcon"
+			  Add-FieldsToView  $doclibExternalName "כל המסמכים" $siteURL $docLibFields
+		  }
+#>		  
+		  
+		  
 		  Create-Folders $siteURL $doclibExternalName
 		  
 		  copyPdf "W:" $itemS.StudentID $itemS.PDFFile
 			  
-		  write-host "I : $i"
+		  #write-host "I : $i"
 
 		  
-		  $i++
-		  if ($i -ge 1){
-			  break
-		  }
+		  #$i++
+		  #if ($i -ge 1){
+		#	  break
+		  #}
 		
 	}		
 	

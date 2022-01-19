@@ -1080,13 +1080,13 @@ function change-AllListFieldAndViews($menu,$groupName,$spObj, $oldSiteURL, $site
 			}
 		}
 	}	
-	write-host "959: Press any key..."
+	#write-host "959: Press any key..."
 	
    	foreach($docLibName in $docLibNames){
 		write-Host $docLibName -f Cyan
 	}
 	
-	write-host "965: Press any key..."
+	#write-host "965: Press any key..."
 	#read-host
 	
 	foreach($docLibName in $docLibNames){
