@@ -1,0 +1,389 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<rows>
+	<config>
+		<fileName>registrationForm</fileName>
+		<docHeader>טופס הרשמה ללימודים</docHeader>
+		<finalMessage>הפרטים נשמרו בהצלחה</finalMessage>
+		<missingDataMessage>יש למלא את כל השדות המסומנים</missingDataMessage>
+		<registrationMessage>אינך רשום/ה לתכנית זו. <![CDATA[<a href="http://grs2.ekmd.huji.ac.il/home">הירשם/י כאן</a>]]></registrationMessage>
+		<docTypeList>docType</docTypeList>
+		<docTypeColumn>תוכן קובץ</docTypeColumn>
+		<docType>0. טופס הרשמה</docType>
+		<calculations>yes</calculations>
+	</config>
+
+	<row>
+		<Header>הפקולטה למדעי החברה - המחלקה לפסיכולוגיה - תשפ"ב</Header>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>פרטים אישיים:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>שם משפחה:</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>surnameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+
+		<Label>
+			<text>שם פרטי:</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>firstNameHe</Data>
+			<width>150</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>Last Name:</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>surname</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>First Name:</text>
+			<width>80</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>firstName</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מספר זהות:</text>
+			<width>85</width>
+		</Label>
+		<control>
+			<Type>TextLabel</Type>
+			<Data>studentId</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>מין:</text>
+			<width>80</width>
+		</Label>
+
+		<control>
+			<Type>DropDownList</Type>
+			<Data>gender</Data>
+			<width>90</width>
+			<List>genderListHeb</List>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>פרטי התקשרות:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>כתובת:</text>
+			<width>40</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>address</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>עיר:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>city</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>מיקוד:</text>
+			<width>40</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>zip</Data>
+			<width>150</width>
+		</control>
+
+		<Label>
+			<text>טלפון נייד:</text>
+			<width>70</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>mobile</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>טלפון:</text>
+			<width>40</width>
+		</Label>
+		<control>
+			<Type>TextBox</Type>
+			<Data>phoneHe</Data>
+			<width>150</width>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text>דוא"ל:</text>
+			<width>40</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>email</Data>
+			<width>200</width>
+			<required>yes</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>לימודים:</Header>
+	</row>
+
+	<row>
+		<Label>
+			<text>חוג</text>
+			<width>300</width>
+		</Label>
+
+		<Label>
+			<text>שנה</text>
+			<width>40</width>
+		</Label>
+
+		<Label>
+			<text>נ"ז</text>
+			<width>40</width>
+		</Label>
+
+		<Label>
+			<text>ממוצע</text>
+			<width>50</width>
+		</Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>Department1</Data>
+			<width>300</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>year1</Data>
+			<width>40</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>points1</Data>
+			<autopostback>yes</autopostback>
+			<width>40</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>AverageGrade1</Data>
+			<width>50</width>
+			<autopostback>yes</autopostback>
+		</control>
+	</row>
+
+	<row>
+		<control>
+			<Type>TextBox</Type>
+			<Data>Department2</Data>
+			<width>300</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>year2</Data>
+			<width>40</width>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>points2</Data>
+			<width>40</width>
+			<autopostback>yes</autopostback>
+		</control>
+
+		<control>
+			<Type>TextBox</Type>
+			<Data>AverageGrade2</Data>
+			<width>50</width>
+			<autopostback>yes</autopostback>
+		</control>
+	</row>
+
+	<row>
+		<Label>
+			<text></text>
+			<width>300</width>
+		</Label>
+
+		<Label>
+			<text>סה"כ:</text>
+			<width>40</width>
+		</Label>
+
+		<control>
+			<Type>calculatedValue</Type>
+			<formula>points1+points2</formula>
+			<Data>sumPoints</Data>
+			<autopostback>no</autopostback>
+			<width>40</width>
+		</control>
+
+		<control>
+			<Type>calculatedValue</Type>
+			<formula>((AverageGrade1*points1)+(AverageGrade2*points2))/(points1+points2)</formula>
+			<Data>AverageGrade</Data>
+			<autopostback>no</autopostback>
+			<width>50</width>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text></text>
+			<width>310</width>
+		</Label>
+		
+		<Label>
+			<text></text>
+			<width>30</width>
+		</Label>
+		
+		<control>
+			<Type>updateValue</Type>
+			<Data>updateButton</Data>
+			<buttonText>עדכן סכומים</buttonText>
+			<width>110</width>
+			<print>no</print>
+		</control>
+	</row>
+	
+	<row>
+		<Label></Label>
+	</row>
+	
+	<row>
+		<Label>
+			<text>שנת לימודים בפסיכולוגיה:</text>
+			<width>175</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>psySchoolYear</Data>
+			<width>100</width>
+			<required>no</required>
+		</control>
+	</row>
+	
+	<row>
+		<Label>
+			<text>שנת לימודים בחוג הנוסף:</text>
+			<width>175</width>
+		</Label>
+		
+		<control>
+			<Type>TextBox</Type>
+			<Data>additionalDepartmentSchoolYear</Data>
+			<width>100</width>
+			<required>no</required>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Header>הצהרה כללית:</Header>
+	</row>
+
+	<row>
+		<control>
+			<Type>CheckBox</Type>
+			<Data>declaration</Data>
+			<width>20</width>
+			<required>yes</required>
+			<print>yes</print>
+		</control>
+
+		<Label>
+			<text>אני מצהיר/ה כי כל הפרטים שנמסרו בטופס זה נכונים.</text>
+			<width>500</width>
+			<print>yes</print>
+		</Label>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<Button>שמירה</Button>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+
+	<row>
+		<control>
+			<Type>finalMessage</Type>
+			<Data>MyCustomLabel</Data>
+			<width>500</width>
+			<Text></Text>
+		</control>
+	</row>
+
+	<row>
+		<Label></Label>
+	</row>
+</rows>

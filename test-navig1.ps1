@@ -15,12 +15,30 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-DualLanguage.ps1"
 
 $cred = get-SCred
+$Credentials = $cred
 
- $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
- $siteURL = "https://grs.ekmd.huji.ac.il/home/SocialSciences/SOC36-2020";
+  $siteURL = "https://grs.ekmd.huji.ac.il/home/SocialSciences/SOC36-2020";
+ $siteURL = "https://scholarships.ekmd.huji.ac.il/home/humanities/HUM184-2021/";
+ $siteURL = "https://grs.ekmd.huji.ac.il/home/general/GEN35-2022";
  #$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
+ $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+
+$RelURL = Get-RelURL $siteURL
+ $grRelURL = $RelURL.split("/")[-2]
  
+ 
+ $RelURL = "/home/huca/EinKarem/ekcc/QA/AsherSpace"
+ $grRelURL = "ASHER007"
+ write-host $RelURL -f Cyan
+ write-host $grRelURL -f Magenta
+ 
+  
  write-host "URL: $siteURL" -foregroundcolor Yellow
+ write-host --------------------- 
+
+ write-host "Press Any Key...."
+ read-host
+ 
  $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
  $ctx.Credentials = $cred
  	
@@ -109,8 +127,10 @@ $cred = get-SCred
 		if ($QuickLaunchLink.Title.Contains($docLibNameHe)){
 			continue
 		}
-		$QuickLaunchLink.Url
-		$QuickLaunchLink.Title
+		write-host $QuickLaunchLink.Title -f Green
+		write-host $QuickLaunchLink.Url -f Yellow
+		write-host --------------------- 
+		write-host
 		#$Ctx.Load($QuickLaunchLink.Properties)
 		#$Ctx.ExecuteQuery()
 		# $QuickLaunchLink.Properties["Audience"] 
@@ -134,8 +154,15 @@ $cred = get-SCred
 		
 		#read-host
 	}
-	$outfile = ".\JSON\MenuDmp.json"
+	$outfile = ".\JSON\"+$grRelURL+"-MenuDmp.json"
 	$menuDump | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
+	write-host "$outfile written" -f Yellow
+	
+	
+
+
+	change-HeadingURL $siteUrl $RelURL
+	
 	#$child = $QuickLaunch.Children 
 	
 	#$Ctx.load($child)

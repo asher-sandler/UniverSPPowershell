@@ -1923,12 +1923,19 @@ function copy-DocTypeList($newSite, $oldSite){
 
 
 	ForEach($Item in $ListItems){
-		$docTypeItem = "" | Select Title, Required, FilesNumber , fromMail, sourceField
+		$docTypeItem = "" | Select Title, Required, FilesNumber , fromMail, sourceField,ApplicantPermissions
 		
 		$docTypeItem.Title = $Item["Title"]
 		$docTypeItem.Required = $Item["Required"]
 		$docTypeItem.FilesNumber = $Item["FilesNumber"]
 		$docTypeItem.fromMail = $Item["fromMail"]
+		$docTypeItem.ApplicantPermissions = "contribute"
+		
+		$titlOpX = $Item["Title"].toLower()
+		if ($titlOpX.contains("טופס")  -or $titlOpX.contains("form") -or
+			$titlOpX.contains("המלצה") -or $titlOpX.contains("recomm")){
+			$docTypeItem.ApplicantPermissions = "none"	
+		} 
 		#$docTypeItem.sourceField = $Item["source_field"]
 		
 		$aDocTypeListOld += $docTypeItem
@@ -1958,6 +1965,7 @@ function copy-DocTypeList($newSite, $oldSite){
 			$listItem["Required"] = $item.Required
 			$listItem["FilesNumber"] = $item.FilesNumber
 			$listItem["fromMail"] = $item.fromMail
+			$listItem["ApplicantPermissions"] = $item.ApplicantPermissions
 			#$listItem["source_field"] = $item.sourceField
 		
 			$listItem.Update()      
@@ -1965,7 +1973,7 @@ function copy-DocTypeList($newSite, $oldSite){
 			$ctx1.executeQuery()  
 			$i = $i+1	
 		}
-		Write-Host "Copied $i items."
+		Write-Host "$ListName : Copied $i items."
 	}
 	else
 	{
@@ -3824,7 +3832,8 @@ function get-HtmlInstructTag($siteURL, $htmlContent){
 			$aTag.outerText = $_.outerText
 			 
 			$xt = $_.innerText
-			#write-host "XT: $xt" -f Cyan
+			write-host "innerText: $xt" -f Cyan
+			write-host "outerText: $($aTag.outerText)" -f Cyan
 			 
 			$aTag.innerText = $_.parentNode.innerText -replace $aTag.outerText,""
 			$aTag.innerText = $aTag.innerText.Trim()
@@ -3889,6 +3898,14 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 	$newPageCont = $pageContent -Replace $relUrlOld, $relUrlNew	
 	
 	$aHtmlTags = get-HtmlInstructTag $oldSiteName $pageContent
+ 
+    $RelURLX = Get-RelURL  $oldSiteName
+    $grRelURL = $RelURLX.split("/")[-2]
+
+	$outfile = ".\JSON\"+$grRelURL+"-HtmlTags.json"
+	$aHtmlTags | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
+	write-host "$outfile written" -f Yellow
+	
 
     write-Host "newSiteName : $newSiteName" -f Cyan
 	if (![string]::isNullOrEmpty($aHtmlTags)){
@@ -3906,7 +3923,9 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 		}
 		
 		# "innerText":  "ב. להעלות את המסמכים הבאים לתיקיית העלאת מסמכים אישית לפי",
-		$newPageCont = $newPageCont -Replace $aHtmlTags.innerText, $stringSR
+		if (![string]::isNullOrEmpty($aHtmlTags.innerText)){
+			$newPageCont = $newPageCont -Replace $aHtmlTags.innerText, $stringSR
+		}
 
 		# "outerText":  "ההוראות המופיעות כאן"
 		$newPageCont = $newPageCont -Replace $aHtmlTags.outerText, $stringATR
@@ -5579,4 +5598,41 @@ function Create-PublishingPages($siteURL, $menuItems){
 			}
 		}
 	}
+}
+function change-HeadingURL($siteURL,$URIaddress){
+	$menuApplEn = "Application"
+	$menuApplHe = "הגשת מועמדות"
+ 	
+	$siteUrlC = get-UrlNoF5 $siteURL
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+
+
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+ 	
+    foreach($QuickLaunchLink in $QuickLaunch){	
+
+		$Ctx.Load($QuickLaunchLink)
+		#$Ctx.Load($QuickLaunchLink.Children)
+		$Ctx.ExecuteQuery()
+		
+		if (($QuickLaunchLink.Title -eq $menuApplEn ) -or
+			($QuickLaunchLink.Title -eq $menuApplHe )){
+			
+			$QuickLaunchLink.Url = $URIaddress
+			$QuickLaunchLink.Update()
+			$Ctx.ExecuteQuery()			
+			write-host "Updated Heading $($QuickLaunchLink.Title)" -f Green
+			write-host "Updated URL to $URIaddress" -f Green
+
+		}
+
+	}
+	
+	return $null
+
 }
