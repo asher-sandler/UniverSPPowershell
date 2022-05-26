@@ -27,6 +27,7 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 			#$siteUrl = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace"
 			$oldSiteURL =  "https://grs2.ekmd.huji.ac.il/home/Education/EDU57-2021/"
 			$oldSiteURL =  "https://grs.ekmd.huji.ac.il/home/natureScience/SCI23-2020"
+			$oldSiteURL =  "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022/"
 			
 			#$siteUrl
 			#$oldSiteURL
@@ -40,7 +41,7 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 			# TEST ONLY VARS
 			
 			$applSchmSrc = get-ApplicantsSchema $oldSiteURL
-			$applSchmSrc | ConvertTo-Json -Depth 100 | out-file $("..\JSON\SCI23-2020-ApplFields.json")				
+			$applSchmSrc | ConvertTo-Json -Depth 100 | out-file $("..\JSON\EDU63-2022-ApplFields.json")				
 			#$schemaDifference | out-file "diff.xml" -Encoding Default
 			
 #		}

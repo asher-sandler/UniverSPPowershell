@@ -19,11 +19,11 @@ $Credentials = get-SCred
  
  $siteName = "";
  
- 
- write-host "URL: $siteURL" -foregroundcolor Yellow
- 
  $siteUrl = get-UrlNoF5 $siteName
 
+ write-host "URL: $siteURL" -foregroundcolor Yellow
+ 
+ 
  $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
  $Ctx.Credentials = $Credentials
  

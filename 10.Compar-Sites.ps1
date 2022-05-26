@@ -210,65 +210,71 @@ function check-WebParts($src,$dst){
 }
 
 function get-PageWebPartAll($SiteURL,$pageURL){
-	$siteName = get-UrlNoF5 $SiteURL
 	
-	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
-	
-	$Ctx.Credentials = $Credentials
+	$wpsObject = $null
+	if ($pageURL.contains(".aspx")){
+		
+			$siteName = get-UrlNoF5 $SiteURL
+		
+		write-Host $pageURL -f Cyan
+		$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+		
+		$Ctx.Credentials = $Credentials
 
 
 
-	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
-	
-	$ctx.Load($page);
-    $ctx.Load($page.ListItemAllFields);
-    $ctx.ExecuteQuery();
+		$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+		
+		$ctx.Load($page);
+		$ctx.Load($page.ListItemAllFields);
+		$ctx.ExecuteQuery();
 
 
-	$page.CheckOut()
-	$pageFields = $page.ListItemAllFields
+		$page.CheckOut()
+		$pageFields = $page.ListItemAllFields
 
-	$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
-	
-	Write-Host "Get webparts on the page : $pageURL" -ForegroundColor Green
+		$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
+		
+		Write-Host "Get webparts on the page : $pageURL" -ForegroundColor Green
 
-	
-	$WebParts = $webpartManager.WebParts
-	$ctx.Load($webpartManager);
-	$ctx.Load($WebParts);
-	$ctx.ExecuteQuery();
-	
-	$wpsObject = @()	
-	
-	foreach($wp in $webparts){
-			
-			
-			
-			$ctx.Load($wp.WebPart.Properties)
-			$ctx.Load($wp.WebPart)
-			$ctx.Load($wp)
-			$ctx.ExecuteQuery() 
-			write-host $wp.WebPart.Title
-			$wps = "" | Select-Object Title, Properties
-			$wps.Title = $wp.WebPart.Title
-			$wps.Properties = $wp.WebPart.Properties.FieldValues
-			$wpsObject += $wps
-			<#
-			if ($wp.WebPart.Title -eq $wpName){
-				$wp.WebPart.Properties["WP_Language"] = $lang
-				$wp.WebPart.Properties["EmailTemplatePath"] = $spObj.MailPath
+		
+		$WebParts = $webpartManager.WebParts
+		$ctx.Load($webpartManager);
+		$ctx.Load($WebParts);
+		$ctx.ExecuteQuery();
+		
+		$wpsObject = @()	
+		
+		foreach($wp in $webparts){
 				
-				$wp.WebPart.Properties["EmailTemplateName"] = $spObj.MailFile;
 				
-				$wp.SaveWebPartChanges();				
-			}
-			#>
+				
+				$ctx.Load($wp.WebPart.Properties)
+				$ctx.Load($wp.WebPart)
+				$ctx.Load($wp)
+				$ctx.ExecuteQuery() 
+				write-host $wp.WebPart.Title
+				$wps = "" | Select-Object Title, Properties
+				$wps.Title = $wp.WebPart.Title
+				$wps.Properties = $wp.WebPart.Properties.FieldValues
+				$wpsObject += $wps
+				<#
+				if ($wp.WebPart.Title -eq $wpName){
+					$wp.WebPart.Properties["WP_Language"] = $lang
+					$wp.WebPart.Properties["EmailTemplatePath"] = $spObj.MailPath
+					
+					$wp.WebPart.Properties["EmailTemplateName"] = $spObj.MailFile;
+					
+					$wp.SaveWebPartChanges();				
+				}
+				#>
+		}
+		#$PageContent = $pageFields["PublishingPageContent"]
+		
+		$page.UndoCheckOut()
+		
+		$ctx.ExecuteQuery()	
 	}
-	#$PageContent = $pageFields["PublishingPageContent"]
-	
-	$page.UndoCheckOut()
-	
-	$ctx.ExecuteQuery()	
 	return $wpsObject
 
 }

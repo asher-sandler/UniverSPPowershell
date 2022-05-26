@@ -420,7 +420,8 @@ function Get-FacultyId($faculty, $facultyList){
 	$retValue = ""
 	
 	for($i=0; $i -lt $facultyList.count; $i++){
-		if ($facultyList[$i].SiteDescription.toUpper() -eq $faculty.ToUpper()){
+		#if ($facultyList[$i].SiteDescription.toUpper() -eq $faculty.ToUpper()){
+		if ($facultyList[$i].displayTitle.toUpper() -eq $faculty.ToUpper()){
 			# write-Host $faculty, $facultyList[$i].Id
 			
 			$retValue = $facultyList[$i].Id
@@ -436,6 +437,8 @@ function get-FacultyTitle($groupName, $faculty){
 	$facultyList = Get-FacultyList $($currentSystem.appHomeUrl)
 	
 	$facultyNames = "" | Select-Object TitleEn, TitleHe
+	$facultyNames.TitleEn = ""
+	$facultyNames.TitleHe = ""
 	
 	#write-host $faculty
 	
@@ -449,13 +452,23 @@ function get-FacultyTitle($groupName, $faculty){
 	{
 		
 		#if (![string]::isNullOrEmpty($item.SiteDescription)){
+		if (![string]::isNullOrEmpty($item.displayTitle)){
 			
-			if ($item.SiteDescription.toUpper() -eq $faculty.ToUpper()){
+			#if ($item.SiteDescription.toUpper() -eq $faculty.ToUpper()){
+			if ($item.displayTitle.toUpper() -eq $faculty.ToUpper()){
 				$facultyNames.TitleEn =  $item.displayTitle
 				$facultyNames.TitleHe =  $item.displayTitleHe
 				break
 			}
-		#}
+		}
+	}
+	
+	if ([string]::isNullOrEmpty($facultyNames.TitleEn) -or 
+		[string]::isNullOrEmpty($facultyNames.TitleHe)){
+		Write-Host "Faculty '$faculty' not found in Faculty List" -f Yellow
+		Write-Host "item.SiteDescription = '$($item.SiteDescription)'" -f Yellow
+		Write-Host "facultyNames.TitleEn = '$($facultyNames.TitleEn)'" -f Yellow
+		Write-Host "facultyNames.TitleHe = '$($facultyNames.TitleHe)'" -f Yellow
 	}
 	#write-host $facultyNames
 	#read-host
@@ -489,20 +502,22 @@ function Get-FacultyList($wrkSite){
 
 	ForEach($Item in $ListItems)
 	{ 
+		if (![string]::isNullOrEmpty($Item["SiteURL"].Url)){
 
-		$facultyListItem = "" | Select Id, Title, Code, SiteURL, SiteDescription,  displayTitle, displayOrder, displayTitleHe, displayOrderHe  
-		
-		$facultyListItem.Id				= $Item.id
-		$facultyListItem.Title 			= $Item["Title"]
-		$facultyListItem.Code 			= $Item["Code"]
-		$facultyListItem.SiteURL 		= $Item["SiteURL"].Url
-		$facultyListItem.SiteDescription= $Item["SiteURL"].Description
-		$facultyListItem.displayTitle 	= $Item["displayTitle"]
-		$facultyListItem.displayOrder 	= $Item["displayOrder"]
-		$facultyListItem.displayTitleHe = $Item["displayTitleHe"]
-		$facultyListItem.displayOrderHe = $Item["displayOrderHe"]
-		
-		$facultyList += $facultyListItem
+			$facultyListItem = "" | Select Id, Title, Code, SiteURL, SiteDescription,  displayTitle, displayOrder, displayTitleHe, displayOrderHe  
+			
+			$facultyListItem.Id				= $Item.id
+			$facultyListItem.Title 			= $Item["Title"]
+			$facultyListItem.Code 			= $Item["Code"]
+			$facultyListItem.SiteURL 		= $Item["SiteURL"].Url
+			$facultyListItem.SiteDescription= $Item["SiteURL"].Description
+			$facultyListItem.displayTitle 	= $Item["displayTitle"]
+			$facultyListItem.displayOrder 	= $Item["displayOrder"]
+			$facultyListItem.displayTitleHe = $Item["displayTitleHe"]
+			$facultyListItem.displayOrderHe = $Item["displayOrderHe"]
+			
+			$facultyList += $facultyListItem
+		}
 	}
 
 	return $facultyList	
@@ -687,7 +702,9 @@ function Write-TextConfig ($ListObj, $groupName)
 		$relURL = $groupName.ToUpper().Split("_")[1]
 		
 		$fileS =  $crlf + $crlf + "GROUP TEMPLATE:"+ $relURL + $crlf + $crlf 
-		$fileS =  "System List: "+ $(get-UrlWithF5 $($ListObj[0].systemListUrl)) + $crlf 
+		$fileS +=  "System List: "+ $(get-UrlWithF5 $($ListObj[0].systemListUrl)) + $crlf + $crlf
+		$fileS +=  "spRequestsListItem: "+ $(get-UrlWithF5 $($ListObj[0].spRequestsListLink)) + $crlf 
+		$fileS +=  "spRequestsListDocs: "+ $(get-UrlWithF5 $($ListObj[0].spRequestsListDocs)) + $crlf+$crlf+$crlf
 		$fileS += "Assigned Group: "+ $ListObj[0].assignedGroup + $crlf
 		$fileS += "Site Name:"+$ListObj[0].siteName + $crlf
 		$fileS += "Site Title:"+$ListObj[0].siteName + $crlf
@@ -967,6 +984,11 @@ function create-ListfromOld($newSite, $oldSite, $listName)
 		if ($fieldObj.Type -eq "Note"){
 			write-Host "add-Note" -f Cyan
 			add-NoteFields $newSite $listName $($fieldObj.FieldObj)
+			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
+		}
+		if ($fieldObj.Type -eq "Currency"){
+			write-Host "add-Currency" -f Cyan
+			add-CurrencyFields $newSite $listName $($fieldObj.FieldObj)
 			$fieldNamesAdditional += $fieldObj.FieldObj.DisplayName							
 		}
 	}	
@@ -1473,10 +1495,15 @@ function add-TextFields($siteUrl, $listName, $fieldObj){
         else
         {
 			$DisplayName = $fieldObj.DisplayName
+			$FldName = $fieldObj.Name
 			$IsRequired = $fieldObj.Required
 			
 			#Define XML for Field Schema
-            $FieldSchema = "<Field Type='Text' DisplayName='$DisplayName' Required='$IsRequired'  />"
+            $FieldSchema = "<Field Type='Text' DisplayName='$DisplayName' Name='$FldName' Required='$IsRequired'  />"
+			if([string]::isNullOrEmpty($FldName)){
+	            $FieldSchema = "<Field Type='Text' DisplayName='$DisplayName' Required='$IsRequired'  />"
+
+			}
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
             $Ctx.ExecuteQuery()   
@@ -1512,10 +1539,17 @@ function add-BooleanFields($siteUrl, $listName, $fieldObj){
         else
         {
 			$DisplayName = $fieldObj.DisplayName
+			
+			$FldName = $fieldObj.Name
 			$IsRequired = $fieldObj.Required
 			$DefaultValue="0"
 			
-            $FieldSchema = "<Field Type='Boolean' DisplayName='$DisplayName' Required='$IsRequired'><Default>$DefaultValue</Default></Field>"
+            $FieldSchema = "<Field Type='Boolean' DisplayName='$DisplayName' Name='$FldName' Required='$IsRequired'><Default>$DefaultValue</Default></Field>"
+			if([string]::isNullOrEmpty($FldName)){
+				$FieldSchema = "<Field Type='Boolean' DisplayName='$DisplayName'  Required='$IsRequired'><Default>$DefaultValue</Default></Field>"
+				 
+			}	
+			
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
             $Ctx.ExecuteQuery()   
@@ -1548,6 +1582,7 @@ function add-NoteFields($siteUrl, $listName, $fieldObj){
         else
         {
 			$DisplayName = $fieldObj.DisplayName
+			$FldName     = $fieldObj.Name
 			$IsRequired = $fieldObj.Required
 			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
 			$RichText = $fieldObj.RichText
@@ -1574,7 +1609,11 @@ function add-NoteFields($siteUrl, $listName, $fieldObj){
 				$RichText=''	
 			}
 			
-			$FieldSchema = "<Field Type='Note'  DisplayName='$DisplayName'  Required='$IsRequired' $RichText $RichTextMode  $IsolateStyles />"
+			$FieldSchema = "<Field Type='Note'  DisplayName='$DisplayName'  Name='$FldName' Required='$IsRequired' $RichText $RichTextMode  $IsolateStyles />"
+			if([string]::isNullOrEmpty($FldName)){
+				$FieldSchema = "<Field Type='Note'  DisplayName='$DisplayName'  Required='$IsRequired' $RichText $RichTextMode  $IsolateStyles />"
+				
+			}				
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1585,6 +1624,49 @@ function add-NoteFields($siteUrl, $listName, $fieldObj){
 		}
 	
 }
+function add-CurrencyFields($siteUrl, $listName, $fieldObj){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+        $NewField = $Fields | where { ($_.Title -eq $($fieldObj.DisplayName))  }
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $Name already exists in the List!" -f Yellow
+        }
+        else
+        {
+			$DisplayName = $fieldObj.DisplayName
+			$FldName     = $fieldObj.Name
+			$IsRequired = $fieldObj.Required
+			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
+            
+            
+            $FieldSchema = "<Field Type='Currency'  DisplayName='$DisplayName' Name='$FldName'  Required='$IsRequired' EnforceUniqueValues='$EnforceUniqueValues'/>"
+			if([string]::isNullOrEmpty($FldName)){
+				$FieldSchema = "<Field Type='Currency'  DisplayName='$DisplayName' Required='$IsRequired' EnforceUniqueValues='$EnforceUniqueValues'/>"
+				
+			}					
+			write-host $FieldSchema
+            $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
+            $Ctx.ExecuteQuery()   
+ 
+            Write-host "New Column $DisplayName Added to the $listName Successfully!" -ForegroundColor Green 
+			
+			
+		}
+	
+}
+
 function add-DateTimeFields($siteUrl, $listName, $fieldObj){
         #Setup the context
         $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
@@ -1607,11 +1689,16 @@ function add-DateTimeFields($siteUrl, $listName, $fieldObj){
         else
         {
 			$DisplayName = $fieldObj.DisplayName
+			$FldName     = $fieldObj.Name
 			$IsRequired = $fieldObj.Required
 			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
             
 			#$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Required='$IsRequired' Format='DateOnly' />"
-			$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Required='$IsRequired' />"
+			$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName'  Name='$FldName' Required='$IsRequired' />"
+			if([string]::isNullOrEmpty($FldName)){
+				$FieldSchema = "<Field Type='DateTime'  DisplayName='$DisplayName' Required='$IsRequired' />"
+				
+			}			
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1644,13 +1731,18 @@ function add-ChoiceFields($siteUrl, $listName, $fieldObj){
         else
         {
             $DisplayName = $fieldObj.DisplayName
+			$FldName = $fieldObj.Name
 			$IsRequired = $fieldObj.Required
 			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
 			$Format = $fieldObj.Format
 			$Choice = $fieldObj.Choice
  
 			#Define XML for Field Schema
-            $FieldSchema = "<Field Type='Choice'  DisplayName='$DisplayName'  Required='$IsRequired' Format='$Format'>$Choice</Field>"
+            $FieldSchema = "<Field Type='Choice'  DisplayName='$DisplayName' Name='$FldName' Required='$IsRequired' Format='$Format'>$Choice</Field>"
+			if([string]::isNullOrEmpty($FldName)){
+				$FieldSchema = "<Field Type='Choice'  DisplayName='$DisplayName' Required='$IsRequired' Format='$Format'>$Choice</Field>"
+				
+			}
 			write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1706,12 +1798,17 @@ Column Name already exists in the Oded Lowenheim!
 			$LookupListID= $LookupList.id
             $LookupWebID=$web.Id
 			$DisplayName = $fieldObj.DisplayName
+			$FldName = $fieldObj.Name
 			$IsRequired = $fieldObj.Required
 			$EnforceUniqueValues = $fieldObj.EnforceUniqueValues
 			$LookupField = $fieldObj.ShowField
 			
 			#sharepoint online powershell create lookup field
-            $FieldSchema = "<Field Type='Lookup'  DisplayName='$DisplayName'  Required='$IsRequired' EnforceUniqueValues='$EnforceUniqueValues' List='$LookupListID' WebId='$LookupWebID' ShowField='$LookupField' />"
+            $FieldSchema = "<Field Type='Lookup'  DisplayName='$DisplayName' Name='$FldName' Required='$IsRequired' EnforceUniqueValues='$EnforceUniqueValues' List='$LookupListID' WebId='$LookupWebID' ShowField='$LookupField' />"
+			if([string]::isNullOrEmpty($FldName)){
+				$FieldSchema = "<Field Type='Lookup'  DisplayName='$DisplayName' Required='$IsRequired' EnforceUniqueValues='$EnforceUniqueValues' List='$LookupListID' WebId='$LookupWebID' ShowField='$LookupField' />"
+				
+			}
 			#write-host $FieldSchema
             $NewField = $List.Fields.AddFieldAsXml($FieldSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::DefaultValue)
             $Ctx.ExecuteQuery()   
@@ -1933,7 +2030,7 @@ function copy-DocTypeList($newSite, $oldSite){
 		
 		$titlOpX = $Item["Title"].toLower()
 		if ($titlOpX.contains("טופס")  -or $titlOpX.contains("form") -or
-			$titlOpX.contains("המלצה") -or $titlOpX.contains("recomm")){
+			$titlOpX.contains("המלצ") -or $titlOpX.contains("recomm")){
 			$docTypeItem.ApplicantPermissions = "none"	
 		} 
 		#$docTypeItem.sourceField = $Item["source_field"]
@@ -1991,6 +2088,7 @@ function get-RequestListObject(){
 	  
 	#Set parameter values
 	$SiteURL="https://portals.ekmd.huji.ac.il/home/huca/committees/SPProjects2017/"
+	$SiteURL="https://portals.ekmd.huji.ac.il/home/huca/spSupport"
 	  
 	#Get Credentials to connect
 	#$Cred= Get-Credential
@@ -2023,7 +2121,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
+	$spRequestsListItem = "" | Select ID,spRequestsListLink,spRequestsListDocs, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, currentSiteUrl,Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -2039,6 +2137,8 @@ function get-RequestListObject(){
 					$groupSuffix =  Get-GroupSuffix $groupName
 					
 					$spRequestsListItem.ID = $Item.id
+					$spRequestsListItem.spRequestsListLink = "https://portals2.ekmd.huji.ac.il/home/huca/spSupport/_layouts/15/listform.aspx?PageType=6&ListId=%7B05A3DC03%2D3755%2D40D2%2D8AB8%2DEDEA25CF3375%7D&ID="+$Item.id.ToString()
+					$spRequestsListItem.spRequestsListDocs = "https://portals2.ekmd.huji.ac.il/home/huca/spSupport/spRequestsFiles/NEW-REQ"+$Item.id.ToString()
 					$spRequestsListItem.GroupName = $Item["assignedGroup"]
 					
 					$spRequestsListItem.relURL = $relURL
@@ -2048,7 +2148,7 @@ function get-RequestListObject(){
 					$spRequestsListItem.adminGroup = $groupSuffix +"_"+ $relURL + "_AdminUG"
 					$spRequestsListItem.adminGroupSP =$groupSuffix +"_"+ $relURL + "_AdminSP"
 					$spRequestsListItem.assignedGroup = $groupName
-					$spRequestsListItem.Notes = $Item["notes"]
+					$spRequestsListItem.Notes = $Item["currentSiteUrl"]  # field "Notes" was changed to "currentSiteUrl"
 					$spRequestsListItem.PreviousXML = GetPrevXML $spRequestsListItem.Notes
 					$spRequestsListItem.PreviousMail = GetPrevMAIL $spRequestsListItem.Notes
 
@@ -2169,7 +2269,9 @@ function Get-UsrNameAD($email){
 	$retStr = ""
 	if ($email.contains("savion.huji.ac.il")){
 		
-		$usrObj =  Get-ADuser -Filter 'mail -like $email' -Properties SamAccountName -Server hustaff.huji.local
+		$eml1 = $email.split('@')[0] + "@savion.huji.ac.il"
+		 
+		$usrObj =  Get-ADuser -Filter 'mail -like $eml1' -Properties SamAccountName -Server hustaff.huji.local
 		
 		$retStr = "CC\"+ $usrObj.SamAccountName
 	}
@@ -2179,15 +2281,11 @@ function Get-UsrNameAD($email){
 		$usrObj=Get-ADuser -Filter 'mail -like $email' -Properties SamAccountName
 		if (![string]::IsNullOrEmpty($usrObj.SamAccountName)){
 			$retStr = "EKMD\"+ $usrObj.SamAccountName 
-	
-			
 		}
 		else
 		{
-		
 			write-host "User with mail $email NOT found in AD!!!" -foregroundcolor Yellow
 		}
-		
 	}
 	return $retStr	
 }
@@ -3819,6 +3917,8 @@ function get-HtmlInstructTag($siteURL, $htmlContent){
 	$instrHe =  'href="/home/Pages/InstructionsHe.aspx"'
 	$instrEn =  'href="/home/Pages/InstructionsEn.aspx"'
 	
+	$instrHe =  'InstructionsHe.aspx'
+	$instrEn =  'InstructionsEn.aspx'
 	
     $HTML = New-Object -Com "HTMLFile"
 	$HTML.IHTMLDocument2_write($htmlContent)
@@ -3826,6 +3926,8 @@ function get-HtmlInstructTag($siteURL, $htmlContent){
 		$HTML.All.Tags('a') | ForEach-Object{
 		 $aTag = "" | Select-Object URL,lang,innerHTML,outerHTML,innerText,outerText,href,parent
 		 if ($_.outerHTML.Contains($instrHe)){
+			 
+			 
 			$aTag.URL = $siteURL
 			$aTag.innerHTML = $_.innerHTML
 			$aTag.outerHTML = $_.outerHTML
@@ -3911,6 +4013,9 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 	if (![string]::isNullOrEmpty($aHtmlTags)){
 		
 		$stringA = 'a href="/home/Pages/InstructionsEn.aspx" target="_blank"'
+		if (!$newPageCont.contains($stringA)){
+			$stringA = 'a href="/home/Pages/InstructionsEn.aspx"'
+		}	
 		$stringARX = 'a href="' + $newSiteName + "/Pages/DocumentsUpload.aspx"+'"'
 		
 		$stringATR = 'Documents Upload page'
@@ -3920,6 +4025,9 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 			$stringATR = "דף העלאת המסמכים"
 			$stringSR  = 'ב. להעלות את המסמכים הבאים באמצעות '
 			$stringA = 'a href="/home/Pages/InstructionsHe.aspx" target="_blank"'
+			if (!$newPageCont.contains($stringA)){
+				$stringA = 'a href="/home/Pages/InstructionsHe.aspx"'
+			}				
 		}
 		
 		# "innerText":  "ב. להעלות את המסמכים הבאים לתיקיית העלאת מסמכים אישית לפי",
@@ -4155,8 +4263,11 @@ function Get-MailContentHe($siteName,$faculty){
 	$retStr  = "<br>"+ $crlf
 	$retStr += "שלום [SPF:firstNameHe] [SPF:surnameHe],<br>"+ $crlf
 	$retStr += "<br>"+ $crlf
-	$retStr += "תודה על הגשה למלגה:<br>"+ $crlf
-	$retStr += $siteName + $crlf
+	#$retStr += "תודה על הגשה למלגה:<br>"+ $crlf
+	$retStr += "תודה על הגשת מועמדותך<br>"+ $crlf
+	$retStr += "<b>ל" # + $crlf
+	$retStr += $siteName #+ $crlf
+	$retStr += "</b>" + $crlf
 	$retStr += "<br>" + $crlf
 	$retStr += "<br>" + $crlf
 	$retStr += "המסמכים הבאים שהעלית נקלטו במערכת:" + $crlf
@@ -4836,6 +4947,7 @@ function Log-Generate($spObj,$newSite){
 	
 	$htmlTemplate = $htmlTemplate.Replace("%GroupName%",$spObj.GroupName)
 	$htmlTemplate = $htmlTemplate.Replace("%Site Name%",$spObj.siteName)
+	$htmlTemplate = $htmlTemplate.Replace("%MailSuffix%",$spObj.mailSuffix)
 	$htmlTemplate = $htmlTemplate.Replace("%siteName%",$spObj.siteName)
 	$htmlTemplate = $htmlTemplate.Replace("%siteNameEn%",$spObj.siteNameEn)
 	$contactTitle = $spObj.contactFirstNameEn + " " + $spObj.contactLastNameEn
@@ -5497,13 +5609,13 @@ function Get-FiveRandomLetters()
 }
 function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
 	$siteName = get-UrlNoF5 $SiteURL
+	$sucess = $false
+	#write-Host "5590: Create-WPPage"
 	if (!$pageName.toLower().Contains('.aspx')){
 		$pageName += '.aspx'
 	} 
 	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
 	$ctx.Credentials = $Credentials
-	
-
 
  	$Web = $Ctx.Web
 	$ctx.Load($Web)
@@ -5574,13 +5686,13 @@ function Create-WPPage($siteURL,$pageName,$PageTitle, $lang){
 		$ListItem.File.Publish([string]::Empty)
 		$Ctx.ExecuteQuery()
 		Write-host -f Green "Done!"
-
+		$sucess = $true
 
 	}
 	
-	return $null
+	return $sucess
 }
-function Create-PublishingPages($siteURL, $menuItems){
+function Create-PublishingPages($siteURL, $oldSiteURL, $menuItems){
 	
 	forEach ($menuItm in $menuItems){
 		
@@ -5591,8 +5703,13 @@ function Create-PublishingPages($siteURL, $menuItems){
 				if (!$itm.IsOldMenu){
 					#write-Host 5286
 					if ($itm.Url.Contains("/Pages/")){
-						Create-WPPage $siteURL $itm.InnerName $itm.Title #"כתב ויתור על סודיות רפואית"
-						#write-Host $itm.InnerName -f Magenta
+						$pageCreated = Create-WPPage $siteURL $itm.InnerName $itm.Title #"כתב ויתור על סודיות רפואית"
+						if ($pageCreated){
+							write-Host "5686: Oldsite Url: $oldSiteURL" -f Magenta
+							write-Host "5687: site Url: $siteURL" -f Magenta
+							write-Host "5688: old Page: $($itm.OldUrl)" -f Magenta
+							write-Host "5689: new Page: $($itm.Url)" -f Magenta
+						}
 					}
 				}
 			}
@@ -5635,4 +5752,271 @@ function change-HeadingURL($siteURL,$URIaddress){
 	
 	return $null
 
+}
+function copy-ImgFiles($imgObjSrc,$imgObjDst){
+
+	$mountPointSrc = get-UrlNoF5 $("https://"+$imgObjSrc.DNSHost+$imgObjSrc.DocLib)
+	$mountPointDst = get-UrlNoF5 $("https://"+$imgObjDst.DNSHost+$imgObjDst.DocLib)
+	
+#write-Host 	"5650: $mountPointSrc"
+#write-Host 	"5651 $mountPointDst"
+#write-Host Press a key ...
+
+#read-host
+	net use w: /del | out-null #source
+	net use y: /del | out-null # dest
+	
+	net use w: $mountPointSrc /user:ekmd\ashersa GrapeFloor789 | out-null
+	net use y: $mountPointDst /user:ekmd\ashersa GrapeFloor789 | out-null
+	
+	$source = "w:" + $imgObjSrc.relDir+$imgObjSrc.docName
+	$destPath = "y:"+$imgObjDst.relDir
+	$destination = $destPath+$imgObjDst.docName
+	
+	if(Test-Path $source){
+		
+
+		if (!$(Test-Path $destPath)){
+			New-Item -Path $destPath -ItemType directory
+		}
+		
+		if (!$(Test-Path $destination)){
+				write-host "Copy From: $source" -f Green
+				write-host "Copy To: $destination" -f Green
+				Copy-Item -Path $source -Destination $destination
+				write-host "Ok" -f Green
+		}
+	}
+	else
+	{
+		write-host "$source Does not Exists" -f Yellow
+	}
+	net use w: /del | out-null #source
+	net use y: /del | out-null # dest
+	
+}
+function get-PageAndTitleContent($oldSiteName,$pageName){
+	
+	$siteName = get-UrlNoF5 $oldSiteName
+	
+	$relUrl   = get-RelURL $siteName
+	
+	$pageURL  = $relUrl + $pageName
+	
+	if (!$pageURL.contains(".aspx")){
+		$pageURL += ".aspx"
+	}
+	
+    $pageTitlAndCont = "" | Select Title, Content
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = $Credentials
+
+
+
+	$page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+	$ctx.Load($page);
+    $ctx.Load($page.ListItemAllFields);
+    $ctx.ExecuteQuery();
+
+
+	$page.CheckOut()
+	$pageFields = $page.ListItemAllFields
+
+	$pageTitlAndCont.Content = $pageFields["PublishingPageContent"]
+	$pageTitlAndCont.Title   = $pageFields["Title"]
+	#$page.CheckIn("",1)
+	$page.UndoCheckOut()
+	
+	$ctx.ExecuteQuery()	
+	
+	return $pageTitlAndCont
+	
+}
+
+function get-ImgDocLib($htmlContent, $siteURL){
+	$siteDomain = $([System.Uri]$siteURL).Host
+	$aHtmlTags = @()
+
+	$HTML = New-Object -Com "HTMLFile"
+	$HTML.IHTMLDocument2_write($htmlContent)
+
+		$HTML.All.Tags('img') | ForEach-Object{
+		 $aTag = "" | Select-Object href,docLib,docLibName,relDir, docName,DNSHost
+		     
+			$aTag.href = [uri]::UnescapeDataString($_.href)
+			$aTag.docName = [uri]::UnescapeDataString($_.nameProp)
+			$aTag.docLib = [uri]::UnescapeDataString($_.href).replace($aTag.docName,"").replace("about:","")
+			$aTag.href = [uri]::UnescapeDataString($_.href).replace("about:","")
+			
+			$aTag.DNSHost =  $([System.Uri]$aTag.docLib).Host
+			
+			
+			if ([string]::isNullOrEmpty($aTag.docLib)){
+				$aTag.docLib = $aTag.href.replace($aTag.docName,"")
+			}
+			if ([string]::isNullOrEmpty($aTag.DNSHost)){
+				$aTag.DNSHost = $siteDomain
+			}
+			
+			$libRealName = getListOrDocName $siteURL $aTag.docLib "DocLib"
+			$aTag.docLibName = $libRealName
+
+			#$aTag.foundInFile = $fileCont.ToLower().contains($_.parentNode.outerHTML.ToLower())
+			if ($aTag.DocLib.toLower() -ne "/home/logo/"){
+				if ([string]::isNullOrEmpty($aTag.docLibName)){
+					$aDoclib = $aTag.docLib.split("/")
+					$xCount  = $aTag.docLib.split("/").Count
+					
+					$docLibNameFound = $false
+					while(!$docLibNameFound){
+						$xDoclib = "/"
+						for($i=0;$i -lt $xCount; $i++){
+							if (![string]::isNullOrEmpty($aDoclib[$i])){
+								$xDoclib += $aDoclib[$i] + "/"
+							}
+						}
+						if ($xDoclib -eq "/"){
+							break
+						}
+						$libRealName = getListOrDocName $siteURL $xDoclib "DocLib"
+						if (![string]::isNullOrEmpty($libRealName)){
+							$docLibNameFound = $true
+							$aTag.docLibName = $libRealName
+							
+							
+						}
+						$xCount--
+						
+					}
+					$chkDocLib = $aTag.docLib
+				}
+				
+				write-Host "5868: siteURL : $siteURL ;libRealName: $libRealName " -f Yellow
+				if (![string]::isNullOrEmpty($libRealName)){
+					$aTag.docLib = get-ListURL $siteURL $libRealName
+					$aTag.relDir = $aTag.href.toLower().replace($aTag.docLib.toLower(),"").replace($aTag.docName.toLower(),"")
+				}
+				
+				
+				
+				$aHtmlTags += $aTag
+			}
+				
+		}
+	$OutFileName = ".\JSON\RPL-"+$siteDomain+"-aHtmlTags.json"			
+	$aHtmlTags | ConvertTo-Json -Depth 100 | out-file $OutFileName -Encoding Default	
+	write-Host "$OutFileName Created..."
+
+	return $aHtmlTags		
+	
+}
+function get-ListURL($siteURL, $listName){
+	$siteName = get-UrlNoF5 $siteURL	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	$Ctx.Credentials = $Credentials
+	$lists = $ctx.web.Lists 
+	$list = $lists.GetByTitle($listName) 
+    $Ctx.load($List) 
+	$Ctx.Load($list.RootFolder);
+    $Ctx.ExecuteQuery()	
+	
+	return  $list.RootFolder.ServerRelativeUrl
+	
+}
+function copy-ImgLib($siteURL,$oldSiteURL){
+	
+	
+   $oldSiteURL = 	 get-UrlNoF5 $oldSiteURL
+   $siteUrl    =   get-UrlNoF5 $siteUrl
+   $siteName   =  $siteUrl
+	
+   
+	
+	$siteDumpObj = "" | Select-Object Source, Destination
+	$sourceObj   = "" | Select-Object URL, RelPath, Lists, Pages      
+	$DestObj     = "" | Select-Object URL, RelPath, Lists, Pages
+	$RelURLSrc =  get-RelURL $siteUrl
+	
+	$sourceObj.Url = $oldSiteURL
+	$sourceObj.RelPath = get-RelURL $oldSiteURL
+		
+	$DestObj.URL   = $siteUrl
+	$DestObj.RelPath = $RelURLSrc
+
+    $RelURL = get-RelURL $oldSiteURL
+    $PagesName = getListOrDocName $oldSiteURL $($RelURL+"Pages") "DocLib"
+    $SitePagesName = getListOrDocName $oldSiteURL $($RelURL+"SitePages") "DocLib"
+
+	$pageItems = get-allListItemsByID $oldSiteURL $PagesName
+	$SPages = @()
+
+	foreach ($itm in $pageItems){
+		$pgObj = "" | Select-Object URL, Name, InnerName
+		$pgObj.URL = $itm["FileRef"]
+		$pgObj.Name = $pgObj.URL.split("/")[-2]+"/"+$pgObj.URL.split("/")[-1]
+		$pgObj.InnerName = $pgObj.URL.split("/")[-1].Replace(".aspx","")
+		#$pgObj.WebParts = get-PageWebPartAll $oldSiteURL $pgObj.URL
+		$SPages += $pgObj
+	}			
+
+	$sitePageItems = get-allListItemsByID $oldSiteURL $SitePagesName
+
+	foreach ($itm in $sitePageItems){
+		$pgObj = "" | Select-Object URL, Name, InnerName
+		$pgObj.URL = $itm["FileRef"]
+		$pgObj.Name = $pgObj.URL.split("/")[-2]+"/"+$pgObj.URL.split("/")[-1]
+		$pgObj.InnerName = $pgObj.URL.split("/")[-1].Replace(".aspx","")
+		#$pgObj.WebParts = get-PageWebPartAll $oldSiteURL $pgObj.URL
+		$SPages += $pgObj
+	}
+	
+	$sourceObj.Pages = $SPages
+	$siteDumpObj.Source = $sourceObj
+	$siteDumpObj.Destination = $DestObj
+	
+	$PagesToCreate = @()
+	foreach($itemSrc in $siteDumpObj.Source.Pages){
+		$itemExistsOnDest = $false
+		foreach($itemDst in $siteDumpObj.Destination.Pages){
+			if ($itemSrc.Name -eq $itemDst.Name)
+			{
+				$itemExistsOnDest = $true
+				break
+			}
+		}
+		if (!$itemExistsOnDest){
+			if (!$itemSrc.Name.Contains("SitePages/")){
+				$itemToCreate = "" | Select-Object Name, InnerName
+				$itemToCreate.Name = $itemSrc.Name
+				$itemToCreate.InnerName = $itemSrc.InnerName
+			
+				$PagesToCreate += $itemToCreate
+			}
+		}
+	}
+	
+	foreach($itm in $PagesToCreate){
+		if ($itm.InnerName.contains("Default")){
+			$objPageCont = get-PageAndTitleContent $oldSiteURL $itm.Name
+			$contNew = $objPageCont.Content -Replace $RelURL,$RelURLSrc
+			$titl =  $objPageCont.Title 
+			
+			$aImgsNew = get-ImgDocLib	$contNew 				 $siteName		
+			$aImgsOld = get-ImgDocLib	$objPageCont.Content	 $oldSiteURL
+			
+			
+	#<#		
+	$OutFileName = ".\JSON\RPL-OLD-aImgTags.json"			
+	$aImgsOld | ConvertTo-Json -Depth 100 | out-file $OutFileName -Encoding Default	
+	write-Host "$OutFileName Created..."
+	
+	$OutFileName = ".\JSON\RPL-NEW-aImgTags.json"			
+	$aImgsNew | ConvertTo-Json -Depth 100 | out-file $OutFileName -Encoding Default	
+	write-Host "$OutFileName Created..."
+	#>		
+			copy-ImgFiles $aImgsOld $aImgsNew 
+
+		}
+	}
 }

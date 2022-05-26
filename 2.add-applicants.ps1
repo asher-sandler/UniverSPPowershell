@@ -53,6 +53,7 @@ else
 					edt-ContactUs $siteUrlC $contactUsContent $($spRequestsListObj.language)
 					copy-DocTypeList $siteUrlC $($spRequestsListObj.oldSiteURL)
 					Change-AdmGroupsFromOld $groupName $($spRequestsListObj.oldSiteURL)
+					copy-ImgLib $siteUrlC $($spRequestsListObj.oldSiteURL)
 				}
 				else
 				{

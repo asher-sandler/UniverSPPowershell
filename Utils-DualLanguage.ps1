@@ -375,6 +375,7 @@ function write-Form ($cpath,$siteUrlC, $relUrl){
 function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $oldSiteName){
  	$crlf = [char][int]13 + [char][int]10   
 	$CurrPage = "Default"
+	$newSiteName = $siteUrlC
 	
 	$oldRelUrl = get-RelURL $oldSiteName
 	# ================== English ======================
@@ -452,6 +453,39 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $ol
 	$editContent | Out-File $editContentPathEn -encoding Default
 	$ContentR = Get-Content $editContentPathEn -encoding Default
 	$ContentR1 = $ContentR.Replace( "&#58;", ":")
+
+
+	$aHtmlTags = get-HtmlInstructTag $oldSiteName $ContentR1
+ 
+    $RelURLX = Get-RelURL  $oldSiteName
+    $grRelURL = $RelURLX.split("/")[-2]
+
+	$outfile = ".\JSON\"+$grRelURL+"-HtmlTags-En.json"
+	$aHtmlTags | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
+	write-host "$outfile written" -f Yellow
+	
+
+    write-Host "468 newSiteName : $newSiteName" -f Cyan
+	if (![string]::isNullOrEmpty($aHtmlTags)){
+		$stringA = 'a href="/home/Pages/InstructionsEn.aspx" target="_blank"'
+		if (!$ContentR1.contains($stringA)){
+			$stringA = 'a href="/home/Pages/InstructionsEn.aspx"'
+		}	
+		$stringARX = 'a href="' + $newSiteName + "/Pages/DocumentsUpload.aspx"+'"'
+		
+		$stringATR = 'Documents Upload page'
+		$stringSR  = 'B. The following documents should be uploaded via the '
+
+		if (![string]::isNullOrEmpty($aHtmlTags.innerText)){
+			$ContentR1 = $ContentR1 -Replace $aHtmlTags.innerText, $stringSR
+		}
+
+		# "outerText":  "ההוראות המופיעות כאן"
+		$ContentR1 = $ContentR1 -Replace $aHtmlTags.outerText, $stringATR
+
+		$ContentR1 = $ContentR1 -Replace $stringA, $stringARX
+
+	}
 	$ContentR1 | Out-File $editContentPathEn -encoding Default -Force	
 
     # ========================= Hebrew =================
@@ -495,6 +529,38 @@ function write-Default($cpath,$siteUrlC, $relUrl, $deadline, $oldSiteExists, $ol
 	$editContent | Out-File $editContentPathHe -encoding Default -Force
 	$ContentR = Get-Content $editContentPathHe -encoding Default
 	$ContentR1 = $ContentR.Replace( "&#58;", ":")
+	
+	$aHtmlTags = get-HtmlInstructTag $oldSiteName $ContentR1
+ 
+    $RelURLX = Get-RelURL  $oldSiteName
+    $grRelURL = $RelURLX.split("/")[-2]
+
+	$outfile = ".\JSON\"+$grRelURL+"-HtmlTags-he.json"
+	$aHtmlTags | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
+	write-host "$outfile written" -f Yellow
+	
+
+    write-Host "542: newSiteName : $newSiteName" -f Cyan
+	if (![string]::isNullOrEmpty($aHtmlTags)){
+		$stringA = 'a href="/home/Pages/InstructionsHe.aspx" target="_blank"'
+		if (!$ContentR1.contains($stringA)){
+			$stringA = 'a href="/home/Pages/InstructionsHe.aspx"'
+		}	
+		$stringARX = 'a href="' + $newSiteName + "/Pages/DocumentsUpload.aspx"+'"'
+		
+		$stringATR = "דף העלאת המסמכים"
+		$stringSR  = 'ב. להעלות את המסמכים הבאים באמצעות '
+			
+		if (![string]::isNullOrEmpty($aHtmlTags.innerText)){
+			$ContentR1 = $ContentR1 -Replace $aHtmlTags.innerText, $stringSR
+		}
+
+		# "outerText":  "ההוראות המופיעות כאן"
+		$ContentR1 = $ContentR1 -Replace $aHtmlTags.outerText, $stringATR
+		$ContentR1 = $ContentR1 -Replace $stringA, $stringARX
+
+	}
+	
 	$ContentR1 | Out-File $editContentPathHe -encoding Default -Force
 	
 	# ======================== Switch to Lang ===================
@@ -540,7 +606,7 @@ function edt-SwitchPage2Lang($SiteName){
 		
 		$webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);	
 		
-		Write-Host 'Updating webpart "ContentEditorWebPart"  from the page '+$pg+'.aspx' -ForegroundColor Green
+		Write-Host $('Updating webpart "ContentEditorWebPart"  from the page '+$pg+'.aspx') -ForegroundColor Green
 		$page.CheckOut()	
 		$WebParts = $webpartManager.WebParts
 		$ctx.Load($webpartManager);
@@ -861,22 +927,25 @@ function Collect-Navigation($siteURL,$isMenuOld){
 function getListOrDocName ($SiteURL, $url, $itemType){
 	$retValue = $null
 	if ($itemType -eq "Lists" -or $itemType -eq "DocLib"){
-		
-		$siteName = get-UrlNoF5 $SiteURL
-		#write-host "Get List  Or Doc Name : $siteURL" -foregroundcolor Green
-		#write-host "Get List  Or Doc Name : $url" -foregroundcolor Green
-		$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
-		$ctx.Credentials = $Credentials
-		
-		$Web = $Ctx.Web
-		$ctx.Load($Web)
-		$Ctx.ExecuteQuery()
-		$list = $Web.GetList($url);
-		$ctx.Load($list)
-		$Ctx.ExecuteQuery()
-		#Error - error 
-		#get real name list name
-		$retValue +=  $list.Title 		
+		try{
+			$siteName = get-UrlNoF5 $SiteURL
+			#write-host "Get List  Or Doc Name : $siteURL" -foregroundcolor Green
+			#write-host "Get List  Or Doc Name : $url" -foregroundcolor Green
+			$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+			$ctx.Credentials = $Credentials
+			
+			$Web = $Ctx.Web
+			$ctx.Load($Web)
+			$Ctx.ExecuteQuery()
+			$list = $Web.GetList($url);
+			$ctx.Load($list)
+			$Ctx.ExecuteQuery()
+			#Error - error 
+			#get real name list name
+			$retValue +=  $list.Title 	
+		}
+		catch
+		{}
 	}
 	return $retValue
 }

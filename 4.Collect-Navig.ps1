@@ -78,9 +78,10 @@ else
 			
 			$menuNewItems = Create-NavSubMenu  $menuNewItems $siteUrl
 			$menuNewItems | ConvertTo-Json -Depth 100 | out-file $outfile -Encoding Default
+			write-Host "81: Written $outfile"
 			
 			write-Host "Create Publishing Pages..."
-			Create-PublishingPages 	$siteURL $menuNewItems
+			Create-PublishingPages 	$siteURL $oldSiteURL $menuNewItems
 			
 			write-Host "Something NEW!!!"
 			
@@ -202,10 +203,13 @@ else
 			$siteDumpFileName = ".\JSON\"+ $groupName+"-PagesToCreate.json"			
 	
 			$PagesToCreate | ConvertTo-Json -Depth 100 | out-file $siteDumpFileName -Encoding Default	
-			write-Host "$siteDumpFileName Created..."
+			write-Host "205: $siteDumpFileName Created..."
 	
 			foreach($itm in $PagesToCreate){
 				Create-WPPage $siteURL $itm.InnerName $itm.InnerName
+				write-Host "209: oldSiteURL : $oldSiteURL" -f Cyan
+				write-Host "210: Page : $($itm.InnerName)" -f Cyan
+				
 			}
 			#Create-WPPage $siteURL $itm.InnerName $itm.Title
 			

@@ -51,7 +51,12 @@ else
 						$wpKey = $item.WebPartKey
 						$wpValue = $item.WebPartValueSRC
 						if ($wpValue.contains($spObj.OldSiteSuffix)){
+							
 							$wpValue = $wpValue.Replace($spObj.OldSiteSuffix,$spObj.RelURL )
+							$muzarSymb= [char][int]8207 # Strange Symbol in File Name
+							if ($wpValue.contains($muzarSymb)){
+								$wpValue = $wpValue.Replace($muzarSymb,"")
+							}
 						}
 						$pg =  $item.DestPageURL # -Replace $RelURL , ""
 						

@@ -170,6 +170,25 @@ function Get-PMenuTitle($menuDump,$listTitle){
 	}
 	return $pTitle
 }
+
+<#
+Dear staff, Hello
+
+Thank you for storing the forms of the current year and opening a new folder for the forms in the system belonging to the professional training
+
+• Insertion of Social Involvement - Year A Pages - Insertion Form - Social Involvement (huji.ac.il)
+• Questionnaire for a candidate for student guidance in vocational training - Pages - FRM_SSW19 (huji.ac.il)
+Placement in vocational training - Community major - Second year graduate Pages - Placement in vocational training - Community major - Second year (huji.ac.il)
+• Placement in vocational training - Community major - 3rd year graduate Pages - Placement in vocational training - Community major - third year (huji.ac.il)
+• Placement in vocational training - Individual major - Second-year graduate / Completion for a master's degree - one year Pages - Placement in vocational training - Individual major - Second year (huji.ac.il)
+Placement in vocational training - Individual major - Third-year graduate / Completion for a master's degree - Year in pages - Placement in vocational training - Individual major - Third year (huji.ac.il)
+• Feedback questionnaire on professional training Pages - FRM_SSW13 (huji.ac.il)
+• Social Involvement - Student Feedback Pages - Social Involvement - Student Feedback (huji.ac.il)
+• Assessment of Social Involvement - Pages - Assessment of Social Involvement (huji.ac.il)
+• Placement in vocational training outside Jerusalem - individual trend - Pages - Placement in vocational training outside Jerusalem - individual course (huji.ac.il)
+
+https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW30_List/AllItems.aspx
+#>
 $Credentials = get-SCred
 $fileRules = ".\Diego\ViewLists.txt"
 $fileList = Import-CSV $fileRules -Delimiter ";"

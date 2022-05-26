@@ -74,11 +74,24 @@
 		<h6>Path to EN : <a href="file:%pathMailEn%" target="_blank">%MailEn%</a></h6>
 		<h6>Path to HE : <a href="file:%pathMailHe%" target="_blank">%MailHe%</a></h6>
 		<hr/>
-		<h6>Compare Report</h6>
+
+		
+		<h6>DOCUMENTS UPLOAD PAGE HEADERS</h6>
+		<h6>B. The following documents should be uploaded via the </h6>
+		<h6>Documents Upload page</h6>
+		<br/>		
+		<h6>ב. להעלות את המסמכים הבאים באמצעות </h6>
+		<h6>דף העלאת המסמכים</h6>
+		
+		
+		<hr/>
+		<h6>COMPARE REPORT</h6>
+
+
 		
 		<h6>Report (after <code>PS&nbsp; >.\10.Compar-Sites.ps1&nbsp;%GroupName%</code>) : <a href="file://C:\AdminDir\SP Powershell\Log\%GroupName%-CompareSites.html" target="_blank">%GroupName%-CompareSites.html</a></h6>
 		
-        <ul class="nav nav-tabs shadow p-3 mb-5 bg-body rounded">
+        <ul class="nav nav-tabs shadow p-3 mb-5 bg-body rounded" style="display:none;">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#">Active</a>
             </li>
@@ -99,6 +112,7 @@
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
           </ul>
+	<hr/>	  
     <div class="accordion shadow p-3 mb-5 bg-body rounded" id="accordionExample">
         <div class="accordion-item">
           <h2 class="accordion-header" id="headingOne">
@@ -191,11 +205,25 @@
 				<div>
 				<a href="%URL%/_layouts/15/user.aspx" target="_blank">%URL%/_layouts/15/user.aspx</a>
 				
-
+				<hr/>
+				<div><h6>Send mail to <strong>Dan Testman Folder</strong></h6></div>
+				<div><strong>%MailSuffix%-EKMDdante@ekmd.huji.ac.il</strong></div>
+				<div>"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE" /c ipm.note /m "%MailSuffix%-EKMDdante@ekmd.huji.ac.il?subject=Recommendations&body=Recommendations" /a "C:\AdminDir\SP Powershell\sendDante\RecommendationsendDante.txt"</div>
+				<div>"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE" /c ipm.note /m "%MailSuffix%-EKMDdante@ekmd.huji.ac.il?subject=Recommendations&body=Recommendations" /a "C:\AdminDir\SP Powershell\sendDante\RecommendationsendDante1.txt"</div>
+				<hr/>
+				<div><h6>Remove rights from <strong>Dan Testman Folder</strong></h6></div>
+				<div>
+				<a href="%URL%/EKMDdante/Forms/AllItems.aspx" target="_blank">%URL%/EKMDdante/Forms/AllItems.aspx</a>
+				</div>				
 				<hr/>
 				<div><h6><strong>If any Document Library --> Grant Permissions</strong></h6></div>
 				<div>EKMD\all_apps_grpsug</div>
-				<div>Clear: Send email Invitation</div>
+
+				<hr/>
+				
+				<div><h6><strong>If any Document Library --> Grant Permissions</strong></h6></div>
+				<div>EKMD\all_apps_grpsug</div>
+				
 				<div>Permission Level : Read</div>
 
 				<hr/>

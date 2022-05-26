@@ -1,3 +1,42 @@
+function gen-PowerShellObjDef($arr){
+	$outFile = ''
+$crlf = [char][int]13+[char][int]10
+
+$body = ''+$crlf
+$body += '$Itm = "" | Select '
+	foreach($item in $arr)	{
+	
+		$body += $item.Name+","
+	
+	}
+	$body += $crlf+$crlf
+	foreach($item in $arr)	{
+	
+
+		$body += '$Itm.'+$item.Name+' = $fitm["'+$item.Name+'"] #'+	$item.DisplayName +$crlf
+	}	
+	$footer = ""
+	$header = ""
+$outFile = $header + $body + $footer
+return $outFile
+}
+function gen-PowerShellSaveObjDef($arr){
+	$outFile = ''
+$crlf = [char][int]13+[char][int]10
+
+$body = ''+$crlf
+
+	$body += $crlf+$crlf
+	foreach($item in $arr)	{
+	
+
+		$body += '$listItm["'+$item.DisplayName+'"] ='+$crlf
+	}	
+	$footer = ""
+	$header = ""
+$outFile = $header + $body + $footer
+return $outFile
+}
 function gen-Class($arr){
 	$outFile = ''
 	
@@ -79,8 +118,13 @@ return $outFile
 	#https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM172-2021/Lists/DocType
 	$SiteURL="https://scholarships.ekmd.huji.ac.il/home/humanities/HUM172-2021"
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+	$siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022";
+	$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
 	$ListTitle = "FirstGrade"
 	$ListDisplayTitle = "תואר ראשון"
+	$ListDisplayTitle = "applicants"
+	$ListDisplayTitle = "ResponseLetters"
+	$ListDisplayTitle = "לימודי הוראה"
 
 	$className = $SiteURL.split('/')[-1]
 
@@ -97,19 +141,19 @@ return $outFile
 	$FieldXML = '<Fields>'
 	foreach($field in $List.Fields){
 		# write-host "$($field.Title) : Hidden : $($field.Hidden)"
-		#if ($field.SchemaXml.Contains('ReadOnly="TRUE"')){
-		#}
-		#else{
-			#if ($field.SchemaXml.Contains('Group="_Hidden"')){
-			#}
-			#else{
+		if ($field.SchemaXml.Contains('ReadOnly="TRUE"')){
+		}
+		else{
+			if ($field.SchemaXml.Contains('Group="_Hidden"')){
+			}
+			else{
 		
-				#If (!($field.Hidden -or $field.ReadOnly )){
+				If (!($field.Hidden -or $field.ReadOnly )){
 					$FieldXML += $field.SchemaXml+$crlf
-				#}
+				}
 		
-			#}
-		#}	
+			}
+		}	
 	}
 	$FieldXML += '</Fields>'
 	
@@ -128,5 +172,6 @@ return $outFile
 
 
 			gen-Class $arr | out-file "Template-$($className).cs" -Encoding Default
-			
+			gen-PowerShellObjDef $arr | out-file "Template-$($className).txt" -Encoding Default
+			gen-PowerShellSaveObjDef $arr | out-file "TemplateOut-$($className).txt" -Encoding Default			
 

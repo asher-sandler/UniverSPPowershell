@@ -50,7 +50,8 @@ else
 				$spRequestsListObj = get-RequestListObject
 				if (!$spRequestsListObj.isUserContactEmpty ){
 					# $spRequestsListObj
-
+					write-Host $spRequestsListObj.GroupName
+					#read-host
 					if ($spRequestsListObj.GroupName.ToUpper()  -eq $groupName.Trim().ToUpper()){
 						
 						if (Test-ScholarShipItemExist $spRequestsListObj ){
