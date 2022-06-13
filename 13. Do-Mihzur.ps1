@@ -13,6 +13,7 @@ $0 = $myInvocation.MyCommand.Definition
 $dp0 = [System.IO.Path]::GetDirectoryName($0)
 . "$dp0\Utils-Request.ps1"
 . "$dp0\Utils-DualLanguage.ps1"
+. "$dp0\Utils-SiteClone.ps1"
 
 <#
 GLOBAL#0	Global template
@@ -230,7 +231,7 @@ function Set-WebPermissionsOnWeb($siteName,$GroupName,$Role){
  $siteName = "https://portals2.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
  
  
- 
+ <#
  $SiteTemplateName = "STS#1" # empty 
  $SubsiteURL = "2022-2"
  $SubsiteTitle = "Archive 2022 Semester 2" 
@@ -257,4 +258,34 @@ function Set-WebPermissionsOnWeb($siteName,$GroupName,$Role){
  $group = "HSS_SCI30-2020_adminSP"
  $Role = "Read"
  Set-WebPermissionsOnWeb $siteName $group $Role
+ #>
+ write-host $siteName -f Green
+ # MIHZUR
  
+ 
+ #Get Old Site Name
+ $siteObj = "" | Select SiteName
+ 
+ $siteObj.SiteName = Get-SiteName $siteName
+ 
+ $siteObj
+ #Get Old Site Groups and Permissions
+ #Get Old site Lists
+ #Get Old Site DocType
+ #Get Old Site DocLib
+ #Copy All File from docLib and MetaData (DocType)
+ 
+ #Create new Subsite with name and Archive
+ 
+ #Create all lists
+ #Create DocType
+ #Create Applicants
+ #Create All Premissions
+ #Create All DocLib
+ #Copy Files to Doclibs
+ #Bind new DocType to each file in DocLib
+ 
+ #Clear Old Site
+ #Replace Home Page
+ #Set New deadline for Applicants
+ #

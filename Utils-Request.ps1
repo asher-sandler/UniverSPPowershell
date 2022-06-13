@@ -2143,6 +2143,9 @@ function get-RequestListObject(){
 					
 					$spRequestsListItem.relURL = $relURL
 					$spRequestsListItem.language = $Item["language"]
+					if ($spRequestsListItem.language.contains("דו לשוני")){
+						$spRequestsListItem.language = "EN (HE)"
+					}
 					
 					$spRequestsListItem.Status = $Item["status"]
 					$spRequestsListItem.adminGroup = $groupSuffix +"_"+ $relURL + "_AdminUG"

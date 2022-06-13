@@ -221,7 +221,7 @@ $cred = get-SCred
 
 		$i--	
 	}
-	
+	$needToSend = $true
 	if ($needToSend){
 		
 		    $htmlBody = $templIndex -Replace "{TEMPLATEROW}",$idxRow 
