@@ -120,12 +120,13 @@ return $outFile
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022";
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
+	$siteURL = "https://grs.ekmd.huji.ac.il/home/natureScience/SCI26-2022";
 	$ListTitle = "FirstGrade"
 	$ListDisplayTitle = "תואר ראשון"
 	$ListDisplayTitle = "applicants"
 	$ListDisplayTitle = "ResponseLetters"
 	$ListDisplayTitle = "לימודי הוראה"
-
+$ListDisplayTitle = "applicants"
 	$className = $SiteURL.split('/')[-1]
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)

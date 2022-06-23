@@ -76,7 +76,7 @@ else
 							Add-SiteList $spRequestsListObj[0] $facultyList
 							Change-GroupDescription $groupName $spRequestsListObj[0].siteNameEn
 							Add-GroupMember $groupName $spRequestsListObj[0].contactEmail $spRequestsListObj[0].userName
-							
+							Save-spRequestsFileAttachements $spRequestsListObj[0]
 						}
 						else
 						{

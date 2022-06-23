@@ -224,11 +224,41 @@ function Set-WebPermissionsOnWeb($siteName,$GroupName,$Role){
 	return $roleDef
  	
 }
+
+function GetAllLibs ($ctx) {
+
+		Write-Host "Get Doc Lib" -ForegroundColor Yellow
+		
+		$Lists = $Ctx.Web.Lists
+		$Ctx.Load($Lists)
+        $Ctx.ExecuteQuery()
+		
+		ForEach($list in $Lists)
+		{
+			# העלאת מסמכים - Dan Testman 56565656
+			$hebrDocLibName = "העלאת מסמכים"
+			if ($list.Title.contains("Documents Upload") -or 
+				$list.Title.contains($hebrDocLibName)){
+				write-host "Found: $($list.Title)" -ForegroundColor Yellow
+				$List.OnQuickLaunch = $false;
+				
+				$List.Update()
+				$Ctx.ExecuteQuery()
+				
+			}
+		}
+
+		
+	
+
+}
+
+start-transcript "Mihzur.log"
  $Credentials = get-SCred
 
  
- $siteName = "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI26-2022";
  $siteName = "https://portals2.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+ $siteName = "https://grs2.ekmd.huji.ac.il/home/natureScience/SCI26-2022";
  
  
  <#
@@ -264,13 +294,18 @@ function Set-WebPermissionsOnWeb($siteName,$GroupName,$Role){
  
  
  #Get Old Site Name
- $siteObj = "" | Select SiteName
- 
+ $siteObj = "" | Select SiteURL, SiteName, SiteSaveDirectory,WorkingDir,siteListArr
+ $siteObj.SiteURL = $siteName
  $siteObj.SiteName = Get-SiteName $siteName
- 
- $siteObj
- #Get Old Site Groups and Permissions
+ $siteObj.SiteSaveDirectory = get-SiteGroup $siteName
+ $siteObj.workingDir = Create-WorkingDir $siteObj.SiteSaveDirectory
  #Get Old site Lists
+ $siteObj.siteListArr = GetAllLists $siteName
+ SaveSiteLists $siteObj
+ 
+ 
+ #Get Old Site Groups and Permissions
+ 
  #Get Old Site DocType
  #Get Old Site DocLib
  #Copy All File from docLib and MetaData (DocType)
@@ -289,3 +324,6 @@ function Set-WebPermissionsOnWeb($siteName,$GroupName,$Role){
  #Replace Home Page
  #Set New deadline for Applicants
  #
+ #$siteObj | fl
+ 
+ stop-transcript

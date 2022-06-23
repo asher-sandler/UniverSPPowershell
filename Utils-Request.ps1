@@ -702,34 +702,34 @@ function Write-TextConfig ($ListObj, $groupName)
 		$relURL = $groupName.ToUpper().Split("_")[1]
 		
 		$fileS =  $crlf + $crlf + "GROUP TEMPLATE:"+ $relURL + $crlf + $crlf 
-		$fileS +=  "System List: "+ $(get-UrlWithF5 $($ListObj[0].systemListUrl)) + $crlf + $crlf
-		$fileS +=  "spRequestsListItem: "+ $(get-UrlWithF5 $($ListObj[0].spRequestsListLink)) + $crlf 
-		$fileS +=  "spRequestsListDocs: "+ $(get-UrlWithF5 $($ListObj[0].spRequestsListDocs)) + $crlf+$crlf+$crlf
+		$fileS += "System List: "+ $(get-UrlWithF5 $($ListObj[0].systemListUrl)) + $crlf + $crlf
+		$fileS += "spRequestsListItem: "+ $(get-UrlWithF5 $($ListObj[0].spRequestsListLink)) + $crlf 
+		$fileS += "spRequestsListDocs: "+ $(get-UrlWithF5 $($ListObj[0].spRequestsListDocs)) + $crlf+$crlf+$crlf
 		$fileS += "Assigned Group: "+ $ListObj[0].assignedGroup + $crlf
-		$fileS += "Site Name:"+$ListObj[0].siteName + $crlf
-		$fileS += "Site Title:"+$ListObj[0].siteName + $crlf
-		$fileS += "Site Description:"+$ListObj[0].siteNameEn + $crlf
-		$fileS += "Group Description:"+$ListObj[0].siteNameEn + $crlf
+		$fileS += "Site Name: "+$ListObj[0].siteName + $crlf
+		$fileS += "Site Title: "+$ListObj[0].siteName + $crlf
+		$fileS += "Site Description: "+$ListObj[0].siteNameEn + $crlf
+		$fileS += "Group Description: "+$ListObj[0].siteNameEn + $crlf
 		$fileS += "Previous Site: "+$ListObj[0].Notes + $crlf
 		$fileS += "Url: " + $crlf+ $crlf
 
-		$fileS += "ContactFirstName:" +  $ListObj[0].contactFirstNameEn+ $crlf
-		$fileS += "ContactLastName:"+  $ListObj[0].contactLastNameEn+ $crlf
-		$fileS += "ContactTitle:" + $ListObj[0].contactFirstNameEn+ " " +$ListObj[0].contactLastNameEn+ $crlf+ $crlf
+		$fileS += "ContactFirstName: " +  $ListObj[0].contactFirstNameEn+ $crlf
+		$fileS += "ContactLastName: "+  $ListObj[0].contactLastNameEn+ $crlf
+		$fileS += "ContactTitle: " + $ListObj[0].contactFirstNameEn+ " " +$ListObj[0].contactLastNameEn+ $crlf+ $crlf
 		
-		$fileS += "ContactEmail:" + $ListObj[0].contactEmail + $crlf
-		$fileS += "UserName:" + "CC\"+$ListObj[0].contactEmail.split('@')[0] + $crlf
+		$fileS += "ContactEmail: " + $ListObj[0].contactEmail + $crlf
+		$fileS += "UserName: " + "CC\"+$ListObj[0].contactEmail.split('@')[0] + $crlf
 		
 		$fileS += "recommendationsDeadline: " + $ListObj[0].deadLineText+ $crlf+ $crlf
-		$fileS += "Language:" + $ListObj[0].language.ToUpper() + $crlf+ $crlf
+		$fileS += "Language: " + $ListObj[0].language.ToUpper() + $crlf+ $crlf
         
-		$fileS += "Faculty:"  + $ListObj[0].faculty + $crlf
+		$fileS += "Faculty: "  + $ListObj[0].faculty + $crlf
 		
-		$fileS += "relative URL:" + $relURL + $crlf+ $crlf
-		$fileS += "template:" + $relURL + $crlf+ $crlf
-		$fileS += "mail suffix:" + $ListObj[0].mailSuffix + $crlf
-		$fileS += "admin group:" + $ListObj[0].adminGroup + $crlf
-		$fileS += "adminGroupSP:" + $ListObj[0].adminGroupSP + $crlf
+		$fileS += "relative URL: " + $relURL + $crlf+ $crlf
+		$fileS += "template: " + $relURL + $crlf+ $crlf
+		$fileS += "mail suffix: " + $ListObj[0].mailSuffix + $crlf
+		$fileS += "admin group: " + $ListObj[0].adminGroup + $crlf
+		$fileS += "adminGroupSP: " + $ListObj[0].adminGroupSP + $crlf
 		$fileS += "applicantsGroup: " + $ListObj[0].applicantsGroup + $crlf
 		$fileS += "Target audience: " + $ListObj[0].targetAudiency+ $crlf+ $crlf
 		$fileS += "Distribution Security Group: " + $ListObj[0].targetAudiencyDistributionSecurityGroup + $crlf+ $crlf
@@ -744,12 +744,12 @@ function Write-TextConfig ($ListObj, $groupName)
 		if ($isDoubleLangugeSite){
 			$fileS += "XML En:" +  $ListObj[0].XMLFileEn+ $crlf 
 			$fileS += "GoTo XML En: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFileEn+ $crlf
-			$fileS += "XML He:" +  $ListObj[0].XMLFileHe+ $crlf 
+			$fileS += "XML He: " +  $ListObj[0].XMLFileHe+ $crlf 
 			$fileS += "GoTo XML He: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFileHe+ $crlf
 			
 		}
 		else{		
-			$fileS += "XML:" +  $ListObj[0].XMLFile+ $crlf 
+			$fileS += "XML: " +  $ListObj[0].XMLFile+ $crlf 
 			$fileS += "GoTo XML: cd " +  $ListObj[0].PathXML + "\" + $ListObj[0].XMLFile+ $crlf
 		}
 
@@ -759,7 +759,7 @@ function Write-TextConfig ($ListObj, $groupName)
 		#$fileS += "Goto XML Upload File: cd " + $ListObj[0].XMLUploadPath + $ListObj[0].XMLUploadFileName + $crlf + $crlf
 	
 		$fileS += "Email Path: " +  $ListObj[0].MailPath+ $crlf
-		$fileS += "Email Template:" +  $ListObj[0].MailFile+ $crlf
+		$fileS += "Email Template: " +  $ListObj[0].MailFile+ $crlf
 		$fileS += "GoTo Email: cd " +  $ListObj[0].MailPath+ "\" + $ListObj[0].MailFile+ $crlf
 		if ($isDoubleLangugeSite){
 			$fileS += "GoTo Email He: cd " +  $ListObj[0].MailPath+ "\" + $($ListObj[0].MailFile).replace(".xml","-He.xml")+ $crlf		
@@ -771,7 +771,7 @@ function Write-TextConfig ($ListObj, $groupName)
 		$fileS += "Path: "+$ListObj[0].PathXML+ $crlf
 		$fileS += "Prev XML Form: " +   $ListObj[0].PreviousXML +  $crlf + $crlf
 		$fileS += "Email Path: " +  $ListObj[0].MailPath + $crlf
-		$fileS += "Prev Email Template:" +   $ListObj[0].PreviousMail +  $crlf + $crlf
+		$fileS += "Prev Email Template: " +   $ListObj[0].PreviousMail +  $crlf + $crlf
 		if ($isDoubleLangugeSite){
 			$fileS += "GoTo Template Infrastructure: cd TemplInf\" +   $ListObj[0].assignedGroup +  $crlf+ $crlf
 		}
@@ -781,6 +781,8 @@ function Write-TextConfig ($ListObj, $groupName)
 			$fileS += "GoTo Old: cd "+$ListObj[0].OldGRSReponseLetterConfigPath +  $crlf
 		}
 		$fileS += $crlf
+		$fileS += 'spRequestsList Attch Files: cd "' +  $ListObj[0].spAttachementsPath +'"'+ $crlf
+		$fileS += 'Open: file://' +  $ListObj[0].spAttachementsPath + $crlf+$crlf
 		$fileS += "Site Report: file://C:\AdminDir\SP Powershell\Log\"+$ListObj[0].GroupName +  ".html"+$crlf
 		$fileS += "Compare Report: file://C:\AdminDir\SP Powershell\Log\"+$ListObj[0].GroupName +  "-CompareSites.html"+$crlf
 		
@@ -2087,7 +2089,7 @@ function get-RequestListObject(){
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
 	  
 	#Set parameter values
-	$SiteURL="https://portals.ekmd.huji.ac.il/home/huca/committees/SPProjects2017/"
+	
 	$SiteURL="https://portals.ekmd.huji.ac.il/home/huca/spSupport"
 	  
 	#Get Credentials to connect
@@ -2121,7 +2123,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID,spRequestsListLink,spRequestsListDocs, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, currentSiteUrl,Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
+	$spRequestsListItem = "" | Select ID,spRequestsSiteURL,spRequestsListName,spRequestsListLink,spRequestsListDocs, spAttachementsPath, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, currentSiteUrl,Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -2137,9 +2139,12 @@ function get-RequestListObject(){
 					$groupSuffix =  Get-GroupSuffix $groupName
 					
 					$spRequestsListItem.ID = $Item.id
+					$spRequestsListItem.spRequestsSiteURL = get-UrlWithF5 $SiteURL
+					$spRequestsListItem.spRequestsListName = $ListName
 					$spRequestsListItem.spRequestsListLink = "https://portals2.ekmd.huji.ac.il/home/huca/spSupport/_layouts/15/listform.aspx?PageType=6&ListId=%7B05A3DC03%2D3755%2D40D2%2D8AB8%2DEDEA25CF3375%7D&ID="+$Item.id.ToString()
 					$spRequestsListItem.spRequestsListDocs = "https://portals2.ekmd.huji.ac.il/home/huca/spSupport/spRequestsFiles/NEW-REQ"+$Item.id.ToString()
 					$spRequestsListItem.GroupName = $Item["assignedGroup"]
+					$spRequestsListItem.spAttachementsPath = Get-spReqFileAttachPath ".\Attachements" $spRequestsListItem.GroupName
 					
 					$spRequestsListItem.relURL = $relURL
 					$spRequestsListItem.language = $Item["language"]
@@ -6022,4 +6027,73 @@ function copy-ImgLib($siteURL,$oldSiteURL){
 
 		}
 	}
+}
+function Save-spRequestsFileAttachements($spObj){
+	#write-host $spObj.ID -f Green	
+	#write-host $spObj.GroupName -f Green
+
+	#$attachementsPath = $spObj.spAttachementsPath
+ 	
+	$siteURL = $spObj.spRequestsSiteURL
+	$listName = $spObj.spRequestsListName
+	
+	$siteUrlC = get-UrlNoF5 $siteURL
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	$Ctx.Credentials = $Credentials
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+    $listName = "spRequestsFiles"
+	$List = $Ctx.Web.lists.GetByTitle($ListName)
+
+	$Ctx.Load($List)
+	$Ctx.Load($list.RootFolder)
+	$Ctx.Load($list.RootFolder.Files)
+	$Ctx.Load($list.RootFolder.Folders)
+	$Ctx.ExecuteQuery()
+	
+	$flds = $list.RootFolder.Folders
+	$fldLink = $spObj.FolderLink.substring($spObj.FolderLink.LastIndexOf("/")+1).ToUpper().Trim()
+	
+	foreach($fld in $flds){
+		if ($fldLink -eq $fld.Name.ToUpper()){
+			$Ctx.Load($fld.Files)
+			$Ctx.ExecuteQuery()
+			if ($fld.Files.Count -gt 0){
+				write-host "Saving SP $listName Attachements..." -f Green
+				foreach($attachment in $fld.Files){
+					$fileContent = [Microsoft.SharePoint.Client.File]::OpenBinaryDirect($Ctx, $attachment.ServerRelativeUrl)
+					$downloadPath = Join-Path $spObj.spAttachementsPath $attachment.Name
+					write-host $downloadPath -f Cyan
+					$fileStream = [System.IO.File]::Create($downloadPath)
+					$fileContent.Stream.CopyTo($fileStream)
+					$fileStream.Close()
+				}
+			}			
+			break
+		}
+	}
+}
+function Get-spReqFileAttachPath($saveDirPrefix,$groupName){
+	If (!(Test-Path -path $saveDirPrefix))
+	{   
+		$wDir = New-Item $saveDirPrefix -type directory
+	}
+	else
+	{
+		$wDir = Get-Item $saveDirPrefix 
+	
+	}	
+	$saveFullPath = Join-Path $saveDirPrefix $groupName
+	If (!(Test-Path -path $saveFullPath))
+	{   
+		$wDir = New-Item $saveFullPath -type directory
+	}
+	else
+	{
+		$wDir = Get-Item $saveFullPath 
+	
+	}
+	$attachementsPath = $wDir.FullName
+ 	return $attachementsPath
 }
