@@ -1,0 +1,1 @@
+robocopy "C:\AdminDir\SP Powershell" q:\SPPowershell /mir  /XD .git

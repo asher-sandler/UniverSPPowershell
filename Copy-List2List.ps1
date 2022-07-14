@@ -18,15 +18,22 @@ $cred = get-SCred
 
  
  $siteSrcURL = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN32-2022";
+ $siteSrcURL = "https://ttp2.ekmd.huji.ac.il/home/Humanities/HUM27-2021";
  $sourceList = "/home/OverseasApplicantsUnit/GEN32-2022/Lists/applicants/AllItems.aspx"
- $siteDstName = "https://portals2.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace/"
- $dstListName = "applTest"
+ $sourceList = "/home/Humanities/HUM27-2021/Islam%20in%20South%20Asia/Forms/AllItems.aspx"
+ $siteDstName = "https://ttp2.ekmd.huji.ac.il/home/Humanities/HUM27-2021"
+ $dstListName = "Comparative Literature"
+ $dstListName = "Hebrew Literature"
+ $dstListName = "Islamic and Middle Eastern"
+ $dstListName = "Linguistics"
+ $dstListName = "Musicology"
+ $dstListName = "Spanish and Latin American Studies"
  
   
  $siteName = get-UrlNoF5 $siteSrcURL
  write-host "URL: $siteSrcURL" -foregroundcolor Yellow
 
- write-host "Get-ListFields DocLib: $siteURL" -foregroundcolor Green
+ write-host "Get-ListFields DocLib: $siteSrcURL" -foregroundcolor Green
  $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
  $ctx.Credentials = $Credentials
  	
@@ -132,79 +139,54 @@ $cred = get-SCred
  
 
  
-  $srcObjViews = Get-AllViews $docLibName $siteName 
-  $outFileName = "JSON\"+$docLibName+"-CopyExtViews.json"	 
-  $srcObjViews | ConvertTo-Json -Depth 100 | out-file $outFileName 
+  $objViews = Get-AllViews $docLibName $siteName 
+  $outFileName = "JSON\"+$docLibName+"-CopyExtViews.json"
+  $objViews | ConvertTo-Json -Depth 100 | out-file $outFileName
+  
   Write-Host "Created File : $outFileName"
   Write-Host
-  
-read-host 141 
-  $viewNewObj = "" | Select-Object DefaultView,Aggregations,Title, ServerRelativeUrl,ViewQuery,Fields
-  
-  
-  
-  forEach($vw in $spViewObj){
-	  if ($vw.ServerRelativeUrl.Contains("AllItems.aspx") ){
-		  $viewNewObj.DefaultView = $false
-		  $viewNewObj.Aggregations = $vw.Aggregations
-		  $viewNewObj.Title = $docLibName
-		  $viewNewObj.ViewQuery = $vw.ViewQuery
-		  $viewNewObj.ServerRelativeUrl = $siteUrlDst + "/Lists/"+$dstListName
-		  $viewNewObj.Fields = $vw.Fields
-		  
-		  
-	  }
-	  
-  }
-  
-  $CreatingView = $true
-  forEach($fldxS in $viewNewObj.Fields)
-  {
-	$fieldFound=$false
-    forEach($fldxD in $dstDocObj){
-		if ($fldxS -eq $fldxD.DisplayName){
-			$fieldFound=$true
+
+
+  foreach($view in $objViews){
+	    $view
+		#write-Host 147
+		#read-host
+		$viewExists = Check-ViewExists $dstListName  $siteDstName $view 
+		if ($viewExists.Exists){
+			write-host "view $($view.Title) exists on $newSite" -foregroundcolor Green
+			#check if first field in source view is on destination view
+			$firstField = $view.Fields[0]
+			write-host "First field in source view : $firstField"
+			#write-Host 155
+			#read-host
+			$fieldInView = check-FieldInView  $dstListName $($viewExists.Title) $siteDstName $firstField
+			write-host "$firstField on View : $fieldInView"
+			#if not {add this field}
+			if (!$fieldInView){
+				Add-FieldInView $dstListName $($viewExists.Title) $siteDstName $firstField
+				
+			}
+			#delete all fields in destination from view but first field in source
+			 
+			remove-AllFieldsFromViewButOne $dstListName $($viewExists.Title) $siteDstName $firstField
+			Add-FieldsToView $dstListName $($viewExists.Title) $siteDstName $($view.Fields)
+			#add other view
+			Rename-View $docLibName $($viewExists.Title) $siteDstName $($view.Title) $($view.ViewQuery)
+		}
+		else
+		{
 			
-			break
+			$viewName = $($view.Title)
+			if ([string]::isNullOrEmpty($viewName)){
+				$viewName = $($view.ServerRelativeUrl.Split("/")[-1]).Replace(".aspx","")
+				
+			}
+			write-host "view $viewName does Not exists on $newSite" -foregroundcolor Yellow
+			write-host "ViewQuery : $($view.ViewQuery)"
+			write-host "Check for View! "
+			
+			$viewDefault = $false
+			Create-NewView $siteDstName $dstListName $viewName  $($view.Fields) $($view.ViewQuery) $($view.Aggregations) $viewDefault
 		}
 	}
-    if (!$fieldFound){
-		write-Host "$fldxS Not Found in Destination" -f Yellow
-		$CreatingView = $false
-	}	
-  }
-
-  
-  $outFileName = "JSON\"+$docLibName+"-CopyExtViewsNew.json"	 
-  $viewNewObj | ConvertTo-Json -Depth 100 | out-file $outFileName 
-  Write-Host "Created File : $outFileName"
-  Write-Host
-  
- $viewExists = Check-ViewExists $dstListName  $siteUrlDst $viewNewObj
- 
- #if ($CreatingView ){
-	 if ($viewExists.Exists){
-		write-host "view $($viewNewObj.Title)  exists on $siteUrlDst" -foregroundcolor Cyan
-	 }
-	 else
-	 {
-		$viewName = $($viewNewObj.Title)
-		$viewDefault = $false
-		write-host "view $viewName  does Not exists on $siteUrlDst" -foregroundcolor Green
-		Create-NewView $siteUrlDst $dstListName $viewName  $($viewNewObj.Fields) $($viewNewObj.ViewQuery) $($viewNewObj.Aggregations) $viewDefault
-
-	 }
- #}
-		 
-  
-			
-
- 
- 
- 
- 
-
- 
-
-
-
+				 

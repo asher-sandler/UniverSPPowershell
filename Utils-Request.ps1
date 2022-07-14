@@ -1242,7 +1242,6 @@ function get-ListSchema($siteURL,$listName){
 }
 function get-ApplicantsSchema($siteUrl){
 	$fieldsSchema = @()
-	
 	$siteUrlC = get-UrlNoF5 $siteUrl
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
 	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
@@ -2181,7 +2180,8 @@ function get-RequestListObject(){
 					
 					$spRequestsListItem.mailSuffix = $groupSuffix.toUpper() +"-"+ $relURL
 					$spRequestsListItem.applicantsGroup = $groupSuffix +"_"+ $relURL + "_applicantsUG"
-					$spRequestsListItem.targetAudiency = "EkccUG" 
+					#$spRequestsListItem.targetAudiency = "EkccUG" 
+					$spRequestsListItem.targetAudiency = "sp_resUG" 
 					$spRequestsListItem.targetAudiencysharepointGroup = $groupSuffix +"_"+ $relURL + "_AdminSP; "+ $groupSuffix +"_" +  $relURL + "_JudgesSP"
 					$spRequestsListItem.targetAudiencyDistributionSecurityGroup = $groupSuffix +"_"+ $relURL + "_JudgesUG"
 					
@@ -2238,7 +2238,8 @@ function get-RequestListObject(){
 					$spRequestsListItem.deadLineText =  $dedln.day.tostring().PadLeft(2,"0")+"."+$dedln.month.tostring().PadLeft(2,"0")+"."+$dedln.year
 					
 					$spRequestsListItem.folderLink =  ($Item["folderLink"]).Url
-					$spRequestsListItem.RightsforAdmin = "ekccUG; "+$groupSuffix +"_"+ $relURL + "_adminSP;"+$groupSuffix +"_" +$relURL + "_judgesSP"
+					#$spRequestsListItem.RightsforAdmin = "ekccUG; "+$groupSuffix +"_"+ $relURL + "_adminSP;"+$groupSuffix +"_" +$relURL + "_judgesSP"
+					$spRequestsListItem.RightsforAdmin = "sp_resUG; "+$groupSuffix +"_"+ $relURL + "_adminSP;"+$groupSuffix +"_" +$relURL + "_judgesSP"
 					$spRequestsListItem.systemListUrl = $currentList
 					$spRequestsListItem.systemURL = $currentSystem.appHomeUrl
 					$spRequestsListItem.systemListName = $currentSystem.listName
@@ -2545,22 +2546,22 @@ function change-siteTitle($SiteURL, $siteTitle){
 
 function get-UrlWithF5($url){
 	if ($url.contains("2.ekmd.")){
-		return $url
+		return $url.trim()
 	}
 	else
 	{
-		return $url.replace(".ekmd.","2.ekmd.")
+		return $url.replace(".ekmd.","2.ekmd.").trim()
 	}
 	
 	
 }
 function get-UrlNoF5($url){
 	if (!$url.contains("2.ekmd.")){
-		return $url
+		return $url.trim()
 	}
 	else
 	{
-		return $url.replace("2.ekmd",".ekmd")	
+		return $url.replace("2.ekmd",".ekmd").trim()	
 	}
 }
 
@@ -4324,193 +4325,195 @@ function Get-WPfromContent($content){
 	#write-host "Idx: $idx"
 	
 	#read-host
-	while ($webpart){
-		if ($content.contains($findStr)){
-			  
-			
-		      $idx  = $content.IndexOf($findStr)
-			  $ostatok = $($content.substring(0,$idx))
-			  
-			  #write-host "Index idx: $idx"
-			  #write-Host "ostatok-do : $ostatok"
-			  if ($idx -gt 0 -and $ostatok -ne "</div>"){
-				  if ($ostatok.length -gt 6 -and $ostatok.substring(0,6) -eq "</div>"){
-					
-					
-					
-					$ostatok = $($ostatok.substring(6,$idx-6))
-					If (![string]::isNullOrEmpty($ostatok.trim())){
-						#write-Host "ostatok-posle : $ostatok"
-					
-						$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
-						$wpObj1.Content = $ostatok
-						#write-Host 3708
-						#write-host $ostatok  -f Cyan
-						#read-host
-						$wpObj1.isWP = $false
-						$asherClass = Get-ASHERClass
-						$wpObj1.PSEdit = $ostatok.contains($asherClass)
-						$divObjArr += $wpObj1
-					}
-				  }else {
-						if ($ostatok.length -gt 0){
+	if(![string]::IsNullOrEmpty($content)){
+		while ($webpart){
+			if ($content.contains($findStr)){
+				  
+				
+				  $idx  = $content.IndexOf($findStr)
+				  $ostatok = $($content.substring(0,$idx))
+				  
+				  #write-host "Index idx: $idx"
+				  #write-Host "ostatok-do : $ostatok"
+				  if ($idx -gt 0 -and $ostatok -ne "</div>"){
+					  if ($ostatok.length -gt 6 -and $ostatok.substring(0,6) -eq "</div>"){
+						
+						
+						
+						$ostatok = $($ostatok.substring(6,$idx-6))
+						If (![string]::isNullOrEmpty($ostatok.trim())){
 							#write-Host "ostatok-posle : $ostatok"
-							
+						
 							$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
 							$wpObj1.Content = $ostatok
-						#write-Host 3721
-						#write-host $ostatok  -f Cyan
-						#read-host
+							#write-Host 3708
+							#write-host $ostatok  -f Cyan
+							#read-host
+							$wpObj1.isWP = $false
+							$asherClass = Get-ASHERClass
+							$wpObj1.PSEdit = $ostatok.contains($asherClass)
+							$divObjArr += $wpObj1
+						}
+					  }else {
+							if ($ostatok.length -gt 0){
+								#write-Host "ostatok-posle : $ostatok"
+								
+								$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+								$wpObj1.Content = $ostatok
+							#write-Host 3721
+							#write-host $ostatok  -f Cyan
+							#read-host
+									
+								$wpObj1.isWP = $false
+								$asherClass = Get-ASHERClass
+								$wpObj1.PSEdit = $ostatok.contains($asherClass)
+								$divObjArr += $wpObj1				
+							}
+					  }
+					  
+				  }
+				  
+				  #read-host
+				  
+				  for ($i = $idx; $i -lt $content.length;$i++){
+						if ($content[$i] -eq $null){
+							break					
+						}
+						else
+						{
+							$outStr += $content[$i]
+							<#
+							write-host "OutStr : $outStr"
+							write-host "Level : $level"
+							
+							read-host
+							#>
+							if ($content[$i] -eq "<"){
+								
+								if (($content[$i+1] -ne $null) -and # /
+									($content[$i+2] -ne $null) -and # d
+									($content[$i+3] -ne $null) -and # i
+									($content[$i+4] -ne $null)      # v
+
+									){
+										$strC = $content[$i+1]+
+												$content[$i+2]+
+												$content[$i+3]+
+												$content[$i+4]
+												
+										$strC1 = $content[$i+1]+
+												 $content[$i+2]+
+												 $content[$i+3]
+												
+										if ($strC -eq "/div"){
+											#write-host "/div"
+											#write-host "Index :$i"
+											$level--
+										}
+										if ($strC1 -eq "div"){
+											#write-host "div"
+											#write-host "Index :$i"
+											$level++
+										}
+										
+									}	# i
+							}
+							if ($level -eq 1){
+								
+								if ($j -eq 1){
+									if (![string]::isNullOrEmpty($outStr)){
+										$outStr += "/div>"
+										$elObj.el1 = $outStr
+									}
+									
+									
+								}
+								
+								if ($j -eq 2){
+									if (![string]::isNullOrEmpty($outStr)){
+										$outStr += "/div>"
+										$elObj.el2 = $outStr
+									}	
+								}
+								if ($j -eq 3){
+									if (![string]::isNullOrEmpty($outStr)){
+										$outStr += "/div>"
+										$elObj.el3 = $outStr
+									}
+								}
+								if ($j -eq 4){
+									if (![string]::isNullOrEmpty($outStr)){
+										$outStr += "/div>"
+										$elObj.el4 = $outStr
+									}	
+								}
+								if ($j -eq 5){
+									if (![string]::isNullOrEmpty($outStr)){
+										$outStr += "/div>"
+										$elObj.el5 = $outStr
+									}	
+								}
+								if ($j -eq 6){
+									if (![string]::isNullOrEmpty($outStr)){
+										$outStr += "/div>"
+										$elObj.el6 = $outStr
+									}	
+								}
+								
+								if (![string]::isNullOrEmpty($outStr)){
+									$j++
+								}
+								if (!($outStr -eq "<")){
+									$wpObj = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+									$wpObj.Content = $outStr
+									$wpObj.isWP = $true
+									$wpObj.PSEdit = $false
+									$divObjArr += $wpObj
+								}
+								#$outArr.Add($outStr)  
+								
+								$content = $content.substring($i)
+								
+								<#
+								write-host "outStr:$outStr"
+								write-Host
+								write-host "outArr:"
+								$outArr
+								write-Host
+								write-host "Content: $content"
+								read-host
+								#>
+								$outStr = ""
+								break
+							}
+						}	
+				  }
+			}
+			else
+			{
+				if ($content.trim().length -gt 0){
+					if ($content.trim().toLower().substring(0,6) -eq "</div>")
+					{
+						$content = $content.trim().substring(6)
+						if ($content.trim().length -gt 0){
+						
+							$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
+							$wpObj1.Content = $content.trim()
+									#write-Host 3856
+									#write-host $($wpObj1.Content)  -f Cyan
+									#read-host
 								
 							$wpObj1.isWP = $false
 							$asherClass = Get-ASHERClass
 							$wpObj1.PSEdit = $ostatok.contains($asherClass)
-							$divObjArr += $wpObj1				
-						}
-				  }
-				  
-			  }
-			  
-			  #read-host
-			  
-			  for ($i = $idx; $i -lt $content.length;$i++){
-					if ($content[$i] -eq $null){
-                        break					
+							$divObjArr += $wpObj1
+						}					
 					}
-					else
-					{
-						$outStr += $content[$i]
-						<#
-						write-host "OutStr : $outStr"
-						write-host "Level : $level"
-						
-						read-host
-						#>
-						if ($content[$i] -eq "<"){
-							
-							if (($content[$i+1] -ne $null) -and # /
-							    ($content[$i+2] -ne $null) -and # d
-								($content[$i+3] -ne $null) -and # i
-								($content[$i+4] -ne $null)      # v
-
-								){
-									$strC = $content[$i+1]+
-											$content[$i+2]+
-											$content[$i+3]+
-											$content[$i+4]
-											
-									$strC1 = $content[$i+1]+
-											 $content[$i+2]+
-											 $content[$i+3]
-											
-									if ($strC -eq "/div"){
-										#write-host "/div"
-										#write-host "Index :$i"
-										$level--
-									}
-									if ($strC1 -eq "div"){
-										#write-host "div"
-										#write-host "Index :$i"
-										$level++
-									}
-									
-								}	# i
-						}
-						if ($level -eq 1){
-							
-							if ($j -eq 1){
-								if (![string]::isNullOrEmpty($outStr)){
-									$outStr += "/div>"
-									$elObj.el1 = $outStr
-								}
-								
-								
-							}
-							
-							if ($j -eq 2){
-								if (![string]::isNullOrEmpty($outStr)){
-									$outStr += "/div>"
-									$elObj.el2 = $outStr
-								}	
-							}
-							if ($j -eq 3){
-								if (![string]::isNullOrEmpty($outStr)){
-									$outStr += "/div>"
-									$elObj.el3 = $outStr
-								}
-							}
-							if ($j -eq 4){
-								if (![string]::isNullOrEmpty($outStr)){
-									$outStr += "/div>"
-									$elObj.el4 = $outStr
-								}	
-							}
-							if ($j -eq 5){
-								if (![string]::isNullOrEmpty($outStr)){
-									$outStr += "/div>"
-									$elObj.el5 = $outStr
-								}	
-							}
-							if ($j -eq 6){
-								if (![string]::isNullOrEmpty($outStr)){
-									$outStr += "/div>"
-									$elObj.el6 = $outStr
-								}	
-							}
-							
-							if (![string]::isNullOrEmpty($outStr)){
-								$j++
-							}
-							if (!($outStr -eq "<")){
-								$wpObj = "" | Select-Object Content, isWP, ID, WPType, PSEdit
-								$wpObj.Content = $outStr
-								$wpObj.isWP = $true
-								$wpObj.PSEdit = $false
-								$divObjArr += $wpObj
-							}
-							#$outArr.Add($outStr)  
-							
-							$content = $content.substring($i)
-							
-							<#
-							write-host "outStr:$outStr"
-							write-Host
-							write-host "outArr:"
-							$outArr
-							write-Host
-							write-host "Content: $content"
-							read-host
-							#>
-							$outStr = ""
-							break
-						}
-					}	
-			  }
-		}
-		else
-		{
-			if ($content.trim().length -gt 0){
-			    if ($content.trim().toLower().substring(0,6) -eq "</div>")
-				{
-					$content = $content.trim().substring(6)
-					if ($content.trim().length -gt 0){
-					
-						$wpObj1 = "" | Select-Object Content, isWP, ID, WPType, PSEdit
-						$wpObj1.Content = $content.trim()
-								#write-Host 3856
-								#write-host $($wpObj1.Content)  -f Cyan
-								#read-host
-							
-						$wpObj1.isWP = $false
-						$asherClass = Get-ASHERClass
-						$wpObj1.PSEdit = $ostatok.contains($asherClass)
-						$divObjArr += $wpObj1
-					}					
 				}
-			}
-			
-			break
-		}	
+				
+				break
+			}	
+		}
 	}	
 	
 	#write-host "We are here"
@@ -5185,7 +5188,10 @@ function Check-ViewExists($listName,	$siteURL, $viewObj){
 	$viewCollection = $List.Views
 	$Ctx.Load($viewCollection)
 	$Ctx.ExecuteQuery()
-		
+	#write-Host 	$viewCollection.Count
+	#write-Host 5187
+	#write-Host $viewObj
+	#read-host
 	foreach($view in $viewCollection){
 		$relUrls = $view.ServerRelativeUrl.split("/")[-1]
 		# write-Host $relUrls -> AllItems.aspx
@@ -5201,7 +5207,8 @@ function Check-ViewExists($listName,	$siteURL, $viewObj){
 		}
 		
 	}
-	
+	#write-Host 5206
+	#read-host
 	return $viewExists
 }
 function check-FieldInView($listName, $viewTitle, $siteURL, $firstField){
