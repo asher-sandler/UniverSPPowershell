@@ -1121,6 +1121,105 @@ function Create-MainMenu($siteUrl, $menu){
 		}
 	}
 }
+function Delete-RecentsSubMenu($siteURL,$MenuTitle){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "Collect Navigation: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$menuDump = @()
+	
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+	$isItemWasDeleted = $false
+ 	#write-host 18
+	$noMoreSubItems = $false
+	$isMainItemFound = $false
+    foreach($QuickLaunchLink in $QuickLaunch){	
+	    
+		if (($QuickLaunchLink.Title -eq $MenuTitle) ){
+			write-host $QuickLaunchLink.Title -f Yellow	
+			
+					
+			#write-host $QuickLaunchLink.Url
+			#write-host $QuickLaunchLink.Title
+			$isMainItemFound = $true
+			$child = $QuickLaunchLink.Children
+			$Ctx.load($child)
+			$Ctx.ExecuteQuery()
+			if ($child.Count -gt 0){
+				For($i = $child.Count -1 ; $i -ge 0; $i--){
+				
+					$subItem = $child[$i]
+					$Ctx.Load($subItem)
+					
+					$Ctx.ExecuteQuery()
+					
+					
+					write-host $subItem.Title -f Yellow
+					$subItem.DeleteObject()
+					$Ctx.ExecuteQuery()
+					$isItemWasDeleted = $true
+					
+				}
+
+				
+			}
+			else
+			{
+				$noMoreSubItems	= $true
+			}
+		}
+		if ($isItemWasDeleted){
+			break
+		}
+		
+		#read-host
+	}
+	if (!$isMainItemFound){
+		$noMoreSubItems	= $true
+	}
+	
+	return $noMoreSubItems
+	
+	
+}
+function Create-MainMenuSingle($siteUrl, $menu){
+	$siteName = get-UrlNoF5 $SiteURL
+	write-host "Create Main Navigation: $siteURL" -foregroundcolor Green
+	$ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName) 
+	$ctx.Credentials = $Credentials
+ 	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	
+	$QuickLaunch = $Ctx.Web.Navigation.QuickLaunch
+	
+	$Ctx.load($QuickLaunch)
+	$Ctx.ExecuteQuery()
+ 	
+	
+	#new item. Create new
+	write-host $("MenuItem Title:" + $menu.Title) -f Cyan
+	write-host $("MenuItem URL  :" + $menu.Url) -f Cyan
+	
+	#Add link to Quick Launch Navigation
+	$NavigationNode = New-Object Microsoft.SharePoint.Client.NavigationNodeCreationInformation
+	$NavigationNode.Title = $menu.Title
+	$NavigationNode.Url = $menu.Url
+	$NavigationNode.AsLastNode = $True
+	$Ctx.Load($QuickLaunch.Add($NavigationNode))
+	$Ctx.ExecuteQuery()
+
+}
 function change-AllListFieldAndViews($menu,$groupName,$spObj, $oldSiteURL, $siteUrl){
 	$siteName = get-UrlNoF5 $SiteURL
 	write-host "change-AllListFieldAndViews DocLib: $siteURL" -foregroundcolor Green

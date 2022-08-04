@@ -131,8 +131,7 @@ else
 					}
 				}
 				$viewsObjs = @()
-				$pTitle	= ""
-				$configFile = ".\SCI\HSS_SCI.csv"
+				$pTitle	= ""			
 				if ($language.ToUpper().Contains("EN")){
 					write-Host "Language: En " -f Green
 				}
@@ -140,34 +139,94 @@ else
 				{
 					write-Host "Language: He " -f Green
 					$pTitle = "תפריט ניהול"
-				}	
 					# $viewName  $($view.Fields) $($view.ViewQuery) $($view.Aggregations) $viewDefault
-				if (Test-Path -Path $configFile){
-					$configCSV =  Import-CSV $configFile
-					foreach($line in $configCSV){
-						$viewO = "" | Select Title, TitleHe, Fields, ViewQuery, Aggregations,ServerRelativeUrl,MenuTitle,DocLibName
-						$viewO.Title = $line.Title
-						$viewO.TitleHe = $line.TitleHe
-						$fieldVal = $viewO.TitleHe
-						$viewO.Fields = $fields
-						$viewO.MenuTitle = "מועמדים - " + $fieldVal
-						$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
-						$viewO.ViewQuery = get-vQryString $fieldVal
-						$viewO.Aggregations = $aggregations
-						$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
-						$viewsObjs += $viewO	
-						
-						
-						write-Host $line.Title -f Green
-						write-Host $line.TitleHe -f Magenta
-						write-Host $line.GroupTempl -f Cyan
-					}
+					
+					###    "Physics"
+					$viewO = "" | Select Title, TitleHe,Fields, ViewQuery, Aggregations,ServerRelativeUrl,MenuTitle,DocLibName
+					$viewO.Title = "Physics"
+					$fieldVal = 'פיסיקה'
+					$viewO.Fields = $fields
+					$viewO.TitleHe = $fieldVal
+					$viewO.MenuTitle = "מועמדים - " + $fieldVal
+					$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
+					$viewO.ViewQuery = get-vQryString $fieldVal
+					$viewO.Aggregations = $aggregations
+					$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
+					$viewsObjs += $viewO	
+
+					### Math מתמטיקה
+					$viewO = "" | Select Title, TitleHe,Fields, ViewQuery, Aggregations,ServerRelativeUrl,MenuTitle,DocLibName
+					$viewO.Title = "Math"
+					$fieldVal = 'מתמטיקה'
+					$viewO.Fields = $fields
+					$viewO.TitleHe = $fieldVal
+					$viewO.MenuTitle = "מועמדים - " + $fieldVal
+					$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
+					$viewO.ViewQuery = get-vQryString $fieldVal
+					$viewO.Aggregations = $aggregations
+					$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
+					$viewsObjs += $viewO
+
+					### מדעי החיים LifeScience
+					$viewO = "" | Select Title, TitleHe,Fields, ViewQuery, Aggregations,ServerRelativeUrl,MenuTitle,DocLibName
+					$viewO.Title = "LifeScience"
+					$fieldVal = 'מדעי החיים'
+					$viewO.TitleHe = $fieldVal
+					$viewO.MenuTitle = "מועמדים - " + $fieldVal
+					$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
+					$viewO.Fields = $fields
+					$viewO.ViewQuery = get-vQryString $fieldVal
+					$viewO.Aggregations = $aggregations
+					$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
+					$viewsObjs += $viewO
+					
+					### Earth כדור הארץ
+					$viewO = "" | Select Title,TitleHe, Fields, ViewQuery, Aggregations,ServerRelativeUrl,MenuTitle,DocLibName
+					$viewO.Title = "Earth"
+					$fieldVal = 'כדור הארץ'
+					$viewO.TitleHe = $fieldVal
+					$viewO.Fields = $fields
+					$viewO.MenuTitle = "מועמדים - " + $fieldVal
+					$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
+					$viewO.ViewQuery = get-vQryString $fieldVal
+					$viewO.Aggregations = $aggregations
+					$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
+					$viewsObjs += $viewO
+					
+					### פיסיקה יישומית AppliedPhysics
+					$viewO = "" | Select Title,TitleHe, Fields, ViewQuery, Aggregations,ServerRelativeUrl,MenuTitle,DocLibName
+					$viewO.Title = "AppliedPhysics"
+					$fieldVal = 'פיסיקה יישומית'
+					$viewO.TitleHe = $fieldVal
+					$viewO.MenuTitle = "מועמדים - " + $fieldVal
+					$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
+					$viewO.Fields = $fields
+					$viewO.ViewQuery = get-vQryString $fieldVal
+					$viewO.Aggregations = $aggregations
+					$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
+					$viewsObjs += $viewO
+
+					### Chemistry כימיה 
+					$viewO = "" | Select Title, TitleHe,Fields, ViewQuery, Aggregations ,ServerRelativeUrl,MenuTitle,DocLibName
+					$viewO.Title = "Chemistry"
+					$fieldVal = 'כימיה'
+					$viewO.TitleHe = $fieldVal
+					$viewO.Fields = $fields
+					$viewO.MenuTitle = "מועמדים - " + $fieldVal
+					$viewO.DocLibName = "תיקים סופיים - " + $fieldVal
+					$viewO.ViewQuery = get-vQryString $fieldVal
+					$viewO.Aggregations = $aggregations
+					$viewO.ServerRelativeUrl = $servRelUrl + "/"+$viewO.Title+".aspx"
+					$viewsObjs += $viewO
+					
+					
 				}
-				else
-				{
-					write-Host "Config File $configFile not Exists" -f Yellow
-				}
+				#$siteUrlOld = "https://scholarships2.ekmd.huji.ac.il/home/NaturalScience/SCI94-2022/"
 				
+				
+				#$objViewsOld = Get-AllViews $listName $siteUrlOld
+				#$jsonFileName = $(".\JSON\"+$groupName+"-Old-Applicants-Views.json")
+				#$objViewsOld | ConvertTo-Json -Depth 100 | out-file $jsonFileName
 				
 				$jsonFileName = $(".\JSON\"+$groupName+"-ViewObj.json")
 				$viewsObjs	| ConvertTo-Json -Depth 100 | out-file $jsonFileName
@@ -175,7 +234,9 @@ else
 				$viewsObjs	| Export-CSV  $csvFileName -Encoding UTF8  -NoTypeInfo
 				write-Host "Written file $jsonFileName" -f Cyan
 				write-Host "Written file $csvFileName" -f Cyan
+				write-Host ...
 				read-host
+
                 foreach($xOView in $viewsObjs){
 					$viewExists = Check-ViewExists $listName  $siteURL $xOView 
 					if ($viewExists.Exists){
@@ -224,16 +285,11 @@ else
 				}
 				
 				Create-NavSubMenuX $siteUrl $newMenu $pTitle
-				$schemaXML = get-Content "SCI\HSS-SCI-Fields.txt" -Encoding UTF8 
-
+				
 				foreach($viewOX1 in $viewsObjs){
 					#$viewOX1.Title  
 					#$viewOX1.DocLibName
 					create-DocLib $siteUrl $viewOX1.Title  $viewOX1.DocLibName
-					# add fields to DocLib
-					foreach($fieldSchema in $schemaXML){
-						add-SchemaFields $siteUrl $viewOX1.DocLibName $fieldSchema
-					}
 				}
 				
 				create-DocLib $siteUrl "ScholarShip"

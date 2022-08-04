@@ -1141,6 +1141,24 @@ not exist. It may have been deleted by another user.
 
 	
 }
+function get-ListTitleByURL($siteURL,$listUrl){
+	$siteUrlC = get-UrlNoF5 $siteUrl
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
+	
+	$Web = $Ctx.Web
+	$ctx.Load($Web)
+	$Ctx.ExecuteQuery()
+	
+	$List = $Web.GetList($listUrl)
+	$Ctx.Load($List)
+	$Ctx.ExecuteQuery()
+   
+	
+	return $List.Title
+	
+}
 function get-DefaultViewByURL($siteURL,$listUrl){
 	$siteUrlC = get-UrlNoF5 $siteUrl
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrlC)
@@ -1474,6 +1492,37 @@ function Get-FieldXmlType($FieldXML){
 		}	
         return $cType		
 }
+function add-SchemaFields($siteUrl, $listName, $fieldsSchema){
+        #Setup the context
+        $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+        $Ctx.Credentials = $Credentials
+         
+        #Get the List
+        $List = $Ctx.Web.Lists.GetByTitle($listName)
+        $Ctx.Load($List)
+        $Ctx.ExecuteQuery()
+ 
+        #Check if the column exists in list already
+        $Fields = $List.Fields
+        $Ctx.Load($Fields)
+        $Ctx.executeQuery()
+		$DisplayName = Select-Xml -Content $fieldsSchema  -XPath "/Field" | ForEach-Object {
+			 $_.Node.DisplayName
+		}
+		$NewField = $Fields | where {($_.Title -eq $DisplayName)}
+        if($NewField -ne $NULL) 
+        {
+            Write-host "Column $DisplayName already exists in the List!" -f Yellow
+        }
+        else
+        {
+			$NewField = $List.Fields.AddFieldAsXml($fieldsSchema,$True,[Microsoft.SharePoint.Client.AddFieldOptions]::AddFieldInternalNameHint)
+			$Ctx.ExecuteQuery()   
+			Write-host "Column $DisplayName was Add to the $listName Successfully!" -ForegroundColor Green
+		}	
+		
+}
+
 function add-TextFields($siteUrl, $listName, $fieldObj){
         #Setup the context
         $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
@@ -2122,7 +2171,7 @@ function get-RequestListObject(){
 
 	 
 	#Loop through each List Item
-	$spRequestsListItem = "" | Select ID,spRequestsSiteURL,spRequestsListName,spRequestsListLink,spRequestsListDocs, spAttachementsPath, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, currentSiteUrl,Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe
+	$spRequestsListItem = "" | Select ID,spRequestsSiteURL,spRequestsListName,spRequestsListLink,spRequestsListDocs, spAttachementsPath, GroupName, RelURL, Status,adminGroup, adminGroupSP, assignedGroup, applicantsGroup,targetAudiency, targetAudiencysharepointGroup, targetAudiencyDistributionSecurityGroup, OldSiteSuffix, currentSiteUrl,Notes, Title, contactFirstNameEn, contactLastNameEn , contactEmail, userName,mailSuffix, contactPhone, system, systemCode, siteName, siteNameEn, faculty, publishingDate, deadline, language,isDoubleLangugeSite, folderLink, PathXML, XMLFile,XMLFileEn,XMLFileHe, MailPath, MailFile,MailFileEn,MailFileHe, XMLUploadPath, XMLUploadFileName,PreviousXML, PreviousMail, GRSReponseLetterConfigPath, OldGRSReponseLetterConfigPath, RightsforAdmin, systemURL, systemListUrl, systemListName, oldSiteURL, deadLineText, isUserContactEmpty, facultyTitleEn, facultyTitleHe,externalFormsURL,isExternalForm
 
 	ForEach($Item in $ListItems)
 	{ 
@@ -2245,6 +2294,17 @@ function get-RequestListObject(){
 					$spRequestsListItem.systemListName = $currentSystem.listName
 					$spRequestsListItem.oldSiteURL  = get-SiteNameFromNote $spRequestsListItem.Notes
 					$spRequestsListItem.OldSiteSuffix = Get-OldSiteSuffix $spRequestsListItem.oldSiteURL
+					
+					# externalFormsURL,isExternalForm
+					$spRequestsListItem.isExternalForm =  $false
+					if(-not [string]::isNullOrEmpty($spRequestsListItem.oldSiteURL)){
+						$spRequestsListItem.externalFormsURL = get-ExternalFormsSubSite $spRequestsListItem.oldSiteURL
+						if (-not [string]::isNullOrEmpty($spRequestsListItem.externalFormsURL)){
+							$spRequestsListItem.isExternalForm =  $true
+						}
+						
+					}
+					
 					$spRequestsListItem.isUserContactEmpty = $false
 					$facTitle = get-FacultyTitle $groupName $spRequestsListItem.faculty
 					$spRequestsListItem.facultyTitleEn = $facTitle.TitleEn
@@ -6103,4 +6163,27 @@ function Get-spReqFileAttachPath($saveDirPrefix,$groupName){
 	}
 	$attachementsPath = $wDir.FullName
  	return $attachementsPath
+}
+function get-ExternalFormsSubSite($siteName){
+
+ $subSiteUrl = $null
+ $siteUrl = get-UrlNoF5 $siteName
+
+ $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+ $Ctx.Credentials = $Credentials
+ 
+ 
+ $Web = $Ctx.Web
+ $Ctx.Load($web)
+ $Ctx.Load($web.Webs)
+ $Ctx.executeQuery()
+ $subWebs = $Web.Webs
+ foreach ($sWeb in $subWebs){
+	 if ($sWeb.URL.ToLower().Contains("/external_forms")){
+		$subSiteUrl = $sWeb.URL
+		break		
+	 }
+ }
+ 
+ return $subSiteUrl	
 }
