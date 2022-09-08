@@ -77,7 +77,9 @@ else
 			$Web = $Ctx.Web
 			$ctx.Load($Web)
 			$Ctx.ExecuteQuery()
-			$currentUser = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+			
+			$currentUserName = [System.Security.Principal.WindowsIdentity]::GetCurrent().Name
+			$spCurrentUser = $web.EnsureUser($currentUserName)
 
 
 			
@@ -183,12 +185,19 @@ else
 			#Assign list permissions to the group
 				$Permissions = $List.RoleAssignments.Add($Group,$RoleDB)
 				$List.Update()
-			$Ctx.ExecuteQuery()
+				$Ctx.ExecuteQuery()
 			Write-Host "DocType: $ListName" -f Yellow
 			Write-Host "Added $permLvlJud permission to $groupJud group." -foregroundcolor Green
 			Write-Host "Added $permLvlAdm permission to $groupADM group." -foregroundcolor Green
 			Write-Host "Added $tmpEdtPermissionLevel permission to $tmpEdtGroupName group." -foregroundcolor Green
 			Write-Host 
+			# Remove Current User from List Permissions
+			# Current User rights Full Control was assignment
+			# when we break inheritance rights
+			
+			$List.RoleAssignments.GetByPrincipal($spCurrentUser).DeleteObject()
+			$List.Update()
+			$Ctx.ExecuteQuery()
 
 
 

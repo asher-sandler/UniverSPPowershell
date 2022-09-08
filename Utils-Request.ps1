@@ -542,7 +542,7 @@ function Add-SiteList($ListObj, $facultyList)
 		$list = $lists.GetByTitle($ListNameXX)  
 		$listItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation  
 		$listItem = $list.AddItem($listItemInfo)  
-		$listItem["Title"] = $ListObj.siteName 
+		$listItem["Title"] = $ListObj.siteName.Trim() 
 		
 		
 		
@@ -579,9 +579,9 @@ function Add-SiteList($ListObj, $facultyList)
 		}
 		$listItem["deadline"] = $deadLineDate
 		$listItem["recommendationsDeadline"] = $ListObj.deadline
-		$listItem["SiteTitle"] = $ListObj.siteName
-		$listItem["ScholarshipName"] = $ListObj.siteName
-		$listItem["SiteDescription"] = $ListObj.siteNameEn
+		$listItem["SiteTitle"] = $ListObj.siteName.Trim()
+		$listItem["ScholarshipName"] = $ListObj.siteName.Trim()
+		$listItem["SiteDescription"] = $ListObj.siteNameEn.Trim()
 		$listItem["isCreated"] = "Waiting"
 		$listItem["Target_x0020_Audiences"] = $ListObj.targetAudiency  + ";" + $ListObj.targetAudiencysharepointGroup + ";"+ $ListObj.targetAudiencyDistributionSecurityGroup + ";"+ $ListObj.adminGroup
 		
@@ -2240,21 +2240,21 @@ function get-RequestListObject(){
 					if ($spRequestsListItem.language.toUpper().contains("EN")){
 						
 						if ([string]::IsNullOrEmpty($Item["siteNameEn"])){
-							$spRequestsListItem.Title = $Item["Title"]
-							$spRequestsListItem.siteName = $Item["siteName"]
+							$spRequestsListItem.Title = $([string]$Item["Title"]).Trim()
+							$spRequestsListItem.siteName = $([string]$Item["siteName"]).Trim()
 						}
 						else
 						{	
-							$spRequestsListItem.Title =  $Item["siteNameEn"]
-							$spRequestsListItem.siteName = $Item["siteNameEn"]
+							$spRequestsListItem.Title =  $([string]$Item["siteNameEn"]).Trim()
+							$spRequestsListItem.siteName = $([string]$Item["siteNameEn"]).Trim()
 						}
 						$spRequestsListItem.MailFile = $spRequestsListItem.MailFileEn
 						
 					}
 					else
 					{
-						$spRequestsListItem.Title = $Item["Title"]
-						$spRequestsListItem.siteName = $Item["siteName"]
+						$spRequestsListItem.Title = $([string]$Item["Title"]).Trim()
+						$spRequestsListItem.siteName = $([string]$Item["siteName"]).Trim()
 						$spRequestsListItem.MailFile = $spRequestsListItem.MailFileHe
 					}	
 					

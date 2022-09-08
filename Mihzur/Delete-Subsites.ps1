@@ -73,7 +73,10 @@ if ($subSitesObj.Count -gt 0){
 					Write-Host "$($_.Exception.Message)" 	-f Yellow	
 				}
 			 }
-			 Remove-SPWeb $siteURL -Confirm:$false
+			 write-host "Remove-SPWeb..."
+			 $deletePage = $siteURL + "/_layouts/15/deleteweb.aspx"
+			 write-host $deletePage 
+			 #Remove-SPWeb $siteURL # -Confirm:$false
 			 
 		}
 		else
