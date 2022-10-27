@@ -40,12 +40,27 @@ $Credentials = get-SCred
 
  
  $siteSrcURL = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN27-2020";
+ $siteSrcURL = "https://hss2.ekmd.huji.ac.il/home";
+ $siteSrcURL = "https://ttp2.ekmd.huji.ac.il/home";
  $sourceList = "/home/OverseasApplicantsUnit/GEN27-2020/Lists/studies/AllItems.aspx"
+ $sourceList = "/home/OverseasApplicantsUnit/GEN27-2020/Lists/studies/AllItems.aspx"
+ $sourceList = "/home/Lists/availablePositionsList/Archived.aspx"
  
  $destSiteURL = get-UrlNoF5 "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN31-2021"
+ $destSiteURL = get-UrlNoF5 "https://grs2.ekmd.huji.ac.il/home/"
+ $destSiteURL = get-UrlNoF5 "https://tss2.ekmd.huji.ac.il/home/"
+ $destSiteURL = get-UrlNoF5 "https://tss2.ekmd.huji.ac.il/home/"
+
+ $destSiteURL = get-UrlNoF5 "https://sep2.ekmd.huji.ac.il/home/"
+ $destSiteURL = get-UrlNoF5 "https://portals2.ekmd.huji.ac.il/home/tap/"
+ $destSiteURL = get-UrlNoF5 "https://portals2.ekmd.huji.ac.il/home/labWorkerPromotion/"
+ $destSiteURL = get-UrlNoF5 "https://crs2.ekmd.huji.ac.il/home/"
+ $destSiteURL = get-UrlNoF5 "https://aap2.ekmd.huji.ac.il/home/"
  $destListName = "Applicants"
+ $destListName = "availableAAPList"
  
  $viewToCopy = "245"
+ $viewToCopy = "Archived"
  
   
  

@@ -4106,10 +4106,16 @@ function repl-DefContent ($oldSiteName, $newSiteName, $pageContent){
 
 		# "outerText":  "ההוראות המופיעות כאן"
 		$newPageCont = $newPageCont -Replace $aHtmlTags.outerText, $stringATR
-
+		
 		$newPageCont = $newPageCont -Replace $stringA, $stringARX
 			
 	}
+	
+	$newPageCont = $newPageCont -Replace 'a href="/home/Pages/InstructionsHe.aspx" target="_blank"' , 'a href="/home/Pages/InstructionsHe.aspx"'
+	$newPageCont = $newPageCont -Replace 'a href="/home/Pages/InstructionsHe.aspx"' , $('a href="' + $newSiteName + "/Pages/DocumentsUpload.aspx"+'"')
+	$newPageCont = $newPageCont -Replace 'ב. להעלות את המסמכים הבאים לתיקיית העלאת מסמכים אישית לפי' , 'ב. להעלות את המסמכים הבאים באמצעות'
+	$newPageCont = $newPageCont -Replace 'ההוראות המופיעות כאן' , 'דף העלאת המסמכים'
+	
 	
 				
 	

@@ -4,5 +4,8 @@ Add-PsSnapin Microsoft.SharePoint.PowerShell
 $spweb = Get-SPWeb $srcSiteUrl
 $listSubmitted = $spweb.Lists["submitted"]
 $listSubmitted.Items.Count
+$listSubmitted.ItemCount
 $listSoc=$spweb.Lists["Social Sceinces"]
 $listSoc.Items.Count
+$listSoc.ItemCount
+$listSoc | gm
