@@ -157,6 +157,7 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 				#read-host
 			}
 		#}
+		#read-host
 	}
 	#foreach($field in $schema){
 	#	$schemaTXT += $field
