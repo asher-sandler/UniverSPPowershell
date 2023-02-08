@@ -34,6 +34,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Office.Interop.Outlook, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="Microsoft.SharePoint.Client, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\..\Nuget\Microsoft.SharePointOnline.CSOM.16.1.21812.12000\lib\net40-full\Microsoft.SharePoint.Client.dll</HintPath>
@@ -71,39 +74,12 @@
     </ApplicationDefinition>
     <Compile Include="Data\GeneralRequestDataProvider.cs" />
     <Compile Include="Model\GeneralRequest.cs" />
+    <Compile Include="OutlookSender\OutlookSender.cs" />
     <Compile Include="ViewModel\GeneralRequestViewModel.cs" />
     <Compile Include="View\TaskListView.xaml.cs">
       <DependentUpon>TaskListView.xaml</DependentUpon>
     </Compile>
-    <Page Include="Controls\BodyControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="Controls\HeaderControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ItemDetailsControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\SendOutlookControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\SendToControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\SubjectControl.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\ThreeColumnsGrid.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Controls\TransferDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -115,29 +91,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Controls\BodyControl.xaml.cs">
-      <DependentUpon>BodyControl.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Controls\HeaderControl.xaml.cs">
       <DependentUpon>HeaderControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ItemDetailsControl.xaml.cs">
-      <DependentUpon>ItemDetailsControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\SendOutlookControl.xaml.cs">
-      <DependentUpon>SendOutlookControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\SendToControl.xaml.cs">
-      <DependentUpon>SendToControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\SubjectControl.xaml.cs">
-      <DependentUpon>SubjectControl.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\ThreeColumnsGrid.xaml.cs">
-      <DependentUpon>ThreeColumnsGrid.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Controls\TransferDetails.xaml.cs">
-      <DependentUpon>TransferDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

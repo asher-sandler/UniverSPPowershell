@@ -34,7 +34,7 @@ foreach($mailItem in $inbox.Items){
 			for($i=0; $i -lt $bd.count; $i++)
 			{
 				if ($bd[$i].Contains("Error")){
-					if ( $bd[$i-3].Contains("5.1 Line 265: myId :")){
+					if ( $bd[$i-3].Contains("Line 265: myId :")){
 						$studItm = "" | Select StudenID, SiteURL, listName 
 						$studItm.StudenID =  $bd[$i-3].split(":")[2].Trim()
 						$studItm.SiteURL  =  "https:"+$bd[$i-2].split(":")[3].Trim()

@@ -35,6 +35,7 @@ namespace Test_CSOM.Model
         public string Phone { get; set; }
         public string Url { get; set; }
         public string RequestDetails { get; set; }
+        public string RequestSubject { get; set; }
         public string UserName { get; set; }
         public string Status { get; set; }
 

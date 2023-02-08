@@ -42,7 +42,7 @@ else
 				
 				change-ListApplicantsDeadLine 	$siteUrlC $spRequestsListObj
 				add-ListApplicants  			$siteUrlC $spRequestsListObj
-				change-siteSetting				$siteUrlC
+				change-siteSetting				$siteUrlC # navigation Settings
 				change-HeadingURL 				$siteUrlC $(Get-RelURL $siteUrlC)
 				change-siteTitle $siteUrlC $($spRequestsListObj.siteName)
 				

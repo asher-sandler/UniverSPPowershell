@@ -121,11 +121,16 @@ return $outFile
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022";
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/natureScience/SCI26-2022";
+	$siteURL = "https://hss.ekmd.huji.ac.il/home";
+	$siteURL = "https://grs.ekmd.huji.ac.il/home/humanities/HUM20-2022/Archive-2023-01-01";
 	$ListTitle = "FirstGrade"
 	$ListDisplayTitle = "תואר ראשון"
 	$ListDisplayTitle = "applicants"
 	$ListDisplayTitle = "ResponseLetters"
 	$ListDisplayTitle = "לימודי הוראה"
+$ListDisplayTitle = "applicants"
+$ListDisplayTitle = "availableHSSarchive"
+$ListDisplayTitle = "availableScholarshipsList"
 $ListDisplayTitle = "applicants"
 	$className = $SiteURL.split('/')[-1]
 

@@ -1,6 +1,7 @@
 ﻿<Window x:Class="Test_CSOM.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:view="clr-namespace:Test_CSOM.View"
         xmlns:controls="clr-namespace:Test_CSOM.Controls"
         Title="request List Helper"
         WindowState="Normal"
@@ -23,7 +24,7 @@
 
         
 
-        <controls:ThreeColumnsGrid Grid.Row="2" />
+        <view:TaskListView Grid.Row="2" />
 
    
 

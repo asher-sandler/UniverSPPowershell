@@ -145,9 +145,10 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 	$schemaTXT = Get-Content $outFile -encoding default
 	$listObj = get-availLists
 	foreach($siteObj in $listObj){
-		#if ($siteObj.appHomeUrl -eq "https://grs2.ekmd.huji.ac.il/home/" ){
+		#if ($siteObj.appHomeUrl -eq "https://crs2.ekmd.huji.ac.il/home/" ){
 			$siteU = get-UrlNoF5  $siteObj.appHomeUrl
 			$listU = $siteObj.ListName
+			#$listU = "availableSEPArchive"
 			write-Host $siteU
 			write-Host $listU
 			foreach($xField in $schemaTXT){
@@ -156,8 +157,9 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 				#write-Host $xField
 				#read-host
 			}
+			#read-host	
 		#}
-		#read-host
+		
 	}
 	#foreach($field in $schema){
 	#	$schemaTXT += $field

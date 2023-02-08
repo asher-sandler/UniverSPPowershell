@@ -208,8 +208,11 @@
 				<hr/>
 				<div><h6>Send mail to <strong>Dan Testman Folder</strong></h6></div>
 				<div><strong>%MailSuffix%-EKMDdante@ekmd.huji.ac.il</strong></div>
-				<div>"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE" /c ipm.note /m "%MailSuffix%-EKMDdante@ekmd.huji.ac.il?subject=Recommendations&body=Recommendations" /a "C:\AdminDir\SP Powershell\sendDante\RecommendationsendDante.txt"</div>
-				<div>"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE" /c ipm.note /m "%MailSuffix%-EKMDdante@ekmd.huji.ac.il?subject=Recommendations&body=Recommendations" /a "C:\AdminDir\SP Powershell\sendDante\RecommendationsendDante1.txt"</div>
+				<div id="outlook-copy1">"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE" /c ipm.note /m "%MailSuffix%-EKMDdante@ekmd.huji.ac.il?subject=Recommendations&body=Recommendations" /a "C:\AdminDir\SP Powershell\sendDante\RecommendationsendDante.txt"</div>
+				<button id="copy-button1" class="btn btn-primary">Copy to clipboard</button>
+				<div id="outlook-copy2">"C:\Program Files (x86)\Microsoft Office\root\Office16\OUTLOOK.EXE" /c ipm.note /m "%MailSuffix%-EKMDdante@ekmd.huji.ac.il?subject=Recommendations&body=Recommendations" /a "C:\AdminDir\SP Powershell\sendDante\RecommendationsendDante1.txt"</div>
+				<button id="copy-button2" class="btn btn-primary">Copy to clipboard</button>
+				
 				<hr/>
 				<div><h6>Remove rights from <strong>Dan Testman Folder</strong></h6></div>
 				<div>
@@ -382,5 +385,32 @@
   <!-- Footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/a3cbcac4b3.js" crossorigin="anonymous"></script> 
+    <script>
+		document.getElementById("copy-button1").addEventListener("click", copyToClipboard1);
+		async function copyToClipboard1() {
+		  try {
+			// Get the text to copy from the webpage
+			var textToCopy = document.getElementById("outlook-copy1").innerText;
+			// Use the Clipboard API to write the text to the clipboard
+			await navigator.clipboard.writeText(textToCopy);
+			//console.log("Text copied to clipboard!");
+		  } catch (err) {
+			//console.error("Failed to copy text: ", err);
+		  }
+		}		
+		document.getElementById("copy-button2").addEventListener("click", copyToClipboard2);
+		async function copyToClipboard2() {
+		  try {
+			// Get the text to copy from the webpage
+			var textToCopy = document.getElementById("outlook-copy2").innerText;
+			// Use the Clipboard API to write the text to the clipboard
+			await navigator.clipboard.writeText(textToCopy);
+			//console.log("Text copied to clipboard!");
+		  } catch (err) {
+			//console.error("Failed to copy text: ", err);
+		  }
+		}		
+	</script>
 </body>
+
 </html>

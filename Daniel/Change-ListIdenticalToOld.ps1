@@ -15,26 +15,29 @@ Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extens
 . "..\Utils-DualLanguage.ps1"
 
  $Credentials = get-SCred	
- $newSite    = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN32-2022"
- $oldSite 	= "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/GEN31-2021"
+ $newRelURL = "GEN31-2021"
+ $oldRelURL = "GEN32-2022"
+				#https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit
+ $newSite    = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/" + $newRelURL
+ $oldSite 	= "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/"+$oldRelURL
  
  write-host "Old Site: $oldSite" -foregroundcolor Cyan
  write-host "New Site: $newSite" -foregroundcolor Green
 
  $listName = "Applicants"
- #$objViews = Get-AllViews $listName $oldSite
- #$objViewsnew = Get-AllViews $listName $newSite 
+ $objViews = Get-AllViews $listName $oldSite
+ $objViewsnew = Get-AllViews $listName $newSite 
 
- $outFileName = "..\JSON\GEN31-2021-Applicants-Views.json"	 
- $objViews = get-content $outFileName -encoding default | ConvertFrom-Json
+ $outFileName = "..\JSON\"+$oldRelURL+"-Applicants-Views.json"	 
+ #$objViews = get-content $outFileName -encoding default | ConvertFrom-Json
 
- #$objViews | ConvertTo-Json -Depth 100 | out-file $outFileName
- #write-host "$outFileName was created" -f Green
+ $objViews | ConvertTo-Json -Depth 100 | out-file $outFileName
+ write-host "$outFileName was created" -f Green
  
- $outFileName = "..\JSON\GEN32-2022-Applicants-Views.json"	 
- $objViewsnew  = get-content $outFileName -encoding default | ConvertFrom-Json
-# $objViewsnew | ConvertTo-Json -Depth 100 | out-file $outFileName
- #write-host "$outFileName was created" -f Green
+ $outFileName = "..\JSON\"+$newRelURL+"-Applicants-Views.json"	 
+ #$objViewsnew  = get-content $outFileName -encoding default | ConvertFrom-Json
+ $objViewsnew | ConvertTo-Json -Depth 100 | out-file $outFileName
+ write-host "$outFileName was created" -f Green
  write-host 
  write-host 
  
@@ -85,17 +88,18 @@ Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extens
 	 
  }
  
- $outFileName = "..\JSON\GEN32-2022-BadFields.json"	 
+ $outFileName = "..\JSON\"+$newRelURL+"-BadFields.json"	 
  $badFields | ConvertTo-Json -Depth 100 | out-file $outFileName
  write-host "$outFileName was created" -f Green
  write-host 
- write-host 
- $outFileName = "..\JSON\GEN32-2022-schema.json"	 
+ write-host
+ 
+ $outFileName = "..\JSON\"+$newRelURL+"-schema.json"	 
  
  	$newListSchema = get-ListSchema $newSite $listName
  $newListSchema | ConvertTo-Json -Depth 100 | out-file $outFileName
  write-host "$outFileName was created" -f Green
-$outFileName = "..\JSON\GEN31-2021-schema.json"	 
+$outFileName = "..\JSON\"+$oldRelURL+"-schema.json"	 
  	
 	$oldListSchema = get-ListSchema $oldSite $listName
  $oldListSchema | ConvertTo-Json -Depth 100 | out-file $outFileName
@@ -103,7 +107,7 @@ $outFileName = "..\JSON\GEN31-2021-schema.json"
 	
 	
 	$schemaDifference = get-SchemaDifference $oldListSchema $newListSchema
- $outFileName = "..\JSON\GEN32-2022-schemaDiff.json"	 
+ $outFileName = "..\JSON\"+$newRelURL+"-schemaDiff.json"	 
  $schemaDifference | ConvertTo-Json -Depth 100 | out-file $outFileName
  write-host "$outFileName was created" -f Green
  	
@@ -122,12 +126,14 @@ foreach($itm in $schemaDifference){
 	 
 
 }
+write-host "Not found in $newSite"
 $fieldsToCreate | fl
 
 
 
-write-host 129
-read-host
+write-host 132
+write-host "fieldsToCreate :" $fieldsToCreate.Count
+#read-host
 foreach($fld in $fieldsToCreate){
 				$type= $fld.Type
 				switch ($type)
@@ -166,8 +172,42 @@ foreach($fld in $fieldsToCreate){
 }
 
 
-write-host 165
+<#
+ $newRelURL = "GEN31-2021"
+ $oldRelURL = "GEN32-2022"
+
+ $newSite    = "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/" + $newRelURL
+ $oldSite 	= "https://grs2.ekmd.huji.ac.il/home/OverseasApplicantsUnit/"+$oldRelURL
+ 
+ write-host "Old Site: $oldSite" -foregroundcolor Cyan
+ write-host "New Site: $newSite" -foregroundcolor Green
+
+ $listName = "Applicants"
+#>
+		    #$SrcFieldsOrder = get-FormFieldsOrder $listName $oldSite
+
+ $outFileName = ".\JSON\"+$oldRelURL+"-FormFields.json"	
+$SrcFieldsOrder = get-content ".\JSON\GEN32-2022-FormFields-Makor.json" -encoding default | ConvertFrom-Json 
+ $SrcFieldsOrder | ConvertTo-Json -Depth 100 | out-file $outFileName
+ write-host "$outFileName was created" -f Green
+			
+			$DestFieldOrder    = get-FormFieldsOrder $listName $newSite
+ $outFileName = ".\JSON\"+$newRelURL+"-FormFields.json"	 
+ $DestFieldOrder | ConvertTo-Json -Depth 100 | out-file $outFileName
+ write-host "$outFileName was created" -f Green
+
+			
+			#check for Field in Destination exist in Source
+			$newFieldOrder = checkForArrElExists $SrcFieldsOrder $DestFieldOrder
+ $outFileName = ".\JSON\New-FormFields.json"	 
+ $newFieldOrder | ConvertTo-Json -Depth 100 | out-file $outFileName
+ write-host "$outFileName was created" -f Green
+
+			
+			reorder-FormFields $listName	$newSite $newFieldOrder
+ write-host 198
 read-host
+
 
 	foreach($view in $objViews){
 		$viewExists = Check-ViewExists $listName  $newSite $view 

@@ -1,0 +1,253 @@
+$spSiteFormUri = 'https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace/Lists/City1/NewForm.aspx'
+$spSiteFormUri = 'https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace/Lists/City1/DispForm.aspx?ID=1'
+$spSiteFormUri = 'https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace/Lists/City1/EditForm.aspx?ID=2'
+start-transcript wreq.log
+$response = Invoke-WebRequest -Uri $spSiteFormUri -UseDefaultCredential -SessionVariable rb1 -Method Get
+<#
+$allEl = $response
+$allEl | gm
+$allEl.Content | out-File cnt.txt -Encoding UTF8
+#foreach($el in $allEl){
+	#if (![string]::IsNullOrEmpty($el.ID)){
+		#if ($el.ID.ToLower().contains("title")){
+		#WPQ2db57334b-eca4-42ca-b1da-3a7b612cef8dTitle{
+			#$el #| fl
+		#}
+	#}
+#}
+#>
+$inpFields = $response.InputFields | Where{$_.Type -eq "Text"}
+#$form = $response.Forms[0]
+#$Buttons = $response.Buttons
+#$form.Fields | fl
+$inpFields | fl
+
+stop-transcript
+<#
+CssRegistration1
+favicon
+aspnetForm
+_wpcmWpid
+wpcmVal
+MSOWebPartPage_PostbackSource
+MSOTlPn_SelectedWpId
+MSOTlPn_View
+MSOTlPn_ShowSettings
+MSOGallery_SelectedLibrary
+MSOGallery_FilterString
+MSOTlPn_Button
+__EVENTTARGET
+__EVENTARGUMENT
+__REQUESTDIGEST
+MSOSPWebPartManager_DisplayModeName
+MSOSPWebPartManager_ExitingDesignMode
+MSOWebPartPage_Shared
+MSOLayout_LayoutChanges
+MSOLayout_InDesignMode
+_wpSelected
+_wzSelected
+MSOSPWebPartManager_OldDisplayModeName
+MSOSPWebPartManager_StartWebPartEditingName
+MSOSPWebPartManager_EndWebPartEditing
+_maintainWorkspaceScrollPosition
+__VIEWSTATE
+__VIEWSTATEGENERATOR
+__SCROLLPOSITIONX
+__SCROLLPOSITIONY
+__EVENTVALIDATION
+imgPrefetch
+DeltaDelegateControls
+TurnOnAccessibility
+linkTurnOnAcc
+TurnOffAccessibility
+linkTurnOffAcc
+TurnOffAnimation
+linkTurnOffAnimation
+TurnOnAnimation
+linkTurnOnAnimation
+HiddenAnchor
+ms-hcTest
+ms-designer-ribbon
+suiteBar
+suiteBarLeft
+DeltaSuiteLinks
+suiteLinksBox
+ctl00_ctl52_ctl03_ShellNewsfeed
+ctl00_ctl52_ctl03_ShellDocuments
+ctl00_ctl52_ctl03_ShellSites
+Suite_ActiveLinkIndicator_Clip
+Suite_ActiveLinkIndicator
+suiteBarRight
+DeltaSuiteBarRight
+welcomeMenuBox
+zz1_ID_PersonalActionMenu
+zz4_Menu_t
+zz4_Menu
+suiteBarButtons
+siteactiontd
+zz5_SiteActionsMenuMain
+zz10_SiteActionsMenu_t
+zz10_SiteActionsMenu
+ms-help
+ctl00_ctl52_TopHelpLink
+s4-ribbonrow
+globalNavBox
+ribbonBox
+s4-ribboncont
+DeltaSPRibbon
+RibbonContainer_activeTabId
+RibbonContainer
+Ribbon
+ribboninstructions
+jewelcontainer
+RibbonContainer-TabRowLeft
+Ribbon.Read-title
+Ribbon.ListForm.Edit-title
+RibbonContainer-TabRowRight
+ctl00_ctl52_site_share_button
+site_follow_button
+fullscreenmodebox
+fullscreenmode
+ctl00_ctl52_fullscreenmodeBtn
+exitfullscreenmode
+ctl00_ctl52_exitfullscreenmodeBtn
+ctl00_ctl52_DeveloperDashboardLauncher
+Ribbon.ListForm.Edit
+Ribbon.ListForm.Edit.Commit
+Ribbon.ListForm.Edit.Commit-LargeLarge
+Ribbon.ListForm.Edit.Commit-LargeLarge-0
+Ribbon.ListForm.Edit.Commit-LargeLarge-0-0
+Ribbon.ListForm.Edit.Commit.Publish-Large
+Ribbon.ListForm.Edit.Commit.Cancel-Large
+Ribbon.ListForm.Edit.Clipboard
+Ribbon.ListForm.Edit.Clipboard-LargeMedium
+Ribbon.ListForm.Edit.Clipboard-LargeMedium-0
+Ribbon.ListForm.Edit.Clipboard-LargeMedium-0-0
+Ribbon.ListForm.Edit.Clipboard.Paste-Large
+Ribbon.ListForm.Edit.Clipboard-LargeMedium-1
+Ribbon.ListForm.Edit.Clipboard-LargeMedium-1-0
+Ribbon.ListForm.Edit.Clipboard.Cut-Medium
+Ribbon.ListForm.Edit.Clipboard-LargeMedium-1-1
+Ribbon.ListForm.Edit.Clipboard.Copy-Medium
+Ribbon.ListForm.Edit.Clipboard-LargeMedium-1-2
+Ribbon.ListForm.Edit.Actions
+Ribbon.ListForm.Edit.Actions-LargeLarge
+Ribbon.ListForm.Edit.Actions-LargeLarge-0
+Ribbon.ListForm.Edit.Actions-LargeLarge-0-0
+Ribbon.ListForm.Edit.Actions.AttachFile-Large
+Ribbon.ListForm.Edit.SpellCheck
+Ribbon.ListForm.Edit.SpellCheck-LargeMedium
+Ribbon.ListForm.Edit.SpellCheck-LargeMedium-0
+Ribbon.ListForm.Edit.SpellCheck-LargeMedium-0-0
+Ribbon.ListForm.Edit.SpellCheck.SpellCheck-Large
+DeltaSPNavigation
+ctl00_ctl52_ctl11_publishingRibbon
+DeltaWebPartAdderUpdatePanelContainer
+WebPartAdderUpdatePanelContainer
+ctl00_ctl52_WebPartAdderUpdatePanel
+ctl00_ctl52_WebPartAdder
+notificationArea
+DeltaPageStatusBar
+pageStatusBar
+s4-workspace
+s4-bodyContainer
+s4-titlerow
+titleAreaBox
+titleAreaRow
+siteIcon
+DeltaSiteLogo
+ctl00_x36d5bee949a7480783b3afc048c15598
+ctl00_x74bbee6762f840edad4fe46f496d8c78
+siteTitle
+DeltaBreadcrumbDropdown
+DeltaTopNavigation
+zz11_TopNavigationMenu
+zz12_RootAspMenu
+zz11_TopNavigationMenu_NavMenu_Edit
+zz11_TopNavigationMenu_NavMenu_EditLinks
+zz11_TopNavigationMenu_NavMenu_Loading
+zz11_TopNavigationMenu_NavMenu_GearsLink
+zz11_TopNavigationMenu_NavMenu_GearsImage
+zz11_TopNavigationMenu_NavMenu_ErrorMsg
+pageTitle
+DeltaPlaceHolderPageTitleInTitleArea
+DeltaPlaceHolderPageDescription
+ms-pageDescriptionDiv
+ms-pageDescriptionImage
+ms-pageDescription
+DeltaPlaceHolderSearchArea
+searchInputBox
+WebPartWPQ1
+ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr
+SearchBox
+ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sboxdiv
+ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_sbox
+ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_SearchLink
+searchImg
+AutoCompContainer
+ctl00_PlaceHolderSearchArea_SmallSearchInputBox1_csr_AutoCompList
+ctl00_PlaceHolderSearchArea_SmallSearchInputBox1
+contentRow
+sideNavBox
+DeltaPlaceHolderLeftNavBar
+startNavigation
+ctl00_PlaceHolderLeftNavBar_QuickLaunchNavigationManager
+zz13_V4QuickLaunchMenu
+zz14_RootAspMenu
+zz13_V4QuickLaunchMenu_NavMenu_Edit
+zz13_V4QuickLaunchMenu_NavMenu_EditLinks
+zz13_V4QuickLaunchMenu_NavMenu_Loading
+zz13_V4QuickLaunchMenu_NavMenu_GearsLink
+zz13_V4QuickLaunchMenu_NavMenu_GearsImage
+zz13_V4QuickLaunchMenu_NavMenu_ErrorMsg
+contentBox
+notificationArea
+DeltaPlaceHolderMain
+mainContent
+onetIDListForm
+MSOZoneCell_WebPartWPQ2
+WebPartWPQ2
+part1
+listFormToolBarTop
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_toolBarTbltop
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_toolBarTbltop_RightRptControls_ctl01_ctl00_diidIOSaveItem
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_toolBarTbltop_RightRptControls_ctl02_ctl00_diidIOGoBack
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_ctl01_ctl00_toolBarTbl
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_ctl01_ctl00_toolBarTbl_RptControls_diidIOAttach
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_ctl01_ctl00_toolBarTbl_RptControls_diidIOAttach_LinkText
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_ctl01_ctl00_toolBarTbl_RptControls_ctl01
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_ctl01_ctl00_toolBarTbl_RptControls_ctl01_LinkText
+Title
+WPQ2db57334b-eca4-42ca-b1da-3a7b612cef8dTitle
+Content
+WPQ2db57334b-eca4-42ca-b1da-3a7b612cef8dContent
+idAttachmentsRow
+Attachments
+WPQ2db57334b-eca4-42ca-b1da-3a7b612cef8dAttachments
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_ctl08_ctl00_owshiddenversion
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_toolBarTbl
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_toolBarTbl_RightRptControls_ctl00_ctl00_diidIOSaveItem
+ctl00_ctl40_g_63848682_6d49_4144_90fb_90a950cc358e_ctl00_toolBarTbl_RightRptControls_ctl01_ctl00_diidIOGoBack
+csrAttachmentUploadDiv
+WPQ2ClientFormPlaceholder
+hidZone
+MSOMenu_WebPartMenu
+DeltaFormDigest
+DeltaPlaceHolderUtilityContent
+
+#>
+#$forms = $response.Forms
+#$forms
+#$form = $response.Forms[0]
+#$form|  fl
+#$response.InputFields | Select id | fl
+#$response.InputFields
+<#
+$form = $response.Forms[0]
+$Buttons = $response.Buttons
+$form.Fields
+$Buttons
+$response
+#>
+#$form.Fields["input_1"] = "Akko"
+#$form.Fields["input_1"] = "AsherSpace"

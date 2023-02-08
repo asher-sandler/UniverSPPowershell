@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\AdminDir\VSProjects\Test-CSOM\Test-CSOM\App.xaml
-10-1759448889
+3-1491709924
 
-21-296654584
-16-1013291784
-Controls\BodyControl.xaml;Controls\HeaderControl.xaml;Controls\ItemDetailsControl.xaml;Controls\SendOutlookControl.xaml;Controls\SendToControl.xaml;Controls\SubjectControl.xaml;Controls\ThreeColumnsGrid.xaml;Controls\TransferDetails.xaml;MainWindow.xaml;View\TaskListView.xaml;
+15-333990786
+17-1090398697
+Controls\HeaderControl.xaml;MainWindow.xaml;View\TaskListView.xaml;
 
 True
 

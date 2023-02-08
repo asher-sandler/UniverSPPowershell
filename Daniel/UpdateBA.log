@@ -1,16 +1,16 @@
 ﻿**********************
 Windows PowerShell transcript start
-Start time: 20211019140013
+Start time: 20221205103047
 Username: EKMD\ashersa
 RunAs User: EKMD\ashersa
 Configuration Name: 
-Machine: DEVORAGO_PC (Microsoft Windows NT 10.0.19043.0)
+Machine: DEVORAGO_PC (Microsoft Windows NT 10.0.19044.0)
 Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
-Process ID: 18236
-PSVersion: 5.1.19041.1237
+Process ID: 19648
+PSVersion: 5.1.19041.1682
 PSEdition: Desktop
-PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1237
-BuildVersion: 10.0.19041.1237
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.1682
+BuildVersion: 10.0.19041.1682
 CLRVersion: 4.0.30319.42000
 WSManStackVersion: 3.0
 PSRemotingProtocolVersion: 2.3
@@ -18,1441 +18,1046 @@ SerializationVersion: 1.1.0.1
 **********************
 Transcript started, output file is UpdateBA.log
 User: AsherSA
-20819129
+21397837
 
-Folder Already Exists: /home/EDU/stdFolders/20819129/התכתבויות
-Folder Already Exists: /home/EDU/stdFolders/20819129/וועדות הוראה
-Folder Already Exists: /home/EDU/stdFolders/20819129/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/21397837/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/21397837/וועדות הוראה
+Folder Already Exists: /home/EDU/stdFolders/21397837/יתרת חובות
 I : 0
-32278698
+21288075
 
-Item Not Exists: False
-Item Added with ID -  8
-32278698
-אבו גנאם אמינה 32278698
-Folder Created: /home/EDU/stdFolders/32278698/התכתבויות
-Folder Created: /home/EDU/stdFolders/32278698/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32278698/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/21288075/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/21288075/וועדות הוראה
+Folder Already Exists: /home/EDU/stdFolders/21288075/יתרת חובות
 I : 1
-21135113
+21394478
 
-Item Not Exists: False
-Item Added with ID -  9
-21135113
-אבו דהים איה 21135113
-Folder Created: /home/EDU/stdFolders/21135113/התכתבויות
-Folder Created: /home/EDU/stdFolders/21135113/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21135113/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/21394478/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/21394478/וועדות הוראה
+Folder Already Exists: /home/EDU/stdFolders/21394478/יתרת חובות
 I : 2
 32485445
 
-Item Not Exists: False
-Item Added with ID -  10
-32485445
-אבו טיר איה 32485445
-Folder Created: /home/EDU/stdFolders/32485445/התכתבויות
-Folder Created: /home/EDU/stdFolders/32485445/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32485445/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/32485445/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/32485445/וועדות הוראה
+Folder Already Exists: /home/EDU/stdFolders/32485445/יתרת חובות
 I : 3
-20715783
+21360816
 
 Item Not Exists: False
-Item Added with ID -  11
-20715783
-אבו סארה סיהאם 20715783
-Folder Created: /home/EDU/stdFolders/20715783/התכתבויות
-Folder Created: /home/EDU/stdFolders/20715783/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20715783/יתרת חובות
+Item Added with ID -  156
+21360816
+אבו סנינה בראא 21360816
+Folder Created: /home/EDU/stdFolders/21360816/התכתבויות
+Folder Created: /home/EDU/stdFolders/21360816/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21360816/יתרת חובות
 I : 4
-21257635
+21252342
 
 Item Not Exists: False
-Item Added with ID -  12
-21257635
-אבו עומר חלא 21257635
-Folder Created: /home/EDU/stdFolders/21257635/התכתבויות
-Folder Created: /home/EDU/stdFolders/21257635/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21257635/יתרת חובות
+Item Added with ID -  157
+21252342
+אבו שמסייה פאטמה 21252342
+Folder Created: /home/EDU/stdFolders/21252342/התכתבויות
+Folder Created: /home/EDU/stdFolders/21252342/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21252342/יתרת חובות
 I : 5
-32414641
+21358666
 
 Item Not Exists: False
-Item Added with ID -  13
-32414641
-אבו קוויק מלאק 32414641
-Folder Created: /home/EDU/stdFolders/32414641/התכתבויות
-Folder Created: /home/EDU/stdFolders/32414641/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32414641/יתרת חובות
+Item Added with ID -  158
+21358666
+אבודלו דוחא 21358666
+Folder Created: /home/EDU/stdFolders/21358666/התכתבויות
+Folder Created: /home/EDU/stdFolders/21358666/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21358666/יתרת חובות
 I : 6
-21244027
+77781119
 
 Item Not Exists: False
-Item Added with ID -  14
-21244027
-אבו שאפע דאניה 21244027
-Folder Created: /home/EDU/stdFolders/21244027/התכתבויות
-Folder Created: /home/EDU/stdFolders/21244027/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21244027/יתרת חובות
+Item Added with ID -  159
+77781119
+או חנמין 77781119
+Folder Created: /home/EDU/stdFolders/77781119/התכתבויות
+Folder Created: /home/EDU/stdFolders/77781119/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/77781119/יתרת חובות
 I : 7
-20945720
+20957950
 
 Item Not Exists: False
-Item Added with ID -  15
-20945720
-אבן חיים גלי 20945720
-Folder Created: /home/EDU/stdFolders/20945720/התכתבויות
-Folder Created: /home/EDU/stdFolders/20945720/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20945720/יתרת חובות
+Item Added with ID -  160
+20957950
+אוסישקין שקד 20957950
+Folder Created: /home/EDU/stdFolders/20957950/התכתבויות
+Folder Created: /home/EDU/stdFolders/20957950/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20957950/יתרת חובות
 I : 8
-21169132
+20699686
 
 Item Not Exists: False
-Item Added with ID -  16
-21169132
-אזולאי ירדן 21169132
-Folder Created: /home/EDU/stdFolders/21169132/התכתבויות
-Folder Created: /home/EDU/stdFolders/21169132/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21169132/יתרת חובות
+Item Added with ID -  161
+20699686
+אלפר רות 20699686
+Folder Created: /home/EDU/stdFolders/20699686/התכתבויות
+Folder Created: /home/EDU/stdFolders/20699686/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20699686/יתרת חובות
 I : 9
-34637010
+20708002
 
 Item Not Exists: False
-Item Added with ID -  17
-34637010
-איגואלקה מריאנה 34637010
-Folder Created: /home/EDU/stdFolders/34637010/התכתבויות
-Folder Created: /home/EDU/stdFolders/34637010/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34637010/יתרת חובות
+Item Added with ID -  162
+20708002
+אמיתי רון 20708002
+Folder Created: /home/EDU/stdFolders/20708002/התכתבויות
+Folder Created: /home/EDU/stdFolders/20708002/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20708002/יתרת חובות
 I : 10
-20656453
+32231009
 
 Item Not Exists: False
-Item Added with ID -  18
-20656453
-אלון תמר 20656453
-Folder Created: /home/EDU/stdFolders/20656453/התכתבויות
-Folder Created: /home/EDU/stdFolders/20656453/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20656453/יתרת חובות
+Item Added with ID -  163
+32231009
+אמרזיאן ארבינה 32231009
+Folder Created: /home/EDU/stdFolders/32231009/התכתבויות
+Folder Created: /home/EDU/stdFolders/32231009/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32231009/יתרת חובות
 I : 11
-21193293
+32169704
 
 Item Not Exists: False
-Item Added with ID -  19
-21193293
-אלראמני פאטמה 21193293
-Folder Created: /home/EDU/stdFolders/21193293/התכתבויות
-Folder Created: /home/EDU/stdFolders/21193293/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21193293/יתרת חובות
+Item Added with ID -  164
+32169704
+באייר שי-לי 32169704
+Folder Created: /home/EDU/stdFolders/32169704/התכתבויות
+Folder Created: /home/EDU/stdFolders/32169704/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32169704/יתרת חובות
 I : 12
-21177374
+32490983
 
 Item Not Exists: False
-Item Added with ID -  20
-21177374
-אנגרט שירז 21177374
-Folder Created: /home/EDU/stdFolders/21177374/התכתבויות
-Folder Created: /home/EDU/stdFolders/21177374/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21177374/יתרת חובות
+Item Added with ID -  165
+32490983
+בזלמיט ליאן 32490983
+Folder Created: /home/EDU/stdFolders/32490983/התכתבויות
+Folder Created: /home/EDU/stdFolders/32490983/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32490983/יתרת חובות
 I : 13
-21394368
+21332960
 
 Item Not Exists: False
-Item Added with ID -  21
-21394368
-אעראר לין 21394368
-Folder Created: /home/EDU/stdFolders/21394368/התכתבויות
-Folder Created: /home/EDU/stdFolders/21394368/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21394368/יתרת חובות
+Item Added with ID -  166
+21332960
+בטשון גמיל 21332960
+Folder Created: /home/EDU/stdFolders/21332960/התכתבויות
+Folder Created: /home/EDU/stdFolders/21332960/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21332960/יתרת חובות
 I : 14
-20739568
+20903689
 
 Item Not Exists: False
-Item Added with ID -  22
-20739568
-בג'אלי נטלי 20739568
-Folder Created: /home/EDU/stdFolders/20739568/התכתבויות
-Folder Created: /home/EDU/stdFolders/20739568/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20739568/יתרת חובות
+Item Added with ID -  167
+20903689
+בנימין שיר 20903689
+Folder Created: /home/EDU/stdFolders/20903689/התכתבויות
+Folder Created: /home/EDU/stdFolders/20903689/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20903689/יתרת חובות
 I : 15
-21252426
+21137607
 
 Item Not Exists: False
-Item Added with ID -  23
-21252426
-בידון רנין 21252426
-Folder Created: /home/EDU/stdFolders/21252426/התכתבויות
-Folder Created: /home/EDU/stdFolders/21252426/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21252426/יתרת חובות
+Item Added with ID -  168
+21137607
+ברוס דליה 21137607
+Folder Created: /home/EDU/stdFolders/21137607/התכתבויות
+Folder Created: /home/EDU/stdFolders/21137607/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21137607/יתרת חובות
 I : 16
-20751251
+32487592
 
 Item Not Exists: False
-Item Added with ID -  24
-20751251
-בן אשר שני 20751251
-Folder Created: /home/EDU/stdFolders/20751251/התכתבויות
-Folder Created: /home/EDU/stdFolders/20751251/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20751251/יתרת חובות
+Item Added with ID -  169
+32487592
+ברכאת אבו א לורין 32487592
+Folder Created: /home/EDU/stdFolders/32487592/התכתבויות
+Folder Created: /home/EDU/stdFolders/32487592/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32487592/יתרת חובות
 I : 17
-34628413
+99922619
 
 Item Not Exists: False
-Item Added with ID -  25
-34628413
-בן זקן רוח מרים 34628413
-Folder Created: /home/EDU/stdFolders/34628413/התכתבויות
-Folder Created: /home/EDU/stdFolders/34628413/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34628413/יתרת חובות
+Item Added with ID -  170
+99922619
+ג'אנג נח 99922619
+Folder Created: /home/EDU/stdFolders/99922619/התכתבויות
+Folder Created: /home/EDU/stdFolders/99922619/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/99922619/יתרת חובות
 I : 18
-21642880
+21366433
 
 Item Not Exists: False
-Item Added with ID -  26
-21642880
-בסמה נדא 21642880
-Folder Created: /home/EDU/stdFolders/21642880/התכתבויות
-Folder Created: /home/EDU/stdFolders/21642880/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21642880/יתרת חובות
+Item Added with ID -  171
+21366433
+ג'בר סנין 21366433
+Folder Created: /home/EDU/stdFolders/21366433/התכתבויות
+Folder Created: /home/EDU/stdFolders/21366433/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21366433/יתרת חובות
 I : 19
-20795161
+77792316
 
 Item Not Exists: False
-Item Added with ID -  27
-20795161
-בר גל 20795161
-Folder Created: /home/EDU/stdFolders/20795161/התכתבויות
-Folder Created: /home/EDU/stdFolders/20795161/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20795161/יתרת חובות
+Item Added with ID -  172
+77792316
+ג'ו סוהיונג 77792316
+Folder Created: /home/EDU/stdFolders/77792316/התכתבויות
+Folder Created: /home/EDU/stdFolders/77792316/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/77792316/יתרת חובות
 I : 20
-21231289
+21360900
 
 Item Not Exists: False
-Item Added with ID -  28
-21231289
-בר כהן עדה 21231289
-Folder Created: /home/EDU/stdFolders/21231289/התכתבויות
-Folder Created: /home/EDU/stdFolders/21231289/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21231289/יתרת חובות
+Item Added with ID -  173
+21360900
+גברין סגא 21360900
+Folder Created: /home/EDU/stdFolders/21360900/התכתבויות
+Folder Created: /home/EDU/stdFolders/21360900/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21360900/יתרת חובות
 I : 21
-21245074
+32231351
 
 Item Not Exists: False
-Item Added with ID -  29
-21245074
-ברוך אורית 21245074
-Folder Created: /home/EDU/stdFolders/21245074/התכתבויות
-Folder Created: /home/EDU/stdFolders/21245074/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21245074/יתרת חובות
+Item Added with ID -  174
+32231351
+גילאי אריאל 32231351
+Folder Created: /home/EDU/stdFolders/32231351/התכתבויות
+Folder Created: /home/EDU/stdFolders/32231351/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32231351/יתרת חובות
 I : 22
-21288546
+31490745
 
 Item Not Exists: False
-Item Added with ID -  30
-21288546
-בשאראת גופראן 21288546
-Folder Created: /home/EDU/stdFolders/21288546/התכתבויות
-Folder Created: /home/EDU/stdFolders/21288546/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21288546/יתרת חובות
+Item Added with ID -  175
+31490745
+גרבלסקי ענבר 31490745
+Folder Created: /home/EDU/stdFolders/31490745/התכתבויות
+Folder Created: /home/EDU/stdFolders/31490745/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31490745/יתרת חובות
 I : 23
-21257505
+21242722
 
 Item Not Exists: False
-Item Added with ID -  31
-21257505
-ג'אביס אסראא 21257505
-Folder Created: /home/EDU/stdFolders/21257505/התכתבויות
-Folder Created: /home/EDU/stdFolders/21257505/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21257505/יתרת חובות
+Item Added with ID -  176
+21242722
+גרוז מנאר 21242722
+Folder Created: /home/EDU/stdFolders/21242722/התכתבויות
+Folder Created: /home/EDU/stdFolders/21242722/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21242722/יתרת חובות
 I : 24
-21130125
+34279593
 
 Item Not Exists: False
-Item Added with ID -  32
-21130125
-גאבר למא 21130125
-Folder Created: /home/EDU/stdFolders/21130125/התכתבויות
-Folder Created: /home/EDU/stdFolders/21130125/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21130125/יתרת חובות
+Item Added with ID -  177
+34279593
+דדאבה אנסטסיה 34279593
+Folder Created: /home/EDU/stdFolders/34279593/התכתבויות
+Folder Created: /home/EDU/stdFolders/34279593/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/34279593/יתרת חובות
 I : 25
-31391933
+32520372
 
 Item Not Exists: False
-Item Added with ID -  33
-31391933
-גבע דניאל 31391933
-Folder Created: /home/EDU/stdFolders/31391933/התכתבויות
-Folder Created: /home/EDU/stdFolders/31391933/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31391933/יתרת חובות
+Item Added with ID -  178
+32520372
+הלאסי סלסביל 32520372
+Folder Created: /home/EDU/stdFolders/32520372/התכתבויות
+Folder Created: /home/EDU/stdFolders/32520372/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32520372/יתרת חובות
 I : 26
-21131251
+32580652
 
 Item Not Exists: False
-Item Added with ID -  34
-21131251
-גודה מרוות 21131251
-Folder Created: /home/EDU/stdFolders/21131251/התכתבויות
-Folder Created: /home/EDU/stdFolders/21131251/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21131251/יתרת חובות
+Item Added with ID -  179
+32580652
+הלסה שימאא 32580652
+Folder Created: /home/EDU/stdFolders/32580652/התכתבויות
+Folder Created: /home/EDU/stdFolders/32580652/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32580652/יתרת חובות
 I : 27
-32307317
+31909754
 
 Item Not Exists: False
-Item Added with ID -  35
-32307317
-גול הלא 32307317
-Folder Created: /home/EDU/stdFolders/32307317/התכתבויות
-Folder Created: /home/EDU/stdFolders/32307317/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32307317/יתרת חובות
+Item Added with ID -  180
+31909754
+ויינברגר תמוז 31909754
+Folder Created: /home/EDU/stdFolders/31909754/התכתבויות
+Folder Created: /home/EDU/stdFolders/31909754/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31909754/יתרת חובות
 I : 28
-32421210
+20895554
 
 Item Not Exists: False
-Item Added with ID -  36
-32421210
-גול תמארא 32421210
-Folder Created: /home/EDU/stdFolders/32421210/התכתבויות
-Folder Created: /home/EDU/stdFolders/32421210/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32421210/יתרת חובות
+Item Added with ID -  181
+20895554
+וינשנקר תמר 20895554
+Folder Created: /home/EDU/stdFolders/20895554/התכתבויות
+Folder Created: /home/EDU/stdFolders/20895554/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20895554/יתרת חובות
 I : 29
-33284722
+31818725
 
 Item Not Exists: False
-Item Added with ID -  37
-33284722
-גית אלאא 33284722
-Folder Created: /home/EDU/stdFolders/33284722/התכתבויות
-Folder Created: /home/EDU/stdFolders/33284722/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/33284722/יתרת חובות
+Item Added with ID -  182
+31818725
+וקנין איתמר 31818725
+Folder Created: /home/EDU/stdFolders/31818725/התכתבויות
+Folder Created: /home/EDU/stdFolders/31818725/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31818725/יתרת חובות
 I : 30
-20580105
+21197516
 
 Item Not Exists: False
-Item Added with ID -  38
-20580105
-גלעד דקל 20580105
-Folder Created: /home/EDU/stdFolders/20580105/התכתבויות
-Folder Created: /home/EDU/stdFolders/20580105/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20580105/יתרת חובות
+Item Added with ID -  183
+21197516
+זאדה יעל 21197516
+Folder Created: /home/EDU/stdFolders/21197516/התכתבויות
+Folder Created: /home/EDU/stdFolders/21197516/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21197516/יתרת חובות
 I : 31
-20653224
+21187125
 
 Item Not Exists: False
-Item Added with ID -  39
-20653224
-גלר נעמה 20653224
-Folder Created: /home/EDU/stdFolders/20653224/התכתבויות
-Folder Created: /home/EDU/stdFolders/20653224/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20653224/יתרת חובות
+Item Added with ID -  184
+21187125
+זנזורי יערה 21187125
+Folder Created: /home/EDU/stdFolders/21187125/התכתבויות
+Folder Created: /home/EDU/stdFolders/21187125/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21187125/יתרת חובות
 I : 32
-21233630
+32420218
 
 Item Not Exists: False
-Item Added with ID -  40
-21233630
-געפר שהד 21233630
-Folder Created: /home/EDU/stdFolders/21233630/התכתבויות
-Folder Created: /home/EDU/stdFolders/21233630/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21233630/יתרת חובות
+Item Added with ID -  185
+32420218
+זעתרי איה 32420218
+Folder Created: /home/EDU/stdFolders/32420218/התכתבויות
+Folder Created: /home/EDU/stdFolders/32420218/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32420218/יתרת חובות
 I : 33
-8695534
+21397846
 
 Item Not Exists: False
-Item Added with ID -  41
-8695534
-גריב קמר 8695534
-Folder Created: /home/EDU/stdFolders/8695534/התכתבויות
-Folder Created: /home/EDU/stdFolders/8695534/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/8695534/יתרת חובות
+Item Added with ID -  186
+21397846
+חאסן שקיר שרה 21397846
+Folder Created: /home/EDU/stdFolders/21397846/התכתבויות
+Folder Created: /home/EDU/stdFolders/21397846/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21397846/יתרת חובות
 I : 34
-31883900
+32269491
 
 Item Not Exists: False
-Item Added with ID -  42
-31883900
-גרינברג לאה 31883900
-Folder Created: /home/EDU/stdFolders/31883900/התכתבויות
-Folder Created: /home/EDU/stdFolders/31883900/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31883900/יתרת חובות
+Item Added with ID -  187
+32269491
+חברוני יובל 32269491
+Folder Created: /home/EDU/stdFolders/32269491/התכתבויות
+Folder Created: /home/EDU/stdFolders/32269491/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32269491/יתרת חובות
 I : 35
-20760462
+21335010
 
 Item Not Exists: False
-Item Added with ID -  43
-20760462
-גרינברג ליאל 20760462
-Folder Created: /home/EDU/stdFolders/20760462/התכתבויות
-Folder Created: /home/EDU/stdFolders/20760462/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20760462/יתרת חובות
+Item Added with ID -  188
+21335010
+חוויץ אנגאם 21335010
+Folder Created: /home/EDU/stdFolders/21335010/התכתבויות
+Folder Created: /home/EDU/stdFolders/21335010/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21335010/יתרת חובות
 I : 36
-34130555
+32302970
 
 Item Not Exists: False
-Item Added with ID -  44
-34130555
-דה פז שנה 34130555
-Folder Created: /home/EDU/stdFolders/34130555/התכתבויות
-Folder Created: /home/EDU/stdFolders/34130555/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34130555/יתרת חובות
+Item Added with ID -  189
+32302970
+חלאווה מוסטפא 32302970
+Folder Created: /home/EDU/stdFolders/32302970/התכתבויות
+Folder Created: /home/EDU/stdFolders/32302970/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32302970/יתרת חובות
 I : 37
-21141581
+21252271
 
-Item Not Exists: False
-Item Added with ID -  45
-21141581
-דוויק דאנא 21141581
-Folder Created: /home/EDU/stdFolders/21141581/התכתבויות
-Folder Created: /home/EDU/stdFolders/21141581/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21141581/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/21252271/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/21252271/וועדות הוראה
+Folder Already Exists: /home/EDU/stdFolders/21252271/יתרת חובות
 I : 38
-31836947
+30835697
 
 Item Not Exists: False
-Item Added with ID -  46
-31836947
-דולב עדי 31836947
-Folder Created: /home/EDU/stdFolders/31836947/התכתבויות
-Folder Created: /home/EDU/stdFolders/31836947/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31836947/יתרת חובות
+Item Added with ID -  190
+30835697
+חמדאן יאסמין 30835697
+Folder Created: /home/EDU/stdFolders/30835697/התכתבויות
+Folder Created: /home/EDU/stdFolders/30835697/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/30835697/יתרת חובות
 I : 39
-77762883
+32559370
 
 Item Not Exists: False
-Item Added with ID -  47
-77762883
-הא סוקיונג 77762883
-Folder Created: /home/EDU/stdFolders/77762883/התכתבויות
-Folder Created: /home/EDU/stdFolders/77762883/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/77762883/יתרת חובות
+Item Added with ID -  191
+32559370
+חנן רזאן 32559370
+Folder Created: /home/EDU/stdFolders/32559370/התכתבויות
+Folder Created: /home/EDU/stdFolders/32559370/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32559370/יתרת חובות
 I : 40
-31861467
+20745336
 
 Item Not Exists: False
-Item Added with ID -  48
-31861467
-הופנשטיין טלי 31861467
-Folder Created: /home/EDU/stdFolders/31861467/התכתבויות
-Folder Created: /home/EDU/stdFolders/31861467/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31861467/יתרת חובות
+Item Added with ID -  192
+20745336
+חשאן רגד 20745336
+Folder Created: /home/EDU/stdFolders/20745336/התכתבויות
+Folder Created: /home/EDU/stdFolders/20745336/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20745336/יתרת חובות
 I : 41
-32500860
+34343916
 
 Item Not Exists: False
-Item Added with ID -  49
-32500860
-הלסה רנד 32500860
-Folder Created: /home/EDU/stdFolders/32500860/התכתבויות
-Folder Created: /home/EDU/stdFolders/32500860/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32500860/יתרת חובות
+Item Added with ID -  193
+34343916
+טאהר בסאם 34343916
+Folder Created: /home/EDU/stdFolders/34343916/התכתבויות
+Folder Created: /home/EDU/stdFolders/34343916/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/34343916/יתרת חובות
 I : 42
-21332893
+21187105
 
 Item Not Exists: False
-Item Added with ID -  50
-21332893
-הלסי אסיל 21332893
-Folder Created: /home/EDU/stdFolders/21332893/התכתבויות
-Folder Created: /home/EDU/stdFolders/21332893/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21332893/יתרת חובות
+Item Added with ID -  194
+21187105
+טל נועה 21187105
+Folder Created: /home/EDU/stdFolders/21187105/התכתבויות
+Folder Created: /home/EDU/stdFolders/21187105/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21187105/יתרת חובות
 I : 43
-20891771
+32294593
 
 Item Not Exists: False
-Item Added with ID -  51
-20891771
-הרשקוביץ אלה 20891771
-Folder Created: /home/EDU/stdFolders/20891771/התכתבויות
-Folder Created: /home/EDU/stdFolders/20891771/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20891771/יתרת חובות
+Item Added with ID -  195
+32294593
+טמס פיירית 32294593
+Folder Created: /home/EDU/stdFolders/32294593/התכתבויות
+Folder Created: /home/EDU/stdFolders/32294593/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32294593/יתרת חובות
 I : 44
-21259723
+99920382
 
 Item Not Exists: False
-Item Added with ID -  52
-21259723
-השלמון מרים 21259723
-Folder Created: /home/EDU/stdFolders/21259723/התכתבויות
-Folder Created: /home/EDU/stdFolders/21259723/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21259723/יתרת חובות
+Item Added with ID -  196
+99920382
+יאו הנג ז'י 99920382
+Folder Created: /home/EDU/stdFolders/99920382/התכתבויות
+Folder Created: /home/EDU/stdFolders/99920382/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/99920382/יתרת חובות
 I : 45
-55677495
+21244407
 
 Item Not Exists: False
-Item Added with ID -  53
-55677495
-וונג סונג האן 55677495
-Folder Created: /home/EDU/stdFolders/55677495/התכתבויות
-Folder Created: /home/EDU/stdFolders/55677495/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/55677495/יתרת חובות
+Item Added with ID -  197
+21244407
+יגמור מלאק 21244407
+Folder Created: /home/EDU/stdFolders/21244407/התכתבויות
+Folder Created: /home/EDU/stdFolders/21244407/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21244407/יתרת חובות
 I : 46
-32420331
+20653279
 
 Item Not Exists: False
-Item Added with ID -  54
-32420331
-זגייר תאלא 32420331
-Folder Created: /home/EDU/stdFolders/32420331/התכתבויות
-Folder Created: /home/EDU/stdFolders/32420331/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32420331/יתרת חובות
+Item Added with ID -  198
+20653279
+יוגב רום 20653279
+Folder Created: /home/EDU/stdFolders/20653279/התכתבויות
+Folder Created: /home/EDU/stdFolders/20653279/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20653279/יתרת חובות
 I : 47
-21244211
+20650207
 
 Item Not Exists: False
-Item Added with ID -  55
-21244211
-זואהרה מיישם 21244211
-Folder Created: /home/EDU/stdFolders/21244211/התכתבויות
-Folder Created: /home/EDU/stdFolders/21244211/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21244211/יתרת חובות
+Item Added with ID -  199
+20650207
+יעקובי טל 20650207
+Folder Created: /home/EDU/stdFolders/20650207/התכתבויות
+Folder Created: /home/EDU/stdFolders/20650207/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20650207/יתרת חובות
 I : 48
-34613929
+32490591
 
 Item Not Exists: False
-Item Added with ID -  56
-34613929
-זרביב שיינא 34613929
-Folder Created: /home/EDU/stdFolders/34613929/התכתבויות
-Folder Created: /home/EDU/stdFolders/34613929/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34613929/יתרת חובות
+Item Added with ID -  200
+32490591
+כאלותי נור 32490591
+Folder Created: /home/EDU/stdFolders/32490591/התכתבויות
+Folder Created: /home/EDU/stdFolders/32490591/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32490591/יתרת חובות
 I : 49
-20736038
+34637609
 
 Item Not Exists: False
-Item Added with ID -  57
-20736038
-זרגריאן ניב 20736038
-Folder Created: /home/EDU/stdFolders/20736038/התכתבויות
-Folder Created: /home/EDU/stdFolders/20736038/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20736038/יתרת חובות
+Item Added with ID -  201
+34637609
+כהאן מרטין 34637609
+Folder Created: /home/EDU/stdFolders/34637609/התכתבויות
+Folder Created: /home/EDU/stdFolders/34637609/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/34637609/יתרת חובות
 I : 50
-34136833
+20867013
 
 Item Not Exists: False
-Item Added with ID -  58
-34136833
-חג'אזי אנגים 34136833
-Folder Created: /home/EDU/stdFolders/34136833/התכתבויות
-Folder Created: /home/EDU/stdFolders/34136833/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34136833/יתרת חובות
+Item Added with ID -  202
+20867013
+כהן בר 20867013
+Folder Created: /home/EDU/stdFolders/20867013/התכתבויות
+Folder Created: /home/EDU/stdFolders/20867013/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20867013/יתרת חובות
 I : 51
-21311063
+32509998
 
 Item Not Exists: False
-Item Added with ID -  59
-21311063
-חורי מריה 21311063
-Folder Created: /home/EDU/stdFolders/21311063/התכתבויות
-Folder Created: /home/EDU/stdFolders/21311063/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21311063/יתרת חובות
+Item Added with ID -  203
+32509998
+כראם איה 32509998
+Folder Created: /home/EDU/stdFolders/32509998/התכתבויות
+Folder Created: /home/EDU/stdFolders/32509998/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32509998/יתרת חובות
 I : 52
-31901292
+21402388
 
 Item Not Exists: False
-Item Added with ID -  60
-31901292
-חושן טל 31901292
-Folder Created: /home/EDU/stdFolders/31901292/התכתבויות
-Folder Created: /home/EDU/stdFolders/31901292/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31901292/יתרת חובות
+Item Added with ID -  204
+21402388
+כתאני סואר 21402388
+Folder Created: /home/EDU/stdFolders/21402388/התכתבויות
+Folder Created: /home/EDU/stdFolders/21402388/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21402388/יתרת חובות
 I : 53
-21131406
+31646719
 
 Item Not Exists: False
-Item Added with ID -  61
-21131406
-חטיב אלאא 21131406
-Folder Created: /home/EDU/stdFolders/21131406/התכתבויות
-Folder Created: /home/EDU/stdFolders/21131406/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21131406/יתרת חובות
+Item Added with ID -  205
+31646719
+לוי ירדן 31646719
+Folder Created: /home/EDU/stdFolders/31646719/התכתבויות
+Folder Created: /home/EDU/stdFolders/31646719/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31646719/יתרת חובות
 I : 54
-32671632
+32524386
 
 Item Not Exists: False
-Item Added with ID -  62
-32671632
-חטיב פריאל 32671632
-Folder Created: /home/EDU/stdFolders/32671632/התכתבויות
-Folder Created: /home/EDU/stdFolders/32671632/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32671632/יתרת חובות
+Item Added with ID -  206
+32524386
+מסרי היא 32524386
+Folder Created: /home/EDU/stdFolders/32524386/התכתבויות
+Folder Created: /home/EDU/stdFolders/32524386/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32524386/יתרת חובות
 I : 55
-21252271
+32492172
 
 Item Not Exists: False
-Item Added with ID -  63
-21252271
-חמאדה זהראא 21252271
-Folder Created: /home/EDU/stdFolders/21252271/התכתבויות
-Folder Created: /home/EDU/stdFolders/21252271/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21252271/יתרת חובות
+Item Added with ID -  207
+32492172
+מרטין גסיקה 32492172
+Folder Created: /home/EDU/stdFolders/32492172/התכתבויות
+Folder Created: /home/EDU/stdFolders/32492172/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32492172/יתרת חובות
 I : 56
-32501000
+21184526
 
 Item Not Exists: False
-Item Added with ID -  64
-32501000
-חמאמי לין 32501000
-Folder Created: /home/EDU/stdFolders/32501000/התכתבויות
-Folder Created: /home/EDU/stdFolders/32501000/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32501000/יתרת חובות
+Item Added with ID -  208
+21184526
+משה שחף 21184526
+Folder Created: /home/EDU/stdFolders/21184526/התכתבויות
+Folder Created: /home/EDU/stdFolders/21184526/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21184526/יתרת חובות
 I : 57
-32414598
+21394280
 
 Item Not Exists: False
-Item Added with ID -  65
-32414598
-חמודה תאלא 32414598
-Folder Created: /home/EDU/stdFolders/32414598/התכתבויות
-Folder Created: /home/EDU/stdFolders/32414598/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32414598/יתרת חובות
+Item Added with ID -  209
+21394280
+נתשה גאדה 21394280
+Folder Created: /home/EDU/stdFolders/21394280/התכתבויות
+Folder Created: /home/EDU/stdFolders/21394280/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21394280/יתרת חובות
 I : 58
-20991365
+30251478
 
 Item Not Exists: False
-Item Added with ID -  66
-20991365
-טבק מרטינה 20991365
-Folder Created: /home/EDU/stdFolders/20991365/התכתבויות
-Folder Created: /home/EDU/stdFolders/20991365/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20991365/יתרת חובות
+Item Added with ID -  210
+30251478
+נתשה סמאח 30251478
+Folder Created: /home/EDU/stdFolders/30251478/התכתבויות
+Folder Created: /home/EDU/stdFolders/30251478/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/30251478/יתרת חובות
 I : 59
-20954335
+32848012
 
 Item Not Exists: False
-Item Added with ID -  67
-20954335
-טואג ירדן 20954335
-Folder Created: /home/EDU/stdFolders/20954335/התכתבויות
-Folder Created: /home/EDU/stdFolders/20954335/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20954335/יתרת חובות
+Item Added with ID -  211
+32848012
+נתשה שהד 32848012
+Folder Created: /home/EDU/stdFolders/32848012/התכתבויות
+Folder Created: /home/EDU/stdFolders/32848012/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32848012/יתרת חובות
 I : 60
-32236346
+21335080
 
 Item Not Exists: False
-Item Added with ID -  68
-32236346
-טורגמן טל 32236346
-Folder Created: /home/EDU/stdFolders/32236346/התכתבויות
-Folder Created: /home/EDU/stdFolders/32236346/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32236346/יתרת חובות
+Item Added with ID -  212
+21335080
+סאלחי בסמלה 21335080
+Folder Created: /home/EDU/stdFolders/21335080/התכתבויות
+Folder Created: /home/EDU/stdFolders/21335080/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21335080/יתרת חובות
 I : 61
-32313770
+21257770
 
 Item Not Exists: False
-Item Added with ID -  69
-32313770
-טמס מאריסא 32313770
-Folder Created: /home/EDU/stdFolders/32313770/התכתבויות
-Folder Created: /home/EDU/stdFolders/32313770/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32313770/יתרת חובות
+Item Added with ID -  213
+21257770
+סבו סביח אלאא 21257770
+Folder Created: /home/EDU/stdFolders/21257770/התכתבויות
+Folder Created: /home/EDU/stdFolders/21257770/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21257770/יתרת חובות
 I : 62
-31517785
+32420215
 
 Item Not Exists: False
-Item Added with ID -  70
-31517785
-יהלי רוטנברג 31517785
-Folder Created: /home/EDU/stdFolders/31517785/התכתבויות
-Folder Created: /home/EDU/stdFolders/31517785/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31517785/יתרת חובות
+Item Added with ID -  214
+32420215
+סחאר נתאלי 32420215
+Folder Created: /home/EDU/stdFolders/32420215/התכתבויות
+Folder Created: /home/EDU/stdFolders/32420215/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32420215/יתרת חובות
 I : 63
-34249188
+8695515
 
 Item Not Exists: False
-Item Added with ID -  71
-34249188
-יו ז'צ'אן 34249188
-Folder Created: /home/EDU/stdFolders/34249188/התכתבויות
-Folder Created: /home/EDU/stdFolders/34249188/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34249188/יתרת חובות
+Item Added with ID -  215
+8695515
+סיאג ביאן 8695515
+Folder Created: /home/EDU/stdFolders/8695515/התכתבויות
+Folder Created: /home/EDU/stdFolders/8695515/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/8695515/יתרת חובות
 I : 64
-20775787
+21358946
 
 Item Not Exists: False
-Item Added with ID -  72
-20775787
-כהן יובל 20775787
-Folder Created: /home/EDU/stdFolders/20775787/התכתבויות
-Folder Created: /home/EDU/stdFolders/20775787/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20775787/יתרת חובות
+Item Added with ID -  216
+21358946
+סיאד סועאד 21358946
+Folder Created: /home/EDU/stdFolders/21358946/התכתבויות
+Folder Created: /home/EDU/stdFolders/21358946/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21358946/יתרת חובות
 I : 65
-32234494
+32500437
 
 Item Not Exists: False
-Item Added with ID -  73
-32234494
-כואזבה שימאא 32234494
-Folder Created: /home/EDU/stdFolders/32234494/התכתבויות
-Folder Created: /home/EDU/stdFolders/32234494/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32234494/יתרת חובות
+Item Added with ID -  217
+32500437
+סייפי יוסרא 32500437
+Folder Created: /home/EDU/stdFolders/32500437/התכתבויות
+Folder Created: /home/EDU/stdFolders/32500437/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32500437/יתרת חובות
 I : 66
-21169381
+31868666
 
 Item Not Exists: False
-Item Added with ID -  74
-21169381
-כרפסי שחר 21169381
-Folder Created: /home/EDU/stdFolders/21169381/התכתבויות
-Folder Created: /home/EDU/stdFolders/21169381/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21169381/יתרת חובות
+Item Added with ID -  218
+31868666
+ספקטור אביתר 31868666
+Folder Created: /home/EDU/stdFolders/31868666/התכתבויות
+Folder Created: /home/EDU/stdFolders/31868666/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31868666/יתרת חובות
 I : 67
-20839240
+21358538
 
 Item Not Exists: False
-Item Added with ID -  75
-20839240
-לוי רועי 20839240
-Folder Created: /home/EDU/stdFolders/20839240/התכתבויות
-Folder Created: /home/EDU/stdFolders/20839240/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20839240/יתרת חובות
+Item Added with ID -  219
+21358538
+עבאסי אריג 21358538
+Folder Created: /home/EDU/stdFolders/21358538/התכתבויות
+Folder Created: /home/EDU/stdFolders/21358538/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21358538/יתרת חובות
 I : 68
-20792328
+32847567
 
 Item Not Exists: False
-Item Added with ID -  76
-20792328
-ליברטי אביב 20792328
-Folder Created: /home/EDU/stdFolders/20792328/התכתבויות
-Folder Created: /home/EDU/stdFolders/20792328/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20792328/יתרת חובות
+Item Added with ID -  220
+32847567
+עבד אל לטיף גמאן 32847567
+Folder Created: /home/EDU/stdFolders/32847567/התכתבויות
+Folder Created: /home/EDU/stdFolders/32847567/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32847567/יתרת חובות
 I : 69
-32524210
+32391277
 
 Item Not Exists: False
-Item Added with ID -  77
-32524210
-מוסטפא ערין 32524210
-Folder Created: /home/EDU/stdFolders/32524210/התכתבויות
-Folder Created: /home/EDU/stdFolders/32524210/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32524210/יתרת חובות
+Item Added with ID -  221
+32391277
+עואד מרים 32391277
+Folder Created: /home/EDU/stdFolders/32391277/התכתבויות
+Folder Created: /home/EDU/stdFolders/32391277/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32391277/יתרת חובות
 I : 70
-20778827
+21396219
 
 Item Not Exists: False
-Item Added with ID -  78
-20778827
-מושקוביץ' אמילי 20778827
-Folder Created: /home/EDU/stdFolders/20778827/התכתבויות
-Folder Created: /home/EDU/stdFolders/20778827/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20778827/יתרת חובות
+Item Added with ID -  222
+21396219
+עושו שהד 21396219
+Folder Created: /home/EDU/stdFolders/21396219/התכתבויות
+Folder Created: /home/EDU/stdFolders/21396219/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21396219/יתרת חובות
 I : 71
-32297319
+34279594
 
 Item Not Exists: False
-Item Added with ID -  79
-32297319
-מחפוז זינה 32297319
-Folder Created: /home/EDU/stdFolders/32297319/התכתבויות
-Folder Created: /home/EDU/stdFolders/32297319/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32297319/יתרת חובות
+Item Added with ID -  223
+34279594
+צ'רניק שרה 34279594
+Folder Created: /home/EDU/stdFolders/34279594/התכתבויות
+Folder Created: /home/EDU/stdFolders/34279594/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/34279594/יתרת חובות
 I : 72
-20768699
+32857895
 
 Item Not Exists: False
-Item Added with ID -  80
-20768699
-מייסטר שקד 20768699
-Folder Created: /home/EDU/stdFolders/20768699/התכתבויות
-Folder Created: /home/EDU/stdFolders/20768699/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20768699/יתרת חובות
+Item Added with ID -  224
+32857895
+קזצינקו אלכסנדרה 32857895
+Folder Created: /home/EDU/stdFolders/32857895/התכתבויות
+Folder Created: /home/EDU/stdFolders/32857895/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32857895/יתרת חובות
 I : 73
-20417490
+31564799
 
-Item Not Exists: False
-Item Added with ID -  81
-20417490
-מימוני מעיין 20417490
-Folder Created: /home/EDU/stdFolders/20417490/התכתבויות
-Folder Created: /home/EDU/stdFolders/20417490/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20417490/יתרת חובות
+Exception calling "ExecuteQuery" with "0" argument(s): "רשימה 'קעדאן רימה 31564799' אינה קיימת באתר עם כתובת ה- URL 
+‏'https://portals.ekmd.huji.ac.il/home/EDU/stdFolders'."
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:95 char:5
++     $Ctx.ExecuteQuery()
++     ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ServerException
+Exception calling "ExecuteQuery" with "0" argument(s): "רשימה 'קעדאן
+רימה 31564799' אינה קיימת באתר עם כתובת ה- URL
+‏'https://portals.ekmd.huji.ac.il/home/EDU/stdFolders'."
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:95 char:5
++     $Ctx.ExecuteQuery()
++     ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationE
+   xception
+    + FullyQualifiedErrorId : ServerException
+
+Exception calling "ExecuteQuery" with "0" argument(s): "רשימה 'קעדאן רימה 31564799' אינה קיימת באתר עם כתובת ה- URL 
+‏'https://portals.ekmd.huji.ac.il/home/EDU/stdFolders'."
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:101 char:5
++     $CtxFld.ExecuteQuery()
++     ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ServerException
+Exception calling "ExecuteQuery" with "0" argument(s): "רשימה 'קעדאן
+רימה 31564799' אינה קיימת באתר עם כתובת ה- URL
+‏'https://portals.ekmd.huji.ac.il/home/EDU/stdFolders'."
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:101 char:5
++     $CtxFld.ExecuteQuery()
++     ~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationE
+   xception
+    + FullyQualifiedErrorId : ServerException
+
+The collection has not been initialized. It has not been requested or the request has not been executed. It may need to 
+be explicitly requested.
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:104 char:10
++     Foreach($SubFolder in $SubFolders)
++             ~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], CollectionNotInitializedException
+    + FullyQualifiedErrorId : Microsoft.SharePoint.Client.CollectionNotInitializedException
+The collection has not been initialized. It has not been requested or
+the request has not been executed. It may need to be explicitly
+requested.
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:104 char:10
++     Foreach($SubFolder in $SubFolders)
++             ~~~~~~~~~~
+    + CategoryInfo          : OperationStopped: (:) [], CollectionNot
+   InitializedException
+    + FullyQualifiedErrorId : Microsoft.SharePoint.Client.CollectionN
+   otInitializedException
+
+Folder Already Exists: התכתבויות
+Folder Created: וועדות הוראה
+Folder Already Exists: יתרת חובות
+Exception calling "ExecuteQuery" with "0" argument(s): "רשימה 'קעדאן רימה 31564799' אינה קיימת באתר עם כתובת ה- URL 
+‏'https://portals.ekmd.huji.ac.il/home/EDU/stdFolders'."
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:20 char:2
++     $Ctx.ExecuteQuery()
++     ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationException
+    + FullyQualifiedErrorId : ServerException
+Exception calling "ExecuteQuery" with "0" argument(s): "רשימה 'קעדאן
+רימה 31564799' אינה קיימת באתר עם כתובת ה- URL
+‏'https://portals.ekmd.huji.ac.il/home/EDU/stdFolders'."
+At C:\AdminDir\SP Powershell\Daniel\UpdateBa.ps1:20 char:2
++     $Ctx.ExecuteQuery()
++     ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (:) [], MethodInvocationE
+   xception
+    + FullyQualifiedErrorId : ServerException
+
 I : 74
-31464607
+21135334
 
-Item Not Exists: False
-Item Added with ID -  82
-31464607
-ממן הילה 31464607
-Folder Created: /home/EDU/stdFolders/31464607/התכתבויות
-Folder Created: /home/EDU/stdFolders/31464607/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31464607/יתרת חובות
+Folder Already Exists: /home/EDU/stdFolders/21135334/התכתבויות
+Folder Already Exists: /home/EDU/stdFolders/21135334/וועדות הוראה
+Folder Already Exists: /home/EDU/stdFolders/21135334/יתרת חובות
 I : 75
-32420113
+21176076
 
 Item Not Exists: False
-Item Added with ID -  83
-32420113
-מסוואדי זהירה 32420113
-Folder Created: /home/EDU/stdFolders/32420113/התכתבויות
-Folder Created: /home/EDU/stdFolders/32420113/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32420113/יתרת חובות
+Item Added with ID -  225
+21176076
+קרסיק מיכל 21176076
+Folder Created: /home/EDU/stdFolders/21176076/התכתבויות
+Folder Created: /home/EDU/stdFolders/21176076/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21176076/יתרת חובות
 I : 76
-32294760
+21242531
 
 Item Not Exists: False
-Item Added with ID -  84
-32294760
-מראר סיהאם 32294760
-Folder Created: /home/EDU/stdFolders/32294760/התכתבויות
-Folder Created: /home/EDU/stdFolders/32294760/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32294760/יתרת חובות
+Item Added with ID -  226
+21242531
+רגבי אסיל 21242531
+Folder Created: /home/EDU/stdFolders/21242531/התכתבויות
+Folder Created: /home/EDU/stdFolders/21242531/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21242531/יתרת חובות
 I : 77
-21203953
+21335491
 
 Item Not Exists: False
-Item Added with ID -  85
-21203953
-משה תמר 21203953
-Folder Created: /home/EDU/stdFolders/21203953/התכתבויות
-Folder Created: /home/EDU/stdFolders/21203953/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21203953/יתרת חובות
+Item Added with ID -  227
+21335491
+רגבי פאטמה 21335491
+Folder Created: /home/EDU/stdFolders/21335491/התכתבויות
+Folder Created: /home/EDU/stdFolders/21335491/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21335491/יתרת חובות
 I : 78
-32867771
+20786676
 
 Item Not Exists: False
-Item Added with ID -  86
-32867771
-נזרי דינה 32867771
-Folder Created: /home/EDU/stdFolders/32867771/התכתבויות
-Folder Created: /home/EDU/stdFolders/32867771/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32867771/יתרת חובות
+Item Added with ID -  228
+20786676
+רוזנבאום אורה 20786676
+Folder Created: /home/EDU/stdFolders/20786676/התכתבויות
+Folder Created: /home/EDU/stdFolders/20786676/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20786676/יתרת חובות
 I : 79
-32231257
+31915297
 
 Item Not Exists: False
-Item Added with ID -  87
-32231257
-סגל שירה 32231257
-Folder Created: /home/EDU/stdFolders/32231257/התכתבויות
-Folder Created: /home/EDU/stdFolders/32231257/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32231257/יתרת חובות
+Item Added with ID -  229
+31915297
+רז קרן 31915297
+Folder Created: /home/EDU/stdFolders/31915297/התכתבויות
+Folder Created: /home/EDU/stdFolders/31915297/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31915297/יתרת חובות
 I : 80
-32414875
+32701507
 
 Item Not Exists: False
-Item Added with ID -  88
-32414875
-סואלחי נור 32414875
-Folder Created: /home/EDU/stdFolders/32414875/התכתבויות
-Folder Created: /home/EDU/stdFolders/32414875/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32414875/יתרת חובות
+Item Added with ID -  230
+32701507
+רייטר אלינור 32701507
+Folder Created: /home/EDU/stdFolders/32701507/התכתבויות
+Folder Created: /home/EDU/stdFolders/32701507/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32701507/יתרת חובות
 I : 81
-20642528
+21252372
 
 Item Not Exists: False
-Item Added with ID -  89
-20642528
-סוואחרה אריג 20642528
-Folder Created: /home/EDU/stdFolders/20642528/התכתבויות
-Folder Created: /home/EDU/stdFolders/20642528/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20642528/יתרת חובות
+Item Added with ID -  231
+21252372
+שהאב שדא 21252372
+Folder Created: /home/EDU/stdFolders/21252372/התכתבויות
+Folder Created: /home/EDU/stdFolders/21252372/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21252372/יתרת חובות
 I : 82
-99910704
+21236821
 
 Item Not Exists: False
-Item Added with ID -  90
-99910704
-סונג האיון 99910704
-Folder Created: /home/EDU/stdFolders/99910704/התכתבויות
-Folder Created: /home/EDU/stdFolders/99910704/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/99910704/יתרת חובות
+Item Added with ID -  232
+21236821
+שוויקי מיי 21236821
+Folder Created: /home/EDU/stdFolders/21236821/התכתבויות
+Folder Created: /home/EDU/stdFolders/21236821/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21236821/יתרת חובות
 I : 83
-32229803
+21190954
 
 Item Not Exists: False
-Item Added with ID -  91
-32229803
-סונגו רעות 32229803
-Folder Created: /home/EDU/stdFolders/32229803/התכתבויות
-Folder Created: /home/EDU/stdFolders/32229803/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32229803/יתרת חובות
+Item Added with ID -  233
+21190954
+שטיינברג ענבל 21190954
+Folder Created: /home/EDU/stdFolders/21190954/התכתבויות
+Folder Created: /home/EDU/stdFolders/21190954/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/21190954/יתרת חובות
 I : 84
-21244149
+20954223
 
 Item Not Exists: False
-Item Added with ID -  92
-21244149
-סליימה אנפל 21244149
-Folder Created: /home/EDU/stdFolders/21244149/התכתבויות
-Folder Created: /home/EDU/stdFolders/21244149/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21244149/יתרת חובות
+Item Added with ID -  234
+20954223
+שמוס גל 20954223
+Folder Created: /home/EDU/stdFolders/20954223/התכתבויות
+Folder Created: /home/EDU/stdFolders/20954223/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/20954223/יתרת חובות
 I : 85
-32498857
+32519732
 
 Item Not Exists: False
-Item Added with ID -  93
-32498857
-סנדוקה היאם 32498857
-Folder Created: /home/EDU/stdFolders/32498857/התכתבויות
-Folder Created: /home/EDU/stdFolders/32498857/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32498857/יתרת חובות
+Item Added with ID -  235
+32519732
+שרבאתי תמארא 32519732
+Folder Created: /home/EDU/stdFolders/32519732/התכתבויות
+Folder Created: /home/EDU/stdFolders/32519732/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/32519732/יתרת חובות
 I : 86
-21246026
+31913086
 
 Item Not Exists: False
-Item Added with ID -  94
-21246026
-סנדוקה יאסמין 21246026
-Folder Created: /home/EDU/stdFolders/21246026/התכתבויות
-Folder Created: /home/EDU/stdFolders/21246026/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21246026/יתרת חובות
+Item Added with ID -  236
+31913086
+שרזמן נוגה 31913086
+Folder Created: /home/EDU/stdFolders/31913086/התכתבויות
+Folder Created: /home/EDU/stdFolders/31913086/וועדות הוראה
+Folder Created: /home/EDU/stdFolders/31913086/יתרת חובות
 I : 87
-32480516
-
-Item Not Exists: False
-Item Added with ID -  95
-32480516
-סעיד ניכול 32480516
-Folder Created: /home/EDU/stdFolders/32480516/התכתבויות
-Folder Created: /home/EDU/stdFolders/32480516/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32480516/יתרת חובות
-I : 88
-21252101
-
-Item Not Exists: False
-Item Added with ID -  96
-21252101
-עבאסי אשראק 21252101
-Folder Created: /home/EDU/stdFolders/21252101/התכתבויות
-Folder Created: /home/EDU/stdFolders/21252101/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21252101/יתרת חובות
-I : 89
-21252011
-
-Item Not Exists: False
-Item Added with ID -  97
-21252011
-עויסאת נרמין 21252011
-Folder Created: /home/EDU/stdFolders/21252011/התכתבויות
-Folder Created: /home/EDU/stdFolders/21252011/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21252011/יתרת חובות
-I : 90
-20917742
-
-Item Not Exists: False
-Item Added with ID -  98
-20917742
-עזרא נגה 20917742
-Folder Created: /home/EDU/stdFolders/20917742/התכתבויות
-Folder Created: /home/EDU/stdFolders/20917742/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20917742/יתרת חובות
-I : 91
-21244484
-
-Item Not Exists: False
-Item Added with ID -  99
-21244484
-עליאן לאנא 21244484
-Folder Created: /home/EDU/stdFolders/21244484/התכתבויות
-Folder Created: /home/EDU/stdFolders/21244484/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21244484/יתרת חובות
-I : 92
-32234279
-
-Item Not Exists: False
-Item Added with ID -  100
-32234279
-עלייאן סוואר 32234279
-Folder Created: /home/EDU/stdFolders/32234279/התכתבויות
-Folder Created: /home/EDU/stdFolders/32234279/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32234279/יתרת חובות
-I : 93
-20787861
-
-Item Not Exists: False
-Item Added with ID -  101
-20787861
-פאר עדן 20787861
-Folder Created: /home/EDU/stdFolders/20787861/התכתבויות
-Folder Created: /home/EDU/stdFolders/20787861/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20787861/יתרת חובות
-I : 94
-31521158
-
-Item Not Exists: False
-Item Added with ID -  102
-31521158
-פוואקה שימאא 31521158
-Folder Created: /home/EDU/stdFolders/31521158/התכתבויות
-Folder Created: /home/EDU/stdFolders/31521158/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31521158/יתרת חובות
-I : 95
-21209197
-
-Item Not Exists: False
-Item Added with ID -  103
-21209197
-פוקק מוחמד 21209197
-Folder Created: /home/EDU/stdFolders/21209197/התכתבויות
-Folder Created: /home/EDU/stdFolders/21209197/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21209197/יתרת חובות
-I : 96
-21137748
-
-Item Not Exists: False
-Item Added with ID -  104
-21137748
-פלאס גרייס 21137748
-Folder Created: /home/EDU/stdFolders/21137748/התכתבויות
-Folder Created: /home/EDU/stdFolders/21137748/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21137748/יתרת חובות
-I : 97
-20553336
-
-Item Not Exists: False
-Item Added with ID -  105
-20553336
-פלח רועי 20553336
-Folder Created: /home/EDU/stdFolders/20553336/התכתבויות
-Folder Created: /home/EDU/stdFolders/20553336/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20553336/יתרת חובות
-I : 98
-32374169
-
-Item Not Exists: False
-Item Added with ID -  106
-32374169
-צירינג אליענה 32374169
-Folder Created: /home/EDU/stdFolders/32374169/התכתבויות
-Folder Created: /home/EDU/stdFolders/32374169/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32374169/יתרת חובות
-I : 99
-21246038
-
-Item Not Exists: False
-Item Added with ID -  107
-21246038
-קוואסמי אנפאל 21246038
-Folder Created: /home/EDU/stdFolders/21246038/התכתבויות
-Folder Created: /home/EDU/stdFolders/21246038/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21246038/יתרת חובות
-I : 100
-32294775
-
-Item Not Exists: False
-Item Added with ID -  108
-32294775
-קומבר איאת 32294775
-Folder Created: /home/EDU/stdFolders/32294775/התכתבויות
-Folder Created: /home/EDU/stdFolders/32294775/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32294775/יתרת חובות
-I : 101
-20783509
-
-Item Not Exists: False
-Item Added with ID -  109
-20783509
-קופל נועה 20783509
-Folder Created: /home/EDU/stdFolders/20783509/התכתבויות
-Folder Created: /home/EDU/stdFolders/20783509/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20783509/יתרת חובות
-I : 102
-20728017
-
-Item Not Exists: False
-Item Added with ID -  110
-20728017
-קורץ נועה 20728017
-Folder Created: /home/EDU/stdFolders/20728017/התכתבויות
-Folder Created: /home/EDU/stdFolders/20728017/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20728017/יתרת חובות
-I : 103
-21252497
-
-Item Not Exists: False
-Item Added with ID -  111
-21252497
-קסוואני מרים 21252497
-Folder Created: /home/EDU/stdFolders/21252497/התכתבויות
-Folder Created: /home/EDU/stdFolders/21252497/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21252497/יתרת חובות
-I : 104
-21135334
-
-Item Not Exists: False
-Item Added with ID -  112
-21135334
-קרדיה דעאא 21135334
-Folder Created: /home/EDU/stdFolders/21135334/התכתבויות
-Folder Created: /home/EDU/stdFolders/21135334/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21135334/יתרת חובות
-I : 105
-31093192
-
-Item Not Exists: False
-Item Added with ID -  113
-31093192
-קריכלי תמר 31093192
-Folder Created: /home/EDU/stdFolders/31093192/התכתבויות
-Folder Created: /home/EDU/stdFolders/31093192/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31093192/יתרת חובות
-I : 106
-21244499
-
-Item Not Exists: False
-Item Added with ID -  114
-21244499
-רביע תאלא 21244499
-Folder Created: /home/EDU/stdFolders/21244499/התכתבויות
-Folder Created: /home/EDU/stdFolders/21244499/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21244499/יתרת חובות
-I : 107
-21233974
-
-Item Not Exists: False
-Item Added with ID -  115
-21233974
-רגבי סוהיר 21233974
-Folder Created: /home/EDU/stdFolders/21233974/התכתבויות
-Folder Created: /home/EDU/stdFolders/21233974/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21233974/יתרת חובות
-I : 108
-31549906
-
-Item Not Exists: False
-Item Added with ID -  116
-31549906
-רודקו שנקר אסף 31549906
-Folder Created: /home/EDU/stdFolders/31549906/התכתבויות
-Folder Created: /home/EDU/stdFolders/31549906/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31549906/יתרת חובות
-I : 109
-34268731
-
-Item Not Exists: False
-Item Added with ID -  117
-34268731
-רוימי דורין 34268731
-Folder Created: /home/EDU/stdFolders/34268731/התכתבויות
-Folder Created: /home/EDU/stdFolders/34268731/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34268731/יתרת חובות
-I : 110
-20772621
-
-Item Not Exists: False
-Item Added with ID -  118
-20772621
-רייטר עדי 20772621
-Folder Created: /home/EDU/stdFolders/20772621/התכתבויות
-Folder Created: /home/EDU/stdFolders/20772621/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20772621/יתרת חובות
-I : 111
-32410699
-
-Item Not Exists: False
-Item Added with ID -  119
-32410699
-רשק לילא 32410699
-Folder Created: /home/EDU/stdFolders/32410699/התכתבויות
-Folder Created: /home/EDU/stdFolders/32410699/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/32410699/יתרת חובות
-I : 112
-33277855
-
-Item Not Exists: False
-Item Added with ID -  120
-33277855
-שאמיה סלוא 33277855
-Folder Created: /home/EDU/stdFolders/33277855/התכתבויות
-Folder Created: /home/EDU/stdFolders/33277855/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/33277855/יתרת חובות
-I : 113
-20867222
-
-Item Not Exists: False
-Item Added with ID -  121
-20867222
-שאקי אוריין 20867222
-Folder Created: /home/EDU/stdFolders/20867222/התכתבויות
-Folder Created: /home/EDU/stdFolders/20867222/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20867222/יתרת חובות
-I : 114
-21257947
-
-Item Not Exists: False
-Item Added with ID -  122
-21257947
-שומאן סחר 21257947
-Folder Created: /home/EDU/stdFolders/21257947/התכתבויות
-Folder Created: /home/EDU/stdFolders/21257947/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21257947/יתרת חובות
-I : 115
-20650325
-
-Item Not Exists: False
-Item Added with ID -  123
-20650325
-שושן לירז 20650325
-Folder Created: /home/EDU/stdFolders/20650325/התכתבויות
-Folder Created: /home/EDU/stdFolders/20650325/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20650325/יתרת חובות
-I : 116
-21184973
-
-Item Not Exists: False
-Item Added with ID -  124
-21184973
-שטרסר אורי 21184973
-Folder Created: /home/EDU/stdFolders/21184973/התכתבויות
-Folder Created: /home/EDU/stdFolders/21184973/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21184973/יתרת חובות
-I : 117
-31881220
-
-Item Not Exists: False
-Item Added with ID -  125
-31881220
-שימונוב רחל 31881220
-Folder Created: /home/EDU/stdFolders/31881220/התכתבויות
-Folder Created: /home/EDU/stdFolders/31881220/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31881220/יתרת חובות
-I : 118
-34120200
-
-Item Not Exists: False
-Item Added with ID -  126
-34120200
-שפירו שושנה 34120200
-Folder Created: /home/EDU/stdFolders/34120200/התכתבויות
-Folder Created: /home/EDU/stdFolders/34120200/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/34120200/יתרת חובות
-I : 119
-20541723
-
-Item Not Exists: False
-Item Added with ID -  127
-20541723
-שרון עידן 20541723
-Folder Created: /home/EDU/stdFolders/20541723/התכתבויות
-Folder Created: /home/EDU/stdFolders/20541723/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20541723/יתרת חובות
-I : 120
-20893262
-
-Item Not Exists: False
-Item Added with ID -  128
-20893262
-שרוני סתו 20893262
-Folder Created: /home/EDU/stdFolders/20893262/התכתבויות
-Folder Created: /home/EDU/stdFolders/20893262/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/20893262/יתרת חובות
-I : 121
-31829740
-
-Item Not Exists: False
-Item Added with ID -  129
-31829740
-שריג שחר 31829740
-Folder Created: /home/EDU/stdFolders/31829740/התכתבויות
-Folder Created: /home/EDU/stdFolders/31829740/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31829740/יתרת חובות
-I : 122
-8699472
-
-Item Not Exists: False
-Item Added with ID -  130
-8699472
-שריף שהד 8699472
-Folder Created: /home/EDU/stdFolders/8699472/התכתבויות
-Folder Created: /home/EDU/stdFolders/8699472/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/8699472/יתרת חובות
-I : 123
-31511026
-
-Item Not Exists: False
-Item Added with ID -  131
-31511026
-תגר נעה 31511026
-Folder Created: /home/EDU/stdFolders/31511026/התכתבויות
-Folder Created: /home/EDU/stdFolders/31511026/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/31511026/יתרת חובות
-I : 124
-21242624
-
-Item Not Exists: False
-Item Added with ID -  132
-21242624
-תרתיר לאנא 21242624
-Folder Created: /home/EDU/stdFolders/21242624/התכתבויות
-Folder Created: /home/EDU/stdFolders/21242624/וועדות הוראה
-Folder Created: /home/EDU/stdFolders/21242624/יתרת חובות
-I : 125
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-שרוני סתו 20893262
-שריג שחר 31829740
-שריף שהד 8699472
-תגר נעה 31511026
-תרתיר לאנא 21242624
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+שוויקי מיי 21236821
+שטיינברג ענבל 21190954
+שמוס גל 20954223
+שרבאתי תמארא 32519732
+שרזמן נוגה 31913086
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-שושן לירז 20650325
-שטרסר אורי 21184973
-שימונוב רחל 31881220
-שפירו שושנה 34120200
-שרון עידן 20541723
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+רגבי פאטמה 21335491
+רוזנבאום אורה 20786676
+רז קרן 31915297
+רייטר אלינור 32701507
+שהאב שדא 21252372
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-רייטר עדי 20772621
-רשק לילא 32410699
-שאמיה סלוא 33277855
-שאקי אוריין 20867222
-שומאן סחר 21257947
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+עושו שהד 21396219
+צ'רניק שרה 34279594
+קזצינקו אלכסנדרה 32857895
+קרסיק מיכל 21176076
+רגבי אסיל 21242531
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-קריכלי תמר 31093192
-רביע תאלא 21244499
-רגבי סוהיר 21233974
-רודקו שנקר אסף 31549906
-רוימי דורין 34268731
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+סייפי יוסרא 32500437
+ספקטור אביתר 31868666
+עבאסי אריג 21358538
+עבד אל לטיף גמאן 32847567
+עואד מרים 32391277
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-קומבר איאת 32294775
-קופל נועה 20783509
-קורץ נועה 20728017
-קסוואני מרים 21252497
-קרדיה דעאא 21135334
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+סאלחי בסמלה 21335080
+סבו סביח אלאא 21257770
+סחאר נתאלי 32420215
+סיאג ביאן 8695515
+סיאד סועאד 21358946
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-פוקק מוחמד 21209197
-פלאס גרייס 21137748
-פלח רועי 20553336
-צירינג אליענה 32374169
-קוואסמי אנפאל 21246038
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+מרטין גסיקה 32492172
+משה שחף 21184526
+נתשה גאדה 21394280
+נתשה סמאח 30251478
+נתשה שהד 32848012
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-עזרא נגה 20917742
-עליאן לאנא 21244484
-עלייאן סוואר 32234279
-פאר עדן 20787861
-פוואקה שימאא 31521158
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+כהן בר 20867013
+כראם איה 32509998
+כתאני סואר 21402388
+לוי ירדן 31646719
+מסרי היא 32524386
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-סנדוקה היאם 32498857
-סנדוקה יאסמין 21246026
-סעיד ניכול 32480516
-עבאסי אשראק 21252101
-עויסאת נרמין 21252011
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+יגמור מלאק 21244407
+יוגב רום 20653279
+יעקובי טל 20650207
+כאלותי נור 32490591
+כהאן מרטין 34637609
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-סואלחי נור 32414875
-סוואחרה אריג 20642528
-סונג האיון 99910704
-סונגו רעות 32229803
-סליימה אנפל 21244149
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+חשאן רגד 20745336
+טאהר בסאם 34343916
+טל נועה 21187105
+טמס פיירית 32294593
+יאו הנג ז'י 99920382
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-מסוואדי זהירה 32420113
-מראר סיהאם 32294760
-משה תמר 21203953
-נזרי דינה 32867771
-סגל שירה 32231257
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+חברוני יובל 32269491
+חוויץ אנגאם 21335010
+חלאווה מוסטפא 32302970
+חמדאן יאסמין 30835697
+חנן רזאן 32559370
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-מושקוביץ' אמילי 20778827
-מחפוז זינה 32297319
-מייסטר שקד 20768699
-מימוני מעיין 20417490
-ממן הילה 31464607
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+וקנין איתמר 31818725
+זאדה יעל 21197516
+זנזורי יערה 21187125
+זעתרי איה 32420218
+חאסן שקיר שרה 21397846
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-כואזבה שימאא 32234494
-כרפסי שחר 21169381
-לוי רועי 20839240
-ליברטי אביב 20792328
-מוסטפא ערין 32524210
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+דדאבה אנסטסיה 34279593
+הלאסי סלסביל 32520372
+הלסה שימאא 32580652
+ויינברגר תמוז 31909754
+וינשנקר תמר 20895554
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-טורגמן טל 32236346
-טמס מאריסא 32313770
-יהלי רוטנברג 31517785
-יו ז'צ'אן 34249188
-כהן יובל 20775787
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+ג'ו סוהיונג 77792316
+גברין סגא 21360900
+גילאי אריאל 32231351
+גרבלסקי ענבר 31490745
+גרוז מנאר 21242722
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-חמאדה זהראא 21252271
-חמאמי לין 32501000
-חמודה תאלא 32414598
-טבק מרטינה 20991365
-טואג ירדן 20954335
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+בנימין שיר 20903689
+ברוס דליה 21137607
+ברכאת אבו א לורין 32487592
+ג'אנג נח 99922619
+ג'בר סנין 21366433
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-חג'אזי אנגים 34136833
-חורי מריה 21311063
-חושן טל 31901292
-חטיב אלאא 21131406
-חטיב פריאל 32671632
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+אמיתי רון 20708002
+אמרזיאן ארבינה 32231009
+באייר שי-לי 32169704
+בזלמיט ליאן 32490983
+בטשון גמיל 21332960
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-וונג סונג האן 55677495
-זגייר תאלא 32420331
-זואהרה מיישם 21244211
-זרביב שיינא 34613929
-זרגריאן ניב 20736038
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+אבו שמסייה פאטמה 21252342
+אבודלו דוחא 21358666
+או חנמין 77781119
+אוסישקין שקד 20957950
+אלפר רות 20699686
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
-הופנשטיין טלי 31861467
-הלסה רנד 32500860
-הלסי אסיל 21332893
-הרשקוביץ אלה 20891771
-השלמון מרים 21259723
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-גרינברג ליאל 20760462
-דה פז שנה 34130555
-דוויק דאנא 21141581
-דולב עדי 31836947
-הא סוקיונג 77762883
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-גלעד דקל 20580105
-גלר נעמה 20653224
-געפר שהד 21233630
-גריב קמר 8695534
-גרינברג לאה 31883900
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-גבע דניאל 31391933
-גודה מרוות 21131251
-גול הלא 32307317
-גול תמארא 32421210
-גית אלאא 33284722
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-בר כהן עדה 21231289
-ברוך אורית 21245074
-בשאראת גופראן 21288546
-ג'אביס אסראא 21257505
-גאבר למא 21130125
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-בידון רנין 21252426
-בן אשר שני 20751251
-בן זקן רוח מרים 34628413
-בסמה נדא 21642880
-בר גל 20795161
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-אלון תמר 20656453
-אלראמני פאטמה 21193293
-אנגרט שירז 21177374
-אעראר לין 21394368
-בג'אלי נטלי 20739568
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-אבו קוויק מלאק 32414641
-אבו שאפע דאניה 21244027
-אבן חיים גלי 20945720
-אזולאי ירדן 21169132
-איגואלקה מריאנה 34637010
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
-לאחרונה
-אבו גנאם אמינה 32278698
-אבו דהים איה 21135113
-אבו טיר איה 32485445
-אבו סארה סיהאם 20715783
-אבו עומר חלא 21257635
-Delete Recent Submenus: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
+אבו סנינה בראא 21360816
+Collect Navigation: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 לאחרונה
 Delete-RecentMainMenu: https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders
 **********************
 Windows PowerShell transcript end
-End time: 20211019141143
+End time: 20221205105424
 **********************

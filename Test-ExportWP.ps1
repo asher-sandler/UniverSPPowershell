@@ -91,24 +91,63 @@ function ExprtWebPart ($ctx, $relUrl, $siteURL) {
 	}
 
 }
-	Add-Type -Path "C:\AdminDir\Nuget\Microsoft.SharePointOnline.CSOM.16.1.21812.12000\lib\net45\Microsoft.SharePoint.Client.dll"
-	Add-Type -Path "C:\AdminDir\Nuget\Microsoft.SharePointOnline.CSOM.16.1.21812.12000\lib\net45\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.Portable.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Publishing.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Search.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Taxonomy.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.UserProfiles.dll"
+	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 
- $tenantAdmin = "ekmd\ashersa"
- $tenantAdminPassword = "GrapeFloor789"
- $secureAdminPassword = $(convertto-securestring $tenantAdminPassword -asplaintext -force)
- $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
- $siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU62-2022";
+$0 = $myInvocation.MyCommand.Definition
+$dp0 = [System.IO.Path]::GetDirectoryName($0)
+. "$dp0\Utils-Request.ps1"
+. "$dp0\Utils-DualLanguage.ps1"
+
+$Credentials = get-SCred
+
  $siteURL = "https://grs.ekmd.huji.ac.il/home/natureScience/SCI25-2021";
- $siteURL = "https://grs.ekmd.huji.ac.il/home/Medicine/MED80-2021/";
- $ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl) 
- # $credentials = New-Object Microsoft.SharePoint.Client.SharePointOnlineCredentials($tenantAdmin, $secureAdminPassword)  
- $ctx.Credentials = New-Object System.Net.NetworkCredential($tenantAdmin, $tenantAdminPassword)
-    
+ $pageURL = "/home/natureScience/SCI25-2021/Pages/DocumentsUpload.aspx"
+ 
+ $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
+ $Ctx.Credentials = $Credentials
+
+ $page = $ctx.Web.GetFileByServerRelativeUrl($pageURL);
+	
+ $ctx.Load($page);
+ $ctx.Load($page.ListItemAllFields);
+ $ctx.ExecuteQuery();
+
+ $webpartManager = $page.GetLimitedWebPartManager([Microsoft.Sharepoint.Client.WebParts.PersonalizationScope]::Shared);
+	#$webpartManager | gm | fl		
+
+  #Load and execute the query to get the data in the webparts
+  Write-Host "Getting the webparts from the page" -ForegroundColor Green
+  $WebParts = $webpartManager.WebParts
+  $ctx.Load($webpartManager);
+  $ctx.Load($WebParts);
+  $ctx.ExecuteQuery();
+  foreach($wp in $webparts){
+	  
+	  $webPartId = $wp.ID
+	  $wp.ExportMode="All";
+	  Write-Host $webPartId
+	  #$wp | gm | fl	
+	  $wpXML = $webpartManager.ExportWebPart($webPartId);
+	  $ctx.Load($wpXML);
+	  $ctx.ExecuteQuery();
+	  read-host
+	  $xmlVal = $wpXML.Value
+	  $xmlVal
+  }
+#>
 ######################################
 # Set Add WebPart to Page Parameters #
 ######################################
-$relUrl = "/home/huca/EinKarem/ekcc/QA/AsherSpace"
-$relUrl = "/home/Medicine/MED80-2021"
+#$relUrl = "/home/huca/EinKarem/ekcc/QA/AsherSpace"
+#$relUrl = "/home/Medicine/MED80-2021"
 # LogSection "Add Manual Correction WebPart to Page"
-ExprtWebPart $ctx $relUrl $siteURL
+#ExprtWebPart $ctx $relUrl $siteURL

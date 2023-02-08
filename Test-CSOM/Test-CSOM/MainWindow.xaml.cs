@@ -29,6 +29,7 @@ namespace Test_CSOM
         private void LoadCsom_Click(object sender, RoutedEventArgs e)
         {
             MessageBox.Show("Ok");
+            // https://portals2.ekmd.huji.ac.il/home/huca/spSupport/
             string webUrl = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
             using (var context = new ClientContext(webUrl))
             {

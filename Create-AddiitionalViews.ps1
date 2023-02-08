@@ -214,7 +214,7 @@ foreach($itemList in $fileList){
 	 write-host "currentYear : $currentYear" -foregroundcolor Yellow
 	 write-host "subMenuTitle : $subMenuTitle" -foregroundcolor Yellow
 	 
-	 #read-host
+	 read-host
 
 	 $Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteUrl)
 	 $Ctx.Credentials = $Credentials
@@ -228,25 +228,26 @@ foreach($itemList in $fileList){
 		if ($view.Title -eq $mainViewName){ 
 		     write-host "mainViewName Found" -f Yellow
 		    $newQuery = $view.ViewQuery.Replace($prevYear,$currentYear)
-		    $newQuery = '<OrderBy><FieldRef Name="ID" Ascending="FALSE" /></OrderBy><Where><Geq><FieldRef Name="Created" /><Value Type="DateTime">2022-01-01T00:00:00Z</Value></Geq></Where>'
+		    $newQuery = '<OrderBy><FieldRef Name="ID" Ascending="FALSE" /></OrderBy><Where><Geq><FieldRef Name="Created" /><Value Type="DateTime">2023-01-01T00:00:00Z</Value></Geq></Where>'
 			Change-ViewX $siteUrl $docLibName $view.Title $view.Fields $newQuery $view.Aggregations $view.DefaultView 
 		}
 		
 
 	 }
 	 $vObj = $objViews | Where{$_.Title -eq $prevArchiveName}
+	 $vDefObj = $objViews | Where{$_.Title -eq $mainViewName} # default view
 	 if (!$([string]::IsNullOrEmpty($vObj))){
 		write-host "prevArchiveName not  Found" -f Yellow
 		$v1 = "" | Select-Object DefaultView,Aggregations,Title, ServerRelativeUrl,ViewQuery,Fields
 		
 		
 		$v1.DefaultView = $vObj.DefaultView
-		$v1.Aggregations =  $vObj.Aggregations
+		$v1.Aggregations =  $vDefObj.Aggregations
 		$v1.Title =  $prevYear
 		$v1.ServerRelativeUrl =  $vObj.ServerRelativeUrl.Replace($prevArchiveName,$prevYear)
 		# $v1.ViewQuery =  $vObj.ViewQuery.Replace("2021","2022").Replace("2020","2021")
 		$v1.ViewQuery =  $vObj.ViewQuery.Replace($prevYear,$currentYear).Replace($prevArchiveName,$prevYear)
-		$v1.Fields =  $vObj.Fields
+		$v1.Fields =  $vDefObj.Fields
 			
 		$viewExists = Check-ViewExists $docLibName  $siteURL $v1
 		write-host "Exists : $viewExists"
@@ -257,7 +258,7 @@ foreach($itemList in $fileList){
 	 }
 	 else
 	 {
-		$newQuery = '<OrderBy><FieldRef Name="ID" Ascending="FALSE" /></OrderBy><Where><And><Geq><FieldRef Name="Created" /><Value Type="DateTime">2021-01-01T00:00:00Z</Value></Geq><Lt><FieldRef Name="Created" /><Value Type="DateTime">2022-01-01T00:00:00Z</Value></Lt></And></Where>'
+		$newQuery = '<OrderBy><FieldRef Name="ID" Ascending="FALSE" /></OrderBy><Where><And><Geq><FieldRef Name="Created" /><Value Type="DateTime">2022-01-01T00:00:00Z</Value></Geq><Lt><FieldRef Name="Created" /><Value Type="DateTime">2023-01-01T00:00:00Z</Value></Lt></And></Where>'
 		$aggr = '<FieldRef Name="folderLink" Type="COUNT" />'
 		$flds  = $objViews[0].Fields
 		Create-NewViewX $siteUrl $docLibName $prevYear $flds $newQuery $aggr $false
