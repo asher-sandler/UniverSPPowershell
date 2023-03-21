@@ -1,3 +1,49 @@
+
+							
+function Get-DestFile($ctx, $libName, $dstFld, $sFileName){
+	$oFile = $null
+
+    #Write-Host 4 $libName, $dstFld, $sFileName
+	$List = $Ctx.Web.GetList($libName)
+	
+    $ctx.Load($List)
+	$Ctx.ExecuteQuery()
+
+    $SubFolders = $List.RootFolder.Folders
+    $Ctx.Load($SubFolders)
+    $Ctx.ExecuteQuery()
+
+	Foreach($SubFolder in $SubFolders)	
+	{
+		if ($SubFolder.Name -eq $dstFld)
+		{
+			#Write-Host 18 "Found"
+			$FilesCollSrc = $SubFolder.Files
+			$Ctx.Load($FilesCollSrc)
+			$Ctx.ExecuteQuery()
+			$oFileFound = $false
+			ForEach($sFile in $FilesCollSrc){
+				#Write-Host 24 $sFile.Name 
+				if ($sFile.Name -eq $sFileName)
+				{
+					$oFile = $sFile
+					$oFileFound = $true
+					break			
+				}
+			}
+			if ($oFileFound){
+				break
+			}
+			
+		}
+	}	
+
+
+	$dFileEmpty = [string]::IsNullOrEmpty($oFile)
+	#Write-Host 23 $dFileEmpty
+	return $oFile
+	
+}
 function Create-Folders($SiteURL, $listName ,$foldersNew){
 
 	#$foldersNew = "התכתבויות","וועדות הוראה","יתרת חובות"
@@ -29,11 +75,12 @@ function Create-Folders($SiteURL, $listName ,$foldersNew){
     #Write-Host 29 $targetFolderUrlPrefix
 	foreach($fldN in $foldersNew){
 		$TargetFolderURL = $targetFolderUrlPrefix + $fldN
+		
 		Try{
-			$Folder=$CtxFld.web.GetFolderByServerRelativeUrl($TargetFolderURL)
+			$Folder=$Ctx.web.GetFolderByServerRelativeUrl($TargetFolderURL)
 			$Ctx.load($Folder)
 			$Ctx.ExecuteQuery()
-			Write-host "Folder Already Exists:"$TargetFolderURL -f Yellow
+			#Write-host "Folder Already Exists: "$TargetFolderURL -f Yellow
 		}
 		catch{
 			#Create Folder
@@ -42,12 +89,10 @@ function Create-Folders($SiteURL, $listName ,$foldersNew){
 				$Folder=$Ctx.Web.Folders.Add($TargetFolderURL)
 				$Ctx.Load($Folder)
 				$Ctx.ExecuteQuery()
-				Write-host "Folder Created:"$TargetFolderURL -f Green
+				#Write-host "Folder Created:"$TargetFolderURL -f Green
 			}
 		}
 	}
-#Write-Host 223...
-#Read-Host
 }
 
 function Change-DefaultViewX($siteUrl, $listName){
@@ -98,13 +143,13 @@ function Change-DefaultViewX($siteUrl, $listName){
 	# add Fields To View
    For($i = 0 ; $i -lt $vFieldsList.Count; $i++){ 	
             $fieldN =  $vFieldsList[$i]	
-		    write-host $fieldN
+		    #write-host $fieldN
 			$view.ViewFields.Add($fieldN)
 			$view.Update()
 			$Ctx.ExecuteQuery()		
 	}
 
-	write-host "Updated $listName Default View." -foregroundcolor Green
+	#write-host "Updated $listName Default View." -foregroundcolor Green
 	
 	return $null
 	
@@ -117,6 +162,7 @@ Function Add-FieldsToDocLibX($siteUrl, $listName){
 	}
 	return $null
 }
+
 function Is-DocLibExists($SiteURL,$id ){
 	$siteName = get-UrlNoF5 $SiteURL
 	
@@ -127,7 +173,8 @@ function Is-DocLibExists($SiteURL,$id ){
 	$Ctx.Load($Lists)
     $Ctx.ExecuteQuery()
 	
-	$libExists = $false
+	$libExists ="" | Select Title,Exists 
+	$libExists.Exists = $false
 	ForEach($list in $Lists)
 	{	
 	    $rtFolder = $list.RootFolder
@@ -135,7 +182,8 @@ function Is-DocLibExists($SiteURL,$id ){
 		$Ctx.ExecuteQuery()
 		
 		if ($rtFolder.Name -eq $id){
-			$libExists = $true
+			$libExists.Exists  = $true
+			$libExists.Title = $list.Title
 			#write-host $list.Title -f Cyan
 			break
 		}	
@@ -176,11 +224,212 @@ function Get-DestinationItemID($SiteURL,$ListName,$FieldName, $idValue){
 	return $outItemID
 			
 }
+function Copy-LettersFiles(	$siteSRC,$ResponseLetterListName, $studID, 
+							$siteDest, $dstLib, 
+							$dstFld,$docTypeItemName )
+{
+
+	$siteName = get-UrlNoF5 $siteSRC
+	#$TargetFolderURL =  ([system.uri]$siteName).LocalPath
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	
+	$Ctx.Credentials = $Credentials
+	$LettersLib = $Ctx.Web.lists.GetByTitle($ResponseLetterListName)
+    $Ctx.ExecuteQuery()
+
+	$FolderSrc = $LettersLib.RootFolder
+    $FilesCollSrc = $FolderSrc.Files
+    $Ctx.Load($FolderSrc)
+    $Ctx.Load($FilesCollSrc)
+    $Ctx.ExecuteQuery()
+
+    ###################################
+	$siteNameDst = get-UrlNoF5 $siteDest
+	$CtxDst = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameDst)
+	$CtxDst.Credentials = $Credentials
+ 
+	$listDst = 	$CtxDst.Web.Lists.GetByTitle($dstLib)
+    $CtxDst.Load($listDst)
+    $CtxDst.ExecuteQuery()
+	$listDstRootFolder = $listDst.RootFolder
+    $CtxDst.Load($listDstRootFolder)
+    $CtxDst.ExecuteQuery()
+
+	$dstListUrl = $([system.uri]$siteNameDst).LocalPath + $listDstRootFolder.Name
+	$StudentIDFound = $false
+	ForEach($srcFile in $FilesCollSrc){
+		$srcBaseFileName = $srcFile.Name.Split(".")[0]
+	    if ($studID -eq $srcBaseFileName){
+			#Write-Host $srcFile.Name
+			#Write-Host $srcFile.ServerRelativeURL
+			$dstLibURL  = $dstListUrl+"/"+$dstFld
+
+			$dstFileURL = $dstLibURL+"/"+$srcFile.Name
+			# Write-Host 268 $dstFileURL
+			$FileInfo = [Microsoft.SharePoint.Client.File]::OpenBinaryDirect($Ctx, $srcFile.ServerRelativeURL)
+			[Microsoft.SharePoint.Client.File]::SaveBinaryDirect($CtxDst, $dstFileURL, $FileInfo.Stream,$True)
+			$sItems   = $srcFile.ListItemAllFields
+			$Ctx.Load($sItems)
+			$Ctx.ExecuteQuery()
+			$dstFile = Get-DestFile $CtxDst $dstListUrl $dstFld $dstFileURL.split("/")[-1]
+			$dstItems = $dstFile.ListItemAllFields
+			$dstItems["DocType" ] = $docTypeItemName 
+			$dstItems["Created" ] = $sItems["Created" ] #$srcDateCreat
+			$dstItems["Modified"] = $sItems["Modified"] # $srcDateEdit
+			$dstItems["Author"  ] = $sItems["Author"  ] #$srcWhoCreat
+			$dstItems["Editor"  ] = $sItems["Editor"  ] #$srcWhoEdit
+			$dstItems.Update()
+			$listDst.Update()
+			$CtxDst.Load($dstItems)
+			$CtxDst.Load($listDst)
+			$CtxDst.ExecuteQuery()
+			$StudentIDFound = $true
+			break
+
+		}
+	}
+	if (!$StudentIDFound){
+		Write-Host "289  Warning: On Site $siteSRC in $ResponseLetterListName Not Found $studID" -f Yellow
+	}
+							
+}
+function Copy-StudentFiles( $siteSRC, $listSRC, $siteDst, $dstLib,$dstLibInnName, $dstFld){
+	$srcListUrl = $([system.uri]$listSRC.URL).LocalPath
+	$dstListUrl = $([system.uri]$siteDst).LocalPath + $dstLibInnName
+	#write-Host 296 $dstListUrl
+
+	#Write-Host 180 $siteSRC, $srcListUrl, $siteDst, $dstLib, $dstFld
+	
+	$siteName = get-UrlNoF5 $siteSRC
+	
+	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($siteName)
+	
+	$Ctx.Credentials = $Credentials
+	$srcList = $ctx.Web.GetList($srcListUrl)
+    $Ctx.Load($srcList)
+    $Ctx.ExecuteQuery()
+
+    $FolderSrc = $srcList.RootFolder
+    $FilesCollSrc = $FolderSrc.Files
+    $Ctx.Load($FolderSrc)
+    $Ctx.Load($FilesCollSrc)
+    $Ctx.ExecuteQuery()
+	
+	$siteNameDst = get-UrlNoF5 $siteDst
+	$CtxDst = New-Object Microsoft.SharePoint.Client.ClientContext($siteNameDst)
+	$CtxDst.Credentials = $Credentials
+ 
+	$listDst = 	$CtxDst.Web.GetList($dstListUrl)
+    $CtxDst.Load($listDst)
+    $CtxDst.ExecuteQuery()
+	$listDstRootFolder = $listDst.RootFolder
+    $CtxDst.Load($listDstRootFolder)
+    $CtxDst.ExecuteQuery()
+
+	$dstListUrl = $([system.uri]$siteDst).LocalPath + $listDstRootFolder.Name
+
+    #Write-Host 233 $srcList.Title
+	$listSrcSchema = get-ListSchema $siteSRC $srcList.Title
+
+	$listOfSrcFields = @()
+	foreach($schemaField in $listSrcSchema){
+
+		$xmlF = $schemaField
+		$isXMLsrc = [bool]$($xmlF -as [xml])
+		if ($isXMLsrc){
+			$fieldItem = "" | Select fieldDispName, fieldName, fieldType
+			$fieldItem.fieldDispName = Select-Xml -Content $xmlF  -XPath "/Field" | ForEach-Object { $_.Node.DisplayName.Trim()}
+			$fieldItem.fieldName = Select-Xml -Content $xmlF  -XPath "/Field" | ForEach-Object { $_.Node.Name.Trim()}
+			$fieldItem.fieldType = Select-Xml -Content $xmlF  -XPath "/Field" | ForEach-Object { $_.Node.Type.Trim()}
+			
+			$listOfSrcFields += $fieldItem
+				
+		}
+	}
+	#$listOfSrcFields |  out-file $("JSON\ma-Src"+$FolderSrc.Name+".txt")
+	$listDstSchema = get-ListSchema $siteDst $dstLib
+
+	
+	$listOfDstFields = @()
+	foreach($schemaField in $listDstSchema){
+
+		$xmlF = $schemaField
+		$isXMLsrc = [bool]$($xmlF -as [xml])
+		if ($isXMLsrc){
+			$fieldItem = "" | Select fieldDispName, fieldName, fieldType
+			$fieldItem.fieldDispName = Select-Xml -Content $xmlF  -XPath "/Field" | ForEach-Object { $_.Node.DisplayName.Trim()}
+			$fieldItem.fieldName = Select-Xml -Content $xmlF  -XPath "/Field" | ForEach-Object { $_.Node.Name.Trim()}
+			$fieldItem.fieldType = Select-Xml -Content $xmlF  -XPath "/Field" | ForEach-Object { $_.Node.Type.Trim()}
+			
+			$listOfDstFields += $fieldItem
+				
+		}
+	}
+	#$listOfDstFields |  out-file $("JSON\ma-Dst"+$listDstRootFolder.Name+".txt")
+	
+		
+	$dstLibURL  = $dstListUrl+"/"+$dstFld
+
+	ForEach($srcFile in $FilesCollSrc){
+		#Write-Host $srcFile.Name
+		#Write-Host $srcFile.ServerRelativeURL
+		$dstFileURL = $dstLibURL+"/"+$srcFile.Name
+		
+		#Write-Host $dstFileURL
+		#Get the Source File
+		$FileInfo = [Microsoft.SharePoint.Client.File]::OpenBinaryDirect($Ctx, $srcFile.ServerRelativeURL)
+		[Microsoft.SharePoint.Client.File]::SaveBinaryDirect($CtxDst, $dstFileURL, $FileInfo.Stream,$True)
+
+		$sItems   = $srcFile.ListItemAllFields
+		$Ctx.Load($sItems)
+		$Ctx.ExecuteQuery()
+		$dstFile = Get-DestFile $CtxDst $dstListUrl $dstFld $dstFileURL.split("/")[-1]
+		$dstItems = $dstFile.ListItemAllFields
+		foreach($fieldItem  in $listOfDstFields){
+			if ($fieldItem.fieldType -ne "File"){
+				$isLookupField = $false
+				$foundField = $false
+				$fldSrcIntName = "" # internal name
+				
+				forEach($fItemSrc in $listOfSrcFields){
+					if ($fItemSrc.fieldDispName -eq $fieldItem.fieldDispName){
+						$foundField = $true
+						$isLookupField = $fItemSrc.fieldType -eq "Lookup"
+						$fldSrcIntName = $fItemSrc.fieldName
+						break
+					}
+				}
+				if ($foundField){
+					if (!$isLookupField){
+						$dstItems[$fieldItem.fieldName] = $sItems[$fldSrcIntName] 
+					}
+					else
+					{
+						$dstItems[$fieldItem.fieldName] = ([Microsoft.SharePoint.Client.FieldLookupValue]$sItems[$fldSrcIntName]).LookupValue
+					}
+				}
+			}	
+		}
+		$dstItems["Created" ] = $sItems["Created" ] #$srcDateCreat
+		$dstItems["Modified"] = $sItems["Modified"] # $srcDateEdit
+		$dstItems["Author"  ] = $sItems["Author"  ] #$srcWhoCreat
+		$dstItems["Editor"  ] = $sItems["Editor"  ] #$srcWhoEdit
+		$dstItems.Update()
+		$listDst.Update()
+		$CtxDst.Load($dstItems)
+		$CtxDst.Load($listDst)
+		$CtxDst.ExecuteQuery()
+		
+		
+	
+	}
+	
+}
 function Get-XmlObj($xmlFileName){
 	$obj = "" | Select SPSource,SPDestination,DestinationFolders,FieldMaps,FieldStatics
 	
-	$SPSource  		= "" | Select SiteURL,ListName,ListFilterField,ListFilterValues
-	$SPDestination  = "" | Select SiteURL,ListName,FolderField,FolderName,KeyField
+	$SPSource  		= "" | Select SiteURL,ListName,ListFilterField,ListFilterValues,CopyStudentsItems,CopyResponseLetter,ResponseLetterListName,ApplicantFolderLinkField
+	$SPDestination  = "" | Select SiteURL,ListName,FolderField,FolderName,KeyField,StudentsItemsDestFolder,ResponseLetterDocTypeName
 	$DestinationFolders  = "" | Select FolderInnerName,FolderName,FolderStructure
 	$FieldMaps  = "" | Select Items
 	$FieldStatics  = "" | Select Items
@@ -202,6 +451,17 @@ function Get-XmlObj($xmlFileName){
 			$SPSource.ListName = $spSrc.ListName
 			$SPSource.ListFilterField = $spSrc.ListFilterField
 			$SPSource.ListFilterValues = $spSrc.ListFilterValues.ToString().Split(",") | %{$_.Trim()}
+			$SPSource.CopyStudentsItems = $false
+			if ( $spSrc.CopyStudentsItems -eq "Yes"){
+				$SPSource.CopyStudentsItems = $true
+				$SPSource.ApplicantFolderLinkField = $spSrc.ApplicantFolderLinkField 
+			}
+			$SPSource.CopyResponseLetter = $false
+			if ( $spSrc.CopyResponseLetter -eq "Yes"){
+				$SPSource.CopyResponseLetter = $true
+				$SPSource.ResponseLetterListName = $spSrc.ResponseLetterListName
+			}
+			
 			
 			break
 		}
@@ -215,6 +475,9 @@ function Get-XmlObj($xmlFileName){
 			$SPDestination.FolderField = $spDest.FolderField
 			$SPDestination.FolderName = $spDest.FolderName
 			$SPDestination.KeyField = $spDest.KeyField
+			$SPDestination.StudentsItemsDestFolder = $spDest.StudentsItemsDestFolder
+			$SPDestination.ResponseLetterDocTypeName = $spDest.ResponseLetterDocTypeName
+			
 			break
 		}
 		$xmlDestinationFolders = $xmlDoc.SelectNodes("//DestinationFolders")
@@ -319,6 +582,7 @@ $studentFolderName = $xmlObj.SPDestination.FolderName
 $FolderField = $xmlObj.SPDestination.FolderField
 $FolderStructure = $xmlObj.DestinationFolders.FolderStructure
 $destFolderInnerName   = $xmlObj.DestinationFolders.FolderInnerName
+
 $adestFolderExternNameTmp = $xmlObj.DestinationFolders.FolderName.Split("%")
 $adestFolderExternName = @()
 
@@ -331,12 +595,17 @@ forEach($dstFldExtName in $adestFolderExternNameTmp){
 #$adestFolderExternName
 
 $cnt =1
+$allCount = $filteredListID.Count
 forEach($srcID in $filteredListID){
-	write-host $srcID
+	Write-Host "$cnt OF $allCount ..." -f Green
+	#Write-Host "$srcID" -f Green
+	#if ($cnt -gt 92){	
+	#write-host $srcID
 	$srcItem = $LstSrc.GetItemById($srcID)
 	$Ctx.Load($srcItem)
 	$Ctx.ExecuteQuery()
 	#
+	Write-Host "StudentID: "$srcItem[$keyFieldName] -f Cyan
 	$destinationID = Get-DestinationItemID $siteURLDest $listNameOut $keyFieldName $srcItem[$keyFieldName]
 	if ($destinationID -eq 0){
 		$listItemInfo = New-Object Microsoft.SharePoint.Client.ListItemCreationInformation
@@ -367,13 +636,14 @@ forEach($srcID in $filteredListID){
 	#
 	$HyperLinkField= New-Object Microsoft.SharePoint.Client.FieldUrlValue
     $HyperLinkField.Url = $xmlObj.SPDestination.SiteURL + $listItemDst[$keyFieldName]
+	
     $HyperLinkField.Description = $studentFolderName
 	$listItemDst[$FolderField] =[Microsoft.SharePoint.Client.FieldUrlValue]$HyperLinkField
 	
 	$listItemDst.Update()      
 	$ctxDest.load($ListDst)      
 	$ctxDest.executeQuery()  
-	Write-Host "Item Added with ID - " $listItemDst.ID 		
+	#Write-Host "Item Added with ID - " $listItemDst.ID 		
 	#>
 	
 	
@@ -392,30 +662,43 @@ forEach($srcID in $filteredListID){
 	$dstFldInnNmeVal = $srcItem[$destFolderInnerName]
 	$isDocLibExists  = Is-DocLibExists $siteURLDest $dstFldInnNmeVal
 	
-	if (!$isDocLibExists){
+	if (!$isDocLibExists.Exists){
 		write-host "Document Library Creating"
 		write-host $dstFldInnNmeVal -f Magenta
 		write-host $dstFldExtNmeVal -f Cyan
 		create-DocLib $siteURLDest $dstFldInnNmeVal $dstFldExtNmeVal
 		
 	}
+	else
+	{
+		$dstFldExtNmeVal = $isDocLibExists.Title
+	}
 	Add-FieldsToDocLibX $siteURLDest $dstFldExtNmeVal
 	Change-DefaultViewX $siteURLDest $dstFldExtNmeVal
 	Create-Folders $siteURLDest $dstFldExtNmeVal $FolderStructure
-	$cnt++
-	if ($cnt -gt 2){
-		break	
+	if ($xmlObj.SPSource.CopyStudentsItems){ # flag to Copy is On
+		Copy-StudentFiles $siteURL $srcItem[$xmlObj.SPSource.ApplicantFolderLinkField] $siteURLDest $dstFldExtNmeVal $dstFldInnNmeVal $xmlObj.SPDestination.StudentsItemsDestFolder
+	}
+	if ($xmlObj.SPSource.CopyResponseLetter){ # flag to Copy is On
+		Copy-LettersFiles 	$siteURL $xmlObj.SPSource.ResponseLetterListName $srcItem[$keyFieldName] $siteURLDest $dstFldExtNmeVal $xmlObj.SPDestination.StudentsItemsDestFolder 	$xmlObj.SPDestination.ResponseLetterDocTypeName
 	}
 	
+	#}
+	$cnt++
+	#if ($cnt -gt 2){
+	#	break	
+	#}
+	
+	$RecentsTitle = "לאחרונה"
+	$NOmoreSubItems = $false
+	while (!$NOmoreSubItems){
+		$NOmoreSubItems =  Delete-RecentsSubMenu $siteURLDest $RecentsTitle 
+
+	}
 	
 }
 
 $RecentsTitle = "לאחרונה"
-$NOmoreSubItems = $false
-while (!$NOmoreSubItems){
-	$NOmoreSubItems =  Delete-RecentsSubMenu $siteURLDest $RecentsTitle 
-
-}
 
 Delete-RecentMainMenu $siteURLDest $RecentsTitle 	
 

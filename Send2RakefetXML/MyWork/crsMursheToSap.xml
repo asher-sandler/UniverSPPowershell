@@ -1,0 +1,188 @@
+<ServiceCollection>
+	<Service>
+		<TargetUrl>\\ekekfls00\data$\ftpRoot\ibts</TargetUrl>
+		<FileName>NEW_VENDOR.csv</FileName>
+		<Delimiter xml:space="preserve">	</Delimiter>
+		<Encoding>1200</Encoding>
+
+		<!--AS  new Entities  begin-->
+		<TargetPdf>\\ekekfls00\data$\scriptFolders\FilesToSap</TargetPdf>
+		<ReportErrorTo>AsherSa@ekmd.huji.ac.il</ReportErrorTo>
+		<ReportErrorSubject>murshe SAP Errors</ReportErrorSubject>
+		<!-- new Entities End-->
+		
+		<DataDetailsCollection>
+			<DataDetails>
+				<SPSource>
+					<ListUrl>https://crs2.ekmd.huji.ac.il/home/murshe/2019</ListUrl>
+					<ListName>contractors</ListName>
+					<MainList>true</MainList>
+					<RunColumn>SendToSAP</RunColumn>
+					<UniqueIdentifierColumn>userName</UniqueIdentifierColumn>
+					<DoneColumn>SapDone</DoneColumn>
+
+					<!-- new Entities  begin-->
+					<PdfFinalListName>Final</PdfFinalListName>
+					<SearchInFinalColumn>studentId</SearchInFinalColumn>
+					<!-- new Entities End-->
+					
+				</SPSource>
+				
+				<ParamCollection>
+					<Param>
+						<SPColumnName>contractorSapType</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>1</TargetOrder>
+						<Trim>end</Trim>
+						<Fill>end</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>supplierName</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>2</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>studentId</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>3</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>street</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>4</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>emptyForSap</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>5</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>zip</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>6</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>city</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>7</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>phone</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>8</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>mobile</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>9</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>fax</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>10</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>emailFinance</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>11</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>idForSap</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>12</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>businessNum</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>13</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>deductionFileNum</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>14</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>bankForSap</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>15</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>bankAccountNum</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>16</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+					
+					<Param>
+						<SPColumnName>email</SPColumnName>
+						<ParamType>String</ParamType>
+						<CharLength></CharLength>
+						<TargetOrder>17</TargetOrder>
+						<Trim>End</Trim>
+						<Fill>End</Fill>
+					</Param>
+				</ParamCollection>
+			</DataDetails>
+		</DataDetailsCollection>
+	</Service>
+</ServiceCollection>

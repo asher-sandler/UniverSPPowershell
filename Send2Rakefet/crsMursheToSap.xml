@@ -4,16 +4,28 @@
 		<FileName>NEW_VENDOR.csv</FileName>
 		<Delimiter xml:space="preserve">	</Delimiter>
 		<Encoding>1200</Encoding>
-		
+
+		<!-- new Entities  begin-->
+		<TargetPdf>\\ekekfls00\data$\scriptFolders\FilesToSap</TargetPdf>
+		<ReportErrorTo>AsherSa@ekmd.huji.ac.il</ReportErrorTo>
+		<ReportErrorSubject>murshe SAP Errors</ReportErrorSubject>
+		<!-- new Entities End-->
+
 		<DataDetailsCollection>
 			<DataDetails>
 				<SPSource>
-					<ListUrl>https://crs2.ekmd.huji.ac.il/home/murshe/2019</ListUrl>
-					<ListName>contractors</ListName>
+					<ListUrl>https://gss2.ekmd.huji.ac.il/home/SocialSciences/SOC23-2019</ListUrl>
+					<ListName>murshe</ListName>
 					<MainList>true</MainList>
 					<RunColumn>SendToSAP</RunColumn>
 					<UniqueIdentifierColumn>userName</UniqueIdentifierColumn>
 					<DoneColumn>SapDone</DoneColumn>
+
+					<!-- new Entities  begin-->
+					<PdfFinalListName>Final</PdfFinalListName>
+					<SearchInFinalColumn>studentId</SearchInFinalColumn>
+					<!-- new Entities End-->
+					
 				</SPSource>
 				
 				<ParamCollection>

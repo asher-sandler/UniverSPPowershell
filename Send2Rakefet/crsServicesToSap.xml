@@ -8,8 +8,8 @@
 		<DataDetailsCollection>
 			<DataDetails>
 				<SPSource>
-					<ListUrl>https://crs2.ekmd.huji.ac.il/home/services/2019</ListUrl>
-					<ListName>contractors</ListName>
+					<ListUrl>https://gss2.ekmd.huji.ac.il/home/SocialSciences/SOC23-2019</ListUrl>
+					<ListName>contractorsServices</ListName>
 					<MainList>true</MainList>
 					<RunColumn>SendToSAP</RunColumn>
 					<UniqueIdentifierColumn>userName</UniqueIdentifierColumn>

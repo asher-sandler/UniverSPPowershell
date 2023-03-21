@@ -86,19 +86,29 @@ function processControl(controlType,ControlText,fieldName){
 						ControlText === '$DateTimeFieldTopTable'){
 						//console.log("fieldTitlLc1",fieldTitlLc1);
 						//console.log("indexof",fieldTitlLc1.indexOf(fieldEl1));
-						//if (fieldTitlLc1.indexOf('deadline') > -1){
-						//	console.log("fieldTitle1",fieldTitle1);
-						//}	
-						if (fieldTitlLc1.indexOf(fieldEl1) > -1){
+						if (fieldTitlLc1.indexOf('lastsubmit') > -1){
+							//console.log("fieldTitle1",fieldTitle1);
+							//debugger;
+						}
+						else{						
+							if (fieldTitlLc1.indexOf(fieldEl1) > -1){
 							//console.log("fieldTitle1",fieldTitle1);
 							setRowClasses(selElem.id,'tofes-row-hide');
 						
+							}
 						}
 					}
 					else{
 						if (fieldEl1 === fieldTitlLc1){
-							//console.log('Field Found: ',fieldTitlLc)
-							setRowClasses(selElem.id,'tofes-row-hide');
+						if (fieldTitlLc1.indexOf('lastsubmit') > -1){
+							//console.log("fieldTitle1",fieldTitle1);
+							//debugger;
+						}
+						else{
+							
+								//console.log('Field Found: ',fieldTitlLc)
+								setRowClasses(selElem.id,'tofes-row-hide');
+							}
 						}
 					}
 				}

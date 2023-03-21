@@ -117,12 +117,13 @@ return $outFile
 	$userPWD = "GrapeFloor789"
 	#https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM172-2021/Lists/DocType
 	$SiteURL="https://scholarships.ekmd.huji.ac.il/home/humanities/HUM172-2021"
-	$siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022";
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/natureScience/SCI26-2022";
 	$siteURL = "https://hss.ekmd.huji.ac.il/home";
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/humanities/HUM20-2022/Archive-2023-01-01";
+	$siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+
 	$ListTitle = "FirstGrade"
 	$ListDisplayTitle = "תואר ראשון"
 	$ListDisplayTitle = "applicants"
@@ -131,7 +132,7 @@ return $outFile
 $ListDisplayTitle = "applicants"
 $ListDisplayTitle = "availableHSSarchive"
 $ListDisplayTitle = "availableScholarshipsList"
-$ListDisplayTitle = "applicants"
+$ListDisplayTitle = "FAQ"
 	$className = $SiteURL.split('/')[-1]
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)

@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="898ed4da-0e43-4725-97c9-a06330b91ca8" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="AS-WPHello2.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="AS-WPHello2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6be419b2259bfc3d" Namespace="AS_WPHello2.VisualWebPart1" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\AS_WPHello2\VisualWebPart1\VisualWebPart1UserControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="AS-WPHello2_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>

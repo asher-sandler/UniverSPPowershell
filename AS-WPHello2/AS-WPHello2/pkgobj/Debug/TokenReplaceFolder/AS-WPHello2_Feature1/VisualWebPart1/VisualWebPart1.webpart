@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="AS_WPHello2.VisualWebPart1.VisualWebPart1, AS-WPHello2, Version=1.0.0.0, Culture=neutral, PublicKeyToken=6be419b2259bfc3d" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">AS WPHello2</property>
+        
+      </properties>
+    </data>
+  </webPart>
+</webParts>

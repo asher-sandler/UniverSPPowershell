@@ -16,9 +16,11 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 
 $Credentials = get-SCred
 
- $siteNew = "https://scholarships.ekmd.huji.ac.il/home/General/GEN153-2021";
- $siteOld = "https://scholarships.ekmd.huji.ac.il/home/General/GEN152-2021";
- $listName = "DocType"
+ $siteNew = "https://scholarships2.ekmd.huji.ac.il/home/NaturalScience/SCI79-2021";
+ $siteOld = "https://scholarships2.ekmd.huji.ac.il/home/NaturalScience/SCI75-2021";
+ $listName = "birthYearList"
+ $listName = "instituteList"
+ 
  if ($listName.ToLower().Trim() -eq "doctype"){
 	copy-DocTypeList $siteNew $siteOld	 
  }
