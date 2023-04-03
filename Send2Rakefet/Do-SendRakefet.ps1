@@ -375,7 +375,8 @@ $dtNowStr 		= get-FrendlyDate 		$dtNow
 $logFile = $scriptDirectory + "\AS-SendSap-"+$dtNowStrLog+".txt"
 
 if ($isDebug){
-	$xmlFileName = $scriptDirectory+"\crsMursheToSap.xml"
+	#$xmlFileName = $scriptDirectory+"\crsMursheToSap.xml"
+	#$xmlFileName = $scriptDirectory+"\crsMursheToSap-prod.xml"
 	$logFile = $scriptDirectory + "\AS-SendSap.txt"
 }
 
@@ -400,16 +401,26 @@ write-host "Script Directory:  <$scriptDirectory>"
 write-host "XML File		:  <$xmlFileName>"        
 write-host 
 
-
 $xmlRakfObj = get-XmlObj $xmlFileName
 
 	$JsonFile =   $scriptDirectory + "\xmlObj.json"
 	$xmlRakfObj | ConvertTo-Json -Depth 100 | out-file $JsonFile
-#	Write-Host 408 "...."
-#read-host
+if ($isDebug){
+	write-host  409 "Press any key..."
+	Read-Host
+}
+
 $sapIsEmpty = $true
 $oSap = get-RakefetListItems $xmlRakfObj
-
+if ($isDebug){
+   # Send "sapObj.json"
+	$JsonFile =   "sapObj.json"
+	$oSap | ConvertTo-Json -Depth 100 | out-file $JsonFile
+	$ts = gc $JsonFile -raw 
+	$msgSubj = "Export To SAP json: "+$(Get-Date).ToString("yyyy-MM-dd HH:mm")
+	write-host  421 "Press any key..."
+	Read-Host
+}
 forEach($itm in $oSap.ListOfIDs){
 	$sapIsEmpty = $false
 	break
@@ -426,9 +437,10 @@ if (!$sapIsEmpty){
 
 	$sendSapField = $xmlRakfObj.SPSource.RunColumn
 	$doneField    = $xmlRakfObj.SPSource.SapDone
+if (!$isDebug){
 	
 	Update-Contractor $currentSite $currentList $oSap.ListOfIDs $sendSapField $doneField
-
+}
     # Send "sapObj.json"
 	$JsonFile =   "sapObj.json"
 	$oSap | ConvertTo-Json -Depth 100 | out-file $JsonFile
@@ -474,6 +486,7 @@ if (!$sapIsEmpty){
 	Write-Host "Sending Output CSV File..."
 	# $oSap.listofIDs | Export-Csv ".\idList.csv" -Encoding UTF8 -NoTypeInfo
 	$outFileName = ".\crsMursheToSap.txt"
+	$outFileName = ".\"+$xmlRakfObj.Service.FileName
 	$oStr | Out-File $outFileName -Encoding Unicode
  	
 

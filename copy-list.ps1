@@ -16,7 +16,7 @@ $dp0 = [System.IO.Path]::GetDirectoryName($0)
 
 $Credentials = get-SCred
 
- $siteNew = "https://scholarships2.ekmd.huji.ac.il/home/NaturalScience/SCI79-2021";
+ $siteNew = "https://scholarships2.ekmd.huji.ac.il/home/NaturalScience/SCI85-2022";
  $siteOld = "https://scholarships2.ekmd.huji.ac.il/home/NaturalScience/SCI75-2021";
  $listName = "birthYearList"
  $listName = "instituteList"

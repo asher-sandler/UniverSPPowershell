@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<webParts>
+  <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
+    <metaData>
+      <type name="AssessmentMenu.VisualWebPart1.VisualWebPart1, AssessmentMenu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9fef0a08b08e88f" />
+      <importErrorMessage>$Resources:core,ImportErrorMessage;</importErrorMessage>
+    </metaData>
+    <data>
+      <properties>
+        <property name="Title" type="string">Assessment Menu</property>
+        
+      </properties>
+    </data>
+  </webPart>
+</webParts>

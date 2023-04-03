@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="255768bb-7434-417a-91ec-98bb6b6c49a0" SharePointProductVersion="15.0">
+  <Assemblies>
+    <Assembly Location="AssessmentMenu.dll" DeploymentTarget="GlobalAssemblyCache">
+      <SafeControls>
+        <SafeControl Assembly="AssessmentMenu, Version=1.0.0.0, Culture=neutral, PublicKeyToken=c9fef0a08b08e88f" Namespace="AssessmentMenu.VisualWebPart1" TypeName="*" />
+      </SafeControls>
+    </Assembly>
+  </Assemblies>
+  <TemplateFiles>
+    <TemplateFile Location="CONTROLTEMPLATES\AssessmentMenu\VisualWebPart1\VisualWebPart1UserControl.ascx" />
+  </TemplateFiles>
+  <FeatureManifests>
+    <FeatureManifest Location="AssessmentMenu_Feature1\Feature.xml" />
+  </FeatureManifests>
+</Solution>
