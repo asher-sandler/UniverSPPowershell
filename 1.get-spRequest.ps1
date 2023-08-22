@@ -8,6 +8,7 @@ param([string] $groupName = "",
 	[string[]]$InitUser = "No"
 	
 	)
+# https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM#versions-body-tab
 # dotnet add package Microsoft.SharePointOnline.CSOM --version 16.1.21812.12000	
 # nuget.exe install Microsoft.SharePointOnline.CSOM
 # cd \AdminDir\nuget

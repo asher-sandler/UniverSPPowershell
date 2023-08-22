@@ -122,7 +122,7 @@ AD_Config_Name
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.Runtime.dll"
 
  $tenantAdmin = "ekmd\ashersa"
- $tenantAdminPassword = "GrapeFloor789"
+ $tenantAdminPassword = ""
  $secureAdminPassword = $(convertto-securestring $tenantAdminPassword -asplaintext -force)
  $siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
  $siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU62-2022";

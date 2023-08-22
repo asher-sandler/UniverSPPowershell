@@ -49,6 +49,7 @@ start-transcript "HideDocLib.log"
 		 $siteURL = "https://scholarships.ekmd.huji.ac.il/home/SocialSciences/SOC36-2015";
 		 $siteURL = "https://scholarships2.ekmd.huji.ac.il/home/Agriculture/AGR36-2015";
 		 $siteURL = "https://crs.ekmd.huji.ac.il/home/exempt/2019";
+		 $siteURL = "https://tss.ekmd.huji.ac.il/home/Medicine/MED23-2020";
 		 
 		 
         		 

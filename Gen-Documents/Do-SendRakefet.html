@@ -1,0 +1,113 @@
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>Do-SendRakefet.ps1</title>
+<style>
+.as-item-list{color:#1F2328;margin-top:3.0pt;line-height:normal;background:white;}
+.as-item-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:black;}
+.as-header-p{margin-bottom:12.0pt;line-height:normal;background:white;}
+.as-header-span{font-size:24.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-p{margin-top:.25in;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;line-height:normal;background:white;}
+.as-toc-span{font-size:18.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-li{class='as-toc-li';}
+.as-toc-li-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;}
+.as-p-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-p-code{font-size:10.0pt;font-family:Consolas;color:#1F2328;}
+</style>
+</head>
+<body lang=EN-US link=blue vlink='#954F72' style='word-wrap:break-word'>
+<div>
+<p class='as-header-p' ><b><span class='as-header-span'>Do-SendRakefet.ps1</span></b></p>
+<p class='as-item-list'><span class='as-item-span'> Generate CSV and PDF files for SAP accounting system.<br/></span></p>
+<p  class='as-toc-p'>
+	<p  class='as-toc-p'><b><span class='as-toc-span'>Table of Contents</span></b></p><ul type=disc><li  class="as-toc-li"><span class="as-toc-li-span"><a href="#general-information">General Information</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#user-action-to-call-script">User action to call script</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#script-logic">Script Logic</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#external-pathes-names">External PATHes names</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#used-xml-ini-files">Used XML Ini Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#log-files">Log Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#project-status">Project Status</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#source-code-location">Source code location</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#cmd-file-params">CMD File Params</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#errors-parsing">Errors parsing</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#acknowledgements">Acknowledgements</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#contact">Contact</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#disclaimer">Disclaimer</a></span></li>
+</ul><p  id='general-information' class='as-toc-p'><b><span class='as-toc-span'>General Information</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script generate csv files for SAP Accounting system. </span></p>
+<p class="as-header-p"><span class="as-p-span">Also it search vendor's PDF passport  file in Final List and copy it to external path.</span></p>
+
+<p  id='user-action-to-call-script' class='as-toc-p'><b><span class='as-toc-span'>User action to call script</span></b></p>
+<p class="as-header-p"><span class="as-p-span">User have to check box of field SendToSAP <b>[x]</b> to run Script. </span></p>
+<p class="as-header-p"><span class="as-p-span">Important! that field SapDone must be cleared <b>[ ]</b>, in other way script will not run.</span></p>
+
+<p  id='script-logic' class='as-toc-p'><b><span class='as-toc-span'>Script Logic</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script parse XML ini file passed by parameter and use xml Fields <b>[ListUrl]</b> <b>[ListName]</b> to open SharePoint List</span></p>
+<p class="as-header-p"><span class="as-p-span">Sharepoint List Name from XML is Contractor.</span></p>
+<p class="as-header-p"><span class="as-p-span">Script check <b>[Contractor]</b> fields <b>[SendToSAP]</b> is Check <b>[x]</b> and SapDone is Uncheck <b>[ ]</b>. Get value of field <b>[SearchInFinalColumn]</b>studentId, and search in Final list file with the name <b>[studentId]</b>.pdf</span></p>
+<p class="as-header-p"><span class="as-p-span">If file PDF exists script Generate csv file <b>[NEW_VENDOR.csv]</b> and copies PDF from Final list to external path.</span></p>
+<p class="as-header-p"><span class="as-p-span">Finally script set value <b>[SapDone]</b> <b>[x]</b> and unset value of field <b>[SendToSAP]</b> <b>[ ]</b> in Contractor List .</span></p>
+
+<p  id='external-pathes-names' class='as-toc-p'><b><span class='as-toc-span'>External PATHes names</span></b></p>
+<p class="as-header-p"><span class="as-p-span">NEW_VENDOR.csv is a SAP export file containing information about contractors, and it generates in directory from xml parameters <b>[TargetUrl]</b> and <b>[FileName]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">\\ekekfls00\data$\ftpRoot\ibts</span></p>
+<p class="as-header-p"><span class="as-p-span">NEW_VENDOR.csv created in directory:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekekfls00\data$\ftpRoot\ibts\NEW_VENDOR.csv</span></li>
+<p class="as-header-p"><span class="as-p-span">and copy to: </span></p>
+<li class="as-item-list"><span class="as-toc-li-span">\\vscifs.cc.huji.ac.il\sapinterface\NON_PO_interfaces\PRD\FI\I_OPEN_VENDOR</span></li>
+<p class="as-header-p"><span class="as-p-span">Output PDF Files copies to:</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">\\vscifs.cc.huji.ac.il\sapinterface\NON_PO_interfaces\PRD\FI\I_OPEN_VENDOR\Attachments</span></li>
+</ul>
+
+<p  id='used-xml-ini-files' class='as-toc-p'><b><span class='as-toc-span'>Used XML Ini Files</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script uses XML ini files located in: 	</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsExemptToSap.xml</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsMursheToSap.xml</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsServicesToSap.xml</span></li>
+</ul>
+
+<p  id='log-files' class='as-toc-p'><b><span class='as-toc-span'>Log Files</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Log files located in "\\ekekfls00\data$\scriptFolders\LOGS\SAPExport" directory</span></li>
+</ul>
+
+<p  id='project-status' class='as-toc-p'><b><span class='as-toc-span'>Project Status</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Project is: completed: In Production. </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Task on server: \\ekekspapp10\SendtoRakefet$</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Name of CMD file: Do-SP2SAP_GenerateFiles</span></li>
+</ul>
+
+<p  id='source-code-location' class='as-toc-p'><b><span class='as-toc-span'>Source code location</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Source code located in file: </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekekaiosp05\c$\AdminDir\Send2Rakefet\Do-SendRakefet.ps1</span></li>
+</ul>
+
+<p  id='cmd-file-params' class='as-toc-p'><b><span class='as-toc-span'>CMD File Params</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script get name of XML ini file as parameter. So, in CMD command file script calls 3 times with various XML as parameter.</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Do-SendRakefet.ps1" "\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsExemptToSap.xml"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Do-SendRakefet.ps1" "\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsMursheToSap.xml"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Do-SendRakefet.ps1" "\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsServicesToSap.xml"</span></li>
+</ul>
+
+<p  id='errors-parsing' class='as-toc-p'><b><span class='as-toc-span'>Errors parsing</span></b></p>
+<p class="as-header-p"><span class="as-p-span">If contractors's PDF file not found in Final List, CSV file <b>[NEW_VENDOR.csv]</b> will not generates and nothing happened. </span></p>
+
+<p  id='acknowledgements' class='as-toc-p'><b><span class='as-toc-span'>Acknowledgements</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Developer: Asher Sandler. </span></p>
+
+<p  id='contact' class='as-toc-p'><b><span class='as-toc-span'>Contact</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Created by <b>[Asher Sandler]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">ashersan@savion.huji.ac.il </span></p>
+<p class="as-header-p"><span class="as-p-span">feel free to contact me!</span></p>
+
+<p  id='disclaimer' class='as-toc-p'><b><span class='as-toc-span'>Disclaimer</span></b></p>
+<p class="as-header-p"><span class="as-p-span">This document cannot cover all the details and nuances of the script. It only provides a general description and is not a technical document. Please contact the developer for details.</span></p>
+
+<p >&nbsp;</p>
+</div>
+</body>
+</html>

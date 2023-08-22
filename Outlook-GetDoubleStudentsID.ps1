@@ -106,7 +106,7 @@ foreach($itm in $doubleStudents){
 	$target = "supportsp@savion.huji.ac.il"
 	#$target = "AsherSa@ekmd.huji.ac.il"
 	$supportEmail = "AsherSa@ekmd.huji.ac.il"
-	$doNotReply = "support@ekmd.huji.ac.il"
+	$doNotReply = "AsherSan@savion.huji.ac.il"
 	$subj = "Multiple Student ID Detected"
 	
 	#$smtpserverName = "ekekcas01"
@@ -119,7 +119,7 @@ foreach($itm in $doubleStudents){
 		$Mail.Sender = $doNotReply
 		$Mail.Subject = $subj
 		$abc =  "StudentID : $sID`n"+ $htmlRowTemp
-		#$abc
+		$abc
 		#$Mail.HTMLBody  = $abc # "<br><p>StudentID : $sID</p>"+$htmlRowTemp #+ $htmlBody #"<br><p>rrr</p>" #$idxHTML
 		$Mail.Body  = $abc # "<br><p>StudentID : $sID</p>"+$htmlRowTemp #+ $htmlBody #"<br><p>rrr</p>" #$idxHTML
 		$Mail.Send()

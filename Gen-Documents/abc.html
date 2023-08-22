@@ -1,0 +1,86 @@
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>TSS-Reminder</title>
+<style>
+.as-item-list{color:#1F2328;margin-top:3.0pt;line-height:normal;background:white;}
+.as-item-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:black;}
+.as-header-p{margin-bottom:12.0pt;line-height:normal;background:white;}
+.as-header-span{font-size:24.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-p{margin-top:.25in;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;line-height:normal;background:white;}
+.as-toc-span{font-size:18.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-li{class='as-toc-li';}
+.as-toc-li-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;}
+.as-p-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-p-code{font-size:10.0pt;font-family:Consolas;color:#1F2328;}
+</style>
+</head>
+<body lang=EN-US link=blue vlink='#954F72' style='word-wrap:break-word'>
+<div>
+<p class='as-header-p' ><b><span class='as-header-span'>TSS-Reminder</span></b></p>
+<p class='as-item-list'><span class='as-item-span'> Remind Users for Tenure Submission System<br/></span></p>
+<p  class='as-toc-p'>
+	<p  class='as-toc-p'><b><span class='as-toc-span'>Table of Contents</span></b></p><ul type=disc><li  class="as-toc-li"><span class="as-toc-li-span"><a href="#general-information">General Information</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#technologies-used">Technologies Used</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#features">Features</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#setup">Setup</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#usage">Usage</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#project-status">Project Status</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#acknowledgements">Acknowledgements</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#contact">Contact</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#license">License</a></span></li>
+</ul><p  id='general-information' class='as-toc-p'><b><span class='as-toc-span'>General Information</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">This Script Remind Users that they have to fill and submit personal files.</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Or cancel registration submission system.</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Time Lapse from last unsubmitted process is 5 days.</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Script uses XML ini files situated in</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\ directory</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Names of XML files are: TSSARS10.xml and TSSARS11.xml</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Script uses Template ini file situated in</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\ directory</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Name of Template file is: TSSMailTemplate.txt</span></li>
+</ul>
+
+<p  id='technologies-used' class='as-toc-p'><b><span class='as-toc-span'>Technologies Used</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">PoweShell  Version 5.1</span></li>
+</ul>
+
+<p  id='features' class='as-toc-p'><b><span class='as-toc-span'>Features</span></b></p>
+<p class="as-header-p"><span class="as-p-span">In Template Ini  file there are list of internal fields that replacing during running</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">"CustName"  Customer name</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"OpenfilesUpload"  Link to Upload Page</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"openCancelPage"   Link to Cancel Page</span></li>
+</ul>
+
+<p  id='setup' class='as-toc-p'><b><span class='as-toc-span'>Setup</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy files to directory on server and ask Sergey Rubin to create cmd and Task for this script</span></p>
+
+<p  id='usage' class='as-toc-p'><b><span class='as-toc-span'>Usage</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Log files suitable in "\\ekekfls00\data$\scriptFolders\LOGS\TSSReminder" directory</span></li>
+<p class="as-header-p"><span class="as-p-span">`.\Do-TSSRemider.ps1`</span></p>
+</ul>
+
+<p  id='project-status' class='as-toc-p'><b><span class='as-toc-span'>Project Status</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Project is: _in progress_ / _complete_ / _no longer being worked on_. If you are no longer working on it, provide reasons why.</span></p>
+
+<p  id='acknowledgements' class='as-toc-p'><b><span class='as-toc-span'>Acknowledgements</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Developer: Asher Sandler. </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">This project was inspired by Evgenia Tchachkin</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">This project was based on [this tutorial](https://www.example.com).</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Many thanks to Evgenia Tchachkin</span></li>
+</ul>
+
+<p  id='contact' class='as-toc-p'><b><span class='as-toc-span'>Contact</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Created by [ashersan](mailto:ashersan@savion.huji.ac.il) - feel free to contact me!</span></p>
+
+<p  id='license' class='as-toc-p'><b><span class='as-toc-span'>License</span></b></p>
+<p class="as-header-p"><span class="as-p-span">© 2023 Copyright: The Hebrew University in Jerusalem</span></p>
+
+<p >&nbsp;</p>
+</div>
+</body>
+</html>

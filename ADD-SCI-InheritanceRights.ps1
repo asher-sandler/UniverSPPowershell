@@ -25,6 +25,41 @@ else
 
 	$Credentials = get-SCred
 
+	$adAdminGroupName  = $groupName + "_adminUG"
+	$adJudgesGroupName = $groupName + "_judgesUG"
+
+	$judGRPS = 'appphys','chem','earth','life','math','phys'
+	$admGrps = 'appphys','chem','earth','fac','life','math','phys'
+
+	write-Host "AD Admin  Group: $adAdminGroupName"  -f Yellow
+	
+	$srcADMGrp =  Get-ADGroup -Filter {Name -eq $adAdminGroupName}
+	
+
+	forEach($admGrp in $admGrps){
+		$destADMGrpName = 'HSS_SCI-'+$admGrp+'_adminUG'
+		$dstADMGrp =  Get-ADGroup -Filter {Name -eq $destADMGrpName}
+		
+		Add-ADGroupMember  $srcADMGrp -Members $dstADMGrp		
+	}	
+	#write-host "Press key to continue..."
+	#Read-Host
+	
+	
+	write-Host "AD Judges Group: $adJudgesGroupName" -f Yellow
+
+	$srcJUDGrp =  Get-ADGroup -Filter {Name -eq $adJudgesGroupName}	
+	
+
+	forEach($judGrp in $judGRPS){
+		$destJUDGrpName = 'HSS_SCI-'+$judGrp+'_judegesUG'
+		$dstJUDGrp =  Get-ADGroup -Filter {Name -eq $destJUDGrpName}
+		#$dstJUDGrp
+		Add-ADGroupMember  $srcJUDGrp -Members $dstJUDGrp		
+		
+	}	
+			
+
 	 $configFile = ".\SCI\HSS_SCI.csv"
 	 $template = $GroupName.Replace("HSS_","")
 	 $listObj = @()
@@ -202,6 +237,8 @@ else
 
 
 			}
+			
+	
 		}
 		Catch {
 			write-host -f Red "Error Granting Permissions!" $_.Exception.Message

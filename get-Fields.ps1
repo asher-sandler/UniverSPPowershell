@@ -111,11 +111,13 @@ return $outFile
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.UserProfiles.dll"
 	Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"
 
+$0 = $myInvocation.MyCommand.Definition
+$dp0 = [System.IO.Path]::GetDirectoryName($0)
+. "$dp0\Utils-Request.ps1"
+. "$dp0\Utils-DualLanguage.ps1"
 
 
-	$userName = "ekmd\ashersa"
-	$userPWD = "GrapeFloor789"
-	#https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM172-2021/Lists/DocType
+	$Credentials = get-SCred	#https://scholarships2.ekmd.huji.ac.il/home/humanities/HUM172-2021/Lists/DocType
 	$SiteURL="https://scholarships.ekmd.huji.ac.il/home/humanities/HUM172-2021"
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/Education/EDU63-2022";
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/EDU/stdFolders";
@@ -123,20 +125,24 @@ return $outFile
 	$siteURL = "https://hss.ekmd.huji.ac.il/home";
 	$siteURL = "https://grs.ekmd.huji.ac.il/home/humanities/HUM20-2022/Archive-2023-01-01";
 	$siteURL = "https://portals.ekmd.huji.ac.il/home/huca/EinKarem/ekcc/QA/AsherSpace";
+	$siteURL = "https://portals.ekmd.huji.ac.il/home/Medicine/hr";
 
 	$ListTitle = "FirstGrade"
 	$ListDisplayTitle = "תואר ראשון"
-	$ListDisplayTitle = "applicants"
+	
 	$ListDisplayTitle = "ResponseLetters"
 	$ListDisplayTitle = "לימודי הוראה"
 $ListDisplayTitle = "applicants"
 $ListDisplayTitle = "availableHSSarchive"
 $ListDisplayTitle = "availableScholarshipsList"
 $ListDisplayTitle = "FAQ"
+$ListDisplayTitle = "ProductsGroup"
+$ListDisplayTitle = "Clinical_Staff"
 	$className = $SiteURL.split('/')[-1]
 
 	$Ctx = New-Object Microsoft.SharePoint.Client.ClientContext($SiteURL)
-	$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	#$Ctx.Credentials = New-Object System.Net.NetworkCredential($userName, $userPWD)
+	$Ctx.Credentials = $Credentials
 	$List = $Ctx.Web.lists.GetByTitle($ListDisplayTitle)
 	    #$ViewFields = $List.DefaultView.ViewFields
     $Ctx.load($List.Fields) 

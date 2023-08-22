@@ -11,8 +11,7 @@ if ([string]::IsNullOrEmpty($site) -or [string]::IsNullOrEmpty($list)){
 else
 {
 
-	$userName = "ekmd\ashersa"
-	$userPWD = "GrapeFloor789"
+	$Credentials = get-SCred
 
 
 

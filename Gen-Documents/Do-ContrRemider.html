@@ -1,0 +1,86 @@
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>Do-ContrRemider.ps1</title>
+<style>
+.as-item-list{color:#1F2328;margin-top:3.0pt;line-height:normal;background:white;}
+.as-item-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:black;}
+.as-header-p{margin-bottom:12.0pt;line-height:normal;background:white;}
+.as-header-span{font-size:24.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-p{margin-top:.25in;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;line-height:normal;background:white;}
+.as-toc-span{font-size:18.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-li{class='as-toc-li';}
+.as-toc-li-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;}
+.as-p-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-p-code{font-size:10.0pt;font-family:Consolas;color:#1F2328;}
+</style>
+</head>
+<body lang=EN-US link=blue vlink='#954F72' style='word-wrap:break-word'>
+<div>
+<p class='as-header-p' ><b><span class='as-header-span'>Do-ContrRemider.ps1</span></b></p>
+<p class='as-item-list'><span class='as-item-span'> Remind Users for Contractor system<br/></span></p>
+<p  class='as-toc-p'>
+	<p  class='as-toc-p'><b><span class='as-toc-span'>Table of Contents</span></b></p><ul type=disc><li  class="as-toc-li"><span class="as-toc-li-span"><a href="#general-information">General Information</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#used-xml-ini-files">Used XML Ini Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#used-mail-template-ini-file">Used Mail Template Ini File</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#log-files">Log Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#project-status">Project Status</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#email-template">Email Template</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#acknowledgements">Acknowledgements</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#contact">Contact</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#disclaimer">Disclaimer</a></span></li>
+</ul><p  id='general-information' class='as-toc-p'><b><span class='as-toc-span'>General Information</span></b></p>
+<p class="as-header-p"><span class="as-p-span">The script sends email notifications to users who have not completed registration in the system within 5 days from the start of registration.</span></p>
+
+<p  id='used-xml-ini-files' class='as-toc-p'><b><span class='as-toc-span'>Used XML Ini Files</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script uses XML ini files located in: 	</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsMursheToSap.xml</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsExemptToSap.xml</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\crsServicesToSap.xml</span></li>
+</ul>
+
+<p  id='used-mail-template-ini-file' class='as-toc-p'><b><span class='as-toc-span'>Used Mail Template Ini File</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script uses Text Template file located in:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\SendToRakefet\CRS_asher\MailTemplate.txt</span></li>
+</ul>
+
+<p  id='log-files' class='as-toc-p'><b><span class='as-toc-span'>Log Files</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Log files located in "\\ekekfls00\data$\scriptFolders\LOGS\ContactorsReminder" directory</span></li>
+</ul>
+
+<p  id='project-status' class='as-toc-p'><b><span class='as-toc-span'>Project Status</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Project is: completed: In Production. </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Task Runs every day in 19:00</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Task on server: \\EKEKSPAPP10\ContractorsReminder$</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Name of CMD file: Do-ContrRemid.cmd</span></li>
+</ul>
+
+<p  id='email-template' class='as-toc-p'><b><span class='as-toc-span'>Email Template</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Email template file located in \\ekeksql00\SP_Resources$\TSS\Reminders\TSSMailTemplate.txt directory.</span></p>
+<p class="as-header-p"><span class="as-p-span">The are custom fields (parameters) collected from SharePoint "Applicants" list: For clarification please contact developer.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters are:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">"CustName" - Customer name</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"OpenfilesUpload" - Link to Upload Page</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"openCancelPage"  - Link to Cancel Page</span></li>
+<p class="as-header-p"><span class="as-p-span">No other parameters alowed.</span></p>
+</ul>
+
+<p  id='acknowledgements' class='as-toc-p'><b><span class='as-toc-span'>Acknowledgements</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Developer: Asher Sandler. </span></p>
+
+<p  id='contact' class='as-toc-p'><b><span class='as-toc-span'>Contact</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Created by <b>[Asher Sandler]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">ashersan@savion.huji.ac.il </span></p>
+<p class="as-header-p"><span class="as-p-span">feel free to contact me!</span></p>
+
+<p  id='disclaimer' class='as-toc-p'><b><span class='as-toc-span'>Disclaimer</span></b></p>
+<p class="as-header-p"><span class="as-p-span">This document cannot cover all the details and nuances of the script. It only provides a general description and is not a technical document. Please contact the developer for details.</span></p>
+
+<p >&nbsp;</p>
+</div>
+</body>
+</html>

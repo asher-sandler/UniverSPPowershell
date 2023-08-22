@@ -17,10 +17,9 @@ namespace ListToPDF
     {
        public int ID { get; set; }
 	   
-			public string Title { get; set; } // Title
-			public string FaqEn { get; set; } // FaqEn
-			public string FaqHe { get; set; } // FaqHe
-			public string FaqType { get; set; } // FaqType
+			public string Title { get; set; } // Product
+			public string productType { get; set; } // productType
+			public string Cost { get; set; } // Cost
 			public string Attachments { get; set; } // Attachments
 
 
@@ -29,9 +28,8 @@ namespace ListToPDF
 
           ItemRow.ID = (int)spItem["ID"];
 			ItemRow.Title = (string)spItem["Title"];
-			ItemRow.FaqEn = (string)spItem["FaqEn"];
-			ItemRow.FaqHe = (string)spItem["FaqHe"];
-			ItemRow.FaqType = (string)spItem["FaqType"];
+			ItemRow.productType = (string)spItem["productType"];
+			ItemRow.Cost = (string)spItem["Cost"];
 			ItemRow.Attachments = (string)spItem["Attachments"];
            return ItemRow;
     }

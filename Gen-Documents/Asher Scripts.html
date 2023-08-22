@@ -1,0 +1,943 @@
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>Asher Sanlers's Scripts</title>
+<style>
+.as-item-list{color:#1F2328;margin-top:3.0pt;line-height:normal;background:white;}
+.as-item-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:black;}
+.as-header-p{margin-bottom:12.0pt;line-height:normal;background:white;}
+.as-header-span{font-size:24.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-p{margin-top:.25in;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;line-height:normal;background:white;}
+.as-toc-span{font-size:18.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-li{class='as-toc-li';}
+.as-toc-li-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;}
+.as-p-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-p-code{font-size:10.0pt;font-family:Consolas;color:#1F2328;}
+</style>
+</head>
+<body lang=EN-US link=blue vlink='#954F72' style='word-wrap:break-word'>
+<div>
+<p class='as-header-p' ><b><span class='as-header-span'>Asher Sanlers's Scripts</span></b></p>
+<p class='as-item-list'><span class='as-item-span'> CSOM (Client Side Object Model) Scripts to Operate with SharePoint Server from client (non server) side.<br/></span></p>
+<p  class='as-toc-p'>
+	<p  class='as-toc-p'><b><span class='as-toc-span'>Table of Contents</span></b></p><ul type=disc><li  class="as-toc-li"><span class="as-toc-li-span"><a href="#install-csom">Install CSOM</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#1.get-sprequest.ps1">1.get-spRequest.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#2.add-applicants.ps1">2.add-applicants.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#3.clone-formlist.ps1">3.Clone-FormList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#4.collect-navig.ps1">4.Collect-Navig.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#5.changeperm-doclib.ps1">5.ChangePerm-Doclib.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#5.copy-doclib.ps1">5.copy-Doclib.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#6.change-order.ps1">6.Change-Order.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#7.test-applicantsview.ps1">7.Test-ApplicantsView.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#8.dump-site.ps1">8.Dump-Site.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#8x.dump-all.ps1">8x.Dump-All.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#9.analyze-permissions.ps1">9.Analyze-Permissions.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#9x.analyze-permissionsall.ps1">9x.Analyze-PermissionsAll.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#10.compar-sites.ps1">10.Compar-Sites.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#10x.compar-sites-all.ps1">10x.Compar-Sites-all.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#11.change-destwpprops.ps1">11.Change-DestWPProps.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#13.repair-oldsites.ps1">13.Repair-OldSites.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#14.prepare-archive.ps1">14.Prepare-Archive.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#activate-feature.ps1">activate-Feature.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-sci.ps1">ADD-SCI.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-sci-adgrpstoadsci.ps1">Add-SCI-ADGrpsToAdSCI.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-sci-adgrptospgrp.ps1">ADD-SCI-AdGrpToSPGrp.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-sci-inheritancerights.ps1">ADD-SCI-InheritanceRights.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-users2adgroups.ps1">Add-Users2ADGroups.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-usertogroups.ps1">add-UserToGroups.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#add-viewrakefet.ps1">Add-ViewRakefet.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#ad-spn.ps1">AD-SPN.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#change-krakoverfiledsorder.ps1">Change-KrakoverFiledsOrder.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#check2xmlforms.ps1">check2XMLForms.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#check-deadline.ps1">Check-Deadline.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#check-doclibexistsinapplicant.ps1">Check-DoclibExistsInApplicant.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#checkforall.ps1">checkForAll.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#checkfordoubledatanamexml.ps1">checkForDoubleDataNameXML.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#classcomputer.ps1">classComputer.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#consolidate-studentfolders.ps1">Consolidate-StudentFolders.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-adgroupmemberstoadgroup.ps1">Copy-ADGroupMembersToADGroup.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-adgrp2adgrp.ps1">Copy-ADGrp2ADGrp.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-admemberstospgroup.ps1">Copy-ADMembersToSPGroup.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-archivelist.ps1">Copy-ArchiveList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-finallisttonewsites.ps1">Copy-FinalListToNewSites.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-finalsinglelist.ps1">Copy-FinalSingleList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-lisitems2listitems.ps1">Copy-LisItems2ListItems.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-list.ps1">copy-list.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-list2list.ps1">Copy-List2List.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-pagewp.ps1">Copy-PageWP.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#copy-viewlisttolist.ps1">Copy-ViewListToList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#create-addiitionalviews.ps1">Create-AddiitionalViews.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#create-biglist.ps1">create-BigList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#create-doclib.ps1">Create-DocLib.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#create-documentsuploadpage.ps1">Create-DocumentsUploadPage.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#create-list.ps1">create-list.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#del-alllistitems.ps1">del-AllListItems.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#delete-adgroupmembers.ps1">Delete-ADGroupMembers.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#delete-subsites.ps1">Delete-SubSites.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#delete-usersfromspgroup.ps1">Delete-UsersFromSPGroup.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#delete-userslibs.ps1">Delete-UsersLibs.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#find-contractors.ps1">Find-Contractors.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-allccusers.ps1">get-allccUsers.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-comments.ps1">Get-Comments.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-doclib.ps1">get-doclib.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-doclibitems.ps1">get-doclibItems.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-documentsfillfinal.ps1">get-DocumentsFillFinal.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-docuploadwp.ps1">get-DocUploadWP.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-duplicatefiles.ps1">Get-DuplicateFiles.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-fieldlist.ps1">get-FieldList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-fields.ps1">get-Fields.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-formfields.ps1">get-Formfields.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-itembycaml.ps1">Get-ItemByCaml.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-listoflistforclearinmihzur.ps1">Get-ListOfListForClearInMihzur.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-listprops.ps1">get-listProps.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-listschema.ps1">get-ListSchema.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-sitegroups.ps1">GET-SiteGroups.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-submwp.ps1">get-SubmWP.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#get-userssamaccountname.ps1">get-UsersSamAccountName.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#hebname2chrcodes.ps1">HebName2ChrCodes.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#hexname2heb.ps1">HexName2Heb.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#outlook-getdoublestudentsid.ps1">Outlook-GetDoubleStudentsID.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#replace-fieldinlist.ps1">replace-FieldInList.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#replace-libemail.ps1">Replace-LibEmail.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#restore-mihzurstudentfolder.ps1">Restore-MihzurStudentFolder.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-cred.ps1">test-cred.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-currentsystem.ps1">test-CurrentSystem.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-emptytemplate.ps1">test-EmptyTemplate.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-getallwp.ps1">Test-GetAllWP.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-getitemspagerights.ps1">test-GetItemsPageRights.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-interactie.ps1">Test-InteractIE.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-listassignpermissions.ps1">Test-ListAssignPermissions.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-listpermissions.ps1">test-ListPermissions.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-loggen.ps1">test-logGen.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-navig.ps1">test-navig.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-navig1.ps1">test-navig1.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-orderfields.ps1">test-orderFields.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-rest.ps1">test-Rest.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-saveattachements.ps1">test-SaveAttachements.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-subsites.ps1">test-Subsites.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-webrequestform.ps1">Test-WebRequestForm.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#test-windowsform.ps1">Test-windowsForm.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#utils-duallanguage.ps1">Utils-DualLanguage.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#utils-request.ps1">Utils-Request.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#wokfl-parallel.ps1">wokfl-parallel.ps1</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#gen-documents\gen-readme.ps1">Gen-Documents\Gen-Readme.ps1</a></span></li>
+</ul><p  id='install-csom' class='as-toc-p'><b><span class='as-toc-span'>Install CSOM</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Download and install CSOM from https://www.microsoft.com/en-us/download/details.aspx?id=42038</span></li>
+<p class="as-header-p"><span class="as-p-span">INSTALL nuget </span></p>
+<p class="as-header-p"><span class="as-p-span">cd <b>[path where nuget install]</b></span></p>
+<li class="as-item-list"><span class="as-toc-li-span">nuget.exe install Microsoft.SharePointOnline.CSOM</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">copy as administrator all files from nuget directory lib\net40-full\*.dll to C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\</span></li>
+<p class="as-header-p"><span class="as-p-span">because in Script uses path in command like Add-Type -Path "C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\16\ISAPI\Microsoft.SharePoint.Client.dll"</span></p>
+</ul>
+
+<p  id='1.get-sprequest.ps1' class='as-toc-p'><b><span class='as-toc-span'>1.get-spRequest.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Prepare new site for create. Read information from https://portals2.ekmd.huji.ac.il/home/huca/spSupport/Lists/spRequestsList and insert new record to <b>[AvailableXYZList]</b>.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b>; -Force Yes  (mandatory only if Year in Group not equals this year)</span></p>
+<p class="as-header-p"><span class="as-p-span">Required files : Utils-DualLanguage.ps1; Utils-Request.ps1</span></p>
+<p class="as-header-p"><span class="as-p-span">Example Using : .\1.get-spRequest.ps1 HSS_HUM164-2021</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Next Step is Open [AvailableXYZList] and Check [Target Audiences] because exist trouble to resolve Audiences in script.</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Next Step : Save item in [AvailableXYZList] and run Procedure to Create File</span></li>
+<p class="as-header-p"><span class="as-p-span">Actuality: Yes, actual</span></p>
+</ul>
+
+<p  id='2.add-applicants.ps1' class='as-toc-p'><b><span class='as-toc-span'>2.add-applicants.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Prepare created new Site for production. Tunes Pages, WebParts, Lists in new site.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Output files: [assignedGroup].txt -  Passport of Site</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Output files: [assignedGroup].html - To-DO Instruction to prepare site</span></li>
+<p class="as-header-p"><span class="as-p-span">Required files : Utils-DualLanguage.ps1; Utils-Request.ps1</span></p>
+<p class="as-header-p"><span class="as-p-span">Example Using: .\2.add-applicants.ps1 HSS_HUM000-2020</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">Next Step : Tune site for production</span></li>
+<p class="as-header-p"><span class="as-p-span">Actuality: Yes, actual</span></p>
+</ul>
+
+<p  id='3.clone-formlist.ps1' class='as-toc-p'><b><span class='as-toc-span'>3.Clone-FormList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copies List Information specifying in lookup fields in xml form from old to new site</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Required files : Utils-DualLanguage.ps1; Utils-Request.ps1</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Yes, actual</span></p>
+
+<p  id='4.collect-navig.ps1' class='as-toc-p'><b><span class='as-toc-span'>4.Collect-Navig.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copies Navigation from Old Site to New, copy pages from Old Site to New</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Required files : Utils-DualLanguage.ps1; Utils-Request.ps1</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Middle</span></p>
+
+<p  id='5.changeperm-doclib.ps1' class='as-toc-p'><b><span class='as-toc-span'>5.ChangePerm-Doclib.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Changes Permissions to New Site from Navigation Items of old site.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Required files : Utils-DualLanguage.ps1; Utils-Request.ps1</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='5.copy-doclib.ps1' class='as-toc-p'><b><span class='as-toc-span'>5.copy-Doclib.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copies Specific Document Libraries from Old Site to New.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">In code exists list of Libraries to copy.</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='6.change-order.ps1' class='as-toc-p'><b><span class='as-toc-span'>6.Change-Order.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Reorders form fields of document library on new site  as in old site.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">In code exists name of library.</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='7.test-applicantsview.ps1' class='as-toc-p'><b><span class='as-toc-span'>7.Test-ApplicantsView.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Query on View of Applicants on new site for identical  to old site</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='8.dump-site.ps1' class='as-toc-p'><b><span class='as-toc-span'>8.Dump-Site.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Creates dump of new site including info of Lists, Permissions, Navigation, Pages, WebParts and it properties and saves it to JSON</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='8x.dump-all.ps1' class='as-toc-p'><b><span class='as-toc-span'>8x.Dump-All.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Creates dump of multiple sites and saves it to JSONs</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of txt (<b>[.\grsList.txt]</b>) File with List of Groups </span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='9.analyze-permissions.ps1' class='as-toc-p'><b><span class='as-toc-span'>9.Analyze-Permissions.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Analyzes permissions of site based on information created in Script <b>[8.Dump-Site.ps1]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='9x.analyze-permissionsall.ps1' class='as-toc-p'><b><span class='as-toc-span'>9x.Analyze-PermissionsAll.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Analyzes permissions of multiple sites based on information created in Script <b>[8x.Dump-All.ps1]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of txt (<b>[.\grsList.txt]</b>) File with List of Groups </span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='10.compar-sites.ps1' class='as-toc-p'><b><span class='as-toc-span'>10.Compar-Sites.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get datailed HTML report of differences of old and new sites, including info of Pages, Mavigation, WebParts and it properies, Lists, DocLibs, Permissions.</span></p>
+<p class="as-header-p"><span class="as-p-span">Based on information created in Script <b>[8.Dump-Site.ps1]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='10x.compar-sites-all.ps1' class='as-toc-p'><b><span class='as-toc-span'>10x.Compar-Sites-all.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Same as 10.Compar-Sites.ps1 but on mutliple sites</span></p>
+<p class="as-header-p"><span class="as-p-span">Get datailed HTML report of differences of old and new sites, including info of Pages, Mavigation, WebParts and it properies, Lists, DocLibs, Permissions.</span></p>
+<p class="as-header-p"><span class="as-p-span">Based on information created in Script <b>[8x.Dump-All.ps1]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of txt (<b>[.\grsList.txt]</b>) File with List of Groups </span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='11.change-destwpprops.ps1' class='as-toc-p'><b><span class='as-toc-span'>11.Change-DestWPProps.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Change Destination Web Part properties of all Site Pages source is old site , detination new site.</span></p>
+<p class="as-header-p"><span class="as-p-span">Used JSON file Created in procedure <b>[10.Compar-Sites.ps1]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Based on information created in Script <b>[10.Compar-Sites.ps1]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of new Group in field <b>[assignedGroup]</b> of <b>[spRequestsList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='13.repair-oldsites.ps1' class='as-toc-p'><b><span class='as-toc-span'>13.Repair-OldSites.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script Prepare site for production after "Mihzur". </span></p>
+<p class="as-header-p"><span class="as-p-span">Read information from https://portals2.ekmd.huji.ac.il/home/huca/spSupport/Lists/spRequestsList with status <b>[4 - ניקוי לאחר ארכוב בוצע]</b></span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">01. Add page DocumentsUpload.aspx (if not exists)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">02. Fix DocType</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">03. Change DeadLine on applicants</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">04. Add user to applicants</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">05. Fix Default.aspx</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">06. Fix DefaultHe.aspx (if exists)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">07. Replace site Title</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">08. Replace site Description</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">09. Replace Letter Template</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">10. Replace Title</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">11. Replace Description</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">12. Replace deadLine (-1 Year)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">13. Replace recommendationsDeadline</span></li>
+<p class="as-header-p"><span class="as-p-span">Parameters: No		</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+</ul>
+
+<p  id='14.prepare-archive.ps1' class='as-toc-p'><b><span class='as-toc-span'>14.Prepare-Archive.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script Prepare site for archivation</span></p>
+<p class="as-header-p"><span class="as-p-span">Read information from https://portals2.ekmd.huji.ac.il/home/huca/spSupport/Lists/spRequestsList with status <b>[0 - חדש]</b> or <b>[1 - בביצוע]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Set field <b>[Archive_Waiting_for_Archivation]</b> <b>[x]</b> in availableXYZList (where XYZ - is a name of system, for example - Scholarship)</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No		</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No		</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='activate-feature.ps1' class='as-toc-p'><b><span class='as-toc-span'>activate-Feature.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script to test activate SharePoint Feature from CSOM</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No actual</span></p>
+
+<p  id='add-sci.ps1' class='as-toc-p'><b><span class='as-toc-span'>ADD-SCI.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script to add Views to Applicants, Navigation Hyerarchy and Document Libraries to  <b>[NaturalScience/SCI94-2022]</b> sites</span></p>
+<p class="as-header-p"><span class="as-p-span">Script Uses file ".\SCI\HSS_SCI.csv" with Following info:</span></p>
+<p class="as-header-p"><span class="as-p-span">    ==============================</span></p>
+<p class="as-header-p"><span class="as-p-span">Grp,Title,TitleHe</span></p>
+<p class="as-header-p"><span class="as-p-span">phys,Physics,פיסיקה</span></p>
+<p class="as-header-p"><span class="as-p-span">math,Math,מתמטיקה</span></p>
+<p class="as-header-p"><span class="as-p-span">life,LifeScience,מדעי החיים</span></p>
+<p class="as-header-p"><span class="as-p-span">earth,Earth,כדור הארץ</span></p>
+<p class="as-header-p"><span class="as-p-span">appphys,AppliedPhysics,פיסיקה יישומית</span></p>
+<p class="as-header-p"><span class="as-p-span">chem,Chemistry,כימיה</span></p>
+<p class="as-header-p"><span class="as-p-span">    ==============================</span></p>
+<p class="as-header-p"><span class="as-p-span">Important: In <b>[Applicants]</b> list must be field <b>[instituteDestination]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of Group specified in format <b>[HSS_SCI164-2021]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Next step: Run Script 	.\ADD-SCI-InheritanceRights.ps1 to remove Inheritance Rights and add Specific rights to document libraries.</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+<p class="as-header-p"><span class="as-p-span">Usage: .\ADD-SCI.ps1 HSS_SCI164-2021</span></p>
+
+<p  id='add-sci-adgrpstoadsci.ps1' class='as-toc-p'><b><span class='as-toc-span'>Add-SCI-ADGrpsToAdSCI.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script to add <b>[HSS_SCI-XYZ_adminUG]</b> Where XYZ Hard Coded Group specifief in list:</span></p>
+<p class="as-header-p"><span class="as-p-span">$Grps = 'SCI63-2021','SCI105-2022','SCI106-2022','SCI107-2022','SCI108-2022'</span></p>
+<p class="as-header-p"><span class="as-p-span">to AD Groups :</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-appphys_adminUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-chem_adminUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-earth_adminUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-fac_adminUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-life_adminUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-math_adminUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-phys_adminUG</span></li>
+<p class="as-header-p"><span class="as-p-span">Also to add <b>[HSS_SCI-XYZ__judgesUG]</b> Where XYZ Hard Coded Group specifief in list:</span></p>
+<p class="as-header-p"><span class="as-p-span">$Grps = 'SCI63-2021','SCI105-2022','SCI106-2022','SCI107-2022','SCI108-2022'</span></p>
+<p class="as-header-p"><span class="as-p-span">to AD Groups :</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-appphys_judegesUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-chem_judegesUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-earth_judegesUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-fac_judegesUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-life_judegesUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-math_judegesUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">HSS_SCI-phys_judegesUG</span></li>
+<p class="as-header-p"><span class="as-p-span">Parameters: No		</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: little</span></p>
+</ul>
+
+<p  id='add-sci-adgrptospgrp.ps1' class='as-toc-p'><b><span class='as-toc-span'>ADD-SCI-AdGrpToSPGrp.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script to add AD Group <b>[adminUG]</b> and <b>[judgesUG]</b> to SP Groups <b>[adminSP]</b> and <b>[judgesSP]</b>.</span></p>
+<p class="as-header-p"><span class="as-p-span">Name of sites hard coded  </span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No	</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: little	</span></p>
+
+<p  id='add-sci-inheritancerights.ps1' class='as-toc-p'><b><span class='as-toc-span'>ADD-SCI-InheritanceRights.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">FOR SCI sites only!</span></p>
+<p class="as-header-p"><span class="as-p-span">Script to break Inheritance rights and to add specific rights to following document Libraries like <b>[Final]</b>:</span></p>
+<p class="as-header-p"><span class="as-p-span">User rights like this:</span></p>
+<p class="as-header-p"><span class="as-p-span">שם	סוג	רמות הרשאה</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">EKMD\hss_sci94-2022_admin-mathug 	Contribute</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">EKMD\hss_sci94-2022_judges-mathug 	Contribute</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">EKMD\sharepoint_temp_editorsug 	Full Control</span></li>
+<p class="as-header-p"><span class="as-p-span">Libraries are:</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">Earth;תיקים סופיים - כדור הארץ</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Chemistry;תיקים סופיים - כימיה</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">LifeScience;תיקים סופיים - מדעי החיים</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Math;תיקים סופיים - מתמטיקה</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Physics;תיקים סופיים - פיסיקה</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">AppliedPhysics;תיקים סופיים - פסיקה יישומית</span></li>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of Group specified in format <b>[HSS_SCI164-2021]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+<p class="as-header-p"><span class="as-p-span">Usage: .\ADD-SCI-InheritanceRights.ps1 HSS_SCI164-2021</span></p>
+</ul>
+
+<p  id='add-users2adgroups.ps1' class='as-toc-p'><b><span class='as-toc-span'>Add-Users2ADGroups.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Add AD Users to Specific <b>[GRS]</b> SharePoint Groups. </span></p>
+<p class="as-header-p"><span class="as-p-span">Uses file "C:\AdminDir\Work\Users.csv" as hard coded parameter</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='add-usertogroups.ps1' class='as-toc-p'><b><span class='as-toc-span'>add-UserToGroups.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Add Specific AD Users to Specific <b>[GRS]</b> <b>[adminUG]</b> Groups</span></p>
+<p class="as-header-p"><span class="as-p-span">List of Users and groups hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='add-viewrakefet.ps1' class='as-toc-p'><b><span class='as-toc-span'>Add-ViewRakefet.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Creates views on specidied Rakefet site.</span></p>
+<p class="as-header-p"><span class="as-p-span">Views based on list of fields from hard coded xml file <b>[.\daniel\rakefet.xml]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Field of view specified in xml node <b>[SPColumnName]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Site name is hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='ad-spn.ps1' class='as-toc-p'><b><span class='as-toc-span'>AD-SPN.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test for Get SPN in AD</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='change-krakoverfiledsorder.ps1' class='as-toc-p'><b><span class='as-toc-span'>Change-KrakoverFiledsOrder.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Change Fields Order in specified <b>[GRS]</b> site in <b>[Applicants]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Site name hard coded </span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='check2xmlforms.ps1' class='as-toc-p'><b><span class='as-toc-span'>check2XMLForms.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Compare for Fields Differents in Two in XML Form</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='check-deadline.ps1' class='as-toc-p'><b><span class='as-toc-span'>Check-Deadline.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Create report for compliance  with deadline in <b>[spRequestsList]</b> and <b>[availableXYZList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='check-doclibexistsinapplicant.ps1' class='as-toc-p'><b><span class='as-toc-span'>Check-DoclibExistsInApplicant.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get Report If exists Applicants document library in site </span></p>
+<p class="as-header-p"><span class="as-p-span">Read <b>[applicants]</b> list and check field <b>[folderLink]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='checkforall.ps1' class='as-toc-p'><b><span class='as-toc-span'>checkForAll.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Check for double tag <Data> in XML Form</span></p>
+<p class="as-header-p"><span class="as-p-span">Check for file is valid XML  </span></p>
+<p class="as-header-p"><span class="as-p-span">Same as <b>[checkForDoubleDataNameXML.ps1]</b> but on multiple files in specified directory</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard coded path to xml files. </span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='checkfordoubledatanamexml.ps1' class='as-toc-p'><b><span class='as-toc-span'>checkForDoubleDataNameXML.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Check for double tag <Data> in XML Form</span></p>
+<p class="as-header-p"><span class="as-p-span">Check for file is valid XML </span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: XML File Name</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='classcomputer.ps1' class='as-toc-p'><b><span class='as-toc-span'>classComputer.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test, how to write and use classes in PowerShell.</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='consolidate-studentfolders.ps1' class='as-toc-p'><b><span class='as-toc-span'>Consolidate-StudentFolders.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script written for : Michal Brosh</span></p>
+<p class="as-header-p"><span class="as-p-span">Utility to consolidate <b>[applicants]</b> data and files from document library and <b>[ResponseLetters]</b> to site </span></p>
+<p class="as-header-p"><span class="as-p-span"><b>[https://portals2.ekmd.huji.ac.il/home/humanities/stdFoldersMA]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">with creating user's document library structure </span></p>
+<p class="as-header-p"><span class="as-p-span">Using xml file: .\ConsolidateFolders\Consolidate-Brosh.xml</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters : no</span></p>
+
+<p  id='copy-adgroupmemberstoadgroup.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-ADGroupMembersToADGroup.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy members of source AD Group to another AD Group</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters : Hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: little</span></p>
+
+<p  id='copy-adgrp2adgrp.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-ADGrp2ADGrp.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy members of source AD Group to another AD Group</span></p>
+<p class="as-header-p"><span class="as-p-span">Script asks names of source and destination AD group and copies from source to destination.</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='copy-admemberstospgroup.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-ADMembersToSPGroup.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy users from AD Group TSS_ARS10-2020_applicantsUG to ARS10_2020_Applicants_SP</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: No</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='copy-archivelist.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-ArchiveList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script creates new items in AvailableXYZarchive </span></p>
+<p class="as-header-p"><span class="as-p-span">Script reads <b>[availableArchives]</b> on <b>[https://portals.ekmd.huji.ac.il/home/huca/spSupport]</b> site</span></p>
+<p class="as-header-p"><span class="as-p-span">and check if record exists in <b>[AvailableXYZarchive]</b> </span></p>
+<p class="as-header-p"><span class="as-p-span">and creates item in <b>[AvailableXYZarchive ]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='copy-finallisttonewsites.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-FinalListToNewSites.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script Copies <b>[GRS]</b> <b>[Final]</b> List structure from Old Site To New Site</span></p>
+<p class="as-header-p"><span class="as-p-span">Hello Asher,</span></p>
+<p class="as-header-p"><span class="as-p-span">On the SSW site in GRS, you need to create columns in the Final Folders, like on last year's sites.</span></p>
+<p class="as-header-p"><span class="as-p-span">Thanks,</span></p>
+<p class="as-header-p"><span class="as-p-span">Daniel</span></p>
+<p class="as-header-p"><span class="as-p-span">27.01.2022</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='copy-finalsinglelist.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-FinalSingleList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script Reorder form fields in destination  <b>[GSS]</b> <b>[Final]</b> </span></p>
+<p class="as-header-p"><span class="as-p-span"><b>[https://gss2.ekmd.huji.ac.il/home/general/GEN31-2021]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">as in source</span></p>
+<p class="as-header-p"><span class="as-p-span"><b>[https://gss2.ekmd.huji.ac.il/home/general/GEN32-2022]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='copy-lisitems2listitems.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-LisItems2ListItems.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Destination site <b>[https://portals2.ekmd.huji.ac.il/home/tap/CSE/CSE13-2023]</b> was restored By Sergey Rubin </span></p>
+<p class="as-header-p"><span class="as-p-span">Script copies items from site <b>[https://portals2.ekmd.huji.ac.il/home/tap/CSE/CSE12-2022]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">List: <b>[coursesList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">to Destination site: <b>[https://portals2.ekmd.huji.ac.il/home/tap/CSE/CSE13-2023]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">List: <b>[coursesList]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">This is because this needed list was accidentally cleared by mistake</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='copy-list.ps1' class='as-toc-p'><b><span class='as-toc-span'>copy-list.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy hard coded List from one site to another</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='copy-list2list.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-List2List.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy hard coded list structure from one list to another</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='copy-pagewp.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-PageWP.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Copy Web part properties between page's sites</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='copy-viewlisttolist.ps1' class='as-toc-p'><b><span class='as-toc-span'>Copy-ViewListToList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Problem: sometimes on archive mihzur list with lookup fields view on list breaks and not show correctly</span></p>
+<p class="as-header-p"><span class="as-p-span">this is because on archive site field with lookup replaces to text field (fld delete with lookup and creates new with same name and type Text)</span></p>
+<p class="as-header-p"><span class="as-p-span">This script copies view from Mihzur source to Archive .</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='create-addiitionalviews.ps1' class='as-toc-p'><b><span class='as-toc-span'>Create-AddiitionalViews.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Creates views and navigations for previous period for lists</span></p>
+<p class="as-header-p"><span class="as-p-span">Lists in file .\Diego\ViewLists.txt</span></p>
+<p class="as-header-p"><span class="as-p-span">URL;SUFFIX;List;PrevArchiveName;PrevYear;CurrentYear;mainViewName</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW24_List;2021;2022;2023;כל הפריטים</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW13_List;2021;2022;2023;עדכני</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW05_List;2021;2022;2023;עדכני</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW06_List;2021;2022;2023;עדכני</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW07_List;2021;2022;2023;עדכני</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW08_List;2021;2022;2023;עדכני</span></p>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/;socialWork;FRM_SSW09_List;2021;2022;2023;עדכני</span></p>
+<p class="as-header-p"><span class="as-p-span">/*</span></p>
+<p class="as-header-p"><span class="as-p-span">Dear staff, Hello</span></p>
+<p class="as-header-p"><span class="as-p-span">Thank you for storing the forms of the current year and opening a new folder for the forms in the system belonging to the professional training</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Insertion of Social Involvement - Year A Pages - Insertion Form - Social Involvement (huji.ac.il)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Questionnaire for a candidate for student guidance in vocational training - Pages - FRM_SSW19 (huji.ac.il)</span></li>
+<p class="as-header-p"><span class="as-p-span">Placement in vocational training - Community major - Second year graduate Pages - Placement in vocational training - Community major - Second year (huji.ac.il)</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">Placement in vocational training - Community major - 3rd year graduate Pages - Placement in vocational training - Community major - third year (huji.ac.il)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Placement in vocational training - Individual major - Second-year graduate / Completion for a master's degree - one year Pages - Placement in vocational training - Individual major - Second year (huji.ac.il)</span></li>
+<p class="as-header-p"><span class="as-p-span">Placement in vocational training - Individual major - Third-year graduate / Completion for a master's degree - Year in pages - Placement in vocational training - Individual major - Third year (huji.ac.il)</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">Feedback questionnaire on professional training Pages - FRM_SSW13 (huji.ac.il)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Social Involvement - Student Feedback Pages - Social Involvement - Student Feedback (huji.ac.il)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Assessment of Social Involvement - Pages - Assessment of Social Involvement (huji.ac.il)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Placement in vocational training outside Jerusalem - individual trend - Pages - Placement in vocational training outside Jerusalem - individual course (huji.ac.il)</span></li>
+<p class="as-header-p"><span class="as-p-span">https://forms2.ekmd.huji.ac.il/home/socialWork/Lists/FRM_SSW30_List/AllItems.aspx</span></p>
+<p class="as-header-p"><span class="as-p-span">*/</span></p>
+<p class="as-header-p"><span class="as-p-span">Last changed 29/01/23</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+</ul>
+
+<p  id='create-biglist.ps1' class='as-toc-p'><b><span class='as-toc-span'>create-BigList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test for create big list with Huge count of columns and rows</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='create-doclib.ps1' class='as-toc-p'><b><span class='as-toc-span'>Create-DocLib.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script creates Document librarie for site :</span></p>
+<p class="as-header-p"><span class="as-p-span"><b>[https://ttp2.ekmd.huji.ac.il/home/Humanities/HUM27-2021/]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">List of Libs:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">"Islam in South Asia"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"Comparative Literature"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"Hebrew Literature"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"Islamic and Middle Eastern"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"Linguistics"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"Musicology"</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">"Spanish and Latin American Studies"</span></li>
+<p class="as-header-p"><span class="as-p-span">Actuality: little</span></p>
+</ul>
+
+<p  id='create-documentsuploadpage.ps1' class='as-toc-p'><b><span class='as-toc-span'>Create-DocumentsUploadPage.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script to create Blank Document Upload Page  on multiple sites from scratch</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Next step: Add and tune  to page web parts </span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: little</span></p>
+
+<p  id='create-list.ps1' class='as-toc-p'><b><span class='as-toc-span'>create-list.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Create lists and structure </span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters : hard coded</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='del-alllistitems.ps1' class='as-toc-p'><b><span class='as-toc-span'>del-AllListItems.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script deletes all items in list</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters" Site name, List Name</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='delete-adgroupmembers.ps1' class='as-toc-p'><b><span class='as-toc-span'>Delete-ADGroupMembers.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Removes all group members from  <b>[GSS_GEN35-2022_applicants-*]</b> (15) groups </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-agrUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-appphysUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-bioUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-chemUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-cseUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-dntUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-earthUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-elscUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-mathUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-medUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-pharmUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-physUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-psyUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-statUG</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">GSS_GEN35-2022_applicants-vetUG</span></li>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+</ul>
+
+<p  id='delete-subsites.ps1' class='as-toc-p'><b><span class='as-toc-span'>Delete-SubSites.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Problem: sometimes is impossible delete Mihzur subsite from web interface  cause of big items count in list(s)</span></p>
+<p class="as-header-p"><span class="as-p-span">This script clears items and applicants Document Libraries</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: Name of main site. </span></p>
+<p class="as-header-p"><span class="as-p-span">Script shows list of subsites and menu to delete one of them,</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='delete-usersfromspgroup.ps1' class='as-toc-p'><b><span class='as-toc-span'>Delete-UsersFromSPGroup.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Deletes AD users from Hard Coded SP groups</span></p>
+<p class="as-header-p"><span class="as-p-span">Prompts and warnings before delete users</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='delete-userslibs.ps1' class='as-toc-p'><b><span class='as-toc-span'>Delete-UsersLibs.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Deletes applicants Document Libraries frpm hard coded site</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='find-contractors.ps1' class='as-toc-p'><b><span class='as-toc-span'>Find-Contractors.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Find contractor from List <b>[contractors]</b> on sites :</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">https://crs.ekmd.huji.ac.il/home/services/2019</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://crs2.ekmd.huji.ac.il/home/exempt/2019</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://crs2.ekmd.huji.ac.il/home/murshe/2019</span></li>
+<p class="as-header-p"><span class="as-p-span">Parameter: Hard coded contractor id</span></p>
+<p class="as-header-p"><span class="as-p-span">Output:  Link to item with Contractor's ID and is PDF for contractor exists?</span></p>
+<p class="as-header-p"><span class="as-p-span">=========================</span></p>
+<p class="as-header-p"><span class="as-p-span">https://crs2.ekmd.huji.ac.il/home/murshe/2019/Lists/contractors/EditForm.aspx?ID=3767</span></p>
+<p class="as-header-p"><span class="as-p-span">Contractor from Param             :  516748548</span></p>
+<p class="as-header-p"><span class="as-p-span">studentId  in SP List contractors :  516748548</span></p>
+<p class="as-header-p"><span class="as-p-span">PDF File                          :  516748548  .pdf</span></p>
+<p class="as-header-p"><span class="as-p-span">=========================</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+</ul>
+
+<p  id='get-allccusers.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-allccUsers.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get all cc users in domain savion</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='get-comments.ps1' class='as-toc-p'><b><span class='as-toc-span'>Get-Comments.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Shows comments from Powershell file with powershell format .Synopsys</span></p>
+<p class="as-header-p"><span class="as-p-span">Example:</span></p>
+<p class="as-header-p"><span class="as-p-span"> .\Get-Comments.ps1 .\Utils-Request.ps1</span></p>
+<p class="as-header-p"><span class="as-p-span"> *******************************</span></p>
+<p class="as-header-p"><span class="as-p-span">Get-GroupSuffix</span></p>
+<p class="as-header-p"><span class="as-p-span">*******************************</span></p>
+<p class="as-header-p"><span class="as-p-span">Get-GroupSuffix</span></p>
+<p class="as-header-p"><span class="as-p-span">.SYNOPSIS</span></p>
+<p class="as-header-p"><span class="as-p-span">Get-GroupSuffix extracts the suffix of a group name.</span></p>
+<p class="as-header-p"><span class="as-p-span">.DESCRIPTION</span></p>
+<p class="as-header-p"><span class="as-p-span">Get-GroupSuffix is a PowerShell function that extracts the suffix of a group name</span></p>
+<p class="as-header-p"><span class="as-p-span">by removing the group template from the name. The function expects a single parameter,</span></p>
+<p class="as-header-p"><span class="as-p-span">$groupName, which is the name of the group to extract the suffix from.</span></p>
+<p class="as-header-p"><span class="as-p-span">The function first calls get-GroupTemplate to obtain the group template from the name.</span></p>
+<p class="as-header-p"><span class="as-p-span">It then removes the template from the name and returns the resulting suffix.</span></p>
+<p class="as-header-p"><span class="as-p-span">If the suffix contains an underscore, the function truncates it to exclude the last character.</span></p>
+<p class="as-header-p"><span class="as-p-span">.PARAMETER groupName</span></p>
+<p class="as-header-p"><span class="as-p-span">The name of the group to extract the suffix from.</span></p>
+<p class="as-header-p"><span class="as-p-span">.EXAMPLE</span></p>
+<p class="as-header-p"><span class="as-p-span">PS C:> Get-GroupSuffix "HSS_HUM218-2022"</span></p>
+<p class="as-header-p"><span class="as-p-span">HSS</span></p>
+<p class="as-header-p"><span class="as-p-span">This example extracts the suffix "XYZ" from the group name "GRP_ABC_DEF_XYZ".</span></p>
+<p class="as-header-p"><span class="as-p-span">.NOTES</span></p>
+<p class="as-header-p"><span class="as-p-span">Author: Asher Sandler</span></p>
+<p class="as-header-p"><span class="as-p-span">*******************************</span></p>
+<p class="as-header-p"><span class="as-p-span">Change-GroupDescription</span></p>
+<p class="as-header-p"><span class="as-p-span">*******************************</span></p>
+<p class="as-header-p"><span class="as-p-span">Change-GroupDescription</span></p>
+<p class="as-header-p"><span class="as-p-span">.SYNOPSIS</span></p>
+<p class="as-header-p"><span class="as-p-span">Updates the description of an Active Directory group.</span></p>
+<p class="as-header-p"><span class="as-p-span">.DESCRIPTION</span></p>
+<p class="as-header-p"><span class="as-p-span">This function updates the description of an Active Directory group by using the Get-ADGroup and Set-ADGroup cmdlets provided by PowerShell.</span></p>
+<p class="as-header-p"><span class="as-p-span">It takes in the name of the group and the new description as input parameters.</span></p>
+<p class="as-header-p"><span class="as-p-span">.PARAMETER groupName</span></p>
+<p class="as-header-p"><span class="as-p-span">A string parameter that represents the name of the Active Directory group whose description will be updated.</span></p>
+<p class="as-header-p"><span class="as-p-span">.PARAMETER description</span></p>
+<p class="as-header-p"><span class="as-p-span">A string parameter that represents the new description that will be set for the group.</span></p>
+<p class="as-header-p"><span class="as-p-span">.EXAMPLE</span></p>
+<p class="as-header-p"><span class="as-p-span">Change-GroupDescription "Sales Group" "This group is for sales representatives"</span></p>
+<p class="as-header-p"><span class="as-p-span">This command will update the description of the "Sales Group" to "This group is for sales representatives".</span></p>
+<p class="as-header-p"><span class="as-p-span">.NOTES</span></p>
+<p class="as-header-p"><span class="as-p-span">Author: Asher Sandler</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='get-doclib.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-doclib.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Hides applicants Document libraries from navigation menu</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard coded site name</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='get-doclibitems.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-doclibItems.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Check are existing applicants Doclib on site?</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter" Hard coded site name</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='get-documentsfillfinal.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-DocumentsFillFinal.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Consolidate to site Education information from various edu sites.</span></p>
+<p class="as-header-p"><span class="as-p-span">Destination: <b>[https://portals2.ekmd.huji.ac.il/home/EDU/stdFolders]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Source sites specified in file <b>[finalList.csv]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Structure of file:</span></p>
+<p class="as-header-p"><span class="as-p-span">site,lib,destFolder,potok</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU62-2022/Archive-2022-12-08/,Final,238-EDU62-2022,238</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU61-2021/Archive-2022-11-25/,Final,245-EDU61-2021,245</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU69-2022/,Final,245-EDU69-2022,245</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU68-2022/Archive-2022-12-08/,237,237-EDU68-2022,237 - מסלול מנהיגות בית ספרית</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU65-2022/Archive-2022-12-08/,Final,243-EDU65-2022,243</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU66-2022/Archive-2022-12-08/,Final,240-EDU66-2022,240</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU67-2022/Archive-2022-12-08/,Final,239-EDU67-2022,239</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU68-2022/Archive-2022-12-08/,230,230-EDU68-2022,230</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU68-2022/Archive-2022-12-08/,241,241-EDU68-2022,241</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://grs2.ekmd.huji.ac.il/home/Education/EDU68-2022/Archive-2022-12-08/,242,242-EDU68-2022,242</span></li>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+</ul>
+
+<p  id='get-docuploadwp.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-DocUploadWP.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get web part properties of web page <b>[DocumentsUpload]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='get-duplicatefiles.ps1' class='as-toc-p'><b><span class='as-toc-span'>Get-DuplicateFiles.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Search and display Big size duplicate files with various names on drive c:\ and subdirs:</span></p>
+<p class="as-header-p"><span class="as-p-span">Search and grouping by FileHash</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameter: No</span></p>
+<p class="as-header-p"><span class="as-p-span">Example Output:</span></p>
+<p class="as-header-p"><span class="as-p-span">=============================</span></p>
+<p class="as-header-p"><span class="as-p-span">Size:  115133979</span></p>
+<p class="as-header-p"><span class="as-p-span">C:\Windows\servicing\LCU\Package_for_RollupFix~31bf3856ad364e35~amd64~~19041.3086.1.9\amd64_microsoft-windows-edgechromium_31bf3856ad364e35_10.0.19041.1266_none_74657031110a9d30\edge.wim</span></p>
+<p class="as-header-p"><span class="as-p-span">C:\Windows\servicing\LCU\Package_for_RollupFix~31bf3856ad364e35~amd64~~19041.3208.1.10\amd64_microsoft-windows-edgechromium_31bf3856ad364e35_10.0.19041.1266_none_74657031110a9d30\edge.wim</span></p>
+<p class="as-header-p"><span class="as-p-span">C:\Windows\WinSxS\amd64_microsoft-windows-edgechromium_31bf3856ad364e35_10.0.19041.1266_none_74657031110a9d30\Edge.wim</span></p>
+<p class="as-header-p"><span class="as-p-span">=============================</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='get-fieldlist.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-FieldList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Generate c# meta data class by SP List xml schema</span></p>
+<p class="as-header-p"><span class="as-p-span">Output file: <b>["Template.cs"]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='get-fields.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-Fields.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Generate c# and powershell meta data class </span></p>
+<p class="as-header-p"><span class="as-p-span">Output file: <b>["Template.cs"]</b> - c#</span></p>
+<p class="as-header-p"><span class="as-p-span">Output file: <b>["Template.txt"]</b> - PowerShell</span></p>
+<p class="as-header-p"><span class="as-p-span">Parameters: Hard Coded Site and List name</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Example Output: C#</span></li>
+<p class="as-header-p"><span class="as-p-span">    partial class Applicant</span></p>
+<p class="as-header-p"><span class="as-p-span">    {</span></p>
+<p class="as-header-p"><span class="as-p-span">       public int ID { get; set; }</span></p>
+<p class="as-header-p"><span class="as-p-span">			public string FileLeafRef { get; set; } // שם</span></p>
+<p class="as-header-p"><span class="as-p-span">			public string Title { get; set; } // כותרת</span></p>
+<p class="as-header-p"><span class="as-p-span">			public string description0 { get; set; } // description</span></p>
+<p class="as-header-p"><span class="as-p-span">   public static Applicant bindItem(SPListItem spItem){</span></p>
+<p class="as-header-p"><span class="as-p-span">			Applicant ItemRow = new Applicant();</span></p>
+<p class="as-header-p"><span class="as-p-span">          ItemRow.ID = (int)spItem<b>["ID"]</b>;</span></p>
+<p class="as-header-p"><span class="as-p-span">			ItemRow.FileLeafRef = (string)spItem<b>["FileLeafRef"]</b>;</span></p>
+<p class="as-header-p"><span class="as-p-span">			ItemRow.Title = (string)spItem<b>["Title"]</b>;</span></p>
+<p class="as-header-p"><span class="as-p-span">			ItemRow.description0 = (string)spItem<b>["description0"]</b>;</span></p>
+<p class="as-header-p"><span class="as-p-span">           return ItemRow;</span></p>
+<p class="as-header-p"><span class="as-p-span">    }</span></p>
+<p class="as-header-p"><span class="as-p-span">    }</span></p>
+<li class="as-item-list"><span class="as-toc-li-span">Example Output: PowerShell</span></li>
+<p class="as-header-p"><span class="as-p-span">$Itm = "" | Select FileLeafRef,Title,description0,</span></p>
+<p class="as-header-p"><span class="as-p-span">$Itm.FileLeafRef = $fitm<b>["FileLeafRef"]</b> #שם</span></p>
+<p class="as-header-p"><span class="as-p-span">$Itm.Title = $fitm<b>["Title"]</b> #כותרת</span></p>
+<p class="as-header-p"><span class="as-p-span">$Itm.description0 = $fitm<b>["description0"]</b> #description</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+</ul>
+
+<p  id='get-formfields.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-Formfields.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Reorder Krakover Form Fields Order</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='get-itembycaml.ps1' class='as-toc-p'><b><span class='as-toc-span'>Get-ItemByCaml.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Find StudentID in <b>[Contractor]</b> list on sites:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">https://crs.ekmd.huji.ac.il/home/services/2019</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://crs2.ekmd.huji.ac.il/home/exempt/2019</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">https://crs2.ekmd.huji.ac.il/home/murshe/2019</span></li>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+</ul>
+
+<p  id='get-listoflistforclearinmihzur.ps1' class='as-toc-p'><b><span class='as-toc-span'>Get-ListOfListForClearInMihzur.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get List of non standart Lists and DocLibs for insert to AvailableXYZList</span></p>
+<p class="as-header-p"><span class="as-p-span">to field <b>[Archive_Lists_Clear]</b> for procedure <b>[Do-ClearSite]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='get-listprops.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-listProps.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get list of site lists UIDs</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='get-listschema.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-ListSchema.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get XML List Schema in xml format</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: little</span></p>
+
+<p  id='get-sitegroups.ps1' class='as-toc-p'><b><span class='as-toc-span'>GET-SiteGroups.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Count groups in site collection</span></p>
+<p class="as-header-p"><span class="as-p-span">Example using:</span></p>
+<p class="as-header-p"><span class="as-p-span">Site Collection URL:  https://scholarships.ekmd.huji.ac.il/home</span></p>
+<p class="as-header-p"><span class="as-p-span">Groups Per Site Collection Count:  2304</span></p>
+<p class="as-header-p"><span class="as-p-span">Users  Per Site Collection Count:  21192</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: little</span></p>
+
+<p  id='get-submwp.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-SubmWP.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get Submission status page web part properties</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='get-userssamaccountname.ps1' class='as-toc-p'><b><span class='as-toc-span'>get-UsersSamAccountName.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get users SAMs. Specific task written for Evgenia Tchachkin</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: No</span></p>
+
+<p  id='hebname2chrcodes.ps1' class='as-toc-p'><b><span class='as-toc-span'>HebName2ChrCodes.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Convert Hebrew Characters to PowerShell CharCodes</span></p>
+<p class="as-header-p"><span class="as-p-span">Example:</span></p>
+<p class="as-header-p"><span class="as-p-span">> .\HebName2ChrCodes.ps1 טופל</span></p>
+<p class="as-header-p"><span class="as-p-span"> <b>[char]</b><b>[int]</b>1496 + <b>[char]</b><b>[int]</b>1493 + <b>[char]</b><b>[int]</b>1508 + <b>[char]</b><b>[int]</b>1500</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='hexname2heb.ps1' class='as-toc-p'><b><span class='as-toc-span'>HexName2Heb.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Convert HexName to Hebrew</span></p>
+<p class="as-header-p"><span class="as-p-span">Example:</span></p>
+<p class="as-header-p"><span class="as-p-span">"_x05de__x05d2__x05de__x05d4_"</span></p>
+<p class="as-header-p"><span class="as-p-span">מגמה</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: Little</span></p>
+
+<p  id='outlook-getdoublestudentsid.ps1' class='as-toc-p'><b><span class='as-toc-span'>Outlook-GetDoubleStudentsID.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Find and show Multiple cc versus ekmd Student ID's in GRS Registration</span></p>
+<p class="as-header-p"><span class="as-p-span">One person with mltiple accounts</span></p>
+<p class="as-header-p"><span class="as-p-span">Example:</span></p>
+<p class="as-header-p"><span class="as-p-span">StudentID : 312547540</span></p>
+<p class="as-header-p"><span class="as-p-span">https://grs2.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW45-2022/Lists/applicants/EditForm.aspx?ID=540</span></p>
+<p class="as-header-p"><span class="as-p-span">https://grs2.ekmd.huji.ac.il/home/SchoolofSocialWork/SSW45-2022/Lists/applicants/EditForm.aspx?ID=548</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: actual</span></p>
+
+<p  id='replace-fieldinlist.ps1' class='as-toc-p'><b><span class='as-toc-span'>replace-FieldInList.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Utility to replace <b>[applicants]</b> with two deadlines</span></p>
+<p class="as-header-p"><span class="as-p-span">site: <b>[https://grs2.ekmd.huji.ac.il/home/Agriculture/AGR13-2021]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Consult Daniel</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='replace-libemail.ps1' class='as-toc-p'><b><span class='as-toc-span'>Replace-LibEmail.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Find applicants email in Lookup List and replace it.</span></p>
+<p class="as-header-p"><span class="as-p-span">site: <b>[https://grs2.ekmd.huji.ac.il/home/Agriculture/AGR13-2021]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='restore-mihzurstudentfolder.ps1' class='as-toc-p'><b><span class='as-toc-span'>Restore-MihzurStudentFolder.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Restore items and <b>[applicants]</b> Document Libraries  from Mihzur Archive</span></p>
+<p class="as-header-p"><span class="as-p-span">Actuality: no</span></p>
+
+<p  id='test-cred.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-cred.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test</span></p>
+
+<p  id='test-currentsystem.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-CurrentSystem.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test</span></p>
+
+<p  id='test-emptytemplate.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-EmptyTemplate.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Empty Template</span></p>
+
+<p  id='test-getallwp.ps1' class='as-toc-p'><b><span class='as-toc-span'>Test-GetAllWP.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get all web part properties on page to JSON format</span></p>
+<p class="as-header-p"><span class="as-p-span">Output </span></p>
+<p class="as-header-p"><span class="as-p-span"><b>[</span></p>
+<p class="as-header-p"><span class="as-p-span">    {</span></p>
+<p class="as-header-p"><span class="as-p-span">        "Title":  "UploadFilesWP - VisualWebPart1",</span></p>
+<p class="as-header-p"><span class="as-p-span">        "Properties":  {</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Description":  "My Visual Web Part",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Direction":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ChromeType":  2,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ExportMode":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ChromeState":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowEdit":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowHide":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowClose":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowConnect":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AuthorizationFilter":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "CatalogIconImageUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowMinimize":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowZoneChange":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "TitleUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Title":  "UploadFilesWP - VisualWebPart1",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "TitleIconImageUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Hidden":  false,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "HelpMode":  2,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "HelpUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ImportErrorMessage":  "Cannot import this Web Part.",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Config_Name":  "UploadFilesEn.xml",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Config_Path":  "\\\\ekeksql00\\SP_Resources$\\HSS\\UploadFiles\\",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Language":  2,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AD_Config_Path":  null,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Debug":  false,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "CSS_Path":  null,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AD_Config_Name":  null</span></p>
+<p class="as-header-p"><span class="as-p-span">                       }</span></p>
+<p class="as-header-p"><span class="as-p-span">    },</span></p>
+<p class="as-header-p"><span class="as-p-span">    {</span></p>
+<p class="as-header-p"><span class="as-p-span">        "Title":  "LoaderWP - VisualWebPart1",</span></p>
+<p class="as-header-p"><span class="as-p-span">        "Properties":  {</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Description":  "My Visual Web Part",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Direction":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ChromeType":  2,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ExportMode":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ChromeState":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowEdit":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowHide":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowClose":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowConnect":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AuthorizationFilter":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "CatalogIconImageUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowMinimize":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "AllowZoneChange":  true,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "TitleUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Title":  "LoaderWP - VisualWebPart1",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "TitleIconImageUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Hidden":  false,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "HelpMode":  2,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "HelpUrl":  "",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "ImportErrorMessage":  "Cannot import this Web Part.",</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "Language":  0,</span></p>
+<p class="as-header-p"><span class="as-p-span">                           "LoaderText":  null</span></p>
+<p class="as-header-p"><span class="as-p-span">                       }</span></p>
+<p class="as-header-p"><span class="as-p-span">    }</span></p>
+<p class="as-header-p"><span class="as-p-span">]</b></span></p>
+
+<p  id='test-getitemspagerights.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-GetItemsPageRights.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Get Roles on list</span></p>
+
+<p  id='test-interactie.ps1' class='as-toc-p'><b><span class='as-toc-span'>Test-InteractIE.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Invoke-RestMethod procedure</span></p>
+
+<p  id='test-listassignpermissions.ps1' class='as-toc-p'><b><span class='as-toc-span'>Test-ListAssignPermissions.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">test Set Permission to list</span></p>
+
+<p  id='test-listpermissions.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-ListPermissions.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Example:</span></p>
+<p class="as-header-p"><span class="as-p-span">URL: https://grs2.ekmd.huji.ac.il/home/socialSciences/SOC46-2022</span></p>
+<p class="as-header-p"><span class="as-p-span">Collect ListPermissions: /home/socialSciences/SOC46-2022/interviewPDF/Forms/AllItems.aspx</span></p>
+<p class="as-header-p"><span class="as-p-span">Permissions role Count: 3</span></p>
+<p class="as-header-p"><span class="as-p-span">  0</span></p>
+<p class="as-header-p"><span class="as-p-span">Name                                              Type PermissionLevels</span></p>
+<p class="as-header-p"><span class="as-p-span">   ----                                              ---- ----------------</span></p>
+<p class="as-header-p"><span class="as-p-span">GRS_SOC46-2022_AdminSP                 SharePointGroup Full Control</span></p>
+<p class="as-header-p"><span class="as-p-span">EKMD\grs_soc46-2022_judges-interviewug   SecurityGroup Read</span></p>
+<p class="as-header-p"><span class="as-p-span">System Account                                    User Full Control</span></p>
+
+<p  id='test-loggen.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-logGen.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Log Generator for site</span></p>
+
+<p  id='test-navig.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-navig.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Create Navigation menu</span></p>
+
+<p  id='test-navig1.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-navig1.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Create Navigation menu</span></p>
+
+<p  id='test-orderfields.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-orderFields.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test-Reorder fields in form</span></p>
+
+<p  id='test-rest.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-Rest.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Rest query to page</span></p>
+
+<p  id='test-saveattachements.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-SaveAttachements.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Save Attachement from List</span></p>
+
+<p  id='test-subsites.ps1' class='as-toc-p'><b><span class='as-toc-span'>test-Subsites.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test is exists subsite</span></p>
+
+<p  id='test-webrequestform.ps1' class='as-toc-p'><b><span class='as-toc-span'>Test-WebRequestForm.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Invoke-WebRequest</span></p>
+
+<p  id='test-windowsform.ps1' class='as-toc-p'><b><span class='as-toc-span'>Test-windowsForm.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Create Windows Form from PowerShell</span></p>
+
+<p  id='utils-duallanguage.ps1' class='as-toc-p'><b><span class='as-toc-span'>Utils-DualLanguage.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">More than 100 utils and functions</span></p>
+
+<p  id='utils-request.ps1' class='as-toc-p'><b><span class='as-toc-span'>Utils-Request.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">More than 100 utils and functions</span></p>
+
+<p  id='wokfl-parallel.ps1' class='as-toc-p'><b><span class='as-toc-span'>wokfl-parallel.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Test Windows workflow</span></p>
+
+<p  id='gen-documents\gen-readme.ps1' class='as-toc-p'><b><span class='as-toc-span'>Gen-Documents\Gen-Readme.ps1</span></b></p>
+<p class="as-header-p"><span class="as-p-span">documentation Generator.</span></p>
+<p class="as-header-p"><span class="as-p-span">This document created by <b>[Gen-Readme.ps1]</b> procedure</span></p>
+<p class="as-header-p"><span class="as-p-span">            ---=== THE END ===---</span></p>
+
+<p >&nbsp;</p>
+</div>
+</body>
+</html>

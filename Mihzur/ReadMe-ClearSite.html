@@ -1,0 +1,105 @@
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>Do-ClearSite.ps1</title>
+<style>
+.as-item-list{color:#1F2328;margin-top:3.0pt;line-height:normal;background:white;}
+.as-item-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:black;}
+.as-header-p{margin-bottom:12.0pt;line-height:normal;background:white;}
+.as-header-span{font-size:24.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-p{margin-top:.25in;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;line-height:normal;background:white;}
+.as-toc-span{font-size:18.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-li{class='as-toc-li';}
+.as-toc-li-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;}
+.as-p-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-p-code{font-size:10.0pt;font-family:Consolas;color:#1F2328;}
+</style>
+</head>
+<body lang=EN-US link=blue vlink='#954F72' style='word-wrap:break-word'>
+<div>
+<p class='as-header-p' ><b><span class='as-header-span'>Do-ClearSite.ps1</span></b></p>
+<p class='as-item-list'><span class='as-item-span'> Script to clean recycled SharePoint site <br/></span></p>
+<p  class='as-toc-p'>
+	<p  class='as-toc-p'><b><span class='as-toc-span'>Table of Contents</span></b></p><ul type=disc><li  class="as-toc-li"><span class="as-toc-li-span"><a href="#general-information">General Information</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#user-action-to-call-script">User action to call script</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#script-logic">Script Logic</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#used-xml-ini-files">Used XML Ini Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#log-files">Log Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#errors-parsing">Errors parsing</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#project-status">Project Status</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#source-code-location">Source code location</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#cmd-file-params">CMD File Params</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#contact">Contact</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#location-and-frequency-of-launch">Location and frequency of launch</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#disclaimer">Disclaimer</a></span></li>
+</ul><p  id='general-information' class='as-toc-p'><b><span class='as-toc-span'>General Information</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script cleans Sharepoint Submission systems site. It need for recycle using of this site at new stage of registration of applicants.Script cleans applicant lists and Document libraries and leave information needed for registration process such as lists neede for form, documents not releated to applicants.</span></p>
+
+<p  id='user-action-to-call-script' class='as-toc-p'><b><span class='as-toc-span'>User action to call script</span></b></p>
+<p class="as-header-p"><span class="as-p-span">User have to check boxes in availableXYZList (where XYZ - is a name of system, for example - Scholarship) in fields <b>[Archive_Site_Checked]</b> <b>[x]</b> and <b>[Archive_Waiting_for_Cleanup]</b>  <b>[x]</b>. Important! Must exists valid archive specified in the field <b>[Archive_URL]</b>.</span></p>
+
+<p  id='script-logic' class='as-toc-p'><b><span class='as-toc-span'>Script Logic</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script parse XML ini file and opens Lists designates in xml field <b>[listName]</b> on web sites from field <b>[appHomeUrl]</b> in sequence.</span></p>
+<p class="as-header-p"><span class="as-p-span">For this day, now is a 11 XYZ systems  which script bypasses.</span></p>
+<p class="as-header-p"><span class="as-p-span">In availableXYZList it check are fields <b>[Archive_Site_Checked]</b> <b>[x]</b> and <b>[Archive_Waiting_for_Cleanup]</b>  <b>[x]</b> checked?, and if yes it was checked, it get value of field <b>[url]</b>.</span></p>
+<p class="as-header-p"><span class="as-p-span">value of this field is an address of site to CleanUp.</span></p>
+<p class="as-header-p"><span class="as-p-span">When the script is running it perform several steps:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Collecting Information About Lists and Document Library on Source Web</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Clear Lists specified in availableXYZList in field [destinationList] and applicant's Document libraries</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Clear Lists specified in availableXYZList in field [Archive_Lists_Clear]</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Delete Lists specified in availableXYZList in field [Archive_Lists_Delete]</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Set date of Clean to field [Archive_Cleanup_Date]</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Unset field [Archive_Waiting_for_Cleanup]  [ ]</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Clear users in AD applicantsGroup(s)</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Add item to availableXYZarchive. List for archive specified in field [archListName] of XML ini file</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Add log</span></li>
+</ul>
+
+<p  id='used-xml-ini-files' class='as-toc-p'><b><span class='as-toc-span'>Used XML Ini Files</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script uses XML ini files located in: 	</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\availableXYZListPath\availableXYZListPath.xml</span></li>
+</ul>
+
+<p  id='log-files' class='as-toc-p'><b><span class='as-toc-span'>Log Files</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Log files located in "\\ekekfls00\data$\scriptFolders\LOGS\Mihzur" directory</span></li>
+</ul>
+
+<p  id='errors-parsing' class='as-toc-p'><b><span class='as-toc-span'>Errors parsing</span></b></p>
+<p class="as-header-p"><span class="as-p-span">If deadline in apllicants list on site to be clean p not mutch to deadline in applicant in archive web site, that specified in availableXYZList, Clean procedure will not run. This is necessary so that cleaning does not occur by mistake. </span></p>
+
+<p  id='project-status' class='as-toc-p'><b><span class='as-toc-span'>Project Status</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Project is: completed: In Production. </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Task on server: \\ekekspapp10\mihzur$</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Name of CMD file: Do-Mihzur.cmd</span></li>
+</ul>
+
+<p  id='source-code-location' class='as-toc-p'><b><span class='as-toc-span'>Source code location</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Source code located in file: </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekekfls00\sharetwo$\ekcc_pub\codeRepository\Scripts\Do-ClearSite.ps1</span></li>
+</ul>
+
+<p  id='cmd-file-params' class='as-toc-p'><b><span class='as-toc-span'>CMD File Params</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">powershell.exe -nologo -command "C:\MOSS_Batches\Mihzur\Do-ClearSite.ps1"</span></li>
+</ul>
+
+<p  id='contact' class='as-toc-p'><b><span class='as-toc-span'>Contact</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Created by <b>[Asher Sandler]</b></span></p>
+<p class="as-header-p"><span class="as-p-span">ashersan@savion.huji.ac.il </span></p>
+<p class="as-header-p"><span class="as-p-span">feel free to contact me!</span></p>
+
+<p  id='location-and-frequency-of-launch' class='as-toc-p'><b><span class='as-toc-span'>Location and frequency of launch</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Runs starting daily at 08:40 repeating hourly within 11 hours. Does not start new instance.</span></p>
+<p class="as-header-p"><span class="as-p-span">Script Folder Path "C:\MOSS_Batches\Mihzur" at ekekspapp10.</span></p>
+
+<p  id='disclaimer' class='as-toc-p'><b><span class='as-toc-span'>Disclaimer</span></b></p>
+<p class="as-header-p"><span class="as-p-span">This document cannot cover all the details and nuances of the script. It only provides a general description and is not a technical document. Please contact the developer for details.</span></p>
+
+<p >&nbsp;</p>
+</div>
+</body>
+</html>

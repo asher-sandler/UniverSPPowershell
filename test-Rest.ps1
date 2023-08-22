@@ -28,7 +28,7 @@ $UserID="AsherSa@ekmd.huji.ac.il"
  
  $siteName = "https://portals.ekmd.huji.ac.il/_api/Web";
  $siteName = "https://scholarships2.ekmd.huji.ac.il/home/EdmondandLilySafraCenterforBrainSciences/ELS32-2020/_api/Web";
- $siteName = "https://scholarships2.ekmd.huji.ac.il/_api/SP.UserProfiles.PeopleManager/GetPropertiesFor(accountName=@v)?@v='i:0%23.f|membership|$($UserID)'";
+ #$siteName = "https://scholarships2.ekmd.huji.ac.il/_api/SP.UserProfiles.PeopleManager/GetPropertiesFor(accountName=@v)?@v='i:0%23.f|membership|$($UserID)'";
  
  $siteUrl = get-UrlNoF5 $siteName
 

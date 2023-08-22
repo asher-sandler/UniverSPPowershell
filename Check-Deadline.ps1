@@ -18,6 +18,7 @@ $cred = get-SCred
 
  
  $siteName = "https://portals2.ekmd.huji.ac.il/home/huca/committees/SPProjects2017";
+ $siteName = "https://portals2.ekmd.huji.ac.il/home/huca/spSupport";
  $ListName="spRequestsList"
 
 	 

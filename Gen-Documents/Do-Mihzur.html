@@ -1,0 +1,99 @@
+<head>
+<meta http-equiv=Content-Type content='text/html; charset=utf-8'>
+<title>Do-Mihzur.ps1</title>
+<style>
+.as-item-list{color:#1F2328;margin-top:3.0pt;line-height:normal;background:white;}
+.as-item-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:black;}
+.as-header-p{margin-bottom:12.0pt;line-height:normal;background:white;}
+.as-header-span{font-size:24.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-p{margin-top:.25in;margin-right:0in;margin-bottom:12.0pt;margin-left:0in;line-height:normal;background:white;}
+.as-toc-span{font-size:18.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-toc-li{class='as-toc-li';}
+.as-toc-li-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;}
+.as-p-span{font-size:12.0pt;font-family:'Segoe UI',sans-serif;color:#1F2328;}
+.as-p-code{font-size:10.0pt;font-family:Consolas;color:#1F2328;}
+</style>
+</head>
+<body lang=EN-US link=blue vlink='#954F72' style='word-wrap:break-word'>
+<div>
+<p class='as-header-p' ><b><span class='as-header-span'>Do-Mihzur.ps1</span></b></p>
+<p class='as-item-list'><span class='as-item-span'> Script to create Archive SharePoint site <br/></span></p>
+<p  class='as-toc-p'>
+	<p  class='as-toc-p'><b><span class='as-toc-span'>Table of Contents</span></b></p><ul type=disc><li  class="as-toc-li"><span class="as-toc-li-span"><a href="#general-information">General Information</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#user-action-to-call-script">User action to call script</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#script-logic">Script Logic</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#used-xml-ini-files">Used XML Ini Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#log-files">Log Files</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#project-status">Project Status</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#source-code-location">Source code location</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#cmd-file-params">CMD File Params</a></span></li>
+<li  class="as-toc-li"><span class="as-toc-li-span"><a href="#contact">Contact</a></span></li>
+</ul><p  id='general-information' class='as-toc-p'><b><span class='as-toc-span'>General Information</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script creates new  Sharepoint Subsite for Submission systems site. New Archive site need for save information for applicants and all information related to them. Script saves Home Page, lists, document libraries, files, navigation, and all content of sites. It need for recycle using of this sites at new stage of registration of applicants.</span></p>
+
+<p  id='user-action-to-call-script' class='as-toc-p'><b><span class='as-toc-span'>User action to call script</span></b></p>
+<p class="as-header-p"><span class="as-p-span">User have to check box of availableXYZList (where XYZ - is a name of system, for example - Scholarship) in field [Archive_Waiting_for_Archivation] [x]</span></p>
+
+<p  id='script-logic' class='as-toc-p'><b><span class='as-toc-span'>Script Logic</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script parse XML ini file and opens Lists designates in xml field [listName] on web sites from field [appHomeUrl] in sequence.</span></p>
+<p class="as-header-p"><span class="as-p-span">For this day, now is a 11 XYZ systems  which script bypasses.</span></p>
+<p class="as-header-p"><span class="as-p-span">In availableXYZList it check is field [Archive_Waiting_for_Archivation] checked [x]?, and if yes, it get value of field [url].</span></p>
+<p class="as-header-p"><span class="as-p-span">value of this field is an address of site to archive.</span></p>
+<p class="as-header-p"><span class="as-p-span">Scripts creates new subsite with url ARCHIVE-YYYY-mm-DD where YYYY-mm-DD is the current date. If there is site with this url exists, script creates subsite with name ARCHIVE-YYYY-mm-DD-1 (2,3) and so on.</span></p>
+<p class="as-header-p"><span class="as-p-span">When the script is running it perform several steps:</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 01-1: Creating new Archive Subsite</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 01-2: Publishing Feature was Activated</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 02: Collecting Information About Lists and Document Library on Source Web</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 03: Copy Documents Library Created on Archive By Default</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 04: Creating Applicants on destination Web from templates on Site</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 05:  Processing Lists Founded in Field 'Archive_Lists_Final'</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 06 :Creating Ordinary Lists on Site</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 07 :Creating Documents Library for Users with metadata and Copying files From Source To Destination</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 08 :Creating Document Libraries WITH/WITHOUT Lookup Fields from template</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 09 :Creating Pages</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 10 :Creating Navigation</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 11 :Change Archive Site Permissions.</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 12: Check Mihzur Integrity</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Stage 13: Do Mihzur Log</span></li>
+<p class="as-header-p"><span class="as-p-span">Finally script unsets value of field [Archive_Waiting_for_Archivation] [ ] in availableXYZList List .</span></p>
+</ul>
+
+<p  id='used-xml-ini-files' class='as-toc-p'><b><span class='as-toc-span'>Used XML Ini Files</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Script uses XML ini files located in: 	</span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekeksql00\SP_Resources$\WP_Config\availableXYZListPath\availableXYZListPath.xml</span></li>
+</ul>
+
+<p  id='log-files' class='as-toc-p'><b><span class='as-toc-span'>Log Files</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Log files located in "\\ekekfls00\data$\scriptFolders\LOGS\Mihzur" directory</span></li>
+</ul>
+
+<p  id='project-status' class='as-toc-p'><b><span class='as-toc-span'>Project Status</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Project is: completed: In Production. </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">Task on server: \\ekekspapp10\mihzur$</span></li>
+<li class="as-item-list"><span class="as-toc-li-span">Name of CMD file: Do-Mihzur.cmd</span></li>
+</ul>
+
+<p  id='source-code-location' class='as-toc-p'><b><span class='as-toc-span'>Source code location</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Source code located in file: </span></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">\\ekekaiosp05\c$\AdminDir\Mihzur\Do-Mihzur.ps1</span></li>
+</ul>
+
+<p  id='cmd-file-params' class='as-toc-p'><b><span class='as-toc-span'>CMD File Params</span></b></p>
+<ul type=disc>
+<li class="as-item-list"><span class="as-toc-li-span">powershell.exe -nologo -command "C:\MOSS_Batches\Mihzur\Do-Mihzur.ps1"</span></li>
+</ul>
+
+<p  id='contact' class='as-toc-p'><b><span class='as-toc-span'>Contact</span></b></p>
+<p class="as-header-p"><span class="as-p-span">Created by [Asher Sandler]</span></p>
+<p class="as-header-p"><span class="as-p-span">ashersan@savion.huji.ac.il </span></p>
+<p class="as-header-p"><span class="as-p-span">feel free to contact me!</span></p>
+
+<p >&nbsp;</p>
+</div>
+</body>
+</html>
